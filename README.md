@@ -24,6 +24,6 @@ The generated static files are placed into the `public` folder.
 
 ## Deploying to production
 
-To deploy the blog, just serve the statics files in the `public` directory.
+To deploy the blog, just serve the static files in the `public` directory.
 
-TODO: Netlify example pending.
+TODO: Netlify deployment instructions pending!
