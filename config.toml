@@ -1,0 +1,4 @@
+baseURL = "https://blog.netdata.cloud/"
+languageCode = "en-us"
+title = "Netdata Blog"
+theme = "hello-friend"
