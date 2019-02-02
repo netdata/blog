@@ -1,0 +1,7 @@
+.logo .logo-svg-netdata {
+    fill: var(--light-color);
+}
+
+body.dark-theme .logo .logo-svg-netdata {
+    fill: var(--dark-color);
+}

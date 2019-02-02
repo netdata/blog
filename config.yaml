@@ -5,8 +5,5 @@
    "theme": "hello-friend",
    "params": {
       "ReadMore": "more",
-      "Logo": {
-        "logoText": "Netdata Blog"
-      }
    }
 }
