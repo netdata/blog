@@ -1,7 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+author: "Costa Tsaousis"
 tags: []
+draft: true
 ---
 

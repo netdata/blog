@@ -1,10 +1,11 @@
 ---
 title: "Release 1.11"
 date: 2018-11-06
-draft: false
+author: "Costa Tsaousis"
 cover: "placeholder.jpg"
 tags: ["Release"]
 categories: []
+draft: false
 ---
 
 Hi all,

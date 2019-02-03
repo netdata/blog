@@ -1,10 +1,11 @@
 ---
 title: "Release 1.11.1"
 date: 2018-11-22
-draft: false
+author: "Costa Tsaousis"
 cover: "hello.jpg"
 tags: ["Release", "Patch"]
 categories: []
+draft: false
 ---
 
 This is a patch - bug fix release of netdata.

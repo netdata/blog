@@ -3,6 +3,8 @@
    "languageCode": "en-us",
    "title": "Netdata Blog",
    "theme": "hello-friend",
+   "rssLink": "index.xml",
+   "defaultTheme": "light",
    "params": {
       "ReadMore": "more",
    },
