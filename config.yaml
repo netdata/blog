@@ -5,5 +5,7 @@
    "theme": "hello-friend",
    "params": {
       "ReadMore": "more",
+   },
+   "languages": {
    }
 }

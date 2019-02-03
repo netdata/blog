@@ -1,10 +1,11 @@
-+++
-title = "Release 1.11.1"
-date = 2018-11-22
-draft = false
-tags = ["Release", "Patch"]
-categories = []
-+++
+---
+title: "Release 1.11.1"
+date: 2018-11-22
+draft: false
+cover: "hello.jpg"
+tags: ["Release", "Patch"]
+categories: []
+---
 
 This is a patch - bug fix release of netdata.
 

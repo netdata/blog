@@ -1,10 +1,11 @@
-+++
-title = "Release 1.11"
-date = 2018-11-06
-draft = false
-tags = ["Release"]
-categories = []
-+++
+---
+title: "Release 1.11"
+date: 2018-11-06
+draft: false
+cover: "placeholder.jpg"
+tags: ["Release"]
+categories: []
+---
 
 Hi all,
 
