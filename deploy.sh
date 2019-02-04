@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 
 hugo
-gcloud config set project netdata-site
-gsutil rsync -R public gs://uat.netdata.cloud
+gcloud config set project netdata-storage 
+gsutil rsync -R public gs://blog.netdata.cloud
