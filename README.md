@@ -12,6 +12,16 @@ hugo new posts/new-post-title.md
 
 Please use 'lisp-case' for the filename.
 
+## Previewing the site
+
+To preview the web site using Hugo's embedded web server, give:
+
+```sh
+hugo server
+```
+
+and browse <http://localhost:1313/>
+
 ## Rendering the site
 
 To render the site, give:
