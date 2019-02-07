@@ -1,11 +1,11 @@
 ---
-title: "Release 1.11"
-date: 2018-11-06
+title: "Release 1.12"
+date: 2019-02-07
 author: "Costa Tsaousis"
-cover: "placeholder.jpg"
+cover: "release-1-12.png"
 tags: ["Release"]
 categories: []
-draft: true
+draft: false
 ---
 
 Hi all,

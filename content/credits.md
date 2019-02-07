@@ -1,5 +1,5 @@
 ---
-date: 2019-02-02T20:53:18+02:00
+layout: page
 draft: false
 ---
 

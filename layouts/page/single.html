@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="post">
+    <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+
+    {{ with .Params.Cover }}
+    <img src="{{ printf "img/%s" . | absURL }}" class="post-cover" />
+    {{ end }}
+
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}
