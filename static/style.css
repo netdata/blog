@@ -6,7 +6,14 @@ body.dark-theme .logo .logo-svg-netdata {
     fill: var(--dark-color);
 }
 
-.header {
+/* header.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+} */
+
+header.hero-overlay {
     top: 0;
     left: 0;
     right: 0;
