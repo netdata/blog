@@ -5,3 +5,20 @@
 body.dark-theme .logo .logo-svg-netdata {
     fill: var(--dark-color);
 }
+
+.header__inner {
+    justify-content: center;
+    /* height: 40vh; */
+}
+
+.post {
+    border-bottom: none !important;
+}
+
+.pagination__title hr {
+    display: none;
+}
+
+.footer__inner {
+    justify-content: center !important;
+}

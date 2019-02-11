@@ -5,7 +5,7 @@ author: "Costa Tsaousis"
 cover: "hello.jpg"
 tags: ["Release", "Patch"]
 categories: []
-draft: true
+draft: false
 ---
 
 This is a patch - bug fix release of netdata.
