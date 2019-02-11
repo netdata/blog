@@ -6,6 +6,19 @@ body.dark-theme .logo .logo-svg-netdata {
     fill: var(--dark-color);
 }
 
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 400px;
+    z-index: 999;
+}
+
+header.hero {
+    height: 400px;
+}
+
 .header__inner {
     justify-content: center;
     /* height: 40vh; */

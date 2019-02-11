@@ -16,3 +16,21 @@
 
 <script src="{{ "assets/main.js" | absURL }}"></script>
 <script src="{{ "assets/prism.js" | absURL }}"></script>
+
+<script>
+function updateHeaderHeight(scrollTop) {
+    const minHeaderHeight = 54
+    const maxHeaderHeight = 400
+    const headerHeight = Math.max(minHeaderHeight, maxHeaderHeight - scrollTop)
+    const headerEl = document.getElementById("site-header")
+    headerEl.style.height = `${headerHeight}px`
+    const alpha = 0.1 * (1 - (headerHeight - minHeaderHeight) / (maxHeaderHeight - minHeaderHeight))
+    headerEl.style.boxShadow = `0 10px 60px 10px rgba(0, 0, 0, ${alpha})`
+}
+
+function documentDidScroll() {
+    updateHeaderHeight(document.scrollingElement.scrollTop)
+}
+
+document.addEventListener("scroll", documentDidScroll)
+</script>
