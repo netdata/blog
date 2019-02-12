@@ -13,6 +13,12 @@ body.dark-theme .logo .logo-svg-netdata {
     position: fixed;
 } */
 
+header.header {
+    background: url(img/blog-header-bg.png);
+    background-position: center center;
+    background-size: cover;
+}
+
 header.hero-overlay {
     top: 0;
     left: 0;
@@ -20,6 +26,9 @@ header.hero-overlay {
     position: fixed;
     height: 400px;
     z-index: 999;
+    background: url(img/blog-header-bg.png);
+    background-position: center center;
+    background-size: cover;
 }
 
 header.hero {
