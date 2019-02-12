@@ -18,18 +18,33 @@
 <script src="{{ "assets/prism.js" | absURL }}"></script>
 
 <script>
-function updateHeaderHeight(scrollTop) {
+function updateHeaderHeight(scrollTop, shouldElevate, shouldScrollOut) {
     const minHeaderHeight = 54
     const maxHeaderHeight = 400
-    const headerHeight = Math.max(minHeaderHeight, maxHeaderHeight - scrollTop)
+
     const headerEl = document.getElementById("site-header")
+
+    const headerHeight = Math.max(minHeaderHeight, maxHeaderHeight - scrollTop)
     headerEl.style.height = `${headerHeight}px`
-    const alpha = 0.1 * (1 - (headerHeight - minHeaderHeight) / (maxHeaderHeight - minHeaderHeight))
-    headerEl.style.boxShadow = `0 10px 60px 10px rgba(0, 0, 0, ${alpha})`
+
+    if (shouldElevate) {
+        const shadowAlpha = 0.1 * (1 - (headerHeight - minHeaderHeight) / (maxHeaderHeight - minHeaderHeight))
+        headerEl.style.boxShadow = `0 10px 60px 10px rgba(0, 0, 0, ${shadowAlpha})`
+    }
+
+    if (shouldScrollOut) {
+        if (headerHeight === minHeaderHeight) {
+            headerEl.style.top = `${maxHeaderHeight - minHeaderHeight}px`
+            headerEl.style.position = "absolute"
+        } else {
+            headerEl.style.top = "0"
+            headerEl.style.position = "fixed"
+        }
+    }
 }
 
 function documentDidScroll() {
-    updateHeaderHeight(document.scrollingElement.scrollTop)
+    updateHeaderHeight(document.scrollingElement.scrollTop, true, true)
 }
 
 document.addEventListener("scroll", documentDidScroll)
