@@ -51,3 +51,7 @@ header.hero {
 .footer__inner {
     justify-content: center !important;
 }
+
+.post-title {
+    font-size: 2rem;
+}

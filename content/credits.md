@@ -5,4 +5,4 @@ draft: false
 
 Powered by [Hugo](http://gohugo.io).
 
-Theme created by [panr](https://twitter.com/panr).
+Theme based on [Hello Friend](https://github.com/panr/hugo-theme-hello-friend).
