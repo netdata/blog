@@ -5,8 +5,11 @@
    "theme": "hello-friend",
    "rssLink": "index.xml",
    "defaultTheme": "light",
+   "outputs": {
+     "home": ["HTML","RSS", "JSON"]
+   },
    "params": {
-      "ReadMore": "more",
+      "ReadMore": "more"
    },
    "languages": {
    }
