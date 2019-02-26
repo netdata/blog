@@ -6,8 +6,13 @@
    "rssLink": "index.xml",
    "defaultTheme": "light",
    "outputs": {
-     "home": ["HTML","RSS", "JSON"]
+     "home": ["html","rss", "json"]
    },
+   "mediaTypes": {
+        "application/json": {
+            "suffixes": ["json"]
+        }
+    },
    "params": {
       "ReadMore": "more"
    },
