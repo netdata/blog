@@ -10,11 +10,12 @@
 	"author": { "name": "{{ .Site.Params.author }}" },
 	{{ end }}
     "items": [
-    {{ range $i, $e := first 10 (where .Site.Pages "Type" "posts") }}
+    {{ range $i, $e := first 10 (where .Site.Pages "Section" "posts") }}
 		{{ if $i }}, {{ end }}
 			{
 				"id": "{{ .Permalink }}",
 				"title": "{{ .Title }}",
+                {{ with .Params.Cover }}"cover_url": "{{ printf "img/%s" . | absURL }}",{{ end }}
 				"content_text": {{ .Summary | jsonify }},
 				"url": "{{ .Permalink }}",
 				"date_published": "{{ .Date }}",
