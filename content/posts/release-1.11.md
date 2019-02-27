@@ -8,8 +8,6 @@ categories: []
 draft: true
 ---
 
-Hi all,
-
 It has been 8 months since the last release of Netdata. We delayed releases a bit, but as you can see on these release notes, we were working hard to provide the best Netdata ever.
 
 Thanks to synacktiv.com and red4sec.com, we fixed a number of vulnerabilities in the code base (check below), so release 1.11 of Netdata is the most secure Netdata so far. All users are advised to update to this version asap.

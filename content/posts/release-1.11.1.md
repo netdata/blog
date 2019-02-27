@@ -2,23 +2,17 @@
 title: "Release 1.11.1"
 date: 2018-11-22
 author: "Costa Tsaousis"
-cover: "hello.jpg"
+cover: "release-1.11.1.png"
 tags: ["Release", "Patch"]
 categories: []
-draft: true
+draft: false
 ---
 
-This is a patch - bug fix release of netdata.
-
-Our work to move all the documentation inside the repo is still in progress. Everything has been moved, but still we need to refactor a lot of the pages to be more meaningful.
-
-The README file on netdata home has been rewritten. [Check it here](https://github.com/netdata/netdata#netdata----).
+This is a patch - bug fix release of netdata. Our work to move all the documentation inside the repo is still in progress. Everything has been moved, but still we need to refactor a lot of the pages to be more meaningful. The README file on netdata home has been rewritten. [Check it here](https://github.com/netdata/netdata#netdata----).
 
 ## Improved internal database
 
-Overflown incremental values (counters) do not show a zero point at the charts. Netdata detects the width (8bit, 16bit, 32bit, 64bit) of each counter and properly calculates the delta when the counter overflows.
-
-The internal database format has been extended to support values above 64bit.
+Overflown incremental values (counters) do not show a zero point at the charts. Netdata detects the width (8bit, 16bit, 32bit, 64bit) of each counter and properly calculates the delta when the counter overflows. The internal database format has been extended to support values above 64bit.
 
 ## New data collection plugins
 
