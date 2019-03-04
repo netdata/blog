@@ -20,7 +20,7 @@
 				"url": "{{ .Permalink }}",
                 "date_published": "{{ .Date }}",
                 {{ if .Params.tags }}
-                "tags": "{{ delimit .Params.tags ", " }}"
+                "tags": "{{ delimit .Params.tags "," }}"
                 {{ end }}                
 			}
 		{{ end }}
