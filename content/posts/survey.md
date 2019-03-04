@@ -8,14 +8,10 @@ categories: []
 draft: false
 ---
 
-On February 15 we published our first ever [user survey](https://docs.google.com/forms/d/1lXKZd8YOKJxF1clQHkv8N1tx2rF4PqPjhRwLYDceA3g/edit). The reason is simple: we need your feedback.
+Help us shape the future of netdata, by responding to [netdata's users' survey](https://docs.google.com/forms/d/1lXKZd8YOKJxF1clQHkv8N1tx2rF4PqPjhRwLYDceA3g/edit).
 
-Netdata is growing fast, not only in adoption, but also in terms of the team dedicated to delivering great features to our users. We are already working hard on covering gaps that have been identified for a while.
+Netdata is a community driven project. Your love, your enthousiasm, your needs define its roadmap. We always did it that way. This is how netdata got health monitoring, streaming, data archiving to third party time-series databases, etc.
 
-We are also full of ideas about how we can make the lives of IT operators easier. In fact, there are so many initiatives we believe we should focus on, that it's sometimes hard to prioritize. So, instead of discussing endlessly amongst ourselves about what our community would really love to see from netdata tomorrow, we reached out to the real experts.
+With this survey, we try to understand the kind of infrastrure you monitor with netdata, how you integrate it with other systems, what is important for you to have improved in netdata, etc.
 
-Naturally, one doesn't want to miss the opportunity of a survey to also ask people what they think and feel about netdata today. The relevant questions in our survey were formed in a way that would let us to validate the areas of improvement. What we didn't quite expect was the expression of love we have received.
-
-Many of us in the team are newcomers and we are truly humbled by the emotions this tool stirs in its users. The responses we already have make us fully aware of our tremendous responsibility, to continue to pleasantly surprise you at every turn of this amazing journey.
-
-Of course, the larger the sample size, the better. So please spend 2 minutes to [help shape the future of netdata](https://docs.google.com/forms/d/1lXKZd8YOKJxF1clQHkv8N1tx2rF4PqPjhRwLYDceA3g/edit)!
+You will spend just 2 minutes with it. [Help us shape the future of netdata now](https://docs.google.com/forms/d/1lXKZd8YOKJxF1clQHkv8N1tx2rF4PqPjhRwLYDceA3g/edit).
