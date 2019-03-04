@@ -5,7 +5,7 @@ author: "Chris Akritidis"
 cover: "survey-cover.png"
 tags: ["Community"]
 categories: []
-draft: false
+draft: true
 ---
 
 On February 15 we published our first ever [user survey](https://docs.google.com/forms/d/1lXKZd8YOKJxF1clQHkv8N1tx2rF4PqPjhRwLYDceA3g/edit). The reason is simple: we need your feedback.
