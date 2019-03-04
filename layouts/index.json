@@ -18,8 +18,10 @@
                 {{ with .Params.Cover }}"cover_url": "{{ printf "img/%s" . | absURL }}",{{ end }}
 				"content_text": {{ .Summary | jsonify }},
 				"url": "{{ .Permalink }}",
-				"date_published": "{{ .Date }}",
-				"tags": []
+                "date_published": "{{ .Date }}",
+                {{ if .Params.tags }}
+                "tags": "{{ delimit .Params.tags ", " }}"
+                {{ end }}                
 			}
 		{{ end }}
     ]
