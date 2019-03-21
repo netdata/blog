@@ -2,7 +2,7 @@
 title: "Release 1.13"
 date: 2019-03-21
 author: "Chris Akritidis"
-cover: "release-1-12.png"
+cover: "release-1-13.png"
 tags: ["Release"]
 categories: []
 draft: false
@@ -10,13 +10,13 @@ draft: false
 
 Release 1.13 contains 14 bug fixes and 8 improvements.
 
-### At a glance
-
-netdata has taken the first step into the world of Kubernetes, with a beta version of a [Helm chart](https://github.com/netdata/helmchart) for deployment to a k8s cluster and [proper naming](https://github.com/netdata/netdata/pull/5576) of the cgroup containers. We have [big plans](https://github.com/netdata/netdata/issues/5392) for Kubernetes, so stay tuned!
+Netdata has taken the first step into the world of Kubernetes, with a beta version of a [Helm chart](https://github.com/netdata/helmchart) for deployment to a k8s cluster and [proper naming](https://github.com/netdata/netdata/pull/5576) of the cgroup containers. We have [big plans](https://github.com/netdata/netdata/issues/5392) for Kubernetes, so stay tuned!
 
 A [major refactoring of the python.d plugin](https://github.com/netdata/netdata/pull/5552) has resulted in a dramatic decrease of the required memory, making netdata even more resource efficient.
 
 We also added charts for IPC shared memory segments and total memory used.
+
+<!--more-->
 
 ### Acknowledgements:
 
