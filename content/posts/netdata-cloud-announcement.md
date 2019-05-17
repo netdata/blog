@@ -2,7 +2,7 @@
 title: "Introducing Netdata Cloud: our vision for distributed health and performance monitoring"
 date: 2019-05-18
 author: "Joel Hans"
-cover: ""
+cover: "netdata-cloud-announcement.png"
 tags: ["Announcement"]
 categories: []
 draft: true
