@@ -14,7 +14,8 @@
         }
     },
    "params": {
-      "ReadMore": "more"
+      "ReadMore": "more",
+      "defaultTheme": "light"
    },
    "languages": {
    }
