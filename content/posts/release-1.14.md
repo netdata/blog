@@ -2,10 +2,10 @@
 title: "Release 1.14"
 date: 2019-04-26
 author: "Chris Akritidis"
-cover: "release-1-13.png"
+cover: "release-1-14.png"
 tags: ["Release"]
 categories: []
-draft: true
+draft: false
 ---
 
 Release 1.14 contains 14 bug fixes and 24 improvements.
