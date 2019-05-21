@@ -142,6 +142,8 @@ To reiterate:
 
 We’ve already put out more releases of the Netdata agent this year than we did in all of 2018. That’s the power of this new, growing team. And that’s what to expect for the months to come. We’re working hard to make both Netdata’s open-source monitoring agent and its SaaS companion in Netdata Cloud the most powerful real-time monitoring solution available.
 
+For more information on how to get started with Netdata Cloud, check out our [companion piece](/posts/how-to-netdata-cloud/) that walks you through the basics of signing up for the service, adding your first nodes, and viewing metrics on critical systems and services.
+
 And before we sign off, a big thanks to the community that’s helped make Netdata so powerful. Their contributions are essential to our mission of helping people build extraordinary infrastructures. We’re thrilled that Netdata is used every day by hundreds of thousands of users, including those at Amazon, Google, IBM, Microsoft, Nvidia, and others, but it’s the strength, kindness, and generosity of this community that keeps us going.
 
 We’re excited to commit more of our efforts toward this community, help nurture its continued growth, and make Netdata the best performance and health monitoring solution out there.
