@@ -1,5 +1,6 @@
 ---
 title: "Introducing Netdata Cloud: our vision for distributed health and performance monitoring"
+summary: "We’re thrilled to make the first official announcement about Netdata Cloud, our vision for the future of distributed health and performance monitoring."
 date: 2019-05-18
 author: "Joel Hans"
 cover: "netdata-cloud-announcement.png"
