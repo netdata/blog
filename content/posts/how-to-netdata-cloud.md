@@ -23,7 +23,7 @@ There is only one prerequisite to using Netdata Cloud: A working Netdata agent.
 
 If you don’t have one running yet, be sure to check out our [quick start](https://github.com/netdata/netdata#quick-start) or [installation guides](https://github.com/netdata/netdata/tree/master/packaging/installer#installation) for more information.
 
-Once you have a Netdata agent running, or connect to the web dashboard of your Netdata agent by navigating your browser of choice to http://SERVER-IP:19999. You’ll see a screen much like this one:
+Once you have a Netdata agent running, or connect to the web dashboard of your Netdata agent by navigating your browser of choice to `http://SERVER-IP:19999`. You’ll see a screen much like this one:
 
 ![A screenshot of Netdata's web interface](/img/how-to-netdata-cloud_01.png)
 
@@ -117,6 +117,11 @@ We’re working on ways to make this process smoother, particularly for those wi
 
 Netdata Cloud is in its early stages and we have [a ton of features planned](https://blog.netdata.cloud/posts/netdata-cloud-announcement/#what-features-will-netdata-cloud-offer). For more information about the newest additions to Netdata Cloud, and the Netdata agent as a whole, see [the changelog for version 1.15](https://github.com/netdata/netdata/releases/tag/v1.15.0).
 
-If you’d like to be among the first to hear about new releases, pop your email into our newsletter subscription form and we’ll let you know as soon as there’s something new to play with.
+If you’d like to be among the first to hear about new releases of both Netdata Cloud and the open-source monitoring agent, you have a few options:
 
-[newsletter subscription form]
+- Become a watcher on [the Netdata repository](https://github.com/netdata/netdata)
+- Subscribe to the [Atom feed](https://github.com/netdata/netdata/releases.atom) that automatically updates with every new release
+- Subscribe to the [RSS feed](https://blog.netdata.cloud/index.xml) for this blog
+- Follow [Netdata on Twitter](https://twitter.com/linuxnetdata)
+
+We hope you're excited for everything we have in store!
