@@ -5,7 +5,7 @@ author: "Joel Hans"
 cover: "netdata-cloud-announcement.png"
 tags: ["Announcement"]
 categories: []
-draft: true
+draft: false
 ---
 
 We’re thrilled to make the first official announcement about Netdata Cloud, our vision for the future of distributed health and performance monitoring. While [Netdata Cloud](https://netdata.cloud/account/sign-in) has been live since February, when we released [v1.12.0](https://github.com/netdata/netdata/releases/tag/v1.12.0) of Netdata’s open-source monitoring agent, we’ve waited until the product was a little more mature to let our monitoring community know about how it fits into the future of Netdata.
