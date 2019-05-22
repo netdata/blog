@@ -120,8 +120,8 @@ Netdata Cloud is in its early stages and we have [a ton of features planned](htt
 If you’d like to be among the first to hear about new releases of both Netdata Cloud and the open-source monitoring agent, you have a few options:
 
 - Become a watcher on [the Netdata repository](https://github.com/netdata/netdata)
-- Subscribe to the [Atom feed](https://github.com/netdata/netdata/releases.atom) that automatically updates with every new release
-- Subscribe to the [RSS feed](https://blog.netdata.cloud/index.xml) for this blog
 - Follow [Netdata on Twitter](https://twitter.com/linuxnetdata)
+- Subscribe to the [Atom feed](https://github.com/netdata/netdata/releases.atom) that automatically updates with every new release
+- Or subscribe to the [RSS feed](https://blog.netdata.cloud/index.xml) for this blog
 
-We hope you're excited for everything we have in store!
+There's a lot of changes happening in the next few months, so be sure to stay tuned one way or another. We're incredibly excited to see how the community takes to Netdata Cloud as it expands and becomes even more powerful, all while staying completely free.
