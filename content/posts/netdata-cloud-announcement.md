@@ -89,7 +89,7 @@ A few of these planned features include:
 
 Again, we expect that the vast majority of Netdata’s users won’t need these features. Creating these two tiers will help us further fund the company’s efforts to deploy Netdata’s open-source agent on a massive scale and entirely for free.
 
-### Who’s building and paying for Netdata Cloud?
+### Who’s building Netdata Cloud?
 
 Back in May 2018, we created Netdata, Inc. as the backing organization for Netdata’s monitoring agent. There were several reasons for this change, but most importantly, we recognized the immediate need to resolve one of our most pressing missed opportunities: A web application for monitoring an entire infrastructure, with any number of Netdata-powered nodes, all in real-time. To do that, we needed a framework for attracting investor interest, hiring new talent, and putting them to work building an even better Netdata.
 
