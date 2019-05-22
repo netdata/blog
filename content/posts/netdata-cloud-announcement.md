@@ -34,7 +34,7 @@ In short: **Netdata Cloud is our vision for the future of distributed health and
 
 ### What features will Netdata Cloud offer?
 
-By September 2019 we plan on rolling out the following new features for Netdata Cloud:
+By October 2019 we plan on rolling out the following new features for Netdata Cloud:
 
 #### May
 
