@@ -95,10 +95,6 @@ Back in May 2018, we created Netdata, Inc. as the backing organization for Netda
 
 Netdata, Inc.’s CEO is [Costa Tsaousis](https://github.com/ktsaou), the lead developer of Netdata’s open-source agent. He maintains ownership over the repository, its code, and the overall mission for the product. He is joined by [Chris Akriditis](https://github.com/cakrit) as the COO and [George Moschovitis](https://github.com/gmosx) as the CTO.
 
-Since founding, we’ve received $3.65 million in venture capital backing from Bain Capital Ventures and Marathon VC.
-
-[Salil Deshpande](https://www.baincapitalventures.com/team/salil/), a Managing Director at Bain Capital Ventures, was an early investor in DynaTrace, SysDig, Redis Labs, MuleSoft, DataStax, SpringSource, Sonatype, Quantum Metric and many others, and has been featured on the Forbes Midas List of the 100 best performing VCs for the past seven years in a row. [Panos Papadopoulos](https://marathon.vc/team/panos-papadopoulos/), a Partner at Marathon VC, built Bugsense, which was eventually acquired by [Splunk](https://www.splunk.com/), and now helps Greek founders grow their startups by connecting them to Silicon Valley. We’re thrilled to be working with both Salil and Panos, who understand our vision and commitment to Netdata’s open-source agent.
-
 We’ve also begun the process of hiring new software, integration, systems development, and performance engineers to accelerate the pace at which we release new features, and we now have more than a dozen full-time staff members.
 
 These new talents have already made significant contributions to the open-source Netdata monitoring agent, like [introducing Netdata Cloud in v1.12.0](https://github.com/netdata/netdata/releases), a new [stable release channel in v.1.12.2](https://github.com/netdata/netdata/releases/tag/v1.12.2), the [beta Helm chart for monitoring Kubernetes clusters in v.1.13.0](https://github.com/netdata/netdata/releases/tag/v1.13.0), and new [Helm charts for kubelet, kube-proxy, and coredns metrics in Kubernetes in v.1.14.0](https://github.com/netdata/netdata/releases/tag/v1.14.0).
