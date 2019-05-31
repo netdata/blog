@@ -1,7 +1,7 @@
 ---
 title: "13 reasons why Netdata is a no-brainer for health and performance monitoring"
 summary: "It's free, fast, lightweight, and instantly valuable. But if you're still not convinced, here's 13 more reasons to get real-time health and performance monitoring data."
-date: 2019-06-12
+date: 2019-06-18
 author: "Joel Hans"
 cover: "netdata-no-brainer.png"
 tags: ["Why Netdata"]
