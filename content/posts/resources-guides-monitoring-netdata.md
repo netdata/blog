@@ -28,11 +28,11 @@ A must-read for anyone new to monitoring.
 
 **<span style="color: #17CE8A;">Awesome Site Reliability Engineering</span>**  -> [link](https://github.com/dastergon/awesome-sre)
 
-Yes, it's another `awesome` list. While awesome lists might seem a bit overplayed by now, the SRE list is being actively updated and is full of excellent articles and other resources to help you get a better grasp on monitoring, observability, and overall culture around site reliability engineering (SRE).
+Yes, it's another `awesome` list. While awesome lists might seem a bit overplayed by now, the site reliability engineering (SRE) list is being actively updated and is full of excellent articles and other resources to help you get a better grasp on monitoring, observability, and the overall culture around the demanding work of keeping sites up-and-running in trying conditions.
 
 **<span style="color: #17CE8A;">Observability: the new wave or buzzword?</span>** -> [link](https://medium.com/@dlite/observability-the-new-wave-or-buzzword-fc23a68abf72)
 
-You might have heard the *observability* word yourself, but do you understand how it fits alongside monitoring, debugging, and alerting?
+You might have heard the *observability* word, but do you understand how it fits alongside monitoring, debugging, and alerting?
 
 {{< figure src="/img/resources-guides-monitoring-netdata_observability.png" alt="A photograph of two pyramid charts showing the increase in reliance on debugging over the last 5 years" position="center" caption="Just one way to perceive the 'observability iceberg'." captionPosition="center" >}}
 
@@ -40,7 +40,7 @@ All in all, it's a pretty fascinating look into the future of soft-failing softw
 
 **<span style="color: #17CE8A;">Monitoring and Observability</span>** -> [link](https://medium.com/@copyconstruct/monitoring-and-observability-8417d1952e1c)
 
-Still not sure what observability is? This post from Cindy Sridharan is a comprehensive look into the definitions (and motivations) behind *monitoring* vs. *observability*, *white-box* vs. *black-box*, building *monitorable* systems, and how debugging fits into this already complex equation.
+*Still* not sure what observability is? This post from Cindy Sridharan is a comprehensive look into the definitions (and motivations) behind *monitoring* vs. *observability*, *white-box* vs. *black-box*, building *monitorable* systems, and how debugging fits into this already complex equation.
 
 **<span style="color: #17CE8A;">Monitoring distributed systems</span>** -> [link](https://www.oreilly.com/ideas/monitoring-distributed-systems)
 

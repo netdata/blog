@@ -11,7 +11,7 @@ draft: true
 
 Netdata is the best real-time health and performance monitoring solution out there. And we have the numbers to back that claim up.
 
-Being the third-most starred project (**38,000** as of May 2019, and counting) in the [Cloud Native Computing Foundation (CNCF) landscape](https://landscape.cncf.io/format=card-mode&grouping=no&sort=stars), behind only Kubernetes and Elastic, is a good indicator.
+Being the third-most starred project (**38,600** as of June 1, 2019, and counting) in the [Cloud Native Computing Foundation (CNCF) landscape](https://landscape.cncf.io/format=card-mode&grouping=no&sort=stars), behind only Kubernetes and Elastic, is a good indicator.
 
 So is 400,000 daily pulls of our [Docker image](https://hub.docker.com/r/netdata/netdata/).
 
@@ -25,7 +25,7 @@ But if those numbers aren't enough, here's 13 other—and perhaps more valuable�
 
 ## 1. It's free and open-source (FOSS) software
 
-Ever since Costa first released Netdata's monitoring agent into the world, it's been free and open-source (FOSS) software, and always will be. That means you can head over to the [Netdata repository](https://github.com/netdata/netdata) and see all the code there for yourself. According to our [GNU General Public License v3.0 (GPLv3+)](https://github.com/netdata/netdata/blob/master/LICENSE) licensing, you can also freely modify the source code and redistribute it under the same license.
+Ever since [Costa](https://github.com/ktsaou) first released Netdata's monitoring agent into the world, it's been free and open-source (FOSS) software, and always will be. That means you can head over to the [Netdata repository](https://github.com/netdata/netdata) and see all the code there for yourself. According to our [GNU General Public License v3.0 (GPLv3+)](https://github.com/netdata/netdata/blob/master/LICENSE) licensing, you can also freely modify the source code and redistribute it under the same license.
 
 For most people, however, FOSS software means you can download as many copies of Netdata's monitoring agent as you'd like without ever spending a penny. That's part of the reason we think it's so powerful—it's trivial to install Netdata on dozens or even hundreds of machines entirely for free. And get a ton of value out of the real-time metrics, again, entirely for free.
 
@@ -43,7 +43,7 @@ As part of the GPLv3 license, businesses are also allowed to use Netdata for bus
 
 We designed Netdata to run without a centralized database for collecting data and analyzing the results. We consider that distributed nature one of its most significant benefits. Because each monitoring agent runs independently of any other, you can collect far more real-time metrics without spending a fortune on a third-party database that stores all the data in a single location.
 
-It's cheaper, easier to manage, and offers more detail than a centralized solution, although it's certainly compatible with [time-series databases](https://github.com/netdata/netdata/tree/master/backends) like Prometheus and Graphite, if that's of interest to you.
+It's cheaper, easier to manage, and offers more detail than a centralized solution, although it's certainly compatible with [time-series databases](https://github.com/netdata/netdata/tree/master/backends) like Prometheus and Grafana, if that's of interest to you.
 
 ## 4. A no-fuss installation
 
@@ -87,7 +87,7 @@ Here's an example: You can use `df` to get information about disk space utilizat
 
 ## 9. Netdata doesn't disrupt the system's core function
 
-Netdata uses a highly-efficient database engine to store vast quantities of data, much of it in the system's memory, without disrupting the system as a whole. And since it's not loading or saving anything, it's gentle on your system's disks.
+Netdata uses a highly-efficient database engine to store vast quantities of data in the system's memory without disrupting the system as a whole. And since it's not loading or saving anything, it's gentle on your system's disks.
 
 How efficient is Netdata? We're talking 1% CPU utilization of a single core and 25MB of RAM. That's a trivial amount of usage even for small VMs in the cloud, especially when it's collecting thousands of metrics every single second.
 
@@ -99,7 +99,7 @@ And if it's not as lightweight as you'd like, we have plenty of other ways to [r
 
 We're fully aware that more complex systems are running on complex container orchestrations using ephemeral nodes or distributed networks of IoT devices. That's why we designed Netdata to work with containerized environments.
 
-You can run Netdata inside of a Docker container, or you can include Netdata in your `Dockerfile` to ensure that you have instant access to real-time monitoring data from your production-ready container(s). An instance of Netdata running on the host machine can also track the number of running, healthy, and unhealthy containers.
+You can run Netdata's monitoring agent inside of a Docker container, or you can include Netdata in your `Dockerfile` to ensure that you have instant access to real-time monitoring data from your production-ready container(s). An instance of Netdata running on the host machine can also track the number of running, healthy, and unhealthy containers.
 
 With v.1.13.0 of Netdata, we introduced Kubernetes monitoring into Netdata. We now have a [beta Helm chart](https://github.com/netdata/helmchart) that bootstraps a Netdata deployment on a Kubernetes cluster, with slaves operating as headless collecters to forward metrics to the master Netdata agent. Persistent volumes store metrics, handle alarm notifications, and more. We've also introduced charts for `Kubelet`, `kube-proxy` and `coredns` metrics, and have a lot more planned for the near future.
 

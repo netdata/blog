@@ -11,9 +11,9 @@ draft: true
 
 Enough with Internet of Things (IoT) deployments full of "dumb" devices that can only collect data and respond from instructions from the cloud. Enter edge computing.
 
-Edge computing is the practice of collecting and analyzing data precisely where it is collected, on the far edges of the network, rather than streaming it back to a centralized location. And edge monitoring presents an opportunity to make remote devices smarter and give system administrators and DevOps engineers more tools to respond even faster during anomalies, slowdowns, and outages.
+Edge computing is the practice of collecting and analyzing data precisely where it is collected, on the far edges of the network, rather than streaming it back to a centralized location. Edge monitoring presents an opportunity to make remote devices smarter and give system administrators and DevOps engineers more tools to respond even faster during anomalies, slowdowns, and outages.
 
-Together, edge computing and monitoring will help enterprises worry less about how they're going to stream enormous amounts of real-time edge device data back to a cloud computing environment, and how much it's going to cost them, and focus more on making their infrastructure faster and resilient. 
+Together, edge computing and edge monitoring will help enterprises worry less about how they're going to stream enormous amounts of real-time edge device data back to a cloud computing environment (and how much it will cost), and instead focus more on making their infrastructure faster and resilient. 
 
 Maybe even extraordinary.
 
@@ -21,11 +21,11 @@ Maybe even extraordinary.
 
 ## The complexity of edge computing
 
-Edge computing can take on many forms. A Tesla Model 3 driving in Autopilot mode is a type of mobile edge computing solution, since it's collecting and processing data from its sensors to make decisions about avoiding other vehicles and safely changing lanes. Edge devices also appear in remote or rugged industrial environments, like oil rigs and manufacturing plant floors. Or, they can be devices often found at home, like an Amazon Alexa or Google Home Mini.
+Edge computing can take on many forms. A Tesla Model 3 driving in Autopilot mode is a type of mobile edge computing solution, since it's collecting and processing data from its sensors to make decisions about avoiding other vehicles and changing lanes. Edge devices also appear in remote or rugged industrial environments, like oil rigs and manufacturing plant floors. Or, they can be devices often found at home, like an Amazon Alexa or Google Home Mini.
 
 {{< figure src="/img/edge-monitoring-netdata_googlehome.jpg" alt="A charcoal Google Home Mini." position="center" style="border-radius: 4px;" caption="A charcoal Google Home Mini. Photo by Bence Boros on Unsplash." captionPosition="center" >}}
 
-Edge computing also represents a break from the recent trend of centralizing all data in one data center or cloud computing environment. Instead of streaming data toward that single location and relying on the vast quantities of computing power, edge computing uses the computational power that's already there. Enterprises should be able to distribute processing and reduce their reliance on single points of failure with edge computing—if they do it right.
+Edge computing also represents a break from the recent trend of centralizing all data in one data center or cloud computing environment. Instead of streaming the data collected by remote devices toward that single location to utilize its computing power and send instructions back, edge computing uses the computational power that's already on the devices themselves. By moving computing to the edge, enterprises can distribute processsing power and reduce their reliance on single points of failure with edge computing—but only if they can keep track of real-time changes to their network.
 
 The ongoing debate about the merits of cloud vs. edge computing aside, system administrators and DevOps engineers need to contend with a few harsh truths. A recent [Allied Market Research report](https://www.marketsandmarkets.com/Market-Reports/edge-computing-market-133384090.html) predicts the glocal edge computing market will grow to $16.55 billion by 2025. That's up from $1.73 billion in 2017, for a compound annual growth rate of nearly 33%.
 
@@ -49,7 +49,7 @@ That means system administrators and network managers need strategies and soluti
 
 **Where and how does analysis happen?** As I mentioned earlier, a lot of edge monitoring solutions aren't performing analysis on the edge. Instead, they're aggregating streaming data from remote edge devices in a centralized location and using that compute power to make insights about the data. But this could be creating latency between the collection of an abnormal event and the response, no matter how quickly the network can stream data to a cloud environment, analyze it, and send a response back to the edge.
 
-**How (and how quickly) can we respond to that analysis?** The timeline for collecting, analyzing, and responding to an unusual edge network event can range from a few milliseconds to hours. That's the difference between a *self-healing* infrastructure—more on that in a moment—and the harsh reality of a technician traveling out to the device to implement an in-person fix. Based on how essential the device is, and what kind of work it's helping perform, that time difference could cost an enterprise a lot of money or create a heap of dissatisfied customers. Most enterprises fall somewhere between these two extremes. They can administer edge devices remotely but still rely on centralized computing power to help them make decisions. If they had edge monitoring solutions in place, they could respond even faster.
+**How (and how quickly) can we respond to that analysis?** The timeline for collecting, analyzing, and responding to an unusual edge network event can range from a few milliseconds to hours. That's the difference between a *self-healing* infrastructure—more on that in a moment—and the harsh reality of a technician traveling out to the device to implement an in-person fix. Based on how essential the device is, that time difference could cost an enterprise a lot of money or create a heap of dissatisfied customers. Most enterprises fall somewhere between these two extremes. They can administer edge devices remotely but still rely on centralized computing power to help them make decisions. If they had edge monitoring solutions in place, they could respond even faster.
 
 **How much will this cost?** Streaming and storing large volumes of data from a vast edge network in one cloud computing environment isn't going to come cheap. And that's just for storing data—any monitoring and analysis solutions will come at an additional cost. In many cases, these costs become so prohibitive as to restrict the granularity of data collection, which can let anomalies go unnoticed.
 
@@ -67,34 +67,36 @@ Let's see how Netdata answers those three essential questions.
 
 Even without configuration, Netdata only needs 1% CPU utilization on a single CPU, 25MB of RAM, and no storage to collect thousands of metrics with real-time granularity. While others are capable of collecting metrics every 10 seconds, or even less frequently, Netdata has 1 second of granularity, meaning sysadmins will never miss essential information about an ongoing anomaly.
 
-That low utilization means Netdata can run, and collect thousands of metrics, on even the lowest-power edge devices.
+That low utilization means Netdata can run and collect thousands of metrics on even the lowest-power edge devices.
 
-Because Netdata is distributed by design, there's no need to stream or centralize any of the edge monitoring data to perform analysis. If a Netdata agent detects anomalous sensor data, it will instantly trigger an alarm without needing to stream or process data in a centralized location.
+Because Netdata is distributed by design and is capable of triggering its own alarms based on real-time data, there is no need to stream data or centralize analysis in a cloud computing environment.
 
 ### How (and how quickly) can we respond to that analysis?
 
 Netdata is more than just distributed—it's customizable to a variety of IoT use cases and the growing needs for edge monitoring.
 
-For example, hundreds or thousands of distributed Netdata nodes can stream metrics to a single database to make sure engineers have all the diagnostic information they need to resolve slowdowns or anomalies. Sysadmins can use a single [custom dashboard](https://docs.netdata.cloud/web/gui/custom/) to see the real-time health and performance of all edge devices in one place.
+For example, hundreds or thousands of distributed Netdata nodes can stream metrics to a single database to ensure engineers have all the diagnostic information they need to resolve slowdowns or anomalies. Sysadmins can use a single [custom dashboard](https://docs.netdata.cloud/web/gui/custom/) to see the real-time health and performance of all edge devices in one place.
 
 Here's an example of how Netdata can monitor ephemeral nodes—it's not hard to see how this setup would work nicely with IoT devices, too:
 
 {{< figure src="/img/netdata-no-brainer_auto-scaling.png" alt="A diagram showing how Netdata can monitor an auto-scaling infrastructure with ephemeral nodes" position="center" style="border-radius: 8px;" caption="An example of using Netdata's distributed nature to monitor an infrastructure of ephemeral nodes. Just replace 'ephemeral' with 'edge' to see how it can help with edge monitoring!" captionPosition="center" >}}
 
-Even in a setup like this, a distributed edge monitoring solution like Netdata allows for *self-healing* infrastructures. Edge devices capable of collecting data, analyzing it, and responding with pre-configured fixes can repair networks without human intervention in many cases. That means shorter outages and fewer technicians rushing on-site to deploy fixes the network itself could have deployed automatically and remotely.
+Even in a setup like this, a distributed edge monitoring solution like Netdata allows for *self-healing* infrastructures. Edge devices capable of collecting data, analyzing it, and responding with pre-configured fixes can repair networks without any human intervention. That means shorter outages and fewer technicians rushing on-site to deploy fixes the network itself could have deployed automatically and remotely.
 
 Or, enterprises can leverage Netdata Cloud ([see our announcement post for more](https://blog.netdata.cloud/posts/netdata-cloud-announcement/)) to create a single source of truth for an entire decentralized infrastructure of edge devices running Netdata.
 
 ### How much will this cost?
 
-Let's put it this way: The hardware will cost ∞ more than Netdata. Netdata's monitoring agent is completely free and open-source, even for enterprises. Personal, small- to medium-sized businesses, and enterprises can install Netdata  on thousands of edge devices without spending a penny. We don't even ask for a donation—a [star on our GitHub repository](https://github.com/netdata/netdata/blob/master/CONTRIBUTING.md#give-netdata-a-github-star) will do.
+Let's put it this way: The hardware will cost ∞ more than Netdata itself.
 
-In the future, we'll be building out Netdata Cloud with [enterprise-focused, paid features](https://blog.netdata.cloud/posts/netdata-cloud-announcement/#what-features-will-netdata-cloud-offer) that might bring some cost to large enterprises that need much more sophisticated capabilities than the average Netdata user.
+Netdata's monitoring agent is completely free and open-source, even for enterprises. Personal, small- to medium-sized businesses, and enterprises can install Netdata on thousands of edge devices without spending a penny. We don't even ask for a donation—a [star on our GitHub repository](https://github.com/netdata/netdata/blob/master/CONTRIBUTING.md#give-netdata-a-github-star) will do just fine.
+
+In the future, we'll be building out Netdata Cloud with [enterprise-focused, paid features](https://blog.netdata.cloud/posts/netdata-cloud-announcement/#what-features-will-netdata-cloud-offer) that would empower large enterprises with sophisticated needs with additional features at some cost.
 
 ## The future of real-time health and performance monitoring... on the edge
 
-Dumb devices are becoming obsolete, and edge computing is the future of networks. By combining collection *and* analysis in a single device, system administrators will have an alternative to centralizing large volumes of data from thousands of remote devices and hoping their cloud has enough computing power to react fast enough during anomalies or outages.
+Dumb devices are becoming obsolete, and edge computing is the future of networks. By combining collection *and* analysis in a single device, system administrators will have an alternative to centralizing large volumes of data from thousands of remote devices. No more hoping their cloud has enough computing power to react fast enough during anomalies or outages.
 
 We think we're building the best distributed edge monitoring solution for networks of pretty much any size, but we wouldn't be in this industry if it weren't fast-moving and highly competitive. We'll have to work hard and consistently innovate to stay in the game.
 
-If you'd like to help us build that future, send us an email at [info@netdata.cloud](mailto:info@netdata.cloud) for more information about open positions, or get your hands dirty right away by reading our [contributor documentation](https://github.com/netdata/netdata/blob/master/CONTRIBUTING.md). We got this far thanks to our fantastic community, and we still have a lot to gain from the wisdom of developers, system administrators, and DevOps engineers who do this work day in and day out.
+If you'd like to help us build that future, send us an email at [info@netdata.cloud](mailto:info@netdata.cloud) for more information about open positions, or get your hands dirty right away by reading our [contributor documentation](https://github.com/netdata/netdata/blob/master/CONTRIBUTING.md). We got this far thanks to our fantastic community, and we still have a lot to gain from the wisdom of developers, system administrators, and DevOps engineers who do this essential work day in and day out.

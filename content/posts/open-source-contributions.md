@@ -11,7 +11,7 @@ draft: true
 
 Netdata *must* be doing something right when it comes to inspiring contributions. Our [open-source, distributed monitoring agent](https://github.com/netdata/netdata) has more than 38,000 stars on GitHub and has seen contributions from more than 200 people. We've even hired a handful of our contributors to work full-time on making the Netdata ecosystem even more powerful. People are passionate about what we do, and they happily offer their time and expertise to make Netdata better.
 
-The Netdata community didn't just *happen*, though. We didn't just build an open-source project and wait for contributors to step up and help. We took many concerted efforts to inspired these contributions, and we thought we'd share a few of our best practices.
+The Netdata community didn't just *happen*, though. We didn't just build an open-source project and wait for contributors to step up and help. We took many concerted efforts to inspired these contributions, and we thought we'd share a few of our most successful efforts.
 
 <!--more-->
 
@@ -19,13 +19,13 @@ Now, the process of inspiring contributions for an open-source project has two c
 
 ## Getting new contributors to your open-source project
 
-Just like a startup business, a primary goal for any open-source project is getting the attention of eager and passionate people. Yes, it's a type of marketing, but we're focused almost exclusively on making contributions as easy as possible.
+Just like a startup business, a primary goal for any open-source project is getting the attention of eager and passionate people. Yes, it's a type of marketing, but we've focused almost exclusively on making contributions as easy as possible.
 
 ### Upload and commit to a Contributor Covenant Code of Conduct
 
-The worst thing you can do, as an open-source maintainer, is create an environment that turns people off from contributing to your project. You can't afford to be vague about your beliefs, which makes a code of conduct a no-brainer for any open-source project. It takes no effort and makes a bold, substantial statement.
+The worst thing you can do, as an open-source maintainer, is create an environment that turns people off from contributing to your project. You can't afford to be vague about your beliefs, which makes a code of conduct a no-brainer for any open-source project. Plus, it takes no effort to implement.
 
-The [Contributor Covenant](https://www.contributor-covenant.org/) is a document created by [Coraline Ada Ehmke](https://where.coraline.codes/) to make clear your commitment to accepting contributions from people from all backgrounds and situations. 
+The [Contributor Covenant](https://www.contributor-covenant.org/) is a document created by [Coraline Ada Ehmke](https://where.coraline.codes/) to make clear your commitment to accepting contributions from people from all backgrounds and situations.
 
 You can download and adapt the latest version [here](https://www.contributor-covenant.org/version/1/4/code-of-conduct). Adapt it as needed and add it to your the root directory of your project with the file name `CODE_OF_CONDUCT.md`. We, of course, practice what we preach. Here's the [code of conduct](https://github.com/netdata/netdata/blob/master/CODE_OF_CONDUCT.md) for Netdata itself.
 
@@ -33,49 +33,55 @@ You can download and adapt the latest version [here](https://www.contributor-cov
 
 At Netdata, we have a pretty comprehensive [contributing document](https://github.com/netdata/netdata/blob/master/CONTRIBUTING.md) that we maintain at `CONTRIBUTING.md`. In this document, we outline the various ways that people can contribute to Netdata.
 
-Be clear about where you need help, and how people can best help. Don't allow potential contributors to be confused or feel inadequate.
+In your `CONTRIBUTING.md` document, you should be clear and specific about how people of all skill levels could potentially contribute to your project. For those who have never contributed code to a project before, ask them to drop a GitHub star on the project or create an issue to offer constructive criticism. For more advanced contributors, make clear the areas where your project needs the most work. Maybe that's improving documentation, or perhaps that's a new feature that's been heavily requested by users.
 
-To help on this front, be clear and specific about how people of all skill levels could potentially contribute to your project. For those who have never contributed code to a project before, ask them to drop a GitHub star on the project or offer feedback via the issues. For more advanced contributors, make clear the areas where your project needs the most work. Maybe that's improving documentation, or perhaps that's a new feature that's been heavily requested by users.
+This document is also an excellent opportunity to mention that code of conduct, along with other philosophies by which your project operates. For Netdata, that's **performance**, **meaningful metrics**, **automated testing**, a **distributed framework**, **support for many operating systems**, included **documentation**, and **future maintenance**.
 
-This document is also an excellent opportunity to mention that code of conduct, along with other philosophies by which your project operates. For Netdata, that's performance, meaningful metrics, automated testing, a distributed framework, support for many operating systems, included documentation, and future maintenance.
+Make sure this document also explains how you handle workflows and processes like pull requests and code reviews. Do you want contributors to work off the main repo, or fork it to their own GitHub account and work there? How do you tag issues? How do you differentiate between code that's ready to be merged and code that's still in progress?
 
-Make sure this document also explains how you handle workflows and processes like pull requests and code reviews. Do you want contributors to work off the main repo, or fork it and work there? How do you tag issues? How do you differentiate between code that's ready to be merged and code that's still in progress?
+Clarity is paramount in your `CONTRIBUTING.md` document. Upon reading this document, potential contributors should `1)` be able to self-select their skill level according to your definitions, `2)` know where to look next to create their first contribution, and `3)` feel as though they can meaningfully help the project move forward.
 
-The critical part here is clarity. Upon reading this document, potential contributors should `1)` be able to self-select their skill level according to your definitions, `2)` know where to look next, and `3)` feel as though they can meaningfully help the project move forward. It might feel like micromanaging, but it's creating efficiency. Everyone is on limited time, and a good `CONTRIBUTING.md` document makes sure people can get started as quickly as possible.
+You might feel like you're micromanaging, but you're actually building efficiency and clarity into the onboarding process. Everyone is on limited time, and a good `CONTRIBUTING.md` document makes sure people can get started as seamlessly as possible.
 
 ### Tell people their issue matters, even if you can't fix it
 
-A graveyard of unanswered issues is the worst look for an open-source project. Upon seeing it, most visitors assume the maintainer doesn't care about their users or the project is dead.
+The worst look for an open-source project: A graveyard of ignored issues from users.
+
+Most visitors assume the maintainer doesn't care about their users or the project is dead.
 
 When someone requests a feature for your project, it's because they have a certain amount of passion for it. They want it to be better. They think it could be more powerful and useful for more people, but their requests are often misguided. Maybe it's outside the scope of your project, or is too complex to handle. Maybe it's just a bad idea.
 
 As Hacker News user marknadal [writes](https://news.ycombinator.com/user?id=marknadal):
 
-> But the people who "Why isn't this written in X language?" or "Here's a PR to turn tabs into spaces" are honestly well-intended but naive and short-sighted.
+> But the people who [write] "Why isn't this written in X language?" or "Here's a PR to turn tabs into spaces" are honestly well-intended but naive and short-sighted.
 
-As a busy maintainer, it's tempting to ignore these types of issues or PRs, but doing so ensures the user never gets passionate enough to contribute. Instead, consider pointing them to the documentation that explains the code around their issue (you have good documentation, right?) and you might be able to inspire them to do more.
+As a busy maintainer, it's tempting to ignore these types of issues or PRs, but doing so ensures that user's passion never translates into contribution. Whatever passion remains will fizzle out and they'll move elsewhere. Instead, consider pointing them to the documentation that explains the code around their issue (you have good documentation, right?) and you might be able to inspire them to do pitch in without having to address their issue directly.
 
 ### Tag specific issues with 'good first issue'
 
-Here at Netdata, we often drop the `good first issue` tag on issues or feature requests around plugins, alarms, and integrations, because working on those don't require contributors to understand every line of `C` that goes into Netdata. For example, we're always looking for help building [better alarms](https://github.com/netdata/netdata/issues/4727), which use configuration files with a Netdata-specific syntax. If someone wants to help us here, they only need to learn the configuration syntax to get started. And doing so will teach them a great deal about the application's underlying structure, setting them up nicely for a more complex contribution in the future.
+Here at Netdata, we often drop the `good first issue` tag on issues or feature requests around plugins, alarms, and integrations, because working on those don't require contributors to understand every line of `C` that goes into Netdata. For example, we're always looking for help building [better alarms](https://github.com/netdata/netdata/issues/4727), which use configuration files with a Netdata-specific syntax. If someone wants to help us here, they only need to learn the configuration syntax to get started. Doing so will teach them a great deal about Netdata's underlying structure, setting them up nicely for a more complex contribution in the future.
 
-For us, tagging is a simple action that helps drive new potential contributors toward the areas where they can be most helpful.
+Tagging is a simple action that helps drive new potential contributors toward the areas where they can be most helpful.
 
 Whenever you do use the `good first issue` tag, make sure you have solid documentation to support it. That's what we do with [extensive documentation](https://docs.netdata.cloud/health/) about how to write alarm configuration files. If you don't have documentation for that part of your codebase, then the issue isn't a good first issue after all.
 
-If nothing else, the global search on GitHub for [`good first issue`](https://github.com/search?q=label%3A+good+first+issue) returns more than 200,000 results. Maybe someone will perform that very search and stumble across your project for the first time.
+If nothing else, the global search on GitHub for [`good first issue`](https://github.com/search?q=label%3A+good+first+issue) returns more than 200,000 results. Maybe an eager developer will perform that very search and stumble across your project for the first time.
 
 ### Encourage contributions in documentation
 
-Imagine that you get 100 clones/installs of your code every day. But 10% of those people have trouble with the installation process. Half of those—5 people every day—file an issue asking for help from you, the maintainer, or the community at large. You can either spend your valuable time helping them or let the questions go unanswered. Either way, it's a bad look for your project.
+Imagine that you get 100 clones/installs of your code every day. but 10% of those people have trouble with the installation process. Half of that 10%—5 people every day—file an issue asking for help because they couldn't understand the documentation. You can either spend your valuable time helping them or let the questions go unanswered, creating the aforementioned graveyard. Either way, it's a bad look for your project.
 
-Now, let's say a contributor comes along and rewrites the installation procedure documentation to eliminate those five issues. They've just saved you an enormous about of time and effort. How can you say that fix is less important than a new feature?
+Now, let's say a contributor comes along and rewrites the installation procedure documentation cut the installation failure rate from 10% to 2%. Not you're only seeing 1 issue per day, and that contributor just saved you an enormous about of time and effort. 
 
-Fixing typos and smoothing out sentences has value, too. It's all part of creating a polished, professional piece of code. By encouraging these contributions, you'll be casting a wider net and will inevitably capture some people you might have otherwise missed.
+As a maintainer, your primary job is to keep the project alive, and better documentation is almost always more important than a new feature, even if the former is far less sexy.
+
+Improving documentation, fixing typos, and smoothing out sentences is all part of creating a polished, professional codebase. By encouraging contributions to documentation, you'll be casting a wider net and will inevitably capture some people you might have otherwise missed.
 
 ## Keeping contributors around
 
-The longer a contributor sticks around, the better they'll get at working with you, your code, and anyone else who might be pitching in. Conversely, losing a high-value contributor levels an enormous cost on the project. Of course, you'll experience a certain amount of unavoidable attrition over time. People get new jobs, move, start families, and experience tough times. You can't prevent every departure, but you can rely on a few best practices to keep contributors around for as long as possible.
+The longer a contributor sticks around, the better they'll get at working with you, your code, and anyone else who might be pitching in. Conversely, losing a high-value contributor levels an enormous cost on the project. 
+
+Of course, you'll experience a certain amount of unavoidable attrition over time. People get new jobs, move, start families, and experience tough times. You can't prevent every departure, but you can rely on a few best practices to keep contributors around for as long as possible.
 
 But you can keep people around by following a pretty simple rule: **Contributors are volunteers, and gratefulness always flows toward volunteers.** They are not lucky to have the opportunity to work on your project. You are lucky to benefit from their time and expertise.
 
