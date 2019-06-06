@@ -1,6 +1,6 @@
 ---
 title: "How to inspire exceptional contributions to your open-source project"
-date: 2019-06-04
+date: 2019-06-20
 summary: "As the maintainer of an open-source project, you need to find, get, and keep the best contributors. Here's our step-by-step process for doing that at Netdata."
 author: "Joel Hans"
 cover: "open-source-contributions.png"
