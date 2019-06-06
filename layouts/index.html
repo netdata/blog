@@ -38,8 +38,8 @@
                     </span>
                     {{ end }}
 
-                    {{ with .Params.Cover }}
-                    <img src="{{ printf "img/%s" . | absURL }}" class="post-cover" />
+                    {{ if .Params.cover }}
+                    <img src="{{ print .Params.url "/" .Params.cover  }}" class="post-cover" />
                     {{ end }}
 
                     <div class="post-content">

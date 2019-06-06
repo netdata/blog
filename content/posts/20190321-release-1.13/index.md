@@ -2,6 +2,7 @@
 title: "Release 1.13"
 date: 2019-03-21
 author: "Chris Akritidis"
+url: "/posts/release-1.13"
 cover: "release-1-13.png"
 tags: ["Release"]
 categories: []

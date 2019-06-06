@@ -1,8 +1,10 @@
 ---
 title: "How to sign up for and use Netdata Cloud"
 summary: "Netdata Cloud is the future of distributed health and performance monitoring. Learn how to sign up for and use Netdata Cloud with your nodes."
-date: 2019-05-21
+date: 2019-06-11
 author: "Joel Hans"
+slug: "how-to-netdata-cloud"
+url: "/posts/how-to-netdata-cloud"
 cover: "how-to-netdata-cloud.png"
 tags: ["How-to"]
 categories: []

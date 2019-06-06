@@ -2,7 +2,9 @@
 title: "Release 1.14"
 date: 2019-04-26
 author: "Chris Akritidis"
-cover: "release-1-14.png"
+slug: "release-1.14"
+url: "/posts/release-1.14"
+cover: "release-1.14.png"
 tags: ["Release"]
 categories: []
 draft: false

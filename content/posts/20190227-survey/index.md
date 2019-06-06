@@ -2,6 +2,7 @@
 title: "Help shape the future of netdata"
 date: 2019-02-27
 author: "Chris Akritidis"
+url: "/posts/survey"
 cover: "survey-cover.png"
 tags: ["Community"]
 categories: []
