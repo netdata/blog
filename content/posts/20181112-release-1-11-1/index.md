@@ -2,8 +2,8 @@
 title: "Release 1.11.1"
 date: 2018-11-22
 author: "Costa Tsaousis"
-url: "/posts/release-1.11.1"
-cover: "release-1.11.1.png"
+url: "/posts/release-1-11-1"
+cover: "release-1-11-1.png"
 tags: ["Release", "Patch"]
 categories: []
 draft: false

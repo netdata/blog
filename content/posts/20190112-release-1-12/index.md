@@ -2,8 +2,8 @@
 title: "Release 1.12"
 date: 2019-02-14
 author: "Costa Tsaousis"
-url: "/posts/release-1.12"
-cover: "release-1.12.png"
+url: "/posts/release-1-12"
+cover: "release-1-12.png"
 tags: ["Release"]
 categories: []
 draft: false
