@@ -27,25 +27,25 @@ If you don’t have one running yet, be sure to check out our [quick start](http
 
 Once you have a Netdata agent running, or connect to the web dashboard of your Netdata agent by navigating your browser of choice to `http://SERVER-IP:19999`. You’ll see a screen much like this one:
 
-![A screenshot of Netdata's web interface](/img/how-to-netdata-cloud_01.png)
+![A screenshot of Netdata's web interface](how-to-netdata-cloud_01.png)
 
 From here, registering for your Netdata Cloud account is simple. There are three ways to get started from your Netdata web dashboard. 
 
 Find one link reading `Nodes Beta` on the left side of the navigation menu:
 
-![A screenshot of a link to the Nodes interface](/img/how-to-netdata-cloud_02.png)
+![A screenshot of a link to the Nodes interface](how-to-netdata-cloud_02.png)
 
 Or click the `Sign In` button on the right side of that same menu:
 
-![A screenshot of the second link to the Nodes interface](/img/how-to-netdata-cloud_03.png)
+![A screenshot of the second link to the Nodes interface](how-to-netdata-cloud_03.png)
 
 And find the third option in the drop-down menu in the top-left corner of the dashboard:
 
-![A screenshot of the third link to the Nodes interface](/img/how-to-netdata-cloud_04.png)
+![A screenshot of the third link to the Nodes interface](how-to-netdata-cloud_04.png)
 
 Each of these links will take you to the Netdata Cloud application, where you can register for a new account or log in to your existing account:
 
-![A screenshot of a link to the Nodes interface](/img/how-to-netdata-cloud_05.png)
+![A screenshot of a link to the Nodes interface](how-to-netdata-cloud_05.png)
 
 Authorize with Google or Github, or enter your email. For this example, you’ll enter your email and click `Authorize`. If we don’t have your email in the system already, we’ll create one for you.
 
@@ -53,7 +53,7 @@ You’ll get a notice that you’ll receive a verification email at the address 
 
 Once the email shows up, click on the green `Sign in` button.
 
-![A screenshot of the sign in email received from Netdata Cloud](/img/how-to-netdata-cloud_06.png)
+![A screenshot of the sign in email received from Netdata Cloud](how-to-netdata-cloud_06.png)
 
 You’ll be redirected back to your Netdata dashboard. Behind the scenes, this agent has been connected to Netdata Cloud. When you click on any of those `Nodes Beta` links again, you’ll be directed to the Netdata Cloud application.
 
@@ -63,7 +63,7 @@ Welcome! You’re in.
 
 When you first access Netdata Cloud, you’ll see a dashboard like this:
 
-![A screenshot of the Netdata Cloud web interface](/img/how-to-netdata-cloud_07.png)
+![A screenshot of the Netdata Cloud web interface](how-to-netdata-cloud_07.png)
 
 You’ll likely only see a single node, but as you can see, I’ve populated my Netdata Cloud account with not only the Netdata agent running on my desktop, but also a few others. More on that in a moment. For now, let’s walk through the various sections of the interface and explain what they do.
 
@@ -75,13 +75,13 @@ The most important part of Netdata Cloud. As you can see in the screenshot above
 
 Let’s say I’m curious about peeking into what’s going on with the `cdn77.my-netdata.io` node—there’s triggered alarms there, after all! When I click on that node in the list, a sidebar appears on the right-hand side of the dashboard with a few essential visualizations for CPU, I/O, memory, and network.
 
-![A screenshot of the system overview area in the Netdata Cloud web interface](/img/how-to-netdata-cloud_08.png)
+![A screenshot of the system overview area in the Netdata Cloud web interface](how-to-netdata-cloud_08.png)
 
 The `Overview`, `Disks`, and `Network` sub-tabs will show more visualizations about certain aspects of the system—useful in getting a broad picture of a specific node’s health and performance status.
 
 You can then click the `Services` or `Alarms` tabs to see more about the MariaDB/Nginx services or learn about active alarms, respectively.
 
-![A screenshot of the alarms area in the Netdata Cloud web interface](/img/how-to-netdata-cloud_09.png)
+![A screenshot of the alarms area in the Netdata Cloud web interface](how-to-netdata-cloud_09.png)
 
 At the top of the system overview sidebar, there’s a link that will take you straight to that Netdata web dashboard, which you can then use to further diagnose the alarms and discover the root cause.
 
@@ -91,7 +91,7 @@ At the top of the system overview sidebar, there’s a link that will take you s
 
 We expect a lot of Netdata Cloud’s users will have dozens or hundreds of nodes listed. Finding precisely the one you’re looking for won’t be easy, which is why we’ve included a search bar that helps with filtering. You can search for the hostname of the node you’re interested in, the operating system it’s running, or even for the services installed. For example, here’s what happens when I type `ng` into the search bar:
 
-![A screenshot of the search bar in the Netdata Cloud web interface](/img/how-to-netdata-cloud_10.png)
+![A screenshot of the search bar in the Netdata Cloud web interface](how-to-netdata-cloud_10.png)
 
 Take some time to explore the options and figure out the best ways to get straight to the information that’s most important for you.
 View mode, sorting, and grouping
@@ -103,7 +103,7 @@ You can then sort alphabetically, by which nodes you’ve viewed most recently, 
 
 For example, here’s what it looks like to enable the detailed list, sort by frequently viewed nodes, and group by alarm status.
 
-![A screenshot of sorting, grouping, and view modes in the Netdata Cloud web interface](/img/how-to-netdata-cloud_11.png)
+![A screenshot of sorting, grouping, and view modes in the Netdata Cloud web interface](how-to-netdata-cloud_11.png)
 
 Play around with the options until you find a setup that works for you. We’re building Netdata Cloud to be flexible to offer you the most immediate value for whatever type of infrastructure you might be running.
 
