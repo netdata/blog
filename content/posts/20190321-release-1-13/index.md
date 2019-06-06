@@ -7,6 +7,8 @@ cover: "release-1-13.png"
 tags: ["Release"]
 categories: []
 draft: false
+aliases: 
+  - /posts/release-1.13/
 ---
 
 Release 1.13 contains 14 bug fixes and 8 improvements.

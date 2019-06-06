@@ -7,6 +7,8 @@ cover: "release-1-12.png"
 tags: ["Release"]
 categories: []
 draft: false
+aliases: 
+  - /posts/release-1.12/
 ---
 
 Release 1.12 is made out of 211 pull requests and 22 bug fixes. The key improvements are:

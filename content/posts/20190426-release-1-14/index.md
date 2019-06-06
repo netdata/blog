@@ -10,6 +10,8 @@ images:
 tags: ["Release"]
 categories: []
 draft: false
+aliases: 
+  - /posts/release-1.14/
 ---
 
 Release 1.14 contains 14 bug fixes and 24 improvements.

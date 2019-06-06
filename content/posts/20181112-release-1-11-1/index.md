@@ -7,6 +7,8 @@ cover: "release-1-11-1.png"
 tags: ["Release", "Patch"]
 categories: []
 draft: false
+aliases: 
+  - /posts/release-1.11.1/
 ---
 
 This is a patch - bug fix release of netdata. Our work to move all the documentation inside the repo is still in progress. Everything has been moved, but still we need to refactor a lot of the pages to be more meaningful. The README file on netdata home has been rewritten. [Check it here](https://github.com/netdata/netdata#netdata----).
