@@ -6,7 +6,6 @@ author: "Joel Hans"
 cover: "resources-guides-monitoring-netdata.jpg"
 tags: ["tutorials", "monitoring"]
 categories: []
-draft: true
 ---
 
 Someday, whether via this very blog or over at the [Netdata documentation](https://docs.netdata.cloud/), we're going to build a comprehensive resource for helping developers, sysadmins, and DevOps engineers learn more with every time they load up their Netdata dashboard. We're actively planning courses, in-depth tutorials, videos, and more. And we promise it's going to be fantastic.
