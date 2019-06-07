@@ -6,7 +6,6 @@ author: "Joel Hans"
 cover: "edge-monitoring-netdata.png"
 tags: ["edge computing", "edge monitoring", "IoT"]
 categories: []
-draft: true
 ---
 
 Enough with Internet of Things (IoT) deployments full of "dumb" devices that can only collect data and respond from instructions from the cloud. Enter edge computing.
