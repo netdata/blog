@@ -6,7 +6,6 @@ author: "Joel Hans"
 cover: "open-source-contributions.png"
 tags: ["How-to", "open source"]
 categories: []
-draft: true
 ---
 
 Netdata *must* be doing something right when it comes to inspiring contributions. Our [open-source, distributed monitoring agent](https://github.com/netdata/netdata) has more than 38,000 stars on GitHub and has seen contributions from more than 200 people. We've even hired a handful of our contributors to work full-time on making the Netdata ecosystem even more powerful. People are passionate about what we do, and they happily offer their time and expertise to make Netdata better.
