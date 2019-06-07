@@ -6,7 +6,6 @@ author: "Joel Hans"
 cover: "netdata-no-brainer.png"
 tags: ["Why Netdata"]
 categories: []
-draft: true
 ---
 
 Netdata is the best real-time health and performance monitoring solution out there. And we have the numbers to back that claim up.
