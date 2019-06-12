@@ -1,27 +1,32 @@
 ---
 title: "How to sign up for and use Netdata Cloud"
 summary: "Netdata Cloud is the future of distributed health and performance monitoring. Learn how to sign up for and use Netdata Cloud with your nodes."
-date: 2019-05-21
+date: 2019-06-13
 author: "Joel Hans"
 cover: "how-to-netdata-cloud.png"
 tags: ["How-to"]
 categories: []
-draft: true
+draft: false
 ---
 
 As we’ve mentioned in our announcement post (read [Introducing Netdata Cloud: our vision for distributed health and performance monitoring](https://blog.netdata.cloud/posts/netdata-cloud-announcement/)), we’re excited to finally be showing the Netdata community what we’ve been so hard at work on over the last few months.
 
-If you want to know more details about what Netdata Cloud is, how it will work, the features it will have, and how our work on it will affect the open-source Netdata agent (hint: they’re going to make each other better), be sure to check out the [official announcement](https://blog.netdata.cloud/posts/netdata-cloud-announcement/).
+If you want to know more details about what Netdata Cloud is, how it will work, the features it will have, and how our work on it will affect the open-source Netdata agent (hint: they’re going to make each other better), be sure to check out the [official announcement](https://blog.netdata.cloud/posts/netdata-cloud-announcement/). But, to be clear, **Netdata Cloud is entirely free for all Netdata users**.
 
-But, to be clear, **Netdata Cloud is entirely free for all Netdata users**.
+Signing up for a Netdata Cloud account is easy—let's get started.
 
 <!--more-->
 
-In this post, we’re going to walk through the process of signing up for a Netdata Cloud account, how to connect distributed Netdata agents, and how to quickly navigate through data about an entire Netdata-monitored infrastructure.
-Getting started with Netdata Cloud
+If you've already created an account on Netdata Cloud and have accessed the Nodes view, but are looking for more information on how to connect additional agents or better sort through the nodes you've connected, take a look at our [guide for using the Nodes view](/posts/using-netdata-nodes-view/).
+
+If you run a [private registry](https://docs.netdata.cloud/registry/#run-your-own-registry) instead of the public registries run by Netdata, be sure to read our caveats and tips at the [bottom of this post](#netdata-cloud-the-netdata-registry-and-private-registries).
+
+
+## Getting started with Netdata Cloud
+
 There is only one prerequisite to using Netdata Cloud: A working Netdata agent. 
 
-If you don’t have one running yet, be sure to check out our [quick start](https://github.com/netdata/netdata#quick-start) or [installation guides](https://github.com/netdata/netdata/tree/master/packaging/installer#installation) for more information.
+If you don’t have one running yet, be sure to check out our [quick start](https://docs.netdata.cloud/#quick-start) or [installation guides](https://docs.netdata.cloud/packaging/installer/) for more information.
 
 Once you have a Netdata agent running, or connect to the web dashboard of your Netdata agent by navigating your browser of choice to `http://SERVER-IP:19999`. You’ll see a screen much like this one:
 
@@ -41,7 +46,9 @@ And find the third option in the drop-down menu in the top-left corner of the da
 
 ![A screenshot of the third link to the Nodes interface](/img/how-to-netdata-cloud_04.png)
 
-Each of these links will take you to the Netdata Cloud application, where you can register for a new account or log in to your existing account:
+Each of these links will take you to the Netdata Cloud application, where you can register for a new account or log in to your existing account.
+
+> <span style="color: #17CE8A;">**Note:**</span> Be consistent with the sign-in method you use. We are currently working on a fix for this issue, but if you sign in via different methods, you may end up with multiple Netdata Cloud accounts.
 
 ![A screenshot of a link to the Nodes interface](/img/how-to-netdata-cloud_05.png)
 
@@ -57,71 +64,38 @@ You’ll be redirected back to your Netdata dashboard. Behind the scenes, this a
 
 Welcome! You’re in.
 
-## Getting around Netdata Cloud for the first time
+To take the next steps in navigating the Nodes view and adding more servers to your Netdata Cloud account, visit our guide: **[Navigating and using Netdata Cloud's Nodes view](/posts/using-netdata-nodes-view/)**.
 
-When you first access Netdata Cloud, you’ll see a dashboard like this:
+If you'd like to learn more about how Netdata Cloud interacts with Netdata registries, both public and private, read on.
 
-![A screenshot of the Netdata Cloud web interface](/img/how-to-netdata-cloud_07.png)
 
-You’ll likely only see a single node, but as you can see, I’ve populated my Netdata Cloud account with not only the Netdata agent running on my desktop, but also a few others. More on that in a moment. For now, let’s walk through the various sections of the interface and explain what they do.
+## Netdata Cloud, the Netdata registry, and private registries
 
-### The nodes list
+When you install a new Netdata agent, by default it connects to the public Netdata registry at `https://registry.my-netdata.io`. This public registry allows us to do two important things.
 
-The most important part of Netdata Cloud. As you can see in the screenshot above, Netdata Cloud heavily features a list of the nodes you’ve connected to your account. Each box shows icons for the type of operating system, the hostname, any warning or critical alerts, and any services that might be running. For example, many of the nodes are running an Nginx web server.
+First, it allows us to count the number of unique users and unique Netdata servers that are installed worldwide, and then create cool badges like these:
 
-### System overview 
+![A badge showing the Netdata userbase](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=persons&label=user%20base&units=M&value_color=blue&precision=2&divide=1000000&v43) 
 
-Let’s say I’m curious about peeking into what’s going on with the `cdn77.my-netdata.io` node—there’s triggered alarms there, after all! When I click on that node in the list, a sidebar appears on the right-hand side of the dashboard with a few essential visualizations for CPU, I/O, memory, and network.
+![A badge showing the number of servers Netdata monitors](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=machines&label=servers%20monitored&units=k&divide=1000&value_color=orange&precision=2&v43)
 
-![A screenshot of the system overview area in the Netdata Cloud web interface](/img/how-to-netdata-cloud_08.png)
+![A badge showing the number of sessions Netdata serves](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_sessions&label=sessions%20served&units=M&value_color=yellowgreen&precision=2&divide=1000000&v43)
 
-The `Overview`, `Disks`, and `Network` sub-tabs will show more visualizations about certain aspects of the system—useful in getting a broad picture of a specific node’s health and performance status.
+Second, the public registry allows us to intgrate multiple Netdata agents, running on distributed machines, into **one distributed application** in your web browser.
 
-You can then click the `Services` or `Alarms` tabs to see more about the MariaDB/Nginx services or learn about active alarms, respectively.
+> *Learn more about the public registry, and how it helps your web browser "talk" to your servers that run Netdata, in [our documentation](https://docs.netdata.cloud/registry/).*
 
-![A screenshot of the alarms area in the Netdata Cloud web interface](/img/how-to-netdata-cloud_09.png)
+If you prefer not to use the public registry, or your company's data policies do not allow it, you can [run your own private registry](https://docs.netdata.cloud/registry/#run-your-own-registry). The caveat here is that with a private registry, you won't be able to leverage features made available by Netdata Cloud, such as the Nodes view.
 
-At the top of the system overview sidebar, there’s a link that will take you straight to that Netdata web dashboard, which you can then use to further diagnose the alarms and discover the root cause.
+This will eventually change—you'll be able to run the Nodes view on-premises if you'd like—but for now this is a limitation of the registry system.
 
-**These visualizations are live!** You can scrub forward and backward in time, zoom, pause and pinpoint anomalies down to the second, just as you do in the Netdata agent's web interface.
+Currently, when you connect a Netdata agent to Netdata Cloud, Netdata Cloud replaces the default registry (`https://registry.my-netdata.io`) with a new endpoint at `https://netdata.cloud`. This allows Netdata Cloud to register all the new Netdata dashboards that you visit and create that distributed application running entirely in your browser.
 
-### Search bar
+---
 
-We expect a lot of Netdata Cloud’s users will have dozens or hundreds of nodes listed. Finding precisely the one you’re looking for won’t be easy, which is why we’ve included a search bar that helps with filtering. You can search for the hostname of the node you’re interested in, the operating system it’s running, or even for the services installed. For example, here’s what happens when I type `ng` into the search bar:
-
-![A screenshot of the search bar in the Netdata Cloud web interface](/img/how-to-netdata-cloud_10.png)
-
-Take some time to explore the options and figure out the best ways to get straight to the information that’s most important for you.
-View mode, sorting, and grouping
-On that front, we’ve also built a few organizational features to help you configure Netdata Cloud according to your preferences.
-
-The view mode button lets you switch between a large grid (the default), a small grid, or a detailed list.
-
-You can then sort alphabetically, by which nodes you’ve viewed most recently, or which you view most frequently. Finally, you can group them by alarm status, the services running, or whether or not they’re online at all.
-
-For example, here’s what it looks like to enable the detailed list, sort by frequently viewed nodes, and group by alarm status.
-
-![A screenshot of sorting, grouping, and view modes in the Netdata Cloud web interface](/img/how-to-netdata-cloud_11.png)
-
-Play around with the options until you find a setup that works for you. We’re building Netdata Cloud to be flexible to offer you the most immediate value for whatever type of infrastructure you might be running.
-
-## Adding more agents to your Netdata Cloud
-
-At this point, you probably only have a single node in your list. Let’s fix that!
-
-Adding more agents to your Netdata Cloud is simple. If you have other Netdata agents running throughout your infrastructure, the process for adding more is as simple as adding your first node. You can even use the live Netdata demo sites to populate your Netdata Cloud list! Just follow the same procedure that I outlined at the beginning of the post for each of the nodes you’d like to connect.
-
-We’re working on ways to make this process smoother, particularly for those with large infrastructures with many systems running concurrently. More on that soon.
-
-## Moving forward with our vision for distributed health and performance monitoring
-
-Netdata Cloud is in its early stages and we have [a ton of features planned](https://blog.netdata.cloud/posts/netdata-cloud-announcement/#what-features-will-netdata-cloud-offer). For more information about the newest additions to Netdata Cloud, and the Netdata agent as a whole, see [the changelog for version 1.15](https://github.com/netdata/netdata/releases/tag/v1.15.0).
-
-If you’d like to be among the first to hear about new releases of both Netdata Cloud and the open-source monitoring agent, you have a few options:
+Welcome to Netdata Cloud! If you’d like to be among the first to hear about new releases of both Netdata Cloud and the open-source monitoring agent, you have a few options:
 
 - Become a watcher on [the Netdata repository](https://github.com/netdata/netdata)
 - Follow [Netdata on Twitter](https://twitter.com/linuxnetdata)
 - Subscribe to the [Atom feed](https://github.com/netdata/netdata/releases.atom) that automatically updates with every new release
 - Or subscribe to the [RSS feed](https://blog.netdata.cloud/index.xml) for this blog
-
-There's a lot of changes happening in the next few months, so be sure to stay tuned one way or another. We're incredibly excited to see how the community takes to Netdata Cloud as it expands and becomes even more powerful, all while staying completely free.
