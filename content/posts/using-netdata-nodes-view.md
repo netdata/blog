@@ -3,7 +3,7 @@ title: "Navigating and using Netdata Cloud's Nodes view"
 summary: "Our new Nodes view allows you to view dozens or hundreds of Netdata agents in a single interface. Because it's powered by Netdata Cloud, it's a secure and simple way to scale out your monitoring infrastructure."
 date: 2019-06-13
 author: "Joel Hans"
-cover: ""
+cover: "using-netdata-nodes-view.png"
 tags: ["How-to"]
 categories: []
 draft: false
