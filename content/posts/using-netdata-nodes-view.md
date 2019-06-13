@@ -24,17 +24,19 @@ Let's dig in to navigating and using Netdata Cloud's Nodes view for the first ti
 
 ## An overview of Netdata Cloud's Nodes view
 
-Before you can access the Nodes view, you need to sign in to your Netdata Cloud account. Not sure how to sign in to Netdata Cloud? Don't yet have an account? Check out the [comprehensive guide](/posts/how-to-netdata-cloud/) we just posted on how you can create a new account with Netdata Cloud.
+Before you can access the Nodes view, you need to sign in to your Netdata Cloud account.
 
-When you first access the Nodes view, you’ll see a dashboard like this:
+To do that, click on the `Sign In` button on the top-right corner of your Netdata dashboard. Enter the email address you'd like to use for your Netdata Cloud account. In a moment, you'll receive an email confirmation. Open that email and click the green button. You'll be redirected back to your Netdata dashboard. Then click on any of the `Nodes<sup>Beta</sup> buttons on the dashboard and you'll be directed to the Nodes view.
+
+At that point, you’ll see a dashboard like this:
 
 ![A screenshot of the Netdata Cloud web interface](/img/how-to-netdata-cloud_07.png)
 
 You’ll likely only see a single node, but as you can see, I’ve populated my Netdata Cloud account with not only the Netdata agent running on my desktop, but also a few others. More on that in a moment. For now, let’s walk through the various sections of the interface and explain what they do.
 
-### List of connected agents
+### List of visited nodes
 
-The most important part of Nodes. As seen in the screenshot above, the most prominent part of the Nodes view is the list of Netdata agents you've connected to your Netdata Cloud account.
+The most important part of the Nodes view. As seen in the screenshot above, the most prominent part of the Nodes view is the list of Netdata agents you've connected to your Netdata Cloud account by visiting them.
 
 Each box shows icons for the type of operating system, the hostname, any warning or critical alerts, and any services that might be running. For example, many of the nodes connected to my Netdata Cloud account are running an Nginx web server.
 
@@ -80,6 +82,10 @@ Play around with the options until you find a setup that works for you. We're bu
 
 At this point, you probably only have a single node in your list. Let's fix that!
 
+To add more agents, simply follow the process of connecting your first node. Visit the dashboard, and 
+
+
+
 Adding more agents to your Netdata Cloud account is simple—just follow the process outlined in our [how-to guide for signing up for Netdata Cloud](http://localhost:1313/posts/how-to-netdata-cloud/#getting-started-with-netdata-cloud).
 
 Basically, you need to click on any of the links to the Nodes view in the dashboard you'd like to connect, sign in to your Netdata account **using the same method you used to create the account**, and then visit your Nodes view again.
@@ -97,6 +103,18 @@ If you’d like to be among the first to hear about new releases of both Netdata
 - Become a watcher on [the Netdata repository](https://github.com/netdata/netdata)
 - Follow [Netdata on Twitter](https://twitter.com/linuxnetdata)
 - Subscribe to the [Atom feed](https://github.com/netdata/netdata/releases.atom) that automatically updates with every new release
-- Or subscribe to the [RSS feed](https://blog.netdata.cloud/index.xml) for this blog
+- Subscribe to the [RSS feed](https://blog.netdata.cloud/index.xml) for this blog
+
+Or, you can subscribe to our newsletter:
+
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+<script>
+  hbspt.forms.create({
+	portalId: "4567453",
+	formId: "6a20deb5-a1e6-4312-9c4d-f6862f947fe0"
+});
+</script>
+
+We'll soon be sending this newsletter out every week, and it'll always be filled with useful information about monitoring, news from Netdata, and guides that will help you build an extraordinary infrastructure.
 
 There's a lot of changes happening in the next few months, so be sure to stay tuned one way or another. We're incredibly excited to see how the community takes to Netdata Cloud as it expands and becomes even more powerful, all while staying completely free.

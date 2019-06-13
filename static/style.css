@@ -55,3 +55,9 @@ header.hero {
 .post-title {
     font-size: 2rem;
 }
+
+.hbspt-form {
+    border: 1px solid #222;
+    border-radius: 3px;
+    padding: 20px 20px 0 20px;
+}
