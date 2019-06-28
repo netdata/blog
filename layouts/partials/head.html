@@ -43,7 +43,7 @@
 
 <!-- JSON Feed -->
 {{ if .OutputFormats.Get "json" }}
-<link href="{{ if .OutputFormats.Get "json" }}{{ "feed.json" | absURL }}{{ end }}" rel="alternate" type="application/json" title="{{ .Site.Title }}" />
+<link href="{{ if .OutputFormats.Get "json" }}{{ "index.json" | absURL }}{{ end }}" rel="alternate" type="application/json" title="{{ .Site.Title }}" />
 {{ end }}
 
 {{ partial "analytics.html" }}
