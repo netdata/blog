@@ -1,6 +1,6 @@
 ---
 title: "How to inspire exceptional contributions to your open-source project"
-date: 2019-06-20
+date: 2019-07-02
 summary: "As the maintainer of an open-source project, you need to find, get, and keep the best contributors. Here's our step-by-step process for doing that at Netdata."
 author: "Joel Hans"
 cover: "open-source-contributions.png"
@@ -8,17 +8,32 @@ tags: ["How-to", "open source"]
 categories: []
 ---
 
-Netdata *must* be doing something right when it comes to inspiring contributions. Our [open-source, distributed monitoring agent](https://github.com/netdata/netdata) has more than 38,000 stars on GitHub and has seen contributions from more than 200 people. We've even hired a handful of our contributors to work full-time on making the Netdata ecosystem even more powerful. People are passionate about what we do, and they happily offer their time and expertise to make Netdata better.
+Netdata *must* be doing something right when it comes to inspiring contributions. Our [open-source, distributed monitoring agent](https://github.com/netdata/netdata) has ![GitHub stars](https://img.shields.io/github/stars/netdata/netdata.svg) on GitHub and has seen contributions from hundreds of people: ![GitHub contributors](https://img.shields.io/github/contributors/netdata/netdata.svg). We've even hired a handful of our contributors to work full-time on making the Netdata ecosystem even more powerful. 
 
-The Netdata community didn't just *happen*, though. We didn't just build an open-source project and wait for contributors to step up and help. We took many concerted efforts to inspired these contributions, and we thought we'd share a few of our most successful efforts.
+The community is passionate about what we're building, and they're actively interested in making it work better for their particular needs.
+
+Because that's what a contributor is: **Someone willing to step in and improve your project so that it works even better for _their particular use case_**. Some contributors happily offer their time for other reasons, too, but in our case, they're mostly sysadmins who will do faster or smarter work once we implement their idea.
+
+But the Netdata community didn't just appear out of thin air. We took many concerted efforts to inspired these contributions, and we thought we'd share a few of our most successful initiatives.
 
 <!--more-->
 
+{{< figure src="/img/open-source-contributions_contributors-popup.png" alt="A screenshot of the contributor popup on GitHub" position="center" style="border-radius: 4px;" caption="" captionPosition="center" >}}
+
 Now, the process of inspiring contributions for an open-source project has two core components: 1) getting new contributors and 2) keeping them around for the long haul. Let's talk about these in succession.
+
 
 ## Getting new contributors to your open-source project
 
 Just like a startup business, a primary goal for any open-source project is getting the attention of eager and passionate people. Yes, it's a type of marketing, but we've focused almost exclusively on making contributions as easy as possible.
+
+### Remember that every issue is a contribution
+
+There is no such thing as an unhelpful issue. But for your project to get value out of these issues, you need to discover the root cause. That means being patient and taking time to discuss the concern with this new contributor. The problem isn't always a bug in your code—it could be missing documentation, or they could be using your project in a way you hadn't thought of before.
+
+By always treating every issue, no matter how small, as a valuable contribution, you'll be able to more effectively help the user solve their problem and make your project better in the long haul.
+
+That's how we treat incoming issues at Netdata. Everyone helps us better understand how people are using the agent "in the wild." Through understanding these uses cases, we can make Netdata more valuable to more developers, sysadmins, and DevOps engineers.
 
 ### Upload and commit to a Contributor Covenant Code of Conduct
 
@@ -40,21 +55,17 @@ Make sure this document also explains how you handle workflows and processes lik
 
 Clarity is paramount in your `CONTRIBUTING.md` document. Upon reading this document, potential contributors should `1)` be able to self-select their skill level according to your definitions, `2)` know where to look next to create their first contribution, and `3)` feel as though they can meaningfully help the project move forward.
 
-You might feel like you're micromanaging, but you're actually building efficiency and clarity into the onboarding process. Everyone is on limited time, and a good `CONTRIBUTING.md` document makes sure people can get started as seamlessly as possible.
+You might feel like you're micromanaging, but you're building efficiency and clarity into the onboarding process. Everyone is on limited time, and a good `CONTRIBUTING.md` document makes sure people can get started as seamlessly as possible.
 
-### Tell people their issue matters, even if you can't fix it
+{{< figure src="/img/open-source-contributions_community-standards.png" alt="A screenshot of the contributor popup on GitHub" position="center" style="border-radius: 4px;" caption="GitHub even gives you an easy way to track your progress in developing these contributor-friendly resources!" captionPosition="center" >}}
 
-The worst look for an open-source project: A graveyard of ignored issues from users.
+### Don't expect people to fix what *you* need
 
-Most visitors assume the maintainer doesn't care about their users or the project is dead.
+Just because you've outlined parts of your project in need of work in your `CONTRIBUTING.md` document doesn't mean people will come flocking to fix your requests. Instead, they're much more likely to seek out solutions to *their* problems and specific use cases.
 
-When someone requests a feature for your project, it's because they have a certain amount of passion for it. They want it to be better. They think it could be more powerful and useful for more people, but their requests are often misguided. Maybe it's outside the scope of your project, or is too complex to handle. Maybe it's just a bad idea.
+A Netdata user who wants to track real-time weather data from a Raspberry Pi in their backyard won't have much interest in [collecting more Varnish metrics](https://github.com/netdata/netdata/issues/6169), despite us wanting precisely that. But they may be interested in writing a new [collector](https://docs.netdata.cloud/collectors/) to gather more data from their sensors.
 
-As Hacker News user marknadal [writes](https://news.ycombinator.com/user?id=marknadal):
-
-> But the people who [write] "Why isn't this written in X language?" or "Here's a PR to turn tabs into spaces" are honestly well-intended but naive and short-sighted.
-
-As a busy maintainer, it's tempting to ignore these types of issues or PRs, but doing so ensures that user's passion never translates into contribution. Whatever passion remains will fizzle out and they'll move elsewhere. Instead, consider pointing them to the documentation that explains the code around their issue (you have good documentation, right?) and you might be able to inspire them to do pitch in without having to address their issue directly.
+> Remember: The user's needs drive contributions—not just their passion.
 
 ### Tag specific issues with 'good first issue'
 
@@ -76,6 +87,7 @@ As a maintainer, your primary job is to keep the project alive, and better docum
 
 Improving documentation, fixing typos, and smoothing out sentences is all part of creating a polished, professional codebase. By encouraging contributions to documentation, you'll be casting a wider net and will inevitably capture some people you might have otherwise missed.
 
+
 ## Keeping contributors around
 
 The longer a contributor sticks around, the better they'll get at working with you, your code, and anyone else who might be pitching in. Conversely, losing a high-value contributor levels an enormous cost on the project. 
@@ -85,6 +97,16 @@ Of course, you'll experience a certain amount of unavoidable attrition over time
 But you can keep people around by following a pretty simple rule: **Contributors are volunteers, and gratefulness always flows toward volunteers.** They are not lucky to have the opportunity to work on your project. You are lucky to benefit from their time and expertise.
 
 And here is where we shift away from marketing and toward management.
+
+### Address issues before the contributor's interest fades
+
+Every issue has an expiration date. You have to move quickly, because you can never be sure when that expiration will come.
+
+If you don't accept the user's issue as a valid real-life scenario before time runs out, you're going to lose them as a contributor forever. And that's a shame, because contributors are valuable testers and quality assurance checkers—they're running your project in some vital part of their life, after all.
+
+Netdata's contributors have made it production-quality in dozen of use cases that we would have never been able to figure out on our own. We try to remember that as we consistently work to address new issues quickly.
+
+{{< figure src="/img/open-source-contributions_issues.png" alt="A screenshot of issues in the Netdata GitHub repository" position="center" style="border-radius: 4px;" caption="As always, trying our hardest to engage issues straightaway." captionPosition="center" >}}
 
 ### Find work that your contributors enjoy
 
@@ -127,6 +149,21 @@ The landmarks for growth can be different for every project and your specific ma
 As [Drew DeVault wisely](https://drewdevault.com/2018/06/01/How-I-maintain-FOSS-projects.html#fnref:1) says:
 
 > A couple of bugs caused by inexperience is a small price to pay for the gain in experience the contributor gets by taking on hard or important tasks.
+
+### Be polite!
+
+The open-source community can be contentious at times. Don't add to that mentality!
+
+## Our community philosophies
+
+And after all that, we can hone in on the core philosophies that make Netdata a mecca for contributions in all shapes and sizes.
+
+1. **Anyone who submits an issue is a contributor.**
+2. **The community's needs drive Netdata's future.** 
+3. **Our contributors make Netdata production-grade.**
+4. **Every contributor deserves to know we're listening, and quickly.**
+5. **Everyone should be working on projects they enjoy, on their own time, and without stress.**
+6. **We're going to be nice as heck to each other!**
 
 ## Inspiring new and continued contributors is all about transparency and mentorship
 
