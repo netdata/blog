@@ -55,3 +55,27 @@ header.hero {
 .post-title {
     font-size: 2rem;
 }
+
+.post-content img {
+    display: block;
+    margin: 0 auto 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.post-content figure {
+    margin-bottom: 2rem;
+}
+
+.post-content figure img {
+    margin: 0 auto;
+}
+
+/*  Fix to show badges embedded into the middle of a paragraph display as 
+    inline instead of on their own line */
+.post-content p img[src*="shields.io"] {
+    position: relative;
+    display: inline-block;
+    top: 4px;
+    margin: 0;
+    box-shadow: none;
+}
