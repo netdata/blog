@@ -22,7 +22,7 @@ Binary packages are the go-to method for installing software on just about every
 
 This way of installing packages via a package manager works brilliantly, except for the fact that these packages might not get updated when we launch a new version of Netdata. By supplying our binary packages via a repository you can add to your package manager's list, we'll be able to make sure everyone gets our newest features.
 
-RPM binaries for Fedora, Red Hat Enterprise Linux (RHEL), and OpenSUSE are now available, and DEB packages for Debian and Ubuntu will be available soon.
+RPM binaries for Fedora, Red Hat Enterprise Linux (RHEL), and openSUSE are now available, and DEB packages for Debian and Ubuntu will be available soon.
 
 **These binaries are still in beta, and if you have issues we encourage you to [file an issue](https://github.com/netdata/netdata/issues) so that we can fix it.**
 
@@ -41,7 +41,15 @@ You can now use HTTPS with the built-in web server by [enabling TLS](https://doc
 
 ## Get smarter about your health monitoring
 
-We launched the [health management API](https://docs.netdata.cloud/web/api/health/#health-management-api) in v1.12, but any changes you made there weren't persisted across restarts. As of v1.16.0, Netdata now persists those changes to disk! No more reconfiguring your Netdata agents to work the way you want, no matter how many times you cycle your systems off and on.
+Health monitoring is at the core of why developers, sysadmins, and DevOps engineers choose Netdata again and again. That's why we've introduced two new features to make Netdata's health monitoring even more robust and customizable.
+
+### Persistent health management API settings
+
+When we launched the [health management API](https://docs.netdata.cloud/web/api/health/#health-management-api) in v1.12, it was designed to help Netdata users quickly silence alarms they don't want to see regularly. For example, some users don't want emails for `_last_collected` alarms. With the API, these users can disable or silence all alarms or specific alarms based on selection criteria.
+
+As of v1.16.0, **Netdata now persists those health management API changes to disk**! This new feature means that your disabled/silenced alarm configuration remains intact, no matter how many times you cycle your systems off and on.
+
+### Repeating alarm notifications
 
 A lot of Netdata users worry about missing an alarm notification—not a good situation if you're monitoring mission-critical systems. To help reduce these situations, we've launched the ability to [repeatedly send alarm notifications](https://docs.netdata.cloud/health/#alarm-line-repeat) for some or all active alarms at any frequency you'd like.
 
