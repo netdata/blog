@@ -1,5 +1,5 @@
 ---
-title: "Release 1.16: Smarter binaries and built-in SSL"
+title: "Release 1.16.0: Smarter binaries and built-in TLS"
 date: 2019-07-09
 summary: "Version 1.16.0 of the open-source Netdata agent comes with a ton of bugfixes, new TLS encryption, and better binaries for smooth installation with package managers."
 author: "Joel Hans"
