@@ -6,7 +6,7 @@ author: "Joel Hans"
 cover: "how-to-netdata-cloud.png"
 tags: ["How-to"]
 categories: []
-draft: true
+draft: false
 ---
 
 As we’ve mentioned in our announcement post (read [Introducing Netdata Cloud: our vision for distributed health and performance monitoring](https://blog.netdata.cloud/posts/netdata-cloud-announcement/)), we’re excited to finally be showing the Netdata community what we’ve been so hard at work on over the last few months.
