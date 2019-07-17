@@ -35,25 +35,23 @@ In short: **Netdata Cloud is our vision for the future of distributed health and
 
 ### What features will Netdata Cloud offer?
 
-By October 2019 we plan on rolling out the following new features for Netdata Cloud:
+We plan on rolling out the following new features for Netdata Cloud:
 
-#### May
+#### Current
 
 - Connect unlimited Netdata-monitored nodes to Netdata Cloud.
 - View an aggregated view of known nodes, including alarms, a basic system overview, and services metrics.
 
-#### July
+#### Near-term
+
 - Create infinite Workspaces for different organizations or aspects of a single infrastructure.
 - Join Rooms to collaborate with colleagues and more effectively solve ongoing performance and health issues.
+- Support for multiple authentication methods.
 
-#### September
+#### Future
 
 - Receive alarm notifications from distributed Netdata agents in one place.
 - Support for the distributed authentication of Netdata agents.
-- Support for multiple authentication methods.
-
-#### October
-
 - Build custom dashboards within Rooms, including widgets (charts, badges, alarms, and more), templates to build custom dashboards, and timelines of an agent’s events.
 
 Each of these features leverages metadata from each node’s monitoring agent and give users even more ways to better understand what happens to their systems and applications during slowdowns, anomalies, or outages.
