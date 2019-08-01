@@ -1,6 +1,6 @@
 ---
-title: "Our new DB Engine: It's super great"
-summary: "t/k"
+title: "How and why we're bringing long-term storage to Netdata"
+summary: "Netdata can collect thousands of metrics every second, and now it can efficiently store that valuable data for the long haul."
 date: 2019-08-06
 author: "Joel Hans"
 cover: "db-engine.png"
@@ -12,6 +12,8 @@ draft: false
 We've built a lot of amazing things into the open-source [Netdata](https://github.com/netdata/netdata) monitoring system. But, no matter how far we've come, we'll always be proud of how little RAM it uses.
 
 Right now, Netdata stores metrics in your system's RAM using a ridiculously efficient database. It only saves or loads historical metrics from disk when you restart it. With this system, Netdata can be both low-resource and exhaustive in its collection of real-time metrics.
+
+<!--more-->
 
 If you collect 1,000 metrics every second, and only need an hour's worth of historical data, your instance of Netdata will use 14.4MB of RAM. If you want to collect a day's worth data on 1,000 metrics, you'll need 345MB of RAM. Or, you can push Netdata to its limits and [collect 100,000 metrics](https://github.com/netdata/netdata/issues/1323) for an hour and use a *mere 1.7GB of RAM*.
 
