@@ -37,7 +37,7 @@ How much? Let's take a look at some examples.
 
 With a typical compression ratio of 80%, each metric (when collected every second), will require **25MiB for an entire year**. Random metrics are less compressible, and thus will take up 135MiB/metric/year, again at that 1-second granularity.
 
-**Given a machine collecting 1,000 metrics every second, you'd need 25,000MiB (2.44GiB) of disk space to hold an entire year's worth of data.**
+**Given a machine collecting 1,000 metrics every second, you'd need 25,000MiB (24.4GiB) of disk space to hold an entire year's worth of data.**
 
 Or, let's say you have a large server, and Netdata is collecting 2,000 metrics every second. Given an average 80% compression ratio, the default 256MiB of disk space will hold about two day's worth of metrics.
 
@@ -56,6 +56,8 @@ That's the beauty of the new DB engine—it makes Netdata better, no matter who'
 ## The shining future of the DB engine
 
 Right now, the new DB engine is just one of the many [memory mode options](https://docs.netdata.cloud/database/#memory-modes). While `save` is the current default, we plan on making `dbengine` the default in the future.
+
+When we released the first version of the DB engine with v1.15.0, we weren't happy enough with its performance. That's why we reduced the memory footprint by 50% for the v1.16.0 release. With memory use dramatically reduced, we've turned our attention to a few other items on the TODO list that will make `dbengine` even more flexible and robust.
 
 The first item on the priority list is reducing the memory footprint even further while making the engine more robust in complex use cases.
 
