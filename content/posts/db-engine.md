@@ -41,7 +41,9 @@ With a typical compression ratio of 80%, each metric (when collected every secon
 
 Or, let's say you have a large server, and Netdata is collecting 2,000 metrics every second. Given an average 80% compression ratio, the default 256MiB of disk space will hold about two day's worth of metrics.
 
-The real-life memory and disk space considerations are a little more complicated than that, but those are ballparks based on all our real-world testing. The DB engine probably won't help you collect thousands of highly granular metrics in *perpetuity*, but it's still exciting new territory for the Netdata team.
+Our testing shows the DB engine will require an amount RAM equal to about 3% of the uncompressed disk space taken by the files on disk. That's on top of the amount you've explicitly set with the `page cache size` setting, which defaults to 32MiB right now.
+
+The DB engine probably won't help you collect thousands of highly granular metrics in *perpetuity*, but it's still exciting new territory for the Netdata team.
 
 > If you want to dig into the details, check out our [documentation on the DB engine](https://docs.netdata.cloud/database/engine/).
 
