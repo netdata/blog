@@ -1,7 +1,7 @@
 ---
 title: "How and why we're bringing long-term storage to Netdata"
 summary: "Netdata can collect thousands of metrics every second, and now it can efficiently store that valuable data for the long haul."
-date: 2019-08-06
+date: 2019-08-07
 author: "Joel Hans"
 cover: "db-engine.png"
 tags: ["How Netdata works"]
