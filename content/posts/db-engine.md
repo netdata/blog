@@ -19,10 +19,6 @@ If you collect 1,000 metrics every second, and only need an hour's worth of hist
 
 {{< figure src="/img/db-engine_server.png" alt="A screenshot of the Netdata dashboard with a server collecting 100,000 metrics" position="center" style="border-radius: 4px;" caption="And use only 9% CPU on a single core while you're at it!" captionPosition="center" >}}
 
-Given that Slack often uses hundreds of megabytes of RAM, and often than a gigabyte, 345MB of RAM doesn't seem that bad.
-
-{{< figure src="/img/db-engine_slack.png" alt="A screenshot Slack using hundreds of MB of RAM" position="center" style="border-radius: 4px;" caption="" captionPosition="center" >}}
-
 But what if you want to store weeks of metrics data at one-second granularity? Or months? Or **years**?
 
 Enter our new database engine.
@@ -76,7 +72,18 @@ And while we're still working on those features, the DB engine is fully function
     memory mode = dbengine
 ```
 
-Be sure to read our [documentation on the DB engine](https://docs.netdata.cloud/database/engine/) as well to understand what the configuration settings are and how best to use them.
+The most important options are `page cache size` and `dbengine disk space`:
+
+```
+[global]
+    memory mode = dbengine
+    page cache size = 32
+    dbengine disk space = 256
+```
+
+The `page cache size` option sets the maximum amount of RAM (in MiB) that's dedicated to caching metrics values. And with the `dbengine disk space` option, you set how much disk space (in MiB) you'd like to dedicate to storing historic values and their metadata. Be sure to read our [documentation on the DB engine](https://docs.netdata.cloud/database/engine/) as well to understand what the configuration settings are and how best to use them.
+
+Once you've enabled the new DB engine, you'll be able to scrub backward in time much further, *and* without using many more system resources than before. DB engine is the best of both worlds, and it's only going to get better with time.
 
 We're excited to get more real-world data from the Netdata community as they enable the new DB engine and start storing metrics for the long haul. If you have some numbers you'd like to share, you can ping us on [Twitter](https://twitter.com/linuxnetdata), on a [GitHub issue](https://github.com/netdata/netdata/issues), or at [info@netdata.cloud](mailto:info@netdata.cloud).
 
