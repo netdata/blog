@@ -24,17 +24,19 @@ Here are details on some of the improvements and changes most requested by the N
 
 ### Change collection frequency without losing metrics
 
-If you're using our new [database engine](https://blog.netdata.cloud/posts/db-engine/) (and you should!), you can now change the rate at which Netdata collects metrics without losing information.
+If you're using our new [database engine](https://blog.netdata.cloud/posts/db-engine/) (and if you're not, you should!), you can now change the rate at which Netdata collects data without losing previously-stored metrics.
 
-In the past, changing the frequency—for example, from every second to every 5 seconds—destroyed previously-collected metrics.
+In the past, changing the frequency—for example, from every second to every 5 seconds—destroyed those metrics the database engine already had saved to disk.
 
-This improvement to the database engine also means Netdata can autoscale the time axis of any chart based on the collection frequency used during that time.
+All you need to do to change collecion frequency is restart Netdata.
 
-Now you can more deeply customize how Netdata stores metrics in the long-term while retaining every vital piece of information.
+You can also now autoscale the time axis of any chart based on the collection frequency used during that time. That will make panning through past metrics, and different collection frequencies, easier to follow.
+
+With more flexibilty comes more customization, so go ahead and configure Netdata for your particular use case without worrying about losing a single metric.
 
 ### Show all charts with no data
 
-Netdata usually hides charts that have no data. If you wanted, you could enable all charts without any data using individual configuration options for each chart, but that meant changing more than 200 options!
+Netdata usually hides charts that have no data. Before v1.17.0, you could force Netdata to show all charts with no data using individual configuration options for each chart, but that meant changing more than 200 options!
 
 You can now enable all charts with no metrics using a single option:
 
