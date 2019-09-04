@@ -75,7 +75,7 @@ Enable archiving to MongoDB by editing your `netdata.conf` with the following op
     type = mongodb
 ```
 
-Netdata takes care of the rest! Archiving is automatic and is limited only by the resources you're willing to dedicate to MongoDB.
+Netdata takes care of the rest!
 
 ### What else?
 
