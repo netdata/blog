@@ -24,15 +24,31 @@ Here are details on some of the improvements and changes most requested by the N
 
 ### Change collection frequency without losing metrics
 
-If you're using our new [database engine](https://blog.netdata.cloud/posts/db-engine/) (and if you're not, you should!), you can now change the rate at which Netdata collects data without losing previously-stored metrics.
+If you're using our new [database engine](https://blog.netdata.cloud/posts/db-engine/) (and if you're not, you should!), you can now change the rate at which Netdata collects data while also being able to view data collected at a different frequency than you do now.
 
-In the past, changing the frequency—for example, from every second to every 5 seconds—destroyed those metrics the database engine already had saved to disk.
+Let's say you're using the database engine and you recently changed your collection frequency from 1 second to 3 seconds. In the past, dashboard queries to the database engine did not accurately return either part or all of metrics history stored to disk.
 
-All you need to do to change collecion frequency is restart Netdata.
+But, with the improvements in v1.17, the dashboard can query for past metrics at any frequency, and the database engine will return the complete, accurate history.
 
-You can also now autoscale the time axis of any chart based on the collection frequency used during that time. That will make panning through past metrics, and different collection frequencies, easier to follow.
+Upgrading to v1.17 allows you to accurately visualize historic metrics that were stored with previous versions of the database engine.
 
-With more flexibilty comes more customization, so go ahead and configure Netdata for your particular use case without worrying about losing a single metric.
+Netdata also now autoscales the time axis of any chart based on the collection frequency used during that time. That will make panning through past metrics, and different collection frequencies, easier to follow.
+
+If you're interested in changing collection frequency, you can change the `update every` option in the `[global]` section of `netdata.conf`:
+
+```conf
+[global]
+    # Default setting: collect data every 1 seconds
+    update every = 1
+    # Every 3 seconds
+    update every = 3
+    # Every 10 seconds
+    update every = 10
+```
+
+Restart Netdata and the database engine will pick up on your new settings. You can also change the collection frequency for internal or external plugins, or even individual charts—see our [collectors documentation](https://docs.netdata.cloud/collectors/) for more details.
+
+With more flexibilty comes more customization, so go ahead and configure Netdata for your particular use case without losing a hint of accuracy in your charts.
 
 ### Show all charts with no data
 
