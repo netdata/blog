@@ -98,7 +98,7 @@ With this release, you can now:
 
 - Use [UTF8 characters](https://github.com/netdata/netdata/pull/6426) on Netdata badges.
 - Install Netdata with `.DEB` [packages on Package Cloud](https://packagecloud.io/netdata).
-- Monitor VM performace from one or more [vCenter
+- Monitor VM performance from one or more [vCenter
   servers](https://docs.netdata.cloud/collectors/go.d.plugin/modules/vsphere/).
 - Send email notifications in [plain text](https://github.com/netdata/netdata/pull/6485).
 
