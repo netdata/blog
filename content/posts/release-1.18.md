@@ -3,7 +3,7 @@ title: "Release 1.18: What's new with the database engine?"
 date: 2019-10-10
 summary: "With the latest update to Netdata, we're solving the monitoring metrics storage problem once and for all. Distributed metrics, smarter plugins, Hadoop monitoring, and offline installations." 
 author: "Joel Hans" 
-cover: "release-1.18.png" 
+cover: "release-1.18.0.png" 
 tags: ["Release"]
 ---
 
