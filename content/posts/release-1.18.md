@@ -111,7 +111,7 @@ lookup: average -3s percentage foreach system,user,nice
 You'll save time and reduce the risk you don't get alerts for critical metrics in your infrastructure.
 
 We have a tutorial on [using dimension alarm
-templates](https://docs.netdata.cloud/docs/tutorials/dimension-alarm-templates/) available to read now.
+templates](https://docs.netdata.cloud/docs/tutorials/dimension-templates/) available to read now.
 
 ## Install Netdata on offline systems
 
