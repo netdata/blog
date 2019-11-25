@@ -104,6 +104,9 @@ tool that can be called from the command-line that generates URLs / expected res
 definition. We identified a Python fuzzer that could work with our Swagger definition. We modified the fuzzer to make
 the generated URLs more relevant to our API.
 
+This moves beyond using Swagger as a tool to document our API for humans to read, and starts building a model of our API
+that is detailed enough to verify automatically.
+
 We then analysed what happens in the current code when we fuzz the API, and compared it to a Netdata streaming
 configuration, to check for any relevant differences. We set up a [test
 configuration](https://github.com/netdata/netdata/issues/7229) to try out the fuzzer.
