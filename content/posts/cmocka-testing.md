@@ -1,6 +1,6 @@
 ---
-title: "Building an agile team's 'safety harness' with CMocka and FOSS"
-summary: "We need to work quickly and deploy in-demand features safely and as an agile team. This is how we're building on top of CMocka to bring unit testing to Netdata's core features to ensure we ship high-quality, bug-free code."
+title: "Building an agile team's 'safety harness' with cmocka and FOSS"
+summary: "We need to work quickly and deploy in-demand features safely and as an agile team. This is how we're building on top of cmocka to bring unit testing to Netdata's core features to ensure we ship high-quality, bug-free code."
 date: 2019-11-27
 author: "Joel Hans & Andrew Moss"
 cover: "an-image.png"
@@ -15,7 +15,7 @@ Netdata better.
 
 But we face the same the dilemma as all agile teams: **How do we do this safely?**
 
-Safety means that we can move quickly without compromising the quality of our code. And because we want to move quickly,
+Safety means that we can move quickly without compromising the quality of our code. Because we want to move quickly,
 engage with our users' desires, and keep quality high, we're becoming very serious about adopting unit testing in our
 work.
 
@@ -34,22 +34,22 @@ visible to us so that we can maintain it, and our debugging work becomes faster 
 Bringing unit testing to Netdata hasn't been as simple as flipping a switch, or enabling a post-commit hook in Github.
 Here's a look into our journey.
 
-## Deciding on CMocka for Netdata's unit testing
+## Deciding on cmocka for Netdata's unit testing
 
 The Netdata agent's core is written in C, which is not a usual target for Test-Driven Development (TDD). To be able to
 unit test key functionalities of the Netdata daemon, we needed to use mocking, which requires a complete framework.
 
-There are a lot of testing frameworks out there, but we narrowed it down to three main candidates: Google Test, CMocka,
+There are a lot of testing frameworks out there, but we narrowed it down to three main candidates: Google Test, cmocka,
 and Unity. A more detailed evaluation gave us the following comparison table.
 
-| [Google Test](https://github.com/google/googletest)                                                        | [CMocka](https://cmocka.org/)                                                                              | [Unity](http://www.throwtheswitch.org)                                                                     |
+| [Google Test](https://github.com/google/googletest)                                                        | [cmocka](https://cmocka.org/)                                                                              | [Unity](http://www.throwtheswitch.org)                                                                     |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | ![1](https://user-images.githubusercontent.com/43294513/69387373-7bc0d580-0c7a-11ea-9409-a0a97f5a1236.png) | ![2](https://user-images.githubusercontent.com/43294513/69387376-7d8a9900-0c7a-11ea-96c5-2552acf35b52.png) | ![3](https://user-images.githubusercontent.com/43294513/69387380-7ebbc600-0c7a-11ea-92f0-1e83783ffdbd.png) |
 
-We decided to use CMocka, because it was the best fit to our pure C codebase, its simplicity, and its lack of external
-dependencies.
+We decided to use [cmocka](https://cmocka.org/), because it was the best fit to our pure C codebase, its simplicity, and
+its lack of external dependencies.
 
-## But using CMocka wasn't that simple
+## But using cmocka wasn't that simple
 
 The largest difficulty in testing is making sure that we test the right thing: **the relevant piece of code, running in a
 context that is as close as possible to how it runs in the real system**. 
@@ -59,7 +59,7 @@ that we are recreating it. In the real application, the procedures that we are t
 system—they call other procedures that are not part of the test. We need to way to cut out the piece of the application
 being tested, isolate it from the rest of the application, and wrap it up inside a reproducible test.
 
-This is the main strength of CMocka, and using it lets us build on the huge amount of work that has already gone into
+This is the main strength of cmocka, and using it lets us build on the huge amount of work that has already gone into
 making it do this.
 
 The library provides us with a facility called "mocking"—substituting pieces of the real application with pretend
@@ -70,11 +70,11 @@ before they propagate into the rest of the application.
 {{< figure src="/img/20191127-cmoka-diagram-1.jpeg" alt="" position="center" style="border-radius: 4px;" caption="A diagram from our unit testing guru Andrew Moss on the complexity of Netdata's web API and URL processing." captionPosition="center" >}}
 
 The only additional facility that we need is control over memory. We have to make each test reproducible, and that means
-being certain no state accidentally propagates out of out test and into another. CMocka can checkpoint the state of
+being certain no state accidentally propagates out of one test and into another. cmocka can checkpoint the state of
 memory in between tests and give us rigid guarantees that a test passes because of what we did **inside the test**—not
 because an earlier test accidentally set us up to give the right result.
 
-Although CMocka is a powerful base for us to build testing upon, it lacks a feature that is critical to the tests that
+Although cmocka is a powerful base for us to build testing upon, it lacks a feature that is critical to the tests that
 we want to build. In typical unit-testing, each piece of functionality inside the system being tested needs a separate
 piece code to test it. If we want to test 10 pieces of functionality, then we must write 10 tests.
 
@@ -85,7 +85,7 @@ such a way that its exact behavior is controlled by the parameters that we feed 
 SecondTechnique)`. Then, by altering the parameters, we can test the system with different values, access the `red`
 functionality, and control other aspects of the tested code.
 
-But, as you might have guessed based on the existince of this post, parametric unit tests are not supported by CMocka. 
+But, as you might have guessed based on the existince of this post, parametric unit tests are not supported by cmocka. 
 
 This hiccup meant we needed to figure out a way **set up testing on 1000s of variations of low-level HTTP messages
 without needing to spend months writing individual test cases**.
@@ -96,7 +96,7 @@ Choosing an initial target for unit testing was easy.
 
 We started with Netdata's web API, because the interface that we supply to the network is the entry point to our
 functionality. Everything that Netdata does is designed to be integrated with other tools, which helps IT departments to
-leverage it fully. The web API has become essential to our uresr, and by testing it thoroughly, we get the best return
+leverage it fully. The web API has become essential to our users, and by testing it thoroughly, we get the best return
 on our effort.
 
 The first step was to [fuzz-test the current API](https://github.com/netdata/netdata/issues/7163). We needed a fuzzing
@@ -116,7 +116,7 @@ configuration](https://github.com/netdata/netdata/issues/7229) to try out the fu
 -   Wrote PoC unit test for the http header request processing.
 
 With that fuzzing done, we knew we could mock enough of the pieces of Netdata to perform very low-level testing inside
-our HTTP header processing code. It was then time to [complete the CMocka
+our HTTP header processing code. It was then time to [complete the cmocka
 unit testing](https://github.com/netdata/netdata/issues/7229) for request processing:
 
 -   Extended the testdriver to generate partial requests.
@@ -134,9 +134,9 @@ unit testing](https://github.com/netdata/netdata/issues/7229) for request proces
 
 Believe it or not, this is where the complexity ramps up.
 
-The testing process was extended by introducing a layer of parametric testing on top of the CMocka test runner. The
+The testing process was extended by introducing a layer of parametric testing on top of the cmocka test runner. The
 parametric testing walks through a space of parameter values and dynamically generates test definitions for each point.
-A CMocka testing group was built that repeatedly calls the same testing procedure, feeding the test definitions to the
+A cmocka testing group was built that repeatedly calls the same testing procedure, feeding the test definitions to the
 procedure as a shared state.
 
 Our `web_api_testdriver` runs a large set of parameterized tests to check the overall processing of the HTTP request
@@ -150,17 +150,17 @@ its component parts are verified within the test suite.
 Currently, the tests can be executed manually with `make check`, but after refining the web server's behavior, we may
 execute the test suites automatically.
 
-{{< figure src="/img/20191127-cmoka-diagram-3.jpeg" alt="" position="center" style="border-radius: 4px;" caption="Andrew's final diagram—an explanation of how he used Cmocka unit-testing and his extensions to " captionPosition="center" >}}
+{{< figure src="/img/20191127-cmoka-diagram-3.jpeg" alt="" position="center" style="border-radius: 4px;" caption="Andrew's final diagram—an explanation of how he used cmocka unit-testing and his extensions to " captionPosition="center" >}}
 
 ## Tests, mocks, and URLs... oh my
 
-To get all the benefits of Cmocka's library and be able to test our code with _any_ agility, we needed to write a new
+To get all the benefits of cmocka's library and be able to test our code with _any_ agility, we needed to write a new
 layer on top of an existing FOSS project.
 
 Our new layer takes a single parametric test and walks through the thousands of possible combinations of testing
-parameters to build unit tests dynamically. These tests are fed into CMocka, and the result lets us build the robust and
+parameters to build unit tests dynamically. These tests are fed into cmocka, and the result lets us build the robust and
 comprehensive testing that we want on top of industry-standard, high-quality external libraries. 
 
-That victory—getting all of CMocka's value in a way that works best for our code—demonstrates the real strength of
+That victory—getting all of cmocka's value in a way that works best for our code—demonstrates the real strength of
 open-source development. We build on the work of others and share our achievements, with the hope that others can
 continue to build on our results.
