@@ -46,8 +46,8 @@ and Unity. A more detailed evaluation gave us the following comparison table.
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | ![1](https://user-images.githubusercontent.com/43294513/69387373-7bc0d580-0c7a-11ea-9409-a0a97f5a1236.png) | ![2](https://user-images.githubusercontent.com/43294513/69387376-7d8a9900-0c7a-11ea-96c5-2552acf35b52.png) | ![3](https://user-images.githubusercontent.com/43294513/69387380-7ebbc600-0c7a-11ea-92f0-1e83783ffdbd.png) |
 
-We decided to use [cmocka](https://cmocka.org/), because it was the best fit to our pure C codebase, its simplicity, and
-its lack of external dependencies.
+We decided to use [cmocka](https://cmocka.org/), because it was the best fit to our pure C codebase. Plus, it's
+delightfully simple (in theory) and doesn't have external dependencies.
 
 ## But using cmocka wasn't that simple
 
