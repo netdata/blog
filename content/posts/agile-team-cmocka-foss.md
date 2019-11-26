@@ -27,7 +27,7 @@ We need to be able to trust that some of our more complex code is free from bugs
 implementation bugs, where it does the right thing in the wrong way, and the more complex specification bugs, where it
 does the wrong thing.
 
-If we can successfully implement unit testing across our codebase, we get that safety hardness. Our team can detect
+If we can successfully implement unit testing across our codebase, we get that safety harness. Our team can detect
 where changes will affect the product and the way that it works for our users. The design contract in the code becomes
 visible to us so that we can maintain it, and our debugging work becomes faster and more accurate.
 
@@ -109,7 +109,7 @@ that is detailed enough to verify automatically.
 
 > What's all this fuzziness and swagger about? Certainly not warm sweaters and arrogant engineers.
 > [Swagger](https://swagger.io/) is software for documenting developer application programming interfaces (APIs). And
-> fuzing is the process of feeding a program invalid or unexpected data to see how it responds.
+> fuzzing is the process of feeding a program invalid or unexpected data to see how it responds.
 
 We then analysed what happens in the current code when we fuzz the API, and compared it to a Netdata streaming
 configuration, to check for any relevant differences. We set up a [test
@@ -159,7 +159,7 @@ execute the test suites automatically.
 
 ## Tests, mocks, and URLs... oh my
 
-To get all the benefits of cmocka's library and be able to test our code with _any_ agility, we needed to write a new
+To get all the benefits of cmocka's library and be able to test our code with _any_ agility, we needed to write a new 
 layer on top of an existing FOSS project.
 
 Our new layer takes a single parametric test and walks through the thousands of possible combinations of testing
@@ -171,3 +171,10 @@ open-source development.
 
 We build on the work of others and share our achievements, with the hope that others can continue to build on our
 results.
+
+---
+
+Despite all the hard work we've put in so far, there is a lot more to be done. If you'd like to follow along on our progress introducing cmocka unit testing, you can subscribe to our [issue for 
+rewriting the URL parser](https://github.com/netdata/netdata/issues/7164)!
+
+![output-Peek 2019-11-26 10-33 mp4](https://user-images.githubusercontent.com/1153921/69657877-5ea05400-1038-11ea-8227-635a2988a9d7.gif)
