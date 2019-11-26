@@ -85,7 +85,7 @@ such a way that its exact behavior is controlled by the parameters that we feed 
 SecondTechnique)`. Then, by altering the parameters, we can test the system with different values, access the `red`
 functionality, and control other aspects of the tested code.
 
-But, as you might have guessed based on the existince of this post, parametric unit tests are not supported by cmocka. 
+But, as you might have guessed based on the existence of this post, parametric unit tests are not supported by cmocka. 
 
 This hiccup meant we needed to figure out a way **set up testing on 1000s of variations of low-level HTTP messages
 without needing to spend months writing individual test cases**.
@@ -155,7 +155,7 @@ its component parts are verified within the test suite.
 Currently, the tests can be executed manually with `make check`, but after refining the web server's behavior, we may
 execute the test suites automatically.
 
-{{< figure src="/img/20191127-cmoka-diagram-3.jpeg" alt="" position="center" style="border-radius: 4px;" caption="Andrew's final diagram—an explanation of how he used cmocka unit-testing and his extensions to " captionPosition="center" >}}
+{{< figure src="/img/20191127-cmoka-diagram-3.jpeg" alt="" position="center" style="border-radius: 4px;" caption="Final diagram from our cmocka guru Andrew Moss—an explanation of how he used cmocka unit-testing and his extensions to test the URL parser." captionPosition="center" >}}
 
 ## Tests, mocks, and URLs... oh my
 
