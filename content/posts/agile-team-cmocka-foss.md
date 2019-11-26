@@ -1,16 +1,16 @@
 ---
 title: "Building an agile team's 'safety harness' with cmocka and FOSS"
 summary: "We need to work quickly and deploy in-demand features safely and as an agile team. This is how we're building on top of cmocka to bring unit testing to Netdata's core features to ensure we ship high-quality, bug-free code."
-date: 2019-11-27
+date: 2019-11-26
 author: "Joel Hans & Andrew Moss"
-cover: "an-image.png"
+cover: "agile-team-cmocka-foss.png"
 tags: ["How Netdata works"]
 categories: []
 draft: false
 ---
 
 Netdata is made up from agile teams who are deeply committed to improving the usability of our product. We want to
-respond to our users and introduce in-demand features, and working directly with our community is the best way to make
+respond to our users and introduce in-demand features. Working directly with our community is the best way to make
 Netdata better.
 
 But we face the same the dilemma as all agile teams: **How do we do this safely?**
@@ -51,8 +51,8 @@ delightfully simple (in theory) and doesn't have external dependencies.
 
 ## But using cmocka wasn't that simple
 
-The largest difficulty in testing is making sure that we test the right thing: **the relevant piece of code, running in a
-context that is as close as possible to how it runs in the real system**. 
+The largest difficulty in testing is making sure that we test the right thing: **the relevant piece of code, running in
+a context that is as close as possible to how it runs in the real system**. 
 
 Because we are working in C, this context is really the state of memory inside the application, and we must be confident
 that we are recreating it. In the real application, the procedures that we are testing are integrated into the
@@ -107,6 +107,10 @@ the generated URLs more relevant to our API.
 This moves beyond using Swagger as a tool to document our API for humans to read, and starts building a model of our API
 that is detailed enough to verify automatically.
 
+> What's all this fuzziness and swagger about? Certainly not warm sweaters and arrogant engineers.
+> [Swagger](https://swagger.io/) is software for documenting developer application programming interfaces (APIs). And
+> fuzing is the process of feeding a program invalid or unexpected data to see how it responds.
+
 We then analysed what happens in the current code when we fuzz the API, and compared it to a Netdata streaming
 configuration, to check for any relevant differences. We set up a [test
 configuration](https://github.com/netdata/netdata/issues/7229) to try out the fuzzer.
@@ -134,8 +138,6 @@ unit testing](https://github.com/netdata/netdata/issues/7229) for request proces
     correctly.
 
 {{< figure src="/img/20191127-cmoka-diagram-2.jpeg" alt="" position="center" style="border-radius: 4px;" caption="" captionPosition="center" >}}
-
-Believe it or not, this is where the complexity ramps up.
 
 The testing process was extended by introducing a layer of parametric testing on top of the cmocka test runner. The
 parametric testing walks through a space of parameter values and dynamically generates test definitions for each point.
@@ -165,5 +167,7 @@ parameters to build unit tests dynamically. These tests are fed into cmocka, and
 comprehensive testing that we want on top of industry-standard, high-quality external libraries. 
 
 That victory—getting all of cmocka's value in a way that works best for our code—demonstrates the real strength of
-open-source development. We build on the work of others and share our achievements, with the hope that others can
-continue to build on our results.
+open-source development. 
+
+We build on the work of others and share our achievements, with the hope that others can continue to build on our
+results.
