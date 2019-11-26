@@ -1,7 +1,7 @@
 ---
 title: "Release 1.19: More efficient DevOps with web log parsing and unit testing" 
 date: 2019-11-27
-summary: "Version 1.19 of Netdata is all about efficiency. Essential collectors are now faster and more intelligently parse essential files, and unit testing " 
+summary: "Version 1.19 of Netdata is all about efficiency. Essential collectors are now faster and more intelligently able to parse essential files, and unit testing brings sharper code to every distributed Netdata agent." 
 author: "Joel Hans" 
 cover: "release-1.19.0.png" 
 tags: ["Release"]
@@ -27,9 +27,9 @@ We completed a major rewrite of our web log collector to improve its flexibility
 collector, written entirely in Go, can parse and chart logs from Nginx and Apache web servers, and contains numerous
 improvements. 
 
-Netdata now supports the LTSV log format, creates charts for TLS and cipher usage, and is amazingly fast—in a test using
-SSD storage, it parsed the logs for 200,000 requests in about 200ms, using 30% of a single core. We want to do more
-performance testing in real-world environments, but the initial results are promising.
+Netdata now supports the LTSV log format, creates charts for TLS and cipher usage, and is amazingly fast. In a test
+using SSD storage, it parsed the logs for 200,000 requests in about 200ms, using 30% of a single core. We want to do
+more performance testing in real-world environments, but the initial results are promising.
 
 This Go-based collector also has powerful custom log parsing capabilities, which means we're **one step closer to a
 generic application log parser for Netdata**. We're continuing to work on this parser to support more application log
