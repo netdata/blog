@@ -174,7 +174,9 @@ results.
 
 ---
 
-Despite all the hard work we've put in so far, there is a lot more to be done. If you'd like to follow along on our progress introducing cmocka unit testing, you can subscribe to our [issue for 
-rewriting the URL parser](https://github.com/netdata/netdata/issues/7164)!
+Despite all the hard work we've put in so far for our [v1.19.0
+release](https://github.com/netdata/netdata/releases/tag/v1.19.0), there is a lot more to be done. If you'd like to
+follow along on our progress introducing cmocka unit testing, you can subscribe to our [issue for rewriting the URL
+parser](https://github.com/netdata/netdata/issues/7164)!
 
 ![output-Peek 2019-11-26 10-33 mp4](https://user-images.githubusercontent.com/1153921/69657877-5ea05400-1038-11ea-8227-635a2988a9d7.gif)
