@@ -58,7 +58,7 @@ As we continue to apply unit testing across our code base, we'll create a more r
 your systems.
 
 Read all about our process of testing and selecting cmocka on our blog post: [Building an agile team's 'safety harness'
-with cmocka and FOSS](https://blog.netdata.cloud/agile-team-cmocka-foss/).
+with cmocka and FOSS](https://blog.netdata.cloud/posts/agile-team-cmocka-foss/).
 
 ## Better, faster metrics for Unbound DNS servers
 
