@@ -28,3 +28,7 @@ HUGO_VERSION = "0.54.0"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from = "agile-team-cmocka-foss/"
+  to = "/posts/agile-team-cmocka-foss/"
