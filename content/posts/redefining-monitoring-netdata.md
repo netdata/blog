@@ -11,7 +11,7 @@ draft: false
 
 I wanted to follow up [Ron Miller's article in
 TechCrunch](https://techcrunch.com/2019/09/25/netdata-a-monitoring-startup-with-50-year-old-founder-announces-17m-series-a/)
-about Netdata's Series A funding last month with the story of how Netdata's inception was created's inception. It all
+about Netdata's Series A funding last month with the story of how Netdata's inception. It all
 started when I got... pissed off.
 
 <!--more-->
