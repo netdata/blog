@@ -11,16 +11,16 @@ draft: false
 
 I wanted to follow up [Ron Miller's article in
 TechCrunch](https://techcrunch.com/2019/09/25/netdata-a-monitoring-startup-with-50-year-old-founder-announces-17m-series-a/)
-about Netdata’s Series A funding last month with the story of how Netdata was created. It all started when I got...
-pissed off.
+about Netdata's Series A funding last month with the story of how Netdata's inception was created's inception. It all
+started when I got... pissed off.
 
 ## How Netdata was born
 
-In 2013, I worked for a company that relied on financial transactions. We had a very simple SLA: all financial
-transactions had to be completed within 3 seconds.
+In 2013, I worked for a company that relied on financial transactions. We had a very simple SLA: complete all financial
+transactions within 3 seconds.
 
 We were migrating the infrastructure from colocated (physical servers) to the cloud (VMs). The transition was not
-smooth. We had a lot of issues on the cloud side, which we couldn’t even detect. Business metrics were randomly
+smooth. We had a lot of issues on the cloud side, which we couldn't even detect. Business metrics were randomly
 reporting significant loss of volume and a very bad SLA, but at the operational level we saw no issues—everything seemed
 to be working perfectly. Traces were showing a large delay in several transactions, but there were no failures.
 
@@ -36,20 +36,20 @@ Our company was one of the biggest customers of the hosting provider in that reg
 provided a lot of professional services to help us figure out the problem. Senior consultants and developers of the
 hosting provider reviewed our applications, their design, even their implementation (yes, the actual code). Every step
 of the migration was first reviewed and approved by the hosting provider. It was a long process, since they were giving
-us recommendations to refactor parts of our applications to make them more “cloud friendly” prior to migrating them,
+us recommendations to refactor parts of our applications to make them more "cloud friendly" prior to migrating them,
 which of course we did.
 
 But still no luck. We were still randomly experiencing significant loss of transaction volume.
 
-So, in 2014, having refactored significant parts of our infrastructure to comply with what they thought was “the cloud
-way,” and having evaluated almost every possible monitoring solution out there, there was a lot of frustration. We were
-exhausted. And we were spending twice as much as hosting, on monitoring—monitoring that didn’t actually work.
+So, in 2014, having refactored significant parts of our infrastructure to comply with what they thought was "the cloud
+way," and having evaluated almost every possible monitoring solution out there, there was a lot of frustration. We were
+exhausted. And we were spending twice as much as hosting, on monitoring—monitoring that didn't actually work.
 
 I recall spending countless hours at our monitoring dashboards, feeling that their sole purpose was to make us happy
 with an illusion of monitoring. I couldn't accept that monitoring must be limited to providing just an abstract view of
 the operation of our systems and applications, so static, inflexible and inefficient, that it was almost useless for
-troubleshooting. I couldn’t believe that monitoring systems provide so few metrics and with such low resolution, scale
-so badly, and cost so much to run. But most importantly, I couldn’t accept that all solutions relied so heavily on the
+troubleshooting. I couldn't believe that monitoring systems provide so few metrics and with such low resolution, scale
+so badly, and cost so much to run. But most importantly, I couldn't accept that all solutions relied so heavily on the
 engineers installing and configuring them; inevitably, the final result was just a reflection of these engineers'
 skills. Not to mention the time required to set them up, which in many cases was counted in months.
 
@@ -63,10 +63,14 @@ some kind of cartoon-y illustration, and could include one or two of the questio
 
 I started experimenting, at home, on nights and weekends. I was rusty, but I knew that such a system had to behave well,
 to control itself, to show great respect to the systems and the other applications running, to be extremely lightweight,
-fast, and to have the smallest possible footprint. Optimization was a key product feature.
+fast, and to have the smallest possible footprint.
 
-My intention was never to build a monitoring tool. What I needed was a “console killer”: a tool that will always be
-running on all systems, that will zoom in to the heart of the operation of our systems and applications. A tool that’s
+I used the C language. And, of course, there were some trade-offs: I decided to eliminate disk accesses entirely, since
+these can affect the performance of the system significantly. In the end, Netdata had, by default, just an hour of data
+retention. (Today, with our [custom database engine](https://docs.netdata.cloud/database/engine/), Netdata can store much more than an hour's worth of data!)
+
+My intention was never to build a monitoring tool. What I needed was a "console killer": a tool that will always be
+running on all systems, that will zoom in to the heart of the operation of our systems and applications. A tool that's
 so friendly, diverse, adaptive, open and dynamic that it will replace the console for troubleshooting performance
 issues, once and for all.
 
@@ -75,12 +79,12 @@ Netdata was born.
 Of course, we used Netdata in production from the very beginning and installed it everywhere. It helped us understand
 our infrastructure in great detail and surfaced all the problems we were facing.
 
-We found issues in the cloud provider’s infrastructure and operations: their provisioning system and host maintenance
+We found issues in the cloud provider's infrastructure and operations: their provisioning system and host maintenance
 were randomly introducing short (1-3 second) freezes to the guest VMs, hundreds of them daily on each VM, in bursts. We
 identified bugs in their storage throttling mechanism, and even problematic top-of-rack switches.
 
 We also managed to figure out how the operations of the hosting provider differ between VM sizes. I recall issuing a
-policy like “the smallest VM we should use should be 4 cores, 16GB RAM,” because we knew this was the minimum with
+policy like "the smallest VM we should use should be 4 cores, 16GB RAM," because we knew this was the minimum with
 acceptable quality.
 
 With Netdata, such problems were so easy to figure out and document, even from within the VMs.
@@ -104,7 +108,7 @@ Hm…
 
 I wrote a blog post and sent it to Linux sites I trusted. They were not interested in publishing it. 😞
 
-What the hell, was I the only one who needed this? It couldn’t be...
+What the hell, was I the only one who needed this? It couldn't be...
 
 I started reading about it. Οn the morning of March 30th, 2016, just before I went to work, I found a blog post saying
 that if you want to check how good your open source project is, post it on Reddit. So, while I was having my first
@@ -121,7 +125,7 @@ news… WTF? What did I do?"
 I walked to my office, turned on my laptop, and checked my personal mailbox. I was flooded! Hundreds of people all over
 the world were sending me emails and invitations to connect on social media, giving Netdata stars on GitHub like crazy,
 and providing feedback by opening dozens of GitHub issues. The Netdata demo site I had running was sustainably sending
-dozens of thousands of chart refreshes per second. It didn’t crash—phew!—because I had done load testing before and knew
+dozens of thousands of chart refreshes per second. It didn't crash—phew!—because I had done load testing before and knew
 it would perform.
 
 **IMAGE: Size: 1200x600px** Content: Convey astronomical growth. Illustrations of GitHub stars, comments, hearts, any kind
@@ -138,7 +142,7 @@ course, I now had a lot of feedback and great help. New ideas were flowing in, c
 cases were discussed, bugs were reported, and even code and quality contributions were committed, all by complete
 strangers who found value in what I had created.
 
-Isn’t open-source amazing? You give people value and you get a lot of value back!
+Isn't open-source amazing? You give people value and you get a lot of value back!
 
 So, what made Netdata so unique? Why do people seem to like it so much?
 
@@ -172,8 +176,8 @@ So, I built Netdata around the following principles, which I believe are also th
     metrics, the better.
 
     This is against the most fundamental instructions provided by monitoring text books and blogs. The first thing they
-    say is, “You have to carefully select the metrics you monitor and you have to have a deep understanding of their
-    meaning.”
+    say is, "You have to carefully select the metrics you monitor and you have to have a deep understanding of their
+    meaning."
 
     Well… no! This does not work. No one can do this. There is no single person (with the possible exception of Brendan)
     who can have a deep understanding of network infrastructure, operating system architecture, detailed hardware
@@ -190,7 +194,7 @@ So, I built Netdata around the following principles, which I believe are also th
     less than a millisecond.
 
     This provides immediate visibility and greater granularity into the state and performance of the infrastructure and
-    applications, such as observing short-lived spikes or gaps. It is especially useful in today’s cloud environments,
+    applications, such as observing short-lived spikes or gaps. It is especially useful in today's cloud environments,
     where the performance of the infrastructure is neither linear nor predictable.
 
     Without high resolution (1s granularity) metrics, we are actually blind. We can only have a helicopter view of the
@@ -211,7 +215,7 @@ with almost all existing monitoring solutions. It is also extensible, built from
 plugins. It is embeddable, so that it can be used almost everywhere, both as an agent and as a visualizer. And many
 more.
 
-So, what’s next? Netdata is now a company. What will happen to it? 
+So, what's next? Netdata is now a company. What will happen to it? 
 
 ## The future of Netdata 
 
@@ -228,7 +232,7 @@ many more use cases, and make it the fastest and the most capable monitoring age
 **IMAGE: Size: 1200x600px** Content: Convey that Netdata is a gift to the world. This could even include something about
 how our team is very distributed around the world, and is working on making a product for people all over the world.
 
-We’re also trying to solve a couple more problems.
+We're also trying to solve a couple more problems.
 
 All other monitoring solutions are limited because they centralize all the data. To scale and control the cost of their
 solutions, they limit the number of metrics and the frequency with which they are collected.
@@ -245,8 +249,8 @@ But monitoring should be dynamic. It should be able to quickly adapt to the spec
 they realize they have these needs. We believe we can build a solution that will **allow people to customize their
 monitoring infrastructure, while they are troubleshooting issues, and while they are collaborating to solve problems**.
 
-So, our primary target is to “democratize” monitoring: To help the people who find it hard to properly monitor their
-infrastructure. This is why we strongly believe that we’re building the future of distributed health monitoring and
+So, our primary target is to "democratize" monitoring: To help the people who find it hard to properly monitor their
+infrastructure. This is why we strongly believe that we're building the future of distributed health monitoring and
 performance troubleshooting.
 
 We have a lot more in the works and are still working out the details of how we will bring all of this great
