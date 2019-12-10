@@ -3,7 +3,7 @@ title: "Redefining monitoring with Netdata (and how it came to be)"
 summary: "Netdata all started when I got... pissed off. Now it's one of the largest open-source projects on GitHub and has changed how we monitor the health and performance of our systems and applications." 
 date: 2019-12-10 
 author: "Costa Tsaousis" 
-cover: ".png" 
+cover: "redefining-monitoring-netdata_01.png" 
 tags: ["Meta"] 
 categories: [] 
 draft: false
@@ -60,8 +60,7 @@ they not optimized for troubleshooting issues? Why are there so many moving part
 the same complex configuration steps again and again, even when it comes to monitoring standardized systems and apps? Is
 it so hard to do it the other way around? Is it impossible?
 
-**IMAGE: Size: 1200x600px** Content: Express the frustration with existing monitoring solutions. I imagine this could be
-some kind of cartoon-y illustration, and could include one or two of the questions listed just above.
+![Trouble with existing monitoring solutions: Why so many moving parts?](/img/redefining-monitoring-netdata_02.png)
 
 I started experimenting, at home, on nights and weekends. I was rusty, but I knew that such a system had to behave well,
 to control itself, to show great respect to the systems and the other applications running, to be extremely lightweight,
@@ -130,8 +129,8 @@ and providing feedback by opening dozens of GitHub issues. The Netdata demo site
 dozens of thousands of chart refreshes per second. It didn't crash—phew!—because I had done load testing before and knew
 it would perform.
 
-**IMAGE: Size: 1200x600px** Content: Convey astronomical growth. Illustrations of GitHub stars, comments, hearts, any kind
-of graphic that we think of showing that something is popular/going viral and well-liked.
+![Netdata's viral growth: 10,000 GitHub stars and a featured spot on GitHub
+Octoverse](/img/redefining-monitoring-netdata_03.png)
 
 Netdata reached 10,000 stars on GitHub in just a couple of weeks. It was now the top trending project on GitHub for all
 languages. It stayed there for about 2 months, after which GitHub included Netdata in its annual [GitHub Octoverse for
@@ -156,7 +155,7 @@ troubleshoot infrastructure, but do not have the time or the resources to monito
 They struggle. They need real help and they need it now. And there are really a lot of them—they are the vast majority
 of SysAdmins, SREs, and DevOps out there.
 
-**IMAGE: Size: 1200x600px** Content: A struggling sysadmin!
+![The struggling sysadmin: A million tasks and no time](/img/redefining-monitoring-netdata_04.png)
 
 So, I built Netdata around the following principles, which I believe are also the reasons people fall in love with it.
 
@@ -231,8 +230,7 @@ many more use cases, and make it the fastest and the most capable monitoring age
 
 **It is our gift to the world.**
 
-**IMAGE: Size: 1200x600px** Content: Convey that Netdata is a gift to the world. This could even include something about
-how our team is very distributed around the world, and is working on making a product for people all over the world.
+![Netdata is our gift to the world to democratize monitoring](/img/redefining-monitoring-netdata_05.png)
 
 We're also trying to solve a couple more problems.
 
