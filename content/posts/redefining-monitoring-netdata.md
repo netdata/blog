@@ -1,6 +1,6 @@
 ---
 title: "Redefining monitoring with Netdata (and how it came to be)" 
-summary: "t/k" 
+summary: "Netdata all started when I got... pissed off. Now it's one of the largest open-source projects on GitHub and has changed how we monitor the health and performance of our systems and applications." 
 date: 2019-12-10 
 author: "Costa Tsaousis" 
 cover: ".png" 
@@ -13,6 +13,8 @@ I wanted to follow up [Ron Miller's article in
 TechCrunch](https://techcrunch.com/2019/09/25/netdata-a-monitoring-startup-with-50-year-old-founder-announces-17m-series-a/)
 about Netdata's Series A funding last month with the story of how Netdata's inception was created's inception. It all
 started when I got... pissed off.
+
+<!--more-->
 
 ## How Netdata was born
 
