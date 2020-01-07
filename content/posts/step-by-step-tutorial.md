@@ -1,6 +1,6 @@
 ---
-title: "The step-by-step tutorial for Netdata" 
-summary: "t/k" 
+title: "Introducing Netdata's step-by-step tutorial" 
+summary: "Health monitoring and performance troubleshooting isn't easy, but our new step-by-step tutorial will help beginners dive in faster and with more confidence." 
 date: 2020-01-06
 author: "Joel Hans" 
 cover: "" 
@@ -10,55 +10,60 @@ draft: false
 ---
 
 Health monitoring and performance troubleshooting isn't easy. That's exactly _why_ we're building Netdata, to
-democratize monitoring and make it accessible to anyone who's interested in learning more about their systems and
+democratize monitoring and make it accessible to anyone interested in learning more about their systems and
 applications.
 
 Of course, teaching a complicated topic isn't easy either.
 
-We're lucky that Netdata takes part of this complexity off our shoulders. Though a one-line installation that works on
-any Linux distribution (plus Docker and Kubernetes!), among others, you can start checking out the Netdata dashboard in
-a matter of minutes. And you don't have to worry about configuration thanks to our community-defined defaults and
-auto-detection of the services/applications you want to monitor.
+<!--more-->
 
+Until recently, the only resource to help new users after installation has been our [getting started
+guide](https://docs.netdata.cloud/docs/getting-started/). While that's useful for those who have monitoring experience
+and a background in Linux administration, it jumps wildly over the heads of many Netdata users.
 
+To fill that knowledge gap, we recently released an extensive [step-by-step tutorial for
+Netdata](https://docs.netdata.cloud/docs/step-by-step/step-00/), which guides you through everything you need to know
+about the best single node monitoring solution out there.
 
-That's why we wrote this step-by-step tutorial. To give you not code samples, or pre-build configurations, but rather
-the _understanding_ you need to make Netdata work exactly the way you need it to.
+_If you're new to monitoring, or just new to Netdata, this tutorial was written for you._
 
-## What is the step-by-step Netdata tutorial?
+![An example of some of the steps in the comprehensive
+tutorial](https://user-images.githubusercontent.com/1153921/71878798-3a568d80-3135-11ea-9f48-aabe3142e899.png)
 
-The [step-by-step Netdata tutorial](https://docs.netdata.cloud/docs/step-by-step/step-00/) is a comprehensive, 10-step
-guide to help you understand all the fundamentals you'll need to set Netdata up on your systems, configure it the way
-you need, monitor the services you're interested in, and make sure you don't miss a single important update.
+Each of the 10 steps covers some fundamental component of the Netdata experience:
 
-While there is a lot of material to consume, it's broken up into sensible pieces, so you don't have to cover it all in a
-single day. Think of it as a syllabus with 10 reading assignments.
+-   Step 1. Netdata's building blocks
+-   Step 2. Get to know Netdata's dashboard
+-   Step 3. Monitor more than one system with Netdata
+-   Step 4. The basics of configuring Netdata
+-   Step 5. Health monitoring alarms and notifications
+-   Step 6. Collect metrics from more services and apps
+-   Step 7. Netdata's dashboard in depth
+-   Step 8. Building your first custom dashboard
+-   Step 9. Long-term metrics storage
+-   Step 10. Set up a proxy
 
-
-
-## Why now?
-
-When I was first chattting with Netdata's CEO and COO, Costa and Chris, respectively, they emphasized the importance of
-education. The agent is already immensely popular, but its continued growth depends on the publics' ability to install it, understand it, and _gain value_ from it.
-
-I started working on Netdata in June 2019
-
-
-But, I had the 
-
-
-When I started working for Netdata in June 2019, I quickly realized how little I knew. Not just about health monitoring
-and performance troubleshooting, but also a ton of Linux fundamentals, despite using Linux as my desktop (gasp!) for
-nearly 20 years now. I often struggled with configuring collectors, managing the Netdata daemon, and configuring some of
-the more complex setups, like backends or streaming.
-
-Despite only understanding a fraction of Netdata's complexity, my job has always been to write new documentation and improve the ways we teach other
-
-existing educational platform. All the while, I was _supposed_ to be writing new documentation, and improving existing
-pages, for stuff I didn't fully understand.
+Yes, this tutorial has a lot of material, but given all of the capabilities the Netdata team has diligently built, it's
+actually just the beginning. We're excited to see our community dig in, and, of course [let us
+know](https://github.com/netdata/netdata/issues) how we could make it even better.
 
 ## What's next?
 
-As with most of the new documentation and tutorials I write, this one also ends with a **What's next?** section.
+As with every step within the [tutorial](https://docs.netdata.cloud/docs/step-by-step/step-00/) itself, this post also
+ends with a **What's next?** section.
 
+Given our mission is to [democratize monitoring](https://blog.netdata.cloud/posts/redefining-monitoring-netdata/), the
+[public roadmap](https://www.netdata.cloud/roadmap) is just a fraction of what we're working on in 2020 to make Netdata
+the best single node monitoring solution out there.
 
+We're working on comprehensive, valuable educational content that's directed toward the target audience outlined in
+Costa's manifesto: "the people who find it hard to properly monitor their infrastructure." Of course, we'll always have
+detailed information for the experienced sysadmins, but we're committed to teaching _anyone_ who is interested in
+real-time health monitoring and performance troubleshooting.
+
+And, soon enough, we'll start publishing that content on an entirely new platform that's more flexible, more capable,
+and a lot prettier than what we have right now.
+
+To get started with Netdata, be sure to visit our [open-source repository](https://github.com/netdata/netdata) to get
+started, for free, on any number of nodes. After installation, leave nothing to chance with the [new step-by-step
+tutorial](https://docs.netdata.cloud/docs/step-by-step/step-00/).
