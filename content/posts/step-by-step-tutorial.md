@@ -64,6 +64,12 @@ real-time health monitoring and performance troubleshooting.
 And, soon enough, we'll start publishing that content on an entirely new platform that's more flexible, more capable,
 and a lot prettier than what we have right now.
 
-To get started with Netdata, be sure to visit our [open-source repository](https://github.com/netdata/netdata) to get
-started, for free, on any number of nodes. After installation, leave nothing to chance with the [new step-by-step
+To get started with Netdata, for free and on any number of nodes, install it with our automatic one-line installation
+script:
+
+```bash
+bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+```
+
+Then, dive right in and leave nothing to chance with the [new step-by-step
 tutorial](https://docs.netdata.cloud/docs/step-by-step/step-00/).
