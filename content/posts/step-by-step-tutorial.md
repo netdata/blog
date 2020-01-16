@@ -1,7 +1,7 @@
 ---
 title: "Introducing Netdata's step-by-step tutorial" 
 summary: "Health monitoring and performance troubleshooting isn't easy, but our new step-by-step tutorial will help beginners dive in faster and with more confidence." 
-date: 2020-01-06
+date: 2020-01-20
 author: "Joel Hans" 
 cover: "" 
 tags: ["Meta"] 
