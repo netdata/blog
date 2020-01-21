@@ -1,15 +1,15 @@
 ---
 title: "Introducing Netdata's step-by-step tutorial" 
-summary: "Health monitoring and performance troubleshooting isn't easy, but our new step-by-step tutorial will help beginners dive in faster and with more confidence." 
+summary: "Health monitoring and performance troubleshooting aren't easy, but our new step-by-step tutorial will help beginners dive in faster and with more confidence." 
 date: 2020-01-20
 author: "Joel Hans" 
-cover: "" 
+cover: "step-by-step-tutorial.png" 
 tags: ["Meta"] 
 categories: [] 
 draft: false
 ---
 
-Health monitoring and performance troubleshooting isn't easy. That's exactly _why_ we're building Netdata, to
+Health monitoring and performance troubleshooting aren't easy. That's exactly _why_ we're building Netdata, to
 democratize monitoring and make it accessible to anyone interested in learning more about their systems and
 applications.
 
@@ -25,12 +25,12 @@ To fill that knowledge gap, we recently released an extensive [step-by-step tuto
 Netdata](https://docs.netdata.cloud/docs/step-by-step/step-00/), which guides you through everything you need to know
 about the best single node monitoring solution out there.
 
-_If you're new to monitoring, or just new to Netdata, this tutorial was written for you._
+_**If you're new to monitoring, or just new to Netdata, we wrote this tutorial for you.**_
 
 ![An example of some of the steps in the comprehensive
 tutorial](https://user-images.githubusercontent.com/1153921/71878798-3a568d80-3135-11ea-9f48-aabe3142e899.png)
 
-Each of the 10 steps covers some fundamental component of the Netdata experience:
+Each of the ten steps covers some fundamental component of the Netdata experience:
 
 -   Step 1. Netdata's building blocks
 -   Step 2. Get to know Netdata's dashboard
@@ -44,7 +44,7 @@ Each of the 10 steps covers some fundamental component of the Netdata experience
 -   Step 10. Set up a proxy
 
 Yes, this tutorial has a lot of material, but given all of the capabilities the Netdata team has diligently built, it's
-actually just the beginning. We're excited to see our community dig in, and, of course [let us
+actually just the beginning. We're excited to see our community dig in and [let us
 know](https://github.com/netdata/netdata/issues) how we could make it even better.
 
 ## What's next?
@@ -56,10 +56,12 @@ Given our mission is to [democratize monitoring](https://blog.netdata.cloud/post
 [public roadmap](https://www.netdata.cloud/roadmap) is just a fraction of what we're working on in 2020 to make Netdata
 the best single node monitoring solution out there.
 
-We're working on comprehensive, valuable educational content that's directed toward the target audience outlined in
-Costa's manifesto: "the people who find it hard to properly monitor their infrastructure." Of course, we'll always have
+We're working on comprehensive, valuable educational content directed toward the very people Costa, our CEO, addressed
+in his manifesto: "The people who find it hard to properly monitor their infrastructure." Of course, we'll always have
 detailed information for the experienced sysadmins, but we're committed to teaching _anyone_ who is interested in
 real-time health monitoring and performance troubleshooting.
+
+![An example of some of the steps in the comprehensive tutorial](/img/step-by-step-tutorial-everyone.png)
 
 And, soon enough, we'll start publishing that content on an entirely new platform that's more flexible, more capable,
 and a lot prettier than what we have right now.
