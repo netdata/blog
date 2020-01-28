@@ -21,7 +21,8 @@ for [Netdata itself](https://hub.docker.com/r/netdata/netdata). But perhaps more
 Swarm](https://docs.docker.com/engine/swarm/). Properly monitoring the health and performance of Docker containers, and
 the apps/services you've configured them to run—is an essential skill for solo developers and large teams alike.
 
-Thanks to our integrations, monitoring Docker containers with Netdata is a painless process with powerful outcomes.
+Thanks to our integration, monitoring the CPU, memory, disk I/O, and networking of Docker containers with Netdata is a
+painless process with powerful outcomes.
 
 ![Screenshot_20200128_144036](https://user-images.githubusercontent.com/1153921/73307848-48e81000-41dc-11ea-8480-8388d5c095ca.png)
 
@@ -55,8 +56,8 @@ with Netdata, whether it's 1, 100, or 1,000.
 containers](https://user-images.githubusercontent.com/1153921/73222300-27295300-4120-11ea-8f1e-87cc7b8b08fa.png)
 
 Netdata also uses its [meaningful presentation](https://docs.netdata.cloud/docs/why-netdata/meaningful-presentation/) to
-organize CPU and memory charts into families, so you can quickly understand which containers are using the most CPU or
-memory, and begin correlating that with other metrics from your system.
+organize CPU and memory charts into families, so you can quickly understand which containers are using the most CPU,
+memory, disk I/O, or networking, and begin correlating that with other metrics from your system.
 
 ## Get alarms when containers go awry
 
@@ -66,7 +67,7 @@ alarms calculate their usage based on the cgroup limits you set, so they're comp
 
 You can, of course, edit your `health.d/cgroups.conf` file to modify the existing alarms or create new ones entirely.
 
-![Individual CPU, memory, and alarms for each running
+![Individual CPU and memory alarms for each running
 container](https://user-images.githubusercontent.com/1153921/73206909-11f0fc00-4101-11ea-9b9b-66fb7c9f9caf.png)
 
 ## Dive into real-time metrics for containerized apps and services
