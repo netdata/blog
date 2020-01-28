@@ -20,7 +20,8 @@ meme](https://user-images.githubusercontent.com/1153921/72571339-9085a800-387c-1
 Docker containers are a popular platform for distributing software via [Docker Hub](https://hub.docker.com), as we do
 for [Netdata itself](https://hub.docker.com/r/netdata/netdata). But perhaps more importantly, containers are now being
 "orchestrated" with platforms like [Kubernetes](https://kubernetes.io/) and [Docker
-Swarm](https://docs.docker.com/engine/swarm/). Properly monitoring the health and performance of Docker containers, and the apps/services you've configured them to run—is an essential skill for solo developers and large teams alike.
+Swarm](https://docs.docker.com/engine/swarm/). Properly monitoring the health and performance of Docker containers, and
+the apps/services you've configured them to run—is an essential skill for solo developers and large teams alike.
 
 Thanks to our integrations, monitoring Docker containers with Netdata is a painless process with powerful outcomes.
 
@@ -31,7 +32,8 @@ Netdata](https://user-images.githubusercontent.com/1153921/73222611-e67e0980-412
 
 Netdata uses control groups—most often referred to as
 **[cgroups](http://man7.org/linux/man-pages/man7/cgroups.7.html)**—to monitor Docker containers. cgroups is a Linux
-kernel feature that limits and tracks the resource usage of a collection of processes. When you combine resource limits with process isolation (thanks, namespaces!), you get what we commonly refer to as containers.
+kernel feature that limits and tracks the resource usage of a collection of processes. When you combine resource limits
+with process isolation (thanks, namespaces!), you get what we commonly refer to as containers.
 
 Linux uses virtual files, usually placed at `/sys/fs/cgroup/`, to report the existing containers and their resource
 usage. Netdata scans these files/directories every few seconds (configurable via `check for new cgroups every` in
@@ -43,6 +45,9 @@ Docker containers _after_ installing Netdata, restart it with `sudo service netd
 for your system](https://docs.netdata.cloud/docs/getting-started/#start-stop-and-restart-netdata), and you'll be up and
 running!
 
+Read more about Netdata's cgroup collector in our
+[documentation](https://docs.netdata.cloud/collectors/cgroups.plugin/).
+
 ## View many containers at-a-glance
 
 Netdata auto-detects running containers and auto-populates the right-hand menu with their IDs or container names, based
@@ -53,7 +58,8 @@ with Netdata, whether it's 1, 100, or 1,000.
 containers](https://user-images.githubusercontent.com/1153921/73222300-27295300-4120-11ea-8f1e-87cc7b8b08fa.png)
 
 Netdata also uses its [meaningful presentation](https://docs.netdata.cloud/docs/why-netdata/meaningful-presentation/) to
-organize CPU and memory charts into families, so you can quickly understand which containers are using the most CPU or memory, and begin correlating that with other metrics from your system.
+organize CPU and memory charts into families, so you can quickly understand which containers are using the most CPU or
+memory, and begin correlating that with other metrics from your system.
 
 ## Get alarms when containers go awry
 
@@ -86,7 +92,8 @@ server](https://user-images.githubusercontent.com/1153921/73222673-0c0b1300-4121
 Visit our [documentation](https://docs.netdata.cloud/) and use the search bar at the top to figure out how to monitor
 favorite _containerized_ service.
 
-![Using the search bar on docs.netdata.cloud](https://user-images.githubusercontent.com/1153921/73279550-90ee3f00-41aa-11ea-9271-9d70b130cecd.gif)
+![Using the search bar on
+docs.netdata.cloud](https://user-images.githubusercontent.com/1153921/73279550-90ee3f00-41aa-11ea-9271-9d70b130cecd.gif)
 
 ## What's next?
 
