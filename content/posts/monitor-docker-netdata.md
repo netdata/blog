@@ -1,5 +1,5 @@
 ---
-title: "Monitor Docker with Netdata" 
+title: "Monitor Docker containers with Netdata" 
 summary: "Use Netdata's integration with Docker to monitor the health and performance of your Docker containers in real-time."
 date: 2019-02-04
 author: "Joel Hans" 
@@ -11,11 +11,9 @@ draft: false
 
 [Docker](https://www.docker.com/) is a virtualization platform that helps developers deploy their software in
 reproducible and isolated packages called containers. These containers have everything the software needs to run
-properly, including libraries, tools, and their application's source code or binaries. In short, it solves this exact
-problem:
-
-!["It works on my machine"
-meme](https://user-images.githubusercontent.com/1153921/72571339-9085a800-387c-11ea-8cb7-88e8d13411c2.png)
+properly, including libraries, tools, and their application's source code or binaries. And because these packages
+contain everything the application needs, it runs _everywhere_, eliminating problems where code works in testing, but
+not production.
 
 Docker containers are a popular platform for distributing software via [Docker Hub](https://hub.docker.com), as we do
 for [Netdata itself](https://hub.docker.com/r/netdata/netdata). But perhaps more importantly, containers are now being
@@ -25,10 +23,9 @@ the apps/services you've configured them to run—is an essential skill for solo
 
 Thanks to our integrations, monitoring Docker containers with Netdata is a painless process with powerful outcomes.
 
-![Charts from a Docker container monitored by
-Netdata](https://user-images.githubusercontent.com/1153921/73222611-e67e0980-4120-11ea-8874-1a92ccd6a42a.png)
+![Screenshot_20200128_144036](https://user-images.githubusercontent.com/1153921/73307848-48e81000-41dc-11ea-8480-8388d5c095ca.png)
 
-## How Docker monitoring with Netdata works
+## How Docker container monitoring with Netdata works
 
 Netdata uses control groups—most often referred to as
 **[cgroups](http://man7.org/linux/man-pages/man7/cgroups.7.html)**—to monitor Docker containers. cgroups is a Linux
