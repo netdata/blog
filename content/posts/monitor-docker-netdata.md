@@ -1,37 +1,49 @@
 ---
-title: "Monitor Docker containers with Netdata" 
-summary: "Use Netdata's integration with Docker to monitor the health and performance of your Docker containers in real-time."
+title: "Docker container monitoring with Netdata" 
+summary: "Use Netdata's Docker container collector to monitor the health and performance of your Docker containers in real-time."
 date: 2019-02-04
 author: "Joel Hans" 
 cover: ""
-tags: ["Integrations", "Docker"] 
+tags: ["Collectors", "Docker"] 
 categories: [] 
 draft: false
 ---
 
-[Docker](https://www.docker.com/) is a virtualization platform that helps developers deploy their software in
-reproducible and isolated packages called containers. These containers have everything the software needs to run
-properly, including libraries, tools, and their application's source code or binaries. And because these packages
-contain everything the application needs, it runs _everywhere_, eliminating problems where code works in testing, but
-not production.
+Properly monitoring the health and performance of Docker containers is an essential skill for solo developers and large
+teams alike. As your infrastructure grows in complexity, it's important to streamline every facet of the performance of
+your apps/services. Plus, it's essential that the tools you use to make those performance decisions work across teams,
+and allow for complex scaling architectures.
 
-Docker containers are a popular platform for distributing software via [Docker Hub](https://hub.docker.com), as we do
-for [Netdata itself](https://hub.docker.com/r/netdata/netdata). But perhaps more importantly, containers are now being
-"orchestrated" with platforms like [Kubernetes](https://kubernetes.io/) and [Docker
-Swarm](https://docs.docker.com/engine/swarm/). Properly monitoring the health and performance of Docker containers, and
-the apps/services you've configured them to run—is an essential skill for solo developers and large teams alike.
+Netdata does all that, and thanks to our Docker container collector, you can now monitor the health and performance of
+your Docker containers in real-time. With Docker container monitoring enabled, you get real-time, interactive charts
+showing key CPU, memory, disk I/O, and networking of entire containers. Plus, you can use other collectors to monitor
+the specific applications or services running _inside_ Docker containers.
 
-Thanks to our integration, monitoring the CPU, memory, disk I/O, and networking of Docker containers with Netdata is a
-painless process with powerful outcomes.
+With these per-second metrics at your fingertips, you can get instant notifications about outages, performance hiccups,
+or excessive resource usage, visually identify the anomaly, and fix the root cause faster.
 
 ![Screenshot_20200128_144036](https://user-images.githubusercontent.com/1153921/73307848-48e81000-41dc-11ea-8480-8388d5c095ca.png)
 
-## How Docker container monitoring with Netdata works
+## What is Docker?
+
+[Docker](https://www.docker.com/) is a virtualization platform that helps developers deploy their software in
+reproducible and isolated packages called containers. These containers have everything the software needs to run
+properly, including libraries, tools, and their application's source code or binaries. And because these packages
+contain everything the application needs, it runs _everywhere_, isolating problems where code works in testing, but not
+production.
+
+Docker containers are a popular platform for distributing software via [Docker Hub](https://hub.docker.com), as we do
+for [Netdata itself](https://hub.docker.com/r/netdata/netdata). But perhaps more importantly, containers are now being
+"orchestrated" with programs like [Docker Compose](), and platforms like [Kubernetes](https://kubernetes.io/) and [Docker
+Swarm](https://docs.docker.com/engine/swarm/). DevOps teams also use containers to orchestrate their microservices
+architectures, making them a fundamental component of scalable deployments.
+
+## How Netdata monitors Docker containers
 
 Netdata uses control groups—most often referred to as
-**[cgroups](http://man7.org/linux/man-pages/man7/cgroups.7.html)**—to monitor Docker containers. cgroups is a Linux
-kernel feature that limits and tracks the resource usage of a collection of processes. When you combine resource limits
-with process isolation (thanks, namespaces!), you get what we commonly refer to as containers.
+**[cgroups](https://docs.netdata.cloud/collectors/cgroups.plugin/#cgroupsplugin)**—to monitor Docker containers. cgroups
+is a Linux kernel feature that limits and tracks the resource usage of a collection of processes. When you combine
+resource limits with process isolation (thanks, namespaces!), you get what we commonly refer to as containers.
 
 Linux uses virtual files, usually placed at `/sys/fs/cgroup/`, to report the existing containers and their resource
 usage. Netdata scans these files/directories every few seconds (configurable via `check for new cgroups every` in
@@ -77,9 +89,8 @@ running _inside those containers_. This way, you'll get more precise metrics for
 databases, plus all the pre-configured alarms that come with that collector!
 
 You can monitor specific metrics for any of the [200+
-apps/services](https://docs.netdata.cloud/docs/add-more-charts-to-netdata/) Netdata integrates with, with little or no
-configuration on your part. Just set the service up using the recommended method, and Netdata will auto-detect it with
-little or no configuration on your part.
+apps/services](https://docs.netdata.cloud/docs/add-more-charts-to-netdata/) like MySQL, Nginx, or Postgres, with little
+or no configuration on your part. Just set the service up using the recommended method, and Netdata will auto-detect it.
 
 For example, here are some real-time charts for an Nginx web server, running inside of a Docker container, while it's
 undergoing a stress test.
@@ -109,4 +120,6 @@ alarms, and you can see new charts after refreshing the dashboard.
 
 For a more thorough investigation of Netdata's Docker monitoring capabilities, read our [cgroups
 collector](https://docs.netdata.cloud/collectors/cgroups.plugin/) documentation and our [Docker
-Engine](https://docs.netdata.cloud/collectors/go.d.plugin/modules/docker_engine/) documentation.
+Engine](https://docs.netdata.cloud/collectors/go.d.plugin/modules/docker_engine/) documentation. You can also learn
+about [running Netdata inside of a container](https://hub.docker.com/r/netdata/netdata) in your ongoing efforts to
+containerize everything.
