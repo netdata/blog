@@ -1,10 +1,10 @@
 ---
 title: "Docker container monitoring with Netdata" 
 summary: "Use Netdata's Docker container collector to monitor the health and performance of your Docker containers in real-time."
-date: 2019-02-04
+date: 2020-02-06
 author: "Joel Hans" 
-cover: ""
-tags: ["Collectors", "Docker"] 
+cover: "docker-monitoring-netdata.png"
+tags: ["Integrations", "Collectors", "Docker", "containers"] 
 categories: [] 
 draft: false
 ---
@@ -15,7 +15,11 @@ your apps/services. Plus, it's essential that the tools you use to make those pe
 and allow for complex scaling architectures.
 
 Netdata does all that, and thanks to our Docker container collector, you can now monitor the health and performance of
-your Docker containers in real-time. With Docker container monitoring enabled, you get real-time, interactive charts
+your Docker containers in real-time. 
+
+<!--more-->
+
+With Docker container monitoring enabled, you get real-time, interactive charts
 showing key CPU, memory, disk I/O, and networking of entire containers. Plus, you can use other collectors to monitor
 the specific applications or services running _inside_ Docker containers.
 
