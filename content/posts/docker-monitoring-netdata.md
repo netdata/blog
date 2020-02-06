@@ -4,7 +4,7 @@ summary: "Use Netdata's Docker container collector to monitor the health and per
 date: 2020-02-06
 author: "Joel Hans" 
 cover: "docker-monitoring-netdata.png"
-tags: ["Integrations", "Collectors", "Docker", "containers"] 
+tags: ["integrations", "collectors", "Docker", "containers"] 
 categories: [] 
 draft: false
 ---
@@ -19,9 +19,9 @@ your Docker containers in real-time.
 
 <!--more-->
 
-With Docker container monitoring enabled, you get real-time, interactive charts
-showing key CPU, memory, disk I/O, and networking of entire containers. Plus, you can use other collectors to monitor
-the specific applications or services running _inside_ Docker containers.
+With Docker container monitoring enabled via cgroups, you get real-time, interactive charts showing key CPU, memory,
+disk I/O, and networking of entire containers. Plus, you can use other collectors to monitor the specific applications
+or services running _inside_ Docker containers.
 
 With these per-second metrics at your fingertips, you can get instant notifications about outages, performance hiccups,
 or excessive resource usage, visually identify the anomaly, and fix the root cause faster.
@@ -38,9 +38,9 @@ production.
 
 Docker containers are a popular platform for distributing software via [Docker Hub](https://hub.docker.com), as we do
 for [Netdata itself](https://hub.docker.com/r/netdata/netdata). But perhaps more importantly, containers are now being
-"orchestrated" with programs like [Docker Compose](), and platforms like [Kubernetes](https://kubernetes.io/) and [Docker
-Swarm](https://docs.docker.com/engine/swarm/). DevOps teams also use containers to orchestrate their microservices
-architectures, making them a fundamental component of scalable deployments.
+"orchestrated" with programs like [Docker Compose](), and platforms like [Kubernetes](https://kubernetes.io/) and
+[Docker Swarm](https://docs.docker.com/engine/swarm/). DevOps teams also use containers to orchestrate their
+microservices architectures, making them a fundamental component of scalable deployments.
 
 ## How Netdata monitors Docker containers
 
