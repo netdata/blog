@@ -38,9 +38,10 @@ production.
 
 Docker containers are a popular platform for distributing software via [Docker Hub](https://hub.docker.com), as we do
 for [Netdata itself](https://hub.docker.com/r/netdata/netdata). But perhaps more importantly, containers are now being
-"orchestrated" with programs like [Docker Compose](), and platforms like [Kubernetes](https://kubernetes.io/) and
-[Docker Swarm](https://docs.docker.com/engine/swarm/). DevOps teams also use containers to orchestrate their
-microservices architectures, making them a fundamental component of scalable deployments.
+"orchestrated" with programs like [Docker Compose](https://docs.docker.com/compose/), and platforms like
+[Kubernetes](https://kubernetes.io/) and [Docker Swarm](https://docs.docker.com/engine/swarm/). DevOps teams also use
+containers to orchestrate their microservices architectures, making them a fundamental component of scalable
+deployments.
 
 ## How Netdata monitors Docker containers
 
