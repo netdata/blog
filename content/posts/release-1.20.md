@@ -1,7 +1,7 @@
 ---
 title: "Release 1.20: Kernel monitoring 'superpowers' and infrastructure-wide labels" 
 date: 2020-02-21
-summary: "Version 1.20.0 of Netdata comes eBPF monitoring and host labels that help you organize your infrastructure, in addition to CockroachDB monitoring and brand-new documentation to make learning about Netdata easier." 
+summary: "Version 1.20.0 of Netdata introduces Linux eBPF monitoring and host labels that help you organize your infrastructure, in addition to CockroachDB monitoring and brand-new documentation to make learning about Netdata easier." 
 author: "Joel Hans" 
 cover: "release-1.20.0.png" 
 tags: ["Release"]
@@ -44,6 +44,10 @@ The eBPF collector is in a technical preview, and doesn't come enabled out of th
 called a ["superpower"](http://www.brendangregg.com/blog/2016-03-05/linux-bpf-superpowers.html) for Linux observability,
 who wouldn't want to give it a shot?
 
+Right now, the eBPF collector can track open/closed file descriptors, VFS I/O and bytes read/written, process threads,
+and exited tasks. These can all be used for application monitoring, debugging, and better understanding how the Linux
+kernel handles the software you've written.
+
 Learn how to enable it and get started with our tutorial, [_Monitor eBPF metrics with
 Netdata_](https://docs.netdata.cloud/docs/tutorials/monitor-ebpf-linux/), or the [eBPF
 documentation](https://docs.netdata.cloud/collectors/ebpf_process.plugin/#enable-the-ebpf-plugin).
@@ -51,12 +55,12 @@ documentation](https://docs.netdata.cloud/collectors/ebpf_process.plugin/#enable
 ## Organize entire infrastructures with host labels
 
 This release also introduces **host labels**, a powerful new way of organizing your Netdata-monitored systems. Netdata
-automatically creates a handful of labels for essential information, but you can supplement the defaults by segmenting
-your systems based on their location, purpose, operating system, or even when they went live.
+automatically creates a handful of labels that group essential information, but you can supplement the defaults by
+segmenting your systems based on their location, purpose, operating system, or even when they went live.
 
 You can use host labels to create alarms that apply only to systems with specific labels, or apply labels to metrics you
 archive to other databases with our exporting engine. Because labels are streamed from slave to master systems, you can
-now find find critical information about your entire infrastructure directly from the master system.
+now find critical information about your entire infrastructure directly from the master system.
 
 Our [host labels tutorial](https://docs.netdata.cloud/docs/tutorials/using-host-labels/) will walk you through creating
 your first host labels and putting them to use in Netdata's other features.
@@ -64,8 +68,10 @@ your first host labels and putting them to use in Netdata's other features.
 ## Dogfooding CockroachDB metrics collection
 
 Because we use CockroachDB internally, we wanted a better way of keeping tabs on the health and performance of our
-databases _using our own monitoring product_. Given how popular CockroachDB is right now, we know we're not alone, and
-are excited to share this collector with our community.
+databases _using our own monitoring product_. CockroachDB by [Cockroach Labs](https://www.cockroachlabs.com/), is a cloud-native database for distributed SQL, that's designed for you to deploy your applications and services anywhere.
+
+Given how popular CockroachDB is right now, we know we're not alone, and are excited to share this collector with our
+community.
 
 <figure>
   <img src="https://user-images.githubusercontent.com/1153921/73564467-d7e36b00-441c-11ea-9ec9-b5d5ea7277d4.png" alt="CPU utilization charts from a CockroachDB database monitored by Netdata">
