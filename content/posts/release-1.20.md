@@ -48,9 +48,10 @@ Right now, the eBPF collector can track open/closed file descriptors, VFS I/O an
 and exited tasks. These can all be used for application monitoring, debugging, and better understanding how the Linux
 kernel handles the software you've written.
 
-Learn how to enable it and get started with our tutorial, [_Monitor eBPF metrics with
-Netdata_](https://docs.netdata.cloud/docs/tutorials/monitor-ebpf-linux/), or the [eBPF
-documentation](https://docs.netdata.cloud/collectors/ebpf_process.plugin/#enable-the-ebpf-plugin).
+If you'd like to learn more about _why_ eBPF metrics are such an important addition to Netdata, see our [companion post:
+_Linux eBPF monitoring with Netdata_](https://blog.netdata.cloud/posts/linux-ebpf-monitoring-netdata/). When you're
+ready to get started, enable the eBPF collector by following the steps in our
+[documentation](https://docs.netdata.cloud/collectors/ebpf_process.plugin/#enable-the-ebpf-plugin).
 
 ## Organize entire infrastructures with host labels
 
