@@ -36,8 +36,7 @@ behavior of your file descriptors, virtual file system (VFS) actions, and proces
 use it for debugging applications and better understanding how the Linux kernel handles I/O and process management.
 
 <figure>
-  <img src="https://user-images.githubusercontent.com/1153921/74746434-ad6a1e00-5222-11ea-858a-a7882617ae02.png" alt="n example of VFS charts, made possible by the eBPF collector plugin">
-plugin works using `entry` by reading this configuration file.
+  <img src="https://user-images.githubusercontent.com/1153921/74746434-ad6a1e00-5222-11ea-858a-a7882617ae02.png" alt="An example of VFS charts, made possible by the eBPF collector plugin">
   <figcaption>An example of VFS charts, made possible by the eBPF collector plugin</figcaption>
 </figure>
 
