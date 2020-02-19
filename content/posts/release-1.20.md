@@ -20,7 +20,7 @@ all, but rather two more major steps in our effort to [democratize
 monitoring](https://blog.netdata.cloud/posts/redefining-monitoring-netdata/) and provide the _best high-resolution
 monitoring_ tools through free and open-source (FOSS) software.
 
-Beyond eBPF monitoring and host labels, this release comes with X new collectors, XX bug fixes, XX improvements, and XX
+Beyond eBPF monitoring and host labels, this release comes with 3 new collectors, 53 bug fixes, 88 improvements, and 38
 documentation updates. Let's get into the details.
 
 <!--more-->
