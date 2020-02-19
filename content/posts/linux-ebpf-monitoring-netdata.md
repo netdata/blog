@@ -50,11 +50,15 @@ more. The `return` program also monitors the return of each kernel functions (ak
 into your system.
 
 The eBPF collector then performs some calculations on the volume of these calls to update Netdata's charts every second.
-Right now, the eBPF collector can track open/closed file descriptors, virtual file system (VFS) IO and bytes
-read/written, process threads, and exited tasks. These can all be used for application monitoring, debugging, and better
-understanding how the Linux kernel handles the software you've written.
+Right now, the eBPF collector can track a number of valuable metrics:
 
-If you'd like to get started right away, read our [eBPF collector
+-   Open/closed file descriptors
+-   Virtual file systems: deleted objects, IO calls, and bytes read/written
+-   Processes and threads created
+-   Exited tasks, including possible zombie processses
+
+These can all be used for application monitoring, debugging, and better understanding how the Linux kernel handles the
+software you've written. If you'd like to get started right away, read our [eBPF collector
 documentation](https://docs.netdata.cloud/collectors/ebpf_process.plugin/) for the full instructions. Otherwise, let's
 dive into some of the interesting things you can find about your systems and applications via eBPF monitoring.
 
