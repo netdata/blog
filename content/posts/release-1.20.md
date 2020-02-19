@@ -120,8 +120,8 @@ Special thanks go out to the following contributors: [k0ste](https://github.com/
 [vzDevelopment](https://github.com/vzDevelopment), [hexchain](https://github.com/hexchain),
 [nabijaczleweli](https://github.com/nabijaczleweli), and [rex4539](https://github.com/rex4539).
 
-There's a lot more in v1.20 than this blog post, so be sure to check out the [full release
-notes](https://github.com/netdata/netdata/releases/tag/v1.20.0) on GitHub for the full story.
+There's a lot more in v1.20 than this blog post, so be sure to check out the [release
+notes](https://github.com/netdata/netdata/releases/) on GitHub for the full story.
 
 ---
 
