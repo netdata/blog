@@ -15,7 +15,8 @@ brand-new eBPF collector in [v1.20 of Netdata](https://blog.netdata.cloud/posts/
 enabled, you can monitor real-time metrics of Linux kernel functions and actions from the very same monitoring and
 troubleshooting dashboard you use for watching entire systems, or even entire infrastructures.
 
-With per-second metrics on system calls, file descriptors, virtual file system I/O, and process management, you can debug faster, get smarter about performance optimization, and save some of your valuable time.
+With per-second metrics on system calls, file descriptors, virtual file system I/O, and process management, you can
+debug faster, get smarter about performance optimization, and save some of your valuable time.
 
 <!--more-->
 
@@ -46,7 +47,7 @@ Thanks to the new [eBPF collector](https://docs.netdata.cloud/collectors/ebpf_pr
 
 To enable eBPF metrics collection, we wrote two custom eBPF programs for Netdata. The default, called `entry`, monitors
 calls to a variety of kernel functions, such as `do_sys_open`, `__close_fd`, `vfs_read`, `vfs_write`, `_do_fork`, and
-more. The `return` program also monitors the return of each kernel functions (aka errors) to give seven more visibility
+more. The `return` program also monitors the return of each kernel functions (aka errors) to give even more visibility
 into your system.
 
 The eBPF collector then performs some calculations on the volume of these calls to update Netdata's charts every second.
