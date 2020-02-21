@@ -14,6 +14,8 @@ On one hand, we're releasing an eBPF collector, which lets you collect, monitor,
 metrics straight from the Linux kernel. On the other, we added the ability to label agents to help you organize entire
 infrastructures and see _every_ important piece of information about streaming nodes in one place.
 
+<!--more-->
+
 While disparate is scope and purpose, both of these features were inspired by our community, and will have enormous
 impact on the way people use Netdata to gather insights about their systems. In that sense, they are not opposites at
 all, but rather two more major steps in our effort to [democratize
@@ -22,8 +24,6 @@ monitoring_ tools through free and open-source (FOSS) software.
 
 Beyond eBPF monitoring and host labels, this release comes with 3 new collectors, 53 bug fixes, 88 improvements, and 38
 documentation updates. Let's get into the details.
-
-<!--more-->
 
 ## Give yourself a Linux 'superpower' with eBPF monitoring
 
