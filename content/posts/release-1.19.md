@@ -73,7 +73,7 @@ Want to monitor your Unbound server in about 10 minutes? See our [new
 tutorial](https://docs.netdata.cloud/docs/tutorials/collect-unbound-metrics/) on enabling the new collector via
 Netdata's amazing auto-detection feature.
 
-# What else?
+## What else?
 
 We [fixed an error](https://github.com/netdata/netdata/pull/7220) where invalid spikes appeared on certain charts by
 improving the incremental counter reset/wraparound detection algorithm.
