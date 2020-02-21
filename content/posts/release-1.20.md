@@ -16,7 +16,7 @@ infrastructures and see _every_ important piece of information about streaming n
 
 <!--more-->
 
-While disparate is scope and purpose, both of these features were inspired by our community, and will have enormous
+While disparate in scope and purpose, both of these features were inspired by our community, and will have enormous
 impact on the way people use Netdata to gather insights about their systems. In that sense, they are not opposites at
 all, but rather two more major steps in our effort to [democratize
 monitoring](https://blog.netdata.cloud/posts/redefining-monitoring-netdata/) and provide the _best high-resolution
