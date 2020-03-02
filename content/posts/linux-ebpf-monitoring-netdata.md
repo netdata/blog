@@ -160,7 +160,7 @@ Linux system. Then, follow the step-by-step directions to enable the collector a
 
 <div class="post-cta">
 <button>
-  <a href="https:/netdata.cloud/#installation">Install Netdata agent</a>
+  <a href="https://netdata.cloud/#installation">Install Netdata agent</a>
 </button>
 <button>
   <a href="https://docs.netdata.cloud/collectors/ebpf_process.plugin/">Enable eBPF monitoring</a>
