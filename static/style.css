@@ -89,6 +89,10 @@ header.hero {
     box-shadow: none;
 }
 
+.button.next,
+.button.previous {
+    border-radius: 2px;
+}
 .post-cta {
     display: flex;
     justify-content: space-evenly;
