@@ -79,3 +79,33 @@ header.hero {
     margin: 0;
     box-shadow: none;
 }
+
+.post-cta {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+.post-cta button {
+    background: #00AB44;
+    mix-blend-mode: normal;
+    border: 2px solid #00AB44;
+    border-radius: 2px;
+    padding: 1rem 1.4rem;
+}
+
+.post-cta button a {
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.post-cta button:hover {
+    border: 2px solid #00CB51;
+}
+
+.post-cta button:active {
+    background: #00CB51;
+    border: 2px solid #00CB51;
+}

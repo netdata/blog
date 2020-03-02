@@ -148,14 +148,21 @@ way you expect.
 
 ## What's next?
 
-The process for enabling the eBPF collector is a little more complex than we'd like to cover in this post, as it's an
-alpha feature that has some special kernel and system requirements that may not be available everywhere. Read the [eBPF
-collector documentation](https://docs.netdata.cloud/collectors/ebpf_process.plugin/) for the full instructions.
+Our eBPF  collector is by no means finished. Future releases will include dramatic improvements to which eBPF metrics
+you can collect, how they're visualized on Netdata's dashboard, and more content about how you can use these real-time
+kernel metrics for tracing and debugging all things Linux kernels. Until then, we encourage you to enable the collector,
+poke around, and [let us
+know](https://github.com/netdata/netdata/issues/new?labels=bug%2C+needs+triage&template=bug_report.md) if you have ideas
+about how we could improve it in further releases.
 
-Our collector is by no means finished. Future releases will include dramatic improvements to which eBPF metrics you can
-collect, how they're visualized on Netdata's dashboard, and more content about how you can use these real-time kernel
-metrics for tracing and debugging all things Linux kernels.
+You can get started with eBPF monitoring in just a few minutes. First, install the open-source Netdata agent on your
+Linux system. Then, follow the step-by-step directions to enable the collector and see real-time eBPF metrics on your dashboard!
 
-Until then, we encourage you to enable the collector, poke around, and [let us
-know](https://github.com/netdata/netdata/issues/new?labels=bug%2C+needs+triage&template=bug_report.md) if you find any
-issues with the current implementation, or have ideas about how we could improve it in further releases.
+<div class="post-cta">
+<button>
+  <a href="https://docs.netdata.cloud/packaging/installer/">Install Netdata agent</a>
+</button>
+<button>
+  <a href="https://docs.netdata.cloud/collectors/ebpf_process.plugin/">Enable eBPF monitoring</a>
+</button>
+</div>
