@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,500&display=swap');
+
+
+body {
+    font-family: "IBM Plex Sans",Inter UI,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
 .logo .logo-svg-netdata {
     fill: var(--light-color);
 }
