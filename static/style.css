@@ -118,3 +118,28 @@ header.hero {
     background: #00CB51;
     border: 2px solid #00CB51;
 }
+
+.button.next,
+.button.previous {
+    border-radius: 2px;
+    padding: 1rem 1.4rem;
+    border: 1px solid #00AB44;
+    background: white;
+}
+
+.button.next:hover,
+.button.previous:hover {
+    border: 1px solid #00CB51;
+    color: #00CB51;
+}
+
+.button.next:active,
+.button.previous:active {
+    background: #00CB51;
+    color: white;
+}
+
+.button.next a,
+.button.previous a{
+    padding: 0;
+}
