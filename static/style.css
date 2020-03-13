@@ -57,11 +57,14 @@ header.hero {
 }
 
 .menu__inner li a {
-    color: #AEB3B7;
     font-weight: 400;
 }
 
-.menu__inner li:last-of-type a {
+.menu__inner--desktop {
+    color: #AEB3B7;
+}
+
+.menu__inner--desktop li:last-of-type a {
     color: white;
     background: #00AB44;
     mix-blend-mode: normal;
@@ -70,13 +73,17 @@ header.hero {
     padding: 0.6rem 1rem;
 }
 
-.menu__inner li:last-of-type:hover a {
+.menu__inner--desktop li:last-of-type:hover a {
     color: white;
     border: 2px solid #00CB51;
 }
 
 .menu__inner li a:hover {
     color: #00CB51;
+}
+
+.menu-trigger svg {
+    fill: white;
 }
 
 .post {
