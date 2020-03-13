@@ -7,21 +7,6 @@ body {
     font-weight: 400;
 }
 
-.logo .logo-svg-netdata {
-    fill: var(--light-color);
-}
-
-body.dark-theme .logo .logo-svg-netdata {
-    fill: var(--dark-color);
-}
-
-/* header.header {
-    top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-} */
-
 header.header {
     background: #020910;
     height: 86px;
@@ -44,9 +29,54 @@ header.hero {
 
 .header__inner {
     width: 100%;
-    padding: 0 3rem;
-    justify-content: center;
+    padding: 0 2rem;
+    justify-content: flex-start;
     /* height: 40vh; */
+}
+
+.logo .logo-icon {
+    max-height: 1.75rem;
+    margin-right: 15px;
+}
+
+.logo .logo-text {
+    height: 13px;
+}
+
+.header__right {
+    margin-left: auto;
+}
+
+.menu {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.menu__inner li:not(:first-of-type) {
+    margin-left: 2rem;
+}
+
+.menu__inner li a {
+    color: #AEB3B7;
+    font-weight: 400;
+}
+
+.menu__inner li:last-of-type a {
+    color: white;
+    background: #00AB44;
+    mix-blend-mode: normal;
+    border: 2px solid #00AB44;
+    border-radius: 2px;
+    padding: 0.6rem 1rem;
+}
+
+.menu__inner li:last-of-type:hover a {
+    color: white;
+    border: 2px solid #00CB51;
+}
+
+.menu__inner li a:hover {
+    color: #00CB51;
 }
 
 .post {
