@@ -23,9 +23,9 @@ body.dark-theme .logo .logo-svg-netdata {
 } */
 
 header.header {
-    background: url(img/blog-header-bg.png);
-    background-position: center center;
-    background-size: cover;
+    background: #020910;
+    height: 86px;
+    padding: 0;
 }
 
 header.hero-overlay {
@@ -33,11 +33,9 @@ header.hero-overlay {
     left: 0;
     right: 0;
     position: fixed;
-    height: 400px;
+    height: 86px;
     z-index: 999;
-    background: url(img/blog-header-bg.png);
-    background-position: center center;
-    background-size: cover;
+    background: #020910;
 }
 
 header.hero {
@@ -45,6 +43,8 @@ header.hero {
 }
 
 .header__inner {
+    width: 100%;
+    padding: 0 3rem;
     justify-content: center;
     /* height: 40vh; */
 }
