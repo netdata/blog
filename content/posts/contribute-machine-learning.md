@@ -1,6 +1,6 @@
 ---
 title: "Contribute to Netdata’s machine learning efforts!"
-summary: ""
+summary: "We're looking for real-world data to build a suite of anomaly detection tools into your favorite open-source monitoring agent. Want to join us?"
 date: 2020-03-16
 author: "Andrew Maguire" 
 cover: "contribute-machine-learning.png"
@@ -47,9 +47,9 @@ come up with ways to measure progress.
 
 This is where you, a valued member of the community, come in! We are looking to build a small pilot program and offer
 early access to Netdata research contributors who would stream some agents to a master node in our research data
-lake.[1] We can then use this real-world data to run experiments and try different problem formulations and algorithms
-to detect any anomalies that might exist. This way we can “battle test” as much as possible any ML-driven,
-anomaly-detection features we look to launch in the future with the help of the wider Netdata community.
+lake.<sup>1</sup> We can then use this real-world data to run experiments and try different problem formulations
+and algorithms to detect any anomalies that might exist. This way we can "battle test" as much as possible any
+ML-driven anomaly detection features we look to launch in the future with the help of the wider Netdata community.
 
 This is not just a request for data contributions. We would also love to build an active community of Netdata users with
 an interest in machine learning and ideas and thoughts about how we can leverage it in various ways to redefine the
@@ -64,4 +64,5 @@ If you are interested in getting involved or finding out more, please contact us
 </button>
 </div>
 
-[1] Your data will stream to its own master node in our GCP project and only be used internally by Netdata for product research and development purposes. You can delete it at any time.
+<sup>1</sup> Your data will stream to its own master node in our GCP project and only be used internally by Netdata for
+product research and development purposes. You can delete it at any time.
