@@ -1,32 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,600&display=swap');
 
-.content {
-    min-height: 3000px;
-}
-
 body {
     font-family: "IBM Plex Sans",Inter UI,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif;
     font-size: 1.1rem;
     font-weight: 400;
 }
 
-header.header {
-    position: sticky;
-    top: 0px;
-    height: 68px;
-    padding: 0;
-
-    background: #35414a;
-}
-
+header.header,
 header.hero-overlay {
-    z-index: 999;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    height: 68px !important;
-    
+    height: 68px;
+    padding: 0;
+
     background: #35414a;
 }
 
@@ -82,6 +70,10 @@ header.hero-overlay {
 
 .menu-trigger svg {
     fill: white;
+}
+
+.content {
+    margin-top: 6rem;
 }
 
 .post {
