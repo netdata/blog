@@ -43,6 +43,7 @@ header.hero-overlay {
 }
 
 .menu__inner li a {
+    color: white;
     font-weight: 400;
 }
 

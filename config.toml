@@ -11,7 +11,7 @@ paginate = 5
   defaultTheme = "light"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 4
+  showMenuItems = 5
 
   # Show reading time in minutes for posts
   showReadingTime = true
@@ -45,7 +45,7 @@ paginate = 5
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "posts"
-        name = "Posts"
+        name = "Blog"
         url = "/posts"
         weight = 1
       [[languages.en.menu.main]]
@@ -61,6 +61,11 @@ paginate = 5
         weight = 3
       [[languages.en.menu.main]]
         identifier = "homepage"
-        name = "Netdata Home"
+        name = "Netdata"
         url = "https://netdata.cloud"
         weight = 4
+      [[languages.en.menu.main]]
+        identifier = "get"
+        name = "Get Netdata"
+        url = "https://netdata.cloud#installation"
+        weight = 5
