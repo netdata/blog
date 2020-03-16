@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,600&display=swap');
 
+.content {
+    min-height: 3000px;
+}
 
 body {
     font-family: "IBM Plex Sans",Inter UI,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif;
@@ -22,7 +25,7 @@ header.hero-overlay {
     top: 0;
     left: 0;
     right: 0;
-    height: 68px;
+    height: 68px !important;
     
     background: #35414a;
 }
