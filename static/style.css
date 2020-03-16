@@ -8,23 +8,23 @@ body {
 }
 
 header.header {
-    background: #020910;
-    height: 86px;
+    position: sticky;
+    top: 0px;
+    height: 68px;
     padding: 0;
+
+    background: #35414a;
 }
 
 header.hero-overlay {
+    z-index: 999;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    position: fixed;
-    height: 86px;
-    z-index: 999;
-    background: #020910;
-}
-
-header.hero {
-    height: 400px;
+    height: 68px;
+    
+    background: #35414a;
 }
 
 .header__inner {
@@ -34,13 +34,8 @@ header.hero {
     /* height: 40vh; */
 }
 
-.logo .logo-icon {
-    max-height: 1.75rem;
-    margin-right: 15px;
-}
-
-.logo .logo-text {
-    height: 13px;
+.logo img {
+    height: 24px;
 }
 
 .header__right {
