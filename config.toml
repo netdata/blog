@@ -1,0 +1,71 @@
+baseurl = "/"
+languageCode = "en-us"
+theme = "hello-friend"
+paginate = 5
+
+[params]
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # "light" or "dark"
+  defaultTheme = "light"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 5
+
+  # Show reading time in minutes for posts
+  showReadingTime = true
+
+[languages]
+  [languages.en]
+    title = "Netdata Blog"
+    subtitle = "Find our latest releases, new features, and thought leadership straight from the engineers who build Netdata's health monitoring and performance troubleshooting toolkit."
+    keywords = ""
+    copyright = ""
+    menuMore = "Show more"
+    writtenBy = "Written by"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "2006-01-02"
+    dateFormatList = "2006-01-02"
+    # leave empty to disable, enter display text to enable
+    # lastModDisplay = ""
+
+    [languages.en.params.logo]
+    #  logoText = "The Netdata logo"
+     # logoHomeLink = "/"
+    # or
+    #
+      path = "/netdata_logo.svg"
+      alt = "The Netdata logo"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Blog"
+        url = "/posts"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "docs"
+        name = "Docs"
+        url = "https://docs.netdata.cloud"
+        weight = 2
+        target = "_blank"
+      [[languages.en.menu.main]]
+        identifier = "github"
+        name = "GitHub"
+        url = "https://github.com/netdata/netdata/"
+        weight = 3
+      [[languages.en.menu.main]]
+        identifier = "homepage"
+        name = "Netdata"
+        url = "https://netdata.cloud"
+        weight = 4
+      [[languages.en.menu.main]]
+        identifier = "get"
+        name = "Get Netdata"
+        url = "https://netdata.cloud#installation"
+        weight = 5

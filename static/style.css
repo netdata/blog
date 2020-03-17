@@ -1,52 +1,80 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,600&display=swap');
 
-
 body {
     font-family: "IBM Plex Sans",Inter UI,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif;
     font-size: 1.1rem;
     font-weight: 400;
 }
 
-.logo .logo-svg-netdata {
-    fill: var(--light-color);
-}
-
-body.dark-theme .logo .logo-svg-netdata {
-    fill: var(--dark-color);
-}
-
-/* header.header {
-    top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-} */
-
-header.header {
-    background: url(img/blog-header-bg.png);
-    background-position: center center;
-    background-size: cover;
-}
-
+header.header,
 header.hero-overlay {
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    position: fixed;
-    height: 400px;
-    z-index: 999;
-    background: url(img/blog-header-bg.png);
-    background-position: center center;
-    background-size: cover;
-}
+    height: 68px;
+    padding: 0;
 
-header.hero {
-    height: 400px;
+    background: #35414a;
 }
 
 .header__inner {
-    justify-content: center;
+    width: 100%;
+    padding: 0 2rem;
+    justify-content: flex-start;
     /* height: 40vh; */
+}
+
+.logo img {
+    height: 24px;
+}
+
+.header__right {
+    margin-left: auto;
+}
+
+.menu {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.menu__inner li:not(:first-of-type) {
+    margin-left: 2rem;
+}
+
+.menu__inner li a {
+    color: white;
+    font-weight: 400;
+}
+
+.menu__inner--desktop {
+    color: #AEB3B7;
+}
+
+.menu__inner--desktop li:last-of-type a {
+    color: white;
+    background: #00AB44;
+    mix-blend-mode: normal;
+    border: 2px solid #00AB44;
+    border-radius: 2px;
+    padding: 0.6rem 1rem;
+}
+
+.menu__inner--desktop li:last-of-type:hover a {
+    color: white;
+    border: 2px solid #00CB51;
+}
+
+.menu__inner li a:hover {
+    color: #00CB51;
+}
+
+.menu-trigger svg {
+    fill: white;
+}
+
+.content {
+    margin-top: 6rem;
 }
 
 .post {
