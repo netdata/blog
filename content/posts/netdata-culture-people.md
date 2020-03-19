@@ -11,12 +11,11 @@ draft: false
 
 There are many things I absolutely love about Netdata, but I'm most proud of our people and culture. Some words about this unique experience are long overdue.
 
+In a career that spans over two decades and six other companies of various sizes, nothing compares to the satisfaction of working in a company like ours. My answer to the canned interview question, "Where do you see yourself in 5 years", was always the same: I don't care; I just want to be solving problems and working with good people, real professionals, who I can trust and respect. In retrospect, I was missing another huge part of the equation, which is to mention the kind of company I wanted to work for. "Culture eats strategy for breakfast" is a cliche. More importantly, bad culture devours people's souls; it sucks out any creative energy one may have, reducing engagement and, therefore, productivity. Short-term wins at the expense of company culture guarantee huge losses in the long run.
+
 <!--more-->
 
 ![Culture eats strategy for breakfast](/img/people-culture_02.png)
-
-
-In a career that spans over two decades and six other companies of various sizes, nothing compares to the satisfaction of working in a company like ours. My answer to the canned interview question, "Where do you see yourself in 5 years", was always the same: I don't care; I just want to be solving problems and working with good people, real professionals, who I can trust and respect. In retrospect, I was missing another huge part of the equation, which is to mention the kind of company I wanted to work for. "Culture eats strategy for breakfast" is a cliche. More importantly, bad culture devours people's souls; it sucks out any creative energy one may have, reducing engagement and, therefore, productivity. Short-term wins at the expense of company culture guarantee huge losses in the long run.
 
 But let's get back to the people. The reason I emphasized co-workers so much in my answer to the interview question wasn't because I had read any books or research on the effects of quality personnel. I know the people around you are important because I was always more productive and happier in the workplace when I just "clicked" with my co-workers, direct reports and managers. My fondest workplace memories involve working in good, small teams, solving really hard, urgent problems in an efficient way. No fluff, no conflict; just a problem, cooperation and results. I realized soon enough that the only way to get into such a groove is to be working with [smart professionals](https://netdata.cloud/about/).
 
