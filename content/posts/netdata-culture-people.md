@@ -4,7 +4,7 @@ summary: ""
 date: 2020-03-20
 author: "Chris Akritidis" 
 cover: "people-culture_01.png"
-tags: ["culture"] 
+tags: ["Culture"] 
 categories: [] 
 draft: false
 ---
