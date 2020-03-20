@@ -1,6 +1,6 @@
 ---
 title: "The Netdata Culture and People"
-summary: ""
+summary: "Learn more about our collective experiences of what works best to guarantee long-term engagement and productivity in a highly demanding but positive environment"
 date: 2020-03-20
 author: "Chris Akritidis" 
 cover: "people-culture_01.png"
@@ -23,9 +23,9 @@ The most surprising thing I've ever heard coming out of a manager's mouth is tha
 
 Of course attracting the best of the best is a difficult task. We know we're not well-known enough, or with deep enough pockets, to attract industry luminaries. But we punch above our weight, and our fully distributed model allows us to build a really good team of seasoned professionals with deep, working knowledge in their domains. Even more importantly, we turned down applications from several "ninja prima donnas"–– toxic people who are better left alone to work by themselves. So we already have strong, bonded, dedicated teams of highly qualified individuals, despite the fact that most of them joined the company fairly recently. When the critical mass in any team shares some key, common values and experiences, as our people do, a person who can't keep up with the others is in danger of becoming an outcast. The only way that a member can correct course and properly integrate into the team is to embrace the Netdata culture that drives our daily interactions.
 
-Our culture... I got sick of hearing about the "X Values" of company Y. Catchy, short phrases that someone came up with one day, plastered them on walls and tried to force down people's throats, usually with laughable results. Yes, we have such a list as well, though no one has ever quoted them exactly. Each "value" if you need to call it that is just a category title for a list of many specific DOs and DON'Ts that we refined in multiple iterations. It's a live list that anyone can propose a change to, just as they can for anything in the company, from processes and tools, to new roles or people that we feel we need. It's these DOs and DON'Ts that we refer to when we're in doubt about how to handle something. Almost every retrospective we've had reinforces the strength of these statements. The list is rather long, so you can see below just  some highlights from the DOs. You will see that most of them are practical pieces of advice, useful in our day-to-day work.
+Our culture...I got sick of hearing about the "X Values" of company Y. Catchy, short phrases that someone came up with one day, plastered them on walls and tried to force down people's throats, usually with laughable results. Yes, we have such a list as well, though no one has ever quoted them exactly. Each "value" if you need to call it that is just a category title for a list of many specific DOs and DON'Ts that we refined in multiple iterations. It's a live list that anyone can propose a change to, just as they can for anything in the company, from processes and tools, to new roles or people that we feel we need. It's these DOs and DON'Ts that we refer to when we're in doubt about how to handle something. Almost every retrospective we've had reinforces the strength of these statements. The list is rather long, so you can see below just  some highlights from the DOs. You will see that most of them are practical pieces of advice, useful in our day-to-day work.
 
-These statements come from our collective experiences on what works best to guarantee long-term engagement and therefore productivity in a highly demanding but positive environment. Most of them feel natural to most of the people we've collected here.
+These statements come from our collective experiences of what works best to guarantee long-term engagement and productivity in a highly demanding but positive environment. Most of them feel natural to most of the people we've collected here.
 
 ![Putting users first](/img/people-culture_03.png)
 
