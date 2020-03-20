@@ -1,7 +1,7 @@
 ---
 title: "The Netdata Culture and People"
 summary: "Learn more about our collective experiences of what works best to guarantee long-term engagement and productivity in a highly demanding but positive environment"
-date: 2020-03-20
+date: 2020-03-23
 author: "Chris Akritidis" 
 cover: "people-culture_01.png"
 tags: ["Culture"] 
