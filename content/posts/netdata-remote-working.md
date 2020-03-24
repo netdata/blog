@@ -1,7 +1,7 @@
 ---
 title: "Creating a thriving, agile, remote team"
 summary: "Tips from a fully distributed company"
-date: 2020-03-24
+date: 2020-03-25
 author: "Chris Akritidis" 
 cover: "netdata-remote-working_01.png"
 tags: ["Culture"] 
@@ -9,7 +9,7 @@ categories: []
 draft: false
 ---
 
-The coronavirus (COVID-19) pandemic has forced many organizations to take unprecedented steps towards remote working. As a fully distributed team, we’ve faced the common challenges of remote work. Based on our experience from our very beginning in 2018, all but a few of these organizations new to remote working will face hurdles to overcome and may try to revert to colocation as soon as possible. Remote working is hard, even when it’s carefully planned and executed. When the transition is rushed and seen as a necessary, temporary inconvenience, challenges are  all but inevitable. 
+The coronavirus (COVID-19) pandemic has forced many organizations to take unprecedented steps towards remote working. As a fully distributed team, we’ve faced the common challenges of remote work. Based on our experience from our very beginning in 2018, all but a few of these organizations neqw to remote working will face hurdles to overcome and may try to revert to colocation as soon as possible. Remote working is hard, even when it’s carefully planned and executed. When the transition is rushed and seen as a necessary, temporary inconvenience, challenges are  all but inevitable. 
 
 In this post, we provide a few very practical tips to help organizations interested in preventing this forced experiment from severely impacting their day-to-day business. Moreover, if your organization has the drive and ability to quickly implement these changes, you may even recognize the great opportunities that remote working provides. Perhaps you still won’t have an overall positive experience, but at least you may be willing to consider a more strategic shift after the current crisis ends.
 
