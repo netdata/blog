@@ -86,4 +86,4 @@ We hope that our insights can help you get through this difficult period and tha
 
 Although there are undisputed benefits to colocation, there are also tremendous advantages to remote working, even if that is not the primary way of working in your organization. Take advantage of it by building the necessary cultural and organizational foundations that will enable you to become a more flexible, more liberating place for people to do the best work of their lives: allow your employees to occasionally, frequently even, work from home or open up a few remote positions where possible. We are firm believers in the value of remote working, and we hope you’ll see it too!
 
-Sound good? Check out our [open positions](https://careers.netdata.cloud/). We’re hiring!
+Sounds good? Check out our [open positions](https://careers.netdata.cloud/). We’re hiring!
