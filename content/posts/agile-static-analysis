@@ -6,7 +6,7 @@ author: "Jennifer Briston"
 cover: ""
 tags: ["How Netdata works"]
 categories: []
-draft: true
+draft: false
 ---
 With the rapid growth of security threats for infrastructures, it’s more important than ever to proactively address vulnerabilities. As an open-source project, built on the trust of users and contributors, security is vital to the Netdata team. 
 
