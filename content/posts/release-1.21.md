@@ -1,7 +1,7 @@
 ---
-title: "Release 1.21: Creative collectors, extravagant exporters, and " 
+title: "Release 1.21: Dogfooding, exporting, and more" 
 date: 2020-04-06
-summary: "t/k" 
+summary: "Version 1.21.0 of Netdata introduces two new collectors for systems integral to own networks, the ability to export metrics to 20+ external storage providers, a React rewrite of the dashboard, and much more."
 author: "Joel Hans" 
 cover: "release-1.21.0.png" 
 tags: ["Release"]
@@ -10,22 +10,23 @@ tags: ["Release"]
 We're in the middle of a scary, uncertain time, and we hope those of you reading are staying safe and healthy.
 
 Despite the current challenges, the 40+ members of the [remote-first Netdata team](/posts/netdata-remote-working/) have
-been hard at work on the next version of the Netdata Agent: v1.21.0. 
+been hard at work on the next version of the Netdata Agent: v1.21.0.
 
-This release is _foundational_ in nature: While we do have awesome new collectors and three new ways to export your
-metrics for long-term storage, many of the most important changes aren't even those you'll notice. While they may be
-beneath the hood, they're going to power some amazing new features, UX improvements, and design overhauls.
+This release is _foundational_: While we do have fantastic new collectors and three new ways to export your metrics for
+long-term storage, many of the most significant changes aren’t even those you’ll notice. While they may be beneath the
+hood, they’re going to power some amazing new features, UX improvements, and design overhauls.
 
 <!--more-->
 
 ## New collectors to support our infrastructure
 
-We added two important collectors in v1.21: **Apache Pulsar** and **VerneMQ**. We use both of these systems in the
-infrastructure for Netdata Cloud (more on that soon!), and are excited to bring sophisticated real-time health
-monitoring and performance troubleshooting to these two complex systems.
+We added two collectors in v1.21: **Apache Pulsar** and **VerneMQ**. We're excited to bring sophisticated real-time
+health monitoring and performance troubleshooting to these two complex systems. We use both in the Netdata Cloud
+infrastructure (more on that soon!), and plan on sharing the real-time metrics from our production systems with the
+Netdata community.
 
 [Apache Pulsar](http://pulsar.apache.org/) is an open-source distributed pub-sub messaging system that comes with
-geo-replication, multi-tenency, great scalability, and a lot more. Our [Pulsar
+geo-replication, multi-tenancy, great scalability, and a lot more. Our [Pulsar
 collector](https://docs.netdata.cloud/collectors/go.d.plugin/modules/pulsar/) auto-detects your installation and
 instantly generates two dozen charts on messages/second, throughput rate, storage size, topic
 producers/subscriptions/consumers, and much more.
@@ -51,13 +52,13 @@ Why would you want to export your metrics outside of the Agent? It already has l
 [database engine](https://docs.netdata.cloud/docs/tutorials/longer-metrics-storage/), after all. The exporting engine is
 part of our mission to be as extensible, flexible, and compatible as possible. You might want to export your metrics to:
 
--   Reduce the Agent's resource usage via the `dbengine disk space` setting.
--   Correlate data between otherwise siloed monitoring systems.
--   Create custom dashboards to search for long-term trends in your infrastructure.
--   Store metrics from a master and its slaves in a centralized location.
--   Backup metrics in a separate system/location.
+-   Reduce the Agent's resource usage via the `dbengine disk space` setting
+-   Correlate data between otherwise siloed monitoring systems
+-   Create custom dashboards to search for long-term trends in your infrastructure
+-   Store metrics from a master and its slaves in a centralized location
+-   Backup metrics in a separate system/location
 
-Plus, the exporting engine lets you archive to multiple enpoints simultaneously.
+Plus, the exporting engine lets you archive to multiple endpoints simultaneously.
 
 Our new exporting connectors include **[Prometheus remote
 write](https://docs.netdata.cloud/exporting/prometheus/remote_write/)**,
@@ -67,8 +68,9 @@ documentation](https://docs.netdata.cloud/exporting/) for more details on settin
 
 ## What else?
 
-The Netdata dashboard was completely re-written in React. You shouldn't notice any difference between the new, but with
-React at the dashboard's core, we'll be able to work faster and better resource our talented engineers.
+We re-wrote the Netdata dashboard in React. You shouldn't notice any difference between the old version and its
+component-ized older brother, but with React at the dashboard's core, we'll be able to work faster and better resource
+our talented engineers in the months ahead.
 
 Our community asked for support for TLS 1.3 certificates, and we delivered. You can now specify which TLS version and
 TLS ciphers you want to enable HTTPS on dashboard streaming connections. Read the
