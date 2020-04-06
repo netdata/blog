@@ -1,5 +1,5 @@
 ---
-title: "Release 1.21: Dogfooding, exporting, and more" 
+title: "Release 1.21: Introducing new collectors, faster exporters, and improved security"
 date: 2020-04-06
 summary: "Version 1.21.0 of Netdata introduces two new collectors for systems integral to own networks, the ability to export metrics to 20+ external storage providers, a React rewrite of the dashboard, and much more."
 author: "Joel Hans" 
@@ -25,19 +25,23 @@ health monitoring and performance troubleshooting to these two complex systems. 
 infrastructure (more on that soon!), and plan on sharing the real-time metrics from our production systems with the
 Netdata community.
 
+![An Apache Pulsar collector comes to Netdata!](/img/release-1.21.0-pulsar.png)
+
 [Apache Pulsar](http://pulsar.apache.org/) is an open-source distributed pub-sub messaging system that comes with
 geo-replication, multi-tenancy, great scalability, and a lot more. Our [Pulsar
 collector](https://docs.netdata.cloud/collectors/go.d.plugin/modules/pulsar/) auto-detects your installation and
-instantly generates two dozen charts on messages/second, throughput rate, storage size, topic
+instantly generates more than twenty charts on messages/second, throughput rate, storage size, topic
 producers/subscriptions/consumers, and much more.
 
 You can always [configure the
 collector](https://docs.netdata.cloud/collectors/go.d.plugin/modules/pulsar/#configuration) based on your unique setup.
 
-[VerneMQ](https://vernemq.com/) is an open-source MQTT broker designed to connect devices in low bandwidth,
+![Collect VerneMQ metrics with Netdata](/img/release-1.21.0-vernemq.png)
+
+[VerneMQ](https://vernemq.com/) is an open-source MQTT broker designed to connect devices in low-bandwidth,
 high-latency, or unreliable networks. The new [VerneMQ
 collector](https://docs.netdata.cloud/collectors/go.d.plugin/modules/vernemq/) produces a sizeable **61 charts** that
-cover everything from sockets, queues, subscriptions, bandwidth, and even the Erlang VM that powers it.
+cover everything from sockets, queues, subscriptions, and bandwidth to the Erlang VM that powers it.
 
 You can start monitoring the health of your VerneMQ installations in a matter of minutes with this new collector, which
 is also [entirely configurable](https://docs.netdata.cloud/collectors/go.d.plugin/modules/vernemq/#configuration) to
@@ -45,8 +49,10 @@ your infrastructure.
 
 ## Export to Prometheus remote write, MongoDB, and AWS Kinesis Data Streams
 
+![Three new exporting connectors for long-term archiving](/img/release-1.21.0-exporters.png)
+
 Our _experimental_ exporting engine is coming along nicely. As of v1.21, you can now export and archive the real-time,
-per-second metrics your Agent collects to more than 20 different eternal storage providers.
+per-second metrics your Agent collects to more than 20 different external storage providers.
 
 Why would you want to export your metrics outside of the Agent? It already has long-term metrics storage with the
 [database engine](https://docs.netdata.cloud/docs/tutorials/longer-metrics-storage/), after all. The exporting engine is
@@ -72,10 +78,12 @@ We re-wrote the Netdata dashboard in React. You shouldn't notice any difference 
 component-ized older brother, but with React at the dashboard's core, we'll be able to work faster and better resource
 our talented engineers in the months ahead.
 
-Our community asked for support for TLS 1.3 certificates, and we delivered. You can now specify which TLS version and
-TLS ciphers you want to enable HTTPS on dashboard streaming connections. Read the
-[documentation](https://docs.netdata.cloud/web/server/#enabling-tls-support) for details on configuring a TLS 1.3
-certificate.
+Our community asked for support for TLS 1.3 certificates, and we delivered. You can now configure Netdata's web server
+to use the TLS version and ciphers of your choice, including 1.3. This applies to dashboard, API, and streaming
+connections. Read the [documentation](https://docs.netdata.cloud/web/server/#enabling-tls-support) for details on
+configuring a TLS 1.3 certificate.
+
+![More compatibility and speed with eBPF](/img/release-1.21.0-ebpf.png)
 
 Our eBPF collector is still in a _technical preview_, but we've enabled compatibility with more Linux systems. We now
 support 13 different kernel versions that cover a broad spectrum of distributions and their versions. Plus, we've proven
