@@ -8,6 +8,10 @@ tags: ["How Netdata works"]
 categories: []
 draft: false
 ---
+<figure>
+  <img src="https:/static/img/Netdata Security use with Static Analysis.png" alt="Netdata security use with static analysis">
+</figure>
+
 With the rapid growth of security threats to infrastructure, it’s more important than ever to proactively address vulnerabilities. As an open-source project, built on the trust of users and contributors, Netdata has security concerns at its core. 
 
 Because we’re committed to code security and quality, we apply [Agile principles](https://agilemanifesto.org/) throughout the software development process. A component of this includes regular static analysis. Through continuous, automated testing, we’re able to move quickly to keep up with end-user requests without compromising our source code. 
@@ -17,6 +21,10 @@ Static analysis, also known as static application security testing [(SAST)](http
 
 Static analysis plays an important role in our development phase by finding potential issues that could be introduced when new code is deployed. We’ve been investing a lot of effort in finding solutions that help us securely deploy faster at scale. Let’s take a look at our process.     
 
+<figure>
+  <img src="static/img/Moving-beyond-moving-left.png" alt="Moving beyond moving left with static analysis">
+</figure>
+
 ## Moving beyond “moving left”
 In agile, [“moving left or “shifting left”](https://dzone.com/articles/the-shift-left-principle-and-devops-1) refers to testing earlier in development rather than later. The earlier our teams validate the code they write, the less chance there is for disruption further into the development process. This methodology plays an important role in how our developer teams routinely apply their agile principles.
 
@@ -24,10 +32,18 @@ Part of this process includes our developers using local linters like [ShellChec
 
 The next step includes using internal linters when code is introduced to the development environment. These are used for checking code readability, catching syntax errors, potential bugs, and more. While implementing each of these linting processes created important safeguards, we wanted to take our security discipline one step further by exploring additional solutions. 
 
+<figure>
+  <img src="static/img/Static-Analysis-App-Challenges.png" alt="How Netdata uses LGTM Codacy and Coverity">
+</figure>
+
 ## Challenges of static analysis  
 The challenge was finding a solution that further prevented security threats and software bugs while also integrating into our development process with minimal friction. The solution needed to be compatible with the current workflows which are largely centralized in GitHub. Any tool also needed to fit into our continuous integration and continuous delivery (CI/CD) pipelines for releasing code changes to production quickly and regularly. 
 
 We met that challenge by using LGTM, Codacy, and Coverity. These three tools support Netdata’s most commonly used programming languages and best fit our current engineering workflows for reviewing deficiencies and getting as much insight into our code base as possible. Together, these tools give us a comprehensive, reliable code review suite. Below, we’ll break down the role each tool plays in our code review. 
+
+<figure>
+  <img src="static/img/LGTM-Codacy-Coverity.png" alt="How Netdata uses LGTM Codacy and Coverity">
+</figure>
 
 ## LGTM
 LGTM’s automated open code review runs on every pull request in our repository, including automatically running checks on each commit and sending a [CodeQL](https://lgtm.com/projects/g/netdata/netdata/alerts/?mode=list) alert when an error is flagged. If an alert is triggered, the pull request is blocked from merging until resolved. 
@@ -43,6 +59,10 @@ Lastly, we use this static analysis tool for security checks. Having the right s
 
 ## Coverity 
 Coverity is the third component in our overall test suite. We run a nightly batch and run Coverity on every major feature release. We use this static analysis for insights that might have not been flagged earlier in the process. Coverity integrates well into our CI/CD pipeline as a last step of automated testing and helps us find code defects and threats early in the development process. 
+
+<figure>
+  <img src="static/img/Future-Netdata-Static-Analysis.png" alt="How Netdata uses LGTM Codacy and Coverity">
+</figure>
 
 ## The future of Netdata and static analysis 
 We use static analysis to anticipate bugs and security holes that would affect our product and consequently affect users. Our current process has played a pivotal role in developing our product faster to continue helping users build extraordinary infrastructures. 
