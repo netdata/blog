@@ -61,7 +61,7 @@ Lastly, we use this static analysis tool for security checks. Having the right s
 Coverity is the third component in our overall test suite. We run a nightly batch and run Coverity on every major feature release. We use this static analysis for insights that might have not been flagged earlier in the process. Coverity integrates well into our CI/CD pipeline as a last step of automated testing and helps us find code defects and threats early in the development process. 
 
 <figure>
-  <img src="static/img/Future-Netdata-Static-Analysis.png" alt="How Netdata uses LGTM Codacy and Coverity">
+  <img src="/img/Future-Netdata-Static-Analysis.png" alt="How Netdata uses LGTM Codacy and Coverity" />
 </figure>
 
 ## The future of Netdata and static analysis 
