@@ -33,7 +33,7 @@ Part of this process includes our developers using local linters like [ShellChec
 The next step includes using internal linters when code is introduced to the development environment. These are used for checking code readability, catching syntax errors, potential bugs, and more. While implementing each of these linting processes created important safeguards, we wanted to take our security discipline one step further by exploring additional solutions. 
 
 <figure>
-  <img src="static/img/Static-Analysis-App-Challenges.png" alt="How Netdata uses LGTM Codacy and Coverity">
+  <img src="/img/Static-Analysis-App-Challenges.png" alt="How Netdata uses LGTM Codacy and Coverity" />
 </figure>
 
 ## Challenges of static analysis  
