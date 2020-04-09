@@ -22,7 +22,7 @@ Static analysis, also known as static application security testing [(SAST)](http
 Static analysis plays an important role in our development phase by finding potential issues that could be introduced when new code is deployed. We’ve been investing a lot of effort in finding solutions that help us securely deploy faster at scale. Let’s take a look at our process.     
 
 <figure>
-  <img src="static/img/Moving-beyond-moving-left.png" alt="Moving beyond moving left with static analysis">
+  <img src="/img/Moving-beyond-moving-left.png" alt="Moving beyond moving left with static analysis" />
 </figure>
 
 ## Moving beyond “moving left”
