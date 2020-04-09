@@ -42,7 +42,7 @@ The challenge was finding a solution that further prevented security threats and
 We met that challenge by using LGTM, Codacy, and Coverity. These three tools support Netdata’s most commonly used programming languages and best fit our current engineering workflows for reviewing deficiencies and getting as much insight into our code base as possible. Together, these tools give us a comprehensive, reliable code review suite. Below, we’ll break down the role each tool plays in our code review. 
 
 <figure>
-  <img src="static/img/LGTM-Codacy-Coverity.png" alt="How Netdata uses LGTM Codacy and Coverity">
+  <img src="/img/LGTM-Codacy-Coverity.png" alt="How Netdata uses LGTM Codacy and Coverity" />
 </figure>
 
 ## LGTM
