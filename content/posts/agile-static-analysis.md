@@ -9,7 +9,7 @@ categories: []
 draft: false
 ---
 <figure>
-  <img src="https:/static/img/Netdata Security use with Static Analysis.png" alt="Netdata security use with static analysis">
+  <img src="/img/Netdata Security use with Static Analysis.png" alt="Netdata security use with static analysis" />
 </figure>
 
 With the rapid growth of security threats to infrastructure, it’s more important than ever to proactively address vulnerabilities. As an open-source project, built on the trust of users and contributors, Netdata has security concerns at its core. 
