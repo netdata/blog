@@ -1,13 +1,14 @@
 ---
 title: "The role of shift-left testing in an agile environment"
 summary: "An overview of how Netdata uses static analysis to deploy quality code at scale while preventing security and vulnerability issues"
-date: 2019-04-01
+date: 2020-04-14
 author: "Jennifer Briston"
 cover: ""
 tags: ["How Netdata works"]
 categories: []
 draft: false
 ---
+
 <figure>
   <img src="/img/Netdata Security use with Static Analysis.png" alt="Netdata security use with static analysis" />
 </figure>
