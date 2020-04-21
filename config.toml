@@ -56,7 +56,7 @@ paginate = 5
       [[languages.en.menu.main]]
         identifier = "docs"
         name = "Docs"
-        url = "https://docs.netdata.cloud"
+        url = "https://learn.netdata.cloud"
         weight = 2
         target = "_blank"
       [[languages.en.menu.main]]
