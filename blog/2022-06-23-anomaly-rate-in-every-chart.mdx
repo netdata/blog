@@ -1,0 +1,52 @@
+---
+title: Anomaly rate in every chart
+slug: anomaly-rate-in-every-chart
+description: Netdata now has anomaly rates available every chart.
+image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/how-netdata-ml-works.jpg
+tags: [machine-learning,ml,anomaly-detection,anomaly-advisor]
+keywords: [machine-learning,ml,anomaly-detection,anomaly-advisor]
+authors: shyam
+---
+import ReactPlayer from 'react-player'
+
+<!--truncate-->
+
+A month ago, we introduced unsupervised ML & Anomaly Detection in Netdata, the <a href="https://www.netdata.cloud/blog/introducing-anomaly-advisor-unsupervised-anomaly-detection-in-netdata/">Anomaly Advisor</a>. Today, we’re happy to announce that we’re bringing anomaly rates to every chart in Netdata Cloud. Anomaly information is no longer limited to the Anomalies tab and will be accessible to you from the Overview and Single Node View tabs as well. This will make your troubleshooting journey easier, as you will have the anomaly rates for any metric available with a single click. Whichever metric or chart you're exploring will be instant.
+
+If you are looking at a particular metric in the Overview or Single Node Dashboard and are wondering if the metric is truly anomalous or not, you can now confirm or invalidate that notion by clicking on the anomaly icon and expanding the anomaly rate view. Anomaly rates are calculated per second based on ML models that are trained every hour. 
+
+As an example, consider the following chart from the Overview tab. You can see that the metric has occasional spikes, but is this anomalous behavior or something that is normal?
+
+![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/06/1-600x156.png)
+
+To find out, you can click the “Find anomalies” icon on the top right of the chart. This will expand the anomaly rates for this metric, which gives you a quick and easy visual indication of whether the metric behavior was anomalous.
+
+<img class="alignnone size-medium wp-image-17445" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/06/2-600x154.png" alt="" width="600" height="154" />
+
+<img class="alignnone size-medium wp-image-17447" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/06/3-600x153.png" alt="" width="600" height="153" />
+
+The horizontal bars underneath the metric legend give you an easy way to get a quick feel of the anomaly rates before even clicking on the “Find anomalies” icon.
+
+<img class="alignnone size-full wp-image-17439" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/06/4.png" alt="" width="592" height="61" />
+
+Here's a quick video walkthrough of how the feature works.
+
+<ReactPlayer controls width='100%' url='https://www.youtube.com/embed/2gJ36YuW6Ko' />
+
+If you'd like to dive deeper and see if there are other metrics with an elevated anomaly rate during the same timeframe, you can highlight the timeframe of interest and navigate to the Anomalies tab for a more comprehensive deep dive into anomalies across your infrastructure. 
+
+## Learn more
+
+If you'd like to dive deeper and learn a little more about exactly how it all works, please feel free to check out some of the resources below.
+<ul>
+ 	<li>
+<ul>
+ 	<li>Anomaly Advisor <a href="https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor" target="_blank" rel="noopener">documentation</a>.</li>
+ 	<li>Netdata agent ML <a href="https://learn.netdata.cloud/docs/configure/machine-learning" target="_blank" rel="noopener">reference documentation</a>.</li>
+ 	<li><a href="https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cloud-native-live-power-up-your-machine-learning-automated-anomaly-detection/" target="_blank" rel="noopener">CNCF Live session</a> with <a href="https://www.youtube.com/watch?v=pI-MUupmD64" target="_blank" rel="noopener">recording on YouTube</a> (<a href="https://docs.google.com/presentation/d/1n8ZAlD0n1_clryezT_L7MhLvyR6wPgfQRyGwZWC_LTc/edit?usp=sharing" target="_blank" rel="noopener">deck</a>).</li>
+ 	<li><a href="https://youtube.com/playlist?list=PL-P-gAHfL2KPeUcCKmNHXC-LX-FfdO43j" target="_blank" rel="noopener">Anomaly Advisor playlist</a> on the Netdata YouTube channel.</li>
+ 	<li><a href="https://github.com/netdata/netdata/tree/master/ml" target="_blank" rel="noopener">The code itself</a> in the <a href="https://github.com/netdata/netdata" target="_blank" rel="noopener">Netdata Agent GitHub repo</a>, along with a Google Collab ready <a href="https://github.com/netdata/netdata/blob/master/ml/notebooks/netdata_anomaly_detection_deepdive.ipynb" target="_blank" rel="noopener">notebook based Python implementation</a> to help those interested understand how it all works under the hood, the main concepts and some illustrated explanations.</li>
+ 	<li>Yet <a href="https://docs.google.com/presentation/d/18zkCvU3nKP-Bw_nQZuXTEa4PIVM6wppH3VUnAauq-RU/edit?usp=sharing" target="_blank" rel="noopener">another presentation</a> that tries to explain the main concepts and moving parts.</li>
+</ul>
+</li>
+</ul>

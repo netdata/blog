@@ -1,0 +1,20 @@
+---
+title: How Netdata’s Machine Learning works
+slug: how-netdatas-machine-learning-works
+description: This post describes how Netdata's machine learning works.
+image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/how-netdata-ml-works.jpg
+tags: [machine-learning,ml,anomaly-detection,anomaly-advisor]
+keywords: [machine-learning,ml,anomaly-detection,anomaly-advisor]
+authors: andy
+---
+import ReactPlayer from 'react-player'
+
+Following on from the <a href="https://www.netdata.cloud/blog/introducing-anomaly-advisor-unsupervised-anomaly-detection-in-netdata" target="_blank" rel="noopener">recent launch</a> of our <a href="https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor" target="_blank" rel="noopener">Anomaly Advisor</a> feature, and in keeping with <a href="https://www.netdata.cloud/blog/our-approach-to-machine-learning/" target="_blank" rel="noopener">our approach to machine learning</a>, <a href="https://github.com/netdata/netdata/blob/master/ml/notebooks/netdata_anomaly_detection_deepdive.ipynb" target="_blank" rel="noopener">here</a> is a detailed Python notebook outlining exactly how the machine learning powering the Anomaly Advisor actually works under the hood.
+<!--truncate-->
+Or if you'd rather watch a video walkthrough of the notebook then check out below.
+
+<ReactPlayer controls width='100%' url='https://www.youtube.com/embed/L1xleckyuDQ' />
+
+Try it for yourself, <a href="https://learn.netdata.cloud/docs/cloud/get-started" target="_blank" rel="noopener">get started</a> by <a href="https://app.netdata.cloud/?utm_source=blog&amp;utm_content=how_netdata_ml_works" target="_blank" rel="noopener">signing in to Netdata</a> and connecting a node. Once initial models have been trained (usually after the agent has about one hour of data, zero configuration needed), you'll be able to start exploring in the <a href="https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor" target="_blank" rel="noopener">Anomaly Advisor</a> tab of Netdata.
+
+We'd love any feedback as you try this new feature out. Please feel free to leave feedback in the Netdata <a href="https://community.netdata.cloud/" target="_blank" rel="noopener">community</a>, <a href="https://discord.gg/mPZ6WZKKG2" target="_blank" rel="noopener">discord</a>, <a href="https://github.com/netdata/netdata/discussions" target="_blank" rel="noopener">GitHub discussions</a> or just drop us an email at analytics-ml-team@netdata.cloud.

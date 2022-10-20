@@ -1,0 +1,68 @@
+---
+slug: monitoring-without-cooperation-kubernetes
+title: "Monitoring without Cooperation: Kubernetes"
+description: "Kubernetes monitoring doesn’t have to suck. Let us help!"
+image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/04/k8s-monitoring.jpg
+tags: [kubernetes,troubleshooting,infrastructure-monitoring,k8s]
+keywords: [kubernetes,troubleshooting,infrastructure-monitoring,k8s]
+authors: shyam
+---
+import ReactPlayer from 'react-player'
+
+<!--truncate-->
+
+<ReactPlayer controls width='100%' url='https://www.youtube.com/embed/J2kdSTRJzV4' />
+
+Imagine this: You are an engineer at a startup. You are responsible for keeping all the applications running smoothly and safely in production. At first, you have things under control, but soon enough things start getting more complex. The system has grown by hundreds of new server nodes, new services and containers are showing up seemingly every day, and you hear there’s a project to transition everything to Kubernetes (you’ve heard the term “cloud native” so often that the phrase shows up in your dreams).
+
+All of this means that monitoring your servers, applications, and containers just got a whole lot more challenging. Some of these applications require high fidelity monitoring (in other words: data must be collected, monitored, and visualized every second). Any monitoring tool you use must be something you and your team can configure as quickly as possible and start monitoring. Modifying any of the production code or applications for observability purposes is not an option. So, you need a tool that can monitor with zero cooperation from the applications being monitored.
+
+It goes without saying that your company’s data must be secure and none of the monitored data must be stored on any servers that don’t belong to your company.
+
+So, what do you do? Lucky for “you," there’s an easy answer: <a href="https://netdata.cloud/">Netdata</a>.
+
+Netdata offers high fidelity monitoring with zero configuration, and it can monitor any application, written in any computer language, to get amazing real-time insights of everything about its operation, all without any cooperation from the application whatsoever. Your data is <a href="https://learn.netdata.cloud/docs/cloud/data-privacy">private.</a> None of the metric data being monitored and visualized is stored on Netdata’s servers.
+
+Netdata can do so much more than monitor system level metrics in real time. It offers you the ability to monitor any application you are running to derive valuable insights that really feels like a superpower.
+
+If you aren’t convinced yet, let’s get a bit more technical and dive into some specific use-cases of systems that can be monitored with no need for cooperation or configuration on behalf of the system.
+
+## Monitoring a Kubernetes Cluster with Netdata
+
+Kubernetes is a system that manages containers (containerized applications) that takes care of things like scaling, failover, and load balancing. It was built and open-sourced by Google and written in their very own Go programming language. While Kubernetes makes deployment and configuration easier, its many containerized layers and management processes makes Kubernetes monitoring a complex and often expensive challenge. And if you are using Kubernetes in production, you know that monitoring is not optional
+
+Netdata is one of the simplest and fastest ways to monitor your Kubernetes cluster. And it's a free service that's available to everybody. Follow the steps below to start monitoring your Kubernetes cluster using Netdata.
+
+(And if you'd rather watch a video than read text, here’s a quick <a href="https://www.youtube.com/watch?v=J2kdSTRJzV4">video</a> on how to start monitoring Kubernetes with Netdata in just 5 minutes.)
+
+To deploy Kubernetes monitoring with Netdata, you need:
+<ul>
+ 	<li>A working cluster running Kubernetes v1.9 or newer.</li>
+ 	<li>The kubectl command line tool</li>
+ 	<li>The Helm package manager (v3.0.0 or newer) on the same administrative system.</li>
+</ul>
+Once you have all of the things in the list above here's what you need to do:
+<ul>
+ 	<li>Install the Netdata helm agent:</li>
+</ul>
+
+```bash
+helm repo add netdata https://netdata.github.io/helmchart/
+helm install netdata netdata/netdata
+```
+
+<ul>
+ 	<li>Run kubectl get services and kubectl get pods to confirm that your cluster now runs a netdata service, one parent pod, and multiple child pods.</li>
+ 	<li>Sign up to <a href="https://app.netdata.cloud/">Netdata cloud</a>.</li>
+ 	<li>Connect your Kubernetes cluster to Netdata cloud. You can do this in just 4 clicks:</li>
+</ul>
+<ul>
+ 	<li>Click on "Manage Space"</li>
+ 	<li>Click on "Nodes"</li>
+ 	<li>Click on "Kubernetes"</li>
+ 	<li>Copy the script and execute on your system</li>
+</ul>
+
+That's it you can now monitor key performance metrics for Kubernetes every second. No editing configuration files or fiddling around with your Kubernetes cluster. And since Netdata provides unlimited metrics, alarms, and dashboards at no cost, you can scale your monitoring to Kubernetes deployments of any size.
+
+So head on over to <a href="https://app.netdata.cloud/">https://app.netdata.cloud/</a> and try it out yourself!
