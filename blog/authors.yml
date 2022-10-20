@@ -1,0 +1,52 @@
+andy:
+  name: Andrew Maguire
+  title: Analytics & ML Lead
+  url: https://www.linkedin.com/in/andrewm4894/
+  image_url: http://1.gravatar.com/avatar/4c7612cf17338f9267b624ef914fb3b2
+
+hugo:
+  name: Hugo Valente
+  title: Technical Product Manager
+  url: https://www.linkedin.com/in/hugo-valente/
+  image_url: https://secure.gravatar.com/avatar/cec3341913fc1623c220afac99b18acd?s=96&d=mm&r=g
+
+satya:
+  name: Satyadeep Ashwathnarayana
+  title: Technical Product Manager
+  url: https://www.linkedin.com/in/satyadeep-ashwathnarayana-88b1a111/
+  image_url: https://secure.gravatar.com/avatar/c51dada784db9e4f72e2f815952410e4?s=96&d=mm&r=g
+
+shyam:
+  name: Shyam Sreevalsan
+  title: Data & ML @ Netdata
+  url: https://www.linkedin.com/in/shyamvalsan/
+  image_url: https://secure.gravatar.com/avatar/09585276ae02e59a07e72f5f9b2925ab?s=96&d=mm&r=g
+
+alex:
+  name: Alex Malkov
+  title: VP of Engineering
+  url: https://www.linkedin.com/in/alexmalkov/
+  image_url: https://secure.gravatar.com/avatar/3382d256299ac700fe1c1699efdba767?s=96&d=mm&r=g
+
+chris:
+  name: Chris Akritidis
+  title: Chief Operations Officer
+  url: https://www.linkedin.com/in/christopher-akritidis/
+  image_url: https://media-exp1.licdn.com/dms/image/C4D03AQEwPXmhcmsQog/profile-displayphoto-shrink_200_200/0/1611674272380?e=1671062400&v=beta&t=tmMaVgoKlbJSzupfSZICctSVW4r_ubvG3n5OASdF_nA
+
+costa:
+  name: Costa Tsaousis
+  title: Founder & Chief Executive Officer
+  url: https://www.linkedin.com/in/costatsaousis/
+  image_url: https://secure.gravatar.com/avatar/6ef45d91fe2ea27165128a2275ddf85f?s=96&d=mm&r=g
+
+tasos:
+  name: Tasos Katsoulas
+  title: Software Engineer
+  url: https://www.linkedin.com/in/tasos-katsoulas-a1ab99aa/
+  image_url: https://media-exp1.licdn.com/dms/image/C5603AQFlGsKa2HyNog/profile-displayphoto-shrink_800_800/0/1517632431468?e=1671062400&v=beta&t=hpWJ494secyfYtaiHFjvRmBmuTy0oZ2zpEu3J_GHwfY
+
+team:
+  name: Netdata Team
+  image_url: /img/logo600x600.png
+  url: http://netdata.cloud/
