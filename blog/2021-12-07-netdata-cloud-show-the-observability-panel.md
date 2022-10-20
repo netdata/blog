@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<figure class="wp-block-image size-large"><img class="wp-image-16169" src="http://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Cloud-Panel-1200x674.png" alt="" /></figure>
+<figure class="wp-block-image size-large"><img class="wp-image-16169" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Cloud-Panel-1200x674.png" alt="" /></figure>
 
 ## “In 2022, 60% of security incidents will involve third parties.”<strong>– Forrester</strong>
 

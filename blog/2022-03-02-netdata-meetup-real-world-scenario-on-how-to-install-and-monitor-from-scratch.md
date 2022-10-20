@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-![](http://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-meetup-1-1200x676.png)
+![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-meetup-1-1200x676.png)
 
 Announcing Netdata Meetups: Virtual How-to Live Show – Join us Friday, March 4th
 

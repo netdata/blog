@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-![](http://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/thiago-2.png)
+![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/thiago-2.png)
 
 Our ongoing Meet the community series focuses on global Netdata community members. In this installment, learn about Netdata staff member and Software Engineer Thiago Marques, who is hard at work building an eBPF.plugin.
 

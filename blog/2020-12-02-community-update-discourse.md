@@ -45,7 +45,7 @@ Our <a href="https://staging-www.netdata.cloud/community/" target="_blank" rel=
 
 We launched the <a href="https://community.netdata.cloud/">forum</a> back in the summer, but without clarifying how we are going to use the forums in relation to user interaction on GitHub. With the re-launching of our forums, with different software and a different philosophy, we’re making the forums the centerpiece of Netdata’s wider community.
 
-As we mentioned above, having decided that GitHub can no longer accommodate our needs, we migrated most of the GitHub functionality, such as <strong>discussion</strong>, <strong>support</strong>, and <strong>feature requests</strong>, to the forums. They are based on the open-source software <a href="http://discourse.org/" target="_blank" rel="noopener noreferrer">Discourse</a>, and they will serve as the core of our community for years to come.
+As we mentioned above, having decided that GitHub can no longer accommodate our needs, we migrated most of the GitHub functionality, such as <strong>discussion</strong>, <strong>support</strong>, and <strong>feature requests</strong>, to the forums. They are based on the open-source software <a href="https://discourse.org/" target="_blank" rel="noopener noreferrer">Discourse</a>, and they will serve as the core of our community for years to come.
 
 We designed the forums to be easy to use, with intuitive categories that will let us run different community programs on top of them. But like with everything in technology, iteration is king. If you have any ideas, leave us some feedback in the <a href="https://community.netdata.cloud/c/community/community-forums/19" target="_blank" rel="noopener noreferrer">community forums</a> category.
 <h2>GitHub</h2>

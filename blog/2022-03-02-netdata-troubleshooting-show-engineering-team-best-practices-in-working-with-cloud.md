@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<figure class="wp-block-image size-large"><img src="http://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/group_promo-1200x675.png" alt="" class="wp-image-16147"/></figure>
+<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/group_promo-1200x675.png" alt="" class="wp-image-16147"/></figure>
 
 ## Panel: Engineering Team Best Practices in Working with Cloud
 

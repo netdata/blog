@@ -31,7 +31,7 @@ Here’s a sample configuration to monitor a web page, an HTTP endpoint accept P
 jobs:
 
   - name: Netdata App
-    url: http://app.netdata.cloud
+    url: https://app.netdata.cloud
     status_accepted: [200, 204]
     timeout: 2
 
@@ -48,9 +48,9 @@ jobs:
       Content-Type: 'text/xml; charset=utf-8'
     body: |
       <?xml version="1.0" encoding="utf-8"?>
-       <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+       <soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/">
         <soap:Body>
-         <NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
+         <NumberToWords xmlns="https://www.dataaccess.com/webservicesserver/">
           <ubiNum>500</ubiNum>
          </NumberToWords>
         </soap:Body>

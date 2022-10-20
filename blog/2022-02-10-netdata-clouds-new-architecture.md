@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<figure class="wp-block-image size-full"><img class="wp-image-16154" src="http://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/New_arch_notification.jpeg" alt="" /></figure>
+<figure class="wp-block-image size-full"><img class="wp-image-16154" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/New_arch_notification.jpeg" alt="" /></figure>
 
 In version v1.32 of Netdata, we announced a remarkable new update that we are extremely proud of; Netdata Cloud now runs on the most reliable and stable backend that we’ve ever built. 
 
