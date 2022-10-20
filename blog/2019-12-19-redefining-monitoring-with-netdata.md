@@ -10,7 +10,7 @@ authors: costa
 
 <!--truncate-->
 
-![](http://netdatacloud20.kinsta.cloud/wp-content/uploads/2019/12/redefining-monitoring-netdata_01.png)
+![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2019/12/redefining-monitoring-netdata_01.png)
 
 ## How Netdata was born
 

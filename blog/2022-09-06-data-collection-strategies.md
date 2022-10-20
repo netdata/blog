@@ -335,7 +335,7 @@ Netdata can be classified as a hybrid solution because it has two components - o
 <ol>
  	<li>There is no need to install a visualization tool. Netdata's cloud solution is already there for you.</li>
  	<li>There is no need to configure charts. Every single metric is already associated to the chart.</li>
- 	<li>You just need to log in in to <a href="http://app.netdata.cloud">Netdata</a> to see various dashboards (infrastructure Overview, individual Nodes, Alerts, Machine Learning, etc.) as well as individual charts associated with Alerts.</li>
+ 	<li>You just need to log in in to <a href="https://app.netdata.cloud">Netdata</a> to see various dashboards (infrastructure Overview, individual Nodes, Alerts, Machine Learning, etc.) as well as individual charts associated with Alerts.</li>
 </ol>
 
 #### Most common cost structure and limitations

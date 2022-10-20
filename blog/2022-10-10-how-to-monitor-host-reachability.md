@@ -30,7 +30,7 @@ The instructions to install and configure the collector are available in the <a 
 
 ## Example using fping
 
-In the example below, I’ve configured the <code>fping</code> plugin to monitor just two “hosts”, from a single location. The hosts I configured are “<a href="http://www.netdata.cloud">www.netdata.cloud</a>” and “app.netdata.cloud." The choice of the specific hostnames is not ideal, as each one resolves to several IP addresses. For host reachability specifically, we would want to either provide in the configuration the IP itself, or enter in the `/etc/hosts` of the node where Netdata is running some arbitrary aliases for each of the IP addresses. There’s also another reason that “app.netdata.cloud” should not have been chosen, which you will see immediately.
+In the example below, I’ve configured the <code>fping</code> plugin to monitor just two “hosts”, from a single location. The hosts I configured are “<a href="https://www.netdata.cloud">www.netdata.cloud</a>” and “app.netdata.cloud." The choice of the specific hostnames is not ideal, as each one resolves to several IP addresses. For host reachability specifically, we would want to either provide in the configuration the IP itself, or enter in the `/etc/hosts` of the node where Netdata is running some arbitrary aliases for each of the IP addresses. There’s also another reason that “app.netdata.cloud” should not have been chosen, which you will see immediately.
 
 The first chart we see in the infrastructure overview screen is the network latency.
 

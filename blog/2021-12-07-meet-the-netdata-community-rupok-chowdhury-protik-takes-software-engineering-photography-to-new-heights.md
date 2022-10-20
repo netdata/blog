@@ -11,7 +11,7 @@ authors: team
 <!--truncate-->
 
 
-<figure class="wp-block-image size-full"><img src="http://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Meet-the-community.png" alt="" class="wp-image-16164"/></figure>
+<figure class="wp-block-image size-full"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Meet-the-community.png" alt="" class="wp-image-16164"/></figure>
 
 
 

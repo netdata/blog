@@ -2,7 +2,7 @@ andy:
   name: Andrew Maguire
   title: Analytics & ML Lead
   url: https://www.linkedin.com/in/andrewm4894/
-  image_url: http://1.gravatar.com/avatar/4c7612cf17338f9267b624ef914fb3b2
+  image_url: https://1.gravatar.com/avatar/4c7612cf17338f9267b624ef914fb3b2
 
 hugo:
   name: Hugo Valente
@@ -49,4 +49,4 @@ tasos:
 team:
   name: Netdata Team
   image_url: /img/logo600x600.png
-  url: http://netdata.cloud/
+  url: https://netdata.cloud/
