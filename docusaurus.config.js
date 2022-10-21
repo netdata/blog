@@ -96,6 +96,12 @@ const config = {
 
   plugins: [
     [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'UA-64295674-3'
+      },
+    ],
+    [
       "posthog-docusaurus",
       {
         apiKey: 'phc_dqzj2jEKyZVh8qPAIRlXHD1iBsuQr8Pxy4uHXXaN3dg',
