@@ -123,7 +123,7 @@ when the disk utilization exceeds 80% in all cases and if the current state is a
  
 **Note**: Netdata currently does not monitor directories, but this functionality is coming "soon".
  
-### Let us hear from you
+## Let us hear from you
 
 If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=blog&utm_content=disk-usage)!
 
