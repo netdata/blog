@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 const config = {
   title: 'Netdata Blog',
   tagline: 'Home of the Netdata blog.',
-  url: 'https://sprightly-mousse-ede81f.netlify.app',
+  url: 'https://blog.netdata.cloud',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
