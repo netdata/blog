@@ -104,9 +104,9 @@ const config = {
     [
       "posthog-docusaurus",
       {
-        apiKey: 'phc_dqzj2jEKyZVh8qPAIRlXHD1iBsuQr8Pxy4uHXXaN3dg',
+        apiKey: 'phc_hnhlqe6D2Q4IcQNrFItaqdXJAxQ8RcHkPAFAp74pubv',
         appUrl: 'https://app.posthog.com',
-        enableInDevelopment: true,
+        enableInDevelopment: false,
         opt_in_site_apps: true,
       }
     ],
