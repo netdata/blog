@@ -5,7 +5,7 @@ description: "Four key metrics for responding to IT incidents and failures"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/01/DevOps-Metrics.png
 tags: [engineering,product]
 keywords: [netdata,engineering,product]
-authors: team
+authors: Jen
 ---
 
 <!--truncate-->
