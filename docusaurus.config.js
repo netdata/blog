@@ -133,7 +133,7 @@ const config = {
       //},
       metadata: [{name: 'keywords', content: 'netdata, monitoring, troubleshooting, servers'}],
       navbar: {
-        title: 'Blog',
+        title: '',
         logo: {
           alt: 'Netdata',
           src: 'img/logo.svg',
