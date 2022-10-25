@@ -5,7 +5,7 @@ description: "What is Infrastructure Monitoring?"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Blog-What_is_Infrastructure_Monitoring_Header.png
 tags: [engineering]
 keywords: [netdata,engineering]
-authors: team
+authors: Jen
 ---
 
 <!--truncate-->
