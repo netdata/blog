@@ -1,6 +1,6 @@
 ---
 slug: disk-usage
-title: "How to monitor the disk usage on your infrastructure
+title: "How to monitor the disk usage on your infrastructure"
 description: "How to monitor disk usage on your infrastructure"
 image: https://user-images.githubusercontent.com/88642300/197860415-bdff658c-7dd3-4a9e-b39a-fbddd3b44d57.png
 tags: [how-to,infrastructure-monitoring]
