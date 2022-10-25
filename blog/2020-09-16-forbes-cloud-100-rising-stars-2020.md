@@ -5,7 +5,7 @@ description: "Netdata named to the Forbes Cloud 100 Rising Stars"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Cloud1002020-RisingStars-SMALL.png
 tags: [community,culture]
 keywords: [netdata,community,culture]
-authors: team
+authors: Jen
 ---
 
 <!--truncate-->
