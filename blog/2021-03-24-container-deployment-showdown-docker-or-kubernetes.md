@@ -5,7 +5,7 @@ description: "Container deployment showdown: Docker or Kubernetes?"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Kubernetes_vs_Docker.png
 tags: [engineering]
 keywords: [netdata,engineering]
-authors: team
+authors: Jen
 ---
 
 <!--truncate-->
