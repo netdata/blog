@@ -5,7 +5,7 @@ description: "Sysadmin Day 2020: IT Heroes and Homelabs"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Group-1-2.png
 tags: [community]
 keywords: [netdata,community]
-authors: team
+authors: Jen
 ---
 
 <!--truncate-->

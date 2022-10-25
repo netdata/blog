@@ -5,7 +5,7 @@ description: "How to monitor Windows systems with Netdata"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png
 tags: [product,engineering]
 keywords: [netdata,product,engineering]
-authors: team
+authors: Jen
 ---
 
 <!--truncate-->

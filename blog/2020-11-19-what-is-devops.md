@@ -5,7 +5,7 @@ description: "What is DevOps?"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/what-is-devops.png
 tags: [engineering]
 keywords: [netdata,engineering]
-authors: team
+authors: Jen
 ---
 
 <!--truncate-->
