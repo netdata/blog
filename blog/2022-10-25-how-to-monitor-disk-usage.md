@@ -125,7 +125,7 @@ when the disk utilization exceeds 80% in all cases and if the current state is a
  
 ### Let us hear from you
 
-If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/)!
+If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=blog&utm_content=disk-usage)!
 
 We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/).
 Happy Troubleshooting!
