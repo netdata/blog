@@ -4,8 +4,8 @@ title: "How to find out which application is causing server load"
 description: "We often hear the term load used to describe the state of a server or a device, but we're hear to tell you what it means, precisely, and how to monitor it."
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Systemmd-Service-Liveness-e1666366169680.png
 tags: [how-to,infrastructure-monitoring,monitoring]
-keywords: [how-to,infrastructure-monitoring,monitoring]
-authors: satya
+keywords: [how-to,infrastructure-monitoring,monitoring,load,server load,high load,]
+authors: shyam
 ---
 
 
@@ -87,20 +87,20 @@ The applications section contains charts for CPU, Disk, Memory and much more at 
 
 Now for some fun. Let’s create some load and figure out which application caused it.
 
-Here’s the load creator bash script that we’ll be using to trigger different types of loads periodically. 
+Here’s the load creator [bash script](https://github.com/netdata/community/blob/main/utilities/load_creator.sh) that we’ll be using to trigger different types of loads periodically. 
 
 And we’ll use Netdata to:
 - Detect if the load is high
 - Measure the load averages
 - Investigate which application is causing the load 
 
-Netdata automatically detects 100+ custom applications automatically, and you can add your own app so that the name of your application shows up in the charts
-and doesn’t get clubbed under “other”. The way to do this is by `editing the /etc/netdata/apps_groups.conf` and adding the relevant line. The first field is 
-the name that shows up in the chart, the second field is the name of the script (wildcards work too in case you want to club multiple processes under one application name).
+Netdata automatically detects hundreds of custom applications automatically, and you can add your own app so that the name of your application shows up in the charts
+and doesn’t get clubbed under “other”. The way to do this is by `editing the /etc/netdata/apps_groups.conf` and adding the following line. 
 
 ```yaml
 LoadCreator: load_creator.sh
 ```
+The first field is the name that shows up on the chart in the Netdata UI, the second field is the name of the script (wildcards work too in case you want to club multiple processes under one application name).
 
 Here’s a quick video walkthrough of how to use Netdata for load monitoring and identifying which application is causing load.
 
