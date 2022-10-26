@@ -1,7 +1,7 @@
 ---
 slug: server-load
 title: "How to find out which application is causing server load"
-description: "We often hear the term "load" used to describe the state of a server or a device, but we're hear to tell you what it means, precisely, and how to monitor it."
+description: "We often hear the term load used to describe the state of a server or a device, but we're hear to tell you what it means, precisely, and how to monitor it."
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Systemmd-Service-Liveness-e1666366169680.png
 tags: [how-to,infrastructure-monitoring,monitoring]
 keywords: [how-to,infrastructure-monitoring,monitoring]
