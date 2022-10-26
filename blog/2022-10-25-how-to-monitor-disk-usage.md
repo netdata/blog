@@ -8,6 +8,8 @@ keywords: [how-to,infrastructure-monitoring]
 authors: satya
 ---
 
+
+The most important part of disk usage monitoring is to check the utilization of each filesystem and each mount point which can reveal existing or impending issues with the storage space on your infrastructure.
 <!--truncate-->
 
 
