@@ -236,9 +236,9 @@ const config = {
       darkTheme: darkCodeTheme,
     },
     algolia: {
-      appId: '9RTREYV27G',
-      apiKey: 'ec6ab2e1cfee63e2bd12b895e57e03ee',
-      indexName: 'blog.netdata.cloud',
+      appId: 'OW5U4HGY60',
+      apiKey: '88d7f50e0c04e9d7c599c9023e205234',
+      indexName: 'netlify_b51bd178-bf1c-47d6-8a6d-2a8873c97ded_master_all',
       contextualSearch: true,
     },
     }),
