@@ -181,7 +181,7 @@ During this period, stop all catalog activity on the system; `VACUUM FULL` takes
 
 Running `VACUUM` regularly on system catalog tables can prevent the need for this more costly procedure.
 
-**Note**: The system catalog table pg_attribute is usually the largest catalog table. If the pg_attribute table is significantly bloated, a VACUUM FULL operation on the table might require a significant amount of time and might need to be performed separately. The presence of both of these conditions indicate a significantly bloated pg_attribute table that might require a long VACUUM FULL time.
+**Note**: The system catalog table pg_attribute is usually the largest catalog table. If the `pg_attribute` table is significantly bloated, a `VACUUM FULL` operation on the table might require a significant amount of time and might need to be performed separately. The presence of both of these conditions indicate a significantly bloated pg_attribute table that might require a long `VACUUM FUL`L time.
 
 ## Let us hear from you
 
