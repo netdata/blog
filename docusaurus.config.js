@@ -93,6 +93,12 @@ const config = {
       },
     ],
     [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        // Options here
+      },
+    ],
+    [
       "posthog-docusaurus",
       {
         apiKey: 'phc_hnhlqe6D2Q4IcQNrFItaqdXJAxQ8RcHkPAFAp74pubv',
@@ -234,12 +240,6 @@ const config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
-    },
-    algolia: {
-      appId: 'OW5U4HGY60',
-      apiKey: '88d7f50e0c04e9d7c599c9023e205234',
-      indexName: 'netlify_b51bd178-bf1c-47d6-8a6d-2a8873c97ded_master_all',
-      contextualSearch: true,
     },
     }),
 };
