@@ -62,3 +62,15 @@ team:
   name: Netdata Team
   image_url: /img/logo600x600.png
   url: https://netdata.cloud/
+
+joel:
+  name: Joel Hans
+  title: Editorial Director, Educational and Technical Resources
+  image_url: https://media-exp1.licdn.com/dms/image/C4E03AQE4lAWJk6bCMQ/profile-displayphoto-shrink_200_200/0/1642002898481?e=1672272000&v=beta&t=oC-RmMnf9yT_YODRINfzBx28rFKifYCwapd7WFJ_Ogg
+  url: https://www.linkedin.com/in/joel-hans/
+
+odysseas:
+  name: Odysseas Lamtzidis
+  title: Developer Relations Lead
+  image_url: https://media-exp1.licdn.com/dms/image/C4D03AQHKVxTtGvgZoQ/profile-displayphoto-shrink_200_200/0/1635961983837?e=1672272000&v=beta&t=uHPiyGLYhW8WXmlqzBrK7UHnWuQLWVupm0AAyBzziZk
+  url: https://www.linkedin.com/in/odysseaslamtzidis/
