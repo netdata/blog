@@ -23,15 +23,6 @@ const config = {
   },
 
   themes: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        hashed: true,
-        indexDocs: false,
-        indexBlog: true,
-        blogRouteBasePath: "./blog"
-      },
-    ],
   ],
 
   presets: [
@@ -240,10 +231,16 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Netdata, Inc.`,
     },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+    algolia: {
+      appId: '9RTREYV27G',
+      apiKey: 'ec6ab2e1cfee63e2bd12b895e57e03ee',
+      indexName: 'blog.netdata.cloud',
+      contextualSearch: true,
+    },
     }),
 };
 
