@@ -9,6 +9,24 @@
   dependencies:
     "@algolia/autocomplete-shared" "1.7.1"
 
+"@algolia/autocomplete-core@1.7.2":
+  "integrity" "sha512-eclwUDC6qfApNnEfu1uWcL/rudQsn59tjEoUYZYE2JSXZrHLRjBUGMxiCoknobU2Pva8ejb0eRxpIYDtVVqdsw=="
+  "resolved" "https://registry.npmjs.org/@algolia/autocomplete-core/-/autocomplete-core-1.7.2.tgz"
+  "version" "1.7.2"
+  dependencies:
+    "@algolia/autocomplete-shared" "1.7.2"
+
+"@algolia/autocomplete-js@^1.5.1":
+  "integrity" "sha512-/x0r0510yEHtTt9+JIhWa9CIvS2s95n5eSyKrCXA6QF8DYKJV+LQpGCpHnO4gEHJFEe0itVdmws3DzOZrBGa9Q=="
+  "resolved" "https://registry.npmjs.org/@algolia/autocomplete-js/-/autocomplete-js-1.7.2.tgz"
+  "version" "1.7.2"
+  dependencies:
+    "@algolia/autocomplete-core" "1.7.2"
+    "@algolia/autocomplete-preset-algolia" "1.7.2"
+    "@algolia/autocomplete-shared" "1.7.2"
+    "htm" "^3.0.0"
+    "preact" "^10.0.0"
+
 "@algolia/autocomplete-preset-algolia@1.7.1":
   "integrity" "sha512-pJwmIxeJCymU1M6cGujnaIYcY3QPOVYZOXhFkWVM7IxKzy272BwCvMFMyc5NpG/QmiObBxjo7myd060OeTNJXg=="
   "resolved" "https://registry.npmjs.org/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.7.1.tgz"
@@ -16,10 +34,27 @@
   dependencies:
     "@algolia/autocomplete-shared" "1.7.1"
 
+"@algolia/autocomplete-preset-algolia@1.7.2":
+  "integrity" "sha512-+RYEG6B0QiGGfRb2G3MtPfyrl0dALF3cQNTWBzBX6p5o01vCCGTTinAm2UKG3tfc2CnOMAtnPLkzNZyJUpnVJw=="
+  "resolved" "https://registry.npmjs.org/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.7.2.tgz"
+  "version" "1.7.2"
+  dependencies:
+    "@algolia/autocomplete-shared" "1.7.2"
+
 "@algolia/autocomplete-shared@1.7.1":
   "integrity" "sha512-eTmGVqY3GeyBTT8IWiB2K5EuURAqhnumfktAEoHxfDY2o7vg2rSnO16ZtIG0fMgt3py28Vwgq42/bVEuaQV7pg=="
   "resolved" "https://registry.npmjs.org/@algolia/autocomplete-shared/-/autocomplete-shared-1.7.1.tgz"
   "version" "1.7.1"
+
+"@algolia/autocomplete-shared@1.7.2":
+  "integrity" "sha512-QCckjiC7xXHIUaIL3ektBtjJ0w7tTA3iqKcAE/Hjn1lZ5omp7i3Y4e09rAr9ZybqirL7AbxCLLq0Ra5DDPKeug=="
+  "resolved" "https://registry.npmjs.org/@algolia/autocomplete-shared/-/autocomplete-shared-1.7.2.tgz"
+  "version" "1.7.2"
+
+"@algolia/autocomplete-theme-classic@^1.5.1":
+  "integrity" "sha512-bUoT4wdScyAY4oZrk3zcaGwSKYJ11MGXNFIckWWN/Bd9xqoFu8/09Ujyw5WyzYZidHrs8D3FSTJi6sfHz5g3/Q=="
+  "resolved" "https://registry.npmjs.org/@algolia/autocomplete-theme-classic/-/autocomplete-theme-classic-1.7.2.tgz"
+  "version" "1.7.2"
 
 "@algolia/cache-browser-local-storage@4.14.2":
   "integrity" "sha512-FRweBkK/ywO+GKYfAWbrepewQsPTIEirhi1BdykX9mxvBPtGNKccYAxvGdDCumU1jL4r3cayio4psfzKMejBlA=="
@@ -76,7 +111,7 @@
     "@algolia/requester-common" "4.14.2"
     "@algolia/transporter" "4.14.2"
 
-"@algolia/client-search@^4.9.1", "@algolia/client-search@4.14.2":
+"@algolia/client-search@^4.12.0", "@algolia/client-search@^4.9.1", "@algolia/client-search@>= 4.5.1 < 6", "@algolia/client-search@>= 4.9.1 < 6", "@algolia/client-search@4.14.2":
   "integrity" "sha512-L5zScdOmcZ6NGiVbLKTvP02UbxZ0njd5Vq9nJAmPFtjffUSOGEp11BmD2oMJ5QvARgx2XbX4KzTTNS5ECYIMWw=="
   "resolved" "https://registry.npmjs.org/@algolia/client-search/-/client-search-4.14.2.tgz"
   "version" "4.14.2"
@@ -1178,6 +1213,20 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     "to-fast-properties" "^2.0.0"
 
+"@cmfcmf/docusaurus-search-local@^0.11.0":
+  "integrity" "sha512-UzJ0G7JfrhuXJ9h79vforQZs05C5rWhXqrK7C5ie1ImHLTC4RPW7FHagIpZULhcA2PbDkc4ewnWVIufLKq+KzA=="
+  "resolved" "https://registry.npmjs.org/@cmfcmf/docusaurus-search-local/-/docusaurus-search-local-0.11.0.tgz"
+  "version" "0.11.0"
+  dependencies:
+    "@algolia/autocomplete-js" "^1.5.1"
+    "@algolia/autocomplete-theme-classic" "^1.5.1"
+    "@algolia/client-search" "^4.12.0"
+    "algoliasearch" "^4.12.0"
+    "cheerio" "^1.0.0-rc.9"
+    "clsx" "^1.1.1"
+    "lunr-languages" "^1.4.0"
+    "mark.js" "^8.11.1"
+
 "@colors/colors@1.5.0":
   "integrity" "sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ=="
   "resolved" "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz"
@@ -1198,7 +1247,7 @@
     "@docsearch/css" "3.2.1"
     "algoliasearch" "^4.0.0"
 
-"@docusaurus/core@^2.0.0-alpha.0", "@docusaurus/core@2.1.0":
+"@docusaurus/core@^2.0.0-alpha.0", "@docusaurus/core@^v2.0.0-beta.21", "@docusaurus/core@2.1.0":
   "integrity" "sha512-/ZJ6xmm+VB9Izbn0/s6h6289cbPy2k4iYFwWDhjiLsVqwa/Y0YBBcXvStfaHccudUC3OfP+26hMk7UCjc50J6Q=="
   "resolved" "https://registry.npmjs.org/@docusaurus/core/-/core-2.1.0.tgz"
   "version" "2.1.0"
@@ -2471,7 +2520,7 @@
   dependencies:
     "@algolia/events" "^4.0.1"
 
-"algoliasearch@^4.0.0", "algoliasearch@^4.13.1", "algoliasearch@^4.9.1", "algoliasearch@>= 3.1 < 6":
+"algoliasearch@^4.0.0", "algoliasearch@^4.12.0", "algoliasearch@^4.13.1", "algoliasearch@^4.9.1", "algoliasearch@>= 3.1 < 6", "algoliasearch@>= 4.9.1 < 6":
   "integrity" "sha512-ngbEQonGEmf8dyEh5f+uOIihv4176dgbuOZspiuhmTTBRBuzWu3KCGHre6uHj5YyuC7pNvQGzB6ZNJyZi0z+Sg=="
   "resolved" "https://registry.npmjs.org/algoliasearch/-/algoliasearch-4.14.2.tgz"
   "version" "4.14.2"
@@ -2908,7 +2957,7 @@
     "domhandler" "^5.0.3"
     "domutils" "^3.0.1"
 
-"cheerio@^1.0.0-rc.12", "cheerio@^1.0.0-rc.3":
+"cheerio@^1.0.0-rc.12", "cheerio@^1.0.0-rc.3", "cheerio@^1.0.0-rc.9":
   "integrity" "sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q=="
   "resolved" "https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.12.tgz"
   "version" "1.0.0-rc.12"
@@ -4486,6 +4535,11 @@
   "integrity" "sha512-7Wn5GMLuHBjZCb2bTmnDOycho0p/7UVaAeqXZGbHrBCl6Yd/xDhQJAXe6Ga9AXJH2I5zY1dEdYw2u1UptnSBJA=="
   "resolved" "https://registry.npmjs.org/hsla-regex/-/hsla-regex-1.0.0.tgz"
   "version" "1.0.0"
+
+"htm@^3.0.0":
+  "integrity" "sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ=="
+  "resolved" "https://registry.npmjs.org/htm/-/htm-3.1.1.tgz"
+  "version" "3.1.1"
 
 "html-entities@^2.3.2":
   "integrity" "sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA=="
@@ -6230,6 +6284,11 @@
   "integrity" "sha512-nDSTIhmH/Fexv347Gx6wBCE97Z+fZTj0p/gqVYAaolMwSdVuzwyFWcFA+aW9uzA5Y5hjzRwwKJJOrIv8smkYkA=="
   "resolved" "https://registry.npmjs.org/posthog-docusaurus/-/posthog-docusaurus-2.0.0.tgz"
   "version" "2.0.0"
+
+"preact@^10.0.0":
+  "integrity" "sha512-skAwGDFmgxhq1DCBHke/9e12ewkhc7WYwjuhHB8HHS8zkdtITXLRmUMTeol2ldxvLwYtwbFeifZ9uDDWuyL4Iw=="
+  "resolved" "https://registry.npmjs.org/preact/-/preact-10.11.2.tgz"
+  "version" "10.11.2"
 
 "prepend-http@^2.0.0":
   "integrity" "sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA=="
