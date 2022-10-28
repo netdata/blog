@@ -1365,7 +1365,7 @@
     "url-loader" "^4.1.1"
     "webpack" "^5.73.0"
 
-"@docusaurus/module-type-aliases@2.1.0":
+"@docusaurus/module-type-aliases@^2.1.0", "@docusaurus/module-type-aliases@2.1.0":
   "integrity" "sha512-Z8WZaK5cis3xEtyfOT817u9xgGUauT0PuuVo85ysnFRX8n7qLN1lTPCkC+aCmFm/UcV8h/W5T4NtIsst94UntQ=="
   "resolved" "https://registry.npmjs.org/@docusaurus/module-type-aliases/-/module-type-aliases-2.1.0.tgz"
   "version" "2.1.0"
@@ -2014,6 +2014,11 @@
   "integrity" "sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA=="
   "resolved" "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
   "version" "0.2.0"
+
+"@tsconfig/docusaurus@^1.0.6":
+  "integrity" "sha512-1QxDaP54hpzM6bq9E+yFEo4F9WbWHhsDe4vktZXF/iDlc9FqGr9qlg+3X/nuKQXx8QxHV7ue8NXFazzajsxFBA=="
+  "resolved" "https://registry.npmjs.org/@tsconfig/docusaurus/-/docusaurus-1.0.6.tgz"
+  "version" "1.0.6"
 
 "@types/body-parser@*":
   "integrity" "sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g=="
@@ -7708,7 +7713,7 @@
   dependencies:
     "is-typedarray" "^1.0.0"
 
-"typescript@>= 2.7":
+"typescript@^4.8.4", "typescript@>= 2.7":
   "integrity" "sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.8.4.tgz"
   "version" "4.8.4"

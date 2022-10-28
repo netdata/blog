@@ -25,6 +25,10 @@ const config = {
   themes: [
   ],
 
+  scripts: [
+    {src:'https://cse.google.com/cse.js?cx=e2e7646659949450a', async: true},
+  ],
+
   presets: [
     [
       'classic',
