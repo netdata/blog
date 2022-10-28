@@ -162,6 +162,11 @@ const config = {
                 position: 'left',
               },
               {
+                type: 'html',
+                position: 'left',
+                value: '<div class="gcse-search"></div>',
+              },
+              {
                 to: 'https://app.netdata.cloud/',
                 label: 'Sign In',
                 position: 'right',

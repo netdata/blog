@@ -32,6 +32,13 @@ function NavbarContentLayout({left, right}) {
     </div>
   );
 }
+export const reactComponent=()=>{
+  return(
+  <div>
+  "I am react component"
+  </div>
+  )
+  }
 export default function NavbarContent() {
   const mobileSidebar = useNavbarMobileSidebar();
   const items = useNavbarItems();
@@ -45,6 +52,8 @@ export default function NavbarContent() {
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
           <NavbarItems items={leftItems} />
+          <reactComponent />
+          <div class="gcse-search"></div>
         </>
       }
       right={
