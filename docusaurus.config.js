@@ -164,7 +164,7 @@ const config = {
               {
                 type: 'html',
                 position: 'left',
-                value: '<div class="gcse-search"></div>',
+                value: '<script async src="https://cse.google.com/cse.js?cx=e2e7646659949450a"></script><div class="gcse-search"></div>',
               },
               {
                 type: 'html',
