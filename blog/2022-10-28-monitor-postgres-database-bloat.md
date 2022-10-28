@@ -41,71 +41,45 @@ postgres=# SELECT relname, pgstattuple(oid) FROM pg_class WHERE relkind = 'r';
 With the right sorting applied to the query, you can narrow down the top tables / indexes that are experiencing a bloat.
 
 ```
+-[ RECORD 1 ]------+-------------
+
 relname | pg_statistic
- 
 table_len | 147456
- 
 tuple_count | 387
- 
 tuple_len | 115800
- 
 tuple_percent | 78.53
- 
 dead_tuple_count | 27
- 
 dead_tuple_len | 8161
- 
 dead_tuple_percent | 5.53
- 
 free_space | 19840
- 
 free_percent | 13.45
  
 -[ RECORD 2 ]------+-------------
  
 relname | pg_type
- 
 table_len | 73728
- 
 tuple_count | 357
- 
 tuple_len | 61965
- 
 tuple_percent | 84.05
- 
 dead_tuple_count | 20
- 
 dead_tuple_len | 3440
- 
 dead_tuple_percent | 4.67
- 
 free_space | 4828
- 
 free_percent | 6.55
  
 -[ RECORD 3 ]------+-------------
  
 relname | pg_authid
- 
 table_len | 8192
- 
 tuple_count | 3
- 
 tuple_len | 324
- 
 tuple_percent | 3.96
- 
 dead_tuple_count | 0
- 
 dead_tuple_len | 0
- 
 dead_tuple_percent | 0
- 
 free_space | 7816
- 
 free_percent | 95.41
 ```
- 
  
 The results include only tables with moderate or significant bloat. Moderate bloat is reported when the ratio of actual to expected pages is greater than four and less than ten. Significant bloat is reported when the ratio is greater than ten.
 The gp_toolkit.gp_bloat_expected_pages view lists the actual number of used pages and expected number of used pages for each database object.
