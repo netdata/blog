@@ -138,6 +138,31 @@ a:hover {
  * Search
 */
 
+div.navbar__item {
+	height: 50px;
+	width: 300px;
+}
+
+div.gsc-control-cse {
+	height: 50px;
+	width: 300px;
+}
+
+div.gsc-control-wrapper-cse {
+	height: 50px;
+	width: 300px;
+}
+
+form.gsc-search-box {
+	height: 50px;
+	width: 300px;
+}
+
+table.gsc-search-box {
+	height: 50px;
+	width: 300px;
+}
+
 .SearchModal {
 	max-height: calc(100vh - 12rem);
 }
