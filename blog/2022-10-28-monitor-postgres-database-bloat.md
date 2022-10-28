@@ -26,21 +26,21 @@ Database bloat occurs in heap tables, append-optimized tables, indexes, and syst
 ## Detecting Bloat
 
 The statistics collected by the ANALYZE statement can be used to calculate the expected number of disk pages required to store a table. The difference between the expected number of pages and the actual number of pages is a measure of bloat. The PostgreSQL contrib package provides a package called pgstattuple to diagnose table bloat. :
-```yaml 
-postgres=# CREATE EXTENSION pgstattuple;
- 
+
+```bash
+postgres=# CREATE EXTENSION pgstattuple; 
 CREATE EXTENSION
 ```
 
 You can use a query like the one below to show the dead tuples (or table bloat) for every single table / index in your Database.
 
-```yaml 
+```bash
 postgres=# SELECT relname, pgstattuple(oid) FROM pg_class WHERE relkind = 'r';
 ```
 
 With the right sorting applied to the query, you can narrow down the top tables / indexes that are experiencing a bloat.
 
-```yaml
+```
 relname | pg_statistic
  
 table_len | 147456
@@ -109,7 +109,8 @@ free_percent | 95.41
  
 The results include only tables with moderate or significant bloat. Moderate bloat is reported when the ratio of actual to expected pages is greater than four and less than ten. Significant bloat is reported when the ratio is greater than ten.
 The gp_toolkit.gp_bloat_expected_pages view lists the actual number of used pages and expected number of used pages for each database object.
-```yaml
+
+```bash
 gpadmin=# SELECT * FROM gp_toolkit.gp_bloat_expected_pages LIMIT 5;
  btdrelid | btdrelpages | btdexppages 
 ----------+-------------+-------------
@@ -123,7 +124,7 @@ gpadmin=# SELECT * FROM gp_toolkit.gp_bloat_expected_pages LIMIT 5;
 
 The btdrelid is the object ID of the table. The btdrelpages column reports the number of pages the table uses; the btdexppages column is the number of pages expected. Again, the numbers reported are based on the table statistics, so be sure to run ANALYZE on tables that have changed.
 
-<img width="846" alt="image1" src="https://user-images.githubusercontent.com/96257330/198570109-7b2928c0-0756-49b5-83f2-75d5528e8fa4.png">
+![image1](https://user-images.githubusercontent.com/96257330/198570109-7b2928c0-0756-49b5-83f2-75d5528e8fa4.png)
 
 ## Removing Bloat from Database Tables
 
@@ -133,7 +134,6 @@ When a table accumulates significant bloat, running the VACUUM command is insuff
 
 **Warning**: When a table is significantly bloated, it is better to run VACUUM before running ANALYZE. Analyzing a severely bloated table can generate poor statistics if the sample contains empty pages, so it is good practice to vacuum a bloated table before analyzing it.
 
-
 ### Removing Bloat from Indexes
 
 The VACUUM command only recovers space from tables. To recover the space from indexes, recreate them using the REINDEX command.
@@ -141,7 +141,6 @@ The VACUUM command only recovers space from tables. To recover the space from in
 To rebuild all indexes on a table run REINDEX table_name;. To rebuild a particular index, run REINDEX index_name;. REINDEX sets the reltuples and relpages to 0 (zero) for the index, To update those statistics, run ANALYZE on the table after reindexing.
 
 ### Removing Bloat from System Catalogs
-
 
 Database system catalog tables are heap tables and can become bloated over time. As database objects are created, altered, or dropped, expired rows are left in the system catalogs. 
 
@@ -159,7 +158,6 @@ These are Database system catalog maintenance steps:
 
 
 **Note**: The system catalog table pg_attribute is usually the largest catalog table. If the pg_attribute table is significantly bloated, a VACUUM FULL operation on the table might require a significant amount of time and might need to be performed separately. The presence of both of these conditions indicate a significantly bloated pg_attribute table that might require a long VACUUM FULL time.
-
 
 ## Let us hear from you
 
