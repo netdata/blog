@@ -96,13 +96,13 @@ const config = {
         trackingID: 'UA-64295674-3'
       },
     ],
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: false,
-        indexBlog: true,
-      },
-    ],
+    //[
+    //  require.resolve("@cmfcmf/docusaurus-search-local"),
+    //  {
+    //    indexDocs: false,
+    //    indexBlog: true,
+    //  },
+    //],
     [
       "posthog-docusaurus",
       {
@@ -170,6 +170,11 @@ const config = {
                 type: 'html',
                 position: 'left',
                 value: '<div><button>Give feedback</button></div>',
+              },
+              {
+                type: 'search',
+                position: 'left',
+                className: 'gcse-search',
               },
               {
                 to: 'https://app.netdata.cloud/',
