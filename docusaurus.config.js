@@ -92,13 +92,13 @@ const config = {
         trackingID: 'UA-64295674-3'
       },
     ],
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: false,
-        indexBlog: true,
-      },
-    ],
+    //[
+    //  require.resolve("@cmfcmf/docusaurus-search-local"),
+    //  {
+    //    indexDocs: false,
+    //    indexBlog: true,
+    //  },
+    //],
     [
       "posthog-docusaurus",
       {
