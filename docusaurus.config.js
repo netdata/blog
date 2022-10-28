@@ -167,11 +167,6 @@ const config = {
                 value: '<div class="gcse-search"></div>',
               },
               {
-                type: 'html',
-                position: 'left',
-                value: '<div><button>Give feedback</button></div>',
-              },
-              {
                 to: 'https://app.netdata.cloud/',
                 label: 'Sign In',
                 position: 'right',
