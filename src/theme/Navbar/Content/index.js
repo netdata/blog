@@ -45,7 +45,6 @@ export default function NavbarContent() {
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
           <NavbarItems items={leftItems} />
-          <div class="gcse-search"></div>
         </>
       }
       right={
