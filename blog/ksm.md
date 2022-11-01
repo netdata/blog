@@ -48,7 +48,7 @@ This chart shows the amount of memory saved by KSM. **Savings** indicates saved 
 
 ### KSM effectiveness
 
-This chart tells you how well KSM is doing at what it is suppoesed to. It does this by charting the percentage of the mergeable pages that are currently merged.. 
+This chart tells you how well KSM is doing at what it is supposed to. It does this by charting the percentage of the mergeable pages that are currently merged. 
 
 ![image](https://user-images.githubusercontent.com/24860547/199331362-94a98239-b08e-45c0-9adf-777e51ed44e4.png)
 
