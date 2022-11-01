@@ -64,7 +64,7 @@ On Ubuntu, here's how you can enable it.
 
 Once KSM is enabled, you can monitor its progress by looking at the /sys/kernel/mm/ksm/pages_shared, /sys/kernel/mm/ksm/pages_sharing, and /sys/kernel/mm/ksm/pages_to_scan files.
 
-You may need to fine tune KSM for optimal performance, or to realize the memory savings quicker. You can do this by using the following sysctl parameters:
+You may need to fine-tune KSM for optimal performance, or to realize the memory savings quicker. You can do this by using the following sysctl parameters:
 - kernel.ksm.pages_to_scan (the default value of 100 means it will take a long time to scan the entire memory)
 - kernel.ksm.run_interval
 - kernel.ksm.sleep_millisecs
