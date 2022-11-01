@@ -14,7 +14,7 @@ Monitoring KSM (Kernel Same-page Merging) performance at deduping memory shared 
 
 ## Kernel Same-page Merging (KSM) 
 
-Linux kernels store memory in **pages** which are moved in and out of memory as a single block. On most Linux architectures pages are 4096 bytes. **KSM** (Kernel Same-page Merging) is a kernel feature which scans memory looking for pages with identical content, and then de-duplicates them. The most common use-case where such duplicate pages occur are on hosts running multiple virtual machines (VMs).
+Linux kernels store memory in **pages** which are moved in and out of memory as a single block. On most Linux architectures pages are 4096 bytes. **KSM** (Kernel Same-page Merging) is a kernel feature that scans memory looking for pages with identical content, and then de-duplicates them. The most common use-case where such duplicate pages occur is on hosts running multiple virtual machines (VMs).
 
 KSM can greatly reduce the amount of memory used by VMs. When it finds two or more identical pages, it replaces them with a single page that is shared by all VMs that are using it.
 
