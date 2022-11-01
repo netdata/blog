@@ -22,7 +22,7 @@ On hosts running a large number of VMs, this can lead to significant reductions 
 
 ## Monitoring KSM performance using Netdata
 
-Netdata auto discovers KSM (as long as it is enabled) and starts monitoring it with zero configuration requrired. The monitoring is done by reading the relevant files from `/sys/kernel/mm/ksm/`.
+Netdata auto discovers KSM (as long as it is enabled) and starts monitoring it with zero configuration required. The monitoring is done by reading the relevant files from `/sys/kernel/mm/ksm/`.
 
 The **deduper (ksm)** charts can be seen under the **Memory** section in the Netdata UI. 
 
