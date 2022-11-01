@@ -2,6 +2,7 @@
 slug: KSM 
 title: "Monitor KSM performance with Netdata"
 description: "Monitor KSM performance with Netdata"
+image: https://user-images.githubusercontent.com/24860547/199330415-0140bcee-76c7-4bf5-a9ca-201161d7e2c9.png
 tags: [ksm,linux,deduper,memory,vm,host]
 keywords: [ksm,linux,deduper,memory,vm,host,how-to,infrastructure-monitoring,monitoring]
 authors: shyam
@@ -17,7 +18,7 @@ Linux kernels store memory in **pages** which are moved in and out of memory as 
 
 KSM can greatly reduce the amount of memory used by VMs. When it finds two or more identical pages, it replaces them with a single page that is shared by all VMs that are using it.
 
-On hosts running a large number of VMs this can lead to significant reductions in memory usage, as well as significant performance improvements, since VMs will no longer need to keep track of multiple copies of the same page.
+On hosts running a large number of VMs, this can lead to significant reductions in memory usage, as well as significant performance improvements, since VMs will no longer need to keep track of multiple copies of the same page.
 
 ## Monitoring KSM performance using Netdata
 
