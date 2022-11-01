@@ -1,0 +1,103 @@
+---
+slug: cassandra-monitoring-part2
+title: "Monitoring & troubleshooting Cassandra with Netdata"
+description: "How to monitor and troubleshoot Cassandra with Netdata."
+image: https://user-images.githubusercontent.com/24860547/198524087-37dda416-a9a9-4c55-b379-0f46e990f83f.png
+tags: [how-to,infrastructure-monitoring,monitoring,cassandra]
+keywords: [how-to,infrastructure-monitoring,monitoring,cassandra,database,nosql]
+authors: shyam
+---
+
+How to monitor and troubleshoot Cassandra with Netdata.
+
+<!--truncate-->
+
+_**Note**: This post is the second part of a Cassandra monitoring series. Be sure to read our first entry [here](https://blog.netdata.cloud/cassandra-monitoring-part1)._
+
+## Monitoring Cassandra with Netdata
+
+Netdata’s [Cassandra collector documentation](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/cassandra) explains how to set it up to collect metrics automatically. 
+
+Once you have followed the instructions in the docs and have installed and configured Netdata on the Cassandra cluster you are ready to start monitoring and troubleshooting. Check out the [Cassandra demo room](https://app.netdata.cloud/spaces/netdata-demo/rooms/cassandra/overview) to interact with the charts, metrics and other functionality described here.
+
+Let us use the cassandra-stress tool to generate some workload with the following command:
+
+```
+cassandra-stress mixed duration=15m -rate threads=6
+```
+
+On the Netdata Cloud UI, navigate to the Cassandra section on the menu you see on the right side of the Overview tab. Clicking on it will expand the different sections into which Cassandra metrics are organized. 
+
+![image](https://user-images.githubusercontent.com/24860547/198523378-10bb963f-0e88-47a4-9df4-ac3dd813e1ed.png)
+
+Clicking on the Cassandra section will also bring up the summary overview which presents 4 of the key Cassandra performance indicators:
+- Latency
+- Key cache hit ratio
+- Disk usage
+- Unavailable exceptions
+
+This helps you to understand at a glance if there’s something seriously wrong with your Cassandra cluster that requires further troubleshooting or not.
+
+![image](https://user-images.githubusercontent.com/24860547/198523476-3b7339a3-f007-4545-8e24-25d1f1534eb4.png)
+
+To get to the rest of the charts you can either scroll down or click on the section you are interested in. Let’s walk through some of the metrics and see how these charts look.
+
+Since we used a single cassandra-stress command to initiate both reads and writes you can see that a similar pattern is followed for incoming requests.
+
+![image](https://user-images.githubusercontent.com/24860547/198523584-7106bc7e-374a-47d0-a3f9-86ee7c203736.png)
+
+When it comes to latency, it is measured in a couple of different ways. Latency across reads and writes are measured as a histogram with percentile bins of 50th, 75th, 95th, 98th, 99th, 99.9th to give you a good understanding of the latency distribution. Cassandra uses a histogram with an exponentially decaying reservoir which is representative (roughly) of the last 5 minutes of data. The total latency (summed across all requests) is also measured and presented in a different chart (not pictured here).
+
+![image](https://user-images.githubusercontent.com/24860547/198523656-9ec12e52-4afe-4bf6-9b01-82c28afe9b9d.png)
+![image](https://user-images.githubusercontent.com/24860547/198523696-e7bf9cb3-2181-40fa-b7db-ac2516f884ed.png)
+
+It’s always a good idea to keep an eye on how the cache is doing. Cassandra offers both the default key cache and an optional row cache. In the example below you can see that the row cache is not in use while the key cache has a pretty good hit ratio of 85%.
+
+![image](https://user-images.githubusercontent.com/24860547/198523762-e3af90ec-ce05-4f50-8fed-355f84df0c3c.png)
+
+
+Along with the key cache hit ratio, you can also monitor the utilization of the key cache itself and understand if you need to increase the allocated cache size or not. An underutilized key cache is also worth notice and might point to a change you need to make in how the workloads are managed.
+
+![image](https://user-images.githubusercontent.com/24860547/198523819-f6910241-9d3c-41fd-a93a-8ebf1feb51ba.png)
+
+
+The live disk space used up by Cassandra is another metric you can keep an eye on - and it is good practice to make sense of this chart in comparison to the built-in disk space usage chart under the mount points section. 
+
+![image](https://user-images.githubusercontent.com/24860547/198523858-cf8dd0ec-22a7-4414-93da-210211ea1248.png)
+
+A quick look at the compaction metrics tells us that things are in the green - the pending compaction tasks do not pile up and are quickly processed.
+
+![image](https://user-images.githubusercontent.com/24860547/198523956-201e820f-2871-44b2-a672-762ddeaa24c2.png)
+
+JVM related metrics such as the JVM memory used and garbage collection metrics are grouped under the JVM runtime section of Cassandra.
+
+![image](https://user-images.githubusercontent.com/24860547/198524010-4c3abfc9-bbee-4a2b-af1e-3e221c099a46.png)
+
+And last but not least we have the crucial section on potential errors and exceptions that are happening on this Cassandra cluster. During the benchmarking run we executed earlier we can see that the dropped message rate has spiked, and there was a temporary spike in requests being timed out as well. 
+
+![image](https://user-images.githubusercontent.com/24860547/198524056-8923a838-9b8a-4b85-80ec-205af002e2ee.png)
+![image](https://user-images.githubusercontent.com/24860547/198524087-37dda416-a9a9-4c55-b379-0f46e990f83f.png)
+
+There are other error and exception charts (unavailable exceptions, storage exceptions, failures etc.) which are not shown here since those errors or exceptions were not triggered during this particular benchmarking run.
+
+## Troubleshooting Cassandra 
+
+### ALERTS
+Netdata has a built-in health watchdog that comes with pre configured alerts to reduce the monitoring burden for you. 
+If you would like to update the alert thresholds for any of these alerts or want to create your own alert for another metric – please [follow the instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
+By default you will receive email notifications whenever an alert is triggered – if you would not like to receive these notifications you can turn them off from your profile settings.
+
+### ANOMALY ADVISOR
+Anomaly Advisor lets you quickly identify if the system you are monitoring has any anomalies and allows you to drill down into which metrics are behaving anomalously.
+To learn more about how to use Anomaly Advisor to troubleshoot your Cassandra cluster check out the [documentation](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor).
+
+### METRIC CORRELATIONS
+[Metric Correlations](https://learn.netdata.cloud/docs/cloud/insights/metric-correlations) lets you quickly find metrics and charts related to a particular window of interest that you want to explore further. By displaying the standard Netdata dashboard, filtered to show only charts that are relevant to the window of interest, you can get to the root cause sooner.
+Hope you are ready and excited to start your Cassandra monitoring journey with Netdata. 
+
+If you haven’t already, [sign up now for a free Netdata account!](https://app.netdata.cloud/)
+
+We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/). 
+
+Happy Troubleshooting!
+
