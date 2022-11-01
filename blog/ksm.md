@@ -1,13 +1,13 @@
 ---
 slug: KSM 
-title: "Deduping memory with KSM"
-description: "Deduping memory with KSM."
+title: "Monitor KSM performance with Netdata"
+description: "Monitor KSM performance with Netdata"
 tags: [ksm,linux,deduper,memory,vm,host]
 keywords: [ksm,linux,deduper,memory,vm,host,how-to,infrastructure-monitoring,monitoring]
 authors: shyam
 ---
 
-Deduping memory shared by multiple VMs using KSM (Kernel Same-page Merging)
+Monitoring KSM (Kernel Same-page Merging) performance at deduping memory shared across VMs.
 
 <!--truncate-->
 
