@@ -26,7 +26,7 @@ const config = {
   ],
 
   scripts: [
-    {src:'https://cse.google.com/cse.js?cx=e2e7646659949450a', async: true},
+    {src:'https://cse.google.com/cse.js?cx=e2e7646659949450a', async: false, defer: false},
   ],
 
   presets: [
