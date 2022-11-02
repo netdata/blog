@@ -62,7 +62,7 @@ As a pre-requisite you will need:
 
 Update the pandas conf file with the below information, replace the PATH_TO_CSV variable with the path where your csv file from step 3 is located.
 
-```
+```yaml
 airthings:
     name: "airthings"
     update_every: 5
