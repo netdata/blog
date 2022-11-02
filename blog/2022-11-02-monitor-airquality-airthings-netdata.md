@@ -50,7 +50,7 @@ As a pre-requisite you will need:
  export secret="secret-key"
 ```
 
-3. Run this python script (after updating client_id and device_id variables from the Airthings website) as a cronjob piping the results to a csv file. For example if you want to schedule the python script to run once every minute, add the following line to cron.
+3. Run [this python script](https://github.com/netdata/community/blob/main/utilities/airthings_collector.py) (after updating client_id and device_id variables from the Airthings website) as a cronjob piping the results to a csv file. For example if you want to schedule the python script to run once every minute, add the following line to cron.
 
 ```
 * * * * * <PATH_TO_PYTHON> <PYTHON_SCRIPT> <PATH_TO_CSV>
