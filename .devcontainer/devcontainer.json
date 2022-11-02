@@ -21,6 +21,11 @@
       "streetsidesoftware.code-spell-checker"
     ],
     "forwardPorts": [3000],
+    "portsAttributes": {
+        "3000": {
+            "protocol": "https"
+        }
+    },
     "containerUser": "vscode",
     "postCreateCommand": "yarn install",
     "waitFor": "postCreateCommand", // otherwise automated jest tests fail
