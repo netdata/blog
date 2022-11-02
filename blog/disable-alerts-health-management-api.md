@@ -4,6 +4,7 @@ title: "How to mute alerts during maintenance windows or scheduled backups?"
 description: "Disable or Mute Alerts during maintenance windows"
 tags: [netdata,alerts,silence,disable,mute,maintenance window]
 keywords: [netdata,alerts,silence,disable,mute,maintenance window]
+image: https://user-images.githubusercontent.com/96257330/199584396-0036ad74-fe5b-4f61-b68f-c6f254a2f43c.png
 authors: satya
 ---
 
