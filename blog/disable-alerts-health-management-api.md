@@ -119,7 +119,7 @@ curl "http://NODE:19999/api/v1/manage/health?cmd=LIST" -H "X-Auth-Token: Mytoken
 
 As an example, the following response shows that we have two silencers configured, one for an alarm called samplealarm and one for alarms with context random on host myhost
 
-```yaml
+```json
 json
 {
        "all": false,
