@@ -16,7 +16,7 @@ The health management APIs in Netdata allows teams to eliminate unnecessary aler
  
 ## Health Management API
 
-Netdata v1.12 and beyond provides a command API to control health checks and notifications at runtime. The feature is especially useful for maintenance periods, during which you receive meaningless alerts. From Netdata v1.16.0 and beyond, the configuration controlled via the API commands is [persisted across Netdata restarts](https://learn.netdata.cloud/docs/agent/web/api/health#persistence).
+Netdata provides a command API to control health checks and notifications at runtime. The feature is especially useful for maintenance periods, during which you receive meaningless alerts. The configurations controlled via the API commands is [persisted across Netdata restarts](https://learn.netdata.cloud/docs/agent/web/api/health#persistence).
 Specifically, the API allows you to:
 - Disable health checks completely. Alarm conditions will not be evaluated at all and no entries will be added to the alarm log.
 - Silence alarm notifications. Alarm conditions will be evaluated, the alarms will appear in the log and the Netdata UI will show the alarms as active, but no notifications will be sent.
