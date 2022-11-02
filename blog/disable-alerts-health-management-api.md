@@ -138,7 +138,6 @@ As an example, the following response shows that we have two silencers configure
 The response below shows that we have disabled all health checks.
 
 ```json
-json
 {
        "all": true,
        "type": "DISABLE",
