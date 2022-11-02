@@ -7,6 +7,10 @@ keywords: [netdata,alerts,silence,disable,mute,maintenance window]
 authors: satya
 ---
 
+The health management APIs in Netdata allows teams to eliminate unnecessary alerting during scheduled maintenance, testing, auto scaling events, and instance reboots.
+
+<!--truncate-->
+
 For all SREs, it is absolutely crucial to filter out expected events during maintenance windows and quickly pinpoint critical issues in your infrastructure. Every minute is crucial while dealing with troubleshooting issues and any distractions that may hijack the troubleshooting process should be subdued.
 The health management APIs in Netdata allows teams to eliminate unnecessary alerting during scheduled maintenance, testing, auto scaling events, and instance reboots.
  
