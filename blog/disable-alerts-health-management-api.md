@@ -14,6 +14,15 @@ The health management APIs in Netdata allows teams to eliminate unnecessary aler
 
 For all SREs, it is absolutely crucial to filter out expected events during maintenance windows and quickly pinpoint critical issues in your infrastructure. Every minute is crucial while dealing with troubleshooting issues and any distractions that may hijack the troubleshooting process should be subdued.
 The health management APIs in Netdata allows teams to eliminate unnecessary alerting during scheduled maintenance, testing, auto scaling events, and instance reboots.
+
+## Disabling Notifications from Netdata Cloud UI
+
+At the beginning of any maintenance window, you can turn off all the notifications for a space or even individual war rooms.
+
+<img width="700" alt="image1" src="https://user-images.githubusercontent.com/96257330/199587557-5495e465-ea7a-408b-8d80-1d7f7562712f.png">
+
+This will disable all notifications from Netdata Cloud but you will still need additional steps to disable / mute alerts from the nodes / agents themselves and are explained in the below sections.
+
  
 ## Health Management API
 
