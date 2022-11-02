@@ -7,7 +7,7 @@ keywords: [airthings,airquality,indoor,netdata,co2,humidity,temperature,monitori
 authors: shyam
 ---
 
-Monitoring indoor air quality with Airthings and Netdata.
+Monitoring indoor air quality with [Airthings](https://www.airthings.com/) and Netdata.
 
 <!--truncate-->
 
