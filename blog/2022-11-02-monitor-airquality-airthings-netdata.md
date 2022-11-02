@@ -18,19 +18,19 @@ Indoor air quality can be a crucial influence on your health, wellbeing and prod
 Understanding and measuring common contaminants and pollutants is the first step towards reducing your risk of air quality health concerns. 
 
 Airthings is a company that makes great air quality sensors that measure a wide variety of different variables including: 
-- CO2
+- **CO2**
   - Increased Carbon Dioxide levels can ­cause low productivity and infectious disease transmission.
-- Humidity
+- **Humidity**
   - Too much or too little humidity can affect allergies, asthma and cold or flu symptoms.
-- Temperature
+- **Temperature**
   - Indoor temperatures can affect sleep quality as well as performance and mood.
-- Radon
+- **Radon**
   - An odorless, radioactive gas that can cause cancer with prolonged unmitigated exposure.
-- Pressure
+- **Pressure**
   - Air pressure levels can be a good indicator of whether the ventilation system is working optimally or not.
-- Particulate Matter (PM1, PM2.5) 
+- **Particulate Matter (PM1, PM2.5)** 
   - A mixture of dust, dirt, and liquids that become suspended in the air.
-- VOC 
+- **VOC** 
   - Airborne chemicals and odors emitted from many everyday products, including cleaners, paints and furniture, cosmetics, hobby products, cooking etc.
 
 While Airthings comes with a mobile app - monitoring air quality metrics with Netdata offers some advantages such as being able to monitor it along with other relevant metrics, in-built anomaly detection and alerts. If you have multiple sensors, Netdata is a great option for a composite view. Let's take a look at how to monitor Airthings air quality metrics using Netdata.
@@ -143,15 +143,15 @@ Airthings metrics should now be visible in the Netdata UI.
 
 ![image](https://user-images.githubusercontent.com/24860547/199477710-ff6ecaf7-521f-4345-ab49-86fab5ffd087.png)
 
-Each metric is presented on a separate timeseries chart.
+Each metric is presented on a separate time-series chart.
 
 ![image](https://user-images.githubusercontent.com/24860547/199477936-d89f6601-ed62-4167-a7aa-239f6c44ceea.png)
 
-If you have multiple sensors, these charts will be composite the information from all of the sensors with the option to filter the ones you want to explore further. 
+If you have multiple sensors, these charts will composite the information from all of the sensors with the option to filter the ones you want to explore further. 
 
 ![image](https://user-images.githubusercontent.com/24860547/199477994-c4250231-a4aa-487e-a566-9c1a7b1466f2.png)
 
-Netdata comes with in-built unsupervised ML for anomaly detection, and each metric has an anomaly rate associated to it. This means that if the temperature or pressure or radon or any of these metrics starts behaving anomalously you can quickly spot it using Netdata.
+Netdata comes with in-built unsupervised ML for anomaly detection, and each metric has an anomaly rate associated with it. This means that if the temperature or pressure or radon or any of these metrics starts behaving anomalously you can quickly spot it using Netdata.
 
 ![image](https://user-images.githubusercontent.com/24860547/199478174-31413dd3-680e-4e4e-8aba-8e64cf2a8366.png)
 ![image](https://user-images.githubusercontent.com/24860547/199478271-483e0699-94f5-4336-813a-431e0acab673.png)
