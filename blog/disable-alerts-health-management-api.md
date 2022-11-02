@@ -3,7 +3,7 @@ slug: mute-alerts
 title: "How to mute alerts during maintenance windows or scheduled backups?"
 description: "Disable or Mute Alerts during maintenance windows"
 tags: [netdata,alerts,silence,disable,mute,maintenance-window]
-keywords: [netdata,alerts,silence,disable,mute,maintenance window]
+keywords: [netdata,alerts,silence,disable,mute,maintenance-window]
 image: https://user-images.githubusercontent.com/96257330/199584396-0036ad74-fe5b-4f61-b68f-c6f254a2f43c.png
 authors: satya
 ---
@@ -33,12 +33,14 @@ Specifically, the API allows you to:
 - Disable or Silence specific alarms that match selectors on alarm/template name, chart, context, host and family.
 
 The API is available by default, but it is protected by an api authorization token that is stored in the file you will see in the following entry of http://NODE:19999/netdata.conf:
+
 ```yaml
 [registry]
    # netdata management api key file = /var/lib/netdata/netdata.api.key
 ```
  
 You can access the API via GET requests, by adding the bearer token to an Authorization http header, like this:
+
 ```bash
 curl "http://NODE:19999/api/v1/manage/health?cmd=RESET" -H "X-Auth-Token: Mytoken"
 ```
@@ -52,17 +54,20 @@ The command RESET just returns Netdata to the default operation, with all health
 ## Disable or silence all alarms
 
 If all you need is temporarily disable all health checks, then you issue the following before your maintenance period starts:
+
 ```bash
 curl "http://NODE:19999/api/v1/manage/health?cmd=DISABLE ALL" -H "X-Auth-Token: Mytoken"
 ```
  
 The effect of disabling health checks is that the alarm criteria are not evaluated at all and nothing is written in the alarm log. If you want the health checks to be running but to not receive any notifications during your maintenance period, you can instead use this:
+
 ```bash
 curl "http://NODE:19999/api/v1/manage/health?cmd=SILENCE ALL" -H "X-Auth-Token: Mytoken"
 ```
 Alarms may then still be raised and logged in Netdata, so you'll be able to see them via the UI.
 
 Regardless of the option you choose, at the end of your maintenance period you revert to the normal state via the RESET command.
+
 ```bash
 curl "http://NODE:19999/api/v1/manage/health?cmd=RESET" -H "X-Auth-Token: Mytoken"
 ```
