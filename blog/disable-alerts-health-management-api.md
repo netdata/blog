@@ -17,7 +17,7 @@ The health management APIs in Netdata allows teams to eliminate unnecessary aler
 
 ## Disabling Notifications from Netdata Cloud UI
 
-At the beginning of any maintenance window, you can turn off all the notifications for a space or even individual war rooms.
+At the beginning of any maintenance window, you can turn off all the notifications for a user at space or even at the war room level.
 
 <img width="700" alt="image1" src="https://user-images.githubusercontent.com/96257330/199587557-5495e465-ea7a-408b-8d80-1d7f7562712f.png">
 
