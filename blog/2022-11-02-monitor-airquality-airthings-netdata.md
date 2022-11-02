@@ -2,12 +2,13 @@
 slug: airquality 
 title: "Monitor indoor air quality with Airthings and Netdata"
 description: "Monitor indoor air quality with Airthings and Netdata"
-tags: [airthings,airquality,indoor,netdata,co2,humidity,temperature,radon,pm1,pm25,voc,pressure]
+image: https://user-images.githubusercontent.com/24860547/199478174-31413dd3-680e-4e4e-8aba-8e64cf2a8366.png
+tags: [airthings,airquality,indoor,netdata,co2,humidity,temperature,radon,pm1,pm25,voc,pressure,how-to]
 keywords: [airthings,airquality,indoor,netdata,co2,humidity,temperature,monitoring,how-to]
 authors: shyam
 ---
 
-Monitoring indoor air quality with [Airthings](https://www.airthings.com/) and Netdata.
+Monitoring indoor air quality with [Airthings](https://www.airthings.com/) and Netdata. Understanding and measuring common contaminants and pollutants reduces your risk of air quality health concerns. 
 
 <!--truncate-->
 
@@ -42,7 +43,7 @@ As a pre-requisite you will need:
 - a Netdata cloud account
 - a system running the Netdata agent (and will need to run the Python collection script)  
 
-1. To start off you will need the API token and client id which can be created at https://dashboard.airthings.com/integrations/api-integration with the scopes ‘'’read:device:current_values’’’ checked.
+1. Create the API token and client id [here](https://dashboard.airthings.com/integrations/api-integration) with the scopes ‘'’read:device:current_values’’’ checked.
 
 2. Export the secret key as an environment variable:
 
@@ -156,13 +157,13 @@ If you have multiple sensors, these charts will composite the information from a
 
 ![image](https://user-images.githubusercontent.com/24860547/199477994-c4250231-a4aa-487e-a566-9c1a7b1466f2.png)
 
-Netdata comes with in-built unsupervised ML for [anomaly detection](https://learn.netdata.cloud/guides/monitor/anomaly-detection), and each metric has an anomaly rate associated with it. This means that if the temperature or pressure or radon or any of these metrics starts behaving anomalously you can quickly spot it using Netdata.
+Netdata comes with built-in unsupervised ML for [anomaly detection](https://learn.netdata.cloud/guides/monitor/anomaly-detection), and each metric has an anomaly rate associated with it. This means that if the temperature or pressure or radon or any of these metrics starts behaving anomalously, you can quickly spot it using Netdata.
 
 ![image](https://user-images.githubusercontent.com/24860547/199478174-31413dd3-680e-4e4e-8aba-8e64cf2a8366.png)
 ![image](https://user-images.githubusercontent.com/24860547/199478271-483e0699-94f5-4336-813a-431e0acab673.png)
 ![image](https://user-images.githubusercontent.com/24860547/199478326-13e59b9b-3945-4dca-be2e-dbbf3cff3b04.png)
 
-If you have other smart devices and sensors and are monitoring those with Netdata as well then it is very likely that metric correlation will point you towards the likely cause or trigger for a particular spike or dip that you see in these metrics. 
+If you have other smart devices and sensors and are monitoring those with Netdata as well, then it is very likely that metric correlation will point you towards the likely cause or trigger for a particular spike or dip that you see in these metrics. 
 
 ![image](https://user-images.githubusercontent.com/24860547/199478408-4f2f6783-f326-4fa9-bcba-f663ad72632c.png)
 ![image](https://user-images.githubusercontent.com/24860547/199478477-e41cb3a2-c367-4379-ace4-6d3596bbfd9c.png)
