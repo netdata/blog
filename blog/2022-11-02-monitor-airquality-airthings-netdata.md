@@ -151,7 +151,7 @@ If you have multiple sensors, these charts will composite the information from a
 
 ![image](https://user-images.githubusercontent.com/24860547/199477994-c4250231-a4aa-487e-a566-9c1a7b1466f2.png)
 
-Netdata comes with in-built unsupervised ML for anomaly detection, and each metric has an anomaly rate associated with it. This means that if the temperature or pressure or radon or any of these metrics starts behaving anomalously you can quickly spot it using Netdata.
+Netdata comes with in-built unsupervised ML for [anomaly detection](https://learn.netdata.cloud/guides/monitor/anomaly-detection), and each metric has an anomaly rate associated with it. This means that if the temperature or pressure or radon or any of these metrics starts behaving anomalously you can quickly spot it using Netdata.
 
 ![image](https://user-images.githubusercontent.com/24860547/199478174-31413dd3-680e-4e4e-8aba-8e64cf2a8366.png)
 ![image](https://user-images.githubusercontent.com/24860547/199478271-483e0699-94f5-4336-813a-431e0acab673.png)
