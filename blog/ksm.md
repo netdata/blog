@@ -30,7 +30,7 @@ The **deduper (ksm)** charts can be seen under the **Memory** section in the Net
 
 The summary gives you a quick idea of how much savings (in terms of bytes and in terms of percentage) KSM is able to achieve.
 
-![image](https://user-images.githubusercontent.com/24860547/199328063-d4f17c66-9825-49f9-8845-ee6488485f58.png)
+![image](https://user-images.githubusercontent.com/24860547/199454880-123ae7c4-071a-4811-95b8-18cf4e4f60a2.png)
 
 ### KSM pages merge performance 
 
@@ -38,19 +38,19 @@ This chart indicates the performance of page merging. **Shared** indicates used 
 
 A high ratio of Sharing to Shared indicates good sharing, but a high ratio of Unshared to Sharing indicates wasted effort.
 
-![image](https://user-images.githubusercontent.com/24860547/199330415-0140bcee-76c7-4bf5-a9ca-201161d7e2c9.png)
+![image](https://user-images.githubusercontent.com/24860547/199455374-d63fd2c2-e12b-4ddf-947b-35371215eb05.png)
 
 ### KSM savings
 
 This chart shows the amount of memory saved by KSM. **Savings** indicates saved memory. **Offered** indicates memory marked as mergeable.
 
-![image](https://user-images.githubusercontent.com/24860547/199331218-78efec0b-a03a-42fd-a678-ecdfd42db266.png)
+![image](https://user-images.githubusercontent.com/24860547/199455604-43cd9248-1f6e-4c31-be56-e0b9e432f48a.png)
 
 ### KSM effectiveness
 
 This chart tells you how well KSM is doing at what it is supposed to. It does this by charting the percentage of the mergeable pages that are currently merged. 
 
-![image](https://user-images.githubusercontent.com/24860547/199331362-94a98239-b08e-45c0-9adf-777e51ed44e4.png)
+![image](https://user-images.githubusercontent.com/24860547/199455770-4d7991ff-6b7e-4d96-9d23-33ffc572b370.png)
 
 ## How to check if KSM is enabled (and enable it if it isn't)
 
