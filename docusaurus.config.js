@@ -133,35 +133,36 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Netdata',
-          src: 'img/logo.svg',
+            alt: 'Netdata Learn logo',
+            src: 'img/logo.svg',
+            href: 'https://netdata.cloud/', // Default to `siteConfig.baseUrl`.
         },
         items: [
             {
-                to: 'https://www.netdata.cloud/',
-                label: 'Website',
-                position: 'left',
-              },
-              {
                 to: 'https://learn.netdata.cloud/',
                 label: 'Learn',
                 position: 'left',
-              },
-              {
+            },
+            {
+                to: '/tags/',
+                label: 'Browse Tags',
+                position: 'left',
+            },
+            {
                 to: 'https://community.netdata.cloud/',
                 label: 'Community',
                 position: 'left',
-              },
-              {
+            },
+            {
                 to: 'https://app.netdata.cloud/',
                 label: 'App',
                 position: 'left',
-              },
-              {
+            },
+            {
                 to: 'https://app.netdata.cloud/',
                 label: 'Sign In',
                 position: 'right',
-              },
+            },
         ],
       },
       footer: {
