@@ -19,10 +19,9 @@ The health management APIs in Netdata allows teams to eliminate unnecessary aler
 
 At the beginning of any maintenance window, you can turn off all the notifications for a user at space or even at the war room level.
 
-<img width="700" alt="image1" src="https://user-images.githubusercontent.com/96257330/199587557-5495e465-ea7a-408b-8d80-1d7f7562712f.png">
+![image1](https://user-images.githubusercontent.com/96257330/199587557-5495e465-ea7a-408b-8d80-1d7f7562712f.png)
 
 This will disable all notifications from Netdata Cloud but you will still need additional steps to disable / mute alerts from the nodes / agents themselves and are explained in the below sections.
-
  
 ## Health Management API
 
@@ -64,6 +63,7 @@ The effect of disabling health checks is that the alarm criteria are not evaluat
 ```bash
 curl "http://NODE:19999/api/v1/manage/health?cmd=SILENCE ALL" -H "X-Auth-Token: Mytoken"
 ```
+
 Alarms may then still be raised and logged in Netdata, so you'll be able to see them via the UI.
 
 Regardless of the option you choose, at the end of your maintenance period you revert to the normal state via the RESET command.
@@ -71,6 +71,7 @@ Regardless of the option you choose, at the end of your maintenance period you r
 ```bash
 curl "http://NODE:19999/api/v1/manage/health?cmd=RESET" -H "X-Auth-Token: Mytoken"
 ```
+
 ## Disable or silence specific alarms
 
 If you do not wish to disable/silence all alarms, then the DISABLE ALL and SILENCE ALL commands can't be used. Instead, the following commands expect that one or more alarm selectors will be added, so that only alarms that match the selectors are disabled or silenced.
@@ -89,6 +90,7 @@ The following example silences notifications for all the alarms with context=loa
 ```bash
 curl "http://NODE:19999/api/v1/manage/health?cmd=SILENCE&context=load" -H "X-Auth-Token: Mytoken"
 ```
+
 ## Selection criteria
 
 The **selection criteria** are key/value pairs, in the format key : value, where value is a Netdata [simple pattern](https://learn.netdata.cloud/docs/agent/libnetdata/simple_pattern). This means that you can create very powerful selectors (you will rarely need more than one or two).
@@ -124,8 +126,7 @@ curl "http://NODE:19999/api/v1/manage/health?cmd=LIST" -H "X-Auth-Token: Mytoken
 
 As an example, the following response shows that we have two silencers configured, one for an alarm called samplealarm and one for alarms with context random on host myhost
 
-```yaml
-json
+```json
 {
        "all": false,
        "type": "SILENCE",
@@ -143,8 +144,7 @@ json
 
 The response below shows that we have disabled all health checks.
 
-```yaml
-json
+```json
 {
        "all": true,
        "type": "DISABLE",
@@ -152,7 +152,6 @@ json
 }
 ```
  
-
 ## Let us hear from you
 
 If you haven’t already, [sign up now for a free Netdata account!](https://app.netdata.cloud/) 
@@ -160,4 +159,3 @@ If you haven’t already, [sign up now for a free Netdata account!](https://app.
 We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/).
 
 Happy Troubleshooting!
-
