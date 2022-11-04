@@ -30,7 +30,20 @@ function BlogPostPageContent({sidebar, children}) {
         ) : undefined
       }>
       <BlogPostItem>{children}</BlogPostItem>
-      <Giscus></Giscus>
+      <Giscus       
+      repo="netdata/blog"       
+      repoId="MDEwOlJlcG9zaXRvcnkxNjg4NjY1MDU="       
+      category="General"       
+      categoryId="DIC_kwDOChCyyc4CSXx_"       
+      mapping="pathname"       
+      reactionsEnabled="1"       
+      emitMetadata="0"       
+      inputPosition="bottom"       
+      theme="preferred_color_scheme"
+      lang="en"       
+      loading="lazy"       
+      crossorigin="anonymous"
+      />
       {(nextItem || prevItem) && (
         <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
       )}
