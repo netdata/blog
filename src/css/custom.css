@@ -122,6 +122,15 @@ a:hover {
 	@apply bg-gray-50;
 }
 
+.header-github-link::before {
+	background: url("../../static/img/GitHub-Mark-Light-64px.png");
+	background-size: cover;
+	content: '';
+	display: flex;
+	height: 24px;
+	width: 24px;
+}
+
 /*
  * Navbar / mobile
 */

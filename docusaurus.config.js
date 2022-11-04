@@ -135,7 +135,6 @@ const config = {
         logo: {
             alt: 'Netdata Learn logo',
             src: 'img/logo.svg',
-            href: 'https://netdata.cloud/', // Default to `siteConfig.baseUrl`.
         },
         items: [
             {
@@ -159,9 +158,20 @@ const config = {
                 position: 'left',
             },
             {
+                to: 'https://www.netdata.cloud/',
+                label: 'Website',
+                position: 'left',
+            },
+            {
                 to: 'https://app.netdata.cloud/',
                 label: 'Sign In',
                 position: 'right',
+            },
+            {
+                href: 'https://github.com/netdata/netdata',
+                position: 'right',
+                className: 'header-github-link',
+                'aria-label': 'GitHub repository',
             },
         ],
       },
