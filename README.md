@@ -5,7 +5,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 ### Create Blog Post
 
 1. Create a branch for your post.
-2. In your branch create a file like `blog/2022-01-01-my-blog-slug.md` (so `blog/<yyyy-mm-dd>-<url-slug-you-want>`).
+2. In your branch create a file like `blog/2022-01-01-my-blog-slug.md` or (better since can add images in folder alongside the post) `blog/2022-01-01-my-blog-slug/index.md` (so `blog/<yyyy-mm-dd>-<url-slug-you-want>.md` or `blog/<yyyy-mm-dd>-<url-slug-you-want>/index.md`).
 3. Add [frontmater](https://docusaurus.io/docs/create-doc#doc-front-matter) metadata at top of post (use an existing post as an example or starting point). Add yourself to [`/blog/authors.yml`](/blog/authors.yml) if needed.
 4. Create your post in markdown, or .mdx [like this one](https://raw.githubusercontent.com/netdata/blog/improve-readme/blog/2022-09-01-how-netdatas-machine-learning-works.mdx) if need to embed a YouTube video or do anything else a bit more fancy.
 5. Optionally build site locally with `npm install` and then `npm run start`. If builds successfully a local version of the blog will be at: http://localhost:3000/
