@@ -18,7 +18,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 - Anything between start of post and `<!--truncate-->` will appear as a preview on blog landing page.
 - Use [code blocks](https://docusaurus.io/docs/markdown-features/code-blocks) and tell the code block what language to use so it looks as pretty as possible.
 - If you have images you can upload them to your PR and just use the github url for them. Better would be to make a folder for your post and include images locally. See [this post](https://github.com/netdata/blog/tree/master/blog/2022-10-19-pandas-python) as an example.
-- If you want to work locally you can create a development preview of the site locally with `npm install` and then `npm run start`. If builds successfully a local version of the blog will be at: http://localhost:3000/
+- If you want to work locally you can create a development preview of the site with `npm install` and then `npm run start`. If builds successfully a local version of the blog will be at: http://localhost:3000/
 
 ### Installation
 
