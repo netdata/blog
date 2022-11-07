@@ -27,6 +27,22 @@ const config = {
 
   scripts: [
     {src:'https://cse.google.com/cse.js?cx=e2e7646659949450a', async: false, defer: false},
+    {
+      'src': 'https://giscus.app/client.js',
+      'data-repo': 'netdata/blog',
+      'data-repo-id': 'MDEwOlJlcG9zaXRvcnkxNjg4NjY1MDU=',
+      'data-category': 'General',
+      'data-category-id': 'DIC_kwDOChCyyc4CSXx_',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-theme': 'preferred_color_scheme',
+      'data-lang': 'en',
+      'crossorigin': 'anonymous',
+      async: true,
+    },
   ],
 
   presets: [
