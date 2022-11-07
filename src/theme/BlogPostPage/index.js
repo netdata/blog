@@ -7,7 +7,7 @@ import BlogPostItem from '@theme/BlogPostItem';
 import BlogPostPaginator from '@theme/BlogPostPaginator';
 import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata';
 import TOC from '@theme/TOC';
-import {Squeak} from '@site/src/components/squeak/Squeak';
+import Giscus from '@giscus/react';
 
 function BlogPostPageContent({sidebar, children}) {
   const {metadata, toc} = useBlogPost();
@@ -30,8 +30,20 @@ function BlogPostPageContent({sidebar, children}) {
         ) : undefined
       }>
       <BlogPostItem>{children}</BlogPostItem>
-      <Squeak slug={metadata.permalink} />
-
+      <Giscus
+        repo="netdata/blog"
+        repoId="MDEwOlJlcG9zaXRvcnkxNjg4NjY1MDU="
+        category="General"
+        categoryId="DIC_kwDOChCyyc4CSXx_"
+        mapping="pathname"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="bottom"
+        theme="preferred_color_scheme"
+        lang="en"
+        loading="lazy"
+        crossorigin="anonymous"
+      />
       {(nextItem || prevItem) && (
         <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
       )}
