@@ -29,7 +29,7 @@ function BlogPostPageContent({sidebar, children}) {
           />
         ) : undefined
       }>
-      <script async src="https://cse.google.com/cse.js?cx=e2e7646659949450a"></script>
+      <script src="https://cse.google.com/cse.js?cx=e2e7646659949450a"></script>
       <BlogPostItem>{children}</BlogPostItem>
       <Giscus
         repo="netdata/blog"
