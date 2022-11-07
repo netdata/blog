@@ -140,6 +140,11 @@ a:hover {
 /*
  * Search
 */
+
+.___gcse_0 {
+  height: 35px;
+}
+
 form.gsc-search-box {
   margin: 0;
 }
