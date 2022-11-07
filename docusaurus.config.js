@@ -142,9 +142,9 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         createRedirects(existingPath) {
-          if (existingPath.includes('/posts')) {
+          if (existingPath.includes('/posts/')) {
             return [
-              existingPath.replace('/', '/posts'),
+              existingPath.replace('/', '/posts/'),
             ];
           }
           return undefined; // Return a falsy value: no redirect created
