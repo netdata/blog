@@ -141,20 +141,14 @@ const config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        redirects: [
-          {
-            from: '/posts/docker-monitoring-netdata',
-            to: '/docker-monitoring-netdata',
-          },
-        ],
-        //createRedirects(existingPath) {
-        //  if (existingPath.includes('/')) {
-        //    return [
-        //      existingPath.replace('/', '/posts/'),
-        //    ];
-        //  }
-        //  return undefined;
-        //},
+        createRedirects(existingPath) {
+          if (existingPath.includes('/')) {
+            return [
+              existingPath.replace('/', '/posts/'),
+            ];
+          }
+          return undefined;
+        },
       },
     ],
   ],
