@@ -147,14 +147,14 @@ const config = {
             to: '/docker-monitoring-netdata',
           },
         ],
-        createRedirects(existingPath) {
-          if (existingPath.includes('/')) {
-            return [
-              existingPath.replace('/', '/posts/'),
-            ];
-          }
-          return undefined;
-        },
+        //createRedirects(existingPath) {
+        //  if (existingPath.includes('/')) {
+        //    return [
+        //      existingPath.replace('/', '/posts/'),
+        //    ];
+        //  }
+        //  return undefined;
+        //},
       },
     ],
   ],
