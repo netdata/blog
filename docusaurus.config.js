@@ -143,8 +143,8 @@ const config = {
       {
         redirects: [
           {
-            to: '/posts/docker-monitoring-netdata/',
-            from: '/docker-monitoring-netdata/',
+            to: '/docker-monitoring-netdata/',
+            from: '/posts/docker-monitoring-netdata/',
           },
         ],
         //createRedirects(existingPath) {
