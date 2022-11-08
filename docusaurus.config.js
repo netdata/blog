@@ -123,7 +123,7 @@ const config = {
       {
         apiKey: 'phc_hnhlqe6D2Q4IcQNrFItaqdXJAxQ8RcHkPAFAp74pubv',
         appUrl: 'https://app.posthog.com',
-        enableInDevelopment: false,
+        enableInDevelopment: true,
         opt_in_site_apps: true,
       }
     ],
@@ -147,14 +147,14 @@ const config = {
             from: '/docker-monitoring-netdata/',
           },
         ],
-        createRedirects(existingPath) {
-          if (existingPath.includes('/posts')) {
-            return [
-              existingPath.replace('/posts', ''),
-            ];
-          }
-          return undefined;
-        },
+        //createRedirects(existingPath) {
+        //  if (existingPath.includes('/posts')) {
+        //    return [
+        //      existingPath.replace('/posts', ''),
+        //    ];
+        //  }
+        //  return undefined;
+        //},
       },
     ],
   ],
