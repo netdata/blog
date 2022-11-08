@@ -123,9 +123,9 @@ const config = {
     [
       "posthog-docusaurus",
       {
-        apiKey: "phc_hnhlqe6D2Q4IcQNrFItaqdXJAxQ8RcHkPAFAp74pubv",
-        appUrl: "https://app.posthog.com",
-        enableInDevelopment: false,
+        apiKey: 'phc_hnhlqe6D2Q4IcQNrFItaqdXJAxQ8RcHkPAFAp74pubv',
+        appUrl: 'https://app.posthog.com',
+        enableInDevelopment: true,
         opt_in_site_apps: true,
       },
     ],
@@ -140,6 +140,19 @@ const config = {
         },
       };
     },
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          if (existingPath.includes('/')) {
+            return [
+              existingPath.replace('/', '/posts/'),
+            ];
+          }
+          return undefined;
+        },
+      },
+    ],
   ],
 
   themeConfig:
