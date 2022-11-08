@@ -138,6 +138,25 @@ const config = {
         },
       };
     },
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/posts/docker-monitoring-netdata/',
+            from: '/docker-monitoring-netdata/',
+          },
+        ],
+        createRedirects(existingPath) {
+          if (existingPath.includes('/posts')) {
+            return [
+              existingPath.replace('/posts', ''),
+            ];
+          }
+          return undefined;
+        },
+      },
+    ],
   ],
 
   themeConfig:
