@@ -7,6 +7,7 @@ tags: [how-to,infrastructure-monitoring,monitoring]
 keywords: [how-to,infrastructure-monitoring,monitoring]
 authors: chris
 ---
+<head><link rel="canonical" href="https://blog.netdata.cloud/systemd-service-liveness" /></head>
 
 The life of a sysadmin or SRE is often difficult, but occasionally very simple things can make a huge difference. Basic monitoring of your systemd services is one of those simple things, which we sometimes overlook. The simplest question one would want to know is if the thing that’s supposed to be running is actually running at all. If you use systemd services, you can guarantee an answer to that question within minutes using Netdata. 
 

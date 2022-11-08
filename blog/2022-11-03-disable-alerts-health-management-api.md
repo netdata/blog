@@ -7,6 +7,7 @@ keywords: [netdata,alerts,silence,disable,mute,maintenance-window]
 image: https://user-images.githubusercontent.com/96257330/199584396-0036ad74-fe5b-4f61-b68f-c6f254a2f43c.png
 authors: satya
 ---
+<head><link rel="canonical" href="https://blog.netdata.cloud/mute-alerts" /></head>
 
 The health management APIs in Netdata allows teams to eliminate unnecessary alerting during scheduled maintenance, testing, auto scaling events, and instance reboots.
 
