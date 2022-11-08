@@ -7,6 +7,7 @@ tags: [airthings,airquality,indoor,netdata,co2,humidity,temperature,radon,pm1,pm
 keywords: [airthings,airquality,indoor,netdata,co2,humidity,temperature,monitoring,how-to]
 authors: shyam
 ---
+<head><link rel="canonical" href="https://blog.netdata.cloud/airquality" /></head>
 
 Monitoring indoor air quality with [Airthings](https://www.airthings.com/) and Netdata. Understanding and measuring common contaminants and pollutants reduces your risk of air quality health concerns. 
 

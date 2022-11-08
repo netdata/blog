@@ -7,6 +7,7 @@ tags: [how-to,infrastructure-monitoring,monitoring,postgresql,bloat]
 keywords: [how-to,infrastructure-monitoring,monitoring,postgresql,database,bloat]
 authors: satya
 ---
+<head><link rel="canonical" href="https://blog.netdata.cloud/postgresql-database-bloat" /></head>
 
 Database bloat is disk space that was used by a table or index and is available for reuse by the database but has not been reclaimed. Bloat is created when deleting or updating tables and indexes. Here's how to deal with it!
 

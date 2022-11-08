@@ -7,6 +7,7 @@ tags: [how-to,infrastructure-monitoring]
 keywords: [how-to,infrastructure-monitoring]
 authors: satya
 ---
+<head><link rel="canonical" href="https://blog.netdata.cloud/web-servers-and-their-performance" /></head>
 
 <!--truncate-->
 
