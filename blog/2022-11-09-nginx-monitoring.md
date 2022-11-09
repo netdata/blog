@@ -22,7 +22,7 @@ Netdata has a public loginless [demo space](https://app.netdata.cloud/spaces/net
 
 ## Monitoring NGINX with Netdata
 
-The prerequisites for monitoring NGINX with Netdata is to have one or more NGINX web servers configured with [ngx_http_stub_status_module].
+The prerequisite for monitoring NGINX with Netdata is to have one or more NGINX web servers configured with [ngx_http_stub_status_module].
 The only configuration needed is to define the [url] to the server's [stub_status] in the go.d/nginx.conf file. For more details take a look at the [NGINX documentation](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/nginx). 
 
 ```yaml
@@ -84,12 +84,12 @@ For example, the alert shown below will raise a Warning alert if there are 10-20
 ## NGINX Error Metrics
 
 NGINX error metrics tell you how often your servers are returning errors instead of producing useful work. Client errors are represented by [4xx status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_client_errors), server errors with [5xx status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_server_errors).
-Although open source NGINX does not make error rates immediately available for monitoring, you can configure NGINX’s log module to write response codes in the access log. More details on this are available on a related blog [How to monitor web servers and their performance?](https://blog.netdata.cloud/web-servers-and-their-performance/)
 
 ## NGINX Performance Metrics
 
 The request time metric logged by NGINX records the processing time for each request, from the reading of the first client bytes to fulfilling the request. Long response times can point to problems upstream.
-Although open source NGINX does not make performance metrics immediately available for monitoring, you can configure NGINX’s log module to write request processing times in the access log. More details on this are available on a related blog [How to monitor web servers and their performance?](https://blog.netdata.cloud/web-servers-and-their-performance/)
+
+**Note**: Although open source NGINX does not make error and performance metrics immediately available for monitoring, you can configure NGINX’s log module to write response codes and request processing times in the access log. More details on this are available on a related blog [How to monitor web servers and their performance?](https://blog.netdata.cloud/web-servers-and-their-performance/)
 
 
 ## Let us hear from you
