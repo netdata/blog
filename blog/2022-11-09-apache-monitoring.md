@@ -39,7 +39,7 @@ Netdata's Apache summary dashboard helps you get a quick grasp of how your web s
 
 ### Requests
 
-The rate of requests received per second is an important metric to monitor. A sudden and substantial increase in the rate of requests is definitely worth digging deeper into. It could be indicative of, for example, a DoS (Denial of Service) attack. Even if the traffic is not malicious in nature you might still need to make changes to ensure your infrastructure is ready to handle the extra load. A significant decrease in the rate of requests could also point to problems that need troubleshooting.
+The rate of requests received per second is an important metric to monitor. A sudden and substantial increase in the rate of requests is definitely worth digging deeper into. It could be indicative of, for example, a [DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) (Denial of Service) attack. Even if the traffic is not malicious in nature you might still need to make changes to ensure your infrastructure is ready to handle the extra [load](https://blog.netdata.cloud/server-load/#what-is-server-load). A significant decrease in the rate of requests could also point to problems that need troubleshooting.
 
 ![image](https://user-images.githubusercontent.com/24860547/200813379-b1d198c3-1f11-48e7-8251-e6f6191d4897.png)
 
