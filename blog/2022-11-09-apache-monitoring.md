@@ -12,7 +12,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/1/10/Apache_HTTP_server_lo
 
 The Apache HTTP Server ([Apache HTTPd](https://httpd.apache.org/)) is one of the most popular open source web servers available. HTTPd was also the first project developed by the Apache Software foundation which now supports hundreds of well known projects including [Kafka](https://kafka.apache.org/), [Cassandra](https://cassandra.apache.org/_/index.html) and [Hadoop](https://hadoop.apache.org/). 
 
-Netdata has a public loginless [demo space](https://app.netdata.cloud/spaces/netdata-demo) where you can explore different monitoring use-cases. Check out the <a href="https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/overview#chartName=menu_apache">Apache demo room </a>to explore and interact with the charts and metrics described here.
+Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo) where you can explore different monitoring use-cases. Check out the [Apache demo room](https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/overview#chartName=menu_apache) to explore and interact with the charts and metrics described here.
 
 For more information on monitoring web servers, do visit our [blog](https://blog.netdata.cloud/web-servers-and-their-performance/)
 
