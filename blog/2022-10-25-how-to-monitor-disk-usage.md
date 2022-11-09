@@ -7,7 +7,6 @@ tags: [how-to,infrastructure-monitoring]
 keywords: [how-to,infrastructure-monitoring]
 authors: satya
 ---
-<head><link rel="canonical" href="https://blog.netdata.cloud/disk-usage" /></head>
 
 The most important part of disk usage monitoring is to check the utilization of each filesystem and each mount point which can reveal existing or impending issues with the storage space on your infrastructure.
 <!--truncate-->
