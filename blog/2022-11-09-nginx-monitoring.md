@@ -68,19 +68,18 @@ You can also setup a custom alert to report any dropped connections on your NGIN
 For example, the alert shown below will raise a Warning alert if there are 10-20% dropped connections and a Critical alert when the dropped connections go beyond 20%.
 
 ```yaml
- template: NGINX_Dropped_Connections_Exceeded
-    on: nginx.connections_accepted_handled
- class: Utilization
- type: NGINX
+  template: NGINX_Dropped_Connections_Exceeded
+        on: nginx.connections_accepted_handled
+     class: Utilization
+      type: NGINX
  component: NGINX
- calc: (($accepted - $handled) * 100) / ($accepted)
- every: 1m
- units: %
-  warn: $this > (($status >= $WARNING)  ? (10) : (20))
-  crit: $this > (($status == $CRITICAL) ? (20) : (30))
-  delay: down 15m multiplier 1.5 max 1h
-  info: The NGINX web server has exceeded the limit of dropped connections
-
+      calc: (($accepted - $handled) * 100) / ($accepted)
+     every: 1m
+     units: %
+      warn: $this > (($status >= $WARNING)  ? (10) : (20))
+      crit: $this > (($status == $CRITICAL) ? (20) : (30))
+     delay: down 15m multiplier 1.5 max 1h
+      info: The NGINX web server has exceeded the limit of dropped connections
 ```
 ## NGINX Error Metrics
 
