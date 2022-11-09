@@ -34,9 +34,13 @@ Netdata's Apache summary dashboard helps you get a quick grasp of how your web s
 
 ### Requests
 
+The average number of requests received per second is an important metric to monitor. A sudden and substantial increase in the rate of requests is definitely worth digging deeper into. It could be indicative of, for example a DoS (Denial of Service) attack. Even if the traffic is not malicious in nature you might still need to make changes to ensure your infrastructure is ready to handle the extra load. A significant decrease in the rate of requests could also point to problems that need troubleshooting.
+
 ![image](https://user-images.githubusercontent.com/24860547/200813379-b1d198c3-1f11-48e7-8251-e6f6191d4897.png)
 
 ### Connections
+
+
 
 ![image](https://user-images.githubusercontent.com/24860547/200813473-16a94cf1-860f-43de-914b-771b20c79916.png)
 
@@ -44,7 +48,15 @@ Netdata's Apache summary dashboard helps you get a quick grasp of how your web s
 ![image](https://user-images.githubusercontent.com/24860547/200813567-ae74d0e4-b8e6-443a-930e-49ddb2e11851.png)
 
 
+The Apache Scoreboard is a very useful chart if you are trying to troubleshoot issues with your web server. The traditional view of the scoreboard looks like this:
+
+![image](https://user-images.githubusercontent.com/24860547/200816766-29a42d42-4979-4d76-b499-be6cc2dfbd09.png)
+
+In Netdata, the scoreboard is represented as a helpful chart and you don't need to worry about remembering all of the acronyms. 
+
 ![image](https://user-images.githubusercontent.com/24860547/200813628-53486c70-87d9-43ae-a690-6d3b3e473a02.png)
+
+A scoreboard that displays a large amount of `sending` may indicate a poorly performing web application such as a PHP website. If however the same happens along with a large number of traffic spikes, it may be due to a DoS attack. A large amount of `reading` on the other hand may indicate a [Slowloris](https://en.wikipedia.org/wiki/Slowloris_(computer_security)) attack, where many connections are opened and kept open for as long as possible.
 
 
 ### Bandwidth
