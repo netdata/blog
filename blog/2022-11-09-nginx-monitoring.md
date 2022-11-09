@@ -13,7 +13,7 @@ Web servers are among the most important components in modern IT infrastructures
 
 ## What is NGINX?
 
-NGINX (pronounced “engine X”) is a popular HTTP server and reverse proxy server. As an HTTP server, NGINX serves static content very efficiently and reliably, using relatively little memory. As a reverse proxy, it can be used as a single, controlled point of access for multiple back-end servers or for additional applications such as caching and load balancing. NGINX is available as a free, open source product or in a more full-featured, commercially distributed version called NGINX Plus.
+[NGINX](https://www.nginx.com/) (pronounced “engine X”) is a popular [HTTP server](https://en.wikipedia.org/wiki/Web_server) and [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy) server. As an HTTP server, NGINX serves static content very efficiently and reliably, using relatively little memory. As a reverse proxy, it can be used as a single, controlled point of access for multiple back-end servers or for additional applications such as [caching](https://en.wikipedia.org/wiki/Web_cache) and [load balancing](https://en.wikipedia.org/wiki/Load_balancing_(computing)). NGINX is available as a free, open source product or in a more full-featured, commercially distributed version called NGINX Plus.
 
 NGINX can also be used as a mail proxy and a generic TCP proxy, but this article addresses NGINX monitoring only as a web server.
 
