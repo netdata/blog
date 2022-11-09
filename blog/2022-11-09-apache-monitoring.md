@@ -65,7 +65,7 @@ In Netdata, the scoreboard is represented as a helpful chart and you don't need 
 
 - A large amount of `reading` on the other hand may indicate a [Slowloris](https://en.wikipedia.org/wiki/Slowloris_(computer_security)) attack, where many connections are opened and kept open for as long as possible.
 
-- A lot of connections in a keep-alive state, may indicate that the server is getting many requests from clients that do not make subsequent requests (and therefore do not help you reap the intended benefits of keep-alive connections). 
+- A lot of connections in a keep-alive state, may indicate that the server is getting many requests from clients that do not make subsequent requests (and therefore do not help you reap the intended benefits of [keep-alive connections](https://en.wikipedia.org/wiki/HTTP_persistent_connection)). 
 
 ### Bandwidth
 
