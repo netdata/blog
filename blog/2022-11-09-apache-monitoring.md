@@ -14,6 +14,8 @@ The Apache HTTP Server ([Apache HTTPd](https://httpd.apache.org/)) is one of the
 
 Netdata has a public loginless [demo space](https://app.netdata.cloud/spaces/netdata-demo) where you can explore different monitoring use-cases. Check out the <a href="https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/overview#chartName=menu_apache">Apache demo room </a>to explore and interact with the charts and metrics described here.
 
+For more information on monitoring web servers, do visit our [blog](https://blog.netdata.cloud/web-servers-and-their-performance/)
+
 ## Monitoring Apache with Netdata
 
 The prerequisites for monitoring Apache with Netdata are to have one or more Apache web server running with [mod_status](https://httpd.apache.org/docs/2.4/mod/mod_status.html) enabled and of course that you have [Netdata installed](https://learn.netdata.cloud/docs/cloud/get-started) on your system. 
