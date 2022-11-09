@@ -64,7 +64,7 @@ In Netdata, the scoreboard is represented as a helpful chart and you don't need 
 
 ### Bandwidth
 
-The bandwidth handled by the Apache server (measured in megabits per second) is another important metric that helps you understand the load your server is currently handling.
+The bandwidth handled by the Apache server (measured in megabits per second) is another important metric that helps you understand the [load](https://blog.netdata.cloud/server-load#what-is-server-load) your server is currently handling.
 
 ![image](https://user-images.githubusercontent.com/24860547/200813688-67011d91-2fd1-48ee-a492-bb7409609e06.png)
 
