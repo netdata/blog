@@ -4,6 +4,7 @@ title: Apache Monitoring
 description: "Best practices for Apache Server monitoring."
 authors: shyam
 tags: [how-to, monitor, troubleshoot, Apache, web server]
+keywords: [how-to, monitor, troubleshoot, Apache, web server]
 ---
 <!--truncate-->
 ## What is Apache?
