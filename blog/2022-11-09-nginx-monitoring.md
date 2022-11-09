@@ -23,7 +23,7 @@ Netdata has a public loginless [demo space](https://app.netdata.cloud/spaces/net
 ## Monitoring NGINX with Netdata
 
 The prerequisites for monitoring NGINX with Netdata is to have one or more NGINX web servers configured with [ngx_http_stub_status_module].
-The only configuration needed is to define the [url] to the server's [stub_status]
+The only configuration needed is to define the [url] to the server's [stub_status] in the go.d/nginx.conf file. For more details take a look at the [NGINX documentation](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/nginx). 
 
 ```yaml
 jobs:
@@ -34,7 +34,7 @@ jobs:
     url: http://203.0.113.10/stub_status
 ```
 
-Once this is done, you should see the NGINX section on your Overview screen which will present the metrics defined below in a jiffy.
+Once this is done, you should see the NGINX section on your Overview screen which will present the metrics listed below instantly.
 
 ## What to monitor on NGINX web servers?
 
