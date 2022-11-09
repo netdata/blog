@@ -34,19 +34,19 @@ Netdata's Apache summary dashboard helps you get a quick grasp of how your web s
 
 ### Requests
 
-The average number of requests received per second is an important metric to monitor. A sudden and substantial increase in the rate of requests is definitely worth digging deeper into. It could be indicative of, for example a DoS (Denial of Service) attack. Even if the traffic is not malicious in nature you might still need to make changes to ensure your infrastructure is ready to handle the extra load. A significant decrease in the rate of requests could also point to problems that need troubleshooting.
+The rate of requests received per second is an important metric to monitor. A sudden and substantial increase in the rate of requests is definitely worth digging deeper into. It could be indicative of, for example a DoS (Denial of Service) attack. Even if the traffic is not malicious in nature you might still need to make changes to ensure your infrastructure is ready to handle the extra load. A significant decrease in the rate of requests could also point to problems that need troubleshooting.
 
 ![image](https://user-images.githubusercontent.com/24860547/200813379-b1d198c3-1f11-48e7-8251-e6f6191d4897.png)
 
 ### Connections
 
-
+The total active connections that Apache is handling per second is indicated by the following chart.
 
 ![image](https://user-images.githubusercontent.com/24860547/200813473-16a94cf1-860f-43de-914b-771b20c79916.png)
 
+While the asynchronous connections - along with information on what state they are currently in (Closing, Keep alive, Writing) are represented in a separate chart. This chart is only applicable to the Apache event MPM (Multi Processing Module).
 
 ![image](https://user-images.githubusercontent.com/24860547/200813567-ae74d0e4-b8e6-443a-930e-49ddb2e11851.png)
-
 
 The Apache Scoreboard is a very useful chart if you are trying to troubleshoot issues with your web server. The traditional view of the scoreboard looks like this:
 
@@ -56,29 +56,58 @@ In Netdata, the scoreboard is represented as a helpful chart and you don't need 
 
 ![image](https://user-images.githubusercontent.com/24860547/200813628-53486c70-87d9-43ae-a690-6d3b3e473a02.png)
 
-A scoreboard that displays a large amount of `sending` may indicate a poorly performing web application such as a PHP website. If however the same happens along with a large number of traffic spikes, it may be due to a DoS attack. A large amount of `reading` on the other hand may indicate a [Slowloris](https://en.wikipedia.org/wiki/Slowloris_(computer_security)) attack, where many connections are opened and kept open for as long as possible.
+- A scoreboard that displays a large amount of `sending` may indicate a poorly performing web application such as a PHP website. If however the same happens along with a large number of traffic spikes, it may be due to a DoS attack. 
 
+- A large amount of `reading` on the other hand may indicate a [Slowloris](https://en.wikipedia.org/wiki/Slowloris_(computer_security)) attack, where many connections are opened and kept open for as long as possible.
+
+- A lot of connections in a keep-alive state, may indicate that the server is getting many requests from clients that do not make subsequent requests (and therefore do not help you reap the intended benefits of keep-alive connections). 
 
 ### Bandwidth
 
+The bandwidth handled by the Apache server (measured in megabits per second) is another important metric that helps you understand the load your server is currently handling.
+
 ![image](https://user-images.githubusercontent.com/24860547/200813688-67011d91-2fd1-48ee-a492-bb7409609e06.png)
 
-
 ### Workers
+
+Worker resources are important to monitor as this tells you which resources are over and under utilized. 
+
+The worker threads chart represents worker utilization. 
+
+A worker thread that is in any of the following states is considered busy: 
+- reading
+- writing
+- keep-alive
+- logging
+- closing
+- gracefully finishing
+
+A worker thread not in any of the states mentioned above is considered idle. 
+
+A consistently large number of idle workers (as seen in the example chart here) indicates that more threads are in use than are necessary for the current traffic levels and load. This will lead to unecessary utilization of system resources and you may consider lowering the `MinSpareThreads` configuration parameter.
+
+If however you only have a very small number of idle workers consistently this could lead to slowing down your server and requests getting queued up when the `MaxRequestWorkers` limit is hit. Increasing the `MaxRequestWorkers` can help with this scenario but be mindful that each extra worker thread requires extra system resources. 
 
 ![image](https://user-images.githubusercontent.com/24860547/200813751-b5c9d767-18ab-489c-9157-dfea041a7f12.png)
 
 
 ### Statistics
 
+The statistics charts measure lifetime averages - averages of metrics over the lifetime of the Apache server being up and operational.
+
+The first chart shows the lifetime average of requests per second - notice that this is signficantly different from the first chart we mentioned (rate of requests). Occasional spikes and dips may not register on this lifetime average chart but it is still very useful for understanding longer term trends of resource utilization.
+
 ![image](https://user-images.githubusercontent.com/24860547/200813866-ca6c9161-6474-4be9-9684-2213b142b74c.png)
 
-![image](https://user-images.githubusercontent.com/24860547/200813938-144584e5-30ee-4de5-b4a2-4b230b0f9992.png)
+The next couple of charts show the lifetime average of, bytes served and response size. Both of these metrics can also be useful information to understand how the server is performing for the current use-case and is valuable in terms of designing potential upgrades to the server.
 
+![image](https://user-images.githubusercontent.com/24860547/200813938-144584e5-30ee-4de5-b4a2-4b230b0f9992.png)
 ![image](https://user-images.githubusercontent.com/24860547/200814009-ddf8e625-d5f3-4d43-bae9-5da3edb85841.png)
 
 
-### Availability
+### Availability (Uptime)
+
+The uptime of the Apache server is monitored by this chart and helps you quickly get an idea if the server had any downtime.
 
 ![image](https://user-images.githubusercontent.com/24860547/200814062-5c2536d4-a264-407f-9686-2d642402334a.png)
 
