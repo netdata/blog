@@ -28,17 +28,47 @@ For more information please read the Apache collector [documentation](https://le
 
 ## What Apache metrics are important to monitor - and why?
 
+Netdata's Apache summary dashboard helps you get a quick grasp of how your web server is doing in a single glance. The current values for requests, connections, bandwidth and worker utilization are shown here by default and hovering over the time series charts will update the summary charts to reflect the values of these metrics at that point in time.
+
+![image](https://user-images.githubusercontent.com/24860547/200812731-48b84d84-cc29-46ee-a4d2-9293b1cde007.png)
+
 ### Requests
+
+![image](https://user-images.githubusercontent.com/24860547/200813379-b1d198c3-1f11-48e7-8251-e6f6191d4897.png)
 
 ### Connections
 
+![image](https://user-images.githubusercontent.com/24860547/200813473-16a94cf1-860f-43de-914b-771b20c79916.png)
+
+
+![image](https://user-images.githubusercontent.com/24860547/200813567-ae74d0e4-b8e6-443a-930e-49ddb2e11851.png)
+
+
+![image](https://user-images.githubusercontent.com/24860547/200813628-53486c70-87d9-43ae-a690-6d3b3e473a02.png)
+
+
 ### Bandwidth
+
+![image](https://user-images.githubusercontent.com/24860547/200813688-67011d91-2fd1-48ee-a492-bb7409609e06.png)
+
 
 ### Workers
 
+![image](https://user-images.githubusercontent.com/24860547/200813751-b5c9d767-18ab-489c-9157-dfea041a7f12.png)
+
+
 ### Statistics
 
+![image](https://user-images.githubusercontent.com/24860547/200813866-ca6c9161-6474-4be9-9684-2213b142b74c.png)
+
+![image](https://user-images.githubusercontent.com/24860547/200813938-144584e5-30ee-4de5-b4a2-4b230b0f9992.png)
+
+![image](https://user-images.githubusercontent.com/24860547/200814009-ddf8e625-d5f3-4d43-bae9-5da3edb85841.png)
+
+
 ### Availability
+
+![image](https://user-images.githubusercontent.com/24860547/200814062-5c2536d4-a264-407f-9686-2d642402334a.png)
 
 
 ## Troubleshooting Apache with Netdata
