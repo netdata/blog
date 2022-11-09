@@ -13,7 +13,7 @@ Netdata has a public loginless [demo space](https://app.netdata.cloud/spaces/net
 
 ## Monitoring Apache with Netdata
 
-The pre-requisites for monitoring Apache with Netdata are to have one or more Apache web server running with [mod_status](https://httpd.apache.org/docs/2.4/mod/mod_status.html) enabled and of course that you have [Netdata installed](https://learn.netdata.cloud/docs/cloud/get-started) on your system. 
+The prerequisites for monitoring Apache with Netdata are to have one or more Apache web server running with [mod_status](https://httpd.apache.org/docs/2.4/mod/mod_status.html) enabled and of course that you have [Netdata installed](https://learn.netdata.cloud/docs/cloud/get-started) on your system. 
 
 The only configuration you need to do is to add the web server's `server-status?auto`. Here is an example:
 
@@ -34,7 +34,7 @@ Netdata's Apache summary dashboard helps you get a quick grasp of how your web s
 
 ### Requests
 
-The rate of requests received per second is an important metric to monitor. A sudden and substantial increase in the rate of requests is definitely worth digging deeper into. It could be indicative of, for example a DoS (Denial of Service) attack. Even if the traffic is not malicious in nature you might still need to make changes to ensure your infrastructure is ready to handle the extra load. A significant decrease in the rate of requests could also point to problems that need troubleshooting.
+The rate of requests received per second is an important metric to monitor. A sudden and substantial increase in the rate of requests is definitely worth digging deeper into. It could be indicative of, for example, a DoS (Denial of Service) attack. Even if the traffic is not malicious in nature you might still need to make changes to ensure your infrastructure is ready to handle the extra load. A significant decrease in the rate of requests could also point to problems that need troubleshooting.
 
 ![image](https://user-images.githubusercontent.com/24860547/200813379-b1d198c3-1f11-48e7-8251-e6f6191d4897.png)
 
@@ -56,7 +56,7 @@ In Netdata, the scoreboard is represented as a helpful chart and you don't need 
 
 ![image](https://user-images.githubusercontent.com/24860547/200813628-53486c70-87d9-43ae-a690-6d3b3e473a02.png)
 
-- A scoreboard that displays a large amount of `sending` may indicate a poorly performing web application such as a PHP website. If however the same happens along with a large number of traffic spikes, it may be due to a DoS attack. 
+- A scoreboard that displays a large amount of `sending` may indicate a poorly performing web application such as a PHP website. Combined with a large number of traffic spikes, it could be indicative of a DoS attack. 
 
 - A large amount of `reading` on the other hand may indicate a [Slowloris](https://en.wikipedia.org/wiki/Slowloris_(computer_security)) attack, where many connections are opened and kept open for as long as possible.
 
@@ -84,7 +84,7 @@ A worker thread that is in any of the following states is considered busy:
 
 A worker thread not in any of the states mentioned above is considered idle. 
 
-A consistently large number of idle workers (as seen in the example chart here) indicates that more threads are in use than are necessary for the current traffic levels and load. This will lead to unecessary utilization of system resources and you may consider lowering the `MinSpareThreads` configuration parameter.
+A consistently large number of idle workers (as seen in the example chart here) indicates that more threads are in use than are necessary for the current traffic levels and load. This will lead to unnecessary utilization of system resources and you may consider lowering the `MinSpareThreads` configuration parameter.
 
 If however you only have a very small number of idle workers consistently this could lead to slowing down your server and requests getting queued up when the `MaxRequestWorkers` limit is hit. Increasing the `MaxRequestWorkers` can help with this scenario but be mindful that each extra worker thread requires extra system resources. 
 
@@ -95,7 +95,7 @@ If however you only have a very small number of idle workers consistently this c
 
 The statistics charts measure lifetime averages - averages of metrics over the lifetime of the Apache server being up and operational.
 
-The first chart shows the lifetime average of requests per second - notice that this is signficantly different from the first chart we mentioned (rate of requests). Occasional spikes and dips may not register on this lifetime average chart but it is still very useful for understanding longer term trends of resource utilization.
+The first chart shows the lifetime average of requests per second - notice that this is significantly different from the first chart we mentioned (rate of requests). Occasional spikes and dips may not register on this lifetime average chart but it is still very useful for understanding longer term trends of resource utilization.
 
 ![image](https://user-images.githubusercontent.com/24860547/200813866-ca6c9161-6474-4be9-9684-2213b142b74c.png)
 
