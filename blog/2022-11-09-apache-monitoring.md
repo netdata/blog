@@ -123,7 +123,7 @@ The uptime of the Apache server is monitored by this chart and helps you quickly
 
 Netdata has a built-in health watchdog that comes with pre configured alerts to reduce the monitoring burden for you. 
 
-If you would like to update the alert thresholds for any of these alerts or want to create your own alert for another metric – please follow the <a href="https://learn.netdata.cloud/docs/monitor/configure-alarms">instructions here</a>.
+If you would like to update the alert thresholds for any of these alerts or want to create your own alert for another metric – please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
 
 By default you will receive email notifications whenever an alert is triggered – if you would not like to receive these notifications you can turn them off from your profile settings.
 
