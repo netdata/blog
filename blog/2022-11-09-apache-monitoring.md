@@ -1,6 +1,7 @@
 ---
 slug: apache-monitoring
 title: Apache Monitoring
+description: "Best practices for Apache Server monitoring."
 authors: shyam
 tags: [how-to, monitor, troubleshoot, Apache, web server]
 ---
