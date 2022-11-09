@@ -89,7 +89,7 @@ A worker thread that is in any of the following states is considered busy:
 
 A worker thread not in any of the states mentioned above is considered idle. 
 
-A consistently large number of idle workers (as seen in the example chart here) indicates that more threads are in use than are necessary for the current traffic levels and load. This will lead to unnecessary utilization of system resources and you may consider lowering the `MinSpareThreads` configuration parameter.
+A consistently large number of idle workers (as seen in the example chart here) indicates that more threads are in use than are necessary for the current traffic levels and load. This will lead to unnecessary utilization of system resources and you may consider lowering the [`MinSpareThreads`](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#minsparethreads) configuration parameter.
 
 If however you only have a very small number of idle workers consistently this could lead to slowing down your server and requests getting queued up when the `MaxRequestWorkers` limit is hit. Increasing the `MaxRequestWorkers` can help with this scenario but be mindful that each extra worker thread requires extra system resources. 
 
