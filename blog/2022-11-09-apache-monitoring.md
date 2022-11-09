@@ -131,7 +131,7 @@ By default you will receive email notifications whenever an alert is triggered â
 
 Anomaly Advisor lets you quickly identify if the system you are monitoring has any anomalies and allows you to drill down into which metrics are behaving anomalously.
 
-To learn more about how to use Anomaly Advisor to troubleshoot your Apache web server check out the <a href="https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor">documentation </a>or visit the demo space.
+To learn more about how to use Anomaly Advisor to troubleshoot your Apache web server check out the [documentation](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor) or visit the [anomalies tab](https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/anomalies) in the demo space to play with it right now.
 
 ### Metric Correlations
 
