@@ -10,7 +10,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/1/10/Apache_HTTP_server_lo
 <!--truncate-->
 ## What is Apache?
 
-The Apache HTTP Server ([Apache HTTPd](https://httpd.apache.org/)) is one of the most popular open source web server software available. HTTPd was also the first project developed by the Apache Software foundation which now supports hundreds of well known projects including Kafka, Cassandra and Hadoop. 
+The Apache HTTP Server ([Apache HTTPd](https://httpd.apache.org/)) is one of the most popular open source web servers available. HTTPd was also the first project developed by the Apache Software foundation which now supports hundreds of well known projects including Kafka, Cassandra and Hadoop. 
 
 Netdata has a public loginless [demo space](https://app.netdata.cloud/spaces/netdata-demo) where you can explore different monitoring use-cases. Check out the <a href="https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/overview#chartName=menu_apache">Apache demo room </a>to explore and interact with the charts and metrics described here.
 
