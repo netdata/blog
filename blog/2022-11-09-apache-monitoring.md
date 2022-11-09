@@ -20,7 +20,9 @@ For more information on monitoring web servers, do visit our [blog](https://blog
 
 The prerequisites for monitoring Apache with Netdata are to have one or more Apache web server running with [mod_status](https://httpd.apache.org/docs/2.4/mod/mod_status.html) enabled and of course that you have [Netdata installed](https://learn.netdata.cloud/docs/cloud/get-started) on your system. 
 
-The only configuration you need to do is to add the web server's `server-status?auto`. Here is an example:
+The only configuration you need to do in Netdata to start monitoring your Apache server, is to add the web server's `server-status?auto` in `go.d/apache.conf` which can typically be found in `/etc/netdata`.
+
+Here is an example:
 
 ```yaml
 jobs:
