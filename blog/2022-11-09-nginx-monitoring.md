@@ -1,5 +1,5 @@
 ---
-slug: nginx-monitoring
+slug: nginx-monitoring/
 title: "How to monitor NGINX web servers?"
 description: "How to monitor NGINX web servers?"
 image: https://user-images.githubusercontent.com/96257330/200813970-c1cb5be7-21ec-4365-8cfd-bef9545197f1.png

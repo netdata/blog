@@ -1,5 +1,5 @@
 ---
-slug: mute-alerts
+slug: mute-alerts/
 title: "How to mute alerts during maintenance windows or scheduled backups?"
 description: "Disable or Mute Alerts during maintenance windows"
 tags: [netdata,alerts,silence,disable,mute,maintenance-window]

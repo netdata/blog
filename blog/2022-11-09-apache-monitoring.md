@@ -1,5 +1,5 @@
 ---
-slug: apache-monitoring
+slug: apache-monitoring/
 title: How to monitor and troubleshoot Apache web servers
 description: "Best practices for Apache Server monitoring."
 authors: shyam
