@@ -2,7 +2,7 @@
 slug: nvme-monitoring
 title: "How to monitor NVMe metrics servers?"
 description: "How to monitor NVMe web servers?"
-image: ![image](https://user-images.githubusercontent.com/24860547/201093559-35910c86-43c7-44d5-9b0f-ee493b752a57.png)
+image: https://user-images.githubusercontent.com/24860547/201093559-35910c86-43c7-44d5-9b0f-ee493b752a57.png
 tags: [how-to,infrastructure-monitoring,nvme,ssd,disk]
 keywords: [how-to,infrastructure-monitoring,nvme,disk,ssd, Non-Volatile Memory Host Controller Interface]
 authors: shyam
@@ -13,7 +13,7 @@ Use Netdata to effectively monitor and troubleshoot the performance of SSD disks
 
 ## What is NVMe?
 
-The NVMe (Non-Volatile Memory express) is an open, logical-device interface specification for accessing a computer's non-volatile storage media usually attached via PCI Express (PCIe) bus. NVMe allows host hardware and software to fully exploit the levels of parallelism possible in modern SSDs. As a result, NVMe reduces I/O overhead and brings various performance improvements relative to previous logical-device interfaces, including multiple long command queues, and reduced latency.
+The [NVMe](https://nvmexpress.org/) (Non-Volatile Memory express) is an open, logical-device interface specification for accessing a computer's non-volatile storage media usually attached via PCI Express (PCIe) bus. NVMe allows host hardware and software to fully exploit the levels of parallelism possible in modern SSDs. As a result, NVMe reduces I/O overhead and brings various performance improvements relative to previous logical-device interfaces, including multiple long command queues, and reduced latency.
 
 ## Monitoring NVMe with Netdata
 
@@ -119,3 +119,30 @@ The amount of time the controller has entered lower active power states or perfo
 - Thermal management temp2 time
 The amount of time the controller has entered lower active power states or performed vendor-specific thermal management actions, <b>regardless of the impact on performance (e.g., heavy throttling)</b>, to attempt to lower the Combined Temperature due to the host-managed thermal management feature.
 
+## Troubleshooting
+
+Netdata comes with built in alerts for many monitoring use-cases including NVMe monitoring. By default an alert is triggered if the number of critical warnings is non-zero. If you would like to update the alert thresholds for this alert or want to create your own alert for another metric – please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
+
+ template: nvme_device_critical_warnings_state
+ families: *
+       on: nvme.device_critical_warnings_state
+    class: Errors
+     type: System
+component: Disk
+   lookup: max -30s unaligned
+    units: state
+    every: 10s
+     crit: $this != nan AND $this != 0
+    delay: down 5m multiplier 1.5 max 2h
+     info: NVMe device $label:device has critical warnings
+       to: sysadmin
+
+You can also rely on other troubleshooting and data exploration features such as [Anomaly Advisor](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor) and [Metric Correlation](https://learn.netdata.cloud/docs/cloud/insights/metric-correlations) to make sense of your NVMe metrics and try to understand what stressors or variables may have influenced it.
+
+## Let us hear from you
+
+If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/)!
+
+We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/).
+
+Happy Troubleshooting!
