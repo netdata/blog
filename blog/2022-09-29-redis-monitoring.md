@@ -1,5 +1,5 @@
 ---
-slug: redis-monitoring
+slug: redis-monitoring/
 title: Redis Monitoring
 authors: shyam
 tags: [how-to, Redis]

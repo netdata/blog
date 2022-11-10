@@ -1,5 +1,5 @@
 ---
-slug: missing-indexes-in-postgresql
+slug: missing-indexes-in-postgresql/
 title: Missing indexes in PostgreSQL? How to quickly identify it
 authors: satya
 tags: [how-to, PostgreSql]

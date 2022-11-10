@@ -1,5 +1,5 @@
 ---
-slug: how-to-filter-metrics-by-label
+slug: how-to-filter-metrics-by-label/
 title: How to filter metrics by label?
 authors: satya
 tags: [how-to]

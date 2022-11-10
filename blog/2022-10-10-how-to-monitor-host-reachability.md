@@ -5,7 +5,7 @@ image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Monitoring
 tags: [how-to,ping,reachability,monitoring]
 keywords: [how-to,ping,reachability,monitoring]
 authors: chris
-slug: how-to-monitor-host-reachability
+slug: how-to-monitor-host-reachability/
 ---
 
 Most sysadmins and developers have at some point used a few of the popular <a href="https://www.tecmint.com/linux-networking-commands" target="_blank" rel="noopener">Linux networking commands</a> or their Windows equivalents to answer the common questions of host reachability - that is, whether a host or service is reachable and how fast it responds.

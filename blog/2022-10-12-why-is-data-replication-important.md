@@ -5,7 +5,7 @@ image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Data-Repli
 tags: [how-to,infrastructure-monitoring,streaming,data-replication,configuration]
 keywords: [how-to,infrastructure-monitoring,streaming,data-replication,configuration]
 authors: alex
-slug: why-is-data-replication-important
+slug: why-is-data-replication-important/
 ---
 High availability. This is what every monitoring tool needs to ensure that you never compromise on IT infrastructure visibility.<!--truncate--> On top of high availability, do you really want to enable all available features on your production system? It is important for the monitoring tool to have a low footprint on your CPU consumption and memory usage. Let’s dive deeper into the recommended way of configuring Netdata to ensure high availability and a low resource footprint through data replication.
 

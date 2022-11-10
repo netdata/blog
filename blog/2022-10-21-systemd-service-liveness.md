@@ -1,5 +1,5 @@
 ---
-slug: systemd-service-liveness
+slug: systemd-service-liveness/
 title: "How to monitor systemd service liveness"
 description: "How to monitor systemd service liveness"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Systemmd-Service-Liveness-e1666366169680.png
