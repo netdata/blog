@@ -225,11 +225,11 @@ const config = {
                 items: [
                     {
                         label: 'Learn',
-                        to: '/',
+                        to: 'https://learn.netdata.cloud',
                     },
                     {
                         label: 'Blog',
-                        to: 'https://netdata.cloud/blog',
+                        to: 'https://blog.netdata.cloud',
                     },
                     {
                         label: 'GitHub',
