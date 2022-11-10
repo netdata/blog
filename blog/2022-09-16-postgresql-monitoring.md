@@ -1,5 +1,5 @@
 ---
-slug: postgresql-monitoring/
+slug: postgresql-monitoring
 title: PostgreSQL Monitoring
 authors: shyam
 tags: [how-to, PostgreSQL]

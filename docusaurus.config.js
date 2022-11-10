@@ -10,6 +10,7 @@ const config = {
   tagline: 'Home of the Netdata blog.',
   url: 'https://blog.netdata.cloud',
   baseUrl: '/',
+  trailingSlash: true,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon-32x32.png',
