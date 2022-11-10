@@ -36,6 +36,8 @@ In the example shown here, we can see a new disk with a lot of life left to live
 
 ![image](https://user-images.githubusercontent.com/24860547/201095398-07ce0754-db44-459a-8c9b-2565c712a725.png)
 
+In most cases of SSD failure, it isn't endurance that's the culprit. Firmware issues, media failures and hardware issues are all more likely (in that order) to be the root cause. 
+
 ### Spare Capacity
 This metric measures the amount of spare capacity available on the device and is represented as a percentage. A lower percentage indicates that the device is running low on spare capacity.
 
