@@ -27,6 +27,7 @@ const config = {
   ],
 
   scripts: [
+    {src:'https://cse.google.com/cse.js?cx=e2e7646659949450a', async: false, defer: false},
     {
       'src': 'https://giscus.app/client.js',
       'data-repo': 'netdata/blog',
@@ -189,6 +190,11 @@ const config = {
                 to: 'https://app.netdata.cloud/',
                 label: 'App',
                 position: 'left',
+              },
+              {
+                type: "html",
+                position: "left",
+                value: '<div class="gcse-search"></div>',
               },
               {
                 to: 'https://app.netdata.cloud/',
