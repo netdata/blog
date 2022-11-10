@@ -32,19 +32,33 @@ For more information please read the [NVMe collector documentation](https://lear
 ### Endurance
 Endurance indicates the consumed lifetime of the device based on the actual usage and the manufacturer's prediction of NVM life. A value of 100 indicates that the estimated endurance of the device has been consumed, but may not indicate a device failure. The value can be greater than 100 if you use the storage beyond its planned lifetime. But if the endurance number is approaching 100 you should consider replacing your disks. The remaining estimated lifetime can be thought of as (100 - endurance).
 
+In the example shown here, we can see a new disk with a lot of life left to live.
+
+![image](https://user-images.githubusercontent.com/24860547/201095398-07ce0754-db44-459a-8c9b-2565c712a725.png)
+
 ### Spare Capacity
 This metric measures the amount of spare capacity available on the device and is represented as a percentage. A lower percentage indicates that the device is running low on spare capacity.
 
 SSDs provide a set of internal spare capacity, called spare blocks, that can be used to replace blocks that have reached their write operation limit. After all of the spare blocks have been used, the next block that reaches its limit causes the disk to fail.
 
+![image](https://user-images.githubusercontent.com/24860547/201095539-3d459e36-1d11-4266-9c90-55e07ebcf7c8.png)
+
+
 ### IO Transferred
-This metric measures the total amount of data read from and written to the device. It can be helpful in understanding the load on the device and troubleshooting performance issues.
+This metric measures the total amount of data read from and written to the device. It can be helpful in understanding the load profile of the system and whether it is write or read heavy as well as for troubleshooting potential performance issues.
+
+![image](https://user-images.githubusercontent.com/24860547/201095739-198126fb-c2e9-4fd0-872c-99080e6c7d26.png)
 
 ### Power Cycles
 This metric measures the number of times this host has been rebooted or the device has been woken up after sleep. A high number of power cycles does not affect the device's life expectancy.
 
+![image](https://user-images.githubusercontent.com/24860547/201095948-92366dfc-3b98-4c99-aa40-459828ac1fcc.png)
+
 ### Power On Time
 [Power-on time](https://en.wikipedia.org/wiki/Power-on_hours) is the length of time the device has been supplied with power (in other words, powered on). 
+
+![image](https://user-images.githubusercontent.com/24860547/201096034-a9c18114-285b-43ff-9695-26caa263daa4.png)
+
 
 ### Critical Warnings
 This metric measures the number of critical warnings that occurred. The status of the warning indicates what is the problem to be addressed.
@@ -56,19 +70,31 @@ This metric measures the number of critical warnings that occurred. The status o
 - VolatileMemBackupFailed: The volatile memory backup device has failed. 
 - PersistentMemoryReadOnly: The Persistent Memory Region has become read-only or unreliable.
 
+In the example shown here, we do not yet have any critical warnings but if any do pop up they will show up on this chart.
+
+![image](https://user-images.githubusercontent.com/24860547/201096181-d28e86b8-20ae-4420-978f-b5f854592c8b.png)
+
 ### Unsafe Shutdowns
 This metric measures the number of times the device has been shut down (power outage) without a shutdown notification being sent. Depending on the NVMe device you are using, unsafe shutdowns can cause data corruption and shorten the lifespan of the device.
+
+![image](https://user-images.githubusercontent.com/24860547/201096123-47e7d9c9-ef74-44d8-86ba-18248d2f83fe.png)
 
 ### Media Errors
 This metric measures the number of occurrences where the controller detected an unrecovered data integrity error. Errors such as uncorrectable ECC, CRC checksum failure, or LBA tag mismatch are included in this counter.
 
+![image](https://user-images.githubusercontent.com/24860547/201096314-7c65e47d-c973-4cf7-b483-2cf50041f48a.png)
+
 ### Error Log Entries
 This metric measures the number of entries in the Error Information Log. While Error log entries may indicate problems that need to be addressed, an increase in the number of records is not by itself an indicator of any failure condition.
+
+![image](https://user-images.githubusercontent.com/24860547/201096374-6f48f5d8-2ad8-4eca-be01-ef04ef076c4e.png)
 
 ### Temperature
 
 - Composite temperature
 Temperature is important to monitor as it can have a direct impact on the performance and lifespan of the device. The composite temperature metric measures the current composite temperature of the controller and namespace(s) associated with that controller. The manner in which this value is computed is implementation specific and may not represent the actual temperature of any physical point in the NVM subsystem.
+
+![image](https://user-images.githubusercontent.com/24860547/201095649-3e1fea4d-d3fa-4e97-af73-9a752637df56.png)
 
 - Warning composite temperature time
 The time the device has been operating above the Warning Composite Temperature Threshold (WCTEMP) and below Critical Composite Temperature Threshold (CCTEMP).
@@ -76,13 +102,12 @@ The time the device has been operating above the Warning Composite Temperature T
 - Critical composite temperature time
 The time the device has been operating above the Critical Composite Temperature Threshold (CCTEMP).
 
-
 ### Thermal management transitions
 
 The thermal management transitions metrics measure the rate of temperature transitions of specific components on the device. These metrics can be helpful in troubleshooting temperature-related issues.
 
 - Thermal management temp1 transitions
-The number of times the controller has entered lower active power states or performed vendor-specific thermal management actions, minimizing performance impact, to attempt to lower the Composite Temperature due to the host-managed thermal management feature.
+The number of times the controller has entered lower active power states or performed vendor-specific thermal management actions, <b>minimizing performance impact</b>, to attempt to lower the Composite Temperature due to the host-managed thermal management feature.
 
 - Thermal management temp2 transitions
 The number of times the controller has entered lower active power states or performed vendor-specific thermal management actions, <b>regardless of the impact on performance (e.g., heavy throttling)</b>, to attempt to lower the Combined Temperature due to the host-managed thermal management feature.
