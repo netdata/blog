@@ -123,6 +123,7 @@ The amount of time the controller has entered lower active power states or perfo
 
 Netdata comes with built in alerts for many monitoring use-cases including NVMe monitoring. By default an alert is triggered if the number of critical warnings is non-zero. If you would like to update the alert thresholds for this alert or want to create your own alert for another metric – please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
 
+```yaml
  template: nvme_device_critical_warnings_state
  families: *
        on: nvme.device_critical_warnings_state
@@ -136,6 +137,7 @@ component: Disk
     delay: down 5m multiplier 1.5 max 2h
      info: NVMe device $label:device has critical warnings
        to: sysadmin
+```
 
 You can also rely on other troubleshooting and data exploration features such as [Anomaly Advisor](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor) and [Metric Correlation](https://learn.netdata.cloud/docs/cloud/insights/metric-correlations) to make sense of your NVMe metrics and try to understand what stressors or variables may have influenced it.
 
