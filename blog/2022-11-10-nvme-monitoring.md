@@ -13,7 +13,7 @@ Use Netdata to effectively monitor and troubleshoot the performance of NVMe (Non
 
 ## What is NVMe?
 
-The [NVMe](https://nvmexpress.org/) (Non-Volatile Memory express) is an open, logical-device interface specification for accessing a computer's non-volatile storage media usually attached via PCI Express (PCIe) bus. NVMe allows host hardware and software to fully exploit the levels of parallelism possible in modern SSDs. As a result, NVMe reduces I/O overhead and brings various performance improvements relative to previous logical-device interfaces, including multiple long command queues, and reduced latency.
+[NVMe](https://nvmexpress.org/) is an open, logical-device interface specification for accessing a computer's non-volatile storage media usually attached via PCI Express (PCIe) bus. NVMe allows host hardware and software to fully exploit the levels of parallelism possible in modern SSDs. As a result, NVMe reduces I/O overhead and brings various performance improvements relative to previous logical-device interfaces, including multiple long command queues, and reduced latency.
 
 ## Monitoring NVMe with Netdata
 
