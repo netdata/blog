@@ -5,7 +5,8 @@ description: "Best practices for Apache Server monitoring."
 authors: shyam
 tags: [how-to, monitor, troubleshoot, Apache, web server]
 keywords: [how-to, monitor, troubleshoot, Apache, web server]
-image: https://download.logo.wine/logo/Apache_HTTP_Server/Apache_HTTP_Server-Logo.wine.png
+image: https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png
+
 ---
 Best practices for Apache server monitoring and troubleshooting.
 
