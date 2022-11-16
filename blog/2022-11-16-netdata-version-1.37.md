@@ -170,7 +170,7 @@ Moving towards this goal, in this release we introduce the following improvement
 1. A complete re-write of the underlying core of the dashboard offers now huge **performance improvements** on dashboards with thousands of charts. Before this work, when the dashboard had thousands of charts, several seconds were required to jump from the top of the dashboard to the end. Now it is instant.
 2. We went through all the data collection plugins and metrics and we **added labels** to all of them, allowing the default charts on the **Overview** dashboard to pivot the charts, **slicing and dicing** the data according to these labels. For example, network interfaces charts can be pivoted by device name or interface type, while at the same time filtered by any of the labels, dimensions, instances or nodes.
 ![image](https://user-images.githubusercontent.com/2662304/199255851-2258c5cf-77a1-4a6b-999c-e325532ef7df.png)
-4. We have started working on new **summary tiles** to outlook the sections of the dashboard in a more dynamic manner. This work has just started and we expect to introduce a lot of new changes until the next releease![image](https://user-images.githubusercontent.com/2662304/199256852-bdcc78d8-6061-4f1b-be9f-9cc358fa47d4.png)
+4. We have started working on new **summary tiles** to outlook the sections of the dashboard in a more dynamic manner. This work has just started and we expect to introduce a lot of new changes until the next release![image](https://user-images.githubusercontent.com/2662304/199256852-bdcc78d8-6061-4f1b-be9f-9cc358fa47d4.png)
 
 </details>
 
@@ -270,6 +270,7 @@ Code improvements to make use of dictionaries to better manage the life cycle of
 We would like to thank our dedicated, talented contributors that make up this amazing community. The time and expertise that you volunteer is essential to our success. We thank you and look forward to continue to grow together to build a remarkable product.
 
 <details>
+
 <summary>Agent contributions v1.37.0</summary>
 
 - [@HG00](https://github.com/HG00) for improving RabbitMQ collector readme.
@@ -280,6 +281,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - [@uplime](https://github.com/uplime) for fixing a typo in netdata-installer.sh.
 - [@vobruba-martin](https://github.com/vobruba-martin) for adding TCP socket connection support and the state path modification.
 - [@yasharne](https://github.com/yasharne) for adding ProxySQL collector.
+
 </details>
 
 ## Collectors
@@ -295,6 +297,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add Docker collector (go.d/docker) ([#760](https://github.com/netdata/go.d.plugin/pull/760), [@ilyam8](https://github.com/ilyam8))
 - Add PgBouncer collector (go.d/pgbouncer) ([#748](https://github.com/netdata/go.d.plugin/pull/748), [@ilyam8](https://github.com/ilyam8))
 - Add ProxySQL collector (go.d/proxysql) ([#703](https://github.com/netdata/go.d.plugin/pull/703), [@yasharne](https://github.com/yasharne))
+
 </details>
 
 <details>
@@ -359,6 +362,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add collecting image and volume stats (go.d/docker) ([#777](https://github.com/netdata/go.d.plugin/pull/777), [@ilyam8](https://github.com/ilyam8))
 - Add Percona MySQL compatibility (go.d/mysql) ([#776](https://github.com/netdata/go.d.plugin/pull/776), [@ilyam8](https://github.com/ilyam8))
 - Add collection of additional user statistics metrics ([#775](https://github.com/netdata/go.d.plugin/pull/775), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 <details>
@@ -386,6 +390,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Fix charts when binary log and MyISAM are disabled (go.d/mysql) ([#763](https://github.com/netdata/go.d.plugin/pull/763), [@ilyam8](https://github.com/ilyam8))
 - Fix data collection jobs cleanup on exit (go.d.plugin) ([#758](https://github.com/netdata/go.d.plugin/pull/758), [@ilyam8](https://github.com/ilyam8))
 - Fix handling the case when no images are found (go.d/docker) ([#739](https://github.com/netdata/go.d.plugin/pull/739), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 <details>
@@ -400,6 +405,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Remove blocklist file existence state chart (go.d/pihole) ([#914](https://github.com/netdata/go.d.plugin/pull/914), [@ilyam8](https://github.com/ilyam8))
 - Remove instance-specific information from chart families (go.d/portcheck) ([#790](https://github.com/netdata/go.d.plugin/pull/790), [@ilyam8](https://github.com/ilyam8))
 - Remove spaces in "HTTP Response Time" chart dimensions (go.d/httpcheck) ([#788](https://github.com/netdata/go.d.plugin/pull/788), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 ## Documentation
@@ -426,6 +432,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add a note about authorized_mailq_users to postfix readme ([#13515](https://github.com/netdata/netdata/pull/13515), [@ilyam8](https://github.com/ilyam8))
 - Add a document outlining how to build native packages locally ([#12431](https://github.com/netdata/netdata/pull/12431), [@Ferroin](https://github.com/Ferroin))
 - Add some tips on collecting per-queue metrics for RabbitMQ ([#12227](https://github.com/netdata/netdata/pull/12227), [@HG00](https://github.com/HG00))
+
 </details>
 
 ## Health
@@ -434,6 +441,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 <summary>Engine</summary>
 
 - Add support of chart labels in alerts ([#13290](https://github.com/netdata/netdata/pull/13290), [@MrZammler](https://github.com/MrZammler))
+
 </details>
 
 <details>
@@ -441,6 +449,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 
 - Add an option to retry on telegram API limit error ([#13119](https://github.com/netdata/netdata/pull/13119), [@MAH69IK](https://github.com/MAH69IK))
 - Set default curl connection timeout if not set ([#13529](https://github.com/netdata/netdata/pull/13529), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 <details>
@@ -458,6 +467,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Adjust systemdunits alarms (health.d/systemdunits.conf) ([#13623](https://github.com/netdata/netdata/pull/13623), [@ilyam8](https://github.com/ilyam8))
 - Add Postgres total connection utilization alarm (health.d/postgres.conf) ([#13620](https://github.com/netdata/netdata/pull/13620), [@ilyam8](https://github.com/ilyam8))
 - Adjust mysql_galera_cluster_size_max_2m lookup to make time in warn/crit predictable (health.d/mysql.conf) ([#13563](https://github.com/netdata/netdata/pull/13563), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 ## Packaging / Installation
@@ -492,6 +502,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Overhaul handling of installation of Netdata as a system service. ([#13451](https://github.com/netdata/netdata/pull/13451), [@Ferroin](https://github.com/Ferroin))
 - Fix existing install detection for FreeBSD and macOS ([#13243](https://github.com/netdata/netdata/pull/13243), [@Ferroin](https://github.com/Ferroin))
 - Assorted cleanup in the OpenRC init script ([#13115](https://github.com/netdata/netdata/pull/13115), [@Ferroin](https://github.com/Ferroin))
+
 </details>
 
 ## Other Notable Changes
@@ -508,7 +519,8 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Improve streaming performance by 25% on the child ([#13708](https://github.com/netdata/netdata/pull/13708), [@ktsaou](https://github.com/ktsaou))
 - Improve agent shutdown time ([#13649](https://github.com/netdata/netdata/pull/13649), [@stelfrag](https://github.com/stelfrag))
 - Add disabling Cloud functionality via NETDATA_DISABLE_CLOUD environment variable ([#13106](https://github.com/netdata/netdata/pull/13106), [@ilyam8](https://github.com/ilyam8))
--</details>
+
+</details>
 
 <details>
 <summary>Bug Fixes</summary>
@@ -553,6 +565,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Fix a failure to build eBPF with CMake ([#13568](https://github.com/netdata/netdata/pull/13568), [@underhood](https://github.com/underhood))
 - Fix a crash when xen libraries are misconfigured ([#13535](https://github.com/netdata/netdata/pull/13535), [@vlvkobal](https://github.com/vlvkobal))
 - Fix crashes on 32bit system ([#13511](https://github.com/netdata/netdata/pull/13511), [@MrZammler](https://github.com/MrZammler))
+
 </details>
 
 ## Code organization
