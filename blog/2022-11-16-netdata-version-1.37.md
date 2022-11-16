@@ -13,8 +13,6 @@ Another release of the Netdata Monitoring solution is here! Highlights of this r
 <!--truncate-->
 ### Scheduled date: 13 November 2022
 
----
-
 Another release of the Netdata Monitoring solution is here!
 
 We focused on these key areas:
