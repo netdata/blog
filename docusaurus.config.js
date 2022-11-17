@@ -166,35 +166,46 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Netdata',
+          alt: 'Netdata logo',
           src: 'img/logo.svg',
         },
         items: [
             {
-                to: 'https://www.netdata.cloud/',
-                label: 'Website',
-                position: 'left',
-              },
-              {
                 to: 'https://learn.netdata.cloud/',
                 label: 'Learn',
                 position: 'left',
-              },
-              {
+            },
+            {
+                to: '/tags/',
+                label: 'Browse Tags',
+                position: 'left',
+            },
+            {
                 to: 'https://community.netdata.cloud/',
                 label: 'Community',
                 position: 'left',
-              },
-              {
+            },
+            {
                 to: 'https://app.netdata.cloud/',
                 label: 'App',
                 position: 'left',
-              },
-              {
+            },
+            {
+                to: 'https://www.netdata.cloud/',
+                label: 'Website',
+                position: 'left',
+            },
+            {
                 to: 'https://app.netdata.cloud/',
                 label: 'Sign In',
                 position: 'right',
-              },
+            },
+            {
+                href: 'https://github.com/netdata/netdata',
+                position: 'right',
+                className: 'header-github-link',
+                'aria-label': 'GitHub repository',
+            },
         ],
       },
       footer: {
