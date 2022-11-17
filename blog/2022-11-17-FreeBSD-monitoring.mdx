@@ -1,0 +1,85 @@
+---
+slug: freebsd-monitoring
+title: How to monitor FreeBSD  
+description: "Monitoring FreeBSD with Netdata."
+authors: shyam
+tags: [how-to, monitor, troubleshoot, FreeBSD]
+keywords: [how-to, monitor, troubleshoot, FreeBSD]
+image: https://user-images.githubusercontent.com/24860547/202490581-39ab7480-bf92-4959-b78b-4f2dd00ef532.png
+
+---
+Monitoring FreeBSD systems painlessly and effectively.
+
+<!--truncate-->
+## Why FreeBSD?
+
+FreeBSD is a free and open source Unix-like operating system descended from the Berkeley Software Distribution (BSD). FreeBSD is the most widely used open source BSD distribution. It is used by companies such as Netflix, Baidu, the United States Department of Defense, and the European Organization for Nuclear Research (CERN).
+
+FreeBSD is a high-quality, stable, and secure operating system used in a wide variety of applications. FreeBSD is developed by a large and passionate community of volunteers and is an excellent choice if you are looking for a high-quality, stable, and secure operating system.
+
+## Installing Netdata on FreeBSD
+
+Setting up Netdata monitoring on your FreeBSD server is a simple and straightforward process.
+
+1. Install the dependencies
+
+```sh
+pkg install bash e2fsprogs-libuuid git curl autoconf automake pkgconf pidof liblz4 libuv json-c cmake gmake
+```
+
+2. Install Netdata from the kickstart script
+
+The recommended method is to use the single line [kickstart script](https://learn.netdata.cloud/docs/agent/packaging/installer/methods/kickstart)
+
+If you have a Netdata cloud account then clicking on the **Connect Nodes** button will generate the kickstart command you should use. Use the command from the "Linux" tab, it should look something like this:
+
+![Netdata Cloud (18)](https://user-images.githubusercontent.com/24860547/202492140-9b37f73b-c7c4-4312-a693-23f92bb0b081.gif)
+
+Paste the copied command on your FreeBSD terminal and hit enter. Please respond in the affirmative for any relevant prompts during the installation process. 
+
+```sh
+wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --claim-token <CLAIM_TOKEN> --claim-url https://app.netdata.cloud
+```
+
+
+
+## Monitoring FreeBSD
+
+Once the installation is completed you should be able to start monitoring the FreeBSD server using Netdata. On the Overview tab you will see the below view - the system overview is a quick summary dashboard that gives you an idea about the health of your server. 
+
+![image](https://user-images.githubusercontent.com/24860547/202492925-38adbb67-77f7-4577-b564-1e628709b5fb.png)
+
+The menu on the right contains the table of contents which organizes and lists all the metrics that Netdata is collecting. In this example, which is running on a fresh FreeBSD installation, 228 charts are already being collected for most metrics you could think of.
+
+Clicking on a section in TOC will take you to the relevant charts.
+
+<TBD - insert video walkthrough here>
+
+
+## Troubleshooting FreeBSD with Netdata
+
+### Alerts
+
+Netdata has a built-in health watchdog that comes with pre configured alerts to reduce the monitoring burden for you. 
+
+If you would like to update the alert thresholds for any of these alerts or want to create your own alert for another metric – please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
+
+By default you will receive email notifications whenever an alert is triggered – if you would not like to receive these notifications you can turn them off from your profile settings.
+
+### Anomaly Advisor
+
+Anomaly Advisor lets you quickly identify if the system you are monitoring has any anomalies and allows you to drill down into which metrics are behaving anomalously.
+
+To learn more about how to use Anomaly Advisor to troubleshoot your FreeBSD server check out the [documentation](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor) or visit the [anomalies tab](https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/anomalies) in the demo space to play with it right now.
+
+### Metric Correlations
+
+<a href="https://learn.netdata.cloud/docs/cloud/insights/metric-correlations">Metric Correlations</a> lets you quickly find metrics and charts related to a particular window of interest that you want to explore further. By displaying the standard Netdata dashboard, filtered to show only charts that are relevant to the window of interest, you can get to the root cause sooner.
+
+## Let us hear from you
+
+If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=blog&utm_content=disk-usage)!
+
+We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/).
+
+Happy Troubleshooting!
