@@ -7,7 +7,7 @@ tags: [how-to,infrastructure-monitoring,reboots,nodes,shutdown,crash]
 keywords: [how-to,infrastructure-monitoring,reboots,nodes,shutdown,crash]
 authors: satya
 ---
-One of the most critical tasks of monitoring an infrastructure is to check the health of its servers / nodes.
+Monitoring the health and status of nodes and servers is a critical part of effective infrastructure monitoring.
 
 <!--truncate-->
 
