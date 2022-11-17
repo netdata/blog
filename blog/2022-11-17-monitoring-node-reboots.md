@@ -37,13 +37,13 @@ If you change the group by option by “node”, you can see a nice stacked grap
 
 ![Uptime Group by node](https://user-images.githubusercontent.com/96257330/202476730-e726f590-723b-4c06-b834-c0ca547b36a8.png)
 
-If any of the nodes reboot, you will instantly see a change in the uptime metric specific to the node. For example in the example below, the node “satya-vm” was up and running for 34 days and a bit before it was rebooted and you can instantly see the metric dropping.
+If any of the nodes reboot, you will instantly see a change in the uptime metric specific to the node. For example in the example below, the node "satya-vm" was up and running for 34 days and a bit before it was rebooted and you can instantly see the metric dropping.
 
 ![Uptime on reboot](https://user-images.githubusercontent.com/96257330/202477156-40780c6f-8844-4f61-aecb-f3626622e2ed.png)
 
 This is all good if you are going to monitor your system 24/7 but in reality you want to be notified when a node reboots and you can write a simple custom alert by monitoring the system.uptime metric.
 
-```yaml
+```
    alarm: system_uptime
       on: system.uptime
       os: linux
@@ -62,7 +62,7 @@ The sample alert above monitors the “system.uptime” context, looks up the mi
 
 In case of ephemeral environments that spin up and terminate hosts constantly, it can be challenging to distinguish new hosts from rebooted hosts. You can use placeholder alerts in your alert definition to only alert when the uptime of an existing host goes down.
 
-```yaml
+```
     alarm: last_uptime_val
        on: system.uptime
    lookup: max -1s at -300s unaligned
