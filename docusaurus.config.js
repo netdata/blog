@@ -166,8 +166,8 @@ const config = {
       navbar: {
         title: '',
         logo: {
-            alt: 'Netdata Learn logo',
-            src: 'img/logo.svg',
+          alt: 'Netdata logo',
+          src: 'img/logo.svg',
         },
         items: [
             {
