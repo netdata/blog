@@ -56,6 +56,8 @@ This is all good if you are going to monitor your system 24/7 but in reality you
     info: system uptime (time from last system reboot)
 ```
 
+![Sample Alert](https://user-images.githubusercontent.com/96257330/202478871-0744e859-21c3-4551-99b8-a6a6b03d3622.png)
+
 The sample alert above monitors the “system.uptime” context, looks up the minimum value in the last 1 second and raises a critical alert when the time since last reboot is less than 5 minutes, and the alert will remain active for 20 minutes (5 + the 15 minute down in the delay hysteresis) unless it is rebooted within this interval.
 
 In case of ephemeral environments that spin up and terminate hosts constantly, it can be challenging to distinguish new hosts from rebooted hosts. You can use placeholder alerts in your alert definition to only alert when the uptime of an existing host goes down.
