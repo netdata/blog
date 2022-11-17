@@ -13,27 +13,26 @@ Monitoring the health and status of nodes and servers is a critical part of effe
 
 ## How to monitor node reboots?
 
-One of the most critical tasks of monitoring an infrastructure is to check the health of its servers / nodes. In most cases this results in setting up a "Hardware manager" from the hardware vendor delivering these servers or setting up an SNMP (or similar) agent to continuously monitor the availability of the server and report when there is a reboot / failure.
+One of the most critical tasks of monitoring an infrastructure is to check the health of its servers/nodes. In most cases, this results in setting up a "Hardware manager" from the hardware vendor delivering these servers or setting up an SNMP (or similar) agent to continuously monitor the availability of the server and report when there is a reboot / failure.
 
-As important as these steps are, they are heavily infrastructure dependent - Bare metal / Cloud hosted servers, Linux / Windows OS, Hosted applications etc. And each of these come with their own monitoring software / tool:
+As important as these steps are, they are heavily infrastructure dependent - Bare metal/Cloud hosted servers, Linux/Windows OS, Hosted applications etc. And each of these come with their own monitoring software/tool:
 
 - Hardware Manager - Delivered and maintained by the hardware vendor.
 - Cloud Monitoring tools - Delivered and maintained by the Cloud provider and sometimes requires additional licenses to gain access to these tools.
 - Software embedded tools - Delivered and maintained by the product house creating the product (integration with Zabbix, Prometheus or in-house software)
 
-In a complex infrastructure setup, there is a necessity to have a single pane view for monitoring all the components of your infrastructure: hardware, OS, Cloud Infrastructure, applications, etc. With Netdata we strive to achieve this!
+In a complex infrastructure setup, there is a necessity to have a single pane view for monitoring all the components of your infrastructure: hardware, OS, Cloud infrastructure, applications, etc. With Netdata, we strive to achieve this!
 
 ## Uptime for monitoring node reboots
 
  
-Uptime is the duration of time that a system / node has been up and running.
+Uptime is the duration of time that a system/node has been up and running.
 
-Netdata provides a system.uptime metric which continuously monitors the uptime of all the nodes in your infrastructure. The uptime for any node that reboots will instantly roll back to 0. The default setting of the chart shows the average time for which all the nodes in your infrastructure have been up - but this is not really too helpful when you have hundreds of nodes.
+Netdata provides a system.uptime metric which continuously monitors the uptime of all the nodes in your infrastructure. The uptime for any node that reboots will instantly roll back to 0. The default setting of the chart shows the average time for which all the nodes in your infrastructure have been up. But, this is not really too helpful when you have hundreds of nodes.
 
 ![Uptime Default View](https://user-images.githubusercontent.com/96257330/202476244-d5506164-63ba-4f31-8e5d-8a082e59398d.png)
-
  
-If you change the group by option by "node", you can see a nice stacked graph showing you the uptimes of all your nodes.
+If you change the group by option by **node**, you can see a nice stacked graph showing you the uptimes of all your nodes.
 
 ![Uptime Group by node](https://user-images.githubusercontent.com/96257330/202476730-e726f590-723b-4c06-b834-c0ca547b36a8.png)
 
@@ -58,7 +57,7 @@ This is all good if you are going to monitor your system 24/7 but in reality you
 
 ![Sample Alert](https://user-images.githubusercontent.com/96257330/202478871-0744e859-21c3-4551-99b8-a6a6b03d3622.png)
 
-The sample alert above monitors the "system.uptime" context, looks up the minimum value in the last 1 second and raises a critical alert when the time since last reboot is less than 5 minutes, and the alert will remain active for 20 minutes (5 + the 15 minute down in the delay hysteresis) unless it is rebooted within this interval.
+The sample alert above monitors the "system.uptime" context, looks up the minimum value in the last 1 second, and raises a critical alert when the time since last reboot is less than 5 minutes. And the alert will remain active for 20 minutes (5 + the 15 minute down in the delay hysteresis) unless it is rebooted within this interval.
 
 In case of ephemeral environments that spin up and terminate hosts constantly, it can be challenging to distinguish new hosts from rebooted hosts. You can use placeholder alerts in your alert definition to only alert when the uptime of an existing host goes down.
 
