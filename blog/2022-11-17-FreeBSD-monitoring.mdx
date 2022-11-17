@@ -7,7 +7,7 @@ tags: [how-to, monitor, troubleshoot, FreeBSD]
 keywords: [how-to, monitor, troubleshoot, FreeBSD]
 image: https://user-images.githubusercontent.com/24860547/202490581-39ab7480-bf92-4959-b78b-4f2dd00ef532.png
 ---
-Monitoring FreeBSD systems painlessly and effectively.
+FreeBSD is a high-quality, stable, and secure operating system used in a wide variety of applications, and we want to show you how monitor FreeBSD systems painlessly and effectively.
 
 <!--truncate-->
 
@@ -31,7 +31,7 @@ pkg install bash e2fsprogs-libuuid git curl autoconf automake pkgconf pidof libl
 
 The easiest method is to use the single line [kickstart script](https://learn.netdata.cloud/docs/agent/packaging/installer/methods/kickstart)
 
-If you have a Netdata cloud account then clicking on the **Connect Nodes** button will generate the kickstart command you should use. Use the command from the "Linux" tab, it should look something like this:
+If you have a Netdata Cloud account, then clicking on the **Connect Nodes** button will generate the kickstart command you should use. Use the command from the "Linux" tab, it should look something like this:
 
 ![Connecting a node to Netdata cloud](https://user-images.githubusercontent.com/24860547/202492140-9b37f73b-c7c4-4312-a693-23f92bb0b081.gif)
 
@@ -43,25 +43,25 @@ wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/
 
 ## Monitoring FreeBSD
 
-Once the installation is completed you should be able to start monitoring the FreeBSD server using Netdata. On the Overview tab you will see the below view - the system overview is a quick summary dashboard that gives you an idea about the health of your server. 
+Once the installation is completed, you should be able to start monitoring the FreeBSD server using Netdata. On the **Overview** tab you will see the following view - the system overview is a quick summary dashboard that gives you an idea about the health of your server. 
 
 ![image](https://user-images.githubusercontent.com/24860547/202492925-38adbb67-77f7-4577-b564-1e628709b5fb.png)
 
 The menu on the right contains the table of contents which organizes and lists all the metrics that Netdata is collecting. In this example, which is running on a fresh FreeBSD installation, 228 charts are already being collected for most metrics you could think of.
 
-Clicking on a section in TOC will take you to the relevant charts.
+Clicking on a section in the TOC will take you to the relevant charts.
 
 Here's an example of how Netdata visualizes your disk I/O bandwidth metrics.
 
 ![image](https://user-images.githubusercontent.com/24860547/202506456-fd987229-0d35-487b-af6f-2c28e0ca168a.png)
 
-Another example is networking related metrics, which you can visualize at a high fidelity that might help you to quickly identify the root cause of any unexpexted packet discards.
+Another example is networking related metrics, which you can visualize at a high fidelity to help quickly identify the root cause of any unexpected packet discards.
 
 ![image](https://user-images.githubusercontent.com/24860547/202504904-1c5afaf4-5b5c-4b2d-bddb-1a8f5b8f750f.png)
 
-Netdata doesn't just monitor system services of course, it comes with [hundreds of collectors](https://www.netdata.cloud/integrations/) that will auto discover and start monitoring services and applications that you are likely to install on your server. Each collector would create its own section in the table of contents, for a few examples of how this would look like please visit Netdata's [public loginless demo](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/).
+Netdata doesn't just monitor system services, of course: it comes with [hundreds of collectors](https://www.netdata.cloud/integrations/) that will auto discover and start monitoring services and applications that you are likely to install on your server. Each collector would create its own section in the table of contents. For a few examples of how this would look like, please visit Netdata's [public loginless demo](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/).
 
-Netdata also automatically discovers hundreds of processes and visualizes them in the Applications section. If your custom application isn't on the list that Netdata recognizes it will show up under "other" but it's just a matter of adding a couple of lines of configuration to make sure it shows up as a separate entry. To find out how to do this, please read our blog on how to find out [which application is causing system load](https://blog.netdata.cloud/server-load/)
+Netdata also automatically discovers hundreds of processes and visualizes them in the **Applications** section. If your custom application isn't on the list of applications that Netdata recognizes, it will show up under "other," but it's just a matter of adding a couple of lines of configuration to make sure it shows up as a separate entry. To find out how to do this, please read our blog on how to find out [which application is causing system load](https://blog.netdata.cloud/server-load/)
 
 ![image](https://user-images.githubusercontent.com/24860547/202505884-215a2e40-3910-40db-b634-1dab04058720.png)
 
@@ -69,9 +69,9 @@ Netdata also automatically discovers hundreds of processes and visualizes them i
 
 ### Alerts
 
-Netdata comes with pre configured alerts to reduce the monitoring burden for you. 
+Netdata comes with pre-configured alerts to reduce the monitoring burden for you. 
 
-Here's an alert that triggered when the disk space used on the FreeBSD server exceeded the threshold.
+Here's an alert that triggered when the disk space used on the FreeBSD server exceeded the threshold:
 
 ![image](https://user-images.githubusercontent.com/24860547/202504355-ad79cf16-c630-4a80-99fa-e659cfcda397.png)
 
