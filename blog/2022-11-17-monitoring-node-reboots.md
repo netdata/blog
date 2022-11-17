@@ -90,10 +90,3 @@ If you haven’t already, <a href="https://app.netdata.cloud/">sign up now for a
 We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on <a href="https://discord.com/invite/mPZ6WZKKG2">Discord</a> or <a href="https://github.com/netdata/netdata/">Github</a>.
 
 Happy Troubleshooting!
-
-
-
-
-
-
-
