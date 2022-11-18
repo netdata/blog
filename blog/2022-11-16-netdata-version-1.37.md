@@ -11,7 +11,7 @@ authors: team
 Another release of the Netdata Monitoring solution is here! Highlights of this release include infinite scalability, database tiering, improved Overview dashboards, and much more.
 
 <!--truncate-->
-### Scheduled date: 13 November 2022
+### Scheduled date: 21 November 2022
 
 Another release of the Netdata Monitoring solution is here!
 
