@@ -8,7 +8,7 @@ keywords: [how-to, monitor, troubleshoot, ISP, performance, speed, download, upl
 image: https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png
 
 ---
-<!--truncate-->
+
 ## Monitoring ISP performance & Internet Speed 
 
 There's nothing quite as frustrating as a slow internet connection. Whether you're trying to stream a movie, download a large file, or just browse the web, a slow connection can make even the simplest tasks a pain. That's why it's important to keep an eye on your internet speed, and hold your ISP accountable if they're not providing the level of service they promised.
@@ -53,14 +53,14 @@ sudo -u netdata speedtest
 sudo wget -O /tmp/install-collector.sh https://raw.githubusercontent.com/netdata/community/main/utilities/install-collector.sh && sudo bash /tmp/install-collector.sh charts.d.plugin/speedtest
 ```
 
-After a few seconds you should see the new speedtest section in your Netdata overview tab along with all of the Speedtest metrics being monitored by Netdata. And as you will see, there’s a lot more than just your Download Speed and Upload Speed that we can monitor.
+After a few seconds, you see the new speedtest section in your Netdata **Overview** tab along with all of the Speedtest metrics being monitored by Netdata. As you will see, there’s a lot more than just your Download Speed and Upload Speed that we can monitor.
 
 
 ## Key speed test metrics for ISP performance monitoring
 
 ### Speed
  
-The download speed and upload speed the speedtest was able to achieve measured in Mbps. This is the most obvious measure of ISP performance that all users are aware of - and the easiest to check against what the ISP promised you when you made a contract with them.
+**Speed** displays the download speed and upload speed that the speedtest was able to achieve, measured in Mbps. This is the most obvious measure of ISP performance that all users are aware of - and the easiest to check against what the ISP promised you when you made a contract with them.
 
 The results below show my Internet speeds are pretty steady with upload speeds of roughly 10% of the download speeds. This is still significantly lower than what my ISP claims, so maybe it's time I had a chat with them.
 
@@ -70,15 +70,15 @@ The results below show my Internet speeds are pretty steady with upload speeds o
 
 ### Packet Loss
 
-This chart measures the percentage of packets dropped during the speed test - and should ideally be close to zero most of the time. Packet loss occurs when packets of data are lost in transit. This can happen for a number of reasons, including network congestion, faulty equipment, and bad weather. Packet loss can significantly impact a user's quality of experience, especially for applications such as VoIP and video calls and video streaming.
+**Packet Loss** measures the percentage of packets dropped during the speed test,and should ideally be close to zero most of the time. Packet loss occurs when packets of data are lost in transit. This can happen for a number of reasons, including network congestion, faulty equipment, and bad weather. Packet loss can significantly impact a user's quality of experience, especially for applications such as VoIP and video calls and video streaming.
 
-In my case, I see that the packet loss is zero most of the time, except for a few sporadic spikes of 20%(!!) - I should probably take a closer look at what's going on there. 
+In my case, I see that the packet loss is zero most of the time, except for a few sporadic spikes of 20%(!!)... I should probably take a closer look at what's going on there. 
 
 ![image](https://user-images.githubusercontent.com/24860547/204288155-ae4e922e-4e74-4d01-8bd6-9969cd84170f.png)
 
 ### Latency
 
-Latency (sometimes called ping) measures how quickly your device gets a response after you’ve sent out a request. As internet speeds have steadily increased globally, latency issues have become easier to spot. Latency directly correlates with the quality of experience when it comes to latency sensitive applications like video calls, live streaming, and especially online gaming.
+**Latency** (sometimes called "ping") measures how quickly your device gets a response after you’ve sent out a request. As internet speeds have steadily increased globally, latency issues have become easier to spot. Latency directly correlates with the quality of experience when it comes to latency sensitive applications like video calls, live streaming, and especially online gaming.
 
 Three distinct latency metrics are collected to give a more fine grained understanding of potential bottlenecks in the network:
 
@@ -94,13 +94,13 @@ Three distinct latency metrics are collected to give a more fine grained underst
 
 ![image](https://user-images.githubusercontent.com/24860547/204288389-8dfa2ce0-d236-4e92-a9ae-cb97c5233e3f.png)
 
-**How do I solve latency problems?**
-- If your idle latency is high, you have an overall latency problem. Try running speedtest on another device and if you see the same problem try restarting your router. If the problem continues, consider moving your router someplace more central.
+#### **How do I solve latency problems?**
+- If your idle latency is high, you have an overall latency problem. Try running speedtest on another device, and, if you see the same problem try restarting your router. If the problem continues, consider moving your router someplace more central.
 - If your download or upload latency is high, contact your internet service provider (ISP) to see if they can help. 
  
 ### Jitter
 
-Network jitter is the variance in latency between data packets. Basically, if it's pretty stable from packet to packet, you have minimal jitter. If there are random spikes that deviate from the usual numbers you're getting, you've got some jitter. For many users jitter is not something that will be very noticeable, but there are certain scenarios such as interactive gaming where jitter could be very troublesome.
+**Network jitter** is the variance in latency between data packets. Basically, if it's pretty stable from packet to packet, you have minimal jitter. If there are random spikes that deviate from the usual numbers you're getting, you've got some jitter. For many users jitter is not something that will be very noticeable, but there are certain scenarios such as interactive gaming where jitter could be very troublesome.
 
 Similar to latency, three distinct jitter metrics are collected. 
 
@@ -125,7 +125,7 @@ Similar to latency, three distinct jitter metrics are collected.
 
 ### Bytes consumed
 
-This is the measure of how many bytes of data have been downloaded and uploaded as part of the speed tests we’re running. It’s good to keep an eye on this because speed tests can be quote bandwidth hungry and if you’re not on an unlimited plan things might get ugly.
+**Bytes consumed** is the measure of how many bytes of data have been downloaded and uploaded as part of the speed tests we’re running. It’s good to keep an eye on this because speed tests can be quote bandwidth hungry and if you’re not on an unlimited plan things might get ugly.
 
 ![image](https://user-images.githubusercontent.com/24860547/204288657-9062f7d9-9165-46b3-a784-6dcc596d2fc8.png)
 
