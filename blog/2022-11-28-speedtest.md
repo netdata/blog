@@ -8,7 +8,7 @@ keywords: [how-to, monitor, troubleshoot, ISP, performance, speed, download, upl
 image: https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png
 
 ---
-
+<!--truncate-->
 ## Monitoring ISP performance & Internet Speed 
 
 There's nothing quite as frustrating as a slow internet connection. Whether you're trying to stream a movie, download a large file, or just browse the web, a slow connection can make even the simplest tasks a pain. That's why it's important to keep an eye on your internet speed, and hold your ISP accountable if they're not providing the level of service they promised.
