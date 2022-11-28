@@ -47,7 +47,7 @@ If you are using another variant of Linux or FreeBSD or macOS use the appropriat
 sudo -u netdata speedtest
 ```
 
-4. The Speedtest collector is a community maintained collector and not available as part of the Netdata agent by default. To install this collector just run this command:
+4. The [Speedtest collector](https://github.com/netdata/community/tree/main/collectors/charts.d.plugin/speedtest) is a community maintained collector and not available as part of the Netdata agent by default. To install this collector just run this command:
  
 ```bash
 sudo wget -O /tmp/install-collector.sh https://raw.githubusercontent.com/netdata/community/main/utilities/install-collector.sh && sudo bash /tmp/install-collector.sh charts.d.plugin/speedtest
