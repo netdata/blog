@@ -80,46 +80,48 @@ In my case, I see that the packet loss is zero most of the time, expect for a fe
 
 Latency (sometimes called ping) measures how quickly your device gets a response after you’ve sent out a request. As internet speeds have steadily increased globally, latency issues have become easier to spot. Latency directly correlates with the quality of experience when it comes to latency sensitive applications like video calls, live streaming, and especially online gaming.
 
-Three distinct latency metrics are collected to give you a more fine grained understanding of potential bottlenecks in your network. 
-- Idle Latency. This test at the beginning of your Speedtest measures the response of a request on your network as if it is not in use.
+Three distinct latency metrics are collected to give a more fine grained understanding of potential bottlenecks in the network:
+
+- **Idle Latency** is measured at the beginning of a speed test while the network is (relatively) not in use.
 
 ![image](https://user-images.githubusercontent.com/24860547/204288324-4e49e578-63e6-453e-a7be-2f3921f86043.png)
 
-- Download Latency. Latency is measured while the download test is in progress to see how it is affected by download activity on your network, like a household member downloading a large game while you’re trying to work.
+- **Download Latency** is measured while the download test is in progress to see how it is affected by download activity on your network, like a household member downloading a large game while you’re trying to work.
 
 ![image](https://user-images.githubusercontent.com/24860547/204288266-ed9d9cdd-6b22-4ae3-9072-0344c5032ad9.png)
 
-- Upload Latency. Latency is also measured while the upload test is in progress to see how it is affected by upload activity on your network, like someone on your home network uploading a year’s worth of photos.
+- **Upload Latency** is measured while the upload test is in progress to see how it is affected by upload activity on your network, like someone on your home network uploading a year’s worth of photos.
 
 ![image](https://user-images.githubusercontent.com/24860547/204288389-8dfa2ce0-d236-4e92-a9ae-cb97c5233e3f.png)
 
-
-*How do I solve latency problems?*
+**How do I solve latency problems?**
 - If your idle latency is high, you have an overall latency problem. Try running speedtest on another device and if you see the same problem try restarting your router. If the problem continues, consider moving your router someplace more central.
-- If your download or upload latency is high, contact your router manufacturer or internet service provider (ISP) to see if they can help. 
+- If your download or upload latency is high, contact your internet service provider (ISP) to see if they can help. 
  
 ### Jitter
 
-Network jitter is the variance in latency between data packets. Basically, if it's pretty stable from packet to packet, you have minimal jitter. If there are random spikes that deviate from the usual numbers you're getting, you've got some jitter.
+Network jitter is the variance in latency between data packets. Basically, if it's pretty stable from packet to packet, you have minimal jitter. If there are random spikes that deviate from the usual numbers you're getting, you've got some jitter. For many users jitter is not something that will be very noticeable, but there are certain scenarios such as interactive gaming where jitter could be very troublesome.
 
-Three distinct jitter metrics
+Similar to latency, three distinct jitter metrics are collected. 
+
+- **Idle Jitter** is measured at the beginning of a speed test while the network is (relatively) not in use.
 
 ![image](https://user-images.githubusercontent.com/24860547/204288542-dd199eb9-797e-444c-97b1-2bc616e0f3d7.png)
 
+- **Download Jitter** is measured while the download test is in progress to see how it is affected by download activity on your network.
 
 ![image](https://user-images.githubusercontent.com/24860547/204288478-659c776e-3645-42a3-907e-e5f64185e77f.png)
 
+- **Upload Jitter** is measured while the upload test is in progress to see how it is affected by upload activity on your network. 
+
 ![image](https://user-images.githubusercontent.com/24860547/204288597-d5cd39a3-14f2-4f30-9909-a9befffe70f9.png)
 
-
-If your jitter is high, it could mean occasional stuttering in online gaming or other tasks that require stable latency.
-
-*How to minimize jitter?*
-- wait -- sometimes it's just due to heavy load on the other server, which resolves itself
-- use an Ethernet cable whenever possible
-- if Wi-Fi is your only option, use the less congested 5 GHz band and move closer to your router to minimize transmission distance, noise, and signal loss
-- restart your wireless router to have it automatically reconnect to the least congested channel available
-
+*How do I minimize jitter?*
+- First check if it is a momentary problem or a more longer term issue, Netdata's jitter timeseries chart should help you do this. You may notice momentary issues due to, for example, heavy load, that may go away on it's own. 
+- Prefer using an Ethernet cable whenever possible
+- And if you must use Wi-Fi, prefer the less congested 5 GHz band and move closer to your router to minimize transmission distance, noise, and signal loss
+- Try restarting your wireless router to have it automatically reconnect to the least congested channel available
+- If all else fails, try contacting your ISP.
 
 ### Bytes consumed
 
