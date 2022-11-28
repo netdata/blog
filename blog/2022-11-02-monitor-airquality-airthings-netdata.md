@@ -1,5 +1,5 @@
 ---
-slug: airquality 
+slug: airquality
 title: "Monitor indoor air quality with Airthings and Netdata"
 description: "Monitor indoor air quality with Airthings and Netdata"
 image: https://user-images.githubusercontent.com/24860547/199478174-31413dd3-680e-4e4e-8aba-8e64cf2a8366.png

@@ -10,6 +10,7 @@ const config = {
   tagline: 'Home of the Netdata blog.',
   url: 'https://blog.netdata.cloud',
   baseUrl: '/',
+  trailingSlash: true,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon-32x32.png',
@@ -138,19 +139,19 @@ const config = {
         },
       };
     },
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        createRedirects(existingPath) {
-          if (existingPath.includes('/posts/')) {
-            return [
-              existingPath.replace('/', '/posts/'),
-            ];
-          }
-          return undefined; // Return a falsy value: no redirect created
-        },
-      },
-    ],
+    //[
+    //  '@docusaurus/plugin-client-redirects',
+    //  {
+    //    createRedirects(existingPath) {
+    //      if (existingPath.includes('/')) {
+    //        return [
+    //          existingPath.replace('/', '/posts/'),
+    //        ];
+    //      }
+    //      return undefined;
+    //    },
+    //  },
+    //],
   ],
 
   themeConfig:
@@ -165,35 +166,46 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Netdata',
+          alt: 'Netdata logo',
           src: 'img/logo.svg',
         },
         items: [
             {
-                to: 'https://www.netdata.cloud/',
-                label: 'Website',
-                position: 'left',
-              },
-              {
                 to: 'https://learn.netdata.cloud/',
                 label: 'Learn',
                 position: 'left',
-              },
-              {
+            },
+            {
+                to: '/tags/',
+                label: 'Browse Tags',
+                position: 'left',
+            },
+            {
                 to: 'https://community.netdata.cloud/',
                 label: 'Community',
                 position: 'left',
-              },
-              {
+            },
+            {
                 to: 'https://app.netdata.cloud/',
                 label: 'App',
                 position: 'left',
-              },
-              {
+            },
+            {
+                to: 'https://www.netdata.cloud/',
+                label: 'Website',
+                position: 'left',
+            },
+            {
                 to: 'https://app.netdata.cloud/',
                 label: 'Sign In',
                 position: 'right',
-              },
+            },
+            {
+                href: 'https://github.com/netdata/netdata',
+                position: 'right',
+                className: 'header-github-link',
+                'aria-label': 'GitHub repository',
+            },
         ],
       },
       footer: {
@@ -225,11 +237,11 @@ const config = {
                 items: [
                     {
                         label: 'Learn',
-                        to: '/',
+                        to: 'https://learn.netdata.cloud',
                     },
                     {
                         label: 'Blog',
-                        to: 'https://netdata.cloud/blog',
+                        to: 'https://blog.netdata.cloud',
                     },
                     {
                         label: 'GitHub',
