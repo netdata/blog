@@ -62,7 +62,7 @@ After a few seconds you should see the new speedtest section in your Netdata ove
  
 The download speed and upload speed the speedtest was able to achieve measured in Mbps. This is the most obvious measure of ISP performance that all users are aware of - and the easiest to check against what the ISP promised you when you made a contract with them.
 
-The results below show my Internet speeds are pretty steady with upload speeds of roughly 10% of the download speeds. This is still significantly lower than what my ISP claims, so maybe its time I had a chat with them.
+The results below show my Internet speeds are pretty steady with upload speeds of roughly 10% of the download speeds. This is still significantly lower than what my ISP claims, so maybe it's time I had a chat with them.
 
 ![image](https://user-images.githubusercontent.com/24860547/204287954-9392714f-3fb7-469c-8692-289084f0dbfd.png)
 
@@ -72,7 +72,7 @@ The results below show my Internet speeds are pretty steady with upload speeds o
 
 This chart measures the percentage of packets dropped during the speed test - and should ideally be close to zero most of the time. Packet loss occurs when packets of data are lost in transit. This can happen for a number of reasons, including network congestion, faulty equipment, and bad weather. Packet loss can significantly impact a user's quality of experience, especially for applications such as VoIP and video calls and video streaming.
 
-In my case, I see that the packet loss is zero most of the time, expect for a few sporadic spikes of 20%(!!) - I should probably take a closer look at what's going on there. 
+In my case, I see that the packet loss is zero most of the time, except for a few sporadic spikes of 20%(!!) - I should probably take a closer look at what's going on there. 
 
 ![image](https://user-images.githubusercontent.com/24860547/204288155-ae4e922e-4e74-4d01-8bd6-9969cd84170f.png)
 
@@ -116,8 +116,8 @@ Similar to latency, three distinct jitter metrics are collected.
 
 ![image](https://user-images.githubusercontent.com/24860547/204288597-d5cd39a3-14f2-4f30-9909-a9befffe70f9.png)
 
-*How do I minimize jitter?*
-- First check if it is a momentary problem or a more longer term issue, Netdata's jitter timeseries chart should help you do this. You may notice momentary issues due to, for example, heavy load, that may go away on it's own. 
+**How do I minimize jitter?**
+- First check if it is a momentary problem or a more longer term issue, Netdata's jitter time series chart should help you do this. You may notice momentary issues due to, for example, heavy load, that may go away on its own. 
 - Prefer using an Ethernet cable whenever possible
 - And if you must use Wi-Fi, prefer the less congested 5 GHz band and move closer to your router to minimize transmission distance, noise, and signal loss
 - Try restarting your wireless router to have it automatically reconnect to the least congested channel available
@@ -125,7 +125,7 @@ Similar to latency, three distinct jitter metrics are collected.
 
 ### Bytes consumed
 
-This is the measure of how many bytes of data have been downloaded and uploaded as part of the speed tests we’re running. It’s good to keep an eye on this because speed tests can be quote bandwidth hungry and if you’re not on an unlimited plan things good get ugly.
+This is the measure of how many bytes of data have been downloaded and uploaded as part of the speed tests we’re running. It’s good to keep an eye on this because speed tests can be quote bandwidth hungry and if you’re not on an unlimited plan things might get ugly.
 
 ![image](https://user-images.githubusercontent.com/24860547/204288657-9062f7d9-9165-46b3-a784-6dcc596d2fc8.png)
 
@@ -138,9 +138,7 @@ Netdata can do a lot more than monitor metrics and visualize it for you, it come
 ### Alerts
 Netdata has built-in support for alerts to reduce the monitoring burden for you. To create your own alert for another metric – please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
 
-By default you will receive email notifications whenever an alert is triggered – if you would not like to receive these notifications you can turn them off from your profile settings.
-
-You can also set up trigger actions when an alert condition is met, for example you could (as I've done in the past) write a script that auto tweets your ISP and complains every time your internet is misbehaving due to network issues.
+For example, you could set up trigger actions when an alert condition is met. A few years ago I was having some trouble with an ISP under delivering and wrote a script that auto tweeted complaints to my ISP's twitter account every time my internet misbehaved due to network issues. I'm not suggesting you do that, but I'm not suggesting you don't do it either :-) 
 
 ### Anomaly Advisor
 Anomaly Advisor lets you quickly identify if the system you are monitoring has any anomalies and allows you to drill down into which metrics are behaving anomalously.
