@@ -62,6 +62,7 @@ After a few seconds you should see the new speedtest section in your Netdata ove
  
 The download speed and upload speed the speedtest was able to achieve measured in Mbps. This is the most obvious measure of ISP performance that all users are aware of - and the easiest to check against what the ISP promised you when you made a contract with them.
 
+The results below show my Internet speeds are pretty steady with upload speeds of roughly 10% of the download speeds. This is still significantly lower than what my ISP claims, so maybe its time I had a chat with them.
 
 ![image](https://user-images.githubusercontent.com/24860547/204287954-9392714f-3fb7-469c-8692-289084f0dbfd.png)
 
@@ -69,10 +70,11 @@ The download speed and upload speed the speedtest was able to achieve measured i
 
 ### Packet Loss
 
-The percentage of packets dropped during the speed test.
+This chart measures the percentage of packets dropped during the speed test - and should ideally be close to zero most of the time. Packet loss occurs when packets of data are lost in transit. This can happen for a number of reasons, including network congestion, faulty equipment, and bad weather. Packet loss can significantly impact a user's quality of experience, especially for applications such as VoIP and video calls and video streaming.
+
+In my case, I see that the packet loss is zero most of the time, expect for a few sporadic spikes of 20%(!!) - I should probably take a closer look at what's going on there. 
 
 ![image](https://user-images.githubusercontent.com/24860547/204288155-ae4e922e-4e74-4d01-8bd6-9969cd84170f.png)
-
 
 ### Latency
 
@@ -142,6 +144,7 @@ You can also set up trigger actions when an alert condition is met, for example 
 Anomaly Advisor lets you quickly identify if the system you are monitoring has any anomalies and allows you to drill down into which metrics are behaving anomalously.
 
 To learn more about how to use Anomaly Advisor to troubleshoot your Apache web server check out the [documentation](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor) or visit the [anomalies tab](https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/anomalies) in the demo space to play with it right now.
+
 ### Metric Correlations
 [Metric Correlations](https://learn.netdata.cloud/docs/cloud/insights/metric-correlations) lets you quickly find metrics and charts related to a particular window of interest that you want to explore further. By displaying the standard Netdata dashboard, filtered to show only charts that are relevant to the window of interest, you can get to the root cause sooner.
 
