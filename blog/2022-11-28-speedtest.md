@@ -155,7 +155,7 @@ To learn more about how to use Anomaly Advisor to troubleshoot your Apache web s
 
 So don't suffer in silence next time your internet is slow. Take a stand and demand the speeds you deserve!
 
-If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=blog&utm_content=mysql-monitoring)!
+If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=blog&utm_content=speedtest)!
 
 We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/).
 
