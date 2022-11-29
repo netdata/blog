@@ -96,7 +96,7 @@ Three distinct latency metrics are collected to give a more fine grained underst
 
 #### **How do I solve latency problems?**
 - If your idle latency is high, you have an overall latency problem. Try running speedtest on another device, and, if you see the same problem try restarting your router. If the problem continues, consider moving your router someplace more central.
-- If your download or upload latency is high, contact your internet service provider (ISP) to see if they can help. 
+- If your download or upload latency is high, check your router/network configurations and/or contact your internet service provider (ISP) to see if they can help. 
  
 ### Jitter
 
@@ -121,7 +121,7 @@ Similar to latency, three distinct jitter metrics are collected.
 - Prefer using an Ethernet cable whenever possible
 - And if you must use Wi-Fi, prefer the less congested 5 GHz band and move closer to your router to minimize transmission distance, noise, and signal loss
 - Try restarting your wireless router to have it automatically reconnect to the least congested channel available
-- If all else fails, try contacting your ISP.
+- Check your router/network configurations and/or try contacting your ISP.
 
 ### Bytes consumed
 
