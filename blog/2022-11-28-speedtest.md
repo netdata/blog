@@ -5,7 +5,7 @@ description: Monitoring and troubleshooting ISP performance.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, ISP, performance, speed, download, upload, latency, jitter, packetloss, speedtest, ookla]
 keywords: [how-to, monitor, troubleshoot, ISP, performance, speed, download, upload, latency, jitter, packetloss, speedtest, ookla]
-image: https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png
+image: https://user-images.githubusercontent.com/24860547/204470316-4682e442-6df1-4c77-b1e4-fdd96dd404f0.jpg
 
 ---
 
