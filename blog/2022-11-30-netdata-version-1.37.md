@@ -78,6 +78,7 @@ At Netdata we love **high fidelity** monitoring. We want granularity to be "per 
 
 
 <details>
+
 <summary>Read more about our improvements to scalability</summary>
 The only way to achieve our goal is by scaling out. Instead of centralizing everything into one huge time-series database, we have many smaller centralization points that can be used seamlessly all together like a giant distributed database. **This is what Netdata Cloud does!** It connects to all your Netdata agents and seamlessly aggregates data from all of them to provide infrastructure and service level dashboards and alarms.
 
@@ -153,6 +154,7 @@ Unlike the Netdata Agent dashboard, the Netdata Cloud **Overview** dashboard is 
 We believe that dashboards should be fully automated and out-of-the-box, providing all the means for slicing and dicing data without learning any query language, without editing chart definitions, and without having a deep understanding of the underlying metrics, so that the monitoring system is fully functional and ready to be used for troubleshooting the moment it is installed.
 
 <details>
+
 <summary>Read more about our improvements to the Overview dashboard</summary>
 
 Moving towards this goal, in this release we introduce the following improvements:
@@ -182,6 +184,7 @@ We are working to bring similar improvements to the local Agent dashboard. In th
 This initial release of the Netdata data source plugin aims to maximize the troubleshooting capabilities of Netdata in Grafana, making them more widely available. It combines Netdata’s powerful collector engine with Grafana's amazing visualization capabilities!
 
 <details>
+
 <summary>Read more about our source plugin for Grafana</summary>
 
 ![explorer_9ae3iwJHsD](https://user-images.githubusercontent.com/82235632/196962412-0b87be39-cfa4-419d-8959-96104803b4a4.png)
@@ -280,6 +283,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 #### New collectors
 
 <details>
+
 <summary>Show 9 more contributions</summary>
 
 - Add Pandas collector (python.d/pandas) ([#13773](https://github.com/netdata/netdata/pull/13773), [@andrewm4894](https://github.com/andrewm4894))
@@ -291,6 +295,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add Docker collector (go.d/docker) ([#760](https://github.com/netdata/go.d.plugin/pull/760), [@ilyam8](https://github.com/ilyam8))
 - Add PgBouncer collector (go.d/pgbouncer) ([#748](https://github.com/netdata/go.d.plugin/pull/748), [@ilyam8](https://github.com/ilyam8))
 - Add ProxySQL collector (go.d/proxysql) ([#703](https://github.com/netdata/go.d.plugin/pull/703), [@yasharne](https://github.com/yasharne))
+
 </details>
 
 #### Improvements
@@ -298,6 +303,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 🐞 Improving our collectors one bug fix at a time.
 
 <details>
+
 <summary>Show 71 more contributions</summary>
 
 - Allow statsd tags to modify chart metadata on the fly (stats.d.plugin) ([#14014](https://github.com/netdata/netdata/pull/14014), [@ktsaou](https://github.com/ktsaou))
@@ -371,11 +377,13 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add collecting image and volume stats (go.d/docker) ([#777](https://github.com/netdata/go.d.plugin/pull/777), [@ilyam8](https://github.com/ilyam8))
 - Add Percona MySQL compatibility (go.d/mysql) ([#776](https://github.com/netdata/go.d.plugin/pull/776), [@ilyam8](https://github.com/ilyam8))
 - Add collection of additional user statistics metrics ([#775](https://github.com/netdata/go.d.plugin/pull/775), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 #### Bug fixes
 
 <details>
+
 <summary>Show 24 more contributions</summary>
 
 - Fix eBPF crashes on exit (ebpf.plugin) ([#14012](https://github.com/netdata/netdata/pull/14012), [@thiagoftsm](https://github.com/thiagoftsm))
@@ -402,6 +410,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Fix charts when binary log and MyISAM are disabled (go.d/mysql) ([#763](https://github.com/netdata/go.d.plugin/pull/763), [@ilyam8](https://github.com/ilyam8))
 - Fix data collection jobs cleanup on exit (go.d.plugin) ([#758](https://github.com/netdata/go.d.plugin/pull/758), [@ilyam8](https://github.com/ilyam8))
 - Fix handling the case when no images are found (go.d/docker) ([#739](https://github.com/netdata/go.d.plugin/pull/739), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 #### Other
@@ -420,6 +429,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Remove blocklist file existence state chart (go.d/pihole) ([#914](https://github.com/netdata/go.d.plugin/pull/914), [@ilyam8](https://github.com/ilyam8))
 - Remove instance-specific information from chart families (go.d/portcheck) ([#790](https://github.com/netdata/go.d.plugin/pull/790), [@ilyam8](https://github.com/ilyam8))
 - Remove spaces in "HTTP Response Time" chart dimensions (go.d/httpcheck) ([#788](https://github.com/netdata/go.d.plugin/pull/788), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 ### Documentation
@@ -454,6 +464,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add a note about authorized_mailq_users to postfix readme ([#13515](https://github.com/netdata/netdata/pull/13515), [@ilyam8](https://github.com/ilyam8))
 - Add a document outlining how to build native packages locally ([#12431](https://github.com/netdata/netdata/pull/12431), [@Ferroin](https://github.com/Ferroin))
 - Add some tips on collecting per-queue metrics for RabbitMQ ([#12227](https://github.com/netdata/netdata/pull/12227), [@HG00](https://github.com/HG00))
+
 </details>
 
 ### Health
@@ -469,7 +480,9 @@ We would like to thank our dedicated, talented contributors that make up this am
 
 
 #### Alarms
+
 <details>
+
 <summary>Show 12 more contributions</summary>
 
 - Use 'host' label in alerts info (health.d/ping.conf) ([#13955](https://github.com/netdata/netdata/pull/13955), [@ilyam8](https://github.com/ilyam8))
@@ -484,6 +497,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Adjust systemdunits alarms (health.d/systemdunits.conf) ([#13623](https://github.com/netdata/netdata/pull/13623), [@ilyam8](https://github.com/ilyam8))
 - Add Postgres total connection utilization alarm (health.d/postgres.conf) ([#13620](https://github.com/netdata/netdata/pull/13620), [@ilyam8](https://github.com/ilyam8))
 - Adjust mysql_galera_cluster_size_max_2m lookup to make time in warn/crit predictable (health.d/mysql.conf) ([#13563](https://github.com/netdata/netdata/pull/13563), [@ilyam8](https://github.com/ilyam8))
+
 </details>
 
 ### Packaging / Installation
@@ -491,6 +505,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 #### Changes
 
 <details>
+
 <summary>Show 28 more contributions</summary>
 
 - Fix writing to stdout if static update is successful ([#14058](https://github.com/netdata/netdata/pull/14058), [@ilyam8](https://github.com/ilyam8))
@@ -521,6 +536,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Overhaul handling of installation of Netdata as a system service. ([#13451](https://github.com/netdata/netdata/pull/13451), [@Ferroin](https://github.com/Ferroin))
 - Fix existing install detection for FreeBSD and macOS ([#13243](https://github.com/netdata/netdata/pull/13243), [@Ferroin](https://github.com/Ferroin))
 - Assorted cleanup in the OpenRC init script ([#13115](https://github.com/netdata/netdata/pull/13115), [@Ferroin](https://github.com/Ferroin))
+
 </details>
 
 ### Other Notable Changes
@@ -528,7 +544,9 @@ We would like to thank our dedicated, talented contributors that make up this am
 ⚙️ Greasing the gears to smooth your experience with Netdata.
 
 #### Improvements
+
 <details>
+
 <summary>Show 9 more contributions</summary>
 
 - Add replication of metrics (gaps filling) during streaming ([#13873](https://github.com/netdata/netdata/pull/13873), [@vkalintiris](https://github.com/vkalintiris))
@@ -540,13 +558,15 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Improve streaming performance by 25% on the child ([#13708](https://github.com/netdata/netdata/pull/13708), [@ktsaou](https://github.com/ktsaou))
 - Improve agent shutdown time ([#13649](https://github.com/netdata/netdata/pull/13649), [@stelfrag](https://github.com/stelfrag))
 - Add disabling Cloud functionality via NETDATA_DISABLE_CLOUD environment variable ([#13106](https://github.com/netdata/netdata/pull/13106), [@ilyam8](https://github.com/ilyam8))
--</details>
+
+</details>
 
 #### Bug Fixes
 
 🐞 Increasing Netdata's reliability, one bug fix at a time.
 
 <details>
+
 <summary>Show 46 more contributions</summary>
 
 - Fix sanitizing command arguments executed by the health component ([#14064](https://github.com/netdata/netdata/pull/14064), [@vkalintiris](https://github.com/vkalintiris))
@@ -595,12 +615,15 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Fix a failure to build eBPF with CMake ([#13568](https://github.com/netdata/netdata/pull/13568), [@underhood](https://github.com/underhood))
 - Fix a crash when xen libraries are misconfigured ([#13535](https://github.com/netdata/netdata/pull/13535), [@vlvkobal](https://github.com/vlvkobal))
 - Fix crashes on 32bit system ([#13511](https://github.com/netdata/netdata/pull/13511), [@MrZammler](https://github.com/MrZammler))
+
 </details>
 
 ### Code organization
 
 #### Changes
+
 <details>
+
 <summary>Show 92 more contributions</summary>
 
 - Replication fixes 8 ([#14061](https://github.com/netdata/netdata/pull/14061), [@ktsaou](https://github.com/ktsaou))
