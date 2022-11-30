@@ -10,6 +10,7 @@ authors: team
 
 # Release v1.37
 
+
 ## **IMPORTANT NOTICE**
 
 This release fixes two security issues, one in streaming authorization and another at the execution of alarm notification commands. **All users are advised to update to this version or any later!** Credit goes to [Stefan Schiller](https://github.com/stefan-schiller-sonarsource) of SonarSource.com for identifying both of them. Thank you, Stefan!
@@ -68,7 +69,7 @@ TOC tree is up to the Release notes manager.
 
 ### Infinite scalability <a id="v1370-inifinite"></a>
 
-Scalability is one of the biggest challenges of monitoring solutions. Almost every commercial or open-source solution assumes that metrics should be centralized to a time-series database, which is then queried to provide dashboards and alarms. This centralization, however, has 2 key problems:
+Scalability is one of the biggest challenges of monitoring solutions. Almost every commercial or open-source solution assumes that metrics should be centralized to a time-series database, which is then queried to provide dashboards and alarms. This centralization, however, has two key problems:
 
 1. The scalability of the monitoring solutions is significantly limited, since growing these central databases can quickly become tricky, if it is possible at all.
 2. To improve scalability and control the monitoring infrastructure cost, almost all solutions limit granularity (the data collection frequency) and cardinality (the number of metrics monitored).
@@ -78,15 +79,15 @@ At Netdata we love **high fidelity** monitoring. We want granularity to be "per 
 
 <details>
 <summary>Read more about our improvements to scalability</summary>
-The only way to achieve that is by scaling out. Instead of centralizing everything into one huge time-series database, we have many smaller centralization points that can be used seamlessly all together like a giant distributed database. **This is what Netdata Cloud does!** It connects to all your Netdata agents, and seamlessly aggregates data from all of them to provide infrastructure and service level dashboards and alarms.
+The only way to achieve our goal is by scaling out. Instead of centralizing everything into one huge time-series database, we have many smaller centralization points that can be used seamlessly all together like a giant distributed database. **This is what Netdata Cloud does!** It connects to all your Netdata agents and seamlessly aggregates data from all of them to provide infrastructure and service level dashboards and alarms.
 
 ![image](https://user-images.githubusercontent.com/2662304/199225735-01a41cc5-c074-4fe2-b780-5f08e92c6769.png)
 
-Netdata Cloud does not collect or store all the data collected; that is one of its most beautiful unique functions. It only needs active connections to the Netdata Agents having the metrics. The Netdata Agents store all metrics in their own time-series databases (we call it [`dbengine`](https://learn.netdata.cloud/docs/agent/database/engine#tiering-in-a-nutshell), and it is embedded into the Netdata Agents). 
+Netdata Cloud does not collect or store all the data collected; that is one of its most beautiful and unique qualities. It only needs active connections to the Netdata Agents having the metrics. The Netdata Agents store all metrics in their own time-series databases (we call it [`dbengine`](https://learn.netdata.cloud/docs/agent/database/engine#tiering-in-a-nutshell), and it is embedded into the Netdata Agents). 
 
 In this release, we introduce a new way for the Agents to communicate their metadata to the cloud. To minimize the amount of traffic exchanged between Netdata Cloud and Agents, we only transfer a very limited information of metadata. We call this information `contexts`, and it is pretty much limited to the unique metric names collected, coupled with the actual retention (first and last timestamps) that each agent has available for query.
 
-At the same time, to overcome the limitations of having hundreds of thousands of Agents concurrently connected to Netdata Cloud, we are now using EMQX as the message broker that connects Netdata Agents to Netdata Cloud. As the community grows, the next step planned is to have such message brokers in all 5 continents, to minimize the round-trip latency for querying Netdata Agents through Netdata Cloud.
+At the same time, to overcome the limitations of having hundreds of thousands of Agents concurrently connected to Netdata Cloud, we are now using EMQX as the message broker that connects Netdata Agents to Netdata Cloud. As the community grows, the next step planned is to have such message brokers in five continents, to minimize the round-trip latency for querying Netdata Agents through Netdata Cloud.
 
 We also see [**Netdata Parents**](https://learn.netdata.cloud/docs/agent/streaming) as a key component of our ecosystem. A Netdata Parent is a Netdata Agent that acts as a centralization point for other Netdata Agents. The idea is simple: any Netdata Agent (Child) can delegate all its functions, except data collection, to any other Netdata Agent (Parent), and by doing so, the latter now becomes a Netdata Parent. This means that metrics storage, metrics querying, health monitoring, and machine learning can be handled by the Netdata Parent, on behalf of the Netdata Children that push metrics to it.
 
@@ -99,19 +100,19 @@ This functionality is crucial for our ecosystem for the following reasons:
 **In this release** we introduce significant improvements to Netdata Parents:
 
 1. **Streaming Compression**<br/>The communication between Netdata Agents is now compressed using LZ4 streaming compression, saving more than 70% of the bandwidth. TLS communication was already implemented and can be combined with compression.
-2. **Active-Active Parents Clusters**<br/>A Parents cluster of 2+ nodes can be configured by linking each of the parents to the others. Our configuration can easily take care of the circular dependency this implies. For 2 nodes you configure : A->B and B<-A. For 3 nodes: A->B/C, B->A/C, C->A/B. Once the parents are setup, configure Netdata Agents to push metrics to any of them (for 2 Parent nodes: A/B, for 3 Parent nodes: A/B/C). Each Netdata Agent will send metrics to only one of the configured parents at a time. But any of them. Then the Parent agents will re-stream metrics to each other.
+2. **Active-Active Parents Clusters**<br/>A Parent cluster of 2+ nodes can be configured by linking each of the parents to the others. Our configuration can easily take care of the circular dependency this implies. For 2 nodes you configure : A->B and B<-A. For 3 nodes: A->B/C, B->A/C, C->A/B. Once the parents are setup, configure Netdata Agents to push metrics to any of them (for 2 Parent nodes: A/B, for 3 Parent nodes: A/B/C). Each Netdata Agent will send metrics to only one of the configured parents at a time. But any of them. Then the Parent agents will re-stream metrics to each other.
 3. **Replication of past data**<br/>Now Parents can request missing data from each other and the origin data collecting Agent. This works seamlessly when two agents connect to each other (both have to be latest version). They exchange information about the retention each has and they automatically fill the gaps of the Parent agent, ensuring no data are lost at the Parents, even if a Parent was offline for some time (the default max replication duration is 1 day, but it can be tuned in `stream.conf` - and the connecting Agent Child needs to have data for at least that long in order for them to be replicated).
-4. **Performance Improvements**<br/>Now Netdata Parents can digest about 700k metric values per second per origin Agent. This is a huge improvement over the previous one of 400k. Also, when establishing a connection, the agents can accept about 2k metadata definitions per second per origin Agent. We moved all metadata management to a separate thread and now we are experiencing 80k metric definitions per second per origin Agent, making new Agent connections enter the metrics streaming phase almost instantly.
+4. **Performance Improvements**<br/>Now Netdata Parents can digest about 700k metric values per second per origin Agent. This is a huge improvement over the previous one of 400k. Also, when establishing a connection, the agents can accept about 2k metadata definitions per second per origin Agent. We moved all metadata management to a separate thread, and now we are experiencing 80k metric definitions per second per origin Agent, making new Agent connections enter the metrics streaming phase almost instantly.
 
-All these improvements establish a huge step forward in providing an infinite scalable monitoring infrastructure.
+All these improvements establish a huge step forward in providing an infinitely scalable monitoring infrastructure.
 
 </details>
 
 ### Database retention <a id="v1370-db-retention"></a>
 
-Many users think of Netdata Agent as an amazing single node-monitoring solution, offering limited real-time retention to metrics. This has changed slightly over the years as we introduced [`dbengine`](https://learn.netdata.cloud/docs/agent/database/engine#tiering-in-a-nutshell) for storing metrics and even with the introduction of [database tiering](https://learn.netdata.cloud/guides/longer-metrics-storage#tiering) at the previous release, that allows Netdata to downscale metrics and store them for a longer duration.
+Many users think of Netdata Agent as an amazing single node-monitoring solution, offering limited real-time retention to metrics. This  changed slightly over the years as we introduced [`dbengine`](https://learn.netdata.cloud/docs/agent/database/engine#tiering-in-a-nutshell) for storing metrics and even with the introduction of [database tiering](https://learn.netdata.cloud/guides/longer-metrics-storage#tiering) at the previous release, allowing Netdata to downscale metrics and store them for a longer duration.
 
-In this release, we now enable tiering by default! So, a typical Netdata Agent installation, with default settings, will now have 3 database tiers, **offering a retention of about 120 - 150 days**, using just 0.5 GB of disk space!
+As of this release, we now enable tiering by default! So, a typical Netdata Agent installation, with default settings, will now have 3 database tiers, **offering a retention of about 120 - 150 days**, using just 0.5 GB of disk space!
 
 This is coupled with another significant achievement. Traditionally, the Agent dashboard showed only currently collected metrics. The dashboard of Netdata Cloud however, should present all the metrics that were available for the selected time-frame, independently of whether they are currently being collected or not. This is especially important for highly volatile environments, like [Kubernetes](https://learn.netdata.cloud/docs/cloud/visualize/kubernetes), that metrics come and go all the time.
 
@@ -121,7 +122,7 @@ This feature of querying past data even for non-collected metrics is available n
 
 ### New and improved system service integration <a id="v1370-system-service"></a>
 
-We have completely rewritten the part of the installer responsible for setting up Netdata as a system service. This includes a number of major improvements over the old code:
+We have completely rewritten the part of the installer responsible for setting up Netdata as a system service. This includes a number of major improvements over the old code, including the following:
 
 - Instead of deciding which type of system service to install based on the distribution name and release, we now actively detect which service manager is in use and use that. This provides significantly better behavior on non-systemd systems, many of which were not actually getting the correct service type installed.
 - On FreeBSD systems, we now correctly install the rc.d script for Netdata to `/usr/local/etc/rc.d` instead of `/etc/rc.d`.
@@ -133,7 +134,7 @@ We have completely rewritten the part of the installer responsible for setting u
 
 Additionally, this release includes a number of improvements to our OpenRC init script, bringing it more in-line with best practices for OpenRC init scripts, fixing a handful of bugs, and making it easier to run Netdata under OpenRC’s native process supervision.
 
-We plan to continue improving this area during the next release cycle as well, including further improvements to our OpenRC support and preliminary support for installing Netdata as a service on systems using Runit.
+We plan to continue improving this area in upcoming release cycles as well, including further improvements to our OpenRC support and preliminary support for installing Netdata as a service on systems using Runit.
 
 ### Plugins function extension <a id="v1370-plugins-extension"></a>
 
@@ -141,25 +142,25 @@ As of this release, plugins can now register functions to the agent that can be 
 
 ###  Disk based data indexing <a id="v1370-disk-indexing"></a>
 
-Agents now build an optimized disk-based index file to reduce memory requirements up to 90%, in term improving the Agent startup time improved by 1,000% (You read this right; this is not a typo!).
+Agents now build an optimized disk-based index file to reduce memory requirements up to 90%. In turn, the Agent startup time improved by 1,000% (You read this right; this is not a typo!).
 
 ### **Overview** dashboard <a id="v1370-overview-dash"></a>
 
-The [**Overview** dashboard](https://learn.netdata.cloud/docs/cloud/visualize/overview) is the key dashboard of the Netdata ecosystem. All our efforts go into improving this dashboard so that it will eventually be meaningless to use anything else.
+The [**Overview** dashboard](https://learn.netdata.cloud/docs/cloud/visualize/overview) is the key dashboard of the Netdata ecosystem. We are constantly putting effort into improving this dashboard so that it will eventually be unnecessary to use anything else.
 
 Unlike the Netdata Agent dashboard, the Netdata Cloud **Overview** dashboard is multi-node, providing infrastructure and service level views of the metrics, seamlessly aggregating and correlating metrics from all Netdata Agents that participate in a war room.
 
-We believe that dashboards should be fully automated, out of the box, providing all the means for slicing and dicing data without learning any query language, without editing chart definitions and without having a deep understanding of the underlying metrics, so that the monitoring system is fully functional and ready to be used for troubleshooting the moment it is installed.
+We believe that dashboards should be fully automated and out-of-the-box, providing all the means for slicing and dicing data without learning any query language, without editing chart definitions, and without having a deep understanding of the underlying metrics, so that the monitoring system is fully functional and ready to be used for troubleshooting the moment it is installed.
 
 <details>
 <summary>Read more about our improvements to the Overview dashboard</summary>
 
 Moving towards this goal, in this release we introduce the following improvements:
 
-1. A complete re-write of the underlying core of the dashboard offers now huge **performance improvements** on dashboards with thousands of charts. Before this work, when the dashboard had thousands of charts, several seconds were required to jump from the top of the dashboard to the end. Now it is instant.
+1. A complete rewrite of the underlying core of the dashboard offers now huge **performance improvements** on dashboards with thousands of charts. Before this work, when the dashboard had thousands of charts, several seconds were required to jump from the top of the dashboard to the end. Now it is instant.
 2. We went through all the data collection plugins and metrics and we **added labels** to all of them, allowing the default charts on the **Overview** dashboard to pivot the charts, **slicing and dicing** the data according to these labels. For example, network interfaces charts can be pivoted by device name or interface type, while at the same time filtered by any of the labels, dimensions, instances or nodes.
 ![image](https://user-images.githubusercontent.com/2662304/199255851-2258c5cf-77a1-4a6b-999c-e325532ef7df.png)
-4. We have started working on new **summary tiles** to outlook the sections of the dashboard in a more dynamic manner. This work has just started and we expect to introduce a lot of new changes until the next releease![image](https://user-images.githubusercontent.com/2662304/199256852-bdcc78d8-6061-4f1b-be9f-9cc358fa47d4.png)
+4. We have started working on new **summary tiles** to outlook the sections of the dashboard in a more dynamic manner. This work has just started and we expect to introduce a lot of new changes heading into the next releease![image](https://user-images.githubusercontent.com/2662304/199256852-bdcc78d8-6061-4f1b-be9f-9cc358fa47d4.png)
 
 </details>
 
@@ -167,7 +168,7 @@ Moving towards this goal, in this release we introduce the following improvement
 
 The Single Node view dashboard now uses the same engine as the [Overview](#v1370-overview-dash).
 
-You get a more consistent experience, but also: 
+With this, you get a more consistent experience, but also: 
 * The ability to run metric correlations across many nodes in your infrastructure.
 * All the grouping and filtering functions of the overview.
 * Reduced memory usage on the agent, as the old endpoints get deprecated.
@@ -192,7 +193,7 @@ We expect that the Open-Source community will take a lot of value from this plug
 
 We would love to get you involved in this project! If you have ideas on things you would like to see or you just want to share a cool dashboard you have setup, you're more than welcome to [contribute](https://github.com/netdata/netdata-grafana-datasource-plugin).
 
-Checkout our [blogpost](https://www.netdata.cloud/blog/introducing-netdata-source-plugin-for-grafana) and [youtube video](https://www.youtube.com/watch?v=uhvrnFbHlvk) on this new plugin to see how it can work best for you.
+Check out our [blogpost](https://www.netdata.cloud/blog/introducing-netdata-source-plugin-for-grafana) and [youtube video](https://www.youtube.com/watch?v=uhvrnFbHlvk) on this new plugin to see how it can work best for you.
 
 </details>
 
@@ -221,18 +222,18 @@ To better showcase the potentialities and upgrades of Netdata, we have made avai
 
 #### PostgreSQL monitoring <a id="v1370-postgressql"></a>
 
-Netdata's new PostgreSQL collector offers a fully revamped comprehensive PostgreSQL DB monitoring experience. 100+ PostrgreSQL metrics are collected and visualized across 60+ composite charts. Netdata now collects metrics at per database, per table and per index granularity (besides the metrics that are global to the entire DB cluster) and lets users explore which table or index has a specific problem such as high cache miss, low rows fetched ratio (indicative of missing indexes) or bloat that's eating up valuable space. The new collector also includes built-in alerts for several problem scenarios that a user is likely to run into on a PostgreSQL cluster. For more information read the [docs](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/postgres) or the [blog ](https://blog.netdata.cloud/postgresql-monitoring/)for a deep dive into PostgreSQL and why these metrics matter.
+Netdata's new PostgreSQL collector offers a fully revamped comprehensive PostgreSQL DB monitoring experience. 100+ PostrgreSQL metrics are collected and visualized across 60+ composite charts. Netdata now collects metrics at per database, per table and per index granularity (besides the metrics that are global to the entire DB cluster) and lets users explore which table or index has a specific problem such as high cache miss, low rows fetched ratio (indicative of missing indexes) or bloat that's eating up valuable space. The new collector also includes built-in alerts for several problem scenarios that a user is likely to run into on a PostgreSQL cluster. For more information, read our [docs](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/postgres) or our [blog](https://blog.netdata.cloud/postgresql-monitoring/)for a deep dive into PostgreSQL and why these metrics matter.
 
 ![image](https://user-images.githubusercontent.com/24860547/200192667-756a30ae-d9f7-46e7-8195-fbea50215c42.png)
 
 #### Redis monitoring
-Netdata's Redis collector was updated to include new metrics crucial for database performance monitoring such as latency and new built-in alerts. For the full list of Redis metrics now available read the [docs](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/redis) or the [blog ](https://www.netdata.cloud/blog/redis-monitoring) for a deeper dive into Redis monitoring.
+Netdata's Redis collector was updated to include new metrics crucial for database performance monitoring such as latency and new built-in alerts. For the full list of Redis metrics now available, read our [docs](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/redis) or our [blog ](https://www.netdata.cloud/blog/redis-monitoring) for a deeper dive into Redis monitoring.
 
 ![image](https://user-images.githubusercontent.com/24860547/200192628-73d0bf35-9de4-4916-9c3a-b208b4ccfb24.png)
 
 
 #### Cassandra monitoring
-Netdata now monitors Cassandra, and comes with 25+ charts for all key Cassandra metrics. The collected metrics include throughput, latency, cache (key cache + row cache), disk usage and compaction, as well as JVM runtime metrics such as garbage collection. Any potential errors and exceptions that occur on your Cassandra cluster are also monitored. For more information read the [docs](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/cassandra) or the [blog](https://blog.netdata.cloud/cassandra-monitoring-part2/).
+Netdata now monitors Cassandra, and comes with 25+ charts for all key Cassandra metrics. The collected metrics include throughput, latency, cache (key cache + row cache), disk usage and compaction, as well as JVM runtime metrics such as garbage collection. Any potential errors and exceptions that occur on your Cassandra cluster are also monitored. For more information read our [docs](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/cassandra) or our [blog](https://blog.netdata.cloud/cassandra-monitoring-part2/).
 
 ![image](https://user-images.githubusercontent.com/24860547/200192648-75bb5e92-add7-4930-a191-a5f45829cb16.png)
 
@@ -251,10 +252,10 @@ We have improved the speed of chart creation by 70x. According to lab tests crea
 we achieved a chart creation rates of 7000 charts/second (vs 100 charts/second prior)
 
 #### Per host alert processing. 
-Alert processing for a host (e.g. child connected to a parent) is now done on its own host. Time consuming health related initialization functions are deferred as needed and parallelized to improve performance.
+Alert processing for a host (e.g. child connected to a parent) is now done on its own host. Time-consuming health related initialization functions are deferred as needed and parallelized to improve performance.
 
 #### Dictionary code improvements
-Code improvements to make use of dictionaries to better manage the life cycle of objects (creation, usage, and destruction using reference counters) and reduce explicit locking to access resources. 
+Code improvements have been made to make use of dictionaries, better managing the life cycle of objects (creation, usage, and destruction using reference counters) and reducing explicit locking to access resources. 
 
 ## Acknowledgments <a id="v1370-ack"></a>
 
@@ -524,7 +525,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 
 ### Other Notable Changes
 
-⚙️ Greasing the gears to smoothen your experience with Netdata.
+⚙️ Greasing the gears to smooth your experience with Netdata.
 
 #### Improvements
 <details>
@@ -543,7 +544,7 @@ We would like to thank our dedicated, talented contributors that make up this am
 
 #### Bug Fixes
 
-🐞 Increasing Netdata's reliability one bug fix at a time.
+🐞 Increasing Netdata's reliability, one bug fix at a time.
 
 <details>
 <summary>Show 46 more contributions</summary>
