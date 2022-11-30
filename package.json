@@ -19,7 +19,7 @@
     "@docusaurus/plugin-client-redirects": "^2.2.0",
     "@docusaurus/plugin-google-analytics": "2.2.0",
     "@docusaurus/preset-classic": "2.2.0",
-    "@easyops-cn/docusaurus-search-local": "0.33.5",
+    "@easyops-cn/docusaurus-search-local": "0.33.6",
     "@mdx-js/react": "1.6.22",
     "@tailwindcss/typography": "0.5.8",
     "autoprefixer": "10.4.13",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.2.0",
-    "@giscus/react": "2.2.0"
+    "@giscus/react": "2.2.4"
   },
   "browserslist": {
     "production": [
