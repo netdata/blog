@@ -8,10 +8,13 @@ keywords: [netdata,product]
 authors: team
 ---
 
-Another release of the Netdata Monitoring solution is here! Highlights of this release include infinite scalability, database tiering, improved Overview dashboards, and much more.
+# Release v1.37
 
-<!--truncate-->
-### Scheduled date: 21 November 2022
+## **IMPORTANT NOTICE**
+
+This release fixes two security issues, one in streaming authorization and another at the execution of alarm notification commands. **All users are advised to update to this version or any later!** Credit goes to [Stefan Schiller](https://github.com/stefan-schiller-sonarsource) of SonarSource.com for identifying both of them. Thank you, Stefan!
+
+## Netdata release v1.37 introduction
 
 Another release of the Netdata Monitoring solution is here!
 
@@ -48,8 +51,8 @@ TOC tree is up to the Release notes manager.
 - [Acknowledgments](#v1370-ack)
 - [Contributions](#v1370-contributions)
 - [Deprecation and product notices](#v1370-deprecation)
-- [Netdata Agent release meetup](#vXXXX-release-meetup)
-- [Support options](#vXXXX-support-options)
+- [Netdata release meetup](#v1370-release-meetup)
+- [Support options](#v1370-support-options)
 
 > ❗ We're keeping our codebase healthy by removing features that are end of life. Read the [deprecation notices](#v1370-deprecation) to check if you are affected.
 
@@ -108,30 +111,16 @@ All these improvements establish a huge step forward in providing an infinite sc
 
 Many users think of Netdata Agent as an amazing single node-monitoring solution, offering limited real-time retention to metrics. This has changed slightly over the years as we introduced [`dbengine`](https://learn.netdata.cloud/docs/agent/database/engine#tiering-in-a-nutshell) for storing metrics and even with the introduction of [database tiering](https://learn.netdata.cloud/guides/longer-metrics-storage#tiering) at the previous release, that allows Netdata to downscale metrics and store them for a longer duration.
 
-A problem however remained: To increase metrics retention, unreasonable amounts of memory where required.
+In this release, we now enable tiering by default! So, a typical Netdata Agent installation, with default settings, will now have 3 database tiers, **offering a retention of about 120 - 150 days**, using just 0.5 GB of disk space!
 
-In the previous release, we introduced the setting `[db].dbengine page descriptors in file mapped memory = yes` to offload 60% of the `dbengine` memory to a swap like mechanism. It helped a bit, but it heavily influenced I/O, which was not reasonable either.
-
-We needed to solve this problem. Although we had tiering implemented, we couldn't enable it by default, because Netdata required too much memory. Of course, CPU resources and memory are related. You cannot improve either of them without hurting the other and traditionally we were preferring best CPU usage at the expense of memory.
-
-So, during the last few months we went through a series of designs and tests to figure out how we can solve this problem. How we can index the vast amount of data `dbengine` maintains without requiring unreasonable amounts of memory.
-
-<details>
-<summary>Read more about our improvements to database retention</summary>
-
-The result of this work is released today. **90% memory decrease for the Agent, at the expense of just 15% of querying speed and 10% of additional disk space.** To achieve this, we implemented a new journal file for `dbengine` that is optimized to be queried at runtime. This journal file holds all the metadata required for all the metrics and is optimized to be read-only memory mapped.
-
-With this improvement we we now enable tiering by default! So, a typical Netdata Agent installation, with default settings, will now have 3 database tiers, **offering a retention of about 120 - 150 days**, using just 0.5 GB of disk space!
-
-These improvements have been coupled with another significant achievement. Traditionally, the Agent dashboard showed only currently collected metrics. The dashboard of Netdata Cloud however, should present all the metrics that were available for the selected time-frame, independently of whether they are currently being collected or not. This is especially important for highly volatile environments, like [Kubernetes](https://learn.netdata.cloud/docs/cloud/visualize/kubernetes), that metrics come and go all the time.
+This is coupled with another significant achievement. Traditionally, the Agent dashboard showed only currently collected metrics. The dashboard of Netdata Cloud however, should present all the metrics that were available for the selected time-frame, independently of whether they are currently being collected or not. This is especially important for highly volatile environments, like [Kubernetes](https://learn.netdata.cloud/docs/cloud/visualize/kubernetes), that metrics come and go all the time.
 
 So, in this release, we rewrote the query engine of the Netdata Agent to properly query metrics independently of them being currently collected or not. In practice, the Agent is now sliced in two big modules: data collection and querying. These two parts do not depend on each other any more, allowing dashboards to query metrics for any time-frame there are data available.
 
 This feature of querying past data even for non-collected metrics is available now via Netdata Cloud Overview dashboards.
 
-</details>
-
 ### New and improved system service integration <a id="v1370-system-service"></a>
+
 We have completely rewritten the part of the installer responsible for setting up Netdata as a system service. This includes a number of major improvements over the old code:
 
 - Instead of deciding which type of system service to install based on the distribution name and release, we now actively detect which service manager is in use and use that. This provides significantly better behavior on non-systemd systems, many of which were not actually getting the correct service type installed.
@@ -147,9 +136,11 @@ Additionally, this release includes a number of improvements to our OpenRC init 
 We plan to continue improving this area during the next release cycle as well, including further improvements to our OpenRC support and preliminary support for installing Netdata as a service on systems using Runit.
 
 ### Plugins function extension <a id="v1370-plugins-extension"></a>
+
 As of this release, plugins can now register functions to the agent that can be executed on demand to provide real time, detailed and specific chart data. Via [streaming](#v1370-streaming-replication), the definitions of functions are now transmitted to a parent and seamlessly exposed to the agent.
 
 ###  Disk based data indexing <a id="v1370-disk-indexing"></a>
+
 Agents now build an optimized disk-based index file to reduce memory requirements up to 90%, in term improving the Agent startup time improved by 1,000% (You read this right; this is not a typo!).
 
 ### **Overview** dashboard <a id="v1370-overview-dash"></a>
@@ -161,14 +152,14 @@ Unlike the Netdata Agent dashboard, the Netdata Cloud **Overview** dashboard is 
 We believe that dashboards should be fully automated, out of the box, providing all the means for slicing and dicing data without learning any query language, without editing chart definitions and without having a deep understanding of the underlying metrics, so that the monitoring system is fully functional and ready to be used for troubleshooting the moment it is installed.
 
 <details>
-<summary>Read more about our improvements to the **Overview** dashboard</summary>
+<summary>Read more about our improvements to the Overview dashboard</summary>
 
 Moving towards this goal, in this release we introduce the following improvements:
 
 1. A complete re-write of the underlying core of the dashboard offers now huge **performance improvements** on dashboards with thousands of charts. Before this work, when the dashboard had thousands of charts, several seconds were required to jump from the top of the dashboard to the end. Now it is instant.
 2. We went through all the data collection plugins and metrics and we **added labels** to all of them, allowing the default charts on the **Overview** dashboard to pivot the charts, **slicing and dicing** the data according to these labels. For example, network interfaces charts can be pivoted by device name or interface type, while at the same time filtered by any of the labels, dimensions, instances or nodes.
 ![image](https://user-images.githubusercontent.com/2662304/199255851-2258c5cf-77a1-4a6b-999c-e325532ef7df.png)
-4. We have started working on new **summary tiles** to outlook the sections of the dashboard in a more dynamic manner. This work has just started and we expect to introduce a lot of new changes until the next release![image](https://user-images.githubusercontent.com/2662304/199256852-bdcc78d8-6061-4f1b-be9f-9cc358fa47d4.png)
+4. We have started working on new **summary tiles** to outlook the sections of the dashboard in a more dynamic manner. This work has just started and we expect to introduce a lot of new changes until the next releease![image](https://user-images.githubusercontent.com/2662304/199256852-bdcc78d8-6061-4f1b-be9f-9cc358fa47d4.png)
 
 </details>
 
@@ -224,13 +215,6 @@ There are different reasons why a node can't connect; the most common explanatio
 
 For some guidelines on how to solve these issues, check our [docs here](https://learn.netdata.cloud/guides/troubleshoot/troubleshooting-agent-with-cloud-connection).
 
-### Tech debt and Infrastructure improvements <a id="v1370-tech-debt"></a>
-
-To further improve Netdata Cloud and your user experience, multiple points around tech debt and infrastructure improvements have been completed. To name some of the key achievements:
-* An huge improvement has been made on our **Overview** tab on Netdata Cloud; we improved the performance around the navigation on the **Table of Contents (TOC)** and the charts on the viewport, contributing to a much better UX
-* The repos that support our FE have all been upgraded to node 16, putting us on the Active Long Term Support (LTS) version 
-* We've replaced our MQTT broker VerneMQ with EMQX, which brings much more stability to the product.
-
 ### Blogposts & Demo space use-case rooms <a id="v1370-blog-use-case"></a>
 
 To better showcase the potentialities and upgrades of Netdata, we have made available multiple rooms in our [Demo space](https://app.netdata.cloud/spaces/netdata-demo/) to allow you to experience the power and simplicity of Netdata with live infrastructure monitoring. 
@@ -252,7 +236,16 @@ Netdata now monitors Cassandra, and comes with 25+ charts for all key Cassandra 
 
 ![image](https://user-images.githubusercontent.com/24860547/200192648-75bb5e92-add7-4930-a191-a5f45829cb16.png)
 
+### Tech debt and Infrastructure improvements <a id="v1370-tech-debt"></a>
+
+To further improve Netdata Cloud and your user experience, multiple points around tech debt and infrastructure improvements have been completed. To name some of the key achievements:
+* An huge improvement has been made on our **Overview** tab on Netdata Cloud; we improved the performance around the navigation on the **Table of Contents (TOC)** and the charts on the viewport, contributing to a much better UX
+* The repos that support our FE have all been upgraded to node 16, putting us on the Active Long Term Support (LTS) version 
+* We've replaced our MQTT broker VerneMQ with EMQX, which brings much more stability to the product.
+
+
 ### Internal improvements <a id="v1370-internal"></a>
+
 #### Asynchronous storing of metadata
 We have improved the speed of chart creation by 70x. According to lab tests creating 30,000 charts with 10 dimensions each,
 we achieved a chart creation rates of 7000 charts/second (vs 100 charts/second prior)
@@ -263,13 +256,9 @@ Alert processing for a host (e.g. child connected to a parent) is now done on it
 #### Dictionary code improvements
 Code improvements to make use of dictionaries to better manage the life cycle of objects (creation, usage, and destruction using reference counters) and reduce explicit locking to access resources. 
 
-## Acknowledgments
+## Acknowledgments <a id="v1370-ack"></a>
 
 We would like to thank our dedicated, talented contributors that make up this amazing community. The time and expertise that you volunteer is essential to our success. We thank you and look forward to continue to grow together to build a remarkable product.
-
-<details>
-
-<summary>Agent contributions v1.37.0</summary>
 
 - [@HG00](https://github.com/HG00) for improving RabbitMQ collector readme.
 - [@KickerTom](https://github.com/KickerTom) for improving Makefiles.
@@ -280,14 +269,20 @@ We would like to thank our dedicated, talented contributors that make up this am
 - [@vobruba-martin](https://github.com/vobruba-martin) for adding TCP socket connection support and the state path modification.
 - [@yasharne](https://github.com/yasharne) for adding ProxySQL collector.
 
-</details>
 
-## Collectors
+## Contributions <a id="v1370-contributions"></a>
+
+### Collectors
+
+⚙️ Enhancing our collectors to collect all the data you need.
+
+#### New collectors
 
 <details>
-<summary>New collectors</summary>
+<summary>Show 9 more contributions</summary>
 
 - Add Pandas collector (python.d/pandas) ([#13773](https://github.com/netdata/netdata/pull/13773), [@andrewm4894](https://github.com/andrewm4894))
+- Add NGINX Plus collector (go.d/nginxplus) ([#992](https://github.com/netdata/go.d.plugin/pull/992), [@ilyam8](https://github.com/ilyam8))
 - Add NVMe collector (go.d/nvme) ([#973](https://github.com/netdata/go.d.plugin/pull/973), [@ilyam8](https://github.com/ilyam8))
 - Add Ping collector (go.d/ping) ([#952](https://github.com/netdata/go.d.plugin/pull/952), [@ilyam8](https://github.com/ilyam8))
 - Add Cassandra collector (go.d/cassandra) ([#901](https://github.com/netdata/go.d.plugin/pull/901), [@thiagoftsm](https://github.com/thiagoftsm))
@@ -295,14 +290,19 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add Docker collector (go.d/docker) ([#760](https://github.com/netdata/go.d.plugin/pull/760), [@ilyam8](https://github.com/ilyam8))
 - Add PgBouncer collector (go.d/pgbouncer) ([#748](https://github.com/netdata/go.d.plugin/pull/748), [@ilyam8](https://github.com/ilyam8))
 - Add ProxySQL collector (go.d/proxysql) ([#703](https://github.com/netdata/go.d.plugin/pull/703), [@yasharne](https://github.com/yasharne))
-
 </details>
 
-<details>
-<summary>Improvements</summary>
+#### Improvements
 
+🐞 Improving our collectors one bug fix at a time.
+
+<details>
+<summary>Show 71 more contributions</summary>
+
+- Allow statsd tags to modify chart metadata on the fly (stats.d.plugin) ([#14014](https://github.com/netdata/netdata/pull/14014), [@ktsaou](https://github.com/ktsaou))
 - Add Cassandra icon to dashboard info (go.d/cassandra) ([#13975](https://github.com/netdata/netdata/pull/13975), [@ilyam8](https://github.com/ilyam8))
 - Add ping dashboard info and alarms (go.d/ping) ([#13916](https://github.com/netdata/netdata/pull/13916), [@ilyam8](https://github.com/ilyam8))
+- Add WMI Process dashboard info (go.d/wmi) ([#13910](https://github.com/netdata/netdata/pull/13910), [@thiagoftsm](https://github.com/thiagoftsm))
 - Add processes dashboard info (go.d/wmi) ([#13910](https://github.com/netdata/netdata/pull/13910), [@thiagoftsm](https://github.com/thiagoftsm))
 - Add TCP dashboard description (go.d/wmi) ([#13878](https://github.com/netdata/netdata/pull/13878), [@thiagoftsm](https://github.com/thiagoftsm))
 - Add Cassandra dashboard description (go.d/cassandra) ([#13835](https://github.com/netdata/netdata/pull/13835), [@thiagoftsm](https://github.com/thiagoftsm))
@@ -332,6 +332,16 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Improve performance and add co-re support for more modules (ebpf.plugin) ([#13530](https://github.com/netdata/netdata/pull/13530), [@thiagoftsm](https://github.com/thiagoftsm))
 - Use LVM UUIDs in chart ids for logical volumes (proc.plugin) ([#13525](https://github.com/netdata/netdata/pull/13525), [@vlvkobal](https://github.com/vlvkobal))
 - Reduce CPU and memory usage (ebpf.plugin) ([#13397](https://github.com/netdata/netdata/pull/13397), [@thiagoftsm](https://github.com/thiagoftsm))
+- Add 'domain' label to charts (go.d/whoisquery) ([#1002](https://github.com/netdata/go.d.plugin/pull/1002), [@ilyam8](https://github.com/ilyam8))
+- Add 'source' label to charts (go.d/x509check) ([#1001](https://github.com/netdata/go.d.plugin/pull/1001), [@ilyam8](https://github.com/ilyam8))
+- Add 'host' label to charts (go.d/portcheck) ([#1000](https://github.com/netdata/go.d.plugin/pull/1000), [@ilyam8](https://github.com/ilyam8))
+- Add 'url' label to charts (go.d/httpcheck) ([#999](https://github.com/netdata/go.d.plugin/pull/999), [@ilyam8](https://github.com/ilyam8))
+- Remove pipeline instance from family and add it as a chart label (go.d/logstash) ([#998](https://github.com/netdata/go.d.plugin/pull/998), [@ilyam8](https://github.com/ilyam8))
+- Add http cache io/iops metrics (go.d/nginxplus) ([#997](https://github.com/netdata/go.d.plugin/pull/997), [@ilyam8](https://github.com/ilyam8))
+- Add resolver metrics (go.d/nginxplus) ([#996](https://github.com/netdata/go.d.plugin/pull/996), [@ilyam8](https://github.com/ilyam8))
+- Add MSSQL metrics (go.d/wmi) ([#991](https://github.com/netdata/go.d.plugin/pull/991), [@thiagoftsm](https://github.com/thiagoftsm))
+- Add IIS data collection job (go.d/web_log) ([#977](https://github.com/netdata/go.d.plugin/pull/977), [@thiagoftsm](https://github.com/thiagoftsm))
+- Add IIS metrics (go.d/wmi) ([#972](https://github.com/netdata/go.d.plugin/pull/972), [@thiagoftsm](https://github.com/thiagoftsm))
 - Add services metrics (go.d/wmi) ([#961](https://github.com/netdata/go.d.plugin/pull/961), [@thiagoftsm](https://github.com/thiagoftsm))
 - Resolve 'hostname' in job name (go.d.plugin) ([#959](https://github.com/netdata/go.d.plugin/pull/959), [@ilyam8](https://github.com/ilyam8))
 - Add processes metrics (go.d/wmi) ([#953](https://github.com/netdata/go.d.plugin/pull/953), [@thiagoftsm](https://github.com/thiagoftsm))
@@ -360,18 +370,17 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add collecting image and volume stats (go.d/docker) ([#777](https://github.com/netdata/go.d.plugin/pull/777), [@ilyam8](https://github.com/ilyam8))
 - Add Percona MySQL compatibility (go.d/mysql) ([#776](https://github.com/netdata/go.d.plugin/pull/776), [@ilyam8](https://github.com/ilyam8))
 - Add collection of additional user statistics metrics ([#775](https://github.com/netdata/go.d.plugin/pull/775), [@ilyam8](https://github.com/ilyam8))
-
 </details>
 
-<details>
-<summary>Bug fixes</summary>
+#### Bug fixes
 
-- Fix handling ExpirationDate with space (go.d/whoisquery) ([#974](https://github.com/netdata/go.d.plugin/pull/974), [@ilyam8](https://github.com/ilyam8))
-- Fix query queryable databases (go.d/postgres) ([#960](https://github.com/netdata/go.d.plugin/pull/960), [@ilyam8](https://github.com/ilyam8))
-- Fix not respecting headers config option (go.d/pihole) ([#942](https://github.com/netdata/go.d.plugin/pull/942), [@ilyam8](https://github.com/ilyam8))
+<details>
+<summary>Show 24 more contributions</summary>
+
+- Fix eBPF crashes on exit (ebpf.plugin) ([#14012](https://github.com/netdata/netdata/pull/14012), [@thiagoftsm](https://github.com/thiagoftsm))
+- Fix not working on Oracle linux (ebpf.plugin) ([#13935](https://github.com/netdata/netdata/pull/13935), [@thiagoftsm](https://github.com/thiagoftsm))
 - Fix retry logic when reading network interfaces speed (proc.plugin) ([#13893](https://github.com/netdata/netdata/pull/13893), [@ilyam8](https://github.com/ilyam8))
 - Fix systemd chart update (ebpf.plugin) ([#13884](https://github.com/netdata/netdata/pull/13884), [@thiagoftsm](https://github.com/thiagoftsm))
-- Fix not working on Oracle linux (ebpf.plugin) ([#13935](https://github.com/netdata/netdata/pull/13935), [@thiagoftsm](https://github.com/thiagoftsm))
 - Fix handling qemu-1- prefix when extracting virsh domain ([#13866](https://github.com/netdata/netdata/pull/13866), [@ilyam8](https://github.com/ilyam8))
 - Fix collection of carrier, duplex, and speed metrics when network interface is down (proc.plugin) ([#13850](https://github.com/netdata/netdata/pull/13850), [@vlvkobal](https://github.com/vlvkobal))
 - Fix various issues (ebpf.plugin) ([#13624](https://github.com/netdata/netdata/pull/13624), [@thiagoftsm](https://github.com/thiagoftsm))
@@ -379,6 +388,10 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Fix chart id length check (cgroups.plugin) ([#13601](https://github.com/netdata/netdata/pull/13601), [@ilyam8](https://github.com/ilyam8))
 - Fix not respecting update_every for polling (python.d/nvidia_smi) ([#13579](https://github.com/netdata/netdata/pull/13579), [@ilyam8](https://github.com/ilyam8))
 - Fix containers name resolution when Docker is a snap package (cgroups.plugin) ([#13523](https://github.com/netdata/netdata/pull/13523), [@ilyam8](https://github.com/ilyam8))
+- Fix handling string and float values (go.d/nvme) ([#993](https://github.com/netdata/go.d.plugin/pull/993), [@ilyam8](https://github.com/ilyam8))
+- Fix handling ExpirationDate with space (go.d/whoisquery) ([#974](https://github.com/netdata/go.d.plugin/pull/974), [@ilyam8](https://github.com/ilyam8))
+- Fix query queryable databases (go.d/postgres) ([#960](https://github.com/netdata/go.d.plugin/pull/960), [@ilyam8](https://github.com/ilyam8))
+- Fix not respecting headers config option (go.d/pihole) ([#942](https://github.com/netdata/go.d.plugin/pull/942), [@ilyam8](https://github.com/ilyam8))
 - Fix dns_queries_percentage metric calculation (go.d/pihole) ([#922](https://github.com/netdata/go.d.plugin/pull/922), [@ilyam8](https://github.com/ilyam8))
 - Fix data collection when auth.bind query is not supported (go.d/dnsmasq) ([#902](https://github.com/netdata/go.d.plugin/pull/902), [@ilyam8](https://github.com/ilyam8))
 - Fix data collection when too many db tables and indexes (go.d/postgres) ([#857](https://github.com/netdata/go.d.plugin/pull/857), [@ilyam8](https://github.com/ilyam8))
@@ -388,12 +401,15 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Fix charts when binary log and MyISAM are disabled (go.d/mysql) ([#763](https://github.com/netdata/go.d.plugin/pull/763), [@ilyam8](https://github.com/ilyam8))
 - Fix data collection jobs cleanup on exit (go.d.plugin) ([#758](https://github.com/netdata/go.d.plugin/pull/758), [@ilyam8](https://github.com/ilyam8))
 - Fix handling the case when no images are found (go.d/docker) ([#739](https://github.com/netdata/go.d.plugin/pull/739), [@ilyam8](https://github.com/ilyam8))
-
 </details>
 
-<details>
-<summary>Other</summary>
+#### Other
 
+<details>
+<summary>Show 11 more contributions</summary>
+
+- Don't let slow disk plugin thread delay shutdown ([#14044](https://github.com/netdata/netdata/pull/14044), [@MrZammler](https://github.com/MrZammler))
+- Remove nginx_plus collector (python.d.plugin) ([#13995](https://github.com/netdata/netdata/pull/13995), [@ilyam8](https://github.com/ilyam8))
 - Enable collecting ECC memory errors by default ([#13970](https://github.com/netdata/netdata/pull/13970), [@ilyam8](https://github.com/ilyam8))
 - Make Statsd dictionaries multi-threaded ([#13938](https://github.com/netdata/netdata/pull/13938), [@ktsaou](https://github.com/ktsaou))
 - Remove NFS readahead histogram (proc.plugin) ([#13819](https://github.com/netdata/netdata/pull/13819), [@vlvkobal](https://github.com/vlvkobal))
@@ -403,20 +419,27 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Remove blocklist file existence state chart (go.d/pihole) ([#914](https://github.com/netdata/go.d.plugin/pull/914), [@ilyam8](https://github.com/ilyam8))
 - Remove instance-specific information from chart families (go.d/portcheck) ([#790](https://github.com/netdata/go.d.plugin/pull/790), [@ilyam8](https://github.com/ilyam8))
 - Remove spaces in "HTTP Response Time" chart dimensions (go.d/httpcheck) ([#788](https://github.com/netdata/go.d.plugin/pull/788), [@ilyam8](https://github.com/ilyam8))
-
 </details>
 
-## Documentation
+### Documentation
 
+📄 Keeping our documentation healthy together with our awesome community.
+
+#### Updates
 <details>
-<summary>Documentation updates</summary>
+<summary>Show 24 more contributions</summary>
 
+- Add Alpine 3.17 to supported distros ([#14056](https://github.com/netdata/netdata/pull/14056), [@Ferroin](https://github.com/Ferroin))
+- Fix securing streaming communications steps ([#14024](https://github.com/netdata/netdata/pull/14024), [@thiagoftsm](https://github.com/thiagoftsm))
+- Fix a typo in Uninstall docs ([#14002](https://github.com/netdata/netdata/pull/14002), [@tkatsoulas](https://github.com/tkatsoulas))
+- Use calculator app instead of spreadsheet ([#13981](https://github.com/netdata/netdata/pull/13981), [@andrewm4894](https://github.com/andrewm4894))
 - Document password param for tor collector ([#13966](https://github.com/netdata/netdata/pull/13966), [@andrewm4894](https://github.com/andrewm4894))
 - Reference the bash collector for RPi ([#13907](https://github.com/netdata/netdata/pull/13907), [@cakrit](https://github.com/cakrit))
 - Improve intro paragraph for sensors collector ([#13906](https://github.com/netdata/netdata/pull/13906), [@cakrit](https://github.com/cakrit))
 - Add pandas collector to collectors.md ([#13895](https://github.com/netdata/netdata/pull/13895), [@andrewm4894](https://github.com/andrewm4894))
 - Update dbengine options in step-09.md ([#13864](https://github.com/netdata/netdata/pull/13864), [@DShreve2](https://github.com/DShreve2))
 - Fix a typo in pandas collector readme ([#13853](https://github.com/netdata/netdata/pull/13853), [@andrewm4894](https://github.com/andrewm4894))
+- Add up-to-date info on improving performance ([#13801](https://github.com/netdata/netdata/pull/13801), [@cakrit](https://github.com/cakrit))
 - Update fping plugin documentation with better details about the required version ([#13765](https://github.com/netdata/netdata/pull/13765), [@Ferroin](https://github.com/Ferroin))
 - Provide details on label filtering/custom labels ([#13745](https://github.com/netdata/netdata/pull/13745), [@DShreve2](https://github.com/DShreve2))
 - Add a note that nvidia-smi does not work inside a container ([#13695](https://github.com/netdata/netdata/pull/13695), [@ilyam8](https://github.com/ilyam8))
@@ -430,28 +453,23 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Add a note about authorized_mailq_users to postfix readme ([#13515](https://github.com/netdata/netdata/pull/13515), [@ilyam8](https://github.com/ilyam8))
 - Add a document outlining how to build native packages locally ([#12431](https://github.com/netdata/netdata/pull/12431), [@Ferroin](https://github.com/Ferroin))
 - Add some tips on collecting per-queue metrics for RabbitMQ ([#12227](https://github.com/netdata/netdata/pull/12227), [@HG00](https://github.com/HG00))
-
 </details>
 
-## Health
+### Health
 
-<details>
-<summary>Engine</summary>
+#### Engine
 
 - Add support of chart labels in alerts ([#13290](https://github.com/netdata/netdata/pull/13290), [@MrZammler](https://github.com/MrZammler))
 
-</details>
-
-<details>
-<summary>Notifications</summary>
+#### Notifications
 
 - Add an option to retry on telegram API limit error ([#13119](https://github.com/netdata/netdata/pull/13119), [@MAH69IK](https://github.com/MAH69IK))
 - Set default curl connection timeout if not set ([#13529](https://github.com/netdata/netdata/pull/13529), [@ilyam8](https://github.com/ilyam8))
 
-</details>
 
+#### Alarms
 <details>
-<summary>Alarms</summary>
+<summary>Show 12 more contributions</summary>
 
 - Use 'host' label in alerts info (health.d/ping.conf) ([#13955](https://github.com/netdata/netdata/pull/13955), [@ilyam8](https://github.com/ilyam8))
 - Remove pihole_blocklist_gravity_file_existence_state (health.d/pihole.conf) ([#13826](https://github.com/netdata/netdata/pull/13826), [@ilyam8](https://github.com/ilyam8))
@@ -465,15 +483,17 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Adjust systemdunits alarms (health.d/systemdunits.conf) ([#13623](https://github.com/netdata/netdata/pull/13623), [@ilyam8](https://github.com/ilyam8))
 - Add Postgres total connection utilization alarm (health.d/postgres.conf) ([#13620](https://github.com/netdata/netdata/pull/13620), [@ilyam8](https://github.com/ilyam8))
 - Adjust mysql_galera_cluster_size_max_2m lookup to make time in warn/crit predictable (health.d/mysql.conf) ([#13563](https://github.com/netdata/netdata/pull/13563), [@ilyam8](https://github.com/ilyam8))
-
 </details>
 
-## Packaging / Installation
+### Packaging / Installation
+
+#### Changes
 
 <details>
-<summary>Packaging and installation changes</summary>
+<summary>Show 28 more contributions</summary>
 
-- Update go.d.plugin to v0.43.0 ([#13954](https://github.com/netdata/netdata/pull/13954), [@ilyam8](https://github.com/ilyam8))
+- Fix writing to stdout if static update is successful ([#14058](https://github.com/netdata/netdata/pull/14058), [@ilyam8](https://github.com/ilyam8))
+- Update go.d.plugin to v0.45.0 ([#14052](https://github.com/netdata/netdata/pull/14052), [@ilyam8](https://github.com/ilyam8))
 - Provide improved messaging in the kickstart script for existing installs managed by the system package manager ([#13947](https://github.com/netdata/netdata/pull/13947), [@Ferroin](https://github.com/Ferroin))
 - Add CAP_NET_RAW to go.d.plugin ([#13909](https://github.com/netdata/netdata/pull/13909), [@ilyam8](https://github.com/ilyam8))
 - Record installation command in telemetry events ([#13892](https://github.com/netdata/netdata/pull/13892), [@Ferroin](https://github.com/Ferroin))
@@ -500,13 +520,15 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Overhaul handling of installation of Netdata as a system service. ([#13451](https://github.com/netdata/netdata/pull/13451), [@Ferroin](https://github.com/Ferroin))
 - Fix existing install detection for FreeBSD and macOS ([#13243](https://github.com/netdata/netdata/pull/13243), [@Ferroin](https://github.com/Ferroin))
 - Assorted cleanup in the OpenRC init script ([#13115](https://github.com/netdata/netdata/pull/13115), [@Ferroin](https://github.com/Ferroin))
-
 </details>
 
-## Other Notable Changes
+### Other Notable Changes
 
+⚙️ Greasing the gears to smoothen your experience with Netdata.
+
+#### Improvements
 <details>
-<summary>Improvements</summary>
+<summary>Show 9 more contributions</summary>
 
 - Add replication of metrics (gaps filling) during streaming ([#13873](https://github.com/netdata/netdata/pull/13873), [@vkalintiris](https://github.com/vkalintiris))
 - Remove anomaly rates chart ([#13763](https://github.com/netdata/netdata/pull/13763), [@vkalintiris](https://github.com/vkalintiris))
@@ -517,12 +539,21 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Improve streaming performance by 25% on the child ([#13708](https://github.com/netdata/netdata/pull/13708), [@ktsaou](https://github.com/ktsaou))
 - Improve agent shutdown time ([#13649](https://github.com/netdata/netdata/pull/13649), [@stelfrag](https://github.com/stelfrag))
 - Add disabling Cloud functionality via NETDATA_DISABLE_CLOUD environment variable ([#13106](https://github.com/netdata/netdata/pull/13106), [@ilyam8](https://github.com/ilyam8))
+-</details>
 
-</details>
+#### Bug Fixes
+
+🐞 Increasing Netdata's reliability one bug fix at a time.
 
 <details>
-<summary>Bug Fixes</summary>
+<summary>Show 46 more contributions</summary>
 
+- Fix sanitizing command arguments executed by the health component ([#14064](https://github.com/netdata/netdata/pull/14064), [@vkalintiris](https://github.com/vkalintiris))
+- Fix control of streaming API keys and MACHINE GUIDs in stream.conf ([#14063](https://github.com/netdata/netdata/pull/14063), [@ktsaou](https://github.com/ktsaou))
+- Fix build on old versions of openssl on Centos ([#14045](https://github.com/netdata/netdata/pull/14045), [@underhood](https://github.com/underhood))
+- Fix merging duplicate replication requests ([#14037](https://github.com/netdata/netdata/pull/14037), [@ktsaou](https://github.com/ktsaou))
+- Fix various problems in streaming compression, query planner and replication ([#14023](https://github.com/netdata/netdata/pull/14023), [@ktsaou](https://github.com/ktsaou))
+- Fix ACLK connection resets on parents with a lot of children ([#14004](https://github.com/netdata/netdata/pull/14004), [@underhood](https://github.com/underhood))
 - Fix crash when netdata cannot execute its external plugins ([#13978](https://github.com/netdata/netdata/pull/13978), [@ktsaou](https://github.com/ktsaou))
 - Fix metrics suffix for counters when using remote write exporter ([#13977](https://github.com/netdata/netdata/pull/13977), [@vlvkobal](https://github.com/vlvkobal))
 - Fix replicating non-existing child host ([#13968](https://github.com/netdata/netdata/pull/13968), [@ktsaou](https://github.com/ktsaou))
@@ -563,20 +594,39 @@ We would like to thank our dedicated, talented contributors that make up this am
 - Fix a failure to build eBPF with CMake ([#13568](https://github.com/netdata/netdata/pull/13568), [@underhood](https://github.com/underhood))
 - Fix a crash when xen libraries are misconfigured ([#13535](https://github.com/netdata/netdata/pull/13535), [@vlvkobal](https://github.com/vlvkobal))
 - Fix crashes on 32bit system ([#13511](https://github.com/netdata/netdata/pull/13511), [@MrZammler](https://github.com/MrZammler))
-
 </details>
 
-## Code organization
+### Code organization
 
+#### Changes
 <details>
-<summary>Code organization changes</summary>
+<summary>Show 92 more contributions</summary>
 
+- Replication fixes 8 ([#14061](https://github.com/netdata/netdata/pull/14061), [@ktsaou](https://github.com/ktsaou))
+- Replication fixes 7 ([#14053](https://github.com/netdata/netdata/pull/14053), [@ktsaou](https://github.com/ktsaou))
+- Remove eBPF plugin warning ([#14047](https://github.com/netdata/netdata/pull/14047), [@thiagoftsm](https://github.com/thiagoftsm))
+- Replication fixes 6 ([#14046](https://github.com/netdata/netdata/pull/14046), [@ktsaou](https://github.com/ktsaou))
+- Fix dictionaries unittest ([#14042](https://github.com/netdata/netdata/pull/14042), [@ktsaou](https://github.com/ktsaou))
+- Improve log message in case of ACLK SSL error ([#14041](https://github.com/netdata/netdata/pull/14041), [@underhood](https://github.com/underhood))
+- Replication fixes 5 ([#14038](https://github.com/netdata/netdata/pull/14038), [@ktsaou](https://github.com/ktsaou))
+- Replication fixes 3 ([#14035](https://github.com/netdata/netdata/pull/14035), [@ktsaou](https://github.com/ktsaou))
+- Improve performance of worker utilization statistics ([#14034](https://github.com/netdata/netdata/pull/14034), [@ktsaou](https://github.com/ktsaou))
+- Use 2 levels of judy arrays to speed up replication on very busy parents ([#14031](https://github.com/netdata/netdata/pull/14031), [@ktsaou](https://github.com/ktsaou))
+- Remove retries from SSL ([#14026](https://github.com/netdata/netdata/pull/14026), [@ktsaou](https://github.com/ktsaou))
+- Silence misleading error on ACLK startup ([#14013](https://github.com/netdata/netdata/pull/14013), [@underhood](https://github.com/underhood))
+- Change static image urls to app.netdata.cloud in alarm-notify.sh ([#14007](https://github.com/netdata/netdata/pull/14007), [@MrZammler](https://github.com/MrZammler))
+- Fix MQTT-NG QoS0 ([#13997](https://github.com/netdata/netdata/pull/13997), [@underhood](https://github.com/underhood))
+- Add 'funcs' capability ([#13992](https://github.com/netdata/netdata/pull/13992), [@underhood](https://github.com/underhood))
+- Add debug info on left-over query targets ([#13990](https://github.com/netdata/netdata/pull/13990), [@ktsaou](https://github.com/ktsaou))
+- Replication improvements ([#13989](https://github.com/netdata/netdata/pull/13989), [@ktsaou](https://github.com/ktsaou))
+- Remove spaces from keys in processes output of apps.plugin functions ([#13980](https://github.com/netdata/netdata/pull/13980), [@ktsaou](https://github.com/ktsaou))
 - Prohibit using spaces in apps.plugin function processes keys ([#13980](https://github.com/netdata/netdata/pull/13980), [@ktsaou](https://github.com/ktsaou))
 - Fallback to ar and ranlib if llvm-ar and llvm-ranlib are not there ([#13959](https://github.com/netdata/netdata/pull/13959), [@MrZammler](https://github.com/MrZammler))
 - Require -DENABLE_DLSYM=1 to use dlsym() ([#13958](https://github.com/netdata/netdata/pull/13958), [@ktsaou](https://github.com/ktsaou))
 - Do not resend charts upstream when chart variables are being updated ([#13946](https://github.com/netdata/netdata/pull/13946), [@ktsaou](https://github.com/ktsaou))
 - Update print message on startup ([#13934](https://github.com/netdata/netdata/pull/13934), [@andrewm4894](https://github.com/andrewm4894))
 - Remove pluginsd action param & dead code ([#13928](https://github.com/netdata/netdata/pull/13928), [@vkalintiris](https://github.com/vkalintiris))
+- Do not force internal collectors to call rrdset_next ([#13926](https://github.com/netdata/netdata/pull/13926), [@vkalintiris](https://github.com/vkalintiris))
 - Return accidentaly removed 32bit RPi keep alive fix ([#13925](https://github.com/netdata/netdata/pull/13925), [@underhood](https://github.com/underhood))
 - Add error_limit() function to limit number of error lines per instance ([#13924](https://github.com/netdata/netdata/pull/13924), [@ktsaou](https://github.com/ktsaou))
 - Enable aclk conversation log even without NETDATA_INTERNAL CHECKS ([#13917](https://github.com/netdata/netdata/pull/13917), [@MrZammler](https://github.com/MrZammler))
@@ -647,8 +697,8 @@ We would like to thank our dedicated, talented contributors that make up this am
 
 </details>
 
-## Deprecation and product notices
-### Forthcoming deprecation notice <a id="v1370-deprecation"></a>
+## Deprecation and product notices <a id="v1370-deprecation"></a>
+### Forthcoming deprecation notice 
 
 The following items will be removed in our next minor release (v1.38.0):
 
@@ -674,7 +724,7 @@ In accordance with our previous [deprecation notice](https://github.com/netdata/
 ### Notable changes and suggested actions
 
 #### Kickstart unrecognized option error
-In an effort to improve our kickstart script even more, documented [here ](https://github.com/netdata/netdata/issues/12630)and [here](https://github.com/netdata/netdata/pull/12943), a change will be made in the next major release that will result in users receiving an error if they pass an unrecognized option, rather than allowing them to pass through the installer code.
+In an effort to improve our kickstart script even more, documented [here](https://github.com/netdata/netdata/issues/12630) and [here](https://github.com/netdata/netdata/pull/12943), a change will be made in the next major release that will result in users receiving an error if they pass an unrecognized option, rather than allowing them to pass through the installer code.
 
 #### New documentation structure
 In the coming weeks, we will be introducing a new structure to [Netdata Learn](https://learn.netdata.cloud). Part of this effort includes having healthy redirects, instructions, and landing pages to minimize confusion and lost bookmarks, but users may still encounter broken links or errors when loading moved or deleted pages. Users can feel free to submit a [Github Issues](https://github.com/netdata/netdata/issues) if they encounter such a problem, or reach out to the [Netdata Documentation Team](Documentation@netdata.cloud) with questions or ideas on how our docs can best serve you.
@@ -690,11 +740,11 @@ In a forthcoming release, many external plugins will be moved to their own packa
 
 **Note**: Static builds and locally built installs are unaffected. Netdata will provide more details once the changes go live.
 
-## Netdata Agent Release Meetup <a id="vXXXX-release-meetup"></a>
+## Netdata Release Meetup <a id="v1370-release-meetup"></a>
 <!-- Remove if no meetup will take place -->
 
-Join the Netdata team on the **DATE** for the **Netdata Agent Release Meetup**, which will be held on
-the [Netdata Discord](https://discord.gg/pnpjpwfE?event=983676714062315560).
+Join the Netdata team on the 1st of December, at 5PM UTC, for the **Netdata Release Meetup**, which will be held on
+the [Netdata Discord](https://discord.gg/CTju7msd?event=1047466036389216256).
 
 Together we’ll cover:
 
@@ -702,21 +752,15 @@ Together we’ll cover:
 - Acknowledgements
 - Q&A with the community
 
-[RSVP now](link_to_RSVP) - we look forward to meeting you.
+[RSVP now](https://www.meetup.com/netdata-infrastructure-monitoring-meetup-group/events/290057165/) - we look forward to meeting you.
 
-## Support options  <a id="vXXXX-support-options"></a>
+## Support options  <a id="v1370-support-options"></a>
 
 As we grow, we stay committed to providing the best support ever seen from an open-source solution. Should you encounter
-an issue with any of the changes made in this release or any feature in the Netdata Agent, feel free to contact us
-through one of the following channels:
+an issue with any of the changes made in this release or any feature in Netdata, feel free to contact us through one of the following channels:
 
-- [Netdata Learn](https://learn.netdata.cloud): Find documentation, guides, and reference material for monitoring and
-  troubleshooting your systems with Netdata.
-- [Github Issues](https://github.com/netdata/netdata/issues): Make use of the Netdata repository to report bugs or open
-  a new feature request.
-- [Github Discussions](https://github.com/netdata/netdata/discussions): Join the conversation around the Netdata
-  development process and be a part of it.
-- [Community Forums](https://community.netdata.cloud/): Visit the Community Forums and contribute to the collaborative
-  knowledge base.
-- [Discord](https://discord.gg/2eduZdSeC7): Jump into the Netdata Discord and hangout with like-minded sysadmins,
-  DevOps, SREs and other troubleshooters. More than 1100 engineers are already using it!
+[Netdata Learn](https://learn.netdata.cloud/): Find documentation, guides, and reference material for monitoring and troubleshooting your systems with Netdata.
+[Github Issues](https://github.com/netdata/netdata/issues): Make use of the Netdata repository to report bugs or open a new feature request.
+[Github Discussions](https://github.com/netdata/netdata/discussions): Join the conversation around the Netdata development process and be a part of it.
+[Community Forums](https://community.netdata.cloud/): Visit the Community Forums and contribute to the collaborative knowledge base.
+[Discord](https://discord.gg/2eduZdSeC7): Jump into the Netdata Discord and hangout with like-minded sysadmins, DevOps, SREs and other troubleshooters. More than 1300 engineers are already using it!
