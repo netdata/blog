@@ -2,7 +2,7 @@
 slug: pandas-python
 title: "How you can use the Pandas Python collector to monitor weather data"
 description: "How you can use the Pandas Python collector to monitor weather data"
-image: ./netdata-pandas-image.jpeg
+image: ./image.jpg
 authors: andy
 tags: [collectors, python, pandas]
 keywords: [collectors, python, pandas]
