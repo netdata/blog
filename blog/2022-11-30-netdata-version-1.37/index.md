@@ -2,7 +2,7 @@
 slug: netdata-version-1.37
 title: "Release 1.37.0: Infinite scalability, database tiering, and much more"
 description: "Release 1.37.0: Infinite scalability, database tiering, and much more"
-image: https://user-images.githubusercontent.com/82235632/200645561-6acb415b-6436-4d9e-a9b1-f8d6c7847ed3.png
+image: ./image.png
 tags: [product,release notes]
 keywords: [netdata,product]
 authors: team
