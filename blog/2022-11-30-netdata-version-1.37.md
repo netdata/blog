@@ -7,7 +7,7 @@ tags: [product,release notes]
 keywords: [netdata,product]
 authors: team
 ---
-
+<!--truncate-->
 # Release v1.37
 
 
