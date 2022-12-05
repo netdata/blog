@@ -7,11 +7,14 @@ tags: [product,release notes]
 keywords: [netdata,product]
 authors: team
 ---
+
+Netdata v1.37.1 is a patch release to address issues discovered since v1.37.0. Refer to the [v.1.37.0 release notes](https://github.com/netdata/netdata/releases/tag/v1.37.0) for the full scope of that release.
+
 <!--truncate-->
 
 # Release v1.37.1
 
-Netdata v1.37.1 is a patch release to address issues discovered since  v1.37.0. Refer to the [v.1.37.0 release notes](https://github.com/netdata/netdata/releases/tag/v1.37.0) for the full scope of that release.
+Netdata v1.37.1 is a patch release to address issues discovered since v1.37.0. Refer to the [v.1.37.0 release notes](https://github.com/netdata/netdata/releases/tag/v1.37.0) for the full scope of that release.
 
 The v1.37.1 patch release fixes the following issues:
 
