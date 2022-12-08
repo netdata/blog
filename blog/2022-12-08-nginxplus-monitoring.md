@@ -2,14 +2,14 @@
 slug: nginxplus-monitoring
 title: How to monitor and troubleshoot NGINXPlus
 description: Monitoring and troubleshooting NGINXPlus.
-authors: team
-tags: [how-to, monitor, troubleshoot, nginxplus,  webserver, web service, http]
-keywords: [how-to, monitor, troubleshoot, nginxplus,  webserver, web service, http]
-image: https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png
+authors: satya
+tags: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http]
+keywords: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http]
+image: https://user-images.githubusercontent.com/96257330/206474388-31f12c9a-4be5-4d0a-9fc2-a8d80813000a.png
 
 ---
 
-Find out how to effectively and easily monitor and troubleshoot NGINXPlus using Netdata
+As a continuation of our series for monitoring web servers with [NGINX](https://blog.netdata.cloud/nginx-monitoring/) and [APACHE](https://blog.netdata.cloud/apache-monitoring/), let us find out how to effectively and easily monitor and troubleshoot NGINXPlus using Netdata!
 
 <!--truncate-->
 ## What is NGINXPlus
@@ -20,13 +20,18 @@ Nginx Plus is an open source web server and load balancer. It is an enterprise-g
 
 The prerequisites for monitoring NGINXPlus with Netdata are to have NGINXPlus and [Netdata installed](https://learn.netdata.cloud/docs/cloud/get-started) on your system. 
 
-Netdata auto discovers hundreds of services, and for those it doesn't turning on manual discovery is a one line configuration. For more information on configuring Netdata for NGINXPlus monitoring please read the collector [documentation](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/nginxplus).
+Netdata auto discovers hundreds of services, and for those it doesn't, turning on manual discovery is a one line configuration. For more information on configuring Netdata for NGINXPlus monitoring please read the collector [documentation](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/nginxplus).
 
 You should now see the NGINXPlus section on the Overview tab in Netdata Cloud already populated with charts about all the metrics you care about.
 
 Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo) (no login required) where you can explore different monitoring use-cases and get a feel for Netdata.
 
 ## What NGINXPlus metrics are important to monitor?
+
+
+The metrics that Netdata collects are organized into subsections within the nginxplus section for easier navigation. Each metric is represented by a composite chart that aggregates the data across multiple nodes/instances etc.
+
+Below, you can find a brief description of the NGINXPlus metrics being collected and visualised on Netdata:
 
 ### client_connections_rate
  - 
