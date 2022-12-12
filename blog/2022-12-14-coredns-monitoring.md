@@ -7,6 +7,7 @@ tags: [how-to, monitor, troubleshoot, coredns,  dns server, domain name server, 
 keywords: [how-to, monitor, troubleshoot, coredns,  dns server, domain name server, DNS management]
 image: https://user-images.githubusercontent.com/24860547/207034349-ee1bbed6-4c89-43ab-bd06-5a3daa0c2c6c.png
 ---
+https://user-images.githubusercontent.com/24860547/207034349-ee1bbed6-4c89-43ab-bd06-5a3daa0c2c6c.png
 
 Find out how to effectively and easily monitor and troubleshoot CoreDNS using Netdata
 
@@ -31,13 +32,13 @@ Netdata has a public demo space (no login required) where you can explore [CoreD
  - The total number of DNS requests handled by CoreDNS. This can be useful for understanding overall system load and potential bottlenecks.
 ![image](https://user-images.githubusercontent.com/24860547/207034333-c43ed338-a876-4146-ad0c-c2cd433b1f5c.png)
 
- - The DNS request count per server, and per zone is also visualized in a separate chart.
+ - The DNS request count per server and per zone is also visualized in a separate chart.
 
 ### Total DNS response count
  - The total number of DNS responses sent by CoreDNS. This can be useful for understanding overall system load and potential bottlenecks.
 ![image](https://user-images.githubusercontent.com/24860547/207034410-b03e16d9-a44a-4bcb-846e-6605ed2051de.png)
 
-- The DNS response count per server, and per zone is also visualized in a separate chart.
+- The DNS response count per server and per zone is also visualized in a separate chart.
 
 ### Total processed and dropped DNS requests
  - Number of processed and dropped DNS requests
@@ -83,6 +84,7 @@ Netdata has built-in alerts to reduce the monitoring burden for you.
 If you would like to update the alert thresholds for any of these alerts or want to create your own alert for another metric – please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
 
 By default you will receive email notifications whenever an alert is triggered – if you would not like to receive these notifications you can turn them off from your profile settings.
+
 ### Anomaly Advisor
 Anomaly Advisor lets you quickly identify if the system you are monitoring has any anomalies and allows you to drill down into which metrics are behaving anomalously.
 
