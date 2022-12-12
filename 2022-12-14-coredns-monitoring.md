@@ -15,7 +15,7 @@ Find out how to effectively and easily monitor and troubleshoot CoreDNS using Ne
 <!--truncate-->
 ## What is CoreDNS
 
-Coredns is an open source DNS server written in Go that is designed to be fast, secure, and modular. It supports all of the core features of a DNS server, including recursive lookups, forwarding, and caching. CoreDNS also offers features such as request rewriting and load balancing, as well as a plugin system to provide advanced features for custom deployments. CoreDNS provides high performance and scalability with support for low-latency and low-memory usage. It is secure by default, with support for DNSS
+Coredns is an open source DNS server written in Go that is designed to be fast, secure, and modular. It supports all of the core features of a DNS server, including recursive lookups, forwarding, and caching. CoreDNS also offers features such as request rewriting and load balancing, as well as a plugin system to provide advanced features for custom deployments. CoreDNS provides high performance and scalability with support for low-latency and low-memory usage. It is secure by default, with support for DNSS.
 
 ## Monitoring CoreDNS with Netdata
 
@@ -25,7 +25,7 @@ Netdata auto discovers hundreds of services, and for those it doesn't turning on
 
 You should now see the CoreDNS section on the Overview tab in Netdata Cloud already populated with charts about all the metrics you care about.
 
-Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo) (no login required) where you can explore different monitoring use-cases and get a feel for Netdata.
+Netdata has a public demo space (no login required) where you can explore [CoreDNS monitoring](https://app.netdata.cloud/spaces/netdata-demo/rooms/coredns/) and many other monitoring use-cases and really get a feel for Netdata.
 
 ## What CoreDNS metrics are important to monitor?
 
