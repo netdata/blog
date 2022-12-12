@@ -5,6 +5,7 @@ description: Monitoring and troubleshooting Postfix.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, postfix,  mail server, mail delivery, smtp mail server, mail delivery, SMTP]
 keywords: [how-to, monitor, troubleshoot, postfix,  mail server, mail delivery, smtp mail server, mail delivery, SMTP]
+image: https://user-images.githubusercontent.com/24860547/207059703-26b133ce-571c-429e-8b56-95b802e4ed16.png
 
 ---
 
