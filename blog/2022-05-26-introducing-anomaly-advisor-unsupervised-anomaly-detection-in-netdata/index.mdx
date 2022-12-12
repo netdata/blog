@@ -1,0 +1,54 @@
+---
+slug: introducing-anomaly-advisor-unsupervised-anomaly-detection-in-netdata
+title: "Introducing Anomaly Advisor – Unsupervised Anomaly Detection in Netdata"
+description: "Introducing Anomaly Advisor – Unsupervised Anomaly Detection in Netdata."
+image: ./image.jpg
+tags: [ml,machine-learning,anomaly-detection]
+keywords: [ml,machine-learning,anomaly-detection]
+authors: andy
+---
+import ReactPlayer from 'react-player'
+
+<ReactPlayer controls width='100%' url='https://www.youtube.com/embed/tvlEQOljbqw'/>
+
+Today we are excited to launch one of our flagship ML assisted troubleshooting features in Netdata – the Anomaly Advisor.
+
+The Anomaly Advisor builds on earlier work to introduce unsupervised [anomaly detection](https://github.com/netdata/netdata/blob/master/ml/README.md) capabilities into the [Netdata Agent](https://www.netdata.cloud/agent/) from [v1.32.0](https://github.com/netdata/netdata/releases/tag/v1.32.0) onwards.
+
+<!--truncate-->
+
+## Getting Started
+
+Once you [enable ML](https://learn.netdata.cloud/docs/configure/machine-learning#configuration) on your nodes, each node will begin producing an "[Anomaly Bit](https://learn.netdata.cloud/docs/configure/machine-learning#anomaly-bit---100--anomalous-0--normal)" every second in addition to raw metric values. This anomaly bit will be 1 when the trained ML models consider recent raw data for a metric to look anomalous or 0 when things look 'normal'. The Anomaly Advisor leverages this information to enable seamless space or room level anomaly detection out of the box with minimal configuration.
+
+To enable ML on your nodes and get started with the Anomaly Advisor, check out the [documentation](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor) or the walkthrough video provided in this section. It's as simple as setting `enabled = yes` in the `[ml]` section of your `netdata.conf`. Once the models have trained, you should be able to start using the Anomaly Advisor in Netdata.
+
+**Note**: You can enable ML based anomaly detection on your nodes themselves or for each node on a parent it [streams](https://learn.netdata.cloud/docs/agent/streaming) to. You can see come example topologies in the [configuration documentation](https://learn.netdata.cloud/docs/configure/machine-learning#configuration-examples).
+
+## Monitoring Agents Don’t Need To Be Dumb!
+
+This feature is part of a broader philosophy we have at Netdata when it comes to how we can leverage ML-based solutions to help augment and assist traditional troubleshooting flows, without having to centralize all your data. You can read more about this approach in our recent [blog post](https://blog.netdata.cloud/our-approach-to-machine-learning/) which goes into more detail.
+
+The new Anomalies tab quickly lets you find periods of time with elevated [anomaly rates](https://learn.netdata.cloud/docs/configure/machine-learning#anomaly-rate---averageanomaly-bit) across all your nodes. Once you highlight a period of interest, Netdata will return a ranked list of the most anomalous metrics across all selected nodes in the highlighted timeframe. The goal here is to quickly let you find periods of strange activity in your infrastructure and surface what metrics Netdata considered most anomalous during that time.
+
+Below is a quick video walkthrough of how to get started using the Anomaly Advisor. You can find more related videos on [this playlist](https://youtube.com/playlist?list=PL-P-gAHfL2KPeUcCKmNHXC-LX-FfdO43j) from our [YouTube channel](https://www.youtube.com/c/Netdata).
+
+<ReactPlayer controls width='100%' url='https://www.youtube.com/embed/p2Jc5RVjCM8'/>
+
+
+## We love feedback!
+
+We’d love to hear any and all feedback you have about this feature. This is very much an initial iteration and we are hoping to continually improve the ML under the hood in the agent and the overall UX experience as users share their thoughts with us.
+
+🚧 Note: This functionality is still under active development. We dogfood it internally and among early adopters within the Netdata community to build the feature. If you would like to get involved and help us with some feedback, email us at analytics-ml-team@netdata.cloud, comment on the [beta launch post](https://community.netdata.cloud/t/anomaly-advisor-beta-launch/2717) in the Netdata community, or come join us in the [🤖-ml-powered-monitoring](https://discord.gg/4eRSEUpJnc) channel of the Netdata discord, or open a [discussion in GitHub](https://github.com/netdata/netdata/discussions?discussions_q=label%3Aarea%2Fml) if that’s more your thing.
+
+## Learn more
+
+If you’d like to dive deeper and learn a little more about exactly how it all works, please feel free to check out some of the resources below.
+
+- Anomaly Advisor [documentation](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor).
+- Netdata agent ML [reference documentation](https://learn.netdata.cloud/docs/configure/machine-learning).
+- [CNCF Live session](https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cloud-native-live-power-up-your-machine-learning-automated-anomaly-detection/) with [recording on YouTube](https://www.youtube.com/watch?v=pI-MUupmD64) ([deck](https://docs.google.com/presentation/d/1n8ZAlD0n1_clryezT_L7MhLvyR6wPgfQRyGwZWC_LTc/edit?usp=sharing)).
+- [Anomaly Advisor playlist](https://youtube.com/playlist?list=PL-P-gAHfL2KPeUcCKmNHXC-LX-FfdO43j) on the Netdata YouTube channel.
+- [The code itself](https://github.com/netdata/netdata/tree/master/ml) in the [Netdata Agent GitHub repo](https://github.com/netdata/netdata), along with a Google Collab ready [notebook based Python implementation](https://github.com/netdata/netdata/blob/master/ml/notebooks/netdata_anomaly_detection_deepdive.ipynb) to help those interested understand how it all works under the hood, the main concepts and some illustrated explanations.
+- Yet [another presentation](https://docs.google.com/presentation/d/18zkCvU3nKP-Bw_nQZuXTEa4PIVM6wppH3VUnAauq-RU/edit?usp=sharing) that tries to explain the main concepts and moving parts.
