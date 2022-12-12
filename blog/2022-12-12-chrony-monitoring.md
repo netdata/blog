@@ -8,6 +8,7 @@ keywords: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync 
 image: https://user-images.githubusercontent.com/24860547/207060075-2fb7e116-5589-43f8-9649-b34a18be1729.jpg
 
 ---
+https://user-images.githubusercontent.com/24860547/207060075-2fb7e116-5589-43f8-9649-b34a18be1729.jpg
 
 Find out how to effectively and easily monitor and troubleshoot Chrony using Netdata
 
@@ -20,9 +21,9 @@ Chrony is an open source, low-level utility for managing the system clock. It ca
 
 The prerequisites for monitoring Chrony with Netdata are to have Chrony and [Netdata installed](https://learn.netdata.cloud/docs/cloud/get-started) on your system. 
 
-Netdata auto discovers hundreds of services, and for those it doesn't turning on manual discovery is a one line configuration. For more information on configuring Netdata for Chrony monitoring please read the collector [documentation](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/chrony).
+Netdata auto discovers hundreds of services, and for those that aren't discvovered, you can use  manual discovery with a one line configuration. For more information on configuring Netdata for Chrony monitoring please read the collector [documentation](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/chrony).
 
-You should now see the Chrony section on the Overview tab in Netdata Cloud already populated with charts about all the metrics you care about.
+You should now see the Chrony section on the **Overview** tab in Netdata Cloud already populated with charts about all the metrics you care about.
 
 Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo) (no login required) where you can explore different monitoring use-cases and get a feel for Netdata.
 
@@ -73,11 +74,21 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 ![image](https://user-images.githubusercontent.com/24860547/207013112-0e051aca-7487-4ee7-9f06-31ba7017c788.png)
 
 ### leap_status
- -  <p>The current leap status of the source.</p><p><b>Normal</b> - indicates the normal status (no leap second). <b>InsertSecond</b> - indicates that a leap second will be inserted at the end of the month. <b>DeleteSecond</b> - indicates that a leap second will be deleted at the end of the month. <b>Unsynchronised</b> - the server has not synchronized properly with the NTP server.</p>
+-  <p>The current leap status of the source. Statuses include the following:
+ 
+   - </p><p><b>Normal</b> - indicates the normal status (no leap second).
+   - <b>InsertSecond</b> - indicates that a leap second will be inserted at the end of the month. <b>DeleteSecond</b> - indicates that a leap second will be deleted at the end of the month. 
+   - <b>Unsynchronised</b> - the server has not synchronized properly with the NTP server.</p>
 ![image](https://user-images.githubusercontent.com/24860547/207013171-f3c28de8-82bc-4e78-9dfb-b4836a2ef294.png)
 
 ### activity
- -  <p>The number of servers and peers that are online and offline.</p><p><b>Online</b> - the server or peer is currently online (i.e. assumed by chronyd to be reachable). <b>Offline</b> - the server or peer is currently offline (i.e. assumed by chronyd to be unreachable and no measurements from it will be attempted). <b>BurstOnline</b> - a burst command has been initiated for the server or peer and is being performed. After the burst is complete the server or peer will be returned to the online state. <b>BurstOffline</b> - a burst command has been initiated for the server or peer and is being performed. After the burst is complete the server or peer will be returned to the offline state. <b>Unresolved</b> - the name of the server or peer was not resolved to an address yet.</p>
+ -  <p>The number of servers and peers that are online and offline. The following explains the status options:
+ 
+    - </p><p><b>Online</b> - the server or peer is currently online (i.e. assumed by chronyd to be reachable). 
+    - <b>Offline</b> - the server or peer is currently offline (i.e. assumed by chronyd to be unreachable and no measurements from it will be attempted). 
+    - <b>BurstOnline</b> - a burst command has been initiated for the server or peer and is being performed. After the burst is complete the server or peer will be returned to the online state. 
+    - <b>BurstOffline</b> - a burst command has been initiated for the server or peer and is being performed. After the burst is complete the server or peer will be returned to the offline state. 
+    - <b>Unresolved</b> - the name of the server or peer was not resolved to an address yet.</p>
 ![image](https://user-images.githubusercontent.com/24860547/207013220-83071169-cb3b-478d-9730-06b52d60bf68.png)
 
 ## Troubleshooting Chrony with Netdata
