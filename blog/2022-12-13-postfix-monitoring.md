@@ -5,24 +5,25 @@ description: Monitoring and troubleshooting Postfix.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, postfix,  mail server, mail delivery, smtp mail server, mail delivery, SMTP]
 keywords: [how-to, monitor, troubleshoot, postfix,  mail server, mail delivery, smtp mail server, mail delivery, SMTP]
-image: https://user-images.githubusercontent.com/24860547/207059703-26b133ce-571c-429e-8b56-95b802e4ed16.png
+image: 
 
 ---
+https://user-images.githubusercontent.com/24860547/207059703-26b133ce-571c-429e-8b56-95b802e4ed16.png
 
 Find out how to effectively and easily monitor and troubleshoot Postfix using Netdata
 
 <!--truncate-->
 ## What is Postfix
 
-Postfix is an open-source mail transfer agent (MTA). It is used for sending and receiving emails, and supports features such as mail routing, aliasing and forwarding. Postfix supports a wide range of protocols, is highly reliable and secure, and is easily configurable. It is suitable for deployments of any size, from small sites to large enterprises.
+Postfix is an open-source mail transfer agent (MTA). It is used for sending and receiving emails, and supports features such as mail routing, aliasing, and forwarding. Postfix supports a wide range of protocols, is highly reliable and secure, and is easily configurable. It is suitable for deployments of any size, from small sites to large enterprises.
 
 ## Monitoring Postfix with Netdata
 
 The prerequisites for monitoring Postfix with Netdata are to have Postfix and [Netdata installed](https://learn.netdata.cloud/docs/cloud/get-started) on your system. 
 
-Netdata auto discovers hundreds of services, and for those it doesn't turning on manual discovery is a one line configuration. For more information on configuring Netdata for Postfix monitoring please read the collector [documentation](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/postfix).
+Netdata automatically discovers hundreds of services, and for those service that Netdata doesn't discvoer, turning on manual discovery is a one line configuration. For more information on configuring Netdata for Postfix monitoring please read the collector [documentation](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/postfix).
 
-You should now see the Postfix section on the Overview tab in Netdata Cloud already populated with charts about all the metrics you care about.
+You should now see the Postfix section on the **Overview** tab in Netdata Cloud already populated with charts about all the metrics you care about.
 
 Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo) (no login required) where you can explore different monitoring use-cases and get a feel for Netdata.
 
@@ -43,7 +44,8 @@ Netdata has built-in alerts to reduce the monitoring burden for you.
 
 If you would like to update the alert thresholds for any of these alerts or want to create your own alert for another metric – please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
 
-By default you will receive email notifications whenever an alert is triggered – if you would not like to receive these notifications you can turn them off from your profile settings.
+By default you will receive email notifications whenever an alert is triggered. (Note: if you would not like to receive these notifications you can turn them off from your profile settings.)
+
 ### Anomaly Advisor
 Anomaly Advisor lets you quickly identify if the system you are monitoring has any anomalies and allows you to drill down into which metrics are behaving anomalously.
 
