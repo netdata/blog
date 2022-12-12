@@ -5,7 +5,7 @@ description: Monitoring and troubleshooting Chrony.
 authors: Netdata
 tags: [how-to, monitor, troubleshoot, chrony,  time server, NTP server, sync server]
 keywords: [how-to, monitor, troubleshoot, chrony,  time server, NTP server, sync server]
-image: ![Chrony_logo](https://linuxbsdos.com/wp-content/uploads/2015/01/NTP.jpg)
+image: ![NTP](https://user-images.githubusercontent.com/24860547/207033117-dd598303-7bfc-47d4-adfc-f10b86eb88d3.jpg)
 
 ---
 
