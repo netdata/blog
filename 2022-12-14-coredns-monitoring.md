@@ -5,7 +5,8 @@ description: Monitoring and troubleshooting CoreDNS.
 authors: Netdata
 tags: [how-to, monitor, troubleshoot, coredns,  dns server, domain name server, DNS management]
 keywords: [how-to, monitor, troubleshoot, coredns,  dns server, domain name server, DNS management]
-image:  
+image:  ![download](https://user-images.githubusercontent.com/24860547/207034349-ee1bbed6-4c89-43ab-bd06-5a3daa0c2c6c.png)
+
 
 ---
 
@@ -30,31 +31,39 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 
 ### dns_request_count_total
  - The total number of DNS requests handled by CoreDNS. This can be useful for understanding overall system load and potential bottlenecks.
-
+![image](https://user-images.githubusercontent.com/24860547/207034333-c43ed338-a876-4146-ad0c-c2cd433b1f5c.png)
 
 ### dns_responses_count_total
  - The total number of DNS responses sent by CoreDNS. This can be useful for understanding overall system load and potential bottlenecks.
+![image](https://user-images.githubusercontent.com/24860547/207034410-b03e16d9-a44a-4bcb-846e-6605ed2051de.png)
 
 ### dns_request_count_total_per_status
- - 
+ - Number of processed and dropped DNS requests
+![image](https://user-images.githubusercontent.com/24860547/207034456-e430228c-0bfa-4383-a885-23e9058c9ab1.png)
 
 ### dns_no_matching_zone_dropped_total
  - The total number of DNS requests dropped by CoreDNS because no matching zone was found. This can be useful for identifying potential configuration issues.
+![image](https://user-images.githubusercontent.com/24860547/207034654-fbb986b6-67c8-4bdb-aba0-972b20fc6aa6.png)
 
 ### dns_panic_count_total
  - The total number of panics that occurred in CoreDNS. This can be useful for identifying potential issues or bugs in the system.
+ ![image](https://user-images.githubusercontent.com/24860547/207034688-79828ea6-bf11-4140-8a03-cda0cfb0eb4c.png)
 
 ### dns_requests_count_total_per_proto
- - 
+ - Number of DNS requests per transport protocol
+![image](https://user-images.githubusercontent.com/24860547/207034779-1ac1fb6c-0d34-43d4-9e6d-83888d4e0b49.png)
 
 ### dns_requests_count_total_per_ip_family
- - 
+ - Number of DNS requests per IP family
+ ![image](https://user-images.githubusercontent.com/24860547/207034858-5f1a7e32-b699-4913-96d3-79ca4ad83ca9.png)
 
 ### dns_requests_count_total_per_per_type
- - 
+ - Number of DNS requests per DNS message type
+ ![image](https://user-images.githubusercontent.com/24860547/207034934-b3609b31-d8de-4c25-b282-365ed76f28b9.png)
 
 ### dns_responses_count_total_per_rcode
- - 
+ - Number of DNS responses per Rcode
+ ![image](https://user-images.githubusercontent.com/24860547/207034983-45e9711e-aa29-4c40-8a96-204db2c15329.png)
 
 ### server_dns_request_count_total
  - 
