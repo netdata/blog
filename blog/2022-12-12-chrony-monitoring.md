@@ -5,6 +5,7 @@ description: Monitoring and troubleshooting Chrony.
 authors: shyam 
 tags: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync server]
 keywords: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync server]
+image: https://user-images.githubusercontent.com/24860547/207060075-2fb7e116-5589-43f8-9649-b34a18be1729.jpg
 
 ---
 
