@@ -2,7 +2,7 @@
 slug: coredns-monitoring
 title: How to monitor and troubleshoot CoreDNS
 description: Monitoring and troubleshooting CoreDNS.
-authors: Netdata
+authors: shyam
 tags: [how-to, monitor, troubleshoot, coredns,  dns server, domain name server, DNS management]
 keywords: [how-to, monitor, troubleshoot, coredns,  dns server, domain name server, DNS management]
 
