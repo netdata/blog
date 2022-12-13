@@ -14,7 +14,7 @@ Find out how to effectively and easily monitor and troubleshoot Chrony using Net
 <!--truncate-->
 ## What is Chrony
 
-Chrony is an open source, low-level utility for managing the system clock. It can be used to maintain the accuracy of the computer's clock across a network, or even in the absence of an internet connection. Chrony is designed to be more accurate and resilient than the traditional utilities such as ntpd, and can adjust the system clock even in the presence of large time offsets and/or network outages. Chrony also offers a number of features such as automatic time synchronization, access control lists, and logging.+
+[Chrony](https://chrony.tuxfamily.org/) is an open source, low-level utility for managing the system clock. It can be used to maintain the accuracy of the computer's clock across a network, or even in the absence of an internet connection. Chrony is designed to be more accurate and resilient than the traditional utilities such as ntpd, and can adjust the system clock even in the presence of large time offsets and/or network outages. Chrony also offers a number of features such as automatic time synchronization, access control lists, and logging.+
 
 ## Monitoring Chrony with Netdata
 
