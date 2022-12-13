@@ -13,7 +13,7 @@ Find out how to effectively and easily monitor and troubleshoot CoreDNS using Ne
 <!--truncate-->
 ## What is CoreDNS
 
-Coredns is an open source DNS server written in Go that is designed to be fast, secure, and modular. It supports all of the core features of a DNS server, including recursive lookups, forwarding, and caching. CoreDNS also offers features such as request rewriting and load balancing, as well as a plugin system to provide advanced features for custom deployments. CoreDNS provides high performance and scalability with support for low-latency and low-memory usage. It is secure by default, with support for DNSS.
+[CoreDNS](https://coredns.io/) is an open source DNS server written in Go that is designed to be fast, secure, and modular. It supports all of the core features of a DNS server, including recursive lookups, forwarding, and caching. CoreDNS also offers features such as request rewriting and load balancing, as well as a plugin system to provide advanced features for custom deployments. CoreDNS provides high performance and scalability with support for low-latency and low-memory usage. It is secure by default, with support for DNSS.
 
 ## Monitoring CoreDNS with Netdata
 
@@ -61,18 +61,40 @@ Netdata has a public demo space (no login required) where you can explore [CoreD
  - Number of DNS requests per IP family
  ![image](https://user-images.githubusercontent.com/24860547/207034858-5f1a7e32-b699-4913-96d3-79ca4ad83ca9.png)
  
- - The DNS request count per IP family per server, and per zone is visualized in a separate chart.
+ - The DNS request count per IP family (IPv4, IPv6) per server, and per zone is visualized in a separate chart.
 
 ### Total DNS requests per DNS message type
- - Number of DNS requests per DNS message type. Each of the following message types is represented as a separate dimensions: A, AAAA, MX, SOA, CNAME, PTR, TXT, NS, DS, DNSKEY, RRSIG, NSEC, NSEC3, IXFR, ANY, OTHER
+ - Number of DNS requests per DNS message type. Each of the following message types is represented as a separate dimensions: [A, AAAA, MX, SOA, CNAME, PTR, TXT, NS, DS, DNSKEY, RRSIG, NSEC, NSEC3, IXFR, ANY, OTHER](https://en.wikipedia.org/wiki/List_of_DNS_record_types)
  ![image](https://user-images.githubusercontent.com/24860547/207034934-b3609b31-d8de-4c25-b282-365ed76f28b9.png)
  
  - The DNS request count per message type per server, and per zone is visualized in a separate chart.
 
 ### Total DNS responses per Rcode
- - Number of DNS responses per Rcode. Each of the following response types is represented as a separate dimension: noerror, formerr, servfail, nxdomain, notimp, refused, yxdomain, yxrrset, nxrrset, notauth, notzone, badsig, badkey, badtime, badmode, badname, badalg, badtrunc, badcookie, other
+ - Number of DNS responses per Rcode. 
+ 
  ![image](https://user-images.githubusercontent.com/24860547/207034983-45e9711e-aa29-4c40-8a96-204db2c15329.png)
 
+- Each of the following response types is represented as a separate dimension: 
+  - [NoError](https://www.rfc-editor.org/rfc/rfc1035) (No Error)
+  - [FormErr](https://www.rfc-editor.org/rfc/rfc1035) (Format Error)
+  - [ServFail](https://www.rfc-editor.org/rfc/rfc1035) (Server Failure)
+  - [NXDomain](https://www.rfc-editor.org/rfc/rfc1035) (Non Existent Domain)
+  - [NotImp](https://www.rfc-editor.org/rfc/rfc1035) (Not Implemented)
+  - [Refused](https://www.rfc-editor.org/rfc/rfc1035) (Query Refused)
+  - [YXDomain](https://www.rfc-editor.org/rfc/rfc2136) (Name Exists when it should not)
+  - [YXRRSet](https://www.rfc-editor.org/rfc/rfc2136) (RR Set Exists when it should not)
+  - [NXRRSet](https://www.rfc-editor.org/rfc/rfc2136) (RR Set that should Exist but does not)
+  - [NotAuth](https://www.rfc-editor.org/rfc/rfc2136) (Server Not Authoritative for zone)
+  - [NotZone](https://www.rfc-editor.org/rfc/rfc2136) (Name not contained in zone)
+  - [BADSIG](https://www.rfc-editor.org/rfc/rfc2845) (TSIG Signature Failure)
+  - [BADKEY](https://www.rfc-editor.org/rfc/rfc2845) (Key not recognized)
+  - [BADTIME](https://www.rfc-editor.org/rfc/rfc2845) (Signature out of time window)
+  - [BADMODE](https://www.rfc-editor.org/rfc/rfc2930) (Bad TKEY Mode)
+  - [BADNAME](https://www.rfc-editor.org/rfc/rfc2930) (Duplicate key name)
+  - [BADALG](https://www.rfc-editor.org/rfc/rfc2930) (Algorithm not supported)
+  - [BADTRUNC](https://www.rfc-editor.org/rfc/rfc2930) 
+  - [BADCOOKIE](https://www.rfc-editor.org/rfc/rfc2930) 
+  - Other
 - The DNS request count per Rcode per server, and per zone is visualized in a separate chart.
 
 ## Troubleshooting CoreDNS with Netdata
