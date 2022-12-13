@@ -29,11 +29,11 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 ## What Postfix metrics are important to monitor?
 
 ### qemails
- - The <code>qemails</code> metric represents the number of emails currently in the queue in Postfix. This metric should be monitored to ensure that the queue is not growing too large, which can lead to delays in email delivery.
+ - The `qemails` metric represents the number of emails currently in the queue in Postfix. This metric should be monitored to ensure that the queue is not growing too large, which can lead to delays in email delivery.
 ![image](https://user-images.githubusercontent.com/24860547/207016300-e26f91ec-d483-4b4f-a750-9c47f1d69e80.png)
 
 ### qsize
- - The <code>qsize</code> metric represents the total size of emails currently in the queue in Postfix. This metric should be monitored to ensure that the queue is not growing too large, which can lead to delays in email delivery.
+ - The `qsize` metric represents the total size of emails currently in the queue in Postfix. This metric should be monitored to ensure that the queue is not growing too large, which can lead to delays in email delivery.
 ![image](https://user-images.githubusercontent.com/24860547/207016351-86ac7034-0304-4f29-abff-8a3271101c01.png)
 
 ## Troubleshooting Postfix with Netdata
