@@ -14,7 +14,7 @@ Find out how to effectively and easily monitor and troubleshoot Postfix using Ne
 <!--truncate-->
 ## What is Postfix
 
-Postfix is an open-source mail transfer agent (MTA). It is used for sending and receiving emails, and supports features such as mail routing, aliasing, and forwarding. Postfix supports a wide range of protocols, is highly reliable and secure, and is easily configurable. It is suitable for deployments of any size, from small sites to large enterprises.
+[Postfix](https://www.postfix.org/) is an open-source mail transfer agent (MTA). It is used for sending and receiving emails, and supports features such as mail routing, aliasing, and forwarding. Postfix supports a wide range of protocols, is highly reliable and secure, and is easily configurable. It is suitable for deployments of any size, from small sites to large enterprises.
 
 ## Monitoring Postfix with Netdata
 
