@@ -73,21 +73,20 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 ![image](https://user-images.githubusercontent.com/24860547/207013112-0e051aca-7487-4ee7-9f06-31ba7017c788.png)
 
 ### leap_status
--  <p>The current leap status of the source. Statuses include the following:
- 
-   - </p><p><b>Normal</b> - indicates the normal status (no leap second).
-   - <b>InsertSecond</b> - indicates that a leap second will be inserted at the end of the month. <b>DeleteSecond</b> - indicates that a leap second will be deleted at the end of the month. 
-   - <b>Unsynchronised</b> - the server has not synchronized properly with the NTP server.</p>
+-  The current leap status of the source. Statuses include the following:
+   - **Normal** - indicates the normal status (no leap second).
+   - **InsertSecond** - indicates that a leap second will be inserted at the end of the month. 
+   - **DeleteSecond** - indicates that a leap second will be deleted at the end of the month. 
+   - **Unsynchronised** - the server has not synchronized properly with the NTP server.
 ![image](https://user-images.githubusercontent.com/24860547/207013171-f3c28de8-82bc-4e78-9dfb-b4836a2ef294.png)
 
 ### activity
- -  <p>The number of servers and peers that are online and offline. The following explains the status options:
- 
-    - </p><p><b>Online</b> - the server or peer is currently online (i.e. assumed by chronyd to be reachable). 
-    - <b>Offline</b> - the server or peer is currently offline (i.e. assumed by chronyd to be unreachable and no measurements from it will be attempted). 
-    - <b>BurstOnline</b> - a burst command has been initiated for the server or peer and is being performed. After the burst is complete the server or peer will be returned to the online state. 
-    - <b>BurstOffline</b> - a burst command has been initiated for the server or peer and is being performed. After the burst is complete the server or peer will be returned to the offline state. 
-    - <b>Unresolved</b> - the name of the server or peer was not resolved to an address yet.</p>
+ -  The number of servers and peers that are online and offline. The following explains the status options:
+     - **Online** - the server or peer is currently online (i.e. assumed by chronyd to be reachable). 
+    - **Offline** - the server or peer is currently offline (i.e. assumed by chronyd to be unreachable and no measurements from it will be attempted). 
+    - **BurstOnline** - a burst command has been initiated for the server or peer and is being performed. After the burst is complete the server or peer will be returned to the online state. 
+    - **BurstOffline** - a burst command has been initiated for the server or peer and is being performed. After the burst is complete the server or peer will be returned to the offline state. 
+    - **Unresolved** - the name of the server or peer was not resolved to an address yet.
 ![image](https://user-images.githubusercontent.com/24860547/207013220-83071169-cb3b-478d-9730-06b52d60bf68.png)
 
 ## Troubleshooting Chrony with Netdata
