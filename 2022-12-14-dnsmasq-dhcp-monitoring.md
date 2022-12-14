@@ -18,7 +18,7 @@ Find out how to effectively and easily monitor and troubleshoot Dnsmasq for DHCP
 [Dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.html) is an open-source, lightweight, DNS caching and forwarding server. It is designed to provide DNS resolution for small and home networks. Dnsmasq provides local DNS caching, forwarding, and recursive lookups, as well as DHCP, TFTP, and other related services. It also has support for DNS and DHCPv6, as well as various other features such as DNS-over-TLS and IPv6 privacy extensions. Dnsmasq is a versatile and highly configurable tool that is simple to use.
 DNSMasq_DHCP is a feature of DNSMasq that provides a combined server to serve both DNS (Domain Name System) and DHCP (Dynamic Host Configuration Protocol) requests. It is a fast and lightweight DHCP server with support for both IPv4 and IPv6, and can be used to serve IP addresses to hosts on a LAN. DNSMasq_DHCP also offers features such as DNS and DHCP performance tuning, DHCP address range management, and support for multiple DNS domains.
 
-This blog specifically deals with monitoring dhcp with Dnsmasq and is a followup of [DNS monitoring](https://blog.netdata.cloud/dnsmasq-monitoring/) with Dnsmasq.
+This blog specifically deals with monitoring dhcp with Dnsmasq and is a followup to [DNS monitoring](https://blog.netdata.cloud/dnsmasq-monitoring/) with Dnsmasq.
 
 ## Monitoring Dnsmasq for DHCP with Netdata
 
@@ -82,13 +82,14 @@ component: Dnsmasq
 ### Alerts
 Netdata has built-in alerts to reduce the monitoring burden for you. 
 
-If you would like to update the alert thresholds for any of these alerts or want to create your own alert for another metric – please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
+If you would like to update the alert thresholds for any of these alerts or want to create your own alert for another metrics, please follow the [instructions here](https://learn.netdata.cloud/docs/monitor/configure-alarms).
 
-By default you will receive email notifications whenever an alert is triggered – if you would not like to receive these notifications you can turn them off from your profile settings.
+By default, you will receive email notifications whenever an alert is triggered;if you would not like to receive these notifications you can turn them off from your profile settings.
+
 ### Anomaly Advisor
 Anomaly Advisor lets you quickly identify if the system you are monitoring has any anomalies and allows you to drill down into which metrics are behaving anomalously.
 
-To learn more about how to use Anomaly Advisor to troubleshoot your Apache web server check out the [documentation](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor) or visit the [anomalies tab](https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/anomalies) in the demo space to play with it right now.
+To learn more about how to use Anomaly Advisor to troubleshoot your Apache web server, check out the [documentation](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor) or visit the [anomalies tab](https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/anomalies) in the demo space to play with it right now.
 ### Metric Correlations 
 [Metric Correlations](https://learn.netdata.cloud/docs/cloud/insights/metric-correlations) lets you quickly find metrics and charts related to a particular window of interest that you want to explore further. By displaying the standard Netdata dashboard, filtered to show only charts that are relevant to the window of interest, you can get to the root cause sooner.
 
