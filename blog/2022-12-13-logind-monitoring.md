@@ -33,7 +33,8 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
  - Local and remote sessions.
    - **Local** - Number of active local sessions.
    - **Remote** - Number of active remote sessions.
- ![Sessions](https://user-images.githubusercontent.com/96257330/207290462-0640f27a-a29d-45b1-a240-80e0a02331e2.png)
+
+![Sessions](https://user-images.githubusercontent.com/96257330/207290462-0640f27a-a29d-45b1-a240-80e0a02331e2.png)
 
 ### sessions_type
 
@@ -41,7 +42,8 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
    - **Graphical** - sessions are running under one of X11 Mir or Wayland.
    - **Console** - sessions are usually regular text mode local logins but depending on how the system is configured may have an associated GUI.
    - **Other** - sessions are those that do not fall into the above categories (such as sessions for cron jobs or systemd timer units).
- ![Sessions by type](https://user-images.githubusercontent.com/96257330/207292086-672f7532-bc18-4192-95d7-1aaf2f678dea.png)
+
+![Sessions by type](https://user-images.githubusercontent.com/96257330/207292086-672f7532-bc18-4192-95d7-1aaf2f678dea.png)
 
 ### sessions_state
 
@@ -49,7 +51,8 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
    - **Online** - logged in and running in the background. 
    - **Closing** - nominally logged out but some processes belonging to it are still around. 
    - **Active** - logged in and running in the foreground.
- ![Sessions by State](https://user-images.githubusercontent.com/96257330/207291344-32d9086d-bec1-4760-8465-65b82bb74444.png)
+
+![Sessions by State](https://user-images.githubusercontent.com/96257330/207291344-32d9086d-bec1-4760-8465-65b82bb74444.png)
 
 ### users_state
 
@@ -59,7 +62,8 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
    - **Online** - users are logged in but have no active sessions. 
    - **Lingering** - users are not logged in but have one or more services still running. 
    - **Active** - users are logged in and have at least one active session.
- ![Users State](https://user-images.githubusercontent.com/96257330/207291764-2280e8ee-dfd1-4bfc-aef5-96b0e1d9c170.png)
+
+![Users State](https://user-images.githubusercontent.com/96257330/207291764-2280e8ee-dfd1-4bfc-aef5-96b0e1d9c170.png)
 
 ## Troubleshooting systemd-logind with Netdata
 
