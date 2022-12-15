@@ -18,7 +18,7 @@ Find out how to effectively and easily monitor and troubleshoot Dnsmasq for DHCP
 [Dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.html) is an open-source, lightweight, DNS caching and forwarding server. It is designed to provide DNS resolution for small and home networks. Dnsmasq provides local DNS caching, forwarding, and recursive lookups, as well as DHCP, TFTP, and other related services. It also has support for DNS and DHCPv6, as well as various other features such as DNS-over-TLS and IPv6 privacy extensions. Dnsmasq is a versatile and highly configurable tool that is simple to use.
 DNSMasq_DHCP is a feature of DNSMasq that provides a combined server to serve both DNS (Domain Name System) and DHCP (Dynamic Host Configuration Protocol) requests. It is a fast and lightweight DHCP server with support for both IPv4 and IPv6, and can be used to serve IP addresses to hosts on a LAN. DNSMasq_DHCP also offers features such as DNS and DHCP performance tuning, DHCP address range management, and support for multiple DNS domains.
 
-This blog specifically deals with monitoring dhcp with Dnsmasq and is a followup to [DNS monitoring](https://blog.netdata.cloud/dnsmasq-monitoring/) with Dnsmasq.
+This article specifically deals with monitoring dhcp. For more information on Dnsmasq, check [DNS monitoring](https://blog.netdata.cloud/dnsmasq-monitoring/).
 
 ## Monitoring Dnsmasq for DHCP with Netdata
 
