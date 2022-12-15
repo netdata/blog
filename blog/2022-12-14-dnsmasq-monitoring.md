@@ -16,7 +16,7 @@ Find out how to effectively and easily monitor and troubleshoot Dnsmasq DNS Forw
 
 [Dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.html) is an open-source, lightweight, DNS caching and forwarding server. It is designed to provide DNS resolution for small and home networks. Dnsmasq provides local DNS caching, forwarding, and recursive lookups, as well as DHCP, TFTP, and other related services. It also has support for DNS and DHCPv6, as well as various other features such as DNS-over-TLS and IPv6 privacy extensions. Dnsmasq is a versatile and highly configurable tool that is simple to use.
 
-We will cover Dnsmasq_DHCP in a separate blog with more details.
+You can find more details on [DHCP monitoring](https://blog.netdata.cloud/dnsmasq-dhcp-monitoring/) with Dnsmasq.
 
 ## Monitoring Dnsmasq with Netdata
 
