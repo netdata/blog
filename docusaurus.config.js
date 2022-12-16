@@ -139,19 +139,6 @@ const config = {
         },
       };
     },
-    //[
-    //  '@docusaurus/plugin-client-redirects',
-    //  {
-    //    createRedirects(existingPath) {
-    //      if (existingPath.includes('/')) {
-    //        return [
-    //          existingPath.replace('/', '/posts/'),
-    //        ];
-    //      }
-    //      return undefined;
-    //    },
-    //  },
-    //],
   ],
 
   themeConfig:
