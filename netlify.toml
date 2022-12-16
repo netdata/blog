@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "/posts/redefining-monitoring-netdata"
+  to = "/redefining-monitoring-with-netdata"
+
+[[redirects]]
+  from = "/posts/*"
+  to = "/:splat"

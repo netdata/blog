@@ -139,19 +139,6 @@ const config = {
         },
       };
     },
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        createRedirects(existingPath) {
-          if (existingPath.includes('/posts/redefining-monitoring-netdata')) {
-            return [
-              existingPath.replace('/posts/redefining-monitoring-netdata', '/redefining-monitoring-with-netdata/'),
-            ];
-          }
-          return undefined;
-        },
-      },
-    ],
   ],
 
   themeConfig:
