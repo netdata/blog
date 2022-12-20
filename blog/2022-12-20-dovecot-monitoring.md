@@ -3,8 +3,8 @@ slug: dovecot-monitoring
 title: How to monitor and troubleshoot Dovecot
 description: Monitoring and troubleshooting Dovecot.
 authors: shyam
-tags: [how-to, monitor, troubleshoot, dovecot,  mail server, mail delivery, IMAP/POP3]
-keywords: [how-to, monitor, troubleshoot, dovecot,  mail server, mail delivery, IMAP/POP3]
+tags: [how-to, monitor, troubleshoot, dovecot, mail-server, mail-delivery, IMAP, POP3]
+keywords: [how-to, monitor, troubleshoot, dovecot, mail-server, mail-delivery, IMAP, POP3]
 image: https://www.dovecot.org/wp-content/uploads/2021/09/dovecot_logo.png
 
 ---
