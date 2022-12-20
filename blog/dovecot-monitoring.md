@@ -29,19 +29,18 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 ## What Dovecot metrics are important to monitor?
 
 ### Sessions
- - The number of active sessions connected to Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the connections are identified and addressed quickly.
-
+ - The number of active sessions connected to Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208645727-2306f4cf-e40b-4566-9488-796ead11ad9e.png)
 
 ### Logins
- - The number of successful logins to the Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the login process are identified and addressed quickly.
+ - The number of successful logins to the Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208645864-24f0aad3-b65b-4ab0-acee-5f634c327b9b.png)
 
- - The authentication activity of Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the authentication operations are identified and addressed quickly.
+ - The authentication activity of Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208645982-99622a5c-98a5-4852-831f-c59c683e7a4a.png)
 
 ### Commands
- - The number of commands sent to the Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the commands are identified and addressed quickly.
+ - The number of commands sent to the Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208646102-14994f76-8c70-46d9-a505-959da2304de5.png)
 
 ### Page faults
@@ -53,23 +52,23 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 ![image](https://user-images.githubusercontent.com/24860547/208646415-0d61c638-624f-44e2-92ee-6379c0eb6a58.png)
 
 ### Disk 
- - The Disk I/O activity of Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the I/O operations are identified and addressed quickly.
+ - The Disk I/O activity of Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208646535-dd174402-2d9c-4ac4-9152-620f936140c2.png)
 
 ### Network
- - The network activity of Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the network operations are identified and addressed quickly.
+ - The network activity of Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208646653-322170ca-411e-42c9-9f29-afe291c9c474.png)
 
 ### System
- - The system calls made by Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the system calls are identified and addressed quickly.
+ - The system calls made by Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208646760-379b49df-1a0d-4398-91f8-20c0f046d71d.png)
 
 ### Lookups
- - The lookup activity of Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the lookup operations are identified and addressed quickly.
+ - The lookup activity of Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208646862-444a0594-cf01-4d97-8164-f67d3360856d.png)
 
 ### Cache
- - The cache activity of Dovecot IMAP/POP3 server. It is important to monitor this metric to ensure that the server is running efficiently and any problems with the cache operations are identified and addressed quickly.
+ - The cache activity of Dovecot IMAP/POP3 server. 
 ![image](https://user-images.githubusercontent.com/24860547/208646932-31b5ffdc-a918-4d16-9376-05555986467a.png)
 
 ![image](https://user-images.githubusercontent.com/24860547/208646996-25c434f4-60aa-43fe-8afd-972a3733a88a.png)
