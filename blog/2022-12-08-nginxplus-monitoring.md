@@ -14,7 +14,7 @@ As a continuation of our series for monitoring web servers with [NGINX](https://
 <!--truncate-->
 ## What is NGINXPlus
 
-Nginx Plus is an open source web server and load balancer. It is an enterprise-grade version of the popular open source Nginx web server, with additional features for scalability, performance, and monitoring. Nginx Plus includes features such as load balancing, content caching, and HTTP/2 support, and is suitable for applications of any size. Nginx Plus is highly customizable and can be used to deploy web applications in a variety of environments.
+NGINXPLus is an open source web server and load balancer. It is an enterprise-grade version of the popular open source NGINX web server, with additional features for scalability, performance, and monitoring. NGINXPLus includes features such as load balancing, content caching, and HTTP/2 support, and is suitable for applications of any size. NGINXPLus is highly customizable and can be used to deploy web applications in a variety of environments.
 
 ## Monitoring NGINXPlus with Netdata
 
