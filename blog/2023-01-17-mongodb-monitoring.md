@@ -29,46 +29,35 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 ## What MongoDB metrics are important to monitor?
 
 ### Operations
- - The total number of operations performed by the MongoDB server per second. The following operations are displayed as separate dimensions: 
- 	- INSERT
-	- QUERY
-	- PDATE
-	- DELETE
-	- GETMORE
-	- COMMAND 
+
+ - **Operations by type**: The total number of operations per type performed by the MongoDB server per second. 
 ![image](https://user-images.githubusercontent.com/24860547/212875959-01f4a957-03e0-4d1c-bc42-66062755e3ca.png)
 
-### Operations Latency
- - The latencies of reads, writes and command operations performed by the MongoDB server. High latencies may indicate performance issues with the server or the components interacting with it.
+ - **Operations Lantecy**: The latencies of reads, writes and command operations performed by the MongoDB server. High latencies may indicate performance issues with the server or the components interacting with it.
 ![image](https://user-images.githubusercontent.com/24860547/212876030-46a49c5a-8d7b-4cc2-b040-60638cdd043a.png)
 
 ### Connections
- - The total number of connections to the MongoDB server. Current connections and available connections are displayed as separate dimensions. 
+ - **Connections Count**: The total number of connections to the MongoDB server. Current connections and available connections are displayed as separate dimensions. 
 ![image](https://user-images.githubusercontent.com/24860547/212876099-6ceed111-9663-4cb6-89db-76d3c33bcf25.png)
 
-### Connections by Rate
- - The rate of connections created per second to the MongoDB server. 
+ - **Connections by Rate**: The rate of connections created per second to the MongoDB server. 
 
-### Connections by State
- - The distribution of connection states for the MongoDB server. The following states are displayed as separate dimensions: active, threaded, exhaustIsMaster, exhaustHello, awaiting_topology_changes. 
+ - **Connections by State**: The distribution of connection states for the MongoDB server. The following states are displayed as separate dimensions: active, threaded, exhaustIsMaster, exhaustHello, awaiting_topology_changes. 
 
-### Network IO 
- - The amount of network IO performed by the MongoDB server. 
+### Network 
+ - **Network IO**: The amount of network IO performed by the MongoDB server. 
 ![image](https://user-images.githubusercontent.com/24860547/212876199-30a3df8e-7277-4baf-927a-31eb3f6b2390.png)
 
-### Network requests
- - The number of requests per second to the MongoDB server. 
+ - **Network Requests**: The number of requests per second to the MongoDB server. 
 ![image](https://user-images.githubusercontent.com/24860547/212876243-f96fae2a-b5c1-4ecc-b425-8a9dbd38424b.png)
 
-### Page faults
- - The number of page faults encountered by the MongoDB server per second. 
+### Memory
+ - **Page Faults**: The number of page faults encountered by the MongoDB server per second. 
 
-### TCMalloc generic
- - The usage of the TCMalloc generic allocator by the MongoDB server. The size of the heap and currently allocated bytes are monitored.
+ - **TCMalloc Generic**: The usage of the TCMalloc generic allocator by the MongoDB server. The size of the heap and currently allocated bytes are monitored.
 ![image](https://user-images.githubusercontent.com/24860547/212876295-61b834aa-97e9-4b4d-9e60-4520a807a5e7.png)
 
-### TCMalloc
- - The usage of the TCMalloc allocator by the MongoDB server. The usage in bytes for each of the following is monitored: 
+ - **TCMalloc**: The usage of the TCMalloc allocator by the MongoDB server. The usage in bytes for each of the following is monitored: 
 	- pageheap_free
 	- pageheap_unmapped 
 	- total_threaded_cache
@@ -80,7 +69,7 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 ![image](https://user-images.githubusercontent.com/24860547/212876358-78cd4505-4188-4b78-a524-5bf8b697ebf6.png)
 
 ### Asserts
- - The number of asserts encountered by the MongoDB server per second. The following assert types are monitored: 
+ - **Asserts**: The number of asserts encountered by the MongoDB server per second. The following assert types are monitored: 
 	- regular
 	- warning
 	- msg
@@ -88,15 +77,89 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 	- tripwire
 	- rollovers
 	
-### Current transactions
- - The number of current transactions on the MongoDB server. The following transaction types are monitored: 
+### Transactions
+ - **Current Transactions** The number of current transactions on the MongoDB server. The following transaction types are monitored: 
 	- Active
 	- Inactive
 	- Open
 	- Prepared
 
-### Shard commit types
- - The distribution of commit types for sharded collections on the MongoDB server. The following types are monitored:
+### Clients
+ - **Active Clients**: The number of active clients (readers and writers) connected to the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876432-d8038c56-1381-478b-9cf1-bb7c8ef78950.png)
+
+ - **Queued Clients**: The number of clients (readers and writers) currently queued because of a lock on the MongoDB server. 
+
+### Locks
+ - **Acquired Locks**: The distribution of locks acquired and held by the MongoDB server. The following locks are monitored global_read, global_write, database_read, database_write, collection_read, collection_write.
+ ![image](https://user-images.githubusercontent.com/24860547/212876511-50384d07-98f0-4e37-8112-63634604903d.png)
+ 
+ - **Flow control events**: The timings of flow control events (acquiring and lagged) on the MongoDB server. 
+
+### WiredTiger
+WiredTiger is the default storage engine starting in MongoDB 3.2. It is well-suited for most workloads and is recommended for new deployments. WiredTiger provides a document-level concurrency model, checkpointing, and compression, among other features. In MongoDB Enterprise, WiredTiger also supports Encryption at Rest.
+
+ - **WiredTiger Block Manager**: The WiredTiger block manager subsystem manages the reading and writing of data from the disk. It is designed to facilitate high performance, economic use of disk space and customizability. A block is a chunk of data that is stored on the disk and operated on as a single unit. Each WiredTiger data file is made up of these blocks. The size of blocks, in bytes, across each of the following dimensions on the MongoDB server is monitored:
+	- Read
+	- Read_via_memory_map_api
+	- Read_via_system_call_api
+	- Written
+	- Written_for_checkpoint
+	- Written_via_memory_map_api
+![image](https://user-images.githubusercontent.com/24860547/212876650-79cb1239-56ac-4a70-8fe3-c6fa2b793b8d.png)
+
+ - **WiredTiger Cache**: The WiredTiger cache is memory used to hold copies of recently accessed or modified data. This WiredTiger cache usage on the MongoDB server is monitored across the following dimensions:
+	- allocated_for_updates
+	- read_into_cache
+	- written_from_cache
+![image](https://user-images.githubusercontent.com/24860547/212876712-ebf647e2-8218-4337-8226-5d2ec3a434a5.png)
+
+ - **WiredTiger Capacity**: The capacity of the WiredTiger cache on the MongoDB server. 
+
+ - **WiredTiger Connections**: The number of connections currently open in the WiredTiger storage engine on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876782-9337c17b-68b5-43f0-8f1a-8b0e5915dad5.png)
+
+ - **WiredTiger Cursor**: The number of cursors currently open in the WiredTiger storage engine on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876856-2c826a69-9386-41fe-9f5f-6f29192d8730.png)
+
+ - **WiredTiger Lock Acquisition**: The number of locks currently held in the WiredTiger storage engine on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876934-c79a8581-366a-4d16-8782-7f6e94a3ac54.png)
+
+ - **WiredTiger Lock Duration**: The duration of locks held in the WiredTiger storage engine on the MongoDB server. 
+
+ - **WiredTiger Log Operations**: The number of operations written to the WiredTiger log on the MongoDB server. 
+ ![image](https://user-images.githubusercontent.com/24860547/212877037-64b89f38-3323-4daf-b267-f38d4414dbc7.png)
+
+  - **WiredTiger Log Operations Size**: The size of operations written to the WiredTiger log on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212877086-61fffbf7-2254-45c8-bb07-8ad5bf2601d0.png)
+
+ - **WiredTiger Transactions**:The number of transactions currently open in the WiredTiger storage engine on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212877136-bc34c31f-827a-4366-9a5c-8907b9a5de82.png)
+
+### Database 
+ - **Database Collections**: The number of collections in the specified database on the MongoDB server. 
+
+ - **Database Indexes**: The number of indexes in the specified database on the MongoDB server. 
+
+ - **Database Views**: The number of views in the specified database on the MongoDB server. 
+
+ - **Database Documents**: The number of documents in the specified database on the MongoDB server. 
+
+ - **Database Storage Size**: The storage size of the specified database on the MongoDB server. 
+
+### Replication 
+ - **Replication Lag**: The amount of lag in replication on the MongoDB server. 
+
+ - **Replication Heartbeat Latency**: The latencies of replication heartbeats on the MongoDB server. 
+
+ - **Replication Node Ping**: The latencies of pings to replication nodes on the MongoDB server. 
+
+### Shards
+ - **Shard**: The number of nodes in the specified shard on the MongoDB server. 
+
+ - **Shard Database Status**: The status of the databases in the specified shard on the MongoDB server. 
+
+ - **Shard Commit Types**: The distribution of commit types for sharded collections on the MongoDB server. The following types are monitored:
 	- no_shard_init
 	- no_shard_successful
 	- single_shard_init
@@ -106,105 +169,7 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 	- two_phase_init
 	- two_phase_successful
 
-### Active clients
- - The number of active clients (readers and writers) connected to the MongoDB server. 
-![image](https://user-images.githubusercontent.com/24860547/212876432-d8038c56-1381-478b-9cf1-bb7c8ef78950.png)
-
-### Queued readers and writers
- - The number of clients (readers and writers) currently queued because of a lock on the MongoDB server. 
-
-### Acquired Locks
- - The distribution of locks acquired and held by the MongoDB server. The following locks are monitored global_read, global_write, database_read, database_write, collection_read, collection_write.
- ![image](https://user-images.githubusercontent.com/24860547/212876511-50384d07-98f0-4e37-8112-63634604903d.png)
- 
-### Flow control timings
- - The timings of flow control events (acquiring and lagged) on the MongoDB server. 
-
-### WiredTiger metrics
-WiredTiger is the default storage engine starting in MongoDB 3.2. It is well-suited for most workloads and is recommended for new deployments. WiredTiger provides a document-level concurrency model, checkpointing, and compression, among other features. In MongoDB Enterprise, WiredTiger also supports Encryption at Rest.
-
-### WiredTiger Block Manager
- - The WiredTiger block manager subsystem manages the reading and writing of data from the disk. It is designed to facilitate high performance, economic use of disk space and customizability. A block is a chunk of data that is stored on the disk and operated on as a single unit. Each WiredTiger data file is made up of these blocks.
- - The size of blocks, in bytes, across each of the following dimensions on the MongoDB server is monitored:
-	- Read
-	- Read_via_memory_map_api
-	- Read_via_system_call_api
-	- Written
-	- Written_for_checkpoint
-	- Written_via_memory_map_api
-
-![image](https://user-images.githubusercontent.com/24860547/212876650-79cb1239-56ac-4a70-8fe3-c6fa2b793b8d.png)
-
-### WiredTiger Cache
- - The WiredTiger cache is memory used to hold copies of recently accessed or modified data.
- - This WiredTiger cache usage on the MongoDB server is monitored across the following dimensions:
-	- allocated_for_updates
-	- read_into_cache
-	- written_from_cache
-![image](https://user-images.githubusercontent.com/24860547/212876712-ebf647e2-8218-4337-8226-5d2ec3a434a5.png)
-
-### WiredTiger Capacity
- - The capacity of the WiredTiger cache on the MongoDB server. 
-
-### WiredTiger Connection
- - The number of connections currently open in the WiredTiger storage engine on the MongoDB server. 
-![image](https://user-images.githubusercontent.com/24860547/212876782-9337c17b-68b5-43f0-8f1a-8b0e5915dad5.png)
-
-### WiredTiger Cursor
- - The number of cursors currently open in the WiredTiger storage engine on the MongoDB server. 
-![image](https://user-images.githubusercontent.com/24860547/212876856-2c826a69-9386-41fe-9f5f-6f29192d8730.png)
-
-### WiredTiger Lock Aquisitions
- - The number of locks currently held in the WiredTiger storage engine on the MongoDB server. 
-![image](https://user-images.githubusercontent.com/24860547/212876934-c79a8581-366a-4d16-8782-7f6e94a3ac54.png)
-
-### WiredTiger Lock Duration
- - The duration of locks held in the WiredTiger storage engine on the MongoDB server. 
-
-### WiredTiger Log Operations
- - The number of operations written to the WiredTiger log on the MongoDB server. 
- ![image](https://user-images.githubusercontent.com/24860547/212877037-64b89f38-3323-4daf-b267-f38d4414dbc7.png)
-
- ### WiredTiger Log Operations Size
- - The size of operations written to the WiredTiger log on the MongoDB server. 
-![image](https://user-images.githubusercontent.com/24860547/212877086-61fffbf7-2254-45c8-bb07-8ad5bf2601d0.png)
-
-### WiredTiger Transactions
- - The number of transactions currently open in the WiredTiger storage engine on the MongoDB server. 
-![image](https://user-images.githubusercontent.com/24860547/212877136-bc34c31f-827a-4366-9a5c-8907b9a5de82.png)
-
-### Database Collections
- - The number of collections in the specified database on the MongoDB server. 
-
-### Database Indexes
- - The number of indexes in the specified database on the MongoDB server. 
-
-### Database Views
- - The number of views in the specified database on the MongoDB server. 
-
-### Database Documents
- - The number of documents in the specified database on the MongoDB server. 
-
-### Database Storage Size
- - The storage size of the specified database on the MongoDB server. 
-
-### Replication Lag
- - The amount of lag in replication on the MongoDB server. 
-
-### Replication Heartbeat Latency
- - The latencies of replication heartbeats on the MongoDB server. 
-
-### Replication Node Ping
- - The latencies of pings to replication nodes on the MongoDB server. 
-
-### Shard Nodes Count
- - The number of nodes in the specified shard on the MongoDB server. 
-
-### Shard Databases Status
- - The status of the databases in the specified shard on the MongoDB server. 
-
-### Chunks
- - The number of chunks in the specified shard on the MongoDB server. 
+ - **Chunks**: The number of chunks in the specified shard on the MongoDB server. 
 
 
 ## Troubleshooting MongoDB with Netdata
