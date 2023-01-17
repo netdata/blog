@@ -29,22 +29,28 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 ## What MongoDB metrics are important to monitor?
 
 ### Operations
- - The total number of operations performed by the MongoDB server per second. The following operations are displayed as separate dimensions: insert, query, update, delete, getmore, command. Monitoring this metric can help identify the usage patterns of the server and potential performance issues.
+ - The total number of operations performed by the MongoDB server per second. The following operations are displayed as separate dimensions: 
+ 	- INSERT
+	- QUERY
+	- PDATE
+	- DELETE
+	- GETMORE
+	- COMMAND 
 ![image](https://user-images.githubusercontent.com/24860547/212875959-01f4a957-03e0-4d1c-bc42-66062755e3ca.png)
 
-### Operations latency
- - The latencies of reads, writes and commands operations performed by the MongoDB server. High latencies may indicate performance issues with the server or the components interacting with it.
+### Operations Latency
+ - The latencies of reads, writes and command operations performed by the MongoDB server. High latencies may indicate performance issues with the server or the components interacting with it.
 ![image](https://user-images.githubusercontent.com/24860547/212876030-46a49c5a-8d7b-4cc2-b040-60638cdd043a.png)
 
 ### Connections
- - The total number of connections to the MongoDB server. Current connections and available connections are displayed separately. Monitoring this metric can help identify the usage patterns of the server and potential performance issues.
+ - The total number of connections to the MongoDB server. Current connections and available connections are displayed as separate dimensions. 
 ![image](https://user-images.githubusercontent.com/24860547/212876099-6ceed111-9663-4cb6-89db-76d3c33bcf25.png)
 
 ### Connections by Rate
- - The rate of connections created per second to the MongoDB server. Monitoring this metric can help identify the usage patterns of the server and potential performance issues.
+ - The rate of connections created per second to the MongoDB server. 
 
 ### Connections by State
- - The distribution of connection states for the MongoDB server. The following states are displayed as separate dimensions: active, threaded, exhaustIsMaster, exhaustHello, awaiting_topology_changes. Monitoring this metric can help identify if there are issues with the server or the components interacting with it.
+ - The distribution of connection states for the MongoDB server. The following states are displayed as separate dimensions: active, threaded, exhaustIsMaster, exhaustHello, awaiting_topology_changes. 
 
 ### Network IO 
  - The amount of network IO performed by the MongoDB server. 
@@ -168,37 +174,37 @@ WiredTiger is the default storage engine starting in MongoDB 3.2. It is well-sui
 ![image](https://user-images.githubusercontent.com/24860547/212877136-bc34c31f-827a-4366-9a5c-8907b9a5de82.png)
 
 ### Database Collections
- - The number of collections in the specified database on the MongoDB server. Monitoring this metric can help identify the usage patterns of the database and potential performance issues.
+ - The number of collections in the specified database on the MongoDB server. 
 
 ### Database Indexes
- - The number of indexes in the specified database on the MongoDB server. Monitoring this metric can help identify the usage patterns of the database and potential performance issues.
+ - The number of indexes in the specified database on the MongoDB server. 
 
 ### Database Views
- - The number of views in the specified database on the MongoDB server. Monitoring this metric can help identify the usage patterns of the database and potential performance issues.
+ - The number of views in the specified database on the MongoDB server. 
 
 ### Database Documents
- - The number of documents in the specified database on the MongoDB server. Monitoring this metric can help identify the usage patterns of the database and potential performance issues.
+ - The number of documents in the specified database on the MongoDB server. 
 
 ### Database Storage Size
- - The storage size of the specified database on the MongoDB server. Monitoring this metric can help identify if the database is using an appropriate amount of storage.
+ - The storage size of the specified database on the MongoDB server. 
 
 ### Replication Lag
- - The amount of lag in replication on the MongoDB server. Monitoring this metric can help identify if the server is experiencing performance issues related to replication.
+ - The amount of lag in replication on the MongoDB server. 
 
 ### Replication Heartbeat Latency
- - The latencies of replication heartbeats on the MongoDB server. Monitoring this metric can help identify if the server is experiencing performance issues related to replication.
+ - The latencies of replication heartbeats on the MongoDB server. 
 
 ### Replication Node Ping
- - The latencies of pings to replication nodes on the MongoDB server. Monitoring this metric can help identify if the server is experiencing performance issues related to replication.
+ - The latencies of pings to replication nodes on the MongoDB server. 
 
 ### Shard Nodes Count
- - The number of nodes in the specified shard on the MongoDB server. Monitoring this metric can help identify the usage patterns of the shard and potential performance issues.
+ - The number of nodes in the specified shard on the MongoDB server. 
 
 ### Shard Databases Status
- - The status of the databases in the specified shard on the MongoDB server. Monitoring this metric can help identify if there are issues with the databases in the shard.
+ - The status of the databases in the specified shard on the MongoDB server. 
 
 ### Chunks
- - The number of chunks in the specified shard on the MongoDB server. Monitoring this metric can help identify the usage patterns of the shard and potential performance issues.
+ - The number of chunks in the specified shard on the MongoDB server. 
 
 
 ## Troubleshooting MongoDB with Netdata
