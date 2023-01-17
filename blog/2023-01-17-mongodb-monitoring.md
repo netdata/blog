@@ -30,12 +30,15 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 
 ### Operations
  - The total number of operations performed by the MongoDB server per second. The following operations are displayed as separate dimensions: insert, query, update, delete, getmore, command. Monitoring this metric can help identify the usage patterns of the server and potential performance issues.
+![image](https://user-images.githubusercontent.com/24860547/212875959-01f4a957-03e0-4d1c-bc42-66062755e3ca.png)
 
 ### Operations latency
  - The latencies of reads, writes and commands operations performed by the MongoDB server. High latencies may indicate performance issues with the server or the components interacting with it.
+![image](https://user-images.githubusercontent.com/24860547/212876030-46a49c5a-8d7b-4cc2-b040-60638cdd043a.png)
 
 ### Connections
  - The total number of connections to the MongoDB server. Current connections and available connections are displayed separately. Monitoring this metric can help identify the usage patterns of the server and potential performance issues.
+![image](https://user-images.githubusercontent.com/24860547/212876099-6ceed111-9663-4cb6-89db-76d3c33bcf25.png)
 
 ### Connections by Rate
  - The rate of connections created per second to the MongoDB server. Monitoring this metric can help identify the usage patterns of the server and potential performance issues.
@@ -45,15 +48,18 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 
 ### Network IO 
  - The amount of network IO performed by the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876199-30a3df8e-7277-4baf-927a-31eb3f6b2390.png)
 
 ### Network requests
  - The number of requests per second to the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876243-f96fae2a-b5c1-4ecc-b425-8a9dbd38424b.png)
 
 ### Page faults
  - The number of page faults encountered by the MongoDB server per second. 
 
 ### TCMalloc generic
  - The usage of the TCMalloc generic allocator by the MongoDB server. The size of the heap and currently allocated bytes are monitored.
+![image](https://user-images.githubusercontent.com/24860547/212876295-61b834aa-97e9-4b4d-9e60-4520a807a5e7.png)
 
 ### TCMalloc
  - The usage of the TCMalloc allocator by the MongoDB server. The usage in bytes for each of the following is monitored: 
@@ -65,6 +71,7 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 	- pageheap_total_commit
 	- pageheap_decommit
 	- pageheap_reserve
+![image](https://user-images.githubusercontent.com/24860547/212876358-78cd4505-4188-4b78-a524-5bf8b697ebf6.png)
 
 ### Asserts
  - The number of asserts encountered by the MongoDB server per second. The following assert types are monitored: 
@@ -95,12 +102,14 @@ Netdata has a public [demo space](https://app.netdata.cloud/spaces/netdata-demo)
 
 ### Active clients
  - The number of active clients (readers and writers) connected to the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876432-d8038c56-1381-478b-9cf1-bb7c8ef78950.png)
 
 ### Queued readers and writers
  - The number of clients (readers and writers) currently queued because of a lock on the MongoDB server. 
 
-### Locks
- - The distribution of locks held by the MongoDB server. The following locks are monitored global_read, global_write, database_read, database_write, collection_read, collection_write.
+### Acquired Locks
+ - The distribution of locks acquired and held by the MongoDB server. The following locks are monitored global_read, global_write, database_read, database_write, collection_read, collection_write.
+ ![image](https://user-images.githubusercontent.com/24860547/212876511-50384d07-98f0-4e37-8112-63634604903d.png)
  
 ### Flow control timings
  - The timings of flow control events (acquiring and lagged) on the MongoDB server. 
@@ -118,36 +127,45 @@ WiredTiger is the default storage engine starting in MongoDB 3.2. It is well-sui
 	- Written_for_checkpoint
 	- Written_via_memory_map_api
 
+![image](https://user-images.githubusercontent.com/24860547/212876650-79cb1239-56ac-4a70-8fe3-c6fa2b793b8d.png)
+
 ### WiredTiger Cache
  - The WiredTiger cache is memory used to hold copies of recently accessed or modified data.
  - This WiredTiger cache usage on the MongoDB server is monitored across the following dimensions:
 	- allocated_for_updates
 	- read_into_cache
 	- written_from_cache
+![image](https://user-images.githubusercontent.com/24860547/212876712-ebf647e2-8218-4337-8226-5d2ec3a434a5.png)
 
 ### WiredTiger Capacity
  - The capacity of the WiredTiger cache on the MongoDB server. 
 
 ### WiredTiger Connection
  - The number of connections currently open in the WiredTiger storage engine on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876782-9337c17b-68b5-43f0-8f1a-8b0e5915dad5.png)
 
 ### WiredTiger Cursor
  - The number of cursors currently open in the WiredTiger storage engine on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876856-2c826a69-9386-41fe-9f5f-6f29192d8730.png)
 
 ### WiredTiger Lock Aquisitions
  - The number of locks currently held in the WiredTiger storage engine on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212876934-c79a8581-366a-4d16-8782-7f6e94a3ac54.png)
 
 ### WiredTiger Lock Duration
  - The duration of locks held in the WiredTiger storage engine on the MongoDB server. 
 
 ### WiredTiger Log Operations
  - The number of operations written to the WiredTiger log on the MongoDB server. 
- 
+ ![image](https://user-images.githubusercontent.com/24860547/212877037-64b89f38-3323-4daf-b267-f38d4414dbc7.png)
+
  ### WiredTiger Log Operations Size
  - The size of operations written to the WiredTiger log on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212877086-61fffbf7-2254-45c8-bb07-8ad5bf2601d0.png)
 
 ### WiredTiger Transactions
  - The number of transactions currently open in the WiredTiger storage engine on the MongoDB server. 
+![image](https://user-images.githubusercontent.com/24860547/212877136-bc34c31f-827a-4366-9a5c-8907b9a5de82.png)
 
 ### Database Collections
  - The number of collections in the specified database on the MongoDB server. Monitoring this metric can help identify the usage patterns of the database and potential performance issues.
