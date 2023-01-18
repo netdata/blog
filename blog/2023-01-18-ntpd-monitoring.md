@@ -12,7 +12,9 @@ image: https://user-images.githubusercontent.com/24860547/213157308-f9ac7230-5a3
 Find out how to effectively and easily monitor and troubleshoot NTPdaemon using Netdata
 
 <!--truncate-->
-## What is NTPdaemon
+## What is NTPd
+
+If you think being **on time** is crucial, and want to get right into the details of monitoring NTPd without wasting any more **time**. You have come to the right place (and sorry for the **time** jokes!).
 
 NTPd (Network Time Protocol Daemon) is an open source implementation of the Network Time Protocol (NTP), a protocol for network time synchronization. NTPd is responsible for synchronizing the time of an individual computer to an NTP server. It can also be used to synchronize multiple computers together, as well as synchronize a computer's time with an external reference clock. NTPd is highly scalable and can be used to synchronize an entire network of computers.
 
@@ -122,7 +124,7 @@ If you have NTPd peers configured, Netdata also collects these metrics and the f
 **Peer ppoll (Peer poll exponent)**
 -  These variables are log2 representations of the polling interval in seconds.
 
-## Troubleshooting NTPdaemon with Netdata
+## Troubleshooting NTPd with Netdata
 
 ### Alerts
 Netdata has built-in alerts to reduce the monitoring burden for you. 
