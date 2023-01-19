@@ -5,7 +5,7 @@ description: All Netdata functionality is and will be available for free in the 
 authors: team
 tags: [pricing, free-plan, paid-subscriptions]
 keywords: [pricing, free plan, paid subscriptions, monitoring, troubleshoot]
-image: ./img/paid-subs-social-preview.png
+image: ./img/subscriptions.png
 
 ---
 
