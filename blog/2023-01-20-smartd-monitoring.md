@@ -14,11 +14,11 @@ Understand what makes a storage device S.M.A.R.T and how to monitor a self monit
 <!--truncate-->
 ## What makes a storage device S.M.A.R.T.? 
 
-S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology) is a supplementary component built into many modern storage devices through which devices monitor, store, and analyze the health of their operation. Statistics are collected (temperature, number of reallocated sectors, seek errors etc.) which software can use to measure the health of a device, predict possible device failure, and provide notifications on unsafe values. 
+[S.M.A.R.T.](https://en.wikipedia.org/wiki/Self-Monitoring,_Analysis_and_Reporting_Technology) (Self-Monitoring, Analysis, and Reporting Technology) is a supplementary component built into many modern storage devices through which devices monitor, store, and analyze the health of their operation. Statistics are collected (temperature, number of reallocated sectors, seek errors etc.) which software can use to measure the health of a device, predict possible device failure, and provide notifications on unsafe values. 
 
 When S.M.A.R.T. data indicates a possible imminent drive failure, software running on the host system may notify the user so preventive action can be taken to prevent data loss, and the failing drive can be replaced and data integrity maintained.
 
-smartd is a daemon that monitors the S.M.A.R.T. system built into many ATA-3 and later ATA, IDE and SCSI-3 hard drives. 
+[smartd](https://linux.die.net/man/8/smartd) is a daemon that monitors the S.M.A.R.T. system built into many ATA-3 and later ATA, IDE and SCSI-3 hard drives. 
 
 ## Monitoring S.M.A.R.T. attributes with Netdata
 
