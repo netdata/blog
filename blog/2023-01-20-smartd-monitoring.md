@@ -1,10 +1,10 @@
 ---
 slug: smartd_log-monitoring
-title: How to monitor and troubleshoot S.M.A.R.T.attributes
-description: Monitoring and troubleshooting S.M.A.R.T.attributes.
+title: How to monitor and troubleshoot S.M.A.R.T. attributes
+description: Monitoring and troubleshooting S.M.A.R.T. attributes.
 authors: shyam
-tags: [how-to, monitor, troubleshoot, smartd_log, ]
-keywords: [how-to, monitor, troubleshoot, smartd_log, ]
+tags: [how-to, monitor, troubleshoot, smartd_log, S.M.A.R.T, storage-device, ATA, SCSI]
+keywords: [how-to, monitor, troubleshoot, smartd_log, S.M.A.R.T, storage-device, ATA, SCSI]
 image: https://uxd.zendesk.com/hc/article_attachments/360024098631/mceclip1.png
 
 ---
