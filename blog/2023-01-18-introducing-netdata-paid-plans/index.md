@@ -1,7 +1,7 @@
 ---
-slug: introducing-netdata-paid-plans
-title: Introducing Netdata Paid Plans
-description: All Netdata functionality is and will be available for free in the Free Community Plan. Paid tiers include features targeted for managers, and administrators.
+slug: introducing-netdata-paid-subscriptions
+title: Introducing Netdata Paid Subscriptions
+description: All Netdata functionality is and will be available for free in the Free Community Plan. Paid tiers include features targeted for businesses of different sizes and with different monitoring requirements.
 authors: team
 tags: [pricing, free-plan, paid-subscriptions]
 keywords: [pricing, free plan, paid subscriptions, monitoring, troubleshoot]
@@ -9,7 +9,7 @@ image: https://user-images.githubusercontent.com/24860547/212873204-5082b40d-7be
 
 ---
 
-Read more about Netdata introducing paid subscriptions. All Netdata functionality is and will be available for free in the Free Community Plan. Paid tiers include features targeted for managers, and administrators.
+Read more about Netdata introducing paid subscriptions. All Netdata functionality is and will be available for free in the Free Community Plan. Paid tiers include features targeted for businesses of different sizes and with different monitoring requirements.
 
 <!--truncate-->
 Hello Netdata community,
@@ -30,7 +30,7 @@ We also want to inform you that we are reviewing our Role-Based Access model to 
 
 The legacy Member role will be deprecated, and new users will have to be Administrators on the free COMMUNITY plan. 
 
-![image](./img/image.png)
+![image](./img/netdata-user-administration.png)
 
 We encourage you to visit our [pricing page](https://netdata.cloud/pricing) to learn more about the new plans and their features. If you have any questions or concerns, please reach out to our support team through [Email](mailto:info@netdata.cloud), [Github](https://github.com/netdata/netdata/discussions), the [Forums](https://community.netdata.cloud), and [Discord](https://discord.gg/2eduZdSeC7). We appreciate your continued support and are excited to offer these new paid subscriptions to our users.
 
