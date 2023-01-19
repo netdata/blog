@@ -3,8 +3,8 @@ slug: memcached-monitoring
 title: How to monitor and troubleshoot Memcached
 description: Monitoring and troubleshooting Memcached.
 authors: shyam
-tags: [how-to, monitor, troubleshoot, memcached,  caching, distributed memory, data store]
-keywords: [how-to, monitor, troubleshoot, memcached,  caching, distributed memory, data store]
+tags: [how-to, monitor, troubleshoot, memcached, caching, distributed-memory, data-store]
+keywords: [how-to, monitor, troubleshoot, memcached, caching, distributed-memory, data-store]
 image: https://user-images.githubusercontent.com/24860547/213391620-fdab50bf-4766-4c6d-abe5-76c569c19ff4.png
 
 ---
