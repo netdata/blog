@@ -9,13 +9,14 @@ authors: shyam
 ---
 DNS (Domain Name System) servers translate standard language web addresses to their actual IP addresses for network access.
 
+[**DNS Lookup Journey**](https://xiaolishen.medium.com/the-dns-lookup-journey-240e9a5d345c)
 ![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/DNS-1.png)
+
 
 <!--truncate-->
 
 DNS response time is the time it takes a Domain Name Server to receive the request for a domain name’s IP address, process it, and return the IP address to the browser or application requesting it. When it comes to DNS response times, the lower the better, and generally values less than 100ms are considered to be in the acceptable range (depending on the application).
 
-DNS Lookup Journey. (<a href="https://xiaolishen.medium.com/the-dns-lookup-journey-240e9a5d345c">Source</a>)
 To understand how DNS response times affect the performance of your application it is important to monitor it continually along with other metrics of application and infrastructure performance. This will help you to correlate where the problem is triggered by DNS latency and where it isn't. 
 
 DNS response times can be optimized by (among other things) choosing the right DNS provider. There are many factors which influence the response times of a particular DNS provider, such as the geographic location of the server or how much traffic it receives. The default DNS server in use may not always be the best choice. There are many DNS options available today offering free, fast and secure DNS services. 
