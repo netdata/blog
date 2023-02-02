@@ -22,27 +22,27 @@ One of the most important considerations of our native anomaly detection capabil
 
 > 📑 Read more about [our approach to machine learning](https://blog.netdata.cloud/our-approach-to-machine-learning/) or [how our anomaly detection actually works](https://blog.netdata.cloud/how-netdatas-machine-learning-works/).
 
-It is in this context that most of our design and implementation decisions have been made. Unlike many tools that can rely on having your raw data in thier cloud we can't just take the kitchen sink approach (nor should we - it tends not to work that well in practice) and throw all the data at some sort of wrapper on something like [Facebook Prophet](https://facebook.github.io/prophet/).
+It is in this context that most of our design and implementation decisions have been made. Unlike many tools that can rely on having your raw data in their cloud we can't just take the kitchen sink approach (nor should we - it tends not to work that well in practice) and throw all the data at some sort of wrapper on something like [Facebook Prophet](https://facebook.github.io/prophet/).
 
-Instead we have to be a bit more grown up about the design choices we face and the trade off's involved. Typically, this comes down to needing to think a bit more deeply about the ingredients we use and how we put them together, more and more this is becoming the most important aspect of actually using machine learning within your product. 
+Instead we have to be a bit more grown up about the design choices we face and the trade offs involved. Typically, this comes down to needing to think a bit more deeply about the ingredients we use and how we put them together, more and more this is becoming the most important aspect of actually using machine learning within your product. 
 
-Our journy so far in building native anomaly detection into the core of Netdata touches on aspects of this.
+Our journey so far in building native anomaly detection into the core of Netdata touches on aspects of this.
 
 ### Training window
 
-One very important consideration has been on the amount of data to train on at any one time. We need to be careful not to try train on too large a chunk of data at any one time since reading, pre-processing and then training on that data could have too noticeable impact on CPU overhead. 
+One very important consideration has been on the amount of data to train on at any one time. We need to be careful not to try and train on too large a chunk of data at any one time, since reading, pre-processing and then training on that data could have too noticeable an impact on CPU overhead. 
 
 On the other hand we also need to be careful not to train on too little data since this could lead to the model not being able to learn the "normal" patterns of the metric well enough to be able to detect anomalies.
 
-So we started as simple as possible by continually training and retraining on the most recent 4 hours of metrics data by default. Users can extend this easily if they want the model to learn over a longer window but in terms of having to pick some default we thought this gave the best balance between a reasonable window of time to learn what might be considered "normal" patterns vs the overhead cost of the training step itself being as close to negligible as possible.
+So we started as simply as possible by continually training and retraining on the most recent 4 hours of metrics data by default. Users can extend this easily if they want the model to learn over a longer window but in terms of having to pick some default we thought this gave the best balance between a reasonable window of time to learn what might be considered "normal" patterns vs the overhead cost of the training step itself being as close to negligible as possible.
 
 ### False positives
 
 While we and many in the community have found the existing anomaly detection capabilities of Netdata very useful, especially in spotting sudden changes when things go wrong, there can of course still be "[false positives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_positive_error)" for behaviors or patterns that might just be somewhat rare and so not happen enough in any random 4 hour window to be considered "normal". 
 
-For example, this could be something like common but irregular workloads (e.g. user driven) or cron jobs that maybe happen a few times a day or at irregular spaced out intervals. They still would be considered normal behavior on the system but for a model training only on the last 4 hours where this pattern has never occurred they of course look anomalous.
+For example, this could be something like common but irregular workloads (e.g. user driven) or cron jobs that maybe happen a few times a day or at irregular spaced out intervals. They still would be considered normal behavior on the system but for a model trained only on the last 4 hours where this pattern has never occurred they, of course, look anomalous.
 
-So it has been clear from the start that needed to in some way _extend_ the amount of training data used while still being very careful not to impact training overhead on the system.
+So it has been clear from the start that we needed to in some way _extend_ the amount of training data used while still being very careful not to impact training overhead on the system.
 
 > 📑 If your are curious about some of our thinking and approaches here feel free to check out [this GitHub discussion](https://github.com/netdata/netdata/discussions/12763) where we explored various ideas and approaches.
 
@@ -50,7 +50,7 @@ To get the best of both worlds we decided that instead of just throwing away pre
 
 Each trained model is essentially a compressed representation of the training data it was trained on so using more "reference" models during scoring should allow us to capture the wider range of "normal" patterns on a system really without any additional training overhead, we just need a little more space to store them (almost negligible given the kmeans models we use are just a few numbers really) and perhaps a very small performance impact during scoring (which, as we will cover below, we have also tried to be very careful about doing only when needed).
 
-## Whats changed?
+## What has changed?
 
 To this end we have introduced a new ML parameter called `number of models per dimension` (you can read more detail about it [here](https://learn.netdata.cloud/docs/nightly/setup/configure-machine-learning-ml-powered-anomaly-detection#descriptions-minmax)) which will control the number of trained models used during scoring.
 
@@ -71,7 +71,7 @@ for model in models:
         anomaly_bit = 1
 ```
 
-The aim here is to only use those additional models when we need to "double check" or confirm if some potentailly anomalous looking recent data should indeed be flagged as such based on a wider and more representative set of models. 
+The aim here is to only use those additional models when we need to "double check" or confirm if some potentially anomalous looking recent data should indeed be flagged as such based on a wider and more representative set of models. 
 
 So essentially once one model suggests a feature vector looks anomalous we check all saved models and only when they all agree that something is anomalous does the anomaly bit get to be finally set to 1 to signal that netdata considered the most recent feature vector unlike anything seen in all the models (spanning a wider training window) checked.
 
@@ -79,22 +79,22 @@ So essentially once one model suggests a feature vector looks anomalous we check
 
 Below is a typical impact of this change and the proposed new defaults mentioned below. In this set up both nodes are running the same workloads. 
 
-We can see that the overall node anomaly rate (blue line) for the `ml-demo-ml-enabled-newconf` node is consistency below that of the current default represented by `ml-demo-ml-enabled` (red line). 
+We can see that the overall node anomaly rate (blue line) for the `ml-demo-ml-enabled-newconf` node is consistent below that of the current default represented by `ml-demo-ml-enabled` (red line). 
 
 In the highlighted period to the right of the chart we triggered a true anomaly on both nodes. You can see both nodes "react" with an increased node anomaly rate as we would hope.
 
 ![anomaly-rate-impact](./img/anomaly-rate-impact.png)
 
-Some main takeways here are that:
+Some main takeaways here are that:
 
 1. Using more models during scoring will tend to suppress overall node anomaly rates a little.
 1. When anomalies are detected the overall node anomaly rate will still tend to be a little lower than before.
-1. When something is considered anomalous by Netdata we might have more confidence that it really is more likely to be some strange unseen pattern regarldess of if its actually something you need to react to or not.
+1. When something is considered anomalous by Netdata we might have more confidence that it really is more likely to be some strange unseen pattern regardless of whether it's actually something you need to react to or not.
 1. Overall this should help reduce "false positives".
 
 ## Next steps
 
-To begin with the default for `number of models per dimension` is `1` such that the new functionality collapse to the previous default of just using the single most recently trained model.
+To begin with, the default for `number of models per dimension` is `1` such that the new functionality collapses to the previous default of just using the single most recently trained model.
 
 ### Dogfooding
 
