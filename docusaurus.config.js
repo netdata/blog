@@ -109,7 +109,7 @@ const config = {
     [
       '@docusaurus/plugin-google-analytics',
       {
-        trackingID: 'UA-64295674-3'
+        trackingID: ['UA-64295674-3','G-J69Z2JCTFB']
       },
     ],
     [
