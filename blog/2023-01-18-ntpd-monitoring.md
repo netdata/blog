@@ -11,6 +11,8 @@ image: https://user-images.githubusercontent.com/24860547/213157308-f9ac7230-5a3
 
 Find out how to effectively and easily monitor and troubleshoot NTPdaemon using Netdata
 
+![logo](https://user-images.githubusercontent.com/24860547/213157308-f9ac7230-5a3a-434f-b4e0-66b9a0e4a2fd.png)
+
 <!--truncate-->
 ## What is NTPd
 

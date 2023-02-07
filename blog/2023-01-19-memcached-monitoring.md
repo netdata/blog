@@ -11,6 +11,8 @@ image: https://user-images.githubusercontent.com/24860547/213391620-fdab50bf-476
 
 Find out how to effectively and easily monitor and troubleshoot Memcached using Netdata
 
+![logo](https://user-images.githubusercontent.com/24860547/213391620-fdab50bf-4766-4c6d-abe5-76c569c19ff4.png)
+
 <!--truncate-->
 ## What is Memcached
 
