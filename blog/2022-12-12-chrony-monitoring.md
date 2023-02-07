@@ -6,12 +6,14 @@ authors: shyam
 tags: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync server]
 keywords: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync server]
 image: https://user-images.githubusercontent.com/24860547/207060075-2fb7e116-5589-43f8-9649-b34a18be1729.jpg
-
 ---
 
 Find out how to effectively and easily monitor and troubleshoot Chrony using Netdata
 
+![logo](https://user-images.githubusercontent.com/24860547/207060075-2fb7e116-5589-43f8-9649-b34a18be1729.jpg)
+
 <!--truncate-->
+
 ## What is Chrony
 
 [Chrony](https://chrony.tuxfamily.org/) is an open source, low-level utility for managing the system clock. It can be used to maintain the accuracy of the computer's clock across a network, or even in the absence of an internet connection. Chrony is designed to be more accurate and resilient than the traditional utilities such as ntpd, and can adjust the system clock even in the presence of large time offsets and/or network outages. Chrony also offers a number of features such as automatic time synchronization, access control lists, and logging.+

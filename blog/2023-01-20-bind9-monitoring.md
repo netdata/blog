@@ -11,6 +11,8 @@ image: https://user-images.githubusercontent.com/24860547/213658626-e7e6d84a-11d
 
 Find out how to effectively and easily monitor and troubleshoot BIND 9 using Netdata
 
+![logo](https://user-images.githubusercontent.com/24860547/213658626-e7e6d84a-11d9-43ff-aa95-17d2486a4cc3.png)
+
 <!--truncate-->
 ## What is BIND 9?
 

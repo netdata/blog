@@ -10,7 +10,10 @@ image: https://user-images.githubusercontent.com/24860547/207034349-ee1bbed6-4c8
 
 Find out how to effectively and easily monitor and troubleshoot CoreDNS using Netdata
 
+![logo](https://user-images.githubusercontent.com/24860547/207034349-ee1bbed6-4c89-43ab-bd06-5a3daa0c2c6c.png)
+
 <!--truncate-->
+
 ## What is CoreDNS
 
 [CoreDNS](https://coredns.io/) is an open source DNS server written in Go that is designed to be fast, secure, and modular. It supports all of the core features of a DNS server, including recursive lookups, forwarding, and caching. CoreDNS also offers features such as request rewriting and load balancing, as well as a plugin system to provide advanced features for custom deployments. CoreDNS provides high performance and scalability with support for low-latency and low-memory usage. It is secure by default, with support for DNSS.

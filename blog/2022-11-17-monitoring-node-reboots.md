@@ -7,7 +7,10 @@ tags: [how-to,infrastructure-monitoring,reboots,nodes,shutdown,crash]
 keywords: [how-to,infrastructure-monitoring,reboots,nodes,shutdown,crash]
 authors: satya
 ---
+
 Monitoring the health and status of nodes and servers is a critical part of effective infrastructure monitoring.
+
+![logo](https://user-images.githubusercontent.com/96257330/202475049-22838a0b-73b1-485b-8416-5fd49d6ccb53.png)
 
 <!--truncate-->
 

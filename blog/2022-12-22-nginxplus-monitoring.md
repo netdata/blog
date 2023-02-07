@@ -11,6 +11,8 @@ image: https://user-images.githubusercontent.com/96257330/206474388-31f12c9a-4be
 
 As a continuation of our series for monitoring web servers with [NGINX](https://blog.netdata.cloud/nginx-monitoring/) and [APACHE](https://blog.netdata.cloud/apache-monitoring/), let us find out how to effectively and easily monitor and troubleshoot NGINXPlus using Netdata!
 
+![logo](https://user-images.githubusercontent.com/96257330/206474388-31f12c9a-4be5-4d0a-9fc2-a8d80813000a.png)
+
 <!--truncate-->
 ## What is NGINXPlus
 
