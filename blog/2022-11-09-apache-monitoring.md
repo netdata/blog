@@ -6,11 +6,13 @@ authors: shyam
 tags: [how-to, monitor, troubleshoot, Apache, web server]
 keywords: [how-to, monitor, troubleshoot, Apache, web server]
 image: https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png
-
 ---
 Best practices for Apache server monitoring and troubleshooting.
 
+![logo](https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png)
+
 <!--truncate-->
+
 ## What is Apache?
 
 The Apache HTTP Server ([Apache HTTPd](https://httpd.apache.org/)) is one of the most popular open source web servers available. HTTPd was also the first project developed by the Apache Software foundation which now supports hundreds of well known projects including [Kafka](https://kafka.apache.org/), [Cassandra](https://cassandra.apache.org/_/index.html) and [Hadoop](https://hadoop.apache.org/). 

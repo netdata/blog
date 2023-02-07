@@ -7,7 +7,10 @@ tags: [how-to,infrastructure-monitoring,nginx,web-servers]
 keywords: [how-to,infrastructure-monitoring,nginx,web-servers]
 authors: satya
 ---
-Web servers are among the most important components in modern IT infrastructures. They host the websites, web services, and web applications that we use on a daily basis. Social networking, media streaming, software as a service (SaaS), and other activities wouldn’t be possible without the use of web servers. And with the advent of cloud computing and the movement of more services online, web servers and their monitoring are only becoming more important. Given the extensive usage of Web servers, Sysadmins and SREs should monitor web servers as a key aspect for performance. 
+
+Web servers are among the most important components in modern IT infrastructures. They host the websites, web services, and web applications that we use on a daily basis. Social networking, media streaming, software as a service (SaaS), and other activities wouldn’t be possible without the use of web servers. And with the advent of cloud computing and the movement of more services online, web servers and their monitoring are only becoming more important. Given the extensive usage of Web servers, Sysadmins and SREs should monitor web servers as a key aspect for performance.
+
+![logo](https://user-images.githubusercontent.com/96257330/200813970-c1cb5be7-21ec-4365-8cfd-bef9545197f1.png)
 
 <!--truncate-->
 
