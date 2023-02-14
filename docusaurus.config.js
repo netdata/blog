@@ -43,6 +43,10 @@ const config = {
       'crossorigin': 'anonymous',
       async: true,
     },
+    {
+      'src': 'https://cse.google.com/cse.js?cx=9554dfbb026dd4b3c',
+      async: true,
+    }
   ],
 
   presets: [
