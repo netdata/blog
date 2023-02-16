@@ -69,6 +69,6 @@ You can either go to the new "Functions" tab to execute a function on a node of 
 
 We are eager and excited to find out how the Netdata community will make use of this powerful new feature. Try it out for yourself and see how it can help make your monitoring and troubleshooting more effective.
 
-If you have ideas or requests for other functions that you'd like to see on Netdata, you can open a [Feature request](https://github.com/netdata/netdata-cloud/issues/new?assignees=&labels=feature+request%2Cneeds+triage&template=FEAT_REQUEST.yml&title=%5BFeat%5D%3A+) on our Netdata Cloud repository or engage with our community on the [Netdata Discord server](https://discord.com/invite/mPZ6WZKKG2).
+If you have ideas or requests for other functions that you'd like to see on Netdata, you can participate in the relevant [GitHub Discussion](https://github.com/netdata/netdata/discussions/14412), open a [Feature request](https://github.com/netdata/netdata-cloud/issues/new?assignees=&labels=feature+request%2Cneeds+triage&template=FEAT_REQUEST.yml&title=%5BFeat%5D%3A+) on our Netdata Cloud repository or engage with our community on the [Netdata Discord server](https://discord.com/invite/mPZ6WZKKG2).
 
 Happy Troubleshooting!
