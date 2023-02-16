@@ -33,7 +33,7 @@ This function provides a tabular view of all the processes running on a system, 
 
 By having access to a comprehensive overview of all the processes running on a system, it is much easier to identify any issues that may arise, such as a process consuming too much CPU or memory. 
 
-The "Processes" function allows users to monitor multiple nodes with just a single click. This feature saves a considerable amount of time and effort as it eliminates the need for users to SSH into each node and run commands to retrieve this data. Instead, all the data can be accessed and viewed directly from the Netdata dashboard.
+The "Processes" function allows users to switch between monitoring processes across multiple nodes with just a single click. This feature saves a considerable amount of time and effort as it eliminates the need for users to SSH into each node and run commands to retrieve this data. Instead, all the data can be accessed and viewed directly from the Netdata dashboard.
 
 ![image](https://user-images.githubusercontent.com/24860547/219148788-393d42d3-ef34-43bd-bb8b-e612246923c5.png)
 
