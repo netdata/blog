@@ -17,7 +17,7 @@ Netdata is committed to making it simpler and easier for everyone to monitor and
 
 Netdata has always been synonymous with real time monitoring and automated dashboards, with the recent introduction of "functions", there's now a new way for users to troubleshoot their infrastructure. **A function, in the context of Netdata, is a routine or script that can be invoked to run on a node and retrieve useful information, which is then displayed in the Netdata cloud dashboard.**
 
-Think of it as a toolkit that allows you to quickly and easily retrieve specific information about your infrastructure, without having to SSH into each node individually and run commands to retrieve that information. With functions, you can gather more information and perform actions on a given node without having to access it directly. This can save SysAdmins and DevOps engineers time and effort, especially when managing large clusters of nodes.
+Think of it as a toolkit that allows you to quickly and easily retrieve specific information about your infrastructure, without having to SSH into each node individually and run commands to retrieve that information. With functions, you can gather more information and perform actions on a given node without context switching and without having to access it directly. This can save SysAdmins and DevOps engineers time and effort, especially when managing large clusters of nodes.
 
 If you'd rather see it in action than read about it, visit our [demo space](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/functions) and see it in action, live!
 
