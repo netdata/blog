@@ -39,7 +39,9 @@ The "Processes" function allows users to switch between monitoring processes acr
 
 Let's take a look at a real-world example of how using the "Processes" function can help solve a particular problem.
 
-Imagine you have a server that's been acting up recently. You're not sure why, but you suspect it might be due to a rogue process that's consuming too many resources. Previously you had to observe multiple different charts to get the complete picture of what was going on, but with the "Processes" function, you can easily get a detailed breakdown of all the processes running on the node, including CPU and memory usage. From there, you can identify the culprit and take action to resolve the issue.
+Imagine you have a server that's been acting up recently. You're not sure why, but you suspect it might be due to a rogue process that's consuming too many resources. Previously you had to observe multiple different charts to get the complete picture of what was going on, and often multiple processes could be combined into a category making it harder to quickly identify the culprit. 
+
+But with the "Processes" function, you can easily get a detailed breakdown of all the processes running on the node, including CPU and memory usage. From there, you can identify the culprit and take action to resolve the issue.
 
 While the "Processes" function is already quite powerful, this is just the beginning. We are working to add more functions that will help you solve more problems, faster than ever. And we are also evaluating the potential for users to create custom functions that are specific to their unique system requirements.
 
