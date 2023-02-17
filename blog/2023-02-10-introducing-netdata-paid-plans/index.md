@@ -30,7 +30,7 @@ We also want to inform you that we are reviewing our Role-Based Access model to 
 - **Observers** - This role is for read-only access with restricted access to explicit War Rooms.
 - **Billing** - This role is for users that need to manage billing options and see invoices.
 
-The legacy Member role will be deprecated, and new users will have to be Administrators on the free COMMUNITY plan. 
+Existing users will be kept on the free Early Bird plan and can keep using the legacy Member role with the exact same permissions as it has currently. The legacy Member role will be deprecated on new plans. 
 
 ![image](./img/netdata-user-administration.png)
 
