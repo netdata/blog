@@ -43,6 +43,11 @@ const config = {
       'crossorigin': 'anonymous',
       async: true,
     },
+    {
+      'src': 'https://cse.google.com/cse.js?cx=21ffa45504a5f4a8c', 
+      async: true, 
+      defer: true
+    },
   ],
 
   presets: [
@@ -181,6 +186,11 @@ const config = {
                 to: 'https://www.netdata.cloud/',
                 label: 'Website',
                 position: 'left',
+            },
+            {
+              type: "html",
+              position: "left",
+              value: '<script async src="https://cse.google.com/cse.js?cx=21ffa45504a5f4a8c"></script><div class="gcse-search"></div>',
             },
             {
                 to: 'https://app.netdata.cloud/',
