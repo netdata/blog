@@ -5,17 +5,20 @@ description: Using the Netdata Pandas collector to monitor and wrangle any SQL m
 authors: andy
 tags: [sql, monitoring, python, pandas, netdata]
 keywords: [sql, monitoring, python, pandas, netdata]
+image: ./img/img.png
 ---
 
-We recently got this great feedback from a dear user:
+![img](./img/img.png)
+
+We recently got this great feedback from a dear user in our [Discord](https://discord.com/channels/847502280503590932/1075370683393118278/1075723915265069106):
 
 > I would really like to use Netdata to monitor custom internal metrics that come from SQL, not a fan of having 10 diff systems doing essentially the same thing as is, Netdata is pretty much all there in that regard, just needs a few extra features.
 
 This is great and exactly what we want, a clear problem or improvement we could make to help make that users life a little easier.
 
-This is also where the beauty of open source comes in and being able to build on the shoulders of giants - adding such a feature turned out to be pretty easy by extending our [Pandas collector](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/pandas) to support SQL queries. [Here](https://github.com/netdata/netdata/pull/14563) is the PR that was merged a few days later.
+This is also where the beauty of open source comes in and being able to build on the shoulders of giants - adding such a feature turned out to be pretty easy by just extending our existing [Pandas collector](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/pandas) to support SQL queries. [Here](https://github.com/netdata/netdata/pull/14563) is the PR that was merged a few days later.
 
-This blog post will cover an example of using this to monitor some custom SQL metrics from a [Wordpress](https://wordpress.com/) database.
+This blog post will cover an example of using the Pandas collector to monitor some custom SQL metrics from a [Wordpress](https://wordpress.com/) [MySQL](https://www.mysql.com/) database.
 
 <!--truncate-->
 
@@ -101,15 +104,15 @@ CONTAINER ID   IMAGE                  COMMAND                  CREATED          
 
 Note: You will need to do one last manual step to actually complete the Wrordpress setup. You can do this by visiting port 80 on the host machine and following the prompts to complete the setup. One way to do this is by using `gcloud compute config-ssh` and VSCode remote SSH to connect to the VM and then visiting `http://localhost` in your browser.
 
-![vscode-remote](img/vscode-remote.png)
+![vscode-remote](./img/vscode-remote.png)
 
 Once you navigate to `http://localhost:80` you should see the Wordpress setup page, complete the steps there to finish installation.
 
-![wordpress-setup](img/wordpress-setup.png)
+![wordpress-setup](./img/wordpress-setup.png)
 
 Once successful you should see a screen like this:
 
-![wordpress-setup-success](img/wordpress-setup-success.png)
+![wordpress-setup-success](./img/wordpress-setup-success.png)
 
 This means the database should now be running with some initial Wordpress sample posts and comments.
 
@@ -201,7 +204,7 @@ wordpress:
                  );
 ```
 
-![pandas-conf](img/pandas-conf.png)
+![pandas-conf](./img/pandas-conf.png)
 
 To confirm the Pandas collector is working we can run it in debug mode:
 
@@ -261,7 +264,7 @@ sudo systemctl restart netdata
 
 Now you can go back to wordpress and create some dummy posts and comments and comment threads and watch as the metrics update in Netdata:
 
-![netdata-cloud-custom-charts](img/netdata-cloud-custom-charts.png)
+![netdata-cloud-custom-charts](./img/netdata-cloud-custom-charts.png)
 
 In this example we just made three counter type metrics `comments`, `comment_threads` and `comment_authors` but you can make any type of metric you want. You can also make multiple charts for each job. For example you could make a chart for each table in your database or different types of metrics of interest (there are some examples of this in the default `pandas.conf`).
 
