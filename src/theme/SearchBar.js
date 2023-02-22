@@ -50,7 +50,7 @@ const SearchBar = () => {
       var name = event.key;
       var code = event.code;
 
-      if (event.ctrlKey && event.keyCode === 75) {
+      if ((event.ctrlKey && event.keyCode === 75) || (event.metaKey && event.keyCode === 75)) {
         event.preventDefault();
         document.getElementById('gsc-i-id1').focus()
       }
