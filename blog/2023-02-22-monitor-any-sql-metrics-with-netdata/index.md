@@ -43,7 +43,9 @@ Our steps will be to:
 
 ## Installing pre-requisites
 
-The first thing we need to do is install some pre-requisites to make `pandas.read_sql()` work for MySQL. This is because the `pandas` Python package does not include the MySQL driver by default. Under the hood `pandas.read_sql()` uses the [SQLAlchemy](https://www.sqlalchemy.org/) package to connect to the database and execute the query. So we need to make sure the relevant driver is installed for the database we want to connect to. In this example since we are querying a MySQL database we need to install the [PyMySQL](https://github.com/PyMySQL/PyMySQL/) package along with Pandas and SQLAlchemy.
+The first thing we need to do is install some pre-requisites to make `pandas.read_sql()` work for MySQL. This is because the `pandas` Python package does not include the MySQL driver by default. Under the hood `pandas.read_sql()` uses the [SQLAlchemy](https://www.sqlalchemy.org/) package to connect to the database and execute the query. So we need to make sure the relevant driver is installed for the database we want to connect to. 
+
+In this example since we are querying a MySQL database we need to install the [PyMySQL](https://github.com/PyMySQL/PyMySQL/) package along with Pandas and SQLAlchemy.
 
 ```bash
 # install required python packages
