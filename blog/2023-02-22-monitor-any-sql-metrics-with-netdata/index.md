@@ -3,8 +3,8 @@ slug: monitor-any-sql-metrics-with-netdata
 title: Monitor any SQL metrics with Netdata (and Pandas ❤️)
 description: Using the Netdata Pandas collector to monitor and wrangle any SQL metrics you want.
 authors: andy
-tags: [sql, monitoring, python, pandas, netdata]
-keywords: [sql, monitoring, python, pandas, netdata]
+tags: [sql, monitoring, python, pandas, netdata, mysql, metrics]
+keywords: [sql, monitoring, python, pandas, netdata, mysql, metrics]
 image: ./img/img.png
 ---
 
@@ -14,9 +14,11 @@ We recently got this great feedback from a dear user in our [Discord](https://di
 
 > I would really like to use Netdata to monitor custom internal metrics that come from SQL, not a fan of having 10 diff systems doing essentially the same thing as is, Netdata is pretty much all there in that regard, just needs a few extra features.
 
-This is great and exactly what we want, a clear problem or improvement we could make to help make that users life a little easier.
+This is great and exactly what we want, a clear problem or improvement we could make to help make that users monitoring life a little easier.
 
-This is also where the beauty of open source comes in and being able to build on the shoulders of giants - adding such a feature turned out to be pretty easy by just extending our existing [Pandas collector](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/pandas) to support SQL queries. [Here](https://github.com/netdata/netdata/pull/14563) is the PR that was merged a few days later.
+This is also where the beauty of open source comes in and being able to build on the shoulders of giants - adding such a feature turned out to be pretty easy by just extending our existing [Pandas collector](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/pandas) to support SQL queries leveraging its [`read_sql()`](https://pandas.pydata.org/docs/reference/api/pandas.read_sql.html) capabilities.
+
+[Here](https://github.com/netdata/netdata/pull/14563) is the PR that was merged a few days later.
 
 This blog post will cover an example of using the Pandas collector to monitor some custom SQL metrics from a [Wordpress](https://wordpress.com/) [MySQL](https://www.mysql.com/) database.
 
@@ -26,16 +28,20 @@ This blog post will cover an example of using the Pandas collector to monitor so
 
 We will use the [awesome-compose/wordpress-mysql](https://github.com/docker/awesome-compose/tree/master/wordpress-mysql) example to stand up a local Wordpress with a MySQL database. Then we will configure the Netdata Pandas collector to run some custom SQL queries against that database to measure some metrics around comment counts on posts.
 
-This is really just a toy example to illustrate some sort of custom SQL on semi-realistic data like a MySQL Wordpress database, but there is no reason you could not apply a similar approach to any SQL database that can be read using []`pandas.read_sql()`](https://pandas.pydata.org/docs/reference/api/pandas.read_sql.html), In fact we hope to follow on this post with another one showing how we use this internally for custom business metrics (install success and fail counts, telemetry error events and things like that) that live in our [BigQuery](https://cloud.google.com/bigquery) data lake.
+This is really just a toy example to illustrate some sort of custom SQL metrics on semi-realistic data like a MySQL Wordpress database, but you could easily apply a similar approach to any SQL database that can be read using [`pandas.read_sql()`](https://pandas.pydata.org/docs/reference/api/pandas.read_sql.html). 
 
-We will start with a fresh Ubuntu 18.04 VM that has Netdata installed and claimed to Netdata Cloud (and has Python and Docker installed on it). Our steps will be to:
+In fact we hope to follow on this post with another one showing how we use this internally for custom business metrics (install success and fail counts, telemetry error events and things like that) that live in our [BigQuery](https://cloud.google.com/bigquery) data lake.
+
+We will start with a fresh Ubuntu 18.04 VM (GCP `e2-medium`) that has Netdata installed, claimed to Netdata Cloud and has Python and [Docker](https://docs.docker.com/engine/install/ubuntu/) already installed.
+
+Our steps will be to:
 
 1. Install some pre-requisites to make `pandas.read_sql()` work for MySQL.
 1. Stand up the Wordpress example.
 1. Configure the Netdata Pandas collector to run some custom SQL queries against the database.
 1. View the results in Netdata Cloud.
 
-## Installing Pre-requisites
+## Installing pre-requisites
 
 The first thing we need to do is install some pre-requisites to make `pandas.read_sql()` work for MySQL. This is because the `pandas` Python package does not include the MySQL driver by default. Under the hood `pandas.read_sql()` uses the [SQLAlchemy](https://www.sqlalchemy.org/) package to connect to the database and execute the query. So we need to make sure the relevant driver is installed for the database we want to connect to. In this example since we are querying a MySQL database we need to install the [PyMySQL](https://github.com/PyMySQL/PyMySQL/) package along with Pandas and SQLAlchemy.
 
