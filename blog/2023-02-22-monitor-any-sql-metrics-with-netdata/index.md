@@ -20,15 +20,15 @@ This is also where the beauty of open source comes in and being able to build on
 
 [Here](https://github.com/netdata/netdata/pull/14563) is the PR that was merged a few days later.
 
-This blog post will cover an example of using the Pandas collector to monitor some custom SQL metrics from a [Wordpress](https://wordpress.com/) [MySQL](https://www.mysql.com/) database.
+This blog post will cover an example of using the Pandas collector to monitor some custom SQL metrics from a [WordPress](https://wordpress.com/) [MySQL](https://www.mysql.com/) database.
 
 <!--truncate-->
 
 ## The set up
 
-We will use the [awesome-compose/wordpress-mysql](https://github.com/docker/awesome-compose/tree/master/wordpress-mysql) example to stand up a local Wordpress with a MySQL database. Then we will configure the Netdata Pandas collector to run some custom SQL queries against that database to measure some metrics around comment counts on posts.
+We will use the [awesome-compose/wordpress-mysql](https://github.com/docker/awesome-compose/tree/master/wordpress-mysql) example to stand up a local WordPress with a MySQL database. Then we will configure the Netdata Pandas collector to run some custom SQL queries against that database to measure some metrics around comment counts on posts.
 
-This is really just a toy example to illustrate some sort of custom SQL metrics on semi-realistic data like a MySQL Wordpress database, but you could easily apply a similar approach to any SQL database that can be read using [`pandas.read_sql()`](https://pandas.pydata.org/docs/reference/api/pandas.read_sql.html). 
+This is really just a toy example to illustrate some sort of custom SQL metrics on semi-realistic data like a MySQL WordPress database, but you could easily apply a similar approach to any SQL database that can be read using [`pandas.read_sql()`](https://pandas.pydata.org/docs/reference/api/pandas.read_sql.html). 
 
 In fact we hope to follow on this post with another one showing how we use this internally for custom business metrics (install success and fail counts, telemetry error events and things like that) that live in our [BigQuery](https://cloud.google.com/bigquery) data lake.
 
@@ -37,7 +37,7 @@ We will start with a fresh Ubuntu 18.04 VM (GCP `e2-medium`) that has Netdata in
 Our steps will be to:
 
 1. Install some pre-requisites to make `pandas.read_sql()` work for MySQL.
-1. Stand up the Wordpress example.
+1. Stand up the WordPress example.
 1. Configure the Netdata Pandas collector to run some custom SQL queries against the database.
 1. View the results in Netdata Cloud.
 
@@ -52,9 +52,9 @@ In this example since we are querying a MySQL database we need to install the [P
 sudo pip3 install pandas 'sqlalchemy<2.0' pymysql
 ```
 
-## Stand up Wordpress
+## Stand up WordPress
 
-We will slighlty modify the [example docker compose file](https://github.com/docker/awesome-compose/blob/master/wordpress-mysql/compose.yaml) to open the MySQL port to the host machine so we can connect to it from our Netdata collector. This is mainly just for convenience to keep this post simple, you could also run the collector in a container and connect to the database using the container name.
+We will slighlty modify the [example docker compose file](https://github.com/docker/awesome-compose/blob/master/wordpress-mysql/compose.yaml) to open the MySQL port to the host machine so we can connect to it from our Netdata collector. This is mainly just for convenience to keep this post simple.
 
 ```bash
 # create folder for wordpress docker compose stuff
@@ -101,7 +101,7 @@ EOT
 sudo docker compose up -d
 ```
 
-You should now have some Wordpress containers running:
+You should now have some WordPress containers running:
 
 ```bash
 $ sudo docker ps
@@ -110,11 +110,11 @@ CONTAINER ID   IMAGE                  COMMAND                  CREATED          
 9d10b8c86924   mariadb:10.6.4-focal   "docker-entrypoint.s…"   37 seconds ago   Up 33 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   wordpress-mysql-db-1
 ```
 
-Note: You will need to do one last manual step to actually complete the Wrordpress setup. You can do this by visiting port 80 on the host machine and following the prompts to complete the setup. One way to do this is by using `gcloud compute config-ssh` and VSCode remote SSH to connect to the VM and then visiting `http://localhost` in your browser.
+**Note**: You will need to do one last manual step to actually complete the Wrordpress setup. You can do this by visiting port 80 on the host machine and following the prompts to complete the setup. One way to do this is by using [`gcloud compute config-ssh`](https://cloud.google.com/sdk/gcloud/reference/compute/config-ssh) and [VSCode remote SSH](https://code.visualstudio.com/docs/remote/ssh) to connect to the VM and then visiting `http://localhost:80` in your browser using port forwarding.
 
 ![vscode-remote](./img/vscode-remote.png)
 
-Once you navigate to `http://localhost:80` you should see the Wordpress setup page, complete the steps there to finish installation.
+Once you navigate to `http://localhost:80` you should see the WordPress setup page, complete the steps there to finish installation.
 
 ![wordpress-setup](./img/wordpress-setup.png)
 
@@ -122,11 +122,11 @@ Once successful you should see a screen like this:
 
 ![wordpress-setup-success](./img/wordpress-setup-success.png)
 
-This means the database should now be running with some initial Wordpress sample posts and comments.
+This means the database should now be running with some initial WordPress sample posts and comments.
 
 ## Configure the Netdata Pandas collector
 
-Now we need to configure the Netdata Pandas collector to run some custom SQL queries against the database.
+We need to enable and then configure the Netdata Pandas collector to run some custom SQL queries against the database.
 
 ```bash
 # change directory to the netdata config directory
@@ -137,9 +137,13 @@ sudo ./edit-config python.d.conf
 # set (uncomment) `# pandas: yes` to `pandas: yes` to enable the collector
 ```
 
-Now we need to configure the collector to run our custom SQL queries. Usually there is a bit of iteration involved here to define the `df_steps` parameter. This is the series of Pandas commands that you want the collector to run. So for example you might just want one step that is a `pandas.read_sql()` command to get the metrics you want. If however you need or want to do further data wrangling with Pandas you can add additional steps to the `df_steps` parameter. You can read more about this in the [Pandas collector documentation](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/pandas) or [this blog post](https://blog.netdata.cloud/pandas-python/) that goes into much more detail.
+Now we need to configure the collector to run our custom SQL queries. Usually there is a bit of iteration involved here to define the `df_steps` parameter. This is the series of Pandas commands that you want the collector to run.
 
-To this end it is usually useful to make a little Python helper script to iterate on your logic.
+So, for example, you might just want one step that is a `pandas.read_sql()` command to get the metrics you want (which is what we will do in this example).
+
+If, however, you need or want to do further data wrangling with Pandas you can add additional steps to the `df_steps` parameter. You can read more about this in the [Pandas collector documentation](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/pandas) or [this blog post](https://blog.netdata.cloud/pandas-python/) that goes into much more detail and shows some more complex data wrangling examples.
+
+It is usually helpful to make a little Python development script to iterate on your logic.
 
 ```bash
 # navigate to folder we created above
@@ -151,7 +155,7 @@ sudo cat <<EOT > /wordpress-mysql/scratchpad.py
 from sqlalchemy import create_engine
 import pandas as pd
 
-# read data
+# read data and define a series of Pandas commands to run
 df = pd.read_sql("""
                  SELECT
                    -- define three metrics from the wp_comments table
@@ -163,6 +167,7 @@ df = pd.read_sql("""
                  """,
                  con=create_engine('mysql+pymysql://wordpress:wordpress@localhost:3306/wordpress')
                 )
+# end result should be a Pandas dataframe with one row and a column for each metric you want to send to Netdata
 print(df)
 EOT
 ```
@@ -175,7 +180,9 @@ $ python3 /wordpress-mysql/scratchpad.py
 0         1                1                1
 ```
 
-This just shows the one example comment on the example post the Wordpress comes with. Once we are happy with our logic we can add it to the Netdata collector config.
+This just shows the one example comment on the example post that WordPress comes with.
+
+Once we are happy with our logic we can add it to the Netdata Pandas collector config in `/etc/netdata/python.d/pandas.conf`.
 
 ```bash
 # navigate to netdata config directory
@@ -185,7 +192,7 @@ cd /etc/netdata
 sudo ./edit-config python.d/pandas.conf
 ```
 
-We will use a config like this:
+We will use a config like this in the jobs section of the `pandas.conf` file:
 
 ```yaml
 wordpress:
@@ -193,7 +200,7 @@ wordpress:
     update_every: 30
     chart_configs:
       - name: "wordpress"
-        title: "Wordpress Comments"
+        title: "WordPress Comments"
         family: "wordpress.comments"
         context: "wordpress"
         type: "line"
@@ -212,9 +219,11 @@ wordpress:
                  );
 ```
 
+Here is a screenshot of how this might look.
+
 ![pandas-conf](./img/pandas-conf.png)
 
-To confirm the Pandas collector is working we can run it in debug mode:
+To confirm the Pandas collector is working we can run it in [debug mode](https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin#how-to-debug-a-python-module):
 
 ```bash
 # become the netdata user
@@ -224,7 +233,7 @@ sudo su -s /bin/bash netdata
 /usr/libexec/netdata/plugins.d/python.d.plugin pandas debug trace nolock
 ```
 
-Successful output should look like this:
+Successful output should look something like this:
 
 ```bash
 $ /usr/libexec/netdata/plugins.d/python.d.plugin pandas debug trace nolock
@@ -247,7 +256,7 @@ CLABEL_COMMIT
 DIMENSION run_time 'run time' absolute 1 1
 
 2023-02-22 11:26:42: python.d DEBUG: pandas[wordpress] : started, update frequency: 5
-CHART pandas_wordpress.wordpress 'wordpress' 'Wordpress Comments' 'comments' 'wordpress.comments' 'wordpress' line 60000 5 '' 'python.d.plugin' 'pandas'
+CHART pandas_wordpress.wordpress 'wordpress' 'WordPress Comments' 'comments' 'wordpress.comments' 'wordpress' line 60000 5 '' 'python.d.plugin' 'pandas'
 CLABEL '_collect_job' 'wordpress' '0'
 CLABEL_COMMIT
 DIMENSION 'comments' 'comments' absolute 1 1 ' '
@@ -261,16 +270,16 @@ SET 'comment_threads' = 1
 END
 ```
 
-Finally we can restart the Netdata service and see the new chart in the dashboard.
+Finally we can [restart](https://learn.netdata.cloud/docs/configure/start-stop-restart) Netdata and see the new chart in the dashboard.
 
 ```bash
 # restart netdata
 sudo systemctl restart netdata
 ```
 
-## Visualizing Wordpress metrics in Netdata
+## Visualizing WordPress metrics in Netdata
 
-Now you can go back to wordpress and create some dummy posts and comments and comment threads and watch as the metrics update in Netdata:
+Now you can go back to WordPress and create some dummy posts, comments and comment threads and watch as the metrics update in Netdata:
 
 ![netdata-cloud-custom-charts](./img/netdata-cloud-custom-charts.png)
 
