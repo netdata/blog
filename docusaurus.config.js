@@ -155,7 +155,8 @@ const config = {
         title: '',
         logo: {
           alt: 'Netdata logo',
-          src: 'img/logo.svg',
+          src: 'img/logo600x600.png',
+          height: 40
         },
         items: [
             {
