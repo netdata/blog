@@ -32,7 +32,7 @@ table.gsc-search-box td {
 table.gsc-search-box button.gsc-search-button {
   position: relative;
   top: -2px;
-  border: 1px solid #eceeef;
+  border: 1px solid #ffffff75;
   padding: 0 8px;
   border-radius: 0 4px 4px 0;
   height: 35px;
@@ -107,9 +107,12 @@ table.gsc-search-box .gsst_a {
   display: flex !important;
   align-items: center;
 }
+.gsc-completion-container {
+  border-radius: 2px;
+}
 .gsc-completion-container,
 .gsc-completion-container .gssb_a {
-  border-color: #eceeef;
+  border-color: #eceeef !important;
 }
 
 .gsc-completion-container .gssb_a {
