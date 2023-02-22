@@ -31,7 +31,7 @@ table.gsc-search-box td {
 }
 table.gsc-search-box button.gsc-search-button {
   position: relative;
-  top: 0px;
+  top: -2px;
   border: 1px solid #ffffff75;
   padding: 0 8px;
   border-radius: 0 4px 4px 0;
@@ -60,7 +60,7 @@ input.gsc-input {
 table.gsc-search-box .gsst_a {
   position: absolute;
   right: 3px;
-  top: -25px;
+  top: -15px;
 }
 .gsc-search-button {
   padding: 0;
