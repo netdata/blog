@@ -264,3 +264,9 @@ Now you can go back to wordpress and create some dummy posts and comments and co
 ![netdata-cloud-custom-charts](img/netdata-cloud-custom-charts.png)
 
 In this example we just made three counter type metrics `comments`, `comment_threads` and `comment_authors` but you can make any type of metric you want. You can also make multiple charts for each job. For example you could make a chart for each table in your database or different types of metrics of interest (there are some examples of this in the default `pandas.conf`).
+
+## Feedback!
+
+If you have some custom metrics in a SQL database that you want to monitor in Netdata then please feel free to try this out and let us know how it goes. We would love to hear your feedback and see what you come up with.
+
+If you have ideas or requests for other features that you'd like to see on Netdata, you can create a [GitHub Discussion](https://github.com/netdata/netdata/discussions), open a [Feature request](https://github.com/netdata/netdata-cloud/issues/new?assignees=&labels=feature+request%2Cneeds+triage&template=FEAT_REQUEST.yml&title=%5BFeat%5D%3A+) on our Netdata Cloud repository or engage with the community on the [Netdata Discord](https://discord.com/invite/mPZ6WZKKG2), [community forums](https://community.netdata.cloud/) or just drop a comment on in the [giscus](https://giscus.app/) below this post!
