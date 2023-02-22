@@ -37,33 +37,25 @@ const SearchBar = () => {
       parsetags: "explicit",
       callback: renderSearchForms,
     };
+
+    window.onload = function () {
+      document.getElementById('gsc-i-id1').placeholder = 'SEARCH ⌘ + K';
+    };
   }, []);
 
-  // useEffect(() => {
-  //   const input = document.getElementById("search");
-  //   const submit = (e) => {
-  //     if (e.keyCode === 13) {
-  //       const element = window.google.search.cse.element.getElement("gsearch");
+  useEffect(() => {
 
-  //       element.execute(value);
-  //     }
-  //   };
-  //   input.addEventListener("keyup", submit);
+    // Add event listener on keydown
+    document.addEventListener('keydown', (event) => {
+      var name = event.key;
+      var code = event.code;
 
-  //   return () => input.removeEventListener("keyup", submit);
-  // }, [value]);
-
-  // const handleChange = (e) => {
-  //   setValue(e.target.value);
-  // };
-
-  // const handleClick = () => {
-  //   if (value.lenght > 0) {
-  //     const element = window.google.search.cse.element.getElement("gsearch");
-
-  //     element.execute(value);
-  //   }
-  // };
+      if (event.ctrlKey && event.keyCode === 75) {
+        event.preventDefault();
+        document.getElementById('gsc-i-id1').focus()
+      }
+    });
+  });
 
   return (
     <div id="search-container">
