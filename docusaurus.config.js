@@ -43,6 +43,7 @@ const config = {
       'crossorigin': 'anonymous',
       async: true,
     },
+
   ],
 
   presets: [
@@ -112,13 +113,13 @@ const config = {
         trackingID: 'UA-64295674-3'
       },
     ],
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: false,
-        indexBlog: true,
-      },
-    ],
+    // [
+    //   require.resolve("@cmfcmf/docusaurus-search-local"),
+    //   {
+    //     indexDocs: false,
+    //     indexBlog: true,
+    //   },
+    // ],
     [
       "posthog-docusaurus",
       {
@@ -154,7 +155,8 @@ const config = {
         title: '',
         logo: {
           alt: 'Netdata logo',
-          src: 'img/logo.svg',
+          src: 'img/logo600x600.png',
+          height: 40
         },
         items: [
             {
@@ -182,6 +184,7 @@ const config = {
                 label: 'Website',
                 position: 'left',
             },
+
             {
                 to: 'https://app.netdata.cloud/',
                 label: 'Sign In',
