@@ -11,7 +11,8 @@ export default function NotFound() {
     query = query.toString().replace(",", " ")
     var target = query.replaceAll("\/", " ").replace(".", " ")
     var base = url.split(query)[0]
-    window.location.replace('https://blog.netdata.cloud/' + 'search?q=' + target);
+    //window.location.replace('https://blog.netdata.cloud/' + 'search?q=' + target);
+    window.location.replace('https://blog.netdata.cloud/');
   }, [])
   return null
-} 
+}
