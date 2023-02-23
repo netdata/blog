@@ -10,16 +10,14 @@ export default function NotFound() {
 
     var [first, second, three, ...query] = url.split('/')
 
-
-    query = query.toString().replace(",", " ")
+    query = query.toString().replaceAll(",", " ")
     var target = query.replaceAll("\/", " ")
-    var base = url.split(query)[0]
+    var base = window.location.origin
     var redirectLocation = base + '#gsc.tab=0&gsc.q=' + target
 
     // Page location and redirectLocation should not be the same
     if (location.href !== redirectLocation) {
       // Redirect logic
-      console.log(location.href)
       window.location.href = redirectLocation;
     }
   }, [])
