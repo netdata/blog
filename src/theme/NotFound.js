@@ -22,7 +22,6 @@ export default function NotFound() {
       console.log(location.href)
       window.location.href = redirectLocation;
     }
-
   }, [])
   return null
-} 
+}
