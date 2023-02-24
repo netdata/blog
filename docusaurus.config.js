@@ -53,7 +53,7 @@ const config = {
       ({
         docs: false,
         blog: {
-          routeBasePath: '/posts', 
+          routeBasePath: '/',
           showReadingTime: true,
           blogTitle: 'Netdata Blog',
           blogDescription: 'Home of the Netdata blog about monitoring and troubleshooting.',
