@@ -9,7 +9,7 @@ const config = {
   title: 'Netdata Blog',
   tagline: 'Home of the Netdata blog.',
   url: 'https://blog.netdata.cloud',
-  baseUrl: '/',
+  baseUrl: '/posts',
   trailingSlash: true,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -53,7 +53,7 @@ const config = {
       ({
         docs: false,
         blog: {
-          routeBasePath: '/', 
+          routeBasePath: '/posts', 
           showReadingTime: true,
           blogTitle: 'Netdata Blog',
           blogDescription: 'Home of the Netdata blog about monitoring and troubleshooting.',
