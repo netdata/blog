@@ -1919,12 +1919,12 @@
     mark.js "^8.11.1"
     tslib "^2.4.0"
 
-"@giscus/react@2.2.6":
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/@giscus/react/-/react-2.2.6.tgz#893216bf06de71b45280d131a9df6975c22c97f1"
-  integrity sha512-qGjikDm7euLOCfMPn500d7F3UIl/qI55/dWF4ALC5Fo/7i5qktKCAwy6/zop93PjP0hJL6mi54K6x36SyvaLyQ==
+"@giscus/react@2.2.8":
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/@giscus/react/-/react-2.2.8.tgz#ae02463a0bb27d1decc11e756f41182cc0797288"
+  integrity sha512-dPk3GMmsx5hHXXi8Xye7aen+lsZ/PR4I7AwTXKxKtAvxXsH5XAVB/bI6uWr4BrLEH3plZMzgOlVUIPOFJsHQCw==
   dependencies:
-    giscus "^1.2.6"
+    giscus "^1.2.8"
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
@@ -4554,12 +4554,12 @@ get-stream@^6.0.0:
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
   integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
 
-giscus@^1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/giscus/-/giscus-1.2.6.tgz#0ccdf3bd4e936da95d2e2708446850c1e5ec4496"
-  integrity sha512-VqMWmCdlUk9krX2M3oMgn9/Y6XEbRXRHtfhNTuRn/AdeGOeko54OFEIsizQ/nYWymuUNGZR48KGptCtYL77rtA==
+giscus@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/giscus/-/giscus-1.2.8.tgz#557964e1cb5e46c4b0abf69ed0b974c0718b8142"
+  integrity sha512-pufrgQYt1W+4ztiWp/PilLPN8NdyKvpbQ8jNqbAa1g84t6qqyevXHfkOYCi4x4d+y191vJAUc6seL1Dq74yUeA==
   dependencies:
-    lit "^2.5.0"
+    lit "^2.6.1"
 
 github-slugger@^1.4.0:
   version "1.5.0"
@@ -5477,7 +5477,7 @@ lit-html@^2.2.0, lit-html@^2.6.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^2.5.0:
+lit@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/lit/-/lit-2.6.1.tgz#5951a2098b9bde5b328c73b55c15fdc0eefd96d7"
   integrity sha512-DT87LD64f8acR7uVp7kZfhLRrHkfC/N4BVzAtnw9Yg8087mbBJ//qedwdwX0kzDbxgPccWRW6mFwGbRQIxy0pw==

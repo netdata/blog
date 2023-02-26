@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.3.1",
-    "@giscus/react": "2.2.6"
+    "@giscus/react": "2.2.8"
   },
   "browserslist": {
     "production": [
