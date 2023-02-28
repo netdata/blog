@@ -14,7 +14,7 @@ All Netdata functionality is and will be available for free forever in the Commu
 <!--truncate-->
 **Hello Netdata community**,
 
-We are excited to announce that we are introducing new paid subscriptions to Netdata. 
+We are excited to announce that we are introducing new **Paid Subscriptions** to Netdata as of Wednesday, 22nd of February 2023. 
 
 At Netdata, we believe in providing free and unrestricted access to high-quality monitoring solutions, and our commitment to this principle will not change. We will continue to offer the free Cloud SaaS offering and Open Source Agent, which features unlimited nodes and users, unlimited metrics, and retention, providing real-time, high-fidelity, out-of-the-box infrastructure monitoring. All core monitoring features will be part of this free COMMUNITY plan. 
 
