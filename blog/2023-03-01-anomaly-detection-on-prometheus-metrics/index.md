@@ -24,7 +24,7 @@ The initial implementation of the native ML based unsupervised anomaly detection
 
 This was a great starting point and helped keep things simple to reason about in the early days as we dogfooded(fed?) the functionality internally and with the wider Netdata community.
 
-> 💡 Check out [community launch post](https://community.netdata.cloud/t/anomaly-advisor-beta-launch/2717/1) from last March for more background.
+> 💡 Check out the [community launch post](https://community.netdata.cloud/t/anomaly-advisor-beta-launch/2717/1) from last March for more background.
 
 However not all metrics are captured every second by default and often some of those that might be most important to you are not.
 
