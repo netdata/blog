@@ -26,9 +26,9 @@ This was a great starting point and helped keep things simple to reason about in
 
 > 💡 Check out the [community launch post](https://community.netdata.cloud/t/anomaly-advisor-beta-launch/2717/1) from last March for more background.
 
-However not all metrics are captured every second by default and often some of those that might be most important to you are not.
+However not all metrics are captured every second by default and it might be the case that some of your most important metrics get collected by external collectors with less regular `update every` settings for numerous, perfectly valid, reasons.
 
-This is typically the case with metrics scraped from Prometheus endpoints, often they might be some of the most important metrics, but they are not collected every second by default. So its crucial the Netdata's anomaly detection "just work" with these metrics too.
+This is typically the case with metrics scraped from Prometheus endpoints, often they might be some of the most important metrics (thats how they ended up in a Prometheus endpoint), but they are not collected every second by default. So its crucial the Netdata's anomaly detection "just work" with these metrics too.
 
 ## Example using Prometheus metrics
 
