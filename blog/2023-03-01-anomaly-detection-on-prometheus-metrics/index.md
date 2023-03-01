@@ -10,7 +10,7 @@ image: ./img/img.png
 
 ![img](./img/img.png)
 
-We have recently extended the native ML based anomaly detection [capabilities](https://learn.netdata.cloud/guides/monitor/anomaly-detection) of Netdata to [support all metrics](https://github.com/netdata/netdata/issues/14218), regardless on their collection frequency (`update every`).
+We have recently extended the native machine learning (ML) based anomaly detection [capabilities](https://learn.netdata.cloud/guides/monitor/anomaly-detection) of Netdata to [support all metrics](https://github.com/netdata/netdata/issues/14218), regardless on their collection frequency (`update every`).
 
 Previously only metrics collected every second were supported, but now Netdata can run anomaly detection out of the box with zero config on metrics with any collection frequency.
 
