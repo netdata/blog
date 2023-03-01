@@ -32,7 +32,7 @@ This is typically the case with metrics scraped from Prometheus endpoints, often
 
 ## Example using Prometheus metrics
 
-As an example of how this now might look, on two of our ml demo nodes we added an example Prometheus scrape job to the Netdata Prometheus collector like below. This just scrapes metrics from the demo prometheus node exporter instance at `node.demo.do.prometheus.io`.
+As an example of how this now might look, on two of our ml demo nodes we added an example Prometheus scrape job to the Netdata Prometheus collector like below. This just scrapes metrics from the demo prometheus node exporter instance at [node.demo.do.prometheus.io](https://node.demo.do.prometheus.io/)
 
 ```yaml title="/etc/netdata/go.d/prometheus.yml"
 jobs:
