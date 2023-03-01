@@ -54,7 +54,7 @@ Indeed, if we take a more global look via the Anomaly Advisor tab for the same p
 
 ## Conclusion
 
-Thats it really, just a short post to show how Netdata's native [ML based anomaly detection functionality](https://learn.netdata.cloud/guides/monitor/anomaly-detection) now works with all metrics regardless of their collection frequency. This is a great step forward for Netdata and we are excited to see how the community uses this functionality.
+Thats it, just a short post to show how Netdata's native [ML based anomaly detection functionality](https://learn.netdata.cloud/guides/monitor/anomaly-detection) now works with all metrics regardless of their collection frequency. This is a great step forward for Netdata and we are excited to see how the community uses this functionality.
 
 Next up we will be looking to [[Feat]: persist trained ML models to db](https://github.com/netdata/netdata/issues/14217) such that the trained models persist across restarts and upgrades. Following that we hope to [update ml defaults](https://github.com/netdata/netdata/pull/14222) to extend the default training windows used by the anomaly detection functionality to roughly 24 hours out of the box.
 
