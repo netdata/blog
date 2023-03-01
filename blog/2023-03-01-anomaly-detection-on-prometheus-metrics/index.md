@@ -40,13 +40,13 @@ jobs:
     url: https://node.demo.do.prometheus.io/metrics
 ```
 
-Once sufficient time has passed such that additional ML models can be trained for each new Prometheus metric (by default at least `minimum num samples to train = 3600` observations are required before training can begin), we can see the anomaly detection functionality working as expected when we see a sudden spike in the `node_context_switched_total` metric below for example.
+Once sufficient time has passed such that additional ML models can be trained for each new Prometheus metric, we can see the anomaly detection functionality working as expected. Following a period of sudden "spikes" in the `node_context_switched_total` metric we can see that the corresponding anomaly rate's become more "active".
 
 ![anomaly example node context switches total](./img/example.png)
 
-In the example above we have the same prometheus scrape job configured on both nodes just for illustration. We see that as the metric becomes a bit more "spikey", the anomaly rate on the top chart activates for each node.
+In the example above we have the same prometheus scrape job configured on both nodes just for illustration (one node is running it's own ML `ml-demo-ml-enabled` while the other is having it's ML done on its parent instead `ml-demo-ml-disabled`). We see that as the metric becomes a bit more "spikey", the anomaly rate on the top chart activates for each node.
 
-Indeed, if we take a more global look via the Anomaly Advisor tab for the same period we see some bumps in the overall node anomaly rates. Once we highlight the area of interest we can see its mostly the Prometheus metrics that were anomalous during this window even though they just represent a small fraction of the metrics covered by these nodes.
+Indeed, if we take a more global look via the [Anomaly Advisor](https://learn.netdata.cloud/docs/cloud/insights/anomaly-advisor#gsc.tab=0) tab for the same period we see some bumps in the overall node anomaly rates. Once we highlight the area of interest we can see its mostly the Prometheus metrics that were most anomalous during this window even though they just represent a small fraction of the metrics covered by these nodes.
 
 ![anomaly advisor overall anomaly rates](./img/anomaly-advisor-example.png)
 
