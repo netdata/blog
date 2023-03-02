@@ -1,0 +1,120 @@
+---
+slug: split-plugin-packages
+title: Upcoming Chnages to Plugins in Native Packages
+description: Upcoming Changes to Plugins in Native Packages
+authors: ferroin
+tags: [installation, native-packages, updates, linux, collectors, engineering]
+keywords: [installation, native-packages, updates, linux, collectors, engineering]
+
+---
+
+At Netdata, we’re committed to trying to make Netdata work as well as possible for our users. Sometimes though,
+that means changing things in ways that aren’t exactly seamless. Such a change is coming soon for users of our
+native DEB and RPM packages, and this blog post will explain what’s happening, why we’re doing it, and what
+it means for our users.
+
+<!-- truncate -->
+
+## What’s changing?
+
+Starting shortly after the v1.39.0 release of the Netdata Agent, we will be splitting most of our external
+data collection plugins out to their own individual packages instead of bundling them all in the main `netdata`
+package. We already have this type of split for our CUPS and FreeIPMI plugins, and this new change will extend
+that to also provide separate packages for the following plugins:
+
+- The `go.d` plugin (in the new `netdata-plugin-go` package)
+- The `python.d` plugin (in the new `netdata-plugin-python` package)
+- The `charts.d` plugin (in the new `netdata-plugin-chartsd` package)
+- The `slabinfo` plugin (in the new `netdata-plugin-slabinfo` package)
+- The `perf` plugin (in the new `netdata-plugin-perf` package)
+- The `nfacct` plugin (in the new `netdata-plugin-nfacct` package)
+- The eBPF plugin (in the new `netdata-plugin-ebpf` and `netdata-ebpf-legacy-code` packages)
+- The apps plugin (in the new `netdata-plugin-apps` package)
+
+## Why are we making this change?
+
+With our current approach to packaging Netdata, we actually ship a _lot_ of code that most users never actually use.
+
+For our users, this means that:
+
+- Netdata takes up more disk space than it really needs to.
+- Updating Netdata takes longer and uses more bandwidth than it really needs to.
+- A lot of dependencies that are functionally optional at runtime get pulled in even though they are probably
+  not needed.
+- Their system presents a larger attack surface than it would otherwise.
+
+By splitting our external data collection plugins out to individual packages like this, we’re making it easier
+for users to ensure that they only have what they actually need on their system, helping to resolve all of the
+above-mentioned issues.
+
+Additionally, this helps us reduce the overhead involved in hosting our official packages.
+
+## What do I need to do?
+
+### If you are not using our official DEB/RPM packages
+
+In this case, you don’t need to do anything, and should not be affected by this change.
+
+### If you are using our official DEB packages
+
+#### New installs
+
+Most new installs should be unaffected by this change. There are two exceptions:
+
+1.  If you need the nfacct, perf, or slabinfo plugins, or one of the collectors provided by the `charts.d` plugin,
+    you will need to manually install the associated packages.
+2.  If you have your system configured to not install recommended packages by default, then you will need to either
+    manually install all the external plugin packages you require (or, alternatively, check the second option below
+    for existing installs to pull in the default set).
+
+#### Existing installs
+
+Updating from a version from before this change will result in the external plugins being essentially removed
+from your system and needing to be manually installed if required.
+
+This is a result of a limitation in how APT handles soft dependencies on updates (in particular, it simply doesn’t).
+
+You can explicitly pull in the default set of external plugins in one of two ways:
+
+1.  Explicitly uninstall and reinstall the `netdata` package. This will not work though if you have your system
+    set to not install recommended packages by default.
+2.  Run the following:
+
+    ```sh
+    apt-cache depends netdata | \
+    awk '/Recommends:/ {system("sudo apt-get install "$2"; sudo apt-mark auto "$2)}'
+    ```
+
+    That will look through the list of dependencies for Netdata and pull in any optional dependencies that would
+    be installed by default, prompting for each individual package.
+
+Additionally, if you need the nfacct, perf, or slabinfo plugins, or one of the collectors provided by the `charts.d`
+plugin, you will need to manually install the associated packages.
+
+### If you are using our official RPM packages on most systems
+
+#### New installs
+
+New installs should be unaffected by this change unless you need the nfacct, perf, or slabinfo plugins, or one of the
+collectors provided by the `charts.d` plugin, in which case you will need to manually install the associated packages.
+
+#### Existing installs
+
+Existing installs should be unaffected by this change unless you need the nfacct, perf, or slabinfo plugins,
+or one of the collectors provided by the `charts.d` plugin, in which case you will need to manually install the
+associated packages.
+
+### If you are using our official RPM packages on CentOS 7, RHEL 7, or equivalent systems
+
+#### New installs
+
+New installs should be unaffected by this change unless you need the nfacct, perf, or slabinfo plugins, or one of the
+collectors provided by the `charts.d` plugin, in which case you will need to manually install the associated packages.
+
+#### Existing installs
+
+Updating from a version from before this change will result in the external plugins being essentially removed
+from your system and needing to be manually installed if required.
+
+This is a result of a lack of support for weak dependencies in the version of RPM included on these systems, combined
+with technical limitations in our own CI that prevent us from providing packages that automatically handle this case.
