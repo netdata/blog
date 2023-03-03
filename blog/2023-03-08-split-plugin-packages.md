@@ -31,13 +31,17 @@ that to also provide separate packages for the following plugins:
 - The eBPF plugin (in the new `netdata-plugin-ebpf` and `netdata-ebpf-legacy-code` packages)
 - The apps plugin (in the new `netdata-plugin-apps` package)
 
+All of these packages will be listed as optional dependencies for the main Netdata package, with the `go.d`,
+`python.d`, eBPF, and apps plugins being automatically installed by default on most standard configurations.
+
 ## Why are we making this change?
 
 With our current approach to packaging Netdata, we actually ship a _lot_ of code that most users never actually use.
 
 For our users, this means that:
 
-- Netdata takes up more disk space than it really needs to.
+- Netdata takes up more disk space than it really needs to. This usually does not matter much, but can still have
+  an impact on systems where disk space is at a premium.
 - Updating Netdata takes longer and uses more bandwidth than it really needs to.
 - A lot of dependencies that are functionally optional at runtime get pulled in even though they are probably
   not needed.
@@ -47,25 +51,17 @@ By splitting our external data collection plugins out to individual packages lik
 for users to ensure that they only have what they actually need on their system, helping to resolve all of the
 above-mentioned issues.
 
-Additionally, this helps us reduce the overhead involved in hosting our official packages.
+Additionally, this change will reduce the overhead of hosting our native package repositories, allowing us to
+dedicate more resources elsewhere.
 
 ## What do I need to do?
 
-### If you are not using our official DEB/RPM packages
-
-In this case, you don’t need to do anything, and should not be affected by this change.
+If you have an existing install of Netdata, you can check whether it is using our official native packages by
+running `netdata -W buildinfo | grep 'Install type'`. If the reported install type starts with `binpkg-`, then
+that install is using our native packages and is probably affected by this change. If you are not using our official
+native packages, you should be completely unaffected by this change.
 
 ### If you are using our official DEB packages
-
-#### New installs
-
-Most new installs should be unaffected by this change. There are two exceptions:
-
-1.  If you need the nfacct, perf, or slabinfo plugins, or one of the collectors provided by the `charts.d` plugin,
-    you will need to manually install the associated packages.
-2.  If you have your system configured to not install recommended packages by default, then you will need to either
-    manually install all the external plugin packages you require (or, alternatively, check the second option below
-    for existing installs to pull in the default set).
 
 #### Existing installs
 
@@ -91,12 +87,17 @@ You can explicitly pull in the default set of external plugins in one of two way
 Additionally, if you need the nfacct, perf, or slabinfo plugins, or one of the collectors provided by the `charts.d`
 plugin, you will need to manually install the associated packages.
 
-### If you are using our official RPM packages on most systems
-
 #### New installs
 
-New installs should be unaffected by this change unless you need the nfacct, perf, or slabinfo plugins, or one of the
-collectors provided by the `charts.d` plugin, in which case you will need to manually install the associated packages.
+Most new installs should be unaffected by this change. There are two exceptions:
+
+1.  If you need the nfacct, perf, or slabinfo plugins, or one of the collectors provided by the `charts.d` plugin,
+    you will need to manually install the associated packages.
+2.  If you have your system configured to not install recommended packages by default, then you will need to
+    manually install all the external plugin packages you require (or, alternatively, check the second option
+    above for existing installs to pull in the default set).
+
+### If you are using our official RPM packages on most systems
 
 #### Existing installs
 
@@ -104,12 +105,12 @@ Existing installs should be unaffected by this change unless you need the nfacct
 or one of the collectors provided by the `charts.d` plugin, in which case you will need to manually install the
 associated packages.
 
-### If you are using our official RPM packages on CentOS 7, RHEL 7, or equivalent systems
-
 #### New installs
 
 New installs should be unaffected by this change unless you need the nfacct, perf, or slabinfo plugins, or one of the
 collectors provided by the `charts.d` plugin, in which case you will need to manually install the associated packages.
+
+### If you are using our official RPM packages on CentOS 7, RHEL 7, or equivalent systems
 
 #### Existing installs
 
@@ -118,3 +119,8 @@ from your system and needing to be manually installed if required.
 
 This is a result of a lack of support for weak dependencies in the version of RPM included on these systems, combined
 with technical limitations in our own CI that prevent us from providing packages that automatically handle this case.
+
+#### New installs
+
+New installs should be unaffected by this change unless you need the nfacct, perf, or slabinfo plugins, or one of the
+collectors provided by the `charts.d` plugin, in which case you will need to manually install the associated packages.
