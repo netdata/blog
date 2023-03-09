@@ -13,7 +13,7 @@ Monitor your Windows server and applications running on it with Netdata - simple
 
 <!--truncate-->
 
-Hey Netdata users,
+Hey Netdata community,
 
 We have some exciting news for you: we’re launching our new and updated [Windows collectors](https://learn.netdata.cloud/docs/data-collection/monitor-anything/System%20Metrics/Windows-machine) with the goal of making the [Windows monitoring experience](https://www.netdata.cloud/windows-monitoring/) as seamless as possible 🎉
 
