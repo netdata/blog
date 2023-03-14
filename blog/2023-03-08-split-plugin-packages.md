@@ -1,6 +1,6 @@
 ---
 slug: split-plugin-packages
-title: Upcoming Chnages to Plugins in Native Packages
+title: Upcoming Changes to Plugins in Native Packages
 description: Upcoming Changes to Plugins in Native Packages
 authors: ferroin
 tags: [installation, native-packages, updates, linux, collectors, engineering]
@@ -124,3 +124,7 @@ with technical limitations in our own CI that prevent us from providing packages
 
 New installs should be unaffected by this change unless you need the nfacct, perf, or slabinfo plugins, or one of the
 collectors provided by the `charts.d` plugin, in which case you will need to manually install the associated packages.
+
+## Let us hear from you
+
+If you have concerns, ideas and/or requests regarding these changes, make sure to reach out to us through [GitHub Discussions](https://github.com/netdata/netdata/discussions/), the [Forums](https://community.netdata.cloud/) or engage with the community in the [Netdata Discord server](https://discord.com/invite/mPZ6WZKKG2).
