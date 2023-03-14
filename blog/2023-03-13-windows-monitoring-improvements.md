@@ -28,6 +28,6 @@ But that’s not all. Netdata also collects metrics from your packaged Windows a
 
 Do check out our article on [how to effectively monitor Windows servers with Netdata](https://www.netdata.cloud/windows-monitoring/). It will help you easily set up Netdata to monitor your Windows server and applications and get insights into the performance and availability of your critical services.
 
-Try out [Netdata Windows monitoring](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=website&utm_content=windows) today, we hope you find it usefu;. As always, we welcome your feedback and suggestions on how to improve it further.
+Try out [Netdata Windows monitoring](https://app.netdata.cloud/spaces/netdata-demo/rooms/windows/?utm_campaign=technical&utm_source=content&utm_medium=website&utm_content=windows) today, we hope you find it usefu;. As always, we welcome your feedback and suggestions on how to improve it further.
 
 Happy Troubleshooting! 😊
