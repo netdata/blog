@@ -1,7 +1,7 @@
 ---
-slug: windows-monitoring
-title: Windows server monitoring
-description: Windows server monitoring with Netadata
+slug: windows-monitoring-improvements
+title: Windows Server Monitoring Improvements
+description: Windows server monitoring improvements with Netdata
 authors: shyam
 tags: [real-time, monitor, troubleshoot, windows, server]
 keywords: [real-time, monitor, troubleshoot, windows, server]
