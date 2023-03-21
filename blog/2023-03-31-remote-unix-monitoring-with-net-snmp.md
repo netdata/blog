@@ -129,7 +129,7 @@ Luckily, Net-SNMP provides a script called `net-snmp-create-v3-user` that simpli
 significantly. To add a user for Netdata using this script, make sure the snmpd service is _not_ running, and then
 run (as root):
 
-```
+```sh
 net-snmp-create-v3-user -ro -A PASSWORD -a SHA-256 -x AES netdata
 ```
 
@@ -165,7 +165,9 @@ produce output like `HOST-RESOURCES-MIB::hrSystemNumUsers.0 = Gauge32: 0`, thoug
 Configuration of Netdata to collect this data is also relativley simple. Our SNMP collector is part of the Go
 plugin, so to open the configuration run:
 
-`/etc/netdata/edit-config go.d/snmp.conf`
+```sh
+/etc/netdata/edit-config go.d/snmp.conf
+```
 
 The configuration file itself is a YAML document.
 
@@ -335,13 +337,13 @@ The general configuration for a disk space monitoring chart looks like:
 The above configuration snippet can be used to monitor the root filesystem’s space usage on any system. To get
 a list of what other filesystems you can monitor, run:
 
-```
+```sh
 snmpwalk -v 2c -c netdata HOSTNAME 1.3.6.1.4.1.2021.9.1.2
 ```
 
 or, if using SNMP v3:
 
-```
+```sh
 snmpwalk -v 3 -u netdata -l noAuthPriv -a SHA -A PASSWORD HOSTNAME 1.3.6.1.4.1.2021.9.1.2
 ```
 
