@@ -164,8 +164,8 @@ produce output like `HOST-RESOURCES-MIB::hrSystemNumUsers.0 = Gauge32: 0`, thoug
 
 ## Configuring Netdata
 
-Configuration of Netdata to collect this data is also relativley simple. Our [SNMP collector](https://learn.netdata.cloud/docs/data-collection/monitor-anything/Networking/SNMP) is part of the Go
-plugin, so to open the configuration run:
+Configuration of Netdata to collect this data is also relativley simple. Our [SNMP collector](https://learn.netdata.cloud/docs/data-collection/monitor-anything/Networking/SNMP) is part of the [Netdata Go
+plugin](https://learn.netdata.cloud/docs/improving-netdata---developers/external-plugins/go.d.plugin/), so to open the configuration run:
 
 ```sh
 /etc/netdata/edit-config go.d/snmp.conf
