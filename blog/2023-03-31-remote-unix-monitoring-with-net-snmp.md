@@ -362,6 +362,39 @@ Index 1 will always be the root filesystem. The indexes of other filesystems are
 in the kernel’s mount table, so they are dependent on the exact configuration of the system, and they may change
 as a result of seemingly unrelated changes such as kernel upgrades.
 
+### Virtual Nodes
+
+Starting with v1.39.0, Netdata is adding a new feature called ‘virtual nodes’ (or ‘vnodes’). Virtual nodes
+let you treat a set of metrics as a separate system from the system that Netdata is running on, which is perfect
+for monitoring remote UNIX systems via SNMP.
+
+You can open the virtual nodes configuration by running:
+
+```sh
+/etc/netdata/edit-config vnodes/vnodes.conf
+```
+
+The configuration file itself is a YAML document, just like with the SNMP collector configuration.
+
+A simple configuration entry for a single virtual node might look like this:
+
+```yaml
+- hostname: foo.example.com                  # This defines the hostname that will be shown for the node
+  guid: 00000000-0000-0000-0000-000000000000 # This defines the node’s GUID. It should be unique among all nodes.
+  labels:                                    # This defines host labels, which are used to present information about the node in Netdata Cloud
+    _architecture: x86_64
+    _os_name: Solaris
+    _os_version: 11
+    _system_cores: 8
+    _system_cpu_freq: 4700000000
+    _system_disk_space: 1099511627776
+    _system_ram_total: 34359738368
+    _virtualization: kvm
+```
+
+Once you have a virtual node defined, you simply need to add a `vnode:` key to the SNMP job that you want to
+associate with that node, with the value being equal to the hostname of the virtual node.
+
 ## What about other SNMP implementations?
 
 The configuration outlined above for Netdata will also work with most other SNMP implementations provided they
