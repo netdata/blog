@@ -164,7 +164,7 @@ produce output like `HOST-RESOURCES-MIB::hrSystemNumUsers.0 = Gauge32: 0`, thoug
 
 ## Configuring Netdata
 
-Configuration of Netdata to collect this data is also relativley simple. Our SNMP collector is part of the Go
+Configuration of Netdata to collect this data is also relativley simple. Our [SNMP collector](https://learn.netdata.cloud/docs/data-collection/monitor-anything/Networking/SNMP) is part of the Go
 plugin, so to open the configuration run:
 
 ```sh
