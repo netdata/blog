@@ -312,9 +312,9 @@ This configuration:
     fetching, so smaller collection intervals are generally safe, and this just comes down to a matter of how much
     impact the data collection has on the target system. On a big system without strict latency requirements, you
     can probably even push this all the way down to 1 second safely, but five seconds is a reasonable starting point.
--   Sets up a series of charts for a number of basic system statictics. WHere possible, the family and id values
+-   Sets up a series of charts for a number of basic system statistics. Where possible, the family and id values
     for these charts have been chosen to match up with native data collection charts that collect the same
-    information, allowing for sensible aggregation on Netdata Cloud when using virtual nodes (see the next section
+    information, allowing for sensible aggregation on [Netdata Cloud](https://www.netdata.cloud/) when using virtual nodes (see the next section
     for more info about that).
 
 ### Disk space monitoring
