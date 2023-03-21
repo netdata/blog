@@ -73,7 +73,7 @@ to allow UDP packets on port 161.
 The SNMP daemon configuration is usually stored in `/etc/snmp/snmd.conf`. A basic configuration for our purposes
 looks like this:
 
-```
+```yaml title="/etc/snmp/snmd.conf"
 # Explicitly enable disk space collection
 # Without this we can’t get disk usage info in the UCD-SNMP-MIB.
 includeAllDisks 1%
@@ -99,7 +99,7 @@ instead](#snmp-v3).
 
 SNMP v2c setup is relatively simple, just needing a read-only community matched to the view we defined above.
 
-```
+```yaml title="/etc/snmp/snmd.conf"
 # Define a community named ‘netdata’ restricted to the view named ‘netdata’.
 rocommunity netdata -V netdata
 
@@ -140,7 +140,7 @@ Replace `PASSWORD` in the above command with the password you want to use for th
 Once you have that set up, you just need to associate the new user with the view we defined in the base configuration
 like so:
 
-```
+```yaml title="/etc/snmp/snmd.conf"
 # Restrict the ‘netdata’ user to the view named ‘netdata’.
 rouser netdata -V netdata
 
@@ -175,7 +175,7 @@ The configuration file itself is a YAML document.
 
 A basic configuration for a single host looks like:
 
-```yaml
+```yaml title="/etc/netdata/go.d/snmp.conf"
 # If we don’t see a system on startup, check again every five minutes
 # until we do see it.
 autodetection_retry: 300
@@ -382,7 +382,7 @@ The configuration file itself is a YAML document, just like with the SNMP collec
 
 A simple configuration entry for a single virtual node might look like this:
 
-```yaml
+```yaml title="/etc/netdata/vnodes/vnodes.conf"
 - hostname: foo.example.com                  # This defines the hostname that will be shown for the node
   guid: 00000000-0000-0000-0000-000000000000 # This defines the node’s GUID. It should be unique among all nodes.
   labels:                                    # This defines host labels, which are used to present information about the node in Netdata Cloud
