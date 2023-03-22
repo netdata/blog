@@ -163,21 +163,20 @@ const config = {
                 position: 'left',
             },
             {
-                to: 'https://community.netdata.cloud/',
-                label: 'Community',
-                position: 'left',
+              to: 'https://www.netdata.cloud/community/?utm_source=learn&utm_content=top_navigation_community',
+              position: 'left',
+              label: 'Community',
+            },
+				    {
+              to: 'https://www.netdata.cloud/?utm_source=learn&utm_content=top_navigation_website',
+              label: 'Website',
+              position: 'left',
             },
             {
-                to: 'https://app.netdata.cloud/',
-                label: 'App',
-                position: 'left',
+              to: 'https://app.netdata.cloud/spaces/netdata-demo?utm_source=learn&utm_content=top_navigation_demo',
+              label: 'Live Demo',
+              position: 'left',
             },
-            {
-                to: 'https://www.netdata.cloud/',
-                label: 'Website',
-                position: 'left',
-            },
-
             {
                 to: 'https://app.netdata.cloud/',
                 label: 'Sign In',
