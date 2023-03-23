@@ -11,6 +11,8 @@ image: https://user-images.githubusercontent.com/24860547/212873204-5082b40d-7be
 
 Find out how to effectively and easily monitor and troubleshoot MongoDB using Netdata
 
+![logo](https://user-images.githubusercontent.com/24860547/212873204-5082b40d-7be0-4a08-ae72-0895b840837b.png)
+
 <!--truncate-->
 ## What is MongoDB
 

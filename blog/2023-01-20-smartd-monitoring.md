@@ -11,6 +11,8 @@ image: https://uxd.zendesk.com/hc/article_attachments/360024098631/mceclip1.png
 
 Understand what makes a storage device S.M.A.R.T and how to monitor a self monitoring component using Netdata.
 
+![logo](https://uxd.zendesk.com/hc/article_attachments/360024098631/mceclip1.png)
+
 <!--truncate-->
 ## What makes a storage device S.M.A.R.T.? 
 

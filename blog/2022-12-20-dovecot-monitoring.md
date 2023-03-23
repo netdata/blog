@@ -11,7 +11,10 @@ image: https://www.dovecot.org/wp-content/uploads/2021/09/dovecot_logo.png
 
 Find out how to effectively and easily monitor and troubleshoot Dovecot using Netdata
 
+![logo](https://www.dovecot.org/wp-content/uploads/2021/09/dovecot_logo.png)
+
 <!--truncate-->
+
 ## What is Dovecot
 
 [Dovecot](https://www.dovecot.org/) is a free and open source IMAP and POP3 server for Unix-like systems. It provides an efficient, secure, and highly configurable platform for storing and retrieving email. Dovecot is a powerful server that provides an extensible architecture, allowing users to implement custom authentication, access control, and retrieval strategies. It also provides advanced features such as easy deployment, mailbox management, secure connections, and support for multiple protocols.

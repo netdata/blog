@@ -10,6 +10,8 @@ image: https://user-images.githubusercontent.com/96257330/207284329-273076e5-c09
 
 Find out how to effectively and easily monitor and troubleshoot systemd-logind using Netdata
 
+![logo](https://user-images.githubusercontent.com/96257330/207284329-273076e5-c092-45ab-a771-7b99cc50a15b.png)
+
 <!--truncate-->
 
 ## What is systemd-logind

@@ -6,13 +6,14 @@ authors: satya
 tags: [how-to, monitor, troubleshoot, dnsmasq,  dns, domain-name-server, DNS-management, dhcp, network-management]
 keywords: [how-to, monitor, troubleshoot, dnsmasq,  dns, domain-name-server, DNS-management, dhcp, network-management]
 image: https://user-images.githubusercontent.com/96257330/207592157-9ec046b1-2ad0-46b8-87d1-c3e91b7dbb35.png
-
-
 ---
 
 Find out how to effectively and easily monitor and troubleshoot Dnsmasq for DHCP using Netdata
 
+![logo](https://user-images.githubusercontent.com/96257330/207592157-9ec046b1-2ad0-46b8-87d1-c3e91b7dbb35.png)
+
 <!--truncate-->
+
 ## What is Dnsmasq for DHCP?
 
 [Dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.html) is an open-source, lightweight, DNS caching and forwarding server. It is designed to provide DNS resolution for small and home networks. Dnsmasq provides local DNS caching, forwarding, and recursive lookups, as well as DHCP, TFTP, and other related services. It also has support for DNS and DHCPv6, as well as various other features such as DNS-over-TLS and IPv6 privacy extensions. Dnsmasq is a versatile and highly configurable tool that is simple to use.

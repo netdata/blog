@@ -110,9 +110,9 @@ a:hover {
 	@apply text-blue-light;
 }
 
-.navbar__logo {
+/* .navbar__logo {
 	@apply h-6 mr-2;
-}
+} */
 
 .navbar__link {
 	@apply font-normal;
