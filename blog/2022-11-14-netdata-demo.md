@@ -16,7 +16,7 @@ At Netdata, we are always striving to provide the best monitoring experience for
 ## What is the Netdata Demo Space?
 The Netdata Demo Space is a public, accessible area that showcases different monitoring environments. It allows anyone to try out Netdata without logging in, providing a hands-on experience of what our platform has to offer.
 
-![video](https://user-images.githubusercontent.com/24860547/227510071-5745fa44-67b3-4efc-ac51-f60bf5c6a197.gif)
+![video_pallettegen](https://user-images.githubusercontent.com/24860547/227511111-b0d0dae3-5c4f-4304-96eb-bba57def66d5.gif)
 
 With the Demo Space, you can currently explore a variety of different monitoring scenarios, including:
 - **Web Server Monitoring** with the demo rooms dedicated for [Apache](https://app.netdata.cloud/spaces/netdata-demo/rooms/apache/), [NGINX](https://app.netdata.cloud/spaces/netdata-demo/rooms/nginx/), [IIS](https://app.netdata.cloud/spaces/netdata-demo/rooms/iis/), [Host Reachability](https://app.netdata.cloud/spaces/netdata-demo/rooms/host-reachability/) and [HTTP endpoint monitoring](https://app.netdata.cloud/spaces/netdata-demo/rooms/http-endpoints/)
