@@ -10,7 +10,7 @@ authors: shyam
 
 ![img](./img/colab.png)
 
-Hello, fellow data enthusiasts and Google Colab aficionados! Today, we're going to explore how to monitor your Google Colab instances using Netdata. Colab is a fantastic platform for running Notebooks, developing ML models, and other data science and analytics tasks. But have you ever wondered how your Colab instance is performing under the hood? That's where Netdata comes into play!
+Hello, fellow data enthusiasts and [Google Colab](https://colab.research.google.com/) aficionados! Today, we're going to explore how to monitor your Google Colab instances using Netdata. Colab is a fantastic platform for running Notebooks, developing ML models, and other data science and analytics tasks. But have you ever wondered how your Colab instance is performing under the hood? That's where Netdata comes into play!
 
 <!--truncate-->
 
@@ -28,13 +28,13 @@ So, let's dive into how you can install Netdata on your Google Colab instance an
 
 Don't worry the process is super simple and takes less than 2 minutes! Just follow these steps:
 
-1. Sign up (or log in) to [Netdata](https://app.netdata.cloud/) 
+1. Sign up (or log in) to [Netdata](https://app.netdata.cloud/)
 
 2. Copy the wget command you see on the Connect New Nodes section after logging in
 
 3. Open your Google Colab notebook and create a new code cell. You can do this by clicking the + Code button.
 
-4. In the new code cell, paste the wget command you copied earlier. Press Shift + Enter to execute the cell. This will run the Netdata kickstart script, which installs Netdata on your Colab instance. 
+4. In the new code cell, paste the wget command you copied earlier. Press Shift + Enter to execute the cell. This will run the Netdata kickstart script, which installs Netdata on your Colab instance.
 
 5. Finally, create a new code cell and enter `!service netdata restart` and press Shift + Enter to execute the cell and restart the Netdata service.
 
@@ -42,7 +42,7 @@ On your [Netdata cloud UI](https://app.netdata.cloud/) you should now see the no
 
 ## Enjoy Real-time Monitoring of Your Colab Instance
 
-[image](./img/example-screenshot.png)
+![img](./img/example-screenshot.png)
 
 That's it! You've now installed Netdata on your Google Colab instance. With Netdata up and running, you can enjoy real-time monitoring and gain valuable insights into your Colab instance's performance.
 
