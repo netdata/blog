@@ -8,11 +8,14 @@ keywords: [how-to,infrastructure-monitoring,netdata,demo,space,room]
 authors: shyam
 ---
 
+![image](https://user-images.githubusercontent.com/24860547/227520393-965acb01-555e-4d94-bb0e-b3b3d31cb325.png)
+
 Hello, fellow data enthusiasts and Google Colab aficionados! Today, we're going to explore how to monitor your Google Colab instances using Netdata. Colab is a fantastic platform for running Notebooks, developing ML models, and other data science and analytics tasks. But have you ever wondered how your Colab instance is performing under the hood? That's where Netdata comes into play!
 
 <!--truncate-->
 
 ## Why Monitor Your Colab Instance?
+
 While Google Colab provides a convenient and powerful environment for your data science projects, understanding its performance can help you optimize your work and get the most out of the resources at your disposal. By monitoring your Colab instance, you can:
 - Identify bottlenecks and performance issues
 - Optimize resource usage for faster model training
@@ -22,6 +25,7 @@ While Google Colab provides a convenient and powerful environment for your data 
 So, let's dive into how you can install Netdata on your Google Colab instance and start monitoring!
 
 ## Installing Netdata on Google Colab
+
 Don't worry the process is super simple and takes less than 2 minutes! Just follow these steps:
 
 1. Sign up (or log in) to [Netdata](https://app.netdata.cloud/) 
@@ -37,8 +41,6 @@ Don't worry the process is super simple and takes less than 2 minutes! Just foll
 On your [Netdata cloud UI](https://app.netdata.cloud/) you should now see the node representing the Colab instance show upas "Live" and real time metrics getting visualized.
 
 ## Enjoy Real-time Monitoring of Your Colab Instance
-
-![image](https://user-images.githubusercontent.com/24860547/227520393-965acb01-555e-4d94-bb0e-b3b3d31cb325.png)
 
 That's it! You've now installed Netdata on your Google Colab instance. With Netdata up and running, you can enjoy real-time monitoring and gain valuable insights into your Colab instance's performance. 
 
