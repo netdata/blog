@@ -2,13 +2,11 @@
 slug: google-colab-monitoring
 title: "Google Colab Monitoring with Netdata"
 description: "Monitoring Google Colab instances with Netdata"
-image: 
+image: https://3.bp.blogspot.com/-apoBeWFycKQ/XhKB8fEprwI/AAAAAAAACM4/Sl76yzNSNYwlShIBrheDAum8L9qRtWNdgCLcBGAsYHQ/s1600/colab.png
 tags: [how-to,infrastructure-monitoring,netdata,demo,space]
 keywords: [how-to,infrastructure-monitoring,netdata,demo,space,room]
 authors: shyam
 ---
-
-![image](https://user-images.githubusercontent.com/24860547/227520393-965acb01-555e-4d94-bb0e-b3b3d31cb325.png)
 
 Hello, fellow data enthusiasts and Google Colab aficionados! Today, we're going to explore how to monitor your Google Colab instances using Netdata. Colab is a fantastic platform for running Notebooks, developing ML models, and other data science and analytics tasks. But have you ever wondered how your Colab instance is performing under the hood? That's where Netdata comes into play!
 
@@ -41,6 +39,8 @@ Don't worry the process is super simple and takes less than 2 minutes! Just foll
 On your [Netdata cloud UI](https://app.netdata.cloud/) you should now see the node representing the Colab instance show upas "Live" and real time metrics getting visualized.
 
 ## Enjoy Real-time Monitoring of Your Colab Instance
+
+![image](https://user-images.githubusercontent.com/24860547/227520393-965acb01-555e-4d94-bb0e-b3b3d31cb325.png)
 
 That's it! You've now installed Netdata on your Google Colab instance. With Netdata up and running, you can enjoy real-time monitoring and gain valuable insights into your Colab instance's performance. 
 
