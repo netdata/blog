@@ -43,6 +43,7 @@ const config = {
       'crossorigin': 'anonymous',
       async: true,
     },
+
   ],
 
   presets: [
@@ -113,13 +114,6 @@ const config = {
       },
     ],
     [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: false,
-        indexBlog: true,
-      },
-    ],
-    [
       "posthog-docusaurus",
       {
         apiKey: 'phc_hnhlqe6D2Q4IcQNrFItaqdXJAxQ8RcHkPAFAp74pubv',
@@ -139,19 +133,6 @@ const config = {
         },
       };
     },
-    //[
-    //  '@docusaurus/plugin-client-redirects',
-    //  {
-    //    createRedirects(existingPath) {
-    //      if (existingPath.includes('/')) {
-    //        return [
-    //          existingPath.replace('/', '/posts/'),
-    //        ];
-    //      }
-    //      return undefined;
-    //    },
-    //  },
-    //],
   ],
 
   themeConfig:
@@ -167,7 +148,8 @@ const config = {
         title: '',
         logo: {
           alt: 'Netdata logo',
-          src: 'img/logo.svg',
+          src: 'img/logo600x600.png',
+          height: 40
         },
         items: [
             {
@@ -181,19 +163,19 @@ const config = {
                 position: 'left',
             },
             {
-                to: 'https://community.netdata.cloud/',
-                label: 'Community',
-                position: 'left',
+              to: 'https://www.netdata.cloud/community/?utm_source=learn&utm_content=top_navigation_community',
+              position: 'left',
+              label: 'Community',
+            },
+				    {
+              to: 'https://www.netdata.cloud/?utm_source=learn&utm_content=top_navigation_website',
+              label: 'Website',
+              position: 'left',
             },
             {
-                to: 'https://app.netdata.cloud/',
-                label: 'App',
-                position: 'left',
-            },
-            {
-                to: 'https://www.netdata.cloud/',
-                label: 'Website',
-                position: 'left',
+              to: 'https://app.netdata.cloud/spaces/netdata-demo?utm_source=learn&utm_content=top_navigation_demo',
+              label: 'Live Demo',
+              position: 'left',
             },
             {
                 to: 'https://app.netdata.cloud/',
@@ -210,76 +192,6 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-            {
-                title: 'Products',
-                items: [
-                    {
-                        label: 'Agent',
-                        to: 'https://netdata.cloud/agent',
-                    },
-                    {
-                        label: 'Cloud',
-                        to: 'https://netdata.cloud/cloud',
-                    },
-                    {
-                        label: 'Integrations',
-                        to: 'https://www.netdata.cloud/integrations/',
-                    },
-                    {
-                        label: 'Status',
-                        to: 'https://status.netdata.cloud',
-                    },
-                ],
-            },
-            {
-                title: 'Resources',
-                items: [
-                    {
-                        label: 'Learn',
-                        to: 'https://learn.netdata.cloud',
-                    },
-                    {
-                        label: 'Blog',
-                        to: 'https://blog.netdata.cloud',
-                    },
-                    {
-                        label: 'GitHub',
-                        to: 'https://github.com/netdata/netdata',
-                    },
-                ],
-            },
-            {
-                title: 'Community',
-                items: [
-                    {
-                        label: 'Overview',
-                        to: 'https://www.netdata.cloud/community-overview/',
-                    },
-                    {
-                        label: 'Forums',
-                        to: 'https://community.netdata.cloud/',
-                    },
-                ],
-            },
-            {
-                title: 'Company',
-                items: [
-                    {
-                        label: 'About',
-                        to: 'https://netdata.cloud',
-                    },
-                    {
-                        label: 'News',
-                        to: 'https://www.netdata.cloud/news/',
-                    },
-                    {
-                        label: 'Careers',
-                        to: 'https://careers.netdata.cloud/',
-                    },
-                ],
-            },
-        ],
         copyright: `Copyright © ${new Date().getFullYear()} Netdata, Inc.`,
     },
     prism: {

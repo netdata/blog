@@ -1,0 +1,12 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "no-referrer-when-downgrade"
+
+[[redirects]]
+  from = "/posts/redefining-monitoring-netdata"
+  to = "/redefining-monitoring-with-netdata"
+
+[[redirects]]
+  from = "/posts/*"
+  to = "/:splat"

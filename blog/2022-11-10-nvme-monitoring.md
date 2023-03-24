@@ -9,6 +9,8 @@ authors: shyam
 ---
 Use Netdata to effectively monitor and troubleshoot the performance of NVMe (Non-Volatile Memory express) disks in your infrastructure. Preempt disk failures and take action to ensure your systems run without a glitch.
 
+![logo](https://user-images.githubusercontent.com/24860547/201093559-35910c86-43c7-44d5-9b0f-ee493b752a57.png)
+
 <!--truncate-->
 
 ## What is NVMe?
@@ -145,7 +147,7 @@ You can also rely on other troubleshooting and data exploration features such as
 
 ## Let us hear from you
 
-If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/)!
+If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=blog&utm_content=nvme-monitoring)!
 
 We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/).
 

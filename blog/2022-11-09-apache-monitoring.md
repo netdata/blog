@@ -6,11 +6,13 @@ authors: shyam
 tags: [how-to, monitor, troubleshoot, Apache, web server]
 keywords: [how-to, monitor, troubleshoot, Apache, web server]
 image: https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png
-
 ---
 Best practices for Apache server monitoring and troubleshooting.
 
+![logo](https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png)
+
 <!--truncate-->
+
 ## What is Apache?
 
 The Apache HTTP Server ([Apache HTTPd](https://httpd.apache.org/)) is one of the most popular open source web servers available. HTTPd was also the first project developed by the Apache Software foundation which now supports hundreds of well known projects including [Kafka](https://kafka.apache.org/), [Cassandra](https://cassandra.apache.org/_/index.html) and [Hadoop](https://hadoop.apache.org/). 
@@ -144,7 +146,7 @@ To learn more about how to use Anomaly Advisor to troubleshoot your Apache web s
 
 ## Let us hear from you
 
-If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=blog&utm_content=disk-usage)!
+If you haven’t already, [sign up now for a free Netdata account](https://app.netdata.cloud/?utm_campaign=technical&utm_source=content&utm_medium=blog&utm_content=apache-monitoring)!
 
 We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/).
 
