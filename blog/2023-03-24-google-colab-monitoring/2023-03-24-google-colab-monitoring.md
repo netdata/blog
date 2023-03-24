@@ -51,7 +51,6 @@ So now that everything is setup, what's next? Well there's a lot of possibilies 
 - **Detect memory leaks**: Keep an eye on memory usage trends over time to detect potential memory leaks in your code.
 - **Analyze impact of data preprocessing**: Assess the performance implications of different data preprocessing techniques, such as data normalization or feature extraction, by monitoring resource usage during these processes.
 - **Experiment with different libraries or frameworks**: Compare the performance of different libraries or frameworks (e.g., TensorFlow vs. PyTorch) by monitoring resource usage, execution times, and other metrics while running your code.
-- **Monitor GPU usage**: If you're using Colab Pro with access to GPUs and the ability to access the Colab filesystem, you could use Netdata's [Nvidia collector](https://learn.netdata.cloud/docs/data-collection/monitor-anything/Hardware/NVIDIA) to monitor a whole bunch of GPU metrics (Note that I haven't tried this on Colab myself, so if you have I'd love to hear from you).
 
 I hope this is useful for the Colab community, and we appreciate feedback from everyone.
 
