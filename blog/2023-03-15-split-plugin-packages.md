@@ -61,6 +61,17 @@ running `netdata -W buildinfo | grep 'Install type'`. If the reported install ty
 that install is using our native packages and is probably affected by this change. If you are not using our official
 native packages, you should be completely unaffected by this change.
 
+You can check if you have the nfacct, slabinfo, perf, or charts.d plugins running using the following commands:
+
+-   For the nfacct plugin: `ps ax | grep -v grep | grep nfacct.plugin`
+-   For the slabinfo plugin: `ps ax | grep -v grep | grep slabinfo.plugin`
+-   For the perf plugin: `ps ax | grep -v grep | grep perf.plugin`
+-   For the charts.d plugin: `ps ax | grep -v grep | grep charts.d.plugin`
+
+If the command produces no output, the plugin is not running. Note that just because a plugin is running does not
+nescesarily mean you are actually using that plugin. To confirm that you need to check the metrics collected by
+the agent, usually by looking at the agent dashboard.
+
 ### If you are using our official DEB packages
 
 #### Existing installs
@@ -73,7 +84,9 @@ This is a result of a limitation in how APT handles soft dependencies on updates
 You can explicitly pull in the default set of external plugins in one of two ways:
 
 1.  Explicitly uninstall and reinstall the `netdata` package. This will not work though if you have your system
-    set to not install recommended packages by default.
+    set to not install recommended packages by default. Uninstalling and reinstalling this way should not result
+    in any loss of metrics data, though it may remove configuration files if you use `apt purge` to remove the
+    package or have APT configured to automatically purge configuration files when a package is removed.
 2.  Run the following:
 
     ```sh
