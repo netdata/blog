@@ -114,6 +114,12 @@ const config = {
       },
     ],
     [
+      '@docusaurus/plugin-google-tag-manager',
+      {
+        containerId: 'GTM-N6CBMJD',
+      },
+    ],
+    [
       "posthog-docusaurus",
       {
         apiKey: 'phc_hnhlqe6D2Q4IcQNrFItaqdXJAxQ8RcHkPAFAp74pubv',
