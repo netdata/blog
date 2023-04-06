@@ -1581,7 +1581,7 @@
     react-json-view "^1.21.3"
     tslib "^2.4.0"
 
-"@docusaurus/plugin-google-analytics@2.4.0", "@docusaurus/plugin-google-analytics@^2.3.1":
+"@docusaurus/plugin-google-analytics@2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-google-analytics/-/plugin-google-analytics-2.4.0.tgz#8062d7a09d366329dfd3ce4e8a619da8624b6cc3"
   integrity sha512-uGUzX67DOAIglygdNrmMOvEp8qG03X20jMWadeqVQktS6nADvozpSLGx4J0xbkblhJkUzN21WiilsP9iVP+zkw==
@@ -1591,7 +1591,7 @@
     "@docusaurus/utils-validation" "2.4.0"
     tslib "^2.4.0"
 
-"@docusaurus/plugin-google-gtag@2.4.0":
+"@docusaurus/plugin-google-gtag@2.4.0", "@docusaurus/plugin-google-gtag@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-google-gtag/-/plugin-google-gtag-2.4.0.tgz#a8efda476f971410dfb3aab1cfe1f0f7d269adc5"
   integrity sha512-adj/70DANaQs2+TF/nRdMezDXFAV/O/pjAbUgmKBlyOTq5qoMe0Tk4muvQIwWUmiUQxFJe+sKlZGM771ownyOg==

@@ -108,9 +108,9 @@ const config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-google-analytics',
+      '@docusaurus/plugin-google-gtag',
       {
-        trackingID: ['UA-64295674-3','G-J69Z2JCTFB']
+        trackingID: 'G-J69Z2JCTFB',
       },
     ],
     [
