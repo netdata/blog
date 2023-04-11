@@ -314,8 +314,8 @@ This configuration:
     can probably even push this all the way down to 1 second safely, but five seconds is a reasonable starting point.
 -   Sets up a series of charts for a number of basic system statistics. Where possible, the family and id values
     for these charts have been chosen to match up with native data collection charts that collect the same
-    information, allowing for sensible aggregation on [Netdata Cloud](https://www.netdata.cloud/) when using virtual nodes (see the next section
-    for more info about that).
+    information, allowing for sensible aggregation on [Netdata Cloud](https://www.netdata.cloud/) when using
+    virtual nodes (see [below](#virtual-nodes) for more info about that).
 
 ### Disk space monitoring
 
