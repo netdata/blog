@@ -2,11 +2,9 @@
 slug: netdata-ai-insights-rapid-diagnostics
 title: Netdata's AI Insights & Rapid Diagnostics
 authors: satya
+image: https://user-images.githubusercontent.com/96257330/233092330-e5288e31-2598-4148-8657-430c34549880.png
 tags: [monitoring-challenges, ai-insights, troubleshooting, rapid-troubleshooting, charts, visualisation]
 ---
-
-![image](https://user-images.githubusercontent.com/96257330/233092330-e5288e31-2598-4148-8657-430c34549880.png)
-
 <!--truncate-->
 
 ## A New Era in Monitoring Systems Dashboards
@@ -66,4 +64,7 @@ Each Netdata chart now becomes a powerful dashboard, capable of quickly, easily,
 
 In conclusion, Netdata's AI Insights & Rapid Diagnostics provide a powerful and intuitive solution to the challenges of traditional monitoring systems. With ML-based anomaly rate detection, the NIDL framework, and multi-dimensional group-by capabilities, our solution streamlines monitoring and troubleshooting, making it more efficient and effective than ever before.
 
+## Product Talk
+
+Join the Netdata team on the 20th of February, at 16:30 UTC in [Discord](https://discord.gg/fM5RQBzH?event=1097471931957121094) where we will be unveiling the new visualisation with innovative capabilities, and be the first to get a sneak peek and contribute with your valuable feedback for the team to tweak these features before releasing them to the public.
 
