@@ -72,5 +72,5 @@ In conclusion, Netdata's AI Insights & Rapid Diagnostics provide a powerful and 
 
 ## Product Talk
 
-Join the Netdata team on the 20th of February, at 16:30 UTC in [Discord](https://discord.gg/fM5RQBzH?event=1097471931957121094) where we will be unveiling the new visualisation with innovative capabilities, and be the first to get a sneak peek and contribute with your valuable feedback for the team to tweak these features before releasing them to the public.
+Join the Netdata team on the 20th of April, at 16:30 UTC in [Discord](https://discord.gg/fM5RQBzH?event=1097471931957121094) where we will be unveiling the new visualisation with innovative capabilities, and be the first to get a sneak peek and contribute with your valuable feedback for the team to tweak these features before releasing them to the public.
 
