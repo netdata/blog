@@ -21,7 +21,7 @@ Here’s the caveat: Netdata has no native Windows monitoring agent. We decided 
 
 And despite the lack of native support, we’ve developed a few unique and fully-capable ways to help you get visibility into system- and application-level metrics from your Windows machines.
 
-To monitor Windows systems with Netdata, you must <a title="install" href="https://learn.netdata.cloudu/docs/get" target="_blank" rel="noopener noreferrer">install</a> the open-source <a title="Netdata Agent" href="https://github.com/netdata/netdata" target="_blank" rel="noopener noreferrer">Netdata Agent</a> on a compatible system, which you will use to remotely collect the exposed metrics from your Windows hosts and the applications they run. You have a few options:
+To monitor Windows systems with Netdata, you must <a title="install" href="https://learn.netdata.cloud/docs/get" target="_blank" rel="noopener noreferrer">install</a> the open-source <a title="Netdata Agent" href="https://github.com/netdata/netdata" target="_blank" rel="noopener noreferrer">Netdata Agent</a> on a compatible system, which you will use to remotely collect the exposed metrics from your Windows hosts and the applications they run. You have a few options:
 <ul>
  	<li>A separate node running Linux or a different supported operating system.</li>
  	<li>A VM running a supported operating system on your Windows host.</li>
