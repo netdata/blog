@@ -41,9 +41,9 @@ Here are some options that can help reduce the impact of context switching on sy
 
 - **Avoid unnecessary context switches:** Again for developers: context switching can be triggered unnecessarily by interrupting processes or threads that are waiting for I/O. You can avoid this by using non-blocking I/O operations or by using asynchronous I/O operations.
 
-- **Use CPU affinity:** CPU affinity is a technique that assigns a specific CPU to a process or thread. This can reduce the frequency of context switching and improve cache utilization.
+- **Use CPU affinity:** [CPU affinity](https://en.wikipedia.org/wiki/Processor_affinity) is a technique that assigns a specific CPU to a process or thread. This can reduce the frequency of context switching and improve cache utilization.
 
-- **Use NUMA-aware scheduling:** NUMA (Non-Uniform Memory Access) architectures have multiple memory nodes, and scheduling processes and threads to run on the same memory node as their data can reduce the frequency of remote memory accesses and improve performance.
+- **Use NUMA-aware scheduling:** [NUMA (Non-Uniform Memory Access) architectures](https://en.wikipedia.org/wiki/Non-uniform_memory_access) have multiple memory nodes, and scheduling processes and threads to run on the same memory node as their data can reduce the frequency of remote memory accesses and improve performance.
 
 - **Use real-time scheduling:** Real-time scheduling policies can give priority to time-critical processes, reducing context switching and ensuring that the most important tasks are completed on time.
 
