@@ -1,7 +1,7 @@
 ---
 slug: understanding-linux-cpu-consumption-load-and-pressure-for-performance-optimisation
 title: Understanding Linux CPU Consumption, Load, and Pressure for Performance Optimization
-authors: costa
+authors: satya
 tags: [cpu-consumption, cpu-load, cpu-pressure, performance-optimisation]
 keywords: [cpu-consumption, cpu-load, cpu-pressure, performance-optimisation]
 image: ./img/stacked-netdata.png
@@ -131,17 +131,17 @@ First verify that the system is under high CPU utilization:
   ![system-load](./img/system-load.png)
   Once you have verified the high CPU utilization on the system, you can identify the processes causing it, using the following:
 
-- **Check the apps.cpu chart**: Next, check the apps.cpu chart to see which applications or groups of applications are using the most CPU resources.
-
-If you get high cpu usage on the dimension `other` of the `apps.cpu` chart, you are running an application that Netdata does not know. You can check which processes are accumulated into dimension `other` using the function “Processes” on Netdata Cloud. Once you have identified the processes that need to be monitored, edit `/etc/netdata/apps_groups.conf` to add your application and restart Netdata to start monitoring its resource consumption.
-
+- **Check the apps.cpu chart**: Next, check the apps.cpu chart to see which applications or groups of applications are using the most CPU resources. 
+If you get high cpu usage on the dimension `other` of the `apps.cpu` chart, you are running an application that Netdata does not know. You can check which processes are accumulated into dimension `other` using the function “Processes” on Netdata Cloud. Once you have identified the processes that need to be monitored, edit `/etc/netdata/apps_groups.conf` to add your application and restart Netdata to start monitoring its resource consumption. 
 You may also consult the users.cpu and the group.cpu charts. These charts do not require any configuration, so as long as your application runs under its own user or user group, these charts will automatically monitor it.
-
+![apps-cpu](./img/apps-cpu.png)
 
 - **Check the services.cpu chart**: If you're using systemd, check the services.cpu chart to see which systemd services are consuming the most CPU resources. This can help you identify which system components or functions are causing high CPU utilization.
+![services-cpu](./img/services-cpu.png)
 
 
 - **Check the cgroups.cpu charts**: If you're using containers or virtual machines, check the cgroups.cpu chart to see how CPU resources are being utilized by different cgroups. This can help you identify any issues with container or VM performance that may be contributing to high CPU utilization.
+![cgroups-cpu](./img/cgroups-cpu.png)
 
 By using these charts in Netdata, you can get a comprehensive view of how the CPU is being used on your systems and identify the root cause of high CPU utilization.
 
