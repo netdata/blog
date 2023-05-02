@@ -13,7 +13,7 @@ Context switching is the process of switching the CPU from one process, task or 
 
 Context switching is an essential function of any multitasking operating system, but it also comes at a cost. The whole process is computationally intensive, and the more context switches that occur, the slower the system becomes. This is because each context switch involves saving the current state of the CPU, loading the state of the new process or thread, and then resuming execution of the new process or thread. This takes time and consumes CPU resources, which can slow down the system.
 
-The impact of context switching on system performance can be significant, especially in systems with many processes or threads running simultaneously. 
+The impact of context switching on system performance can be significant, especially in systems with many processes or threads running simultaneously.
 
 <!-- truncate -->
 
@@ -25,7 +25,7 @@ One way to detect thrashing is by monitoring the system's performance metrics, s
 
 Another way to detect thrashing is by monitoring the number of context switches per second using tools like netdata. A sudden increase in context switches, especially when accompanied by a decrease in system performance, can be a sign of thrashing.
 
-In addition, monitoring the number of processes in the run queue (Runnable dimension in system.processes_state chart), the number of TASKLET and SCHED softirqs, as well as the time spent handling these softirqs, you can identify if there is a high level of task scheduling activity on the system.
+In addition, monitoring the number of processes in the run queue (Runnable dimension in `system.processes_state chart`), the number of TASKLET and SCHED softirqs, as well as the time spent handling these softirqs, you can identify if there is a high level of task scheduling activity on the system.
 
 In summary, detecting thrashing can be challenging, but monitoring the system's performance metrics, the number of context switches per second, the number of processes in the run queue, and the average time spent in the scheduler can help to identify its presence. By optimizing the performance of the processes or threads that are causing the most context switches, you may be able to alleviate the thrashing and improve system performance.
 
