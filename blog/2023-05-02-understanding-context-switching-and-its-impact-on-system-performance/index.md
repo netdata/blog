@@ -25,12 +25,13 @@ One way to detect thrashing is by monitoring the system's performance metrics, s
 
 Another way to detect thrashing is by monitoring the number of context switches per second using tools like Netdata. A sudden increase in context switches, especially when accompanied by a decrease in system performance, can be a sign of thrashing.
 
-In addition, monitoring the number of processes in the run queue via the `runnable` dimension in the `system.processes_state chart`, the number of `TASKLET` and `SCHED` softirqs, as well as the time spent handling these softirqs, you can identify if there is a high level of task scheduling activity on the system.
+In addition, monitoring the number of processes in the run queue via the `runnable` dimension in the `system.processes_state` chart, the number of `TASKLET` and `SCHED` softirqs, as well as the time spent handling these softirqs, you can identify if there is a high level of task scheduling activity on the system.
 
 In summary, detecting thrashing can be challenging, but monitoring the system's performance metrics, the number of context switches per second, the number of processes in the run queue, and the average time spent in the scheduler can help to identify its presence. By optimizing the performance of the processes or threads that are causing the most context switches, you may be able to alleviate the thrashing and improve system performance.
 
 ## How to reduce the impact of context switching?
 
+It's worth noting that some of these options may not be appropriate for all systems and applications, and the best approach will depend on the specific requirements and constraints of your system.
 Here are some options that can help reduce the impact of context switching on system performance:
 
 - **Increase CPU and memory resources:** More CPU and memory resources can reduce the frequency of context switching and provide more room for the system to handle multiple tasks simultaneously.
@@ -46,7 +47,5 @@ Here are some options that can help reduce the impact of context switching on sy
 - **Use NUMA-aware scheduling:** [NUMA (Non-Uniform Memory Access) architectures](https://en.wikipedia.org/wiki/Non-uniform_memory_access) have multiple memory nodes, and scheduling processes and threads to run on the same memory node as their data can reduce the frequency of remote memory accesses and improve performance.
 
 - **Use real-time scheduling:** Real-time scheduling policies can give priority to time-critical processes, reducing context switching and ensuring that the most important tasks are completed on time.
-
-It's worth noting that some of these options may not be appropriate for all systems and applications, and the best approach will depend on the specific requirements and constraints of your system.
 
 In conclusion, context switching is an essential function of any multitasking operating system, but it also comes at a cost. Excessive context switching can slow down the system and even lead to unresponsiveness. By monitoring the context switches chart and taking steps to optimize process and thread performance, system administrators and developers can ensure that their systems are running efficiently and smoothly.
