@@ -29,6 +29,8 @@ Swap memory, also known as virtual memory, is a space on a hard disk that is use
 
 3. The system may become unresponsive or crash if the swap space is not sufficient to handle the amount of data being moved from physical memory.
 
+## Factors to consider enabling swap memory
+
 Whether or not to enable swap memory on a production system depends on various factors, such as the amount of physical memory available, the nature of the workload, and the system's overall performance requirements.
 
 For example, a system with a large amount of physical memory may not need swap memory at all. On the other hand, a system with only a few gigabytes of RAM running a workload that frequently exceeds that amount may benefit from having swap memory enabled. Certain workloads may be more memory-intensive than others, which can impact the need for swap memory. For instance, a server that frequently processes large datasets may benefit from having swap memory enabled, as it may need to keep more data in memory than is physically available.
