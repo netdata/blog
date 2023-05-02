@@ -15,8 +15,6 @@ Swap memory, also known as virtual memory, is a space on a hard disk that is use
 
 ## Pros of enabling swap memory
 
-CPU consumption refers to the amount of processing power being used by applications running on your system.  The `system.cpu` chart in Netdata represents the Total CPU utilization of your Linux system, broken down into different dimensions. Each dimension provides insight into how the CPU is being used by various tasks and processes. Here's a brief explanation of each dimension:
-
 1. Enables the system to continue functioning when it runs out of physical memory by allowing less frequently accessed data to be moved to the swap space.
 
 2. Allows the system to run more applications than it could with just physical memory alone.
