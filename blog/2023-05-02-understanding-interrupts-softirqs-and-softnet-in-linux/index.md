@@ -33,7 +33,7 @@ Although most interrupts are associated with specific devices, there are a few i
 
 
 
-## Why are Interrupts Important for Cloud VMs?
+### Interrupts on Cloud VMs
 
 In cloud environments, virtual machines (VMs) are typically running on a physical host system that is managed by the cloud provider. When a hardware device generates an interrupt, it is sent to the physical host system. The host system then forwards the interrupt to the appropriate virtual machine. The virtual machine then handles the interrupt as if it were running on physical hardware.
 
