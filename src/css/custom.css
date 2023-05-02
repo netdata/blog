@@ -17,6 +17,29 @@
 
 }
 
+@media screen and (max-width: 996px) {
+	.navbar-sidebar{
+		visibility: visible;
+	}
+
+	.navbar__logo{
+		width: 100px;
+	}
+	.navbar-item{
+		visibility: hidden;
+	};
+	.navbar__logo{
+		width: 10px;
+	}
+	.navbar__item {
+		visibility: hidden
+	}
+
+	.navbar__link{
+		visibility: hidden
+	}
+}
+
 .dropdown__menu {
 	background-color: #181c20;
 }
