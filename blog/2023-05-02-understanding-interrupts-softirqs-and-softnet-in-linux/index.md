@@ -101,4 +101,4 @@ Netdata is a powerful real-time performance monitoring tool that can provide ins
 To monitor interrupts, softirqs, and softnet in Netdata for cloud VMs, you can navigate to the `System Overview` dashboard and look for the relevant charts. These charts can show you the current values for these metrics, as well as historical trends over time.
 
 By monitoring interrupts, softirqs, and softnet per core at the CPUs section, you can identify which CPU cores are experiencing the highest levels of activity.
-
+![image](https://user-images.githubusercontent.com/43294513/235747305-9f5c8d3a-4e76-43b1-882c-3b1307f1dd41.png)
