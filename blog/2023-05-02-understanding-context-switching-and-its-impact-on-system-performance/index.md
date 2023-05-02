@@ -25,7 +25,7 @@ One way to detect thrashing is by monitoring the system's performance metrics, s
 
 Another way to detect thrashing is by monitoring the number of context switches per second using tools like Netdata. A sudden increase in context switches, especially when accompanied by a decrease in system performance, can be a sign of thrashing.
 
-In addition, monitoring the number of processes in the run queue (Runnable dimension in `system.processes_state chart`), the number of TASKLET and SCHED softirqs, as well as the time spent handling these softirqs, you can identify if there is a high level of task scheduling activity on the system.
+In addition, monitoring the number of processes in the run queue via the `runnable` dimension in the `system.processes_state chart`, the number of `TASKLET` and `SCHED` softirqs, as well as the time spent handling these softirqs, you can identify if there is a high level of task scheduling activity on the system.
 
 In summary, detecting thrashing can be challenging, but monitoring the system's performance metrics, the number of context switches per second, the number of processes in the run queue, and the average time spent in the scheduler can help to identify its presence. By optimizing the performance of the processes or threads that are causing the most context switches, you may be able to alleviate the thrashing and improve system performance.
 
