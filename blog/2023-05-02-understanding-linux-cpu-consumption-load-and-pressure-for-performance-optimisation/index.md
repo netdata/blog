@@ -15,42 +15,33 @@ As a system administrator, understanding how your Linux system's CPU is being ut
 
 ## CPU Consumption and Utilization
 
-CPU consumption refers to the amount of processing power being used by applications running on your system.  The system.cpu chart in Netdata represents the Total CPU utilization of your Linux system, broken down into different dimensions. Each dimension provides insight into how the CPU is being used by various tasks and processes. Here's a brief explanation of each dimension:
+CPU consumption refers to the amount of processing power being used by applications running on your system.  The `system.cpu` chart in Netdata represents the Total CPU utilization of your Linux system, broken down into different dimensions. Each dimension provides insight into how the CPU is being used by various tasks and processes. Here's a brief explanation of each dimension:
 
 1. **user**: This dimension represents the percentage of CPU time spent executing user-level applications or processes (i.e., non-kernel code). It indicates the share of time the CPU is busy running tasks initiated by users.
 
-
 2. **system**: This dimension represents the percentage of CPU time spent executing kernel-level processes, such as handling system calls, managing memory, or controlling hardware. It reflects the share of time the CPU is busy with system-level tasks.
-
 
 3. **nice**: This dimension represents the percentage of CPU time spent executing user-level processes with a positive nice value, which indicates a lower priority. A high nice value can suggest that lower-priority tasks are consuming a significant portion of the CPU time.
 
-
 4. **iowait**: This dimension represents the percentage of CPU time spent waiting for input/output (I/O) operations to complete, such as disk or network access. High iowait values can indicate I/O-bound tasks, slow storage devices, or storage subsystem issues.
-
 
 5. **irq**: This dimension represents the percentage of CPU time spent handling hardware interrupt requests (IRQs), which are signals sent by hardware devices to the CPU to request attention. High irq values can suggest that the system is spending a significant amount of time responding to hardware events.
 
-
 6. **softirq**: This dimension represents the percentage of CPU time spent handling software interrupt requests (soft IRQs), which are kernel-level processes that handle specific hardware-related tasks, such as network packet processing. High softirq values can indicate that the system is spending a considerable amount of time processing software interrupts.
-
 
 7. **steal**: This dimension represents the percentage of CPU time that is "stolen" by the hypervisor (in virtualized environments) for other virtual machines (VMs) running on the same physical host. High steal values can indicate resource contention among VMs or insufficient resources allocated to your VM.
 
-
 8. **guest**: This dimension represents the percentage of CPU time spent on running virtual CPU processes for guest VMs in a virtualized environment. High guest values indicate that the host system is dedicating a significant portion of CPU time to running guest VMs.
-
 
 9. **guest_nice**: This dimension represents the percentage of CPU time spent on running virtual CPU processes for guest VMs with a positive nice value, indicating lower priority.
 
-Internally in Netdata there is another dimension: idle, that represents the percentage of time that the CPU is not executing any process and is available for other tasks. iowait is also another dimension that represents idle CPU time, but in this case it also means reduced performance due to I/O and this is why they are separate.
+Internally in Netdata there is another dimension: `idle`, that represents the percentage of time that the CPU is not executing any process and is available for other tasks. `iowait` is also another dimension that represents idle CPU time, but in this case it also means reduced performance due to I/O and this is why they are separate.
 
-Keep in mind that Linux supports different schedulers and priority mechanisms apart from the nice value, such as the Completely Fair Scheduler (CFS), real-time schedulers (SCHED_FIFO and SCHED_RR), and the deadline scheduler (SCHED_DEADLINE). Each of these schedulers and priorities influences the dimensions in the system.cpu chart differently:
+Keep in mind that Linux supports different schedulers and priority mechanisms apart from the nice value, such as the Completely Fair Scheduler (CFS), real-time schedulers (SCHED_FIFO and SCHED_RR), and the deadline scheduler (SCHED_DEADLINE). Each of these schedulers and priorities influences the dimensions in the `system.cpu` chart differently:
 
-- **Completely Fair Scheduler (CFS)**: CFS is the default scheduler used in most Linux systems for normal, non-real-time tasks. It attempts to distribute CPU time fairly among all processes based on their assigned "weight" or "niceness". While CFS doesn't introduce additional dimensions to the system.cpu chart, it affects the distribution of CPU time between the user, system, and nice dimensions.
+- **Completely Fair Scheduler (CFS)**: CFS is the default scheduler used in most Linux systems for normal, non-real-time tasks. It attempts to distribute CPU time fairly among all processes based on their assigned "weight" or "niceness". While CFS doesn't introduce additional dimensions to the `system.cpu` chart, it affects the distribution of CPU time between the `user`, `system`, and `nice` dimensions.
 
-
-- **Real-time schedulers (SCHED_FIFO and SCHED_RR)**: Real-time schedulers are designed for time-critical tasks and can preempt other processes to ensure that high-priority real-time tasks receive the CPU time they need. When real-time tasks are running, they can increase the user or system dimensions in the system.cpu chart, depending on whether they are user-level or kernel-level tasks. Real-time tasks may cause other, lower-priority tasks to be delayed or starved for CPU time, which can lead to lower values in the nice dimension or increased iowait if they are waiting for I/O operations to complete.
+- **Real-time schedulers (SCHED_FIFO and SCHED_RR)**: Real-time schedulers are designed for time-critical tasks and can preempt other processes to ensure that high-priority real-time tasks receive the CPU time they need. When real-time tasks are running, they can increase the user or system dimensions in the `system.cpu` chart, depending on whether they are user-level or kernel-level tasks. Real-time tasks may cause other, lower-priority tasks to be delayed or starved for CPU time, which can lead to lower values in the `nice` dimension or increased `iowait` if they are waiting for I/O operations to complete.
 
 
 - **Deadline scheduler (SCHED_DEADLINE)**: The deadline scheduler assigns a deadline to each task and prioritizes them based on these deadlines. Tasks that are running with the deadline scheduler will also contribute to the user or system dimensions in the system.cpu chart. The deadline scheduler can affect the distribution of CPU time among tasks and may cause lower-priority tasks to experience increased iowait or decreased nice values if they are being preempted by higher-priority deadline tasks.

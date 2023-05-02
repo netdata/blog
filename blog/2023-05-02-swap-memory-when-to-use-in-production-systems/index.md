@@ -15,7 +15,7 @@ Swap memory, also known as virtual memory, is a space on a hard disk that is use
 
 ## Pros of enabling swap memory
 
-CPU consumption refers to the amount of processing power being used by applications running on your system.  The system.cpu chart in Netdata represents the Total CPU utilization of your Linux system, broken down into different dimensions. Each dimension provides insight into how the CPU is being used by various tasks and processes. Here's a brief explanation of each dimension:
+CPU consumption refers to the amount of processing power being used by applications running on your system.  The `system.cpu` chart in Netdata represents the Total CPU utilization of your Linux system, broken down into different dimensions. Each dimension provides insight into how the CPU is being used by various tasks and processes. Here's a brief explanation of each dimension:
 
 1. Enables the system to continue functioning when it runs out of physical memory by allowing less frequently accessed data to be moved to the swap space.
 
@@ -42,4 +42,3 @@ In the case of cloud-provided virtual machines (VMs), the decision to enable swa
 Enabling swap memory on a cloud-provided VM can also have performance implications. If the VM is running on shared infrastructure, excessive swapping can impact the performance of other VMs running on the same physical server. It's important to carefully evaluate the specific requirements of the workload, the resources available in the VM, and the performance implications of enabling swap memory before making a decision.
 
 In conclusion, whether or not to enable swap memory on a production system or cloud-provided VM depends on various factors, and it's essential to carefully evaluate these factors before making a decision. Monitoring the system's memory usage and swap usage regularly can also help ensure that the system is not excessively swapping and that enabling swap memory is not impacting overall system performance.
-
