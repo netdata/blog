@@ -9,7 +9,7 @@ image: ./img/stacked-netdata.png
 
 ![stacked-netdata](./img/stacked-netdata.png)
 
-Interrupts, softirqs, and softnet are all critical parts of the Linux kernel that can impact system performance. In this blog post, we'll explore interrupts, softirqs, and softnet in Linux, and discuss how to monitor these metrics using Netdata for both bare-metal servers and VMs.
+Interrupts, softirqs, and softnet are all critical parts of the Linux kernel that can impact system performance. In this blog post, we'll explore their usefulness, and discuss how to monitor them using Netdata for both bare-metal servers and VMs.
 
 <!-- truncate -->
 
