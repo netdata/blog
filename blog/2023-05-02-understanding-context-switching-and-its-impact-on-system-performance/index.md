@@ -23,7 +23,7 @@ Thrashing is a phenomenon where the system spends more time switching between pr
 
 One way to detect thrashing is by monitoring the system's performance metrics, such as CPU utilization, disk I/O, and memory usage. If these metrics are consistently high, while the system is slow or unresponsive, it may be an indication of thrashing.
 
-Another way to detect thrashing is by monitoring the number of context switches per second using tools like netdata. A sudden increase in context switches, especially when accompanied by a decrease in system performance, can be a sign of thrashing.
+Another way to detect thrashing is by monitoring the number of context switches per second using tools like Netdata. A sudden increase in context switches, especially when accompanied by a decrease in system performance, can be a sign of thrashing.
 
 In addition, monitoring the number of processes in the run queue (Runnable dimension in `system.processes_state chart`), the number of TASKLET and SCHED softirqs, as well as the time spent handling these softirqs, you can identify if there is a high level of task scheduling activity on the system.
 
