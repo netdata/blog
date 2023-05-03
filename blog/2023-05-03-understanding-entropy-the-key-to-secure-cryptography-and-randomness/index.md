@@ -97,15 +97,15 @@ Most cloud providers recognize the importance of hardware-generated entropy for 
 
 In general, cloud providers expose this entropy to VMs through virtual devices or interfaces. This allows VMs to access the hardware-generated entropy as if it were a local resource.
 
-- **AWS (Amazon Web Services)**
+- **AWS (Amazon Web Services):**
     AWS uses its Nitro System, which includes a dedicated hardware random number generator (HRNG), to provide hardware-generated entropy to the VMs (EC2 instances). In Linux-based EC2 instances, the HRNG is exposed through the /dev/hwrng device file. The guest OS can then use this source of entropy to seed its own random number generator.
 
 
-- **GCP (Google Cloud Platform)**
+- **GCP (Google Cloud Platform):**
     GCP offers access to hardware-generated entropy through a service called Virtio RNG (Random Number Generator). This service is enabled by default for Linux-based VMs running on the platform. The guest OS can access the hardware-generated entropy through the /dev/hwrng device file, similar to AWS.
 
 
-- **Azure (Microsoft Azure)**
+- **Azure (Microsoft Azure):**
     Azure also provides hardware-generated entropy to its VMs. For Linux-based VMs, Azure exposes the hardware-generated entropy through the /dev/hwrng device file. In the case of Windows-based VMs, Azure provides the hardware-generated entropy through the Cryptographic API (CryptoAPI) and Cryptography API: Next Generation (CNG).
 
 ## Entropy in KVM VMs
