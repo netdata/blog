@@ -13,7 +13,7 @@ Server uptime monitoring tracks the availability and reliability of servers with
 
 <!-- truncate -->
 
-## Why Server uptime monitoring is important?
+## Why is Server Uptime Monitoring Important?
 
 Servers are crucial to the operation of many applications and services, making their uptime a critical aspect of overall system performance. Here are some reasons why server uptime monitoring is important:
 
