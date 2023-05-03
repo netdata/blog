@@ -141,3 +141,5 @@ Netdata Function “Processes” provides also an alternative way of checking th
 Function “Processes” provides a top-like view, listing and sorting individual processes based on their CPU consumption, memory consumption, I/O and more.
 
 Although Functions cannot provide historical data, it can be a great tool for identifying the specific processes that currently cause high CPU utilization.
+
+![netdata-functions](./img/functions.png)
