@@ -9,7 +9,7 @@ image: ./img/stacked-netdata.png
 
 ![stacked-netdata](./img/stacked-netdata.png)
 
-Entropy is a measure of the randomness or unpredictability of data. In the context of cryptography, entropy is used to generate random numbers or keys that are essential for secure communication and encryption. Without a good source of entropy, cryptographic protocols can become vulnerable to attacks that exploit the predictability of the generated keys.
+[Entropy](https://en.wikipedia.org/wiki/Entropy_(computing)) is a measure of the randomness or unpredictability of data. In the context of cryptography, entropy is used to generate random numbers or keys that are essential for secure communication and encryption. Without a good source of entropy, cryptographic protocols can become vulnerable to attacks that exploit the predictability of the generated keys.
 
 <!-- truncate -->
 
