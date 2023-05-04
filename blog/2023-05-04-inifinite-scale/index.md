@@ -34,12 +34,12 @@ The Open-Source Netdata is able to ingest millions of active metrics (concurrent
 
 To achieve this level of scalability, Netdata uses sophisticated mechanisms that allow it to make the best use of the system resources available:
 
-1. **NIDL framework** 
+#### **NIDL framework** 
 Netdata's data collection protocol uses the NIDL (Nodes, Instances, Dimensions, Labels) framework, minimizing overhead for processing vast amounts of metrics with extensive metadata. Metrics values are associated with Dimensions. Dimensions belong to Instances. Instances have labels. Instances belong to Nodes. Nodes have more labels. 
  
 With the NIDL framework, data collection happens in 2 phases: definition of Nodes, Instances, Dimensions and Labels is executed independently of ingesting data collection samples for them, allowing ingestion of collected metrics to run at full speed, without the need for processing metadata on every sample. 
 
-2. **Data collection efficiency** 
+#### **Data collection efficiency** 
 Netdata’s database engine uses paging for each metric. So, each metric collected has a page in memory where collected samples are appended. When that page becomes full, it is added to an extent together with pages of other metrics, which is then compressed and stored to disk. 
  
 To improve query performance, metrics of the chart share a correlation id, which is used during extent construction to select per extent metric of the same chart. 
@@ -48,23 +48,24 @@ When collecting millions of metrics per second, it is crucial the “page full�
  
 The full pages that have been committed to disk are of two kinds: either they have a size that could be reusable for another metric, or they are some custom size that was required to control the anniversary of the metric. The reusable ones are managed by a special array allocator with a single thread performance 4x the glibc one, but which also achieves 2x its single thread performance when multi-threaded. Of course this uses more memory, but it is a tradeoff of some temporary memory for a lot faster allocations. 
  
-With this setup, Netdata can run amazingly fast while ingesting metrics. \
+With this setup, Netdata can run amazingly fast while ingesting metrics. 
 
-3. **Database storage** 
+#### **Database storage** 
 Committing metrics to disk is handled by independent workers that do not interfere with data collection. So, while data collection is filling up the next pages, other threads are aggregating full pages into extents, compressing them and saving them to disk. 
  
 Similarly, at query time Netdata uses a prioritized pipeline to satisfy loading, uncompressing and caching of each metric page. While the query engine executes the query on one metrics, the other metrics required for the same query are loaded from disk using independent workers, in parallel. 
-4. **Database rotation** 
+
+#### **Database rotation** 
 Database rotation is handled automatically by the disk workers and is totally independent and transparent to data collection. To simplify database rotation, Netdata creates new data files and when the total capacity of them on disk reaches a certain point, a new data file is added while the oldest data file is removed. 
  
 The same workers are also responsible for updating the metrics registry for the retention available for each metric, synchronizing the metadata required for data queries. 
 
-5. **Database tiering** 
+#### **Database tiering** 
 Netdata can maintain a very long retention of the collected data, with its ability to aggregate collected points. Unlike other solutions that downsample data, Netdata aggregates the collected points. So, although it loses the ability to provide a time-series for the aggregated points, it still maintains the minimum value, the maximum value, the average value, the number of points aggregated and the number of points that were anomalous. 
  
 Database tiers are different database instances. The data collection mechanism automatically maintains up to 5 aggregations of all samples collected, each aggregation associated with a different database instance, following its own paging, saving, and rotation mechanisms. 
 
-6. **Sophisticated caching** 
+#### **Sophisticated caching** 
 Each Netdata agent includes a sophisticated query engine, capable of querying at scale, dozens of millions of points per second. To achieve this scalability, Netdata uses several indexes for the metadata and 3 levels of caches for metric data. 
  
 For caching, Netdata uses 3 distincts caches: The **main page cache** which stores the pages currently being collected and pages recently used. The **open data file page cache** which stores metadata for the pages committed to the currently open data files. The **extent cache** which stores compressed extents loaded from disk. This chorus of caches is designed in a way to optimize speed and efficiency even on slow disks, allowing Netdata to achieve extreme cache efficiency and query performance, even on rare or unusual use cases. 
@@ -76,7 +77,7 @@ Netdata has been designed to scale horizontally infinitely.
 
 ![image](https://user-images.githubusercontent.com/2662304/233838642-3b2c8284-3562-4db8-87fa-e432643c39ed.png)
 
-1. **High performance streaming and metrics replication** 
+#### **High performance streaming and metrics replication** 
 Each Open-Source Netdata Agent is able to act as a data collection agent for the node it runs on, but also as a “parent” for other Netdata agents, ingesting in real-time their metrics and maintaining a retention for them. 
  
 Using streaming, engineers can create multiple metrics centralization points within their infrastructure, aggregating metrics from nearby nodes and offloading production systems. 
@@ -97,12 +98,12 @@ This feature is used for:
  
 Netdata allows the configuration of active-active parent clusters, so that all parents in the cluster will have all the data of all nodes and any Netdata Agent pushing metrics to them can use any of the parents to send its metrics. 
 
-2. **Distributed data collection** 
+#### **Distributed data collection** 
 When using centralization points, each data collecting Netdata Agent is pre-processing and normalizing collected data, parsing metadata and labels, and interpolating collected values so that everything is ready for storage. 
 
 Centralization points (the Netdata Parents) are receiving metrics ready to be stored to their database. This process allows Netdata Parents to ingest several millions of points per second, using the minimum of system resources. 
 
-3. **Distributed querying** 
+#### **Distributed querying** 
 Although the query performance of each Netdata Agent is exceptional, Netdata further improves its query scalability with its ability to query in parallel multiple agents and merge their results for each chart to be presented on a dashboard. 
  
 When Netdata Cloud receives a data query request, it first goes through a routing decision. This routing decision distributes the request to multiple Netdata Agents, each of which is executing the part of the query it has data for. Netdata Cloud then receives all the responses back, merges the results into a single response which it sends back to the dashboard for visualization. 
