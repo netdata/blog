@@ -174,7 +174,7 @@ There is currently a lot of activity around THP. More and more kernel patches, (
 
 ## How can Netdata help?
 
-In the “Memory” section of the dashboard, the “hupegapes” subsection will automatically appear if THP is enabled on a system.
+In the “Memory” section of the dashboard, the “hupepages” subsection will automatically appear if THP is enabled on a system.
 
 The first chart shows the current THP memory. In this specific instance, we see how THP compacts small 4KB pages into 2MB huge pages over time. This process is totally transparent to the applications running.
 
