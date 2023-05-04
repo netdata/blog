@@ -211,7 +211,7 @@ Node 0, zone   Normal -1.000 -1.000 -1.000 -1.000 -1.000 -1.000 -1.000 -1.000 -1
 ```
 
 
-When the index is closer to 0, the more the memory allocation is likely to fail due to insufficient memory. When the index is closer to 1000, the more the allocation is likely to fail due to excessive external fragmentation. An index of -1 means that allocations will not fail.
+The closer the index is to 0, the more the memory allocation is likely to fail due to insufficient memory. When the index is closer to 1000, the more the allocation is likely to fail due to excessive external fragmentation. An index of -1 means that allocations will not fail.
 
 
 ## Disabling THP
