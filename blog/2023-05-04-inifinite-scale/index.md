@@ -108,7 +108,7 @@ To minimize the bandwidth required between Netdata Agents and Netdata Cloud, the
  
 Using this process Netdata can scale horizontally infinitely, while maintaining very fast, low latency queries.
 
-### In Conclusion
+### Time for a truly scalable monitoring solution
 
 The challenges of scalability in monitoring systems cannot be overstated. As modern infrastructures continue to evolve and grow in complexity, the need for scalable monitoring solutions becomes increasingly critical. A truly scalable monitoring system must be able to handle high data volume and velocity, optimize resource utilization, overcome architectural limitations, efficiently store and retrieve time-series data, support horizontal scaling, and accommodate distributed querying.
 
