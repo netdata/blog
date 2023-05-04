@@ -23,28 +23,28 @@ The slab allocator consists of three main components:
 
 
 
-- **Cache**: A cache is a collection of slabs that store objects of the same type and size. \
+- **Cache**: A cache is a collection of slabs that store objects of the same type and size.
 
-- **Slab**: A slab is a contiguous block of memory that contains multiple instances of the same object type. It can be in one of three states: full (no free objects), partial (some free objects), or empty (all objects are free). \
+- **Slab**: A slab is a contiguous block of memory that contains multiple instances of the same object type. It can be in one of three states: full (no free objects), partial (some free objects), or empty (all objects are free).
 
-- **Object**: An object is an instance of a kernel data structure, such as inode, dentry, or buffer_head. \
+- **Object**: An object is an instance of a kernel data structure, such as inode, dentry, or buffer_head.
 
 When the kernel requires a new object, it checks if there is a free object in the corresponding cache. If not, it allocates a new slab and populates it with objects.
 
 
 ### How to interpret Slab patterns
 
-- A steady or moderate increase in Slab memory usage is normal, as the kernel caches data structures for better performance. \
+- A steady or moderate increase in Slab memory usage is normal, as the kernel caches data structures for better performance.
 
-- A sudden spike or continuous growth in Slab memory usage might indicate a memory leak or excessive caching, which could impact system performance or cause out-of-memory issues. \
+- A sudden spike or continuous growth in Slab memory usage might indicate a memory leak or excessive caching, which could impact system performance or cause out-of-memory issues.
 
 
 ### Physical servers, VMs and containers
 
 
-- Hardware devices and drivers may require kernel objects, which can increase Slab memory usage. \
+- Hardware devices and drivers may require kernel objects, which can increase Slab memory usage.
 
-- In VMs, hardware emulation and additional drivers may lead to increased Slab memory usage compared to physical systems. \
+- In VMs, hardware emulation and additional drivers may lead to increased Slab memory usage compared to physical systems.
 
 - When running containers, keep in mind they use kernel objects for various purposes, such as network or storage management, which can increase Slab memory usage.
 
@@ -59,18 +59,18 @@ Vmalloc uses a technique called "paging" to map non-contiguous physical memory t
 ### How to interpret VmallocUsed patterns?
 
 
-- A low to moderate VmallocUsed value is normal for most systems, as the kernel typically uses vmalloc for specific purposes when contiguous memory is not available. \
+- A low to moderate VmallocUsed value is normal for most systems, as the kernel typically uses vmalloc for specific purposes when contiguous memory is not available.
 
 - A high VmallocUsed value, especially if it grows continuously, could indicate an issue with memory fragmentation, a memory leak, or excessive use of non-contiguous memory allocations.
 
 
 ### Physical servers, VMs and containers
 
-- Hardware with large address spaces, such as NUMA systems, may require more extensive use of vmalloc, impacting the VmallocUsed metric. \
+- Hardware with large address spaces, such as NUMA systems, may require more extensive use of vmalloc, impacting the VmallocUsed metric.
 
-- VMs may have different memory allocation characteristics, which could affect the usage of vmalloc. For example, the hypervisor may have limited contiguous memory available, causing the kernel to use vmalloc more frequently. \
+- VMs may have different memory allocation characteristics, which could affect the usage of vmalloc. For example, the hypervisor may have limited contiguous memory available, causing the kernel to use vmalloc more frequently.
 
-- Container runtimes or the workloads running inside the containers might allocate large memory regions, increasing VmallocUsed. Also host systems running containers with limited contiguous memory might lead to increased VmallocUsed. \
+- Container runtimes or the workloads running inside the containers might allocate large memory regions, increasing VmallocUsed. Also host systems running containers with limited contiguous memory might lead to increased VmallocUsed.
 
 
 ## KernelStack
@@ -83,18 +83,18 @@ Kernel stacks are essential for task management and context switching. When the 
 ### How to interpret KernelStack patterns
 
 
-- KernelStack memory usage depends on the number of tasks or threads the kernel is managing. In general, a moderate and stable KernelStack value is normal. \
+- KernelStack memory usage depends on the number of tasks or threads the kernel is managing. In general, a moderate and stable KernelStack value is normal.
 
 - A sudden increase or continuous growth in KernelStack memory usage might suggest an issue with task management, such as too many threads being spawned or a memory leak in the kernel stacks.
 
 
 ### Physical servers, VMs and containers
 
-- The number of kernel tasks and threads depends on the hardware and the workload. A system with more CPU cores or devices may require more kernel threads, increasing KernelStack memory usage. \
+- The number of kernel tasks and threads depends on the hardware and the workload. A system with more CPU cores or devices may require more kernel threads, increasing KernelStack memory usage.
 
-- In VMs, the hypervisor and additional virtual devices may generate more kernel tasks and threads, leading to increased KernelStack memory usage. \
+- In VMs, the hypervisor and additional virtual devices may generate more kernel tasks and threads, leading to increased KernelStack memory usage.
 
-- Container runtimes and the workloads running inside the containers might generate additional kernel tasks and threads, increasing KernelStack memory usage. Also, running multiple containers on a single host might increase the number of kernel tasks and threads, impacting KernelStack memory usage. \
+- Container runtimes and the workloads running inside the containers might generate additional kernel tasks and threads, increasing KernelStack memory usage. Also, running multiple containers on a single host might increase the number of kernel tasks and threads, impacting KernelStack memory usage.
 
 
 
@@ -108,18 +108,18 @@ In x86-64 architecture, there are four levels of page tables: PGD (Page Global D
 
 ### How to interpret PageTables patterns
 
-- PageTables memory usage is related to the number of mappings between virtual and physical memory addresses. A moderate and stable value is normal. \
+- PageTables memory usage is related to the number of mappings between virtual and physical memory addresses. A moderate and stable value is normal.
 
 - A sudden increase or continuous growth in PageTables memory usage could indicate an issue with memory mapping, such as a large number of small memory allocations or a memory leak in the page table entries.
 
 
 ### Physical servers, VMs and containers
 
-- Hardware with larger address spaces or more devices may require more extensive memory mapping, affecting PageTables memory usage. \
+- Hardware with larger address spaces or more devices may require more extensive memory mapping, affecting PageTables memory usage.
 
-- VMs running on hypervisors with hardware-assisted virtualization (e.g., Intel EPT or AMD NPT) may have different memory mapping behavior, impacting PageTables memory usage. \
+- VMs running on hypervisors with hardware-assisted virtualization (e.g., Intel EPT or AMD NPT) may have different memory mapping behavior, impacting PageTables memory usage.
 
-- Running containers with isolated memory namespaces may increase the number of memory mappings, affecting PageTables memory usage. Also, container runtimes or workloads with a large number of small memory allocations might increase PageTables memory usage. \
+- Running containers with isolated memory namespaces may increase the number of memory mappings, affecting PageTables memory usage. Also, container runtimes or workloads with a large number of small memory allocations might increase PageTables memory usage.
 
 
 ## PerCPU
@@ -134,7 +134,7 @@ When you create a per-CPU variable, the kernel allocates memory for each CPU cor
 ### How to interpret PerCPU patterns
 
 
-- PerCPU memory usage depends on the number of CPU cores and the amount of per-CPU data structures allocated. A stable and proportional value relative to the number of cores is normal. \
+- PerCPU memory usage depends on the number of CPU cores and the amount of per-CPU data structures allocated. A stable and proportional value relative to the number of cores is normal.
 
 - A sudden increase or continuous growth in PerCPU memory usage might suggest an issue with per-CPU data structures, such as a memory leak or excessive per-CPU allocations.
 
@@ -143,7 +143,7 @@ When you create a per-CPU variable, the kernel allocates memory for each CPU cor
 
 - Systems with more CPU cores will have higher PerCPU memory usage due to the per-CPU data structures allocated for each core. \
 
-- In VMs, the number of virtual CPU cores and the underlying physical CPU cores may affect PerCPU memory usage. Additionally, the hypervisor's handling of per-CPU data structures may influence this metric. \
+- In VMs, the number of virtual CPU cores and the underlying physical CPU cores may affect PerCPU memory usage. Additionally, the hypervisor's handling of per-CPU data structures may influence this metric.
 
 ### Conclusion
 
@@ -151,8 +151,8 @@ In conclusion, the `mem.kernel` chart in Netdata provides valuable insights into
 
 Interpreting these metrics requires considering the specific context of your system, including the hardware, the environment (such as running on a VM or in a Kubernetes cluster), and the expected behavior. In general, look for the following patterns:
 
-- Sudden spikes or drops in any of these dimensions, which could indicate an issue or an unexpected change in the system's behavior. \
+- Sudden spikes or drops in any of these dimensions, which could indicate an issue or an unexpected change in the system's behavior.
 
-- Continuous growth in any of these dimensions, which might suggest a memory leak or excessive resource usage. \
+- Continuous growth in any of these dimensions, which might suggest a memory leak or excessive resource usage.
 
 - Disproportionately high values compared to the system's hardware resources, workload, or historical trends, which could indicate inefficiencies that need to be investigated further.
