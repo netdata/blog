@@ -83,14 +83,17 @@ Using streaming, engineers can create multiple metrics centralization points wit
  
 This feature is used for: 
 
-    1. **Offloading production systems** 
-Netdata Agents installed on production systems can be configured to push their metrics to a nearby centralization point, delegating ML, alerting and retention to them, to free system resources and minimize the impact of monitoring on sensitive production applications. 
+   * **Offloading production systems**
+      
+      Netdata Agents installed on production systems can be configured to push their metrics to a nearby centralization point, delegating ML, alerting and retention to them, to free system resources and minimize the impact of monitoring on sensitive production applications. 
 
-    2. **Ephemeral nodes** 
-Ephemeral nodes can be configured to push their metrics to a nearby centralization point, so that their data will be available even after these nodes are not needed anymore. 
+   * **Ephemeral nodes**
+      
+      Ephemeral nodes can be configured to push their metrics to a nearby centralization point, so that their data will be available even after these nodes are not needed anymore. 
 
-    3. **High-availability, clustering and failover 
-**Replicating metric data and maintaining copies of them, improves the availability of data in case of failures. This replication can be across data centers and cloud providers. 
+   * **High-availability, clustering and failover**
+    
+       Replicating metric data and maintaining copies of them, improves the availability of data in case of failures. This replication can be across data centers and cloud providers. 
  
 Netdata allows the configuration of active-active parent clusters, so that all parents in the cluster will have all the data of all nodes and any Netdata Agent pushing metrics to them can use any of the parents to send its metrics. 
 
