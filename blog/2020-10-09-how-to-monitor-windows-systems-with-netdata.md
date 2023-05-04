@@ -15,6 +15,8 @@ authors: Jen
 
 <img class="alignnone size-full wp-image-16596" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png" alt="" width="683" height="512" />
 
+**_Note: Please check out the latest [blog](https://blog.netdata.cloud/windows-monitoring-improvements/) on the improvements to Windows monitoring and the [Windows demo room](https://app.netdata.cloud/spaces/netdata-demo/rooms/windows/?utm_campaign=technical&utm_source=content&utm_medium=website&utm_content=windows)._**
+ 
 Whether you’re a site reliability engineer (SRE), DevOps engineer, or any other role that plays a part in maintaining uptime for your company’s infrastructure, it’s critical to have visibility into all of your systems, regardless of their operating system. This includes monitoring Windows systems, which is a popular use case for Netdata’s community.
 
 Here’s the caveat: Netdata has no native Windows monitoring agent. We decided to focus our engineering efforts on creating the best single-node and infrastructure monitoring tool for the vast majority of production systems. If we split our resources between UNIX and Windows, the result would be two worse products competing for our valuable engineers’ time.
