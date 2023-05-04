@@ -9,11 +9,21 @@ image: ./img/stacked-netdata.png
 
 ![stacked-netdata](./img/stacked-netdata.png)
 
+
+Memory-intensive applications can benefit from improved performance by using huge pages, as they can reduce TLB pressure and memory fragmentation, and lower the memory management overhead overall. Developers should consider using HugeTLBfs in their mmap() and shmget() calls to take advantage of huge pages.
+
+Transparent Huge Pages (THP) is a Linux kernel feature that provides some of the benefits of huge pages without requiring any development effort. However, THP can cause latency in many applications. Although kernel developers are actively working to address these issues, many system administrators prefer to disable THP altogether.
+
+Netdata can assist in determining whether THP is helpful or harmful to your applications, which can guide your decision regarding its use.
+
+
+<!-- truncate -->
+
+## Huge Pages
+
 Huge pages are a memory management technique used in modern computer systems to improve performance by using larger memory blocks than the default page size. They help reduce the pressure on the Translation Lookaside Buffer (TLB) and lower the overhead of managing memory in systems with large amounts of RAM.
 
 To understand what they are and how they improve performance, we first need to understand how modern computers use their physical memory.
-
-<!-- truncate -->
 
 ## Virtual Memory and Paging
 
