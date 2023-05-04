@@ -19,6 +19,7 @@ Servers are crucial to the operation of many applications and services, making t
 
 
 - **Availability**
+
     Uptime monitoring can show whether a server is consistently available or experiences frequent downtimes. High uptime indicates the server is reliable and available for users, while low uptime may signal potential issues that need to be addressed.
 
 - **Performance Monitoring**
