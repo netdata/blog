@@ -13,13 +13,13 @@ Server uptime monitoring tracks the availability and reliability of servers with
 
 <!-- truncate -->
 
-## Why is Server Uptime Monitoring Important?
+## Why Server uptime monitoring is important?
 
 Servers are crucial to the operation of many applications and services, making their uptime a critical aspect of overall system performance. Here are some reasons why server uptime monitoring is important:
 
 
 - **Availability**
-  Uptime monitoring can show whether a server is consistently available or experiences frequent downtimes. High uptime indicates the server is reliable and available for users, while low uptime may signal potential issues that need to be addressed.
+    Uptime monitoring can show whether a server is consistently available or experiences frequent downtimes. High uptime indicates the server is reliable and available for users, while low uptime may signal potential issues that need to be addressed.
 
 - **Performance Monitoring**
     While server uptime alone doesn't provide detailed performance data, analyzing the duration and frequency of downtimes can help identify patterns or trends. For example, recurring downtimes during peak hours may indicate capacity issues that need to be addressed.
@@ -86,6 +86,13 @@ Here's why monitoring, including server uptime monitoring, is still important in
 
 - **Compliance and reporting**
     Monitoring your Kubernetes environment can help you demonstrate compliance with regulatory requirements or service level agreements (SLAs) and provide stakeholders with performance reports and insights.
+
+
+## Server uptime monitoring with Netdata
+
+Netdata's `system.uptime` chart in the `System Overview` section allows you to visualise how long each of the nodes in your infrastructure have been successfully running and can be used to trigger alerts when a node restarts or something unexpected happens.
+
+![server-uptime](./img/server-uptime-monitoring.png)
 
 
 In summary, while server uptime is a single metric, it can still provide valuable insights into the overall health and reliability of servers when analyzed and interpreted correctly. It serves as a starting point for further investigation, and when combined with other metrics, it can provide additional insights for understanding a server's performance and potential issues.
