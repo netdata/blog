@@ -7,7 +7,9 @@ keywords: [infinite, scalability, architecture  monitoring]
 image: https://user-images.githubusercontent.com/2662304/233838642-3b2c8284-3562-4db8-87fa-e432643c39ed.png
 ---
 
-Scalability is crucial for monitoring systems as it ensures that they can accommodate growth, maintain performance, provide flexibility, optimize costs, enhance fault tolerance, and support informed decision-making, all of which are critical for effective infrastructure management
+Scalability is crucial for monitoring systems as it ensures that they can accommodate growth, maintain performance, provide flexibility, optimize costs, enhance fault tolerance, and support informed decision-making, all of which are critical for effective infrastructure management.
+
+<!--truncate-->
 
 Most monitoring solutions struggle with scalability, mainly because of:
 
