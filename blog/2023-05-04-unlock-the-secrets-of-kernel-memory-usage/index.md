@@ -147,7 +147,7 @@ When you create a per-CPU variable, the kernel allocates memory for each CPU cor
 
 ### Conclusion
 
-In conclusion, the `mem.kernel` chart in Netdata provides valuable insights into the memory usage of various kernel subsystems and mechanisms. By understanding the technical details of each dimension - Slab, VmallocUsed, KernelStack, PageTables, and PerCPU - you can effectively monitor your system's kernel memory usage and identify potential issues or inefficiencies.
+In conclusion, the `mem.kernel` chart in [Netdata](https://app.netdata.cloud/) provides valuable insights into the memory usage of various kernel subsystems and mechanisms. By understanding the technical details of each dimension - Slab, VmallocUsed, KernelStack, PageTables, and PerCPU - you can effectively monitor your system's kernel memory usage and identify potential issues or inefficiencies.
 
 Interpreting these metrics requires considering the specific context of your system, including the hardware, the environment (such as running on a VM or in a Kubernetes cluster), and the expected behavior. In general, look for the following patterns:
 
