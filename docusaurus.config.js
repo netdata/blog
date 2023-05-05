@@ -279,7 +279,7 @@ const config = {
             position: 'right',
             className: 'button custom_button',
             style: {'font-weight': '500'}
-  
+
           },
         ],
       },
