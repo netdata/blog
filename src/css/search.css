@@ -37,12 +37,20 @@ table.gsc-search-box button.gsc-search-button {
   border-radius: 0 4px 4px 0;
   height: 35px;
   margin-left: -2px;
-  background: #257830;
+  background: #00ab44;
 }
 table.gsc-search-box .gsib_a {
   width: 200px;
   height: 100%;
   padding-right: 25px;
+}
+
+@media screen and (max-width: 450px) {
+  table.gsc-search-box .gsib_a {
+    width: 150px;
+    height: 100%;
+    padding-right: 25px;
+  }
 }
 table.gsc-search-box .gsib_b {
   padding: 0;

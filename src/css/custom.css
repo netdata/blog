@@ -5,6 +5,103 @@
  * work well for content-centric websites.
  */
 
+
+/* custom Netdata overrides */
+
+.navbar {
+	background-color: #181c20;
+}
+
+.dropdown__menu {
+	background-color: #181c20;
+}
+
+.custom_button {
+	background-color: #00ab44;
+	border: none;
+	color: white;
+	padding: 8px;
+	width: 90px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	margin-bottom: auto
+}
+
+.custom_button:hover {
+	background-color: #029d40;
+	color: white;
+}
+
+.custom_button_grey {
+	border: none;
+	color: white;
+	padding: 8px;
+	width: 90px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	margin-bottom: auto
+}
+
+.custom_button_grey:hover {
+	background-color: #374151;
+	color: white;
+}
+
+.custom_text {
+	color: #029d40;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	/* font-size: 16px; */
+}
+
+@media screen and (max-width: 1440px) {
+	.navbar__inner {
+		display: block;
+	}
+
+	:root {
+		--ifm-navbar-height: 100px
+	}
+}
+
+@media screen and (max-width: 996px) {
+	.navbar-sidebar {
+		visibility: visible;
+	}
+
+	.navbar-item {
+		visibility: hidden;
+	}
+
+	.navbar__logo {
+		width: 100px;
+	}
+
+	.navbar__item {
+		visibility: hidden
+	}
+
+	.navbar__link {
+		visibility: hidden
+	}
+
+	.navbar__inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.navbar--fixed-top {
+		height: unset
+	}
+}
+
 /*
  * Tailwind
 */
