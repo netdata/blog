@@ -12,7 +12,7 @@ Unlocking the full potential of monitoring through ML integration, anomaly detec
 
 <!--truncate-->
 
-Machine learning has been making waves in various industries, but its adoption in the monitoring and observability space has been slower than expected. Many “ML” features remain gimmicky and do not provide actual real world value to users that encourages their further use.
+Machine Learning has been making waves in various industries, but its adoption in the monitoring and observability space has been slower than expected. Many “ML” features remain gimmicky and do not provide actual real world value to users that encourages their further use.
 
 At Netdata, we firmly believe that ML is crucial for monitoring, and we've taken an ML-first approach to provide users with powerful tools and insights. In this blog post, we'll discuss the reasons behind our belief in ML, how we've integrated ML into our charts and visualizations, our query engines, the scoring engine we've built, and how these innovations enable metrics correlations and anomaly advisor.
 
@@ -60,7 +60,7 @@ Incorporating machine learning (ML) capabilities into any system can prove to be
 
 At Netdata, we understand this concern and it has been a core design principle for us to incorporate ML capabilities without sacrificing accuracy or system efficiency. To achieve this, we have designed our query engines to effectively return anomaly information while minimizing additional overhead.
 
-Our approach leverages the implementation of highly optimized ML algorithms that execute directly on the Netdata agent, eliminating the need for resource-intensive external processing. By running these algorithms locally on your device, we ensure that users can access valuable insights and detect anomalies in real-time, without compromising system performance or stability. 
+Our approach leverages the implementation of highly optimized ML algorithms that execute directly on the Netdata Agent, eliminating the need for resource-intensive external processing. By running these algorithms locally on your device, we ensure that users can access valuable insights and detect anomalies in real-time, without compromising system performance or stability. 
 
 For more details on how Netdata's machine learning actually works, check out this video. 
 
@@ -78,7 +78,7 @@ For more information and some useful tips on how Metrics Correlation can aid wit
 
 ## Anomaly Advisor: A Smarter Way to Troubleshoot
 
-Netdata’s Anomaly Advisor leverages the power of the scoring engine and uses the assigned weights to identify the most relevant anomalies, providing users with a prioritized list of potential issues. The new Anomalies tab quickly lets you find periods of time with elevated anomaly rates across all your nodes. Once you highlight a period of interest, Netdata will return a ranked list of the most anomalous metrics across all selected nodes in the highlighted timeframe. 
+Netdata’s Anomaly Advisor leverages the power of the scoring engine and uses the assigned weights to identify the most relevant anomalies, providing users with a prioritized list of potential issues. The Anomalies tab quickly lets you find periods of time with elevated anomaly rates across all your nodes. Once you highlight a period of interest, Netdata will return a ranked list of the most anomalous metrics across all selected nodes in the highlighted timeframe. 
 
 This approach not only reduces the noise in monitoring but also helps users quickly identify and address the most critical issues, resulting in a more proactive and efficient monitoring process.
 
