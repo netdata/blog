@@ -3,8 +3,8 @@ slug: migrating-to-cloud-key-challenges-best-practices
 title: "Navigating the Path to Cloud Migration: Key Challenges and Best Practices"
 authors: satya
 tags: [monitoring, observability, cloudoptimization, cloudcomputing, cloudmigration, devops, bestpractices]
-keywords: [monitoring, observability, cloudoptimization, cloudcomputing, cloudmigration, devops, bestpractices]
-image: https://github.com/netdata/blog/assets/2662304/3d692b30-0b68-474c-b501-3e0b51a69119
+keywords: [monitoring, observability, cloud optimization, cloud computing, cloud migration, devops, best practices]
+image: https://user-images.githubusercontent.com/2662304/238172797-830b8f18-990c-4699-b172-9733d6531eae.png
 ---
 
 Embarking on a cloud migration journey? Grasp the obstacles and arm yourself with best practices for a smooth transition. Success lies in understanding, planning, and adapting.
