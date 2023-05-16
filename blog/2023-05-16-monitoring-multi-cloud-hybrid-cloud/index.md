@@ -11,9 +11,7 @@ The advent of multi-cloud and hybrid-cloud architectures has created new opportu
 
 <!--truncate-->
 
-## Monitoring Multi-Cloud and Hybrid-Cloud Infrastructures: Challenges and Best Practices
-
-### Visibility
+## Visibility
 
 The visibility challenge in multi-cloud and hybrid-cloud environments often stems from the use of disparate monitoring tools that are native to each cloud provider. While these native tools (like Amazon CloudWatch, Google Cloud Monitoring, and Azure Monitor) are excellent within their respective ecosystems, they don't necessarily play well together when it comes to consolidating data and providing a comprehensive, unified view of your entire infrastructure.
 
@@ -21,7 +19,7 @@ For instance, if you have an application running on AWS and another on GCP, both
 
 A multi-cloud monitoring solution like Netdata, aims to solve this problem by providing a consistent and unified way to collect, aggregate, and visualize metrics from applications running on any platform. These solutions are designed to integrate with a wide variety of systems, applications, and platforms, allowing them to collect and present data in a consistent format. This enables you to correlate metrics and events across your entire infrastructure, greatly improving visibility and making it easier to detect and troubleshoot issues.
 
-### Complexity
+## Complexity
 
 Complexity is another major challenge in monitoring multi-cloud and hybrid-cloud environments. As you move from a single cloud provider to multiple providers, or incorporate on-premises infrastructure into your cloud strategy, the complexity of your infrastructure increases significantly. This can make it much harder to manage and monitor your environment effectively.
 
@@ -38,7 +36,7 @@ Different cloud providers have different security models and access control mech
 
 The key to managing this complexity is to use a monitoring solution like Netdata, that can integrate with a wide range of services and platforms, normalize and correlate data from different sources, and provide a unified interface for management and monitoring. By reducing the need to switch between different tools and interfaces, such a solution can make it much easier to manage and monitor complex multi-cloud and hybrid-cloud environments.
 
-### Cost
+## Cost
 
 Cost is a significant challenge when monitoring multi-cloud and hybrid-cloud infrastructures. Each cloud provider has its own complex pricing model, dependent on factors like compute resources used, data storage, network traffic, and other parameters. Added to this is the need for resource optimization, managing data transfer costs, and dealing with cost allocation, making the overall management quite complex.
 
