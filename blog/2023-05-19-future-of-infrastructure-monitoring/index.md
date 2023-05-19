@@ -4,7 +4,7 @@ title: "The Future of Infrastructure Monitoring: Scalability, Automation, and AI
 authors: team
 tags: [monitoring, observability, future, infrastructure, scalability, automation, AI]
 keywords: [monitoring, observability, future, infrastructure, scalability, automation, AI]
-image: https://github.com/netdata/blog/assets/24860547/725f98c2-e091-43ef-8ad4-559aac5441d0
+image: ./img/stacked-netdata.png
 ---
 In this blog post, we will explore the importance of scalability, automation, and AI in the evolving landscape of infrastructure monitoring. We will examine how Netdata's innovative solution aligns with these emerging trends, and how it can empower organizations to effectively manage their modern IT infrastructure.
 
