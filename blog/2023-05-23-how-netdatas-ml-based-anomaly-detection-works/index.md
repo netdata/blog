@@ -143,17 +143,17 @@ If you would like to dive deeper checkout [this deepdive notebook](https://githu
 
 <details>
 
-<summary>Click see some slides illustrating going from raw metrics to anomaly rate.</summary>
+<summary>Click see some slides illustrating how we go from raw metrics to anomaly rate.</summary>
 
-![processing raw data](./img/slide1.png)
+![processing raw data](./img/slide1.svg)
 
-![feature vectors](./img/slide2.png)
+![feature vectors](./img/slide2.svg)
 
-![anomaly score](./img/slide3.png)
+![anomaly score](./img/slide3.svg)
 
-![anomaly bit](./img/slide4.png)
+![anomaly bit](./img/slide4.svg)
 
-![anomaly rate](./img/slide5.png)
+![anomaly rate](./img/slide5.svg)
 
 [Netdata Anomaly Detection - Slides](https://docs.google.com/presentation/d/18zkCvU3nKP-Bw_nQZuXTEa4PIVM6wppH3VUnAauq-RU/edit?usp=sharing)
 
