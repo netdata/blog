@@ -32,7 +32,14 @@ Lets first start with some of the key design considerations and principles of Ne
 
 The above considerations are important and useful to keep in mind as we explore the system in more detail.
 
-## Anomaly Bit
+## Two Important Concepts
+
+Key to understanding how anomaly detection works in Netdata are two important concepts:
+
+1. [Anomaly Bit](#anomaly-bit): The anomaly bit is the 0 (normal) or 1 (anomalous) generated each time a metric is collected.
+1. [Anomaly Rate](#anomaly-rate): The anomaly rate is the percentage of anomaly bits that are 1 (anomalous) over a given time window and/or set of metrics.
+
+### Anomaly Bit
 
 The core concept underlying how anomaly detection works in Netdata is the "[Anomaly Bit](https://learn.netdata.cloud/docs/troubleshooting-and-machine-learning/machine-learning-ml-powered-anomaly-detection#anomaly-bit---100--anomalous-0--normal)". The anomaly bit is the basic lego block on which everything else is built.
 
@@ -78,7 +85,7 @@ To be as clear as possible - [here](https://london.my-netdata.io/api/v1/data?cha
     }
 ```
 
-## Anomaly Rate
+### Anomaly Rate
 
 The beauty of the anomaly bit is that as soon as we aggregate beyond 1 second in time (or for that matter if you aggregate across multiple metrics or nodes but for the same point in time, you can ignore this for now) the anomaly bit turns into an "[Anomaly Rate](https://learn.netdata.cloud/docs/troubleshooting-and-machine-learning/machine-learning-ml-powered-anomaly-detection#anomaly-rate---averageanomaly-bit)". 
 
