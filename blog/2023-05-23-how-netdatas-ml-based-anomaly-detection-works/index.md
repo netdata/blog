@@ -4,8 +4,10 @@ title: "How Netdata's ML-based anomaly detection works"
 authors: andy
 tags: [ml,machine-learning,anomaly-detection]
 keywords: [ml,machine-learning,anomaly-detection]
-image: ./img/stacked-netdata.png
+image: ./img/img.png
 ---
+
+![title image](./img/img.png)
 
 How does Netdata's [machine learning (ML) based anomaly detection](https://learn.netdata.cloud/docs/troubleshooting-and-machine-learning/machine-learning-ml-powered-anomaly-detection) actually work? Read on to find out!
 
