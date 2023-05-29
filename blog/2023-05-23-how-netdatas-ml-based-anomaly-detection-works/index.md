@@ -1,6 +1,7 @@
 ---
 slug: how-netdatas-ml-based-anomaly-detection-works
 title: "How Netdata's ML-based Anomaly Detection Works"
+description: "How does Netdata's machine learning (ML) based anomaly detection actually work? Read on to find out!"
 authors: andy
 tags: [ml,machine-learning,anomaly-detection]
 keywords: [ml,machine-learning,anomaly-detection]
