@@ -3,7 +3,7 @@ slug: kubernetes-monitoring-troubleshooting
 title: "Kubernetes monitoring and troubleshooting made simple"
 description: "Kubernetes monitoring and troubleshooting made simple"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/kubernetes-monitoring-troubleshooting.png
-tags: [product]
+tags: [product,kubernetes]
 keywords: [netdata,product]
 authors: team
 ---

@@ -3,7 +3,7 @@ slug: how-netdata-gets-you-from-0-to-monitoring-in-minutes
 title: "How Netdata gets you from 0 to monitoring in minutes"
 description: "How Netdata gets you from 0 to monitoring in minutes"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/0conf.png
-tags: [product]
+tags: [product,deployment-strategies]
 keywords: [netdata,product]
 authors: team
 ---

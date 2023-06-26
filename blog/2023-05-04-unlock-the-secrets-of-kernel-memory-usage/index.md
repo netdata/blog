@@ -2,7 +2,7 @@
 slug: unlock-the-secrets-of-kernel-memory-usage
 title: Unlock the Secrets of Kernel Memory Usage
 authors: satya
-tags: [kernel, memory, vmalloc, slab]
+tags: [kernel, memory, vmalloc, slab,operating-system-monitoring]
 keywords: [kernel, memory, vmalloc, slab]
 image: ./img/stacked-netdata.png
 ---

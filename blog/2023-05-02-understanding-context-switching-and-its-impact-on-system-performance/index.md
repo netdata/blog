@@ -2,7 +2,7 @@
 slug: understanding-context-switching-and-its-impact-on-system-performance
 title: Understanding Context Switching and Its Impact on System Performance
 authors: satya
-tags: [processes, context-switch, performance, monitoring]
+tags: [processes, context-switch, performance, monitoring,apps-plugin,applications]
 keywords: [processes, context-switch, performance, monitoring]
 image: ./img/stacked-netdata.png
 ---

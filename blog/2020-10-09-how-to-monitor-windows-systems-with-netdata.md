@@ -3,7 +3,7 @@ slug: how-to-monitor-windows-systems-with-netdata
 title: "How to monitor Windows systems with Netdata"
 description: "How to monitor Windows systems with Netdata"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png
-tags: [product,engineering]
+tags: [product,engineering,windows]
 keywords: [netdata,product,engineering]
 authors: Jen
 ---

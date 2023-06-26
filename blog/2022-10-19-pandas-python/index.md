@@ -4,7 +4,7 @@ title: "How you can use the Pandas Python collector to monitor weather data"
 description: "How you can use the Pandas Python collector to monitor weather data"
 image: ./image.jpg
 authors: andy
-tags: [collectors, python, pandas]
+tags: [collectors, python, pandas,external-data-source]
 keywords: [collectors, python, pandas]
 ---
 

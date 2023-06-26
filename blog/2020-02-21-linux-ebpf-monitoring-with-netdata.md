@@ -3,7 +3,7 @@ slug: linux-ebpf-monitoring-with-netdata
 title: "Linux eBPF monitoring with Netdata"
 description: "Linux eBPF monitoring with Netdata"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/linux-ebpf-monitoring-netdata.png
-tags: [product]
+tags: [product,ebpf,operating-system-monitoring]
 keywords: [netdata,product]
 authors: team
 ---

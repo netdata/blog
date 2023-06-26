@@ -3,7 +3,7 @@ slug: netdata-version-1.37.1
 title: "Release 1.37.1: Patch release for security issues"
 description: "Release 1.37.1: Patch release for security issues"
 image: https://user-images.githubusercontent.com/88642300/205665462-39758bd7-65e7-429e-9b57-c72c95c52be1.png
-tags: [product,release notes]
+tags: [product,release-notes]
 keywords: [netdata,product]
 authors: team
 ---

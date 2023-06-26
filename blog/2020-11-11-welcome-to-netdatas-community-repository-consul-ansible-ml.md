@@ -3,7 +3,7 @@ slug: welcome-to-netdatas-community-repository-consul-ansible-ml
 title: "Welcome to Netdata’s community repository: Consul, Ansible, ML"
 description: "Welcome to Netdata’s community repository: Consul, Ansible, ML"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-community-repository.png
-tags: [community]
+tags: [community,consul]
 keywords: [netdata,community]
 authors: team
 ---

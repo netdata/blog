@@ -2,7 +2,7 @@
 slug: introducing-netdata-source-plugin-for-grafana
 title: "Introducing the Netdata Source Plugin for Grafana"
 authors: hugo
-tags: [grafana, plugin]
+tags: [grafana, plugin,observability,openmetrics,prometheus]
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/postgresql_dash-600x354.png
 ---
 

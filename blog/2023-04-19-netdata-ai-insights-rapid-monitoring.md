@@ -3,7 +3,7 @@ slug: netdata-ai-insights-rapid-diagnostics
 title: "Netdata's AI Insights & Rapid Diagnostics"
 description: "Introduction to Netdata's new visualisation providing AI Insights, supporting Rapid Diagnostics"
 image: https://user-images.githubusercontent.com/96257330/233125254-f93c9520-0a3f-4844-8d43-1f3202a5e411.png
-tags: [monitoring-challenges, ai-insights, troubleshooting, rapid-troubleshooting, charts, visualisation]
+tags: [monitoring-challenges, ai-insights, troubleshooting, rapid-troubleshooting, charts, visualisation,machine-learning]
 authors: satya
 
 ---

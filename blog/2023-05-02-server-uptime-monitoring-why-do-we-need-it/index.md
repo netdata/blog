@@ -2,7 +2,7 @@
 slug: server-uptime-monitoring-why-do-we-need-it
 title: "Server Uptime Monitoring: Why do we need it?"
 authors: satya
-tags: [uptime, server-monitoring, monitoring]
+tags: [uptime, server-monitoring, monitoring,operating-system-monitoring]
 keywords: [uptime, server-monitoring, monitoring]
 image: ./img/stacked-netdata.png
 ---

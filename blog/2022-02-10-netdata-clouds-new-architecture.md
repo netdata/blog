@@ -3,7 +3,7 @@ slug: netdata-clouds-new-architecture
 title: "Netdata Cloud’s New Architecture"
 description: "Netdata Cloud’s New Architecture"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/New_arch_notification.jpeg
-tags: [product,architecture]
+tags: [product,architecture,deployment-strategies]
 keywords: [netdata,product,architecture]
 authors: team
 ---

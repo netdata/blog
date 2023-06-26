@@ -2,7 +2,7 @@
 slug: redis-monitoring
 title: Redis Monitoring
 authors: shyam
-tags: [how-to, Redis]
+tags: [how-to, Redis,redis]
 ---
 
 ![logo](https://redis.com/wp-content/uploads/2021/08/redis-logo.png?&auto=webp&quality=85,75&width=500)

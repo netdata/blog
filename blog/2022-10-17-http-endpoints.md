@@ -3,7 +3,7 @@ slug: http-endpoints
 title: "How to monitor HTTP endpoints"
 description: "How to monitor HTTP endpoints"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/http-endpoint-4.png
-tags: [how-to,infrastructure-monitoring,http]
+tags: [how-to,infrastructure-monitoring,http,httpcheck,ping]
 keywords: [how-to,infrastructure-monitoring,http]
 authors: chris
 ---

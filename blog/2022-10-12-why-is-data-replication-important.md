@@ -2,7 +2,7 @@
 title: Why is data replication important?
 description: This post describes why is data replication important in infrastructure monitoring.
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Data-Replication-1.png
-tags: [how-to,infrastructure-monitoring,streaming,data-replication,configuration]
+tags: [how-to,infrastructure-monitoring,streaming,data-replication,configuration,deployment-strategies]
 keywords: [how-to,infrastructure-monitoring,streaming,data-replication,configuration]
 authors: alex
 slug: why-is-data-replication-important

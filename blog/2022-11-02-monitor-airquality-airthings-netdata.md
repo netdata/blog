@@ -3,7 +3,7 @@ slug: airquality
 title: "Monitor indoor air quality with Airthings and Netdata"
 description: "Monitor indoor air quality with Airthings and Netdata"
 image: https://user-images.githubusercontent.com/24860547/199478174-31413dd3-680e-4e4e-8aba-8e64cf2a8366.png
-tags: [airthings,airquality,indoor,netdata,co2,humidity,temperature,radon,pm1,pm25,voc,pressure,how-to]
+tags: [airthings,airquality,indoor,netdata,co2,humidity,temperature,radon,pm1,pm25,voc,pressure,how-to,iot]
 keywords: [airthings,airquality,indoor,netdata,co2,humidity,temperature,monitoring,how-to]
 authors: shyam
 ---

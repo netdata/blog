@@ -2,7 +2,7 @@
 slug: understanding-interrupts-softirqs-and-softnet-in-linux
 title: Understanding Interrupts, Softirqs, and Softnet in Linux
 authors: satya
-tags: [interrupts, softirq, softnet, linux, monitoring]
+tags: [interrupts, softirq, softnet, linux, monitoring,operating-system-monitoring]
 keywords: [interrupts, softirq, softnet, linux, monitoring]
 image: ./img/stacked-netdata.png
 ---

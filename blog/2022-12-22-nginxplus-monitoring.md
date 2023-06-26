@@ -3,7 +3,7 @@ slug: nginxplus-monitoring
 title: How to monitor and troubleshoot NGINXPlus
 description: Monitoring and troubleshooting NGINXPlus.
 authors: satya
-tags: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http]
+tags: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http,apache,web-servers]
 keywords: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http]
 image: https://user-images.githubusercontent.com/96257330/206474388-31f12c9a-4be5-4d0a-9fc2-a8d80813000a.png
 

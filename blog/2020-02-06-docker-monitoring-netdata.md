@@ -3,7 +3,7 @@ slug: docker-monitoring-netdata
 title: "Docker container monitoring with Netdata"
 description: "Docker container monitoring with Netdata"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/docker-monitoring-netdata.png
-tags: [product]
+tags: [product,docker]
 keywords: [netdata,product]
 authors: team
 ---

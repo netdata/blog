@@ -2,7 +2,7 @@
 slug: swap-memory-when-and-how-to-use-it-on-your-production-systems-or-cloud-provided-vms
 title: Swap Memory - When and How to Use It on Your Production Systems or Cloud-Provided VMs
 authors: satya
-tags: [swap, swap-memory, memory, ram, rss, production-systems, cloud, vm]
+tags: [swap, swap-memory, memory, ram, rss, production-systems, cloud, vm,operating-system-monitoring]
 keywords: [swap, swap-memory, memory, ram, rss, production-systems, cloud, vm]
 image: ./img/stacked-netdata.png
 ---

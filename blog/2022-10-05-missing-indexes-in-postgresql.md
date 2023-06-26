@@ -2,7 +2,7 @@
 slug: missing-indexes-in-postgresql
 title: Missing indexes in PostgreSQL? How to quickly identify it
 authors: satya
-tags: [how-to, PostgreSql]
+tags: [how-to, PostgreSql,postgres,postgresql]
 ---
 
 While working on improving the <a href="https://netdata.cloud/postgresql-monitoring/">Netdata PostgreSQL collector</a>, we were monitoring our production PostgreSQL instance and something caught our attention immediately. The rows fetched ratio seemed really, really low for one particular database... there were missing indexes in PostgreSQL!

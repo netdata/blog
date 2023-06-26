@@ -2,7 +2,7 @@
 slug: netdata-inifinite-scalability
 title: Monitoring to Infinity and Beyond - How Netdata Scales Without Limits
 authors: shyam
-tags: [scalability, infinite scale, monitoring]
+tags: [scalability, infinite scale, monitoring,deployment-strategies]
 keywords: [infinite, scalability, architecture  monitoring]
 image: https://user-images.githubusercontent.com/2662304/233838642-3b2c8284-3562-4db8-87fa-e432643c39ed.png
 ---

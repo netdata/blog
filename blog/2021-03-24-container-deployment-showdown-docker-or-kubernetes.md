@@ -3,7 +3,7 @@ slug: container-deployment-showdown-docker-or-kubernetes
 title: "Container deployment showdown: Docker or Kubernetes?"
 description: "Container deployment showdown: Docker or Kubernetes?"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Kubernetes_vs_Docker.png
-tags: [engineering]
+tags: [engineering,containers-and-vms,containers]
 keywords: [netdata,engineering]
 authors: Jen
 ---

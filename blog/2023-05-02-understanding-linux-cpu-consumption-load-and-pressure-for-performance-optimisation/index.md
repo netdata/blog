@@ -2,7 +2,7 @@
 slug: understanding-linux-cpu-consumption-load-and-pressure-for-performance-optimisation
 title: Understanding Linux CPU Consumption, Load, and Pressure for Performance Optimization
 authors: satya
-tags: [cpu-consumption, cpu-load, cpu-pressure, performance-optimisation]
+tags: [cpu-consumption, cpu-load, cpu-pressure, performance-optimisation,cpu,cpu-monitoring,operating-system-monitoring]
 keywords: [cpu-consumption, cpu-load, cpu-pressure, performance-optimisation]
 image: ./img/stacked-netdata.png
 ---

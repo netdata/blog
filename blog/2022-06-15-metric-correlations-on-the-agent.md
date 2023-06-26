@@ -3,7 +3,7 @@ title: Metric Correlations on the Agent
 slug: metric-correlations-on-the-agent
 description: Netdata now can run Metric Correlations on the Agent.
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/06/mc-comparisons-1.png
-tags: [machine-learning,ml,metric-correlations]
+tags: [machine-learning,ml,metric-correlations,troubleshooting]
 keywords: [machine-learning,ml,metric-correlations]
 authors: andy
 ---
