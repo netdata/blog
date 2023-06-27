@@ -2,7 +2,7 @@
 slug: future-of-infrastructure-monitoring
 title: "The Future of Infrastructure Monitoring: Scalability, Automation, and AI"
 authors: team
-tags: [monitoring, observability, future, infrastructure, scalability, automation, AI]
+tags: [monitoring, observability, future, infrastructure, scalability, automation, AI,deployment-strategies]
 keywords: [monitoring, observability, future, infrastructure, scalability, automation, AI]
 image: https://github.com/netdata/blog/assets/24860547/e0c763e6-ebb1-4555-a5c9-c8c38ecc0d39
 ---

@@ -3,7 +3,7 @@ slug: introduction-to-statsd
 title: "Introduction to StatsD"
 description: "Introduction to StatsD"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/StatsD.png
-tags: [engineering,product]
+tags: [engineering,product,statsd]
 keywords: [netdata,engineering,product]
 authors: team
 ---

@@ -2,7 +2,7 @@
 slug: mastering-cloud-optimization
 title: "Mastering Cloud Optimization: Strategies for Enhancing Performance and Reducing Costs"
 authors: hugo
-tags: [monitoring, observability, cloudoptimization, cloudcomputing, saas]
+tags: [monitoring, observability, cloudoptimization, cloudcomputing, saas,aws,gcp,azure,cloud]
 keywords: [monitoring, observability, cloud optimization, cloud computing, saas]
 image: https://user-images.githubusercontent.com/2662304/238172797-830b8f18-990c-4699-b172-9733d6531eae.png
 ---

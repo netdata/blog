@@ -3,7 +3,7 @@ slug: how-to-monitor-your-disks-and-filesystems-now-also-with-ebpf
 title: "How to monitor your disks and filesystems, now also with eBPF"
 description: "How to monitor your disks and filesystems, now also with eBPF"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/eBPF-monitoring-1536x932-1.png
-tags: [engineering,product]
+tags: [engineering,product,disks,filesystem,ebpf,operating-system-monitoring]
 keywords: [netdata,engineering,product]
 authors: team
 ---

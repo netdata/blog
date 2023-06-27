@@ -2,7 +2,7 @@
 slug: monitoring-multi-cloud-hybrid-cloud
 title: "Monitoring Multi-Cloud and Hybrid-Cloud Infrastructures: Challenges and Best Practices"
 authors: team
-tags: [monitoring, observability, cloudoptimization, cloudcomputing, saas, multicloud, hybridcloud]
+tags: [monitoring, observability, cloudoptimization, cloudcomputing, saas, multicloud, hybridcloud,aws,gcp,azure,cloud]
 keywords: [monitoring, observability, cloud optimization, cloud computing, saas, multicloud, hybridcloud]
 image: https://github.com/netdata/blog/assets/24860547/725f98c2-e091-43ef-8ad4-559aac5441d0
 ---

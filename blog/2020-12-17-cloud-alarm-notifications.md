@@ -3,7 +3,7 @@ slug: cloud-alarm-notifications
 title: "Centralize the truth of your infrastructure with alarm notifications"
 description: "Centralize the truth of your infrastructure with alarm notifications"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/Central-Alarm-Notifications.png
-tags: [product]
+tags: [product,alerts,notifications]
 keywords: [netdata,product]
 authors: team
 ---

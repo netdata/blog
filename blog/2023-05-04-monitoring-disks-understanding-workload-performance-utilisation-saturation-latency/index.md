@@ -2,7 +2,7 @@
 slug: monitoring-disks-understanding-workload-performance-utilisation-saturation-latency
 title: "Monitoring Disks: Understanding Workload, Performance, Utilization, Saturation, and Latency"
 authors: satya
-tags: [disks, monitoring, workloads, performance, utilisation, saturation, latency]
+tags: [disks, monitoring, workloads, performance, utilisation, saturation, latency,operating-system-monitoring]
 keywords: [disks, monitoring, workloads, performance, utilisation, saturation, latency]
 image: ./img/stacked-netdata.png
 ---

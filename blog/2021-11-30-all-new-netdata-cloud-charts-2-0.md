@@ -3,7 +3,7 @@ slug: all-new-netdata-cloud-charts-2-0
 title: "All-new Netdata Cloud Charts 2.0"
 description: "All-new Netdata Cloud Charts 2.0"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Charts-2.0.png
-tags: [engineering,product]
+tags: [engineering,product,charts,observability]
 keywords: [netdata,engineering,product]
 authors: hugo
 ---

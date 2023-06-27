@@ -2,7 +2,7 @@
 title: How to monitor host reachability
 description: This post describes how to use Netdata to monitor the reachability of your servers.
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Monitoring-Reachable-Host-2.png
-tags: [how-to,ping,reachability,monitoring]
+tags: [how-to,ping,reachability,monitoring,httpcheck]
 keywords: [how-to,ping,reachability,monitoring]
 authors: chris
 slug: how-to-monitor-host-reachability

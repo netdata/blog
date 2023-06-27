@@ -2,7 +2,7 @@
 slug: understanding-system-processes-states
 title: Understanding System Processes States
 authors: satya
-tags: [processes, linux, process-states]
+tags: [processes, linux, process-states,operating-system-monitoring]
 keywords: [processes, linux, process-states]
 image: ./img/stacked-netdata.png
 ---

@@ -2,7 +2,7 @@
 slug: how-to-filter-metrics-by-label
 title: How to filter metrics by label?
 authors: satya
-tags: [how-to]
+tags: [how-to,observability]
 ---
 
 It is sometimes easy to get lost in the mountain of metrics and infinite number of dimensions when working with an infrastructure monitoring tool. Being able to filter metrics by label and visualize only what is relevant to the current scope of monitoring &troubleshooting, becomes absolutely crucial to the success of SREs, Sysadmins and DevOps professionals.

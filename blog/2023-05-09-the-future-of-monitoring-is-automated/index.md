@@ -2,7 +2,7 @@
 slug: the-future-of-monitoring-is-automated-and-opinionated
 title: The Future of Monitoring is Automated and Opinionated
 authors: costa
-tags: [monitoring, infrastructure-monitoring]
+tags: [monitoring, infrastructure-monitoring,deployment-strategies]
 keywords: [monitoring, infrastructure monitoring, anomalies, automation]
 image: ./img/stacked-netdata.png
 ---

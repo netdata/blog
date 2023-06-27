@@ -3,7 +3,7 @@ slug: dns-query-response-time
 title: "How to monitor DNS query response time"
 description: "How to monitor DNS query response time"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/DNS-1.png
-tags: [how-to,infrastructure-monitoring]
+tags: [how-to,infrastructure-monitoring,dns]
 keywords: [netdata,how-to,infrastructure-monitoring]
 authors: shyam
 ---

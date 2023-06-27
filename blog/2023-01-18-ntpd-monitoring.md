@@ -3,7 +3,7 @@ slug: ntpd-monitoring
 title: How to monitor and troubleshoot NTPdaemon
 description: Monitoring and troubleshooting NTPdaemon.
 authors: shyam
-tags: [how-to, monitor, troubleshoot, ntpd, ]
+tags: [how-to, monitor, troubleshoot, ntpd, ntp ]
 keywords: [how-to, monitor, troubleshoot, ntpd, ]
 image: https://user-images.githubusercontent.com/24860547/213157308-f9ac7230-5a3a-434f-b4e0-66b9a0e4a2fd.png
 

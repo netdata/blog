@@ -3,7 +3,7 @@ slug: web-servers-and-their-performance
 title: "How to monitor web servers and their performance"
 description: "How to monitor web servers and their performance"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Web-Servers-2.png
-tags: [how-to,infrastructure-monitoring]
+tags: [how-to,infrastructure-monitoring,apache,nginx,web-servers]
 keywords: [how-to,infrastructure-monitoring]
 authors: satya
 ---

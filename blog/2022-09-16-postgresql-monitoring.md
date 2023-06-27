@@ -2,7 +2,7 @@
 slug: postgresql-monitoring
 title: PostgreSQL Monitoring
 authors: shyam
-tags: [how-to, PostgreSQL]
+tags: [how-to, PostgreSQL,postgres,postgresql]
 ---
 
 ![logo](https://wiki.postgresql.org/images/9/9a/PostgreSQL_logo.3colors.540x557.png)

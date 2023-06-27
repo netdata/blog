@@ -3,7 +3,7 @@ slug: google-colab-monitoring
 title: "Google Colab Monitoring with Netdata"
 description: "Monitoring Google Colab instances with Netdata"
 image: ./img/colab.png
-tags: [how-to,infrastructure-monitoring,netdata,demo,space]
+tags: [how-to,infrastructure-monitoring,netdata,demo,space,google-colab,colab]
 keywords: [how-to,infrastructure-monitoring,netdata,demo,space,room]
 authors: shyam
 ---

@@ -3,7 +3,7 @@ slug: postgresql-database-bloat
 title: "How to monitor and fix Database bloats in PostgreSQL?"
 description: "How to troubleshoot database bloats and fix them on PostgreSQL?"
 image: https://user-images.githubusercontent.com/96257330/198544117-4672f54e-0f72-43f7-b295-cd71a2a5a830.png
-tags: [how-to,infrastructure-monitoring,monitoring,postgresql,bloat]
+tags: [how-to,infrastructure-monitoring,monitoring,postgresql,bloat,postgres]
 keywords: [how-to,infrastructure-monitoring,monitoring,postgresql,database,bloat]
 authors: satya
 ---

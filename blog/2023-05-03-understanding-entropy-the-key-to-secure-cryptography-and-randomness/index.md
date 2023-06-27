@@ -2,7 +2,7 @@
 slug: understanding-entropy-the-key-to-secure-cryptography-and-randomness
 title: "Understanding Entropy: The Key to Secure Cryptography and Randomness"
 authors: satya
-tags: [entropy, security, cryptography, monitoring]
+tags: [entropy, security, cryptography, monitoring,operating-system-monitoring]
 keywords: [entropy, security, cryptography, monitoring]
 image: ./img/stacked-netdata.png
 ---

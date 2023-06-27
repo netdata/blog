@@ -3,7 +3,7 @@ slug: devops-best-practices-monitoring-tools
 title: "5 DevOps best practices to reinforce with monitoring tools"
 description: "5 DevOps best practices to reinforce with monitoring tools"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/devops-best-practices-monitoring-tools-v2.png
-tags: [engineering,product]
+tags: [engineering,product,devops]
 keywords: [netdata,engineering,product]
 authors: team
 ---

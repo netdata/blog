@@ -3,7 +3,7 @@ slug: how-to-extend-the-geth-collector
 title: "How to extend the Geth collector"
 description: "How to extend the Geth collector"
 image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Geth-collector-diagram-1.png
-tags: [engineering]
+tags: [engineering,geth]
 keywords: [netdata,engineering]
 authors: team
 ---

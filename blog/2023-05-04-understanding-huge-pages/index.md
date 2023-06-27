@@ -2,7 +2,7 @@
 slug: understanding-huge-pages
 title: Understanding Huge Pages
 authors: satya
-tags: [memory, ram, huge-pages, monitoring]
+tags: [memory, ram, huge-pages, monitoring,operating-system-monitoring]
 keywords: [memory, ram, huge-pages, monitoring]
 image: ./img/stacked-netdata.png
 ---
