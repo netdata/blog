@@ -7,7 +7,7 @@ keywords: [netdata-monitoring, streaming,replication,netdata-parents,centralizat
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![stacked-netdata](./img/netdata-parents.png)
 
 ### What are they and why do we need them?
 
