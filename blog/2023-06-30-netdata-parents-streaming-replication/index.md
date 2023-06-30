@@ -9,7 +9,7 @@ image: ./img/stacked-netdata.png
 
 ![stacked-netdata](./img/netdata-parents.png)
 
-### What are they and why do we need them?
+## What are they and why do we need them?
 
 A “Parent” is a Netdata Agent, like the ones we install on all our systems, but is configured as a central node that receives, stores and processes metrics data from other Netdata “Child” nodes in our infrastructure.
 
