@@ -1,6 +1,6 @@
 ---
 slug: netdata-parents-streaming-replication
-title: "Netdata Parents (Streaming and Replicatio)"
+title: "Netdata Parents (Streaming and Replication)"
 authors: satya
 tags: [netdata-monitoring, streaming,replication,netdata-parents,centralization-points,infinite-scalability,deployment-strategies]
 keywords: [netdata-monitoring, streaming,replication,netdata-parents,centralization-points,infinite-scalability]
