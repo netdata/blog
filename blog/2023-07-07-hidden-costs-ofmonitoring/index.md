@@ -9,7 +9,18 @@ image: ./img/hidden-costs.png
 
 ![stacked-netdata](./img/hidden-costs.png)
 
-When it comes to monitoring IT infrastructure, the costs you see on the price tag of the tool are often just the tip of the iceberg. Below the waterline, a mass of hidden costs can lurk, which can significantly affect the total cost of ownership. Here are some of the key areas where these hidden costs can occur.
+When it comes to monitoring IT infrastructure, the costs you see on the price tag of the tool are often just the tip of the iceberg. Below the waterline, a mass of hidden costs can lurk, which can significantly affect the total cost of ownership.
+
+In this blogpost we will cover the analysis of two traditional monitoring domains, Open Source observability and Commercial Centralized observability solutions, focusing the direct and indirect impacts when implementing these solution. In summary:
+- IT teams face challenges with conventional monitoring tools due to their complexity, time-consuming setup procedures and steep learning curve. 
+- Traditional monitoring systems often pose a balancing act between data quality and quantity vs system and cost overheads.
+- Most commercial monitoring systems may result in unforeseen expenses due to data transfer egress costs associated with their operations.
+- There also often an issue with the retention of data, as storing data for a longer period (on vendor's cloud) can result in elevated costs (leave alone the security aspect).
+- Most commercial monitoring systems, charge a premium for using their advanced features and can burn a hole in your pockets. The cost of scaling your infrastructure may result in an exponential increase in the monitoring costs.
+- Detailed monitoring acquired through granular, high-resolution metrics can improve the quality of insights and so reducing the time to troubleshoot. The cost of delayed RCAs can reach 6 digit figures in a matter of minutes.
+- Tool with enhanced usability decrease the need of training or hiring specialized individuals, individuals with varying ranges of expertise should readily understand and use it.
+- The adoption of an optimal tool can lead to significant cost savings, increased transparency, and improved system reliability.
+- There is a need to adopt monitoring tools that are simple, customizable, and scalable to address these challenges and hidden costs.
 
 
 ## Prometheus & Grafana (Open Source Monitoring references)
