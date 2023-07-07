@@ -30,7 +30,9 @@ Like any great tool there is a lot of flexibility and different ways to achieve 
 - [`vars`](https://github.com/netdata/community/tree/main/configuration-management/ansible-ml-demo/vars/) - different variable files for each system or component live in here. Used by templates and tasks.
 - [`inventory.yaml`](https://github.com/netdata/community/tree/main/configuration-management/ansible-ml-demo/inventory.yaml) - A list of all the hosts managed by this Ansible project as well as one or two global default variables.
 
-Thats pretty much all there is to it. The best way to get started really is to have a look at some examples of tasks and playbooks and then start simple and adapt them to your needs. Below are some useful links and resources for both users new to configuration management and those looking to do more advanced tasks and complex specific Netdata related use-cases.
+Thats pretty much all there is to it. The best way to get started really is to have a look at some examples of tasks (for example [this task](https://github.com/netdata/community/blob/main/configuration-management/ansible-ml-demo/tasks/netdata/config-health-ml.yaml) to define some ML based alerts) and playbooks (for example [restart Netdata](https://github.com/netdata/community/blob/main/configuration-management/ansible-ml-demo/playbooks/restart-netdata.yaml) and check its status before and after) and then start simple and adapt them to your needs.
+
+Below are some useful links and resources for both users new to configuration management and those looking to do more advanced tasks and complex specific Netdata related use-cases.
 
 ## Useful Resources
 
