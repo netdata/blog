@@ -13,7 +13,7 @@ We are always trying to lower the barrier to entry when it comes to monitoring a
 
 To that end, we have begun recently publishing our own [little example ansible project](https://github.com/netdata/community/tree/main/configuration-management/ansible-ml-demo) used to maintain and manage the servers used in our public [Machine Learning Demo room](https://app.netdata.cloud/spaces/netdata-demo/rooms/machine-learning/overview).
 
-This post introduces this project as a somewhat simple example of using Ansible with Netdata. Read on to learn more but more importantly feel free to [explore the repo](https://github.com/netdata/community/tree/main/configuration-management/ansible-ml-demo) and see how it all hangs together.
+This post introduces this project as a somewhat simple example of using Ansible with Netdata. Read on to learn more, but more importantly feel free to [explore the repo](https://github.com/netdata/community/tree/main/configuration-management/ansible-ml-demo) and see how it all hangs together.
 
 <!--truncate-->
 
@@ -40,4 +40,4 @@ Thats pretty much all there is to it. The best way to get started really is to h
 - A great [playlist](https://www.youtube.com/playlist?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70) of Ansible videos from our friends at [learnlinux.tv](https://www.learnlinux.tv/tag/configuration-management/).
 - A nice [blog post](https://www.atlassian.com/microservices/microservices-architecture/configuration-management) from Atlassian on configuration management in general and some of the tools.
 
-If you're interested in configuration management use cases in observability in general or specific to Netdata then come hang in our [discord](https://discord.com/invite/mPZ6WZKKG2) or [community forums](https://community.netdata.cloud/).
+If you're interested in configuration management use cases in observability in general or specific to Netdata then come hang in our [discord](https://discord.com/invite/mPZ6WZKKG2) or [community forums](https://community.netdata.cloud/)!
