@@ -13,7 +13,7 @@ We are always trying to lower the barrier to entry when it comes to monitoring a
 
 To that end, we have begun recently publishing our own [little example ansible project](https://github.com/netdata/community/tree/main/configuration-management/ansible-ml-demo) used to maintain and manage the servers used in our public [Machine Learning Demo room](https://app.netdata.cloud/spaces/netdata-demo/rooms/machine-learning/overview).
 
-This small post introduces this project as somewhat simple example of using Ansible with Netdata. Read on to learn more but more importantly feel free to [explore the repo](https://github.com/netdata/community/tree/main/configuration-management/ansible-ml-demo) and see how it all hangs together.
+This post introduces this project as a somewhat simple example of using Ansible with Netdata. Read on to learn more but more importantly feel free to [explore the repo](https://github.com/netdata/community/tree/main/configuration-management/ansible-ml-demo) and see how it all hangs together.
 
 <!--truncate-->
 
