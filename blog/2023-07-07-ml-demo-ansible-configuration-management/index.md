@@ -38,3 +38,6 @@ Thats pretty much all there is to it. The best way to get started really is to h
 - A collection of different [configuration management resources](https://github.com/netdata/community/tree/main/configuration-management) from the `netdata/community` repo.
 - Official [`netdata/ansible`](https://github.com/netdata/ansible) repo with some more complex Netdata configuration tasks.
 - A great [playlist](https://www.youtube.com/playlist?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70) of Ansible videos from our friends at [learnlinux.tv](https://www.learnlinux.tv/tag/configuration-management/).
+- A nice [blog post](https://www.atlassian.com/microservices/microservices-architecture/configuration-management) from Atlassian on configuration management in general and some of the tools.
+
+If you're interested in configuration management use cases in observability in general or specific to Netdata then come hang in our [discord](https://discord.com/invite/mPZ6WZKKG2) or [community forums](https://community.netdata.cloud/).
