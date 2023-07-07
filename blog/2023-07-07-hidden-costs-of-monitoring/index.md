@@ -123,7 +123,7 @@ In conclusion, while Prometheus and Grafana are powerful, comprehensive monitori
 
 ## Datadog, Dynatrace, NewRelic (Commercial Centralized Monitoring references)
 
-_"The DataDog pricing model is actually pretty easy. For 500 hosts or less, you just sign over your company and all its assets to them. If >500 hosts, you need to additionally raise VC money." - [wingerd33](https://www.reddit.com/r/devops/comments/13ky2iq/datadog_where_does_it_hurt/?utm_source=share&utm_medium=web2x&context=3) on reddit_
+_"The Datadog pricing model is actually pretty easy. For 500 hosts or less, you just sign over your company and all its assets to them. If >500 hosts, you need to additionally raise VC money." - [wingerd33](https://www.reddit.com/r/devops/comments/13ky2iq/datadog_where_does_it_hurt/?utm_source=share&utm_medium=web2x&context=3) on reddit_
 
 Commercial monitoring SaaS solutions can offer considerable benefits, including ease of use, reduced maintenance, seamless integrations, and access to advanced features. However, these benefits come with their own challenges, including potentially high costs, the risk of vendor lock-in, data ownership, and privacy concerns.
 
@@ -204,17 +204,17 @@ Netdata is designed with efficiency, scalability, and flexibility in mind, aimin
 
 ### Rapid and Easy Setup
 
-Netdata’s automated features allow for quick setup and minimal maintenance. Its auto-discovery capabilities identify metric data sources instantly, while its pre-configured alerts and AI-powered anomaly detection facilitate automated oversight. Furthermore, Netdata supports Infrastructure as Code (IaC) and offers templates for automated deployment of alerts, fostering an environment for advanced automation. This rapid setup minimizes the cost of infrastructure and time investment, eliminating the complexity associated with tools like Prometheus and Grafana, offering for free an experience that is similar to commercial solutions.
+Netdata’s [automated features](https://www.netdata.cloud/features/rapid-setup-full-automation-easy-to-use/) allow for quick setup and minimal maintenance. Its auto-discovery capabilities identify metric data sources instantly, while its [pre-configured alerts](https://learn.netdata.cloud/docs/alerting/) and [ML-powered anomaly detection](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection) facilitate automated oversight. Furthermore, Netdata supports Infrastructure as Code (IaC) and offers templates for automated deployment of alerts, fostering an environment for advanced automation. This rapid setup minimizes the cost of infrastructure and time investment, eliminating the complexity associated with tools like Prometheus and Grafana, offering for free an experience that is similar to commercial solutions.
 
 
 ### Easy to Use, Opinionated
 
-Unlike Prometheus and Grafana that you have to set up all dashboards metric by metric, Netdata visualizes every single metric collected, without exceptions. Metrics are also organized in a way that is easy to navigate and find any metric. Of course some level of familiarity is required to understand this organization. But this is only familiarity. No skills are required except a basic understanding of the table of contents and the search functionality.
+Unlike Prometheus and Grafana that you have to set up all dashboards metric by metric, Netdata [visualizes](https://learn.netdata.cloud/docs/visualizations/) every single metric collected, without exceptions. Metrics are also organized in a way that is easy to navigate and find any metric. Of course some level of familiarity is required to understand this organization. But this is only familiarity. No skills are required except a basic understanding of the table of contents and the search functionality.
 
 
 ### Easy Troubleshooting
 
-While most tools, including commercial solutions, require extensive skills to create or modify dashboards, Netdata employees the NIDL (Nodes, Instances, Dimensions, and Labels) framework, to allow both newcomers and experts quickly filter, slice and dice any chart in all imaginable ways, in a point and click fashion. Furthermore Netdata comes with a unique scoring engine (used by metric correlations and anomaly advisor) to quickly reveal how different metrics relate and affect one another, minimizing time to resolution.
+While most tools, including commercial solutions, require extensive skills to create or modify dashboards, Netdata employees the [NIDL](https://www.netdata.cloud/features/powerful-visualizations-dashboards/) (Nodes, Instances, Dimensions, and Labels) framework, to allow both newcomers and experts quickly filter, slice and dice any chart in all imaginable ways, in a point and click fashion. Furthermore Netdata comes with a unique scoring engine (used by [metric correlations](https://learn.netdata.cloud/docs/ml-and-troubleshooting/metric-correlations) and [anomaly advisor](https://learn.netdata.cloud/docs/ml-and-troubleshooting/anomaly-advisor)) to quickly reveal how different metrics relate and affect one another, minimizing time to resolution.
 
 
 ### Real-Time, High-Fidelity
@@ -224,16 +224,16 @@ Netdata's emphasis on real-time capabilities ensures rapid detection and respons
 
 ### Scalability and Flexibility
 
-With Netdata, you're not bound by the size or complexity of your infrastructure. Its vertical and horizontal scalability capabilities can meet the most demanding environments. Additionally, the smart database storage management for long term retention and the ability to set up multiple centralization points offer both efficiency and geographical freedom, addressing data sovereignty concerns and eliminating traffic egress related costs. With Netdata your data is always managed by the open-source Netdata agents you install inside your infrastructure. Your data, your way.
+With Netdata, you're not bound by the size or complexity of your infrastructure. Its vertical and horizontal [scalability capabilities](https://www.netdata.cloud/features/scalable-flexible/) can meet the most demanding environments. Additionally, the smart database storage management for [long term retention](https://learn.netdata.cloud/docs/configuring/optimizing-metrics-database/change-how-long-netdata-stores-metrics) and the ability to set up multiple [centralization points](https://learn.netdata.cloud/docs/streaming/understanding-how-streaming-works) offer both efficiency and geographical freedom, addressing data sovereignty concerns and eliminating traffic egress related costs. With Netdata your data is always managed by the open-source Netdata agents you install inside your infrastructure. Your data, your way.
 
 
 ### Customizable and User-Friendly
 
-Netdata provides extensive customization options, from a wide range of integrations to the ability to segment infrastructure into rooms and assign user roles and permissions. Additionally, Netdata is designed to be user-friendly, catering to both novice users and experts. The learning curve is gentle, requiring only familiarization with the organization of the dashboard and the configuration methodology.
+Netdata provides extensive customization options, from a wide range of [integrations](https://www.netdata.cloud/integrations/#popular) to the ability to [segment infrastructure into rooms](https://learn.netdata.cloud/docs/monitor-your-infrastructure/organize-your-infrastructure-and-invite-your-team) and assign user roles and permissions. Additionally, Netdata is designed to be user-friendly, catering to both novice users and experts. The learning curve is gentle, requiring only familiarization with the organization of the dashboard and the configuration methodology.
 
 
 ### Secure and Private
 
-Netdata prioritizes user data protection, being designed with a security-first approach. Its adherence to Open Source Security Foundation Best Practices ensures reliable and private operations, countering data privacy and security concerns often associated with commercial SaaS solutions. Even when users use Netdata Cloud, their metric data is not transferred and is not stored in the cloud. Metric data pass-through Netdata Cloud for the needs of visualizations only when users view Netdata Cloud dashboards, and only for the charts they view.
+Netdata prioritizes user data protection, being designed with a [security-first approach](https://learn.netdata.cloud/docs/architecture/security-and-privacy-design). Its adherence to [Open Source Security Foundation Best Practices](https://bestpractices.coreinfrastructure.org/en/projects/2231) ensures reliable and private operations, countering data privacy and security concerns often associated with commercial SaaS solutions. Even when users use Netdata Cloud, their metric data is not transferred and is not stored in the cloud. Metric data pass-through Netdata Cloud for the needs of visualizations only when users view Netdata Cloud dashboards, and only for the charts they view.
 
 By combining all the above, Netdata not only meets but often exceeds the capabilities of other tools at a fraction of the cost.
