@@ -20,7 +20,7 @@ In this blogpost we will cover the analysis of two traditional monitoring domain
 - There also often an issue with the retention of data, as storing data for a longer period (on vendor's cloud) can result in elevated costs (leave alone the security aspect).
 - Most commercial monitoring systems, charge a premium for using their advanced features and can burn a hole in your pockets. The cost of scaling your infrastructure may result in an exponential increase in the monitoring costs.
 - Detailed monitoring acquired through granular, high-resolution metrics can improve the quality of insights and so reducing the time to troubleshoot. The cost of delayed RCAs can reach 6 digit figures in a matter of minutes.
-- Tool with enhanced usability decrease the need of training or hiring specialized individuals, individuals with varying ranges of expertise should readily understand and use it.
+- Tools with enhanced usability decrease the need of training or hiring specialized individuals, individuals with varying ranges of expertise should readily understand and use it.
 - The adoption of an optimal tool can lead to significant cost savings, increased transparency, and improved system reliability.
 - There is a need to adopt monitoring tools that are simple, customizable, and scalable to address these challenges and hidden costs.
 
@@ -99,7 +99,7 @@ While Prometheus is designed to handle a large amount of data and has built-in s
 
 Scaling Prometheus and Grafana is not a straightforward process. It requires planning and careful configuration. Sharding, Federation, and utilizing remote storage systems are possible strategies, but each adds its own complexity.
 
-Additionally, prometheus is not designed to be a long-term data storage system. By default, it only stores data for 15 days. If you need longer data retention, you'll have to integrate Prometheus with a remote storage solution, which adds another layer of complexity.
+Additionally, Prometheus is not designed to be a long-term data storage system. By default, it only stores data for 15 days. If you need longer data retention, you'll have to integrate Prometheus with a remote storage solution, which adds another layer of complexity.
 
 If you take the simple path and set up multiple Prometheus servers to handle your environment's scale, you might lose a centralized view of your metrics unless you carefully configure federation or use a global view query layer like Thanos or Cortex.
 
@@ -204,7 +204,7 @@ Netdata is designed with efficiency, scalability, and flexibility in mind, aimin
 
 ### Rapid and Easy Setup
 
-Netdata’s [automated features](https://www.netdata.cloud/features/rapid-setup-full-automation-easy-to-use/) allow for quick setup and minimal maintenance. Its auto-discovery capabilities identify metric data sources instantly, while its [pre-configured alerts](https://learn.netdata.cloud/docs/alerting/) and [ML-powered anomaly detection](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection) facilitate automated oversight. Furthermore, Netdata supports Infrastructure as Code (IaC) and offers templates for automated deployment of alerts, fostering an environment for advanced automation. This rapid setup minimizes the cost of infrastructure and time investment, eliminating the complexity associated with tools like Prometheus and Grafana, offering for free an experience that is similar to commercial solutions.
+Netdata’s [automated features](https://www.netdata.cloud/features/rapid-setup-full-automation-easy-to-use/) allow for quick setup and minimal maintenance. Its auto-discovery capabilities identify metrics data sources instantly, while its [pre-configured alerts](https://learn.netdata.cloud/docs/alerting/) and [ML-powered anomaly detection](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection) facilitate automated oversight. Furthermore, Netdata supports Infrastructure as Code (IaC) and offers templates for automated deployment of alerts, fostering an environment for advanced automation. This rapid setup minimizes the cost of infrastructure and time investment, eliminating the complexity associated with tools like Prometheus and Grafana, offering for free an experience that is similar to commercial solutions.
 
 
 ### Easy to Use, Opinionated
@@ -214,7 +214,7 @@ Unlike Prometheus and Grafana that you have to set up all dashboards metric by m
 
 ### Easy Troubleshooting
 
-While most tools, including commercial solutions, require extensive skills to create or modify dashboards, Netdata employees the [NIDL](https://www.netdata.cloud/features/powerful-visualizations-dashboards/) (Nodes, Instances, Dimensions, and Labels) framework, to allow both newcomers and experts quickly filter, slice and dice any chart in all imaginable ways, in a point and click fashion. Furthermore Netdata comes with a unique scoring engine (used by [metric correlations](https://learn.netdata.cloud/docs/ml-and-troubleshooting/metric-correlations) and [anomaly advisor](https://learn.netdata.cloud/docs/ml-and-troubleshooting/anomaly-advisor)) to quickly reveal how different metrics relate and affect one another, minimizing time to resolution.
+While most tools, including commercial solutions, require extensive skills to create or modify dashboards, Netdata employs the [NIDL](https://www.netdata.cloud/features/powerful-visualizations-dashboards/) (Nodes, Instances, Dimensions, and Labels) framework, to allow both newcomers and experts quickly filter, slice and dice any chart in all imaginable ways, in a point and click fashion. Furthermore Netdata comes with a unique scoring engine (used by [metric correlations](https://learn.netdata.cloud/docs/ml-and-troubleshooting/metric-correlations) and [anomaly advisor](https://learn.netdata.cloud/docs/ml-and-troubleshooting/anomaly-advisor)) to quickly reveal how different metrics relate and affect one another, minimizing time to resolution.
 
 
 ### Real-Time, High-Fidelity
@@ -234,6 +234,6 @@ Netdata provides extensive customization options, from a wide range of [integrat
 
 ### Secure and Private
 
-Netdata prioritizes user data protection, being designed with a [security-first approach](https://learn.netdata.cloud/docs/architecture/security-and-privacy-design). Its adherence to [Open Source Security Foundation Best Practices](https://bestpractices.coreinfrastructure.org/en/projects/2231) ensures reliable and private operations, countering data privacy and security concerns often associated with commercial SaaS solutions. Even when users use Netdata Cloud, their metric data is not transferred and is not stored in the cloud. Metric data pass-through Netdata Cloud for the needs of visualizations only when users view Netdata Cloud dashboards, and only for the charts they view.
+Netdata prioritizes user data protection, being designed with a [security-first approach](https://learn.netdata.cloud/docs/architecture/security-and-privacy-design). Its adherence to [Open Source Security Foundation Best Practices](https://bestpractices.coreinfrastructure.org/en/projects/2231) ensures reliable and private operations, countering data privacy and security concerns often associated with commercial SaaS solutions. Even when users use Netdata Cloud, their metrics data is not transferred and is not stored in the cloud. Metrics data pass through Netdata Cloud for the needs of visualizations only when users view Netdata Cloud dashboards, and only for the charts they view.
 
 By combining all the above, Netdata not only meets but often exceeds the capabilities of other tools at a fraction of the cost.
