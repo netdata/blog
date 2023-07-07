@@ -11,6 +11,8 @@ image: ./img/hidden-costs.png
 
 When it comes to monitoring IT infrastructure, the costs you see on the price tag of the tool are often just the tip of the iceberg. Below the waterline, a mass of hidden costs can lurk, which can significantly affect the total cost of ownership.
 
+<!--truncate-->
+
 In this blogpost we will cover the analysis of two traditional monitoring domains, Open Source observability and Commercial Centralized observability solutions, focusing the direct and indirect impacts when implementing these solution. In summary:
 - IT teams face challenges with conventional monitoring tools due to their complexity, time-consuming setup procedures and steep learning curve. 
 - Traditional monitoring systems often pose a balancing act between data quality and quantity vs system and cost overheads.
