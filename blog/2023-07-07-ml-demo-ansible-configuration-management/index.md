@@ -19,7 +19,7 @@ This post introduces this project as a somewhat simple example of using Ansible 
 
 ## Project Structure
 
-If you are not that familiar with Ansible, the [official getting started tutorial](https://docs.ansible.com/ansible/latest/getting_started/index.html) is a great place to start.
+If you are not that familiar with Ansible, the [official getting started tutorial](https://docs.ansible.com/ansible/latest/getting_started/index.html) is a great place to start. Some of the main concepts, "inventory", "task", "playbook", map fairly direclty onto the project structure below.
 
 Like any great tool there is a lot of flexibility and different ways to achieve your goals. For our user case here, managing a handful of somewhat homogenous servers that make up the ML demo room, the below general structure has worked fine so far for us.
 
