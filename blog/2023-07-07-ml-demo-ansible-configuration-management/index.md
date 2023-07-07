@@ -17,7 +17,7 @@ This small post introduces this project as somewhat simple example of using Ansi
 
 <!--truncate-->
 
-## ML Demo Room - Project Structure
+## Project Structure
 
 If you are not that familiar with Ansible, the [official getting started tutorial](https://docs.ansible.com/ansible/latest/getting_started/index.html) is a great place to start.
 
