@@ -7,12 +7,12 @@ keywords: [netdata-monitoring, costs-of-monitoring,hidden-costs,data-costs,oppor
 image: ./img/hidden-costs.png
 ---
 
-![stacked-netdata](./img/netdata-parents.png)
+![stacked-netdata](./img/hidden-costs.png)
 
 When it comes to monitoring IT infrastructure, the costs you see on the price tag of the tool are often just the tip of the iceberg. Below the waterline, a mass of hidden costs can lurk, which can significantly affect the total cost of ownership. Here are some of the key areas where these hidden costs can occur.
 
 
-## Prometheus & Grafana
+## Prometheus & Grafana (Open Source Monitoring references)
 
 While Prometheus and Grafana are both open-source, they come with considerable hidden costs, mainly due to their complexity and the time required to effectively set them up and maintain them.
 
@@ -37,7 +37,6 @@ Getting Prometheus and Grafana to play nicely with all the systems and services 
 ### Scaling Costs
 
 If your infrastructure grows, so too does the time and complexity required to maintain your Prometheus and Grafana setup. Although there are plenty of solutions that allow such a setup to scale, the complexity and the additional components required make it a lot more complex, adding significant to the overall cost.
-
 
 ### Opportunity Costs
 
@@ -109,7 +108,7 @@ Engineers often take a conservative approach, where the fear of alert noise, the
 In conclusion, while Prometheus and Grafana are powerful, comprehensive monitoring solutions, achieving a setup that is complete, fit for purpose, and efficient often requires considerable expertise, time, and ongoing effort.
 
 
-## Datadog, Dynatrace, NewRelic and other commercial SaaS
+## Datadog, Dynatrace, NewRelic (Commercial Centralized Monitoring references)
 
 _"The DataDog pricing model is actually pretty easy. For 500 hosts or less, you just sign over your company and all its assets to them. If >500 hosts, you need to additionally raise VC money." - [wingerd33](https://www.reddit.com/r/devops/comments/13ky2iq/datadog_where_does_it_hurt/?utm_source=share&utm_medium=web2x&context=3) on reddit_
 
