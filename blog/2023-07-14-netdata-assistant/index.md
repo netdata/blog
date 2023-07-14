@@ -42,7 +42,7 @@ Let's walk through an example of using Netdata Assistant.
 
 ## What's Next for Netdata Assistant?
 
-This is just the start for the Netdata Assistant. We're planning to integrate the assistant into more parts of the Netdata user experience to make your life even easier.
+This is just the start for the Netdata Assistant. We're planning to integrate the assistant into more areas of the Netdata user experience to make your life even easier.
 
 We're pretty excited for you to try it out and see how it helps you handle troubleshooting. We're always looking to improve, so don't hesitate to share your experiences with us.
 
