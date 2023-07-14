@@ -4,7 +4,7 @@ title: "Netdata Assistant: Your AI-Powered Troubleshooting Sidekick"
 authors: shyam
 tags: [assistant, troubleshooting, ai, ml, alerts]
 keywords: [assistant, troubleshooting, ai, ml, alerts]
-image: https://github.com/netdata/blog/assets/24860547/e41868a3-1dde-4099-baab-7a0de43836ce
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/24860547/253558524-e41868a3-1dde-4099-baab-7a0de43836ce.png
 ---
 
 ![image](https://github.com/netdata/blog/assets/24860547/e41868a3-1dde-4099-baab-7a0de43836ce)
