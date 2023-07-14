@@ -31,7 +31,7 @@ Let's walk through an example of using Netdata Assistant.
 
 ![image](https://github.com/netdata/blog/assets/24860547/815ca123-e2b6-4d44-a780-eeee64cca420)
 
-2. Netdata Assistant opens up as a floating window with customized information and troubleshooting tips for this alert
+2. Netdata Assistant opens up as a floating window with customized information and troubleshooting tips for this alert (note that the window can follow you through your troubleshooting journey on Netdata dashboards)
 
 ![image](https://github.com/netdata/blog/assets/24860547/62850c7b-cd1d-45f2-b2dd-474ecbf2b713)
 
