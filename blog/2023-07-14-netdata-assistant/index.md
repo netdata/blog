@@ -27,7 +27,7 @@ And don't worry, we're not about to let AI totally take over. The Netdata Assist
 
 Let's walk through an example of using Netdata Assistant. 
 
-1. This war room has a lot of active alerts, if you want to digve deeper into a particular alert, let's say `load average 15` then just click on the Netdata Assistant button
+1. This war room has a lot of active alerts, if you want to dive deeper into a particular alert, let's say `load average 15` then just click on the Netdata Assistant button
 
 ![image](https://github.com/netdata/blog/assets/24860547/815ca123-e2b6-4d44-a780-eeee64cca420)
 
