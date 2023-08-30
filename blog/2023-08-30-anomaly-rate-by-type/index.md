@@ -17,11 +17,11 @@ We have recently added a more detailed anomaly rate chart to Netdata that breaks
 
 `type` is generally the prefix of the chart id in Netdata and controls where charts live within the menu on the overview page, for example the `mem.available` chart has a type of `mem` which in part controls why it lives under the "Memory" section of the menu.
 
+![mem](./img/mem.svg)
+
 :::note
 You can read a bit more about `type` and chart id's and specifications in general in the [docs](https://learn.netdata.cloud/docs/data-collection/external-plugins/#chart) on Netdata Learn.
 :::
-
-![mem](./img/mem.svg)
 
 So having anomaly rates by type can let you quickly get a feel for what "physical" parts of your infrastructure are experiencing an uptick in anomalies when you see the overall node anomaly rate increase.
 
