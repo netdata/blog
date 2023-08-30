@@ -29,6 +29,8 @@ So having anomaly rates by type can let you quickly get a feel for what "physica
 
 Since every metric in Netdata also has a corresponding [`anomaly-bit`](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection#anomaly-bit---100--anomalous-0--normal), its easy to calculate anomaly rates on any subset of metrics across your infrastructure. This is what we are doing here, we are simply calculating the anomaly rate over all metrics that have a given `type` and then collecting that as a "synthetic" or "derived" metric.
 
+### Example 1 - spike in `net` anomalies
+
 Here is an example of how you might find this useful. In the below screenshot we can see that within the highlighted area, the overall node anomaly rate has suddenly increased to around 3%. You can clearly see this in the `anomaly_detection.anomaly_rate` chart. This gives us an idea there is something going on, but not much more than that.
 
 Now with the addition of the `anomaly_detection.type_anomaly_rate` chart just below, we can see that this spike is mostly made up of spikes within the `net` and `net_packets` `type`'s.
@@ -39,13 +41,17 @@ If we quickly navigate to the network related parts of the dashboard, sure enoug
 
 ![example1-net](./img/example1-net.jpeg)
 
+### Example 2 - some `disk` anomalies
+
 Similarly, in the period following our initial anomaly i was doing some troubleshooting on my disks and so we also see a little spike in the node anomaly rate but this time the `anomaly_detection.type_anomaly_rate` chart is suggesting its something related to various `disk` related `type`'s.
 
 ![example1-disk](./img/example1-disk.jpeg)
 
-And sure enough looking at some of my `disk` charts i can see the activity that has been flagged as anomalous.
+And, sure enough, looking at some of my `disk` charts i can see the activity that has been flagged as anomalous.
 
 ![example1-disk-detail](./img/example1-disk-detail.jpeg)
+
+Both of the examples above illustrate how you can easily use the `anomaly_detection.type_anomaly_rate` chart to quickly see what might be "underneath" the overall node anomaly rate when it increases.
 
 ## Next steps - `app` and `user` anomaly rates
 
