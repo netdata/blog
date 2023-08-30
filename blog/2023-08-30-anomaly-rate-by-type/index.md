@@ -27,6 +27,8 @@ So having anomaly rates by type can let you quickly get a feel for what "physica
 
 ## Anomaly rate by `type`
 
+Since every metric in Netdata also has a corresponding [`anomaly-bit`](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection#anomaly-bit---100--anomalous-0--normal), its easy to calculate anomaly rates on any subset of metrics across your infrastructure. This is what we are doing here, we are simply calculating the anomaly rate over all metrics that have a given `type` and then collecting that as a "synthetic" or "derived" metric.
+
 Here is an example of how you might find this useful. In the below screenshot we can see that within the highlighted area, the overall node anomaly rate has suddenly increased to around 3%. You can clearly see this in the `anomaly_detection.anomaly_rate` chart. This gives us an idea there is something going on, but not much more than that.
 
 Now with the addition of the `anomaly_detection.type_anomaly_rate` chart just below, we can see that this spike is mostly made up of spikes within the `net` and `net_packets` `type`'s.
