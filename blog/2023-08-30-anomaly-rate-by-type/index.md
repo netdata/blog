@@ -9,7 +9,7 @@ image: ./img/anomaly-rate-by-type.jpeg
 
 ![anomaly-rate-by-type](./img/anomaly-rate-by-type.jpeg)
 
-We have recently added a more detailed anomaly rate chart to Netdata that breaks out the overall node anomaly rate by type, this lets you more easily see what parts of your infrastructure might be experiencing an uptick in anomalies when you see the overall node anomaly rate increase.
+We have [recently added](https://github.com/netdata/netdata/pull/15856) a more detailed anomaly rate chart to Netdata that breaks out the overall [node anomaly rate](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection#node-anomaly-rate) by type, this lets you more easily see what parts of your infrastructure might be experiencing an uptick in anomalies when you see the overall node anomaly rate increase.
 
 <!--truncate-->
 
@@ -58,3 +58,5 @@ Both of the examples above illustrate how you can easily use the `anomaly_detect
 This is our first step (done in [this PR](https://github.com/netdata/netdata/pull/15856)) in providing lower level anomaly rates below the summary node anomaly rate. We are planning on adding anomaly rates by `app` and `user` soon so that you can easily see what applications and users are experiencing an uptick in anomalies. You can follow along in [this GitHub issue](https://github.com/netdata/netdata/issues/14788) which is just part of our wider "[Machine Learning Roadmap](https://github.com/orgs/netdata/projects/54)" project which is also publicly available on GitHub.
 
 Of course you can always also use the [Anomaly Advisor](https://learn.netdata.cloud/docs/ml-and-troubleshooting/anomaly-advisor) to get a more detailed bottom up view of all anomalies in a highlighted window or the ["AR%" button](https://blog.netdata.cloud/anomaly-rates-in-the-menu/) to surface the highest chart anomaly rates within each menu section. Really this is just another quick way to view things that might come in useful.
+
+Try it for yourself in our "Machine Learning" demo room [here](https://app.netdata.cloud/spaces/netdata-demo/rooms/machine-learning/overview#metrics_correlation=false&after=-21600&before=0&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a--chartName=menu_system&ae33f57b-b54e-4236-a6de-054da3f0a748--chartName=menu_anomaly_detection_submenu_anomaly_rate).
