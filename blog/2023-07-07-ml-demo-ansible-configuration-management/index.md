@@ -2,8 +2,8 @@
 slug: ml-demo-ansible-configuration-management
 title: "Netdata & Ansible example: ML demo room"
 authors: andy
-tags: [configuration-management, ansible, netdata-demo, demo, ml]
-keywords: [configuration-management, ansible, netdata-demo, demo, ml]
+tags: [configuration-management, ansible, netdata-demo, demo, ml, machine-learning]
+keywords: [configuration-management, ansible, netdata-demo, demo, ml, machine-learning]
 image: ./img/netdata-ansible.jpg
 ---
 
