@@ -48,7 +48,7 @@ For example, with the default of `warn: $this > 1`, when triggered this means th
 
 ## Example
 
-In the example below we can see that the node anomaly rate spikes to around X% and shortly after the `ml_1min_node_ar` alert is triggered at a 1 min rolling node anomaly rate of X%.
+In the example below we can see that the node anomaly rate spikes to around 2.5% and shortly after the `ml_1min_node_ar` alert is triggered at a 1 min rolling node anomaly rate of 2.01%.
 
 ![node-anomaly-rate-alert](./img/node-anomaly-rate-alert.jpg)
 
