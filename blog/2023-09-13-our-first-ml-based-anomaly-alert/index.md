@@ -75,9 +75,10 @@ It is of course entirely possible that the anomaly itself could be a symptom of 
 ## Useful resources
 
 1. [Machine learning (ML) powered anomaly detection](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection)
-2. [Anomaly Advisor](https://learn.netdata.cloud/docs/ml-and-troubleshooting/anomaly-advisor)
-3. [Metric Correlations](https://learn.netdata.cloud/docs/ml-and-troubleshooting/metric-correlations)
-4. [Anomaly Rates in the Menu!](https://blog.netdata.cloud/anomaly-rates-in-the-menu/)
+1. Additional ML based alert examples (e.g. chart based or individual dimension based) can be found in [`health/health.d/ml.conf`](https://github.com/netdata/netdata/blob/master/health/health.d/ml.conf). Or you can see them in action in our [ML demo room](https://app.netdata.cloud/spaces/netdata-demo/rooms/machine-learning/alerts) the configuration code for which lives in [netdata/community](https://github.com/netdata/community/blob/main/configuration-management/ansible-ml-demo/templates/netdata/health.d/ml.conf.j2)
+1. [Anomaly Advisor](https://learn.netdata.cloud/docs/ml-and-troubleshooting/anomaly-advisor)
+1. [Metric Correlations](https://learn.netdata.cloud/docs/ml-and-troubleshooting/metric-correlations)
+1. [Anomaly Rates in the Menu!](https://blog.netdata.cloud/anomaly-rates-in-the-menu/)
 
 ## Feedback
 
