@@ -4,12 +4,12 @@ title: "Our first ML based anomaly alert"
 authors: andy
 tags: [machine-learning, anomaly-detection, ml, product]
 keywords: [machine-learning, anomaly-detection, ml, product]
-image: ./img/node-anomaly-rate-alert.png
+image: ./img/node-anomaly-rate-alert.jpg
 ---
 
-![node-anomaly-rate-alert](./img/node-anomaly-rate-alert.png)
+![node-anomaly-rate-alert](./img/node-anomaly-rate-alert.jpg)
 
-Over the last few years we have slowly and methodically been building out the ML based capabilities of the Netdata agent, dogfooding and iterating as we go. To date these features have mostly been somewhat reactive and tools to aid once you are already troubleshooting.
+Over the last few years we have slowly and methodically been building out the [ML based capabilities](https://learn.netdata.cloud/docs/ml-and-troubleshooting/) of the Netdata agent, dogfooding and iterating as we go. To date, these features have mostly been somewhat reactive and tools to aid once you are already troubleshooting.
 
 Now we feel we are ready to take a first gentle step into some more proactive use cases, starting with a [simple node level anomaly rate alert](https://github.com/netdata/netdata/pull/14687).
 
@@ -44,13 +44,13 @@ component: ML
        to: silent
 ```
 
-For example, with the default of `warn: $this > 1`, this means that 1% or more of the metrics collected on the node have across the most recent 1 minute window been flagged as [anomalous](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection) by Netdata.
+For example, with the default of `warn: $this > 1`, when triggered this means that 1% or more of the metrics collected on the node have across the most recent 1 minute window been flagged as [anomalous](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection) by Netdata.
 
 ## Example
 
 In the example below we can see that the node anomaly rate spikes to around X% and shortly after the `ml_1min_node_ar` alert is triggered at a 1 min rolling node anomaly rate of X%.
 
-![node-anomaly-rate-alert](./img/node-anomaly-rate-alert.png)
+![node-anomaly-rate-alert](./img/node-anomaly-rate-alert.jpg)
 
 ## Troubleshoot the alert
 
@@ -68,9 +68,15 @@ It is of course entirely possible that the anomaly itself could be a symptom of 
 
 3. **Check the anomalies tab**: Check the [Anomaly Advisor](https://learn.netdata.cloud/docs/ml-and-troubleshooting/anomaly-advisor) ("Anomalies" tab) to see an ordered list of what metrics were most anomalous in the highlighted window.
 
+![anomalies](./img/anomalies.jpg)
+
 4. **Press the AR% button on Overview**: You can also press the "[AR%](https://blog.netdata.cloud/anomaly-rates-in-the-menu/)" button on the Overview or single node dashboard to see what parts of the menu have the highest chart anomaly rates. Pressing the AR% button should add some "pills" to each menu item and if you hover over it you will see that chart within each menu section that was most anomalous during the highlighted timeframe.
 
+![ar-pct](./img/ar-pct.jpg)
+
 5. **Use Metric Correlations**: Use [metric correlations](https://learn.netdata.cloud/docs/ml-and-troubleshooting/metric-correlations) to see what metrics may have changed most significantly comparing before to the highlighted timeframe.
+
+![mc](./img/mc.jpg)
 
 ## Useful resources
 
