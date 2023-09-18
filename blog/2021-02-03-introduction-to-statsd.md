@@ -2,7 +2,7 @@
 slug: introduction-to-statsd
 title: "Introduction to StatsD"
 description: "Introduction to StatsD"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/StatsD.png
+image: /img/wp-archive/uploads/2022/03/StatsD.png
 tags: [engineering,product,statsd]
 keywords: [netdata,engineering,product]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-medium wp-image-16449" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/StatsD-600x414.png" alt="" width="600" height="414" />
+<img class="alignnone size-medium wp-image-16449" src="/img/wp-archive/uploads/2022/03/StatsD-600x414.png" alt="" width="600" height="414" />
 
 StatsD is an industry-standard technology stack for monitoring applications and instrumenting any piece of software to deliver custom metrics. The StatsD architecture is based on delivering the metrics via UDP packets from any application to a central statsD server. Although the original StatsD server was written in Node.js, there are many implementations today, with Netdata being one of them.
 
@@ -37,7 +37,7 @@ StatsD uses UDP packets because the client/server both reside on the same host, 
 In case you are wondering about the difference between TCP and UDP, this image is most illustrative:
 </li>
 </ul>
-<img class="alignnone size-medium wp-image-16451" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/tcp-vs-udp-600x268.webp" alt="" width="600" height="268" />
+<img class="alignnone size-medium wp-image-16451" src="/img/wp-archive/uploads/2022/03/tcp-vs-udp-600x268.webp" alt="" width="600" height="268" />
 
 <a href="https://ydevern.wordpress.com/2018/09/26/ccna-udp-vs-tcp/" target="_blank" rel="noopener">Source</a>
 
@@ -45,7 +45,7 @@ More often than not, an HTTP-based connection is used to send the metrics from t
 <h2><strong>StatsD in Netdata</strong></h2>
 <strong>Netdata is a fully featured <a href="https://learn.netdata.cloud/docs/agent/collectors/statsd.plugin">StatsD server</a>, meaning it collects formatted metrics from any application that you instrumented with your library of choice. Netdata is also its own backend implementation, as it offers instant visualization and long-term storage using the embedded time-series database (TSDB). When you install Netdata, you immediately get a fully functional StatsD implementation running on port 8125.</strong>
 
-<img class="alignnone size-medium wp-image-16453" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Diagramds-Page-3-593x600.png" alt="" width="593" height="600" />
+<img class="alignnone size-medium wp-image-16453" src="/img/wp-archive/uploads/2022/03/Netdata-Diagramds-Page-3-593x600.png" alt="" width="593" height="600" />
 
 Since StatsD uses UDP or TCP to send instrumented metrics, either across <strong>localhost</strong> or between separate nodes, you’re free to deploy your application in whatever way works best for you, and it can still connect to Netdata’s server implementation. As soon as your application exposes metrics and starts sending packets on port 8125, Netdata turns the incoming metrics into charts and visualizes them in a meaningful fashion.
 
@@ -67,7 +67,7 @@ Taking the example from <strong>python-statsd</strong>, you only need a reachab
 
 Even with no configuration at all, Netdata automatically creates charts for you. Netdata, being a robust monitoring agent, is also capable of organizing incoming metrics in any way you find most meaningful.
 
-<img class="alignnone size-medium wp-image-16455" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Screenshot-2021-01-27-at-2.12.37-PM-600x483.png" alt="" width="600" height="483" />
+<img class="alignnone size-medium wp-image-16455" src="/img/wp-archive/uploads/2022/03/Screenshot-2021-01-27-at-2.12.37-PM-600x483.png" alt="" width="600" height="483" />
 <div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 <div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">

@@ -11,11 +11,11 @@ While working on improving the <a href="https://netdata.cloud/postgresql-monitor
 
 And the value we saw was significantly low - less than 0.1% of the rows being returned are part of what's being fetched! - and the behavior was consistent for more than a week.
 
-![missing indexes in PostgreSQL](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Screen-Shot-2022-10-05-at-17.01.51-600x228.png)
+![missing indexes in PostgreSQL](/img/wp-archive/uploads/2022/10/Screen-Shot-2022-10-05-at-17.01.51-600x228.png)
 
 If Rows fetched ratio is consistently and significantly low, it is likely to be due to missing indexes or inefficient queries. And in this particular case, the culprit was indeed missing indexes in PostgreSQL. Creating the indexes immediately rectified the problem and brought the ratio to satisfactory levels.
 
-![missing indexes in PostgreSQL](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Screen-Shot-2022-10-05-at-17.03.27-600x225.png)
+![missing indexes in PostgreSQL](/img/wp-archive/uploads/2022/10/Screen-Shot-2022-10-05-at-17.03.27-600x225.png)
 
 If you’re using PostgreSQL in production, keep an eye on your rows fetched ratio. And if you’re using Netdata, be sure to filter the chart by different databases to see if any of them are missing indexes.
 

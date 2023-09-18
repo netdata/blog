@@ -2,7 +2,7 @@
 slug: netdata-culture-people
 title: "The Netdata Culture and People"
 description: "The Netdata Culture and People"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/people-culture_01.png
+image: /img/wp-archive/uploads/2022/03/people-culture_01.png
 tags: [culture]
 keywords: [netdata,culture]
 authors: chris
@@ -10,13 +10,13 @@ authors: chris
 
 <!--truncate-->
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/people-culture_01.png)
+![](/img/wp-archive/uploads/2022/03/people-culture_01.png)
 
 There are many things I absolutely love about Netdata, but I’m most proud of our people and culture. Some words about this unique experience are long overdue.
 
 In a career that spans over two decades and six other companies of various sizes, nothing compares to the satisfaction of working in a company like ours. My answer to the canned interview question, “Where do you see yourself in 5 years”, was always the same: I don’t care; I just want to be solving problems and working with good people, real professionals, who I can trust and respect. In retrospect, I was missing another huge part of the equation, which is to mention the kind of company I wanted to work for. “Culture eats strategy for breakfast” is a cliche. More importantly, bad culture devours people’s souls; it sucks out any creative energy one may have, reducing engagement and, therefore, productivity. Short-term wins at the expense of company culture guarantee huge losses in the long run.
 
-<img class="alignnone size-full wp-image-16764" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/people-culture_02.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16764" src="/img/wp-archive/uploads/2022/03/people-culture_02.png" alt="" width="600" height="600" />
 
 But let’s get back to the people. The reason I emphasized co-workers so much in my answer to the interview question wasn’t because I had read any books or research on the effects of quality personnel. I know the people around you are important because I was always more productive and happier in the workplace when I just “clicked” with my co-workers, direct reports and managers. My fondest workplace memories involve working in good, small teams, solving really hard, urgent problems in an efficient way. No fluff, no conflict; just a problem, cooperation and results. I realized soon enough that the only way to get into such a groove is to be working with <a href="https://netdata.cloud/about/">smart professionals</a>.
 
@@ -28,7 +28,7 @@ Our culture…I got sick of hearing about the “X Values” of company Y. Catch
 
 These statements come from our collective experiences of what works best to guarantee long-term engagement and productivity in a highly demanding but positive environment. Most of them feel natural to most of the people we’ve collected here.
 
-<img class="alignnone size-full wp-image-16766" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/people-culture_03.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16766" src="/img/wp-archive/uploads/2022/03/people-culture_03.png" alt="" width="600" height="600" />
 <h2>Putting users first</h2>
 &nbsp;
 <ul>
@@ -36,7 +36,7 @@ These statements come from our collective experiences of what works best to guar
  	<li>Measure the impact of your work by the benefits to the users.</li>
  	<li>In your interactions with users, reach out, understand them, put yourself in their shoes, connect with them.</li>
 </ul>
-<img class="alignnone size-full wp-image-16768" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/people-culture_04.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16768" src="/img/wp-archive/uploads/2022/03/people-culture_04.png" alt="" width="600" height="600" />
 <h2>Teamwork, honesty, transparency</h2>
 &nbsp;
 <ul>
@@ -46,7 +46,7 @@ These statements come from our collective experiences of what works best to guar
  	<li>Treat feedback from others as a helping hand. Assume positive intent.</li>
  	<li>Respect others. Demonstrate empathy.</li>
 </ul>
-<img class="alignnone size-full wp-image-16770" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/people-culture_05.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16770" src="/img/wp-archive/uploads/2022/03/people-culture_05.png" alt="" width="600" height="600" />
 <h2>Self-motivation, passion, drive for excellence</h2>
 &nbsp;
 <ul>
@@ -55,7 +55,7 @@ These statements come from our collective experiences of what works best to guar
  	<li>Do everything in your power to honor your commitments.</li>
  	<li>Don’t negotiate on quality.</li>
 </ul>
-<img class="alignnone size-full wp-image-16772" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/people-culture_06.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16772" src="/img/wp-archive/uploads/2022/03/people-culture_06.png" alt="" width="600" height="600" />
 <h2>Productivity, results</h2>
 &nbsp;
 <ul>
@@ -65,7 +65,7 @@ These statements come from our collective experiences of what works best to guar
  	<li>Protect yourself from scope creep.</li>
  	<li>Keep following up on other people’s tasks that block your progress.</li>
 </ul>
-<img class="alignnone size-full wp-image-16774" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/people-culture_07.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16774" src="/img/wp-archive/uploads/2022/03/people-culture_07.png" alt="" width="600" height="600" />
 <h2>Discipline</h2>
 &nbsp;
 <ul>

@@ -15,15 +15,15 @@ The chart label filtering is now enabled on:
   - All charts on the <strong>Overview</strong> tab.
   - Custom dashboards.
 
-<img class="alignnone wp-image-17675 size-medium" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Screen-Shot-2022-09-28-at-15.33.40-1-600x247.png" alt="filter metrics by label" width="600" height="247" />
+<img class="alignnone wp-image-17675 size-medium" src="/img/wp-archive/uploads/2022/10/Screen-Shot-2022-09-28-at-15.33.40-1-600x247.png" alt="filter metrics by label" width="600" height="247" />
 
-<img class="alignnone wp-image-17677 size-medium" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Screen-Shot-2022-09-28-at-15.34.54-e1664986936905-600x295.png" alt="filter metrics by label" width="600" height="295" />
+<img class="alignnone wp-image-17677 size-medium" src="/img/wp-archive/uploads/2022/10/Screen-Shot-2022-09-28-at-15.34.54-e1664986936905-600x295.png" alt="filter metrics by label" width="600" height="295" />
 
 The top panel on each chart displays the various filters and grouping options selected on the specific chart. These filters are specific for each chart and need to be manually configured on each chart.
 
 Additionally, the charts can be saved to a custom dashboard (new or existing) with the selected filters from the overview screen.
 
-<img class="alignnone wp-image-17679 size-medium" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Screen-Shot-2022-09-28-at-15.39.25-600x246.png" alt="filter metrics by label" width="600" height="246" />
+<img class="alignnone wp-image-17679 size-medium" src="/img/wp-archive/uploads/2022/10/Screen-Shot-2022-09-28-at-15.39.25-600x246.png" alt="filter metrics by label" width="600" height="246" />
 
 ## Customizing labels for Collectors
 
@@ -57,9 +57,9 @@ jobs:
       instance_type: production
 ```
 
-<img class="alignnone wp-image-17681 size-medium" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Screen-Shot-2022-09-28-at-17.35.21-600x221.png" alt="custom labels for collectors" width="600" height="221" />
+<img class="alignnone wp-image-17681 size-medium" src="/img/wp-archive/uploads/2022/10/Screen-Shot-2022-09-28-at-17.35.21-600x221.png" alt="custom labels for collectors" width="600" height="221" />
 
-<img class="alignnone wp-image-17683 size-medium" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Screen-Shot-2022-09-28-at-17.36.14-600x221.png" alt="custom labels for collectors" width="600" height="221" />
+<img class="alignnone wp-image-17683 size-medium" src="/img/wp-archive/uploads/2022/10/Screen-Shot-2022-09-28-at-17.36.14-600x221.png" alt="custom labels for collectors" width="600" height="221" />
 
 ## What's Next?
 

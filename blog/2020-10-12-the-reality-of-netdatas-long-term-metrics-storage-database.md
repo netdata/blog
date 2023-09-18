@@ -2,7 +2,7 @@
 slug: the-reality-of-netdatas-long-term-metrics-storage-database
 title: "The reality of Netdata’s long-term metrics storage database"
 description: "The reality of Netdata’s long-term metrics storage database"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Long-term-metrics-storage-1.png
+image: /img/wp-archive/uploads/2022/03/Long-term-metrics-storage-1.png
 tags: [product,engineering]
 keywords: [netdata,product,engineering]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-full wp-image-16589" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Long-term-metrics-storage-1.png" alt="" width="683" height="470" />
+<img class="alignnone size-full wp-image-16589" src="/img/wp-archive/uploads/2022/03/Long-term-metrics-storage-1.png" alt="" width="683" height="470" />
 
 The perception that Netdata is only capable of short-term metrics storage is a myth. It’s a pervasive myth we still see in blog posts and through community engagement, despite it being false for more than a year.
 
@@ -42,7 +42,7 @@ When the datafiles and journalfiles exceed the default or user-defined disk spac
 
 See the journey of a metric value through the wonders of the database engine:
 
-<img class="alignnone size-large wp-image-16591" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdatas-database-engine-1200x759.png" alt="" width="1200" height="759" />
+<img class="alignnone size-large wp-image-16591" src="/img/wp-archive/uploads/2022/03/Netdatas-database-engine-1200x759.png" alt="" width="1200" height="759" />
 <div class="et_pb_row et_pb_row_0">
 <div class="et_pb_column et_pb_column_4_4 et_pb_column_0 et_pb_css_mix_blend_mode_passthrough et-last-child">
 <div class="et_pb_module et_pb_text et_pb_text_1 et_pb_text_align_left et_pb_bg_layout_light">

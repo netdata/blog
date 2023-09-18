@@ -2,7 +2,7 @@
 slug: linux-ebpf-monitoring-with-netdata
 title: "Linux eBPF monitoring with Netdata"
 description: "Linux eBPF monitoring with Netdata"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/linux-ebpf-monitoring-netdata.png
+image: /img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata.png
 tags: [product,ebpf,operating-system-monitoring]
 keywords: [netdata,product]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-full wp-image-16799" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/linux-ebpf-monitoring-netdata.png" alt="" width="1200" height="600" />
+<img class="alignnone size-full wp-image-16799" src="/img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata.png" alt="" width="1200" height="600" />
 
 Your application isn’t finished when you’ve closed the last <code>if</code> block and you lined up all the brackets. There’s a whole other world of testing, debugging, and optimization that you haven’t even touched yet.
 
@@ -18,7 +18,7 @@ To help you more safely step into that complex phase of making your application�
 
 With per-second metrics on system calls, file descriptors, virtual file system I/O, and process management, you can debug faster, get smarter about performance optimization, and save some of your valuable time.
 
-<img class="alignnone size-full wp-image-16801" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/linux-ebpf-monitoring-netdata_01-1024x545-2.png" alt="" width="1024" height="545" />
+<img class="alignnone size-full wp-image-16801" src="/img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata_01-1024x545-2.png" alt="" width="1024" height="545" />
 <h6>An example of virtual file system (VFS) charts, made possible by the eBPF collector plugin</h6>
 <h2>What is eBPF?</h2>
 eBPF (extended Berkeley Packet Filter) is a virtual bytecode machine built into the Linux kernel that can be used for advanced monitoring and tracing. With eBPF, you can get detailed metrics about I/O and filesystem latency, CPU usage by process, and network performance, all while executing code in a safe and fast sandbox. You don’t need to recompile your kernel after building a custom module, and with eBPF, there’s no risk of crashing the kernel.
@@ -44,13 +44,13 @@ In the <strong>Files</strong> section, Netdata monitors how many files various
 
 Let’s say you’re building an application and notice that after running it for an extended time, the host system slows down. There could be a lot of reasons for this, but one could be that your application is opening files but not properly closing them after an appropriate time. In this case, you would see the two lines in the first chart diverge, as there are more open descriptors than closed.
 
-<img class="alignnone size-full wp-image-16803" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/linux-ebpf-monitoring-netdata_02-980x311-1.png" alt="" width="980" height="311" />
+<img class="alignnone size-full wp-image-16803" src="/img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata_02-980x311-1.png" alt="" width="980" height="311" />
 <h6>See how the green (open) line is generally larger than the red (close) line? This discrepancy could reveal bugs in your application.</h6>
 Too many open files <em>could</em> be responsible for slowing down the system. It may not be the root cause of your application’s performance troubles, but you can use this valuable information to debug your application by focusing on where it opens and closes files using functions like <code>open(2)</code>, <code>openat(2)</code>, and <code>close(2)</code>.
 <h2>Combine Netdata’s real-time metrics with eBPF tools</h2>
 Having real-time eBPF metrics on hand can help guide you to the next stage in troubleshooting anomalies with your applications and services. For example, the <code>ebpf.io</code> chart shows the volume of calls to the <code>vfs_read</code> function. Is that number is suspiciously high all of a sudden? Maybe it’s to move to the command line.
 
-<img class="alignnone size-full wp-image-16805" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/linux-ebpf-monitoring-netdata_03-1024x242-1.png" alt="" width="1024" height="242" />
+<img class="alignnone size-full wp-image-16805" src="/img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata_03-1024x242-1.png" alt="" width="1024" height="242" />
 <h6>Detailed I/O information from the kernel can help you decide where to go next in your debugging journey.</h6>
 You can use <code>bpftrace</code> to produce a histogram of <code>vfs_read</code> latency for a program running on a certain PID. In this case, a Netdata agent running on PID 1499.
 
@@ -70,7 +70,7 @@ In the <strong>Process</strong> group, the <code>ebpf.exit</code> chart moni
 
 And that is exactly what the <code>ebpf.process_status</code> chart is for: It shows both the difference between processes and threads created via the <code>process</code> dimension, but also the number of possible zombie processes running on the system. For example, if you create a few thousand zombie processes with a <a href="https://www.refining-linux.org/archives/7-Dr.-Frankenlinux-or-how-to-create-zombie-processes.html">“zombie factory” program</a>:
 
-<img class="alignnone size-full wp-image-16807" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/linux-ebpf-monitoring-netdata_04-1024x195-1.png" alt="" width="1024" height="195" />
+<img class="alignnone size-full wp-image-16807" src="/img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata_04-1024x195-1.png" alt="" width="1024" height="195" />
 <h6>Zombie processes galore! With eBPF, you know exactly when your system fails to stop tasks and spawns yet another zombie.</h6>
 Knowing when your system creates zombie processes can be invaluable in diagnosing why your software isn’t working the way you expect.
 <h2>What’s next?</h2>

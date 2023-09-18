@@ -2,7 +2,7 @@
 slug: bringing-rich-and-real-time-infrastructure-monitoring-to-netdata-cloud
 title: "Bringing rich and real-time infrastructure monitoring to Netdata Cloud"
 description: "Bringing rich and real-time infrastructure monitoring to Netdata Cloud"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Correlation_charts.png
+image: /img/wp-archive/uploads/2022/03/Correlation_charts.png
 tags: [product]
 keywords: [netdata,product]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16578" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Correlation_charts-1200x830.png" alt="" width="1200" height="830" />
+<img class="alignnone size-large wp-image-16578" src="/img/wp-archive/uploads/2022/03/Correlation_charts-1200x830.png" alt="" width="1200" height="830" />
 
 The Netdata Agent is well-equipped to solve monitoring and troubleshooting challenges for single nodes. We love that the Agent is so valuable to our users, but Netdata Cloud is designed for infrastructure monitoring. That’s why we’re working so hard to offer even more capabilities and help users monitor and troubleshoot infrastructures of all sizes, entirely for free!
 
@@ -18,7 +18,7 @@ With the new Cloud Overview, you get every real-time chart and metric you need t
 
 The Overview uses the Agent dashboard, the one our users love, as its foundation, but is even more powerful with <i>composite charts</i> that visualize metrics from <i>all nodes belonging to a War Room</i>, or a configurable subset. Better yet, every composite chart is immediately available and requires zero configuration.
 
-<img class="alignnone size-large wp-image-16580" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/95912630-e75ed600-0d57-11eb-8a3b-49e883d16833-2-1200x734.png" alt="" width="1200" height="734" />
+<img class="alignnone size-large wp-image-16580" src="/img/wp-archive/uploads/2022/03/95912630-e75ed600-0d57-11eb-8a3b-49e883d16833-2-1200x734.png" alt="" width="1200" height="734" />
 
 With the Overview, you can:
 <ul>
@@ -43,7 +43,7 @@ The Overview, and its composite charts, is one critical step towards democratizi
  	<li>Software development teams are one step closer to becoming DevOps engineers, with all this monitoring and troubleshooting support out-of-the-box.</li>
  	<li>Enterprises don’t need to rely solely on the ability of operational, SRE, and DevOps teams to set up monitoring systems, which gives them more time and flexibility to focus on critical business objectives.</li>
 </ul>
-<img class="alignnone size-large wp-image-16582" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/composite-aggregation-3-1200x501.png" alt="" width="1200" height="501" />
+<img class="alignnone size-large wp-image-16582" src="/img/wp-archive/uploads/2022/03/composite-aggregation-3-1200x501.png" alt="" width="1200" height="501" />
 <h2>How can you use Netdata Cloud’s infrastructure monitoring tools?</h2>
 We’re excited to see how you use the Overview and composite charts. While some of the features supporting these use cases are already available, others are coming soon. Stay tuned!
 <ul>
@@ -54,7 +54,7 @@ We’re excited to see how you use the Overview and composite charts. While some
  	<li><strong>Get monitoring data related to blue-green deployments with the use of dashboards.</strong> Add composite charts to a dashboard and watch how important metrics relate to each group of nodes after a deployment. With this focused, custom view, you can understand how the deployed code affects system and application performance.</li>
  	<li><strong>Investigate after receiving alarm notifications.</strong> We’re working hard on centralized alarm dispatch via email. When you receive a notification from Netdata Cloud about a node’s health, use the Overview to see how charts on other nodes with a similar purpose behave during the same timeframe.</li>
 </ul>
-<img class="alignnone size-large wp-image-16584" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/96297655-09e62e80-0fa6-11eb-8066-b07d28e11981-4-1200x490.png" alt="" width="1200" height="490" />
+<img class="alignnone size-large wp-image-16584" src="/img/wp-archive/uploads/2022/03/96297655-09e62e80-0fa6-11eb-8066-b07d28e11981-4-1200x490.png" alt="" width="1200" height="490" />
 <h2>What’s next for composite charts?</h2>
 Soon, we’ll offer new capabilities around composite charts, some of which we described above:
 <ul>

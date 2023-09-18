@@ -2,7 +2,7 @@
 slug: netdata-cloud-metric-correlations
 title: "Introducing our first Netdata Cloud Insights feature: Metric Correlations for faster root cause analysis"
 description: "Introducing our first Netdata Cloud Insights feature: Metric Correlations for faster root cause analysis"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Cloud-Correlations@2x.png
+image: /img/wp-archive/uploads/2022/03/Cloud-Correlations@2x.png
 tags: [product,engineering,machine-learning]
 keywords: [netdata,product,engineering,machine-learning]
 authors: andy
@@ -10,7 +10,7 @@ authors: andy
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16623" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Cloud-Correlations@2x-1200x826.png" alt="" width="1200" height="826" />
+<img class="alignnone size-large wp-image-16623" src="/img/wp-archive/uploads/2022/03/Cloud-Correlations@2x-1200x826.png" alt="" width="1200" height="826" />
 
 Today, we are excited to launch our first Netdata Cloud Insights feature, Metric Correlations, developed for discovering underlying issues more quickly and identifying the root cause more efficiently. Read on to learn more about our approach to developing this new feature, how it works, and the many benefits you’ll find incorporating this into your team’s troubleshooting workflow.
 <h2>Some background</h2>
@@ -34,13 +34,13 @@ The Metric Correlations feature will look at all the dimensions available to see
 
 Admittedly, the “correlation” here then is a bit indirect, in that what you are really doing is many separate comparisons, one for each metric independently, between the baseline window and the highlighted window you have selected, and then prioritizing those metrics that seem to have changed the most across those two windows. Everything that we can score is returned<sup><a href="https://staging-www.netdata.cloud/blog/netdata-cloud-metric-correlations/#3">3</a></sup>. The picture below might explain things a bit more clearly.
 
-<img class="alignnone size-large wp-image-16628" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/09/Screenshot-2022-03-24-at-15.36.33-1200x747.png" alt="" width="1200" height="747" />
+<img class="alignnone size-large wp-image-16628" src="/img/wp-archive/uploads/2020/09/Screenshot-2022-03-24-at-15.36.33-1200x747.png" alt="" width="1200" height="747" />
 
 The results you get are the usual Netdata interface and charts, but with only the metrics with a score below a threshold defined by the slider<sup><a href="https://staging-www.netdata.cloud/blog/netdata-cloud-metric-correlations/#4">4</a></sup>. Moving the slider to the right (towards <strong>Show more</strong>) will loosen this threshold and likely include somewhat less relevant results. If you move the slider to the left (towards <strong>Show less</strong>), then you should only see the metrics that have changed the most<sup><a href="https://staging-www.netdata.cloud/blog/netdata-cloud-metric-correlations/#5">5</a></sup>.
 
 Below is a picture of how this looks and what you are looking at.
 
-<img class="alignnone wp-image-16631 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/09/Screenshot-2022-03-24-at-15.36.45-1200x748.png" alt="" width="1200" height="748" />
+<img class="alignnone wp-image-16631 size-large" src="/img/wp-archive/uploads/2020/09/Screenshot-2022-03-24-at-15.36.45-1200x748.png" alt="" width="1200" height="748" />
 <h2>Thoughts, ideas, feedback? We want to hear from you!</h2>
 Feedback on the features we introduce is crucial for our plans to refine and improve, as well as decide where else to focus our efforts for new or related ideas. If you are using this feature and feel strongly enough to provide any sort of feedback, positive or negative, you can use the thumbs up or down button or the <strong>Help</strong> widget on the bottom right if you’d like to give more detailed feedback as shown in the diagram above.
 

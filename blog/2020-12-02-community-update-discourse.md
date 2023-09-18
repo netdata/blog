@@ -2,7 +2,7 @@
 slug: community-update-discourse
 title: "Community update: Discourse, community efforts"
 description: "Community update: Discourse, community efforts"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Community-update_-Discourse-community-efforts.png
+image: /img/wp-archive/uploads/2022/03/Community-update_-Discourse-community-efforts.png
 tags: [community]
 keywords: [netdata,community]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone wp-image-16522 size-full" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Community-update_-Discourse-community-efforts.png" alt="" width="681" height="470" />
+<img class="alignnone wp-image-16522 size-full" src="/img/wp-archive/uploads/2022/03/Community-update_-Discourse-community-efforts.png" alt="" width="681" height="470" />
 
 Open source and community have always been in the DNA of Netdata, with the Agent starting as a very popular open-source project. Since then, a lot has changed, with Netdata maturing into a company, and the Netdata Agent finding its place as an open-source project in a wider offering that redesigns the monitoring experience from the ground up.
 
@@ -31,17 +31,17 @@ The new community, or community 2.0, is a fresh view of the community efforts we
 
 We started with redesigning the user experience for the community member, by clarifying the use of each platform and tying that platform to a specific user goal. We wanted to make things as explicit as possible and remove as much cognitive load as possible. Thus, each platform is tightly connected with the rest of the community platforms, so that we are sure that the user will always easily find the resource that they are looking for. The end design creates a closed system that can be summarized in the diagram below.
 
-<img class="alignnone wp-image-16524 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Community-state-v2-1-1200x800.png" alt="" width="1200" height="800" />
+<img class="alignnone wp-image-16524 size-large" src="/img/wp-archive/uploads/2022/03/Community-state-v2-1-1200x800.png" alt="" width="1200" height="800" />
 
 Let’s briefly see all the facets of the community:
 
-<img class="alignnone wp-image-16526 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Screenshot-2020-12-02-at-4.15.48-PM-1104x1200.png" alt="" width="1104" height="1200" />
+<img class="alignnone wp-image-16526 size-large" src="/img/wp-archive/uploads/2022/03/Screenshot-2020-12-02-at-4.15.48-PM-1104x1200.png" alt="" width="1104" height="1200" />
 <h2>Community page</h2>
-<img class="alignnone wp-image-16526 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Screenshot-2020-12-02-at-4.15.48-PM-1104x1200.png" alt="" width="1104" height="1200" />
+<img class="alignnone wp-image-16526 size-large" src="/img/wp-archive/uploads/2022/03/Screenshot-2020-12-02-at-4.15.48-PM-1104x1200.png" alt="" width="1104" height="1200" />
 
 Our <a href="https://staging-www.netdata.cloud/community/" target="_blank" rel="noopener noreferrer">community page</a> now serves as an index for the entire community. We deconstructed the community user journey and mapped all the different goals that a community member might have, and then structured the community page accordingly. By explicitly listing every user goal, we hope that the user will be able to easily find the next step in the journey. They should be able to interact in the manner that they want, with less friction, lowering the barrier of entry for community engagement.
 <h2>Community forums</h2>
-<img class="alignnone wp-image-16528 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Screenshot-2020-12-02-at-4.17.41-PM-1200x943.png" alt="" width="1200" height="943" />
+<img class="alignnone wp-image-16528 size-large" src="/img/wp-archive/uploads/2022/03/Screenshot-2020-12-02-at-4.17.41-PM-1200x943.png" alt="" width="1200" height="943" />
 
 We launched the <a href="https://community.netdata.cloud/">forum</a> back in the summer, but without clarifying how we are going to use the forums in relation to user interaction on GitHub. With the re-launching of our forums, with different software and a different philosophy, we’re making the forums the centerpiece of Netdata’s wider community.
 
@@ -57,7 +57,7 @@ To better integrate GitHub into the rest of the community ecosystem, when openin
 
 Netdata Learn is also the home of our <a href="https://learn.netdata.cloud/contribute" target="_blank" rel="noopener noreferrer">contribution guidelines</a>, our handbook for contributing to Netdata, either in code, <a href="https://learn.netdata.cloud/contribute/handbook#sponsor-a-part-of-netdata" target="_blank" rel="noopener noreferrer">collector guidance</a>, or in <a href="https://learn.netdata.cloud/contribute/documentation" target="_blank" rel="noopener noreferrer">documentation</a>. Thus, it is important that the website is easily accessible from both the product, the forum, and the index.
 <h2>Product</h2>
-<img class="alignnone size-large wp-image-16530" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Overview-1-1200x853.png" alt="" width="1200" height="853" />
+<img class="alignnone size-large wp-image-16530" src="/img/wp-archive/uploads/2022/03/Overview-1-1200x853.png" alt="" width="1200" height="853" />
 
 Community 2.0 couldn’t leave out some product features as well, since we want the product to be at the core of the experience. In the near future, we will ship a new help widget, which will link users to different community platforms, depending on their goal.
 

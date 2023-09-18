@@ -2,7 +2,7 @@
 title: Metric Correlations on the Agent
 slug: metric-correlations-on-the-agent
 description: Netdata now can run Metric Correlations on the Agent.
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/06/mc-comparisons-1.png
+image: /img/wp-archive/uploads/2022/06/mc-comparisons-1.png
 tags: [machine-learning,ml,metric-correlations,troubleshooting]
 keywords: [machine-learning,ml,metric-correlations]
 authors: andy
@@ -19,11 +19,11 @@ So, to give users a faster option, we decided to re-implement the whole algorith
 
 Below you can see the typical latencies on the default cloud based Metric Correlations service range from 5 to 25 seconds.
 
-![latency based on cloud microservice](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/06/mc_cloud_latency-1-600x211.png)
+![latency based on cloud microservice](/img/wp-archive/uploads/2022/06/mc_cloud_latency-1-600x211.png)
 
 In comparison we can see that the latencies for the agent based Metric Correlations tend to be between 100 milliseconds to maybe 5 seconds typical upper range.
 
-![latency based on agent](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/06/mc_agent_latency-2-600x211.png)
+![latency based on agent](/img/wp-archive/uploads/2022/06/mc_agent_latency-2-600x211.png)
 
 ## Getting started
 

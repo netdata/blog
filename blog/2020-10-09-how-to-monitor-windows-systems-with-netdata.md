@@ -2,7 +2,7 @@
 slug: how-to-monitor-windows-systems-with-netdata
 title: "How to monitor Windows systems with Netdata"
 description: "How to monitor Windows systems with Netdata"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png
+image: /img/wp-archive/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png
 tags: [product,engineering,windows]
 keywords: [netdata,product,engineering]
 authors: Jen
@@ -13,7 +13,7 @@ authors: Jen
 <div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 
-<img class="alignnone size-full wp-image-16596" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png" alt="" width="683" height="512" />
+<img class="alignnone size-full wp-image-16596" src="/img/wp-archive/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png" alt="" width="683" height="512" />
 
 **_Note: Please check out the latest [blog](https://blog.netdata.cloud/windows-monitoring-improvements/) on the improvements to Windows monitoring and the [Windows demo room](https://app.netdata.cloud/spaces/netdata-demo/rooms/windows/?utm_campaign=technical&utm_source=content&utm_medium=website&utm_content=windows)._**
  
@@ -61,21 +61,21 @@ The WMI collector can collect data from any number of Windows systems running wi
 
 The configuration below collects metrics on CPU, memory, disk, networking, and more, from two unique Windows systems.
 
-<img class="alignnone size-large wp-image-16598" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/configuration-for-metrics-on-CPU-memory-disk-networking-and-more-1-1200x215.png" alt="" width="1200" height="215" />
+<img class="alignnone size-large wp-image-16598" src="/img/wp-archive/uploads/2022/03/configuration-for-metrics-on-CPU-memory-disk-networking-and-more-1-1200x215.png" alt="" width="1200" height="215" />
 
 Once you have configured the WMI collector, and you have started both windows_exporter and the Netdata Agent, you should be able to monitor and troubleshoot the core components of your Windows machine(s).
 
-<img class="alignnone size-large wp-image-16600" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Monitor-and-troubleshoot-the-core-components-of-your-Windows-machines-2-1200x616.png" alt="" width="1200" height="616" />
+<img class="alignnone size-large wp-image-16600" src="/img/wp-archive/uploads/2022/03/Monitor-and-troubleshoot-the-core-components-of-your-Windows-machines-2-1200x616.png" alt="" width="1200" height="616" />
 <h3>Monitor Windows applications using Netdata’s collectors</h3>
 Netdata is entirely capable of collecting and visualizing metrics from applications running on your Windows systems, in the same manner that it was able to collect data from the windows_exporter. As we outline in our <a title="documentation" href="https://learn.netdata.cloud/docs/agent/collectors/collectors" target="_blank" rel="noopener noreferrer">documentation</a>, various Windows applications expose their metrics via HTTP endpoints, which can be reached by Netdata collectors even if Netdata is installed in a different system.
 
 You will need to configure these collectors, just as you might have configured WMI in the section above. For example, let’s say you have a MySQL database with a root password of my-secret-pw running on a Windows system with the IP address 203.0.113.0. First, open up the <a title="MySQL collector" href="https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/mysql" target="_blank" rel="noopener noreferrer">MySQL collector</a>’s configuration file. If you’re not sure how to do that, follow the below steps, or check out our doc on <a title="enabling or configuring a collector" href="https://learn.netdata.cloud/docs/collect/enable-configure" target="_blank" rel="noopener noreferrer">enabling or configuring a collector</a>.
 
-<img class="alignnone size-large wp-image-16602" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Enabling-or-configuring-a-collector-3-1200x90.png" alt="" width="1200" height="90" />
+<img class="alignnone size-large wp-image-16602" src="/img/wp-archive/uploads/2022/03/Enabling-or-configuring-a-collector-3-1200x90.png" alt="" width="1200" height="90" />
 
 Configure the MySQL collector by creating a job that looks for a MySQL database at 203.0.113.0:3306, with your completely secure and totally un-guessable password.
 
-<img class="alignnone size-large wp-image-16604" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Configure-the-MySQL-collector-4-1200x129.png" alt="" width="1200" height="129" />
+<img class="alignnone size-large wp-image-16604" src="/img/wp-archive/uploads/2022/03/Configure-the-MySQL-collector-4-1200x129.png" alt="" width="1200" height="129" />
 
 You can apply this exact logic to any of our <a title="supported collectors" href="https://learn.netdata.cloud/docs/agent/collectors/collectors" target="_blank" rel="noopener noreferrer">supported collectors</a> and applications running on your Windows systems. By configuring jobs, you can effectively monitor your Windows-based infrastructure using Netdata, despite our lack of native Windows support.
 
@@ -89,11 +89,11 @@ Using the <a title="Prometheus exposition format" href="https://prometheus.io/d
 
 Let’s say you want to monitor Microsoft SQL Server with Netdata. You can use <a title="sql_exporter" href="https://github.com/free/sql_exporter" target="_blank" rel="noopener noreferrer">sql_exporter</a> to expose its metrics, then configure the Netdata Agent node to capture its metrics using the Prometheus collector. Get started by opening the prometheus.conf file.
 
-<img class="alignnone size-large wp-image-16606" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Configure-the-Netdata-Agent-node-to-capture-its-metrics-using-the-Prometheus-collector-5-1200x100.png" alt="" width="1200" height="100" />
+<img class="alignnone size-large wp-image-16606" src="/img/wp-archive/uploads/2022/03/Configure-the-Netdata-Agent-node-to-capture-its-metrics-using-the-Prometheus-collector-5-1200x100.png" alt="" width="1200" height="100" />
 
 Then, edit the sql_exporter_local job to point to the URL where sql_exporter exposes your SQL server’s metrics.
 
-<img class="alignnone size-large wp-image-16608" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Edit-the-sql_exporter_local-job-to-point-to-the-URL-where-sql_exporter-exposes-your-SQL-servers-metrics-6-1200x130.png" alt="" width="1200" height="130" />
+<img class="alignnone size-large wp-image-16608" src="/img/wp-archive/uploads/2022/03/Edit-the-sql_exporter_local-job-to-point-to-the-URL-where-sql_exporter-exposes-your-SQL-servers-metrics-6-1200x130.png" alt="" width="1200" height="130" />
 
 Once you restart the Netdata Agent, you can view real-time metrics from your Windows application.
 

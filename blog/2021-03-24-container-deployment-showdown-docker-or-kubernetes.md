@@ -2,7 +2,7 @@
 slug: container-deployment-showdown-docker-or-kubernetes
 title: "Container deployment showdown: Docker or Kubernetes?"
 description: "Container deployment showdown: Docker or Kubernetes?"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Kubernetes_vs_Docker.png
+image: /img/wp-archive/uploads/2022/03/Kubernetes_vs_Docker.png
 tags: [engineering,containers-and-vms,containers]
 keywords: [netdata,engineering]
 authors: Jen
@@ -13,7 +13,7 @@ authors: Jen
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 
-<img class="alignnone wp-image-16433 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Kubernetes_vs_Docker-1200x828.png" alt="" width="1200" height="828" />
+<img class="alignnone wp-image-16433 size-large" src="/img/wp-archive/uploads/2022/03/Kubernetes_vs_Docker-1200x828.png" alt="" width="1200" height="828" />
 
 Monitoring the current state and performance of applications is critical for IT Ops and DevOps teams alike. Understanding the health of an application is one of the most effective ways of anticipating potential bottlenecks or slowdowns, yet it’s one of the largest challenges faced by many organizations that build and deploy software. This is largely due to applications’ distributed and diversified nature. A single outage has the potential to interrupt entire processes that, at times, can interfere with business as a whole and result in a negative effect on the bottom line.
 
@@ -33,7 +33,7 @@ If you have experience with virtualized environments, you can draw comparisons b
 
 Although there are parallels between VMs and containers, the similarities end at this point. Below you can visualize how containers offer more benefits, mainly as a much more lightweight solution for software development teams.
 
-<img class="alignnone wp-image-16437 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/03/kubernetes-monitoring-troubleshooting-1200x828.png" alt="" width="1200" height="828" />
+<img class="alignnone wp-image-16437 size-large" src="/img/wp-archive/uploads/2021/03/kubernetes-monitoring-troubleshooting-1200x828.png" alt="" width="1200" height="828" />
 <div class="et_pb_module et_pb_text et_pb_text_2 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 

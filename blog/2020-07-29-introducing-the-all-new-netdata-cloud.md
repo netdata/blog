@@ -2,7 +2,7 @@
 slug: introducing-the-all-new-netdata-cloud
 title: "Introducing the all-new Netdata Cloud"
 description: "Introducing the all-new Netdata Cloud"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/All-New-Cloud.png
+image: /img/wp-archive/uploads/2022/03/All-New-Cloud.png
 tags: [product]
 keywords: [netdata,product]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16672" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/All-New-Cloud-1200x712.png" alt="" width="1200" height="712" />
+<img class="alignnone size-large wp-image-16672" src="/img/wp-archive/uploads/2022/03/All-New-Cloud-1200x712.png" alt="" width="1200" height="712" />
 
 In case you missed it, we released an all-new version of Netdata Cloud in May. <a title="Netdata Cloud" href="https://staging-www.netdata.cloud/cloud/">Netdata Cloud</a> is a free service that can be accessed from any browser and provides you with a consolidated view of your entire infrastructure.
 
@@ -35,7 +35,7 @@ Netdata Cloud was designed to make it easy for individuals within the same team 
 <h3>Spaces</h3>
 <a title="Spaces" href="https://learn.netdata.cloud/docs/cloud/organize#spaces" target="_blank" rel="noopener noreferrer">Spaces</a> are workspaces for you to organize team members and the nodes that they’re able to view in each War Room. You can use any number of Spaces you require, but it’s important to understand that you can only add any one node to a single Space. This means you’ll need to decide whether to use one Space for your team and separate them by War Rooms, or use different Spaces for teams monitoring different parts of your infrastructure.
 
-<img class="alignnone size-full wp-image-16676" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/07/Invite-your-team.png" alt="" width="761" height="428" />
+<img class="alignnone size-full wp-image-16676" src="/img/wp-archive/uploads/2020/07/Invite-your-team.png" alt="" width="761" height="428" />
 <h2>Dig in with charts, dashboards, and alarms</h2>
 <h3>Nodes view</h3>
 The <a title="Nodes view" href="https://learn.netdata.cloud/docs/cloud/visualize/nodes" target="_blank" rel="noopener noreferrer">Nodes view</a> in each War Room shows you all your key metrics from any number of Agent-monitored nodes. As soon as you claim a node, you will be able to see the operating system, hardware, important services, and more thanks to auto-detection. You decide what’s important for you to keep tabs on, and we provide you the metrics in clean, detailed charts with real-time data. If you need to access the node for any reason, you can do so seamlessly for granular troubleshooting.

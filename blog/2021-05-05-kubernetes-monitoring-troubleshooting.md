@@ -2,7 +2,7 @@
 slug: kubernetes-monitoring-troubleshooting
 title: "Kubernetes monitoring and troubleshooting made simple"
 description: "Kubernetes monitoring and troubleshooting made simple"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/kubernetes-monitoring-troubleshooting.png
+image: /img/wp-archive/uploads/2022/03/kubernetes-monitoring-troubleshooting.png
 tags: [product,kubernetes]
 keywords: [netdata,product]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone wp-image-16419 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/kubernetes-monitoring-troubleshooting-1200x828.png" alt="" width="1200" height="828" />
+<img class="alignnone wp-image-16419 size-large" src="/img/wp-archive/uploads/2022/03/kubernetes-monitoring-troubleshooting-1200x828.png" alt="" width="1200" height="828" />
 
 Infrastructure monitoring was difficult enough when entire businesses ran off a few bare metal servers in a dusty, forgotten closet. Other IT infrastructure <a href="https://staging-www.netdata.cloud/blog/why-netdata-is-free/" target="_blank" rel="noopener noreferrer">monitoring tools fell short</a>, unable to provide complete and granular-enough metrics in real time, even when we were only dealing with a handful of systems responsible for running every part of the application stack. They were hard to configure, especially for the non-gurus out there, and didn’t provide the high-resolution metrics the gurus needed to make data-driven troubleshooting decisions.
 
@@ -67,7 +67,7 @@ Netdata’s Kubernetes dashboard comes with powerful, meaningful visualizations 
 
 <strong>Instant insights with real-time metrics</strong>. Hover over any box in the health map to see essential contextual information and real-time resource utilization metrics from that resource. Once you’ve found the problematic pod/container, with metrics streaming in real-time, you can save yourself headaches by bringing out kubectl only when you know exactly what you need to resolve an issue.
 
-<img class="alignnone size-full wp-image-16946" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/05/kubernetes-monitoring-charts.png" alt="" width="1186" height="814" />
+<img class="alignnone size-full wp-image-16946" src="/img/wp-archive/uploads/2021/05/kubernetes-monitoring-charts.png" alt="" width="1186" height="814" />
 
 <strong>Impact analysis with time series correlations</strong>, powered by Netdata’s composite charts, which aggregate metrics from any number of distributed nodes. See resource utilization over time, across nodes, pods, or containers, and troubleshoot with familiar netdata patterns.
 <h3>Simple ≠ simplistic</h3>

@@ -2,7 +2,7 @@
 slug: how-to-extend-the-geth-collector
 title: "How to extend the Geth collector"
 description: "How to extend the Geth collector"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Geth-collector-diagram-1.png
+image: /img/wp-archive/uploads/2022/03/Geth-collector-diagram-1.png
 tags: [engineering,geth]
 keywords: [netdata,engineering]
 authors: team
@@ -11,7 +11,7 @@ authors: team
 <!--truncate-->
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Geth-collector-diagram-1-1200x796.png" alt="" class="wp-image-16282"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Geth-collector-diagram-1-1200x796.png" alt="" class="wp-image-16282"/></figure>
 
 
 
@@ -63,7 +63,7 @@ The following image is useful:
 
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Geth-collector-diagram-2-1200x796.png" alt="" class="wp-image-16284"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Geth-collector-diagram-2-1200x796.png" alt="" class="wp-image-16284"/></figure>
 
 
 
@@ -127,7 +127,7 @@ e.g
 
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/carbon-1-3-1200x565.png" alt="" class="wp-image-16286"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/carbon-1-3-1200x565.png" alt="" class="wp-image-16286"/></figure>
 
 
 
@@ -135,7 +135,7 @@ We also need to add the function in the central function that is called by the m
 
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/carbon-2-4-1200x558.png" alt="" class="wp-image-16288"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/carbon-2-4-1200x558.png" alt="" class="wp-image-16288"/></figure>
 
 
 
@@ -143,7 +143,7 @@ Lastly, now that we have the value inside the module, we need to create the char
 
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/carbon-4-5-1200x1093.png" alt="" class="wp-image-16290"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/carbon-4-5-1200x1093.png" alt="" class="wp-image-16290"/></figure>
 
 
 
@@ -187,7 +187,7 @@ For example, here is a simple alarm that tells me if Geth is synced or not, base
 
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/carbon-5-6-1200x616.png" alt="" class="wp-image-16292"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/carbon-5-6-1200x616.png" alt="" class="wp-image-16292"/></figure>
 
 
 

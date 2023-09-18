@@ -2,7 +2,7 @@
 slug: systemd-service-liveness
 title: "How to monitor systemd service liveness"
 description: "How to monitor systemd service liveness"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Systemmd-Service-Liveness-e1666366169680.png
+image: /img/wp-archive/uploads/2022/10/Systemmd-Service-Liveness-e1666366169680.png
 tags: [how-to,infrastructure-monitoring,monitoring,systemd,systemd-services]
 keywords: [how-to,infrastructure-monitoring,monitoring]
 authors: chris
@@ -38,7 +38,7 @@ The “include” directive utilizes the <a href="https://golang.org/pkg/path/fi
 
 Whatever you specify will result in a time series for each data collection job, showing the health of the matching systemd units, and <a href="https://github.com/netdata/netdata/blob/master/health/health.d/systemdunits.conf">automated health checks</a> that trigger alerts if a systemd unit goes into the “failed” state. 
 
-!["Systemmd Service Liveness"](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Systemmd-Service-Liveness.png)
+!["Systemmd Service Liveness"](/img/wp-archive/uploads/2022/10/Systemmd-Service-Liveness.png)
 
 If you want to ensure a service is running no matter what, you could add your own alerts for the “inactive” state as well. 
 

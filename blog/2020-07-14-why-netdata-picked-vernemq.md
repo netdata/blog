@@ -2,7 +2,7 @@
 slug: why-netdata-picked-vernemq
 title: "Why Netdata picked VerneMQ"
 description: "Why Netdata picked VerneMQ"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Blog-Why-Netdata-Picked-VerneMQ.jpeg
+image: /img/wp-archive/uploads/2022/03/Blog-Why-Netdata-Picked-VerneMQ.jpeg
 tags: [engineering]
 keywords: [netdata,engineering]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-full wp-image-16705" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Blog-Why-Netdata-Picked-VerneMQ.jpeg" alt="" width="683" height="470" />
+<img class="alignnone size-full wp-image-16705" src="/img/wp-archive/uploads/2022/03/Blog-Why-Netdata-Picked-VerneMQ.jpeg" alt="" width="683" height="470" />
 
 In 2019, the Netdata team already knew that a Netdata Cloud solution in the form of an online platform would greatly complement Netdata’s distributed monitoring by making it much easier to organize large infrastructures and by enabling new ways for teams to collaborate. The old node registry available at the time wasn’t enough for Netdata’s users.
 
@@ -24,7 +24,7 @@ So how does Netdata use VerneMQ today? Agents connect using HTTPS WebSockets (WS
 
 All the additional middleware software for Netdata Cloud is written in Go, using a standard microservices architecture, with a few additional components and databases handling state information. There are two Go services that consume from VerneMQ, debounce and cleanup messages from Netdata’s node agents related to metrics metadata and alarms, and then push those messages into <a title="Apache Pulsar" href="https://pulsar.apache.org/" target="_blank" rel="noopener noreferrer">Apache Pulsar</a>. After further processing, state information is finally updated and stored in <a title="CockroachDB" href="https://www.cockroachlabs.com/" target="_blank" rel="noopener noreferrer">CockroachDB</a>.
 
-<img class="alignnone size-full wp-image-16707" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/cloud-arch-R1-980x416-1.png" alt="" width="980" height="416" />
+<img class="alignnone size-full wp-image-16707" src="/img/wp-archive/uploads/2022/03/cloud-arch-R1-980x416-1.png" alt="" width="980" height="416" />
 
 Something to consider here is that the link is bidirectional. Since Netdata Cloud does not store machine metrics, the metrics that you see in the Cloud app are requested and returned on demand, almost instantly, and with minimum overhead – thanks to VerneMQ.
 

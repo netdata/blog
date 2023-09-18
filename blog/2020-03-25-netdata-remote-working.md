@@ -2,7 +2,7 @@
 slug: netdata-remote-working
 title: "Creating a thriving, agile, remote team"
 description: "Creating a thriving, agile, remote team"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-remote-working_01.png
+image: /img/wp-archive/uploads/2022/03/netdata-remote-working_01.png
 tags: [culture]
 keywords: [netdata,culture]
 authors: chris
@@ -10,7 +10,7 @@ authors: chris
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16750" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-remote-working_01-1200x899.png" alt="" width="1200" height="899" />
+<img class="alignnone size-large wp-image-16750" src="/img/wp-archive/uploads/2022/03/netdata-remote-working_01-1200x899.png" alt="" width="1200" height="899" />
 
 The coronavirus (COVID-19) pandemic has forced many organizations to take unprecedented steps towards remote working. As a fully distributed team, we’ve faced the common challenges of remote work. Based on our experience from our very beginning in 2018, all but a few of these organizations new to remote working will face hurdles to overcome and may try to revert to colocation as soon as possible. Remote working is hard, even when it’s carefully planned and executed. When the transition is rushed and seen as a necessary, temporary inconvenience, challenges are all but inevitable.
 
@@ -18,7 +18,7 @@ The coronavirus (COVID-19) pandemic has forced many organizations to take unprec
 
 In this post, we provide a few very practical tips to help organizations interested in preventing this forced experiment from severely impacting their day-to-day business. Moreover, if your organization has the drive and ability to quickly implement these changes, you may even recognize the great opportunities that remote working provides. Perhaps you still won’t have an overall positive experience, but at least you may be willing to consider a more strategic shift after the current crisis ends.
 
-<img class="alignnone size-full wp-image-16752" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-remote-working_02.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16752" src="/img/wp-archive/uploads/2022/03/netdata-remote-working_02.png" alt="" width="600" height="600" />
 <h2>Tip 1: Enable real-time collaboration</h2>
 It is extremely important that all employees, regardless of their department, have access to an instant messaging and video conferencing platform. Collaboration on shared artifacts (documents, presentations, code repositories, diagrams) is also essential.
 <h3>1.1 Instant Messaging</h3>
@@ -41,7 +41,7 @@ Phone conferences are bad for remote working not only due to the call costs, but
 <h3>1.3 Shared Artifacts</h3>
 We are a software company, so GitHub is a no-brainer for our main collaboration tool. We also use Google Drive to collaborate on some documents, but we have decided to make GitHub our single source of truth for pretty much everything that is text-based, even for things unrelated to code such as our company handbook. If you don’t already have a solution for quick and easy collaboration on artifacts, you’ll need one, regardless of whether you stick to remote working or not.
 
-<img class="alignnone size-full wp-image-16754" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-remote-working_03.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16754" src="/img/wp-archive/uploads/2022/03/netdata-remote-working_03.png" alt="" width="600" height="600" />
 <h2>Tip 2: Track work, not people</h2>
 The constant question that comes up with remote work is how you ensure that people are actually working. <strong>We were absolutely clear about that from the beginning: we do not care about time; we care about results</strong>. You absolutely must have a way of tracking tasks and deliverables and center all your management processes around those backlogs. There are countless tasks and project management tools out there. At the bare minimum, ensure all work is recorded in the tool. If you need to track time spent as well (we don’t), you should ensure that the tool you select supports time tracking.
 
@@ -49,7 +49,7 @@ Since we were already using GitHub for the most important work we do as a compan
 
 The exact process we follow depends on the team and the lessons we’ve had from multiple iterations. Some teams use Scrum, others Kanban, others were just formed and are only starting. As long as you are insistent on the work being recorded in your tool of choice, you don’t have to worry about whether people are actually working or not.
 
-<img class="alignnone size-full wp-image-16756" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-remote-working_04.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16756" src="/img/wp-archive/uploads/2022/03/netdata-remote-working_04.png" alt="" width="600" height="600" />
 <h2>Tip 3: Minimize formal meetings</h2>
 Your natural inclination may be to set up a lot of meetings to make up for the lack of face-to-face time and to maintain an illusion of control. In fact, if you follow tips 1 and 2, you’ll realize that you don’t need more meetings than what you probably have already. Short, daily standups and the Scrum ceremonies every two weeks are enough for the engineering teams that follow Scrum. Daily standups and weekly review and planning meetings are enough for the teams that follow Kanban. You will always need other calls of course, but treat them as you would be treating face-to-face meetings. You don’t have people sitting in a meeting room all day, so you don’t want them doing that from home either (note that the virtual co-working space mentioned in 1.2 is not the same thing). Having an agenda prior to the start of the meeting is another method to creating efficient, productive calls.
 <h1>What you will and will not see during the forced experiment</h1>

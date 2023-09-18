@@ -2,7 +2,7 @@
 slug: the-netdata-community
 title: "The Netdata Community"
 description: "The Netdata Community"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Athens-company-meetup-1_2019-scaled-e1588700274782.jpeg
+image: /img/wp-archive/uploads/2022/03/Athens-company-meetup-1_2019-scaled-e1588700274782.jpeg
 tags: [community]
 keywords: [netdata,community]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16700" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Athens-company-meetup-1_2019-scaled-e1588700274782-1200x747.jpeg" alt="" width="1200" height="747" />
+<img class="alignnone size-large wp-image-16700" src="/img/wp-archive/uploads/2022/03/Athens-company-meetup-1_2019-scaled-e1588700274782-1200x747.jpeg" alt="" width="1200" height="747" />
 
 Netdata users and contributors comprise a large, global, but somewhat fragmented community – or a set of communities. You can find us on IRC (#netdata on freenode), on <a href="https://www.reddit.com/r/netdata/">Reddit</a>, on <a href="https://twitter.com/linuxnetdata">social media</a>, and, of course, on <a href="https://github.com/netdata/netdata">GitHub</a>, where the main open-source Netdata project repo lives. And yes, you can find us on other platforms as well.
 

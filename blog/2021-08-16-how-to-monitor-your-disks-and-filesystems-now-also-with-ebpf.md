@@ -2,7 +2,7 @@
 slug: how-to-monitor-your-disks-and-filesystems-now-also-with-ebpf
 title: "How to monitor your disks and filesystems, now also with eBPF"
 description: "How to monitor your disks and filesystems, now also with eBPF"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/eBPF-monitoring-1536x932-1.png
+image: /img/wp-archive/uploads/2021/08/eBPF-monitoring-1536x932-1.png
 tags: [engineering,product,disks,filesystem,ebpf,operating-system-monitoring]
 keywords: [netdata,engineering,product]
 authors: team
@@ -13,7 +13,7 @@ authors: team
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 
-<img class="alignnone size-medium wp-image-16371" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/eBPF-monitoring-1536x932-1-600x364.png" alt="" width="600" height="364" />
+<img class="alignnone size-medium wp-image-16371" src="/img/wp-archive/uploads/2021/08/eBPF-monitoring-1536x932-1-600x364.png" alt="" width="600" height="364" />
 
 ## Introduction to eBPF
 
@@ -40,7 +40,7 @@ Netdata will be a superset of all eBPF tools out there. Furthermore, we’re sim
 <div class="et_pb_module et_pb_text et_pb_text_2 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 <h3>Disk monitoring and alerting</h3>
-<img class="alignnone size-medium wp-image-16373" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/Screen-Shot-2021-08-13-at-11.44.30-AM-2-600x340.png" alt="" width="600" height="340" />
+<img class="alignnone size-medium wp-image-16373" src="/img/wp-archive/uploads/2021/08/Screen-Shot-2021-08-13-at-11.44.30-AM-2-600x340.png" alt="" width="600" height="340" />
 <div class="et_pb_module et_pb_text et_pb_text_3 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 
@@ -156,9 +156,9 @@ Netdata monitors different filesystems such as:
  	<li aria-level="1">Synchronization (eBPF): Netdata monitors six different syscalls (fsync, fdatasync,  msync, sync, syncfs, and syncfilerange) responsible for synchronizing data  from page cache to disk.</li>
  	<li aria-level="1">Page Cache (eBPF): Netdata monitors access and changes on page cache that are synchronized to disk.</li>
 </ul>
-<img class="alignnone size-medium wp-image-16375" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/Screen-Shot-2021-08-13-at-11.57.31-AM-3-600x124.png" alt="" width="600" height="124" />
+<img class="alignnone size-medium wp-image-16375" src="/img/wp-archive/uploads/2021/08/Screen-Shot-2021-08-13-at-11.57.31-AM-3-600x124.png" alt="" width="600" height="124" />
 
-<img class="alignnone size-medium wp-image-16377" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/Screen-Shot-2021-08-13-at-11.57.43-AM-4-600x361.png" alt="" width="600" height="361" />
+<img class="alignnone size-medium wp-image-16377" src="/img/wp-archive/uploads/2021/08/Screen-Shot-2021-08-13-at-11.57.43-AM-4-600x361.png" alt="" width="600" height="361" />
 <div class="et_pb_module et_pb_text et_pb_text_8 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 
@@ -171,11 +171,11 @@ We now offer more enhanced metrics for monitoring Virtual File System (<a title
 <h3>Integration of eBPF with apps.plugin</h3>
 Some of the charts present filesystem and memory sections and are also shown per application when the integration with apps.plugin is enabled. Thanks to this integration, you can see how specific applications are using the hard disk.
 
-<img class="alignnone size-medium wp-image-16379" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/Screen-Shot-2021-08-13-at-12.42.42-PM-5-600x231.png" alt="" width="600" height="231" />
+<img class="alignnone size-medium wp-image-16379" src="/img/wp-archive/uploads/2021/08/Screen-Shot-2021-08-13-at-12.42.42-PM-5-600x231.png" alt="" width="600" height="231" />
 
 Apps integration
 
-<img class="alignnone size-medium wp-image-16381" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/Screen-Shot-2021-08-13-at-12.44.50-PM-6-600x240.png" alt="" width="600" height="240" />
+<img class="alignnone size-medium wp-image-16381" src="/img/wp-archive/uploads/2021/08/Screen-Shot-2021-08-13-at-12.44.50-PM-6-600x240.png" alt="" width="600" height="240" />
 <div class="et_pb_module et_pb_text et_pb_text_11 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 
@@ -190,11 +190,11 @@ Latency is the time it takes for an event to be completed. Netdata calculates th
 
 Each hard disk has its own latency to execute read and write actions, to correctly set your alarms, we suggest you take a look at your hard disk manual.
 
-<img class="alignnone size-medium wp-image-16383" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/Screen-Shot-2021-08-13-at-11.57.31-AM-7-600x124.png" alt="" width="600" height="124" />
+<img class="alignnone size-medium wp-image-16383" src="/img/wp-archive/uploads/2021/08/Screen-Shot-2021-08-13-at-11.57.31-AM-7-600x124.png" alt="" width="600" height="124" />
 
 To compliment information provided for hard disks, Netdata also monitors latency for specific actions on filesystem.
 
-<img class="alignnone size-medium wp-image-16385" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/08/Screen-Shot-2021-08-13-at-12.55.30-PM-8-600x259.png" alt="" width="600" height="259" />
+<img class="alignnone size-medium wp-image-16385" src="/img/wp-archive/uploads/2021/08/Screen-Shot-2021-08-13-at-12.55.30-PM-8-600x259.png" alt="" width="600" height="259" />
 <div class="et_pb_module et_pb_text et_pb_text_14 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 <h3>Summary</h3>

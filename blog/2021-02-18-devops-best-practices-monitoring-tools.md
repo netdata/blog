@@ -2,7 +2,7 @@
 slug: devops-best-practices-monitoring-tools
 title: "5 DevOps best practices to reinforce with monitoring tools"
 description: "5 DevOps best practices to reinforce with monitoring tools"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/devops-best-practices-monitoring-tools-v2.png
+image: /img/wp-archive/uploads/2022/03/devops-best-practices-monitoring-tools-v2.png
 tags: [engineering,product,devops]
 keywords: [netdata,engineering,product]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-medium wp-image-16441" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/devops-best-practices-monitoring-tools-v2-600x414.png" alt="" width="600" height="414" />
+<img class="alignnone size-medium wp-image-16441" src="/img/wp-archive/uploads/2022/03/devops-best-practices-monitoring-tools-v2-600x414.png" alt="" width="600" height="414" />
 
 As part of a modern software development team, you’re asked to do a lot. You’re supposed to build faster, release more frequently, crush bugs, and integrate testing suites along the way. You’re supposed to implement and practice a strong DevOps culture, <a href="https://github.com/upgundecha/howtheysre" target="_blank" rel="noopener noreferrer">read entire novels</a> about SRE best practices, go <a href="https://en.wikipedia.org/wiki/Agile_software_development" target="_blank" rel="noopener noreferrer">agile</a>, or add a bunch of Scrum ceremonies to everyone’s calendar. Every week, the industry recommends that you “<a href="https://devops.com/devops-shift-left-avoid-failure/" target="_blank" rel="noopener noreferrer">shift-left</a>” another part of the <a href="https://staging-www.netdata.cloud/blog/agile-static-analysis/" target="_blank" rel="noopener noreferrer">DevOps pipeline</a>, to the point where you’re supposed to handle everything from unit testing to production deployment optimization from day one.
 
@@ -56,7 +56,7 @@ One data point every 60 seconds = low granularity
 One data point every 1 second = high granularity
 If you have a transitive-but-critical error that comes and goes within 5 seconds, a low-granularity solution might not even show a blip, which means you still don’t know anything went wrong in the first place.
 
-<img class="alignnone size-medium wp-image-16443" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/monitoring-tool-granularity-600x437.png" alt="" width="600" height="437" />
+<img class="alignnone size-medium wp-image-16443" src="/img/wp-archive/uploads/2022/03/monitoring-tool-granularity-600x437.png" alt="" width="600" height="437" />
 
 With low granularity, metrics are averaged out over long periods of time, which has the unwanted effect of flattening what should be a worrying spikes into nothing more than a blip in the noise.
 

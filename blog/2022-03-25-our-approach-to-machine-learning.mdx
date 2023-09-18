@@ -2,7 +2,7 @@
 slug: our-approach-to-machine-learning
 title: "Our Approach to Machine Learning"
 description: "Our Approach to Machine Learning"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Brain-circuitry-ML.png
+image: /img/wp-archive/uploads/2022/03/Brain-circuitry-ML.png
 tags: [culture,machine-learning]
 keywords: [culture,machine-learning]
 authors: andy
@@ -88,7 +88,7 @@ For example, we are working on making the “anomaly bit” available to the <a 
 
 In the stylized example below, let's say you always run your CPU usage steadily around 75%. You could manually configure and alert once it goes outside some upper and lower threshold. But often data turns anomalous in ways you could not have foreseen - so the idea is that you could just set an alert based on the anomaly rate. If the anomaly rate corresponding to the CPU metric (the orange line) passes say 50% and stays elevated for long enough, you would be alerted. So we still have thresholds, but the thresholds are set against the anomaly rate which can capture more naturally all the ways your data might turn anomalous instead of you having to think of a rule for every scenario. It may even be that the new behaviour represents some new normal following a code change you made, in which case you may want to see the impact of the change but also have the ML retrain to learn the new pattern for what's considered normal, all without having to change any alert rules. This is the essence of ML: Instead of having to think about all the logic and decisions in advance, you pass some of that complexity off to the ML model itself, and you then are just a consumer of its outputs.
 
-![example anomaly](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/ar-chart-2-600x357.png)
+![example anomaly](/img/wp-archive/uploads/2022/03/ar-chart-2-600x357.png)
 
 Another goal will be to expose the anomaly rates corresponding to all alerts to help give some quick additional context when viewing or trying to prioritize alerts. Traditional visual anomaly detection has always been a core part of what Netdata does, in built anomaly rates should only aid in this visual flow.
 

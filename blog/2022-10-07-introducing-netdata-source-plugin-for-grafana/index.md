@@ -3,10 +3,10 @@ slug: introducing-netdata-source-plugin-for-grafana
 title: "Introducing the Netdata Source Plugin for Grafana"
 authors: hugo
 tags: [grafana, plugin,observability,openmetrics,prometheus]
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/postgresql_dash-600x354.png
+image: /img/wp-archive/uploads/2022/09/postgresql_dash-600x354.png
 ---
 
-![sample-dashboard](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/postgresql_dash-600x354.png)
+![sample-dashboard](/img/wp-archive/uploads/2022/09/postgresql_dash-600x354.png)
 
 The open-source community is about to benefit greatly from Netdata's new Grafana data source plugin, which makes use of a powerful data collection engine.
 
@@ -26,11 +26,11 @@ We are huge fans of Open-Source culture. Open-source is deeply rooted in Netdata
 
 Instead, we want to focus on what we currently do well while also providing as much easy interoperability as possible with other important tools in the ecosystem, with Grafana obviously being a majorly important one.
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image11-600x145.png)
+![](/img/wp-archive/uploads/2022/09/image11-600x145.png)
 
 ## How does it work?
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image71-600x403.png)
+![](/img/wp-archive/uploads/2022/09/image71-600x403.png)
 
 Netdata’s data source plugin connects directly to our Netdata Cloud APIs, meaning that you’ll need to have your nodes (hosts) connected to Netdata Cloud in order to be able to have them exposed on our plugin. For security purposes, you will also need an API token for authentication (which you can get from within your Netdata profile).
 
@@ -40,11 +40,11 @@ If you already have a Netdata Cloud account created, most probably during instal
 
 Once you have all your nodes connected to Netdata Cloud you must proceed with creating an API token, which will be linked to your Netdata Cloud account. The API token provides a means to authenticate external calls to our APIs, allowing the same access as you to the Spaces and Rooms you can see on Netdata Cloud.
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image51-600x354.png)
+![](/img/wp-archive/uploads/2022/09/image51-600x354.png)
 
 This API token will be required when you are installing the Netdata data source plugin on Grafana Cloud or locally
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image61-600x354.png)
+![](/img/wp-archive/uploads/2022/09/image61-600x354.png)
 
 Having completed all the above steps, you’re ready to start taking advantage of Netdata’s troubleshooting capabilities in Grafana!
 
@@ -52,7 +52,7 @@ Having completed all the above steps, you’re ready to start taking advantage o
 
 Once you have selected Netdata as your data source, this is how the query builder will look.
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image31-1-600x219.png)
+![](/img/wp-archive/uploads/2022/09/image31-1-600x219.png)
 
 To retrieve data from our APIs the minimum attributes you need to define are: Space and Room, which will allow you to restrict to a specific set of Nodes, and Context (more on this) do define what metrics you want to retrieve. Having defined these 3 attributes you will be seeing data displayed on the chart, which should be the same as the one you see on your Overview tab on Netdata Cloud.
 
@@ -68,7 +68,7 @@ We provide additional attributes to: filter more on the data you are retrieving,
 
 Sample dashboard
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/postgresql_dash-600x354.png)
+![](/img/wp-archive/uploads/2022/09/postgresql_dash-600x354.png)
 
 ## How to install it on your Grafana environment?
 

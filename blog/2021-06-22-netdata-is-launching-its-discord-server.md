@@ -2,7 +2,7 @@
 slug: netdata-is-launching-its-discord-server
 title: "Netdata is launching its Discord server"
 description: "Netdata is launching its Discord server"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-discord.png
+image: /img/wp-archive/uploads/2022/03/netdata-discord.png
 tags: [product,discord]
 keywords: [netdata,product]
 authors: team
