@@ -2,7 +2,7 @@
 slug: investing-in-netdata-a-growth-story
 title: "Investing in Netdata: a growth story"
 description: "Investing in Netdata: a growth story"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Series-A-funding-extension.png
+image: /img/wp-archive/uploads/2022/03/Series-A-funding-extension.png
 tags: [community,culture]
 keywords: [netdata,community,culture]
 authors: costa
@@ -10,7 +10,7 @@ authors: costa
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16618" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Series-A-funding-extension-1200x571.png" alt="" width="1200" height="571" />
+<img class="alignnone size-large wp-image-16618" src="/img/wp-archive/uploads/2022/03/Series-A-funding-extension-1200x571.png" alt="" width="1200" height="571" />
 
 I’m excited to announce an <a title="extension to Netdata’s series A funding" href="https://staging-www.netdata.cloud/news/netdata-extends-series-a-funding/" target="_blank" rel="noopener noreferrer">extension to Netdata’s series A funding </a>in the amount of $14.2M, bringing the total amount of funding to $31M. We’re thrilled to share the news; the additional funding will help us continue building the future of health monitoring and performance troubleshooting. In case you missed it, our mission is to <a title="redefine infrastructure monitoring" href="https://staging-www.netdata.cloud/blog/redefining-monitoring-netdata/" target="_blank" rel="noopener noreferrer">redefine infrastructure monitoring</a>. Our unique approach to building the right solution with and for the community is no easy task.
 <h3>Building on an exceptional year of growth</h3>

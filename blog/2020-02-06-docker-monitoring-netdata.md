@@ -2,7 +2,7 @@
 slug: docker-monitoring-netdata
 title: "Docker container monitoring with Netdata"
 description: "Docker container monitoring with Netdata"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/docker-monitoring-netdata.png
+image: /img/wp-archive/uploads/2022/03/docker-monitoring-netdata.png
 tags: [product,docker]
 keywords: [netdata,product]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-full wp-image-16812" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/docker-monitoring-netdata.png" alt="" width="1200" height="600" />
+<img class="alignnone size-full wp-image-16812" src="/img/wp-archive/uploads/2022/03/docker-monitoring-netdata.png" alt="" width="1200" height="600" />
 
 Properly monitoring the health and performance of Docker containers is an essential skill for solo developers and large teams alike. As your infrastructure grows in complexity, it’s important to streamline every facet of the performance of your apps/services. Plus, it’s essential that the tools you use to make those performance decisions work across teams, and allow for complex scaling architectures.
 
@@ -20,7 +20,7 @@ With Docker container monitoring enabled via cgroups, you get real-time, interac
 
 With these per-second metrics at your fingertips, you can get instant notifications about outages, performance hiccups, or excessive resource usage, visually identify the anomaly, and fix the root cause faster.
 
-<img class="alignnone size-full wp-image-16814" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/73307848-48e81000-41dc-11ea-8480-8388d5c095ca.png" alt="" width="1071" height="600" />
+<img class="alignnone size-full wp-image-16814" src="/img/wp-archive/uploads/2022/03/73307848-48e81000-41dc-11ea-8480-8388d5c095ca.png" alt="" width="1071" height="600" />
 <h2>What is Docker?</h2>
 <a href="https://www.docker.com/">Docker</a> is a virtualization platform that helps developers deploy their software in reproducible and isolated packages called containers. These containers have everything the software needs to run properly, including libraries, tools, and their application’s source code or binaries. And because these packages contain everything the application needs, it runs <em>everywhere</em>, isolating problems where code works in testing, but not production.
 
@@ -38,7 +38,7 @@ Read more about Netdata’s cgroup collector in our
 <h2>View many containers at-a-glance</h2>
 Netdata auto-detects running containers and auto-populates the right-hand menu with their IDs or container names, based on the configuration of your system. This interface is expandable to any number of Docker containers you want to monitor with Netdata, whether it’s 1, 100, or 1,000.
 
-<img class="alignnone size-full wp-image-16816" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/73222300-27295300-4120-11ea-8f1e-87cc7b8b08fa.png" alt="" width="647" height="780" />
+<img class="alignnone size-full wp-image-16816" src="/img/wp-archive/uploads/2022/03/73222300-27295300-4120-11ea-8f1e-87cc7b8b08fa.png" alt="" width="647" height="780" />
 
 Netdata also uses its <a href="https://learn.netdata.cloud/docs/agent/why-netdata/meaningful-presentation/">meaningful presentation</a> to organize CPU and memory charts into families, so you can quickly understand which containers are using the most CPU, memory, disk I/O, or networking, and begin correlating that with other metrics from your system.
 <h2>Get alarms when containers go awry</h2>
@@ -46,7 +46,7 @@ Netdata comes with pre-configured CPU and memory alarms for every running Docker
 
 You can, of course, edit your <code>health.d/cgroups.conf</code> file to modify the existing alarms or create new ones entirely.
 
-<img class="alignnone size-full wp-image-16818" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/73206909-11f0fc00-4101-11ea-9b9b-66fb7c9f9caf.png" alt="" width="944" height="952" />
+<img class="alignnone size-full wp-image-16818" src="/img/wp-archive/uploads/2022/03/73206909-11f0fc00-4101-11ea-9b9b-66fb7c9f9caf.png" alt="" width="944" height="952" />
 <h2>Dive into real-time metrics for containerized apps and services</h2>
 Netdata’s Docker monitoring doesn’t stop with entire containers—it’s also fully capable of monitoring the apps/services running <em>inside those containers</em>. This way, you’ll get more precise metrics for your mission-critical web servers or databases, plus all the pre-configured alarms that come with that collector!
 
@@ -54,7 +54,7 @@ You can monitor specific metrics for any of the <a href="https://learn.netdata.
 
 For example, here are some real-time charts for an Nginx web server, running inside of a Docker container, while it’s undergoing a stress test.
 
-<img class="alignnone size-large wp-image-16820" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/73222673-0c0b1300-4121-11ea-9ff2-aaa654519e71-1200x648.png" alt="" width="1200" height="648" />
+<img class="alignnone size-large wp-image-16820" src="/img/wp-archive/uploads/2022/03/73222673-0c0b1300-4121-11ea-9ff2-aaa654519e71-1200x648.png" alt="" width="1200" height="648" />
 
 Visit our <a href="https://learn.netdata.cloud/">documentation</a> and use the search bar at the top to figure out how to monitor favorite <em>containerized</em> service.
 <h2>What’s next?</h2>

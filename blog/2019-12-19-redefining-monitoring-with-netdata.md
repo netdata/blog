@@ -2,7 +2,7 @@
 slug: redefining-monitoring-with-netdata
 title: "Redefining monitoring with Netdata (and how it came to be)"
 description: "Redefining monitoring with Netdata (and how it came to be)"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2019/12/redefining-monitoring-netdata_01.png
+image: /img/wp-archive/uploads/2019/12/redefining-monitoring-netdata_01.png
 tags: [company,culture,product]
 keywords: [netdata,company,culture,product]
 authors: costa
@@ -10,7 +10,7 @@ authors: costa
 
 <!--truncate-->
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2019/12/redefining-monitoring-netdata_01.png)
+![](/img/wp-archive/uploads/2019/12/redefining-monitoring-netdata_01.png)
 
 ## How Netdata was born
 
@@ -32,7 +32,7 @@ I recall spending countless hours at our monitoring dashboards, feeling that the
 
 Why does the industry work like that? Why don’t they use all the metrics? Why are such systems not real-time? Why are they not optimized for troubleshooting issues? Why are there so many moving parts? Why do all of us have to go through the same complex configuration steps again and again, even when it comes to monitoring standardized systems and apps? Is it so hard to do it the other way around? Is it impossible?
 
-!["Trouble with existing monitoring solutions: Why so many moving parts?](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/redefining-monitoring-netdata_02.png)
+!["Trouble with existing monitoring solutions: Why so many moving parts?](/img/wp-archive/uploads/2022/03/redefining-monitoring-netdata_02.png)
 
 I started experimenting, at home, on nights and weekends. I was rusty, but I knew that such a system had to behave well, to control itself, to show great respect to the systems and the other applications running, to be extremely lightweight, fast, and to have the smallest possible footprint.
 
@@ -74,7 +74,7 @@ It was a busy day. I had several meetings in the morning. I was just finishing a
 
 I walked to my office, turned on my laptop, and checked my personal mailbox. I was flooded! Hundreds of people all over the world were sending me emails and invitations to connect on social media, giving Netdata stars on GitHub like crazy, and providing feedback by opening dozens of GitHub issues. The Netdata demo site I had running was sustainably sending dozens of thousands of chart refreshes per second. It didn’t crash—phew!—because I had done load testing before and knew it would perform.
 
-!["Netdata's viral growth: 10,000 GitHub stars and a featured spot on GitHub Octoverse"](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/redefining-monitoring-netdata_03.png)
+!["Netdata's viral growth: 10,000 GitHub stars and a featured spot on GitHub Octoverse"](/img/wp-archive/uploads/2022/03/redefining-monitoring-netdata_03.png)
 
 Netdata reached 10,000 stars on GitHub in just a couple of weeks. It was now the top trending project on GitHub for all languages. It stayed there for about 2 months, after which GitHub included Netdata in its annual <a href="https://octoverse.github.com/2016/">GitHub Octoverse for 2016 list</a>.
 
@@ -88,7 +88,7 @@ So, what made Netdata so unique? Why do people seem to like it so much?
 
 My target persona was never Brendan Gregg. Brendan and the other monitoring gurus out there can do great things by themselves and do not really need me, or Netdata. My focus was the people who have the responsibility to run or troubleshoot infrastructure, but do not have the time or the resources to monitor it properly. These are people in need. They struggle. They need real help and they need it now. And there are really a lot of them—they are the vast majority of SysAdmins, SREs, and DevOps out there.
 
-!["The struggling sysadmin: A million tasks and no time"](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/redefining-monitoring-netdata_04.png)
+!["The struggling sysadmin: A million tasks and no time"](/img/wp-archive/uploads/2022/03/redefining-monitoring-netdata_04.png)
 
 So, I built Netdata around the following principles, which I believe are also the reasons people fall in love with it.
 
@@ -136,7 +136,7 @@ We now have a dedicated team of about 10 full-time developers working on it, wit
 
 <strong>It is our gift to the world.</strong>
 
-!["Netdata is our gift to the world to democratize monitoring"](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/redefining-monitoring-netdata_05.png)
+!["Netdata is our gift to the world to democratize monitoring"](/img/wp-archive/uploads/2022/03/redefining-monitoring-netdata_05.png)
 
 We’re also trying to solve a couple more problems.
 

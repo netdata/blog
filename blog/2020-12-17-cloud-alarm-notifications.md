@@ -2,7 +2,7 @@
 slug: cloud-alarm-notifications
 title: "Centralize the truth of your infrastructure with alarm notifications"
 description: "Centralize the truth of your infrastructure with alarm notifications"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/Central-Alarm-Notifications.png
+image: /img/wp-archive/uploads/2020/12/Central-Alarm-Notifications.png
 tags: [product,alerts,notifications]
 keywords: [netdata,product]
 authors: team
@@ -13,7 +13,7 @@ authors: team
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 
-<img class="alignnone wp-image-16509 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/Central-Alarm-Notifications-1200x828.png" alt="" width="1200" height="828" />
+<img class="alignnone wp-image-16509 size-large" src="/img/wp-archive/uploads/2020/12/Central-Alarm-Notifications-1200x828.png" alt="" width="1200" height="828" />
 
 Netdata is architected on every level, across both the open-source Netdata Agent and Netdata Cloud, to help you own every layer of your monitoring experience. With this design, all metrics data collected by the Netdata Agent stays distributed on your node, but you also leverage Netdata Cloud’s dashboards and multi-node visualizations to view the health and performance of an entire infrastructure from a single application.
 
@@ -40,7 +40,7 @@ The default is to receive all types of notifications—critical, warning, and cl
 
 For now, Netdata Cloud supports centralized alarm notifications via email, and we’ve built in flood protection to ensure you don’t hit that dreaded notification fatigue for nodes that tend to “flap” between states. You only get emails when there’s a real issue on your infrastructure.
 
-<img class="alignnone wp-image-16512 size-full" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/alarm-email-916x1024-1.png" alt="" width="916" height="1024" />
+<img class="alignnone wp-image-16512 size-full" src="/img/wp-archive/uploads/2020/12/alarm-email-916x1024-1.png" alt="" width="916" height="1024" />
 
 An example centralized alarm notification email from Netdata Cloud.
 <div class="et_pb_module et_pb_text et_pb_text_2 et_pb_text_align_left et_pb_bg_layout_light">
@@ -61,7 +61,7 @@ A few of those improvements are also powerful new ways of discovering deeper and
 <h3>View specific timeframes with the time &amp; date picker</h3>
 Before v1.27, if you wanted use the Netdata Agent dashboard to see a timeframe of 5 minutes beginning precisely at 2:48 a.m. last Wednesday, you had to manually zoom out, pan back through days worth of real-time metrics, then zoom back in until the timestamps matched exactly what you needed. The new time &amp; date picker helps you select precise timeframes for deep analysis, whether you’re working alone or in a team. Get aligned, drill down, and start managing incidents faster.
 
-<img class="alignnone wp-image-16514 size-full" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/time-picker-1024x541-1.png" alt="" width="1024" height="541" />
+<img class="alignnone wp-image-16514 size-full" src="/img/wp-archive/uploads/2020/12/time-picker-1024x541-1.png" alt="" width="1024" height="541" />
 
 The new time &amp; date picker in the Netdata Agent.
 <h3>Embedded anomaly detection to help you troubleshoot</h3>
@@ -69,13 +69,13 @@ The Netdata Agent is now capable of unsupervised anomaly detection. The <a href
 
 To demo the value of the anomalies collector, create stress on a node with <code>stress-ng --all 2</code>. Both the Anomaly Probability and Anomaly charts light up with high probabilities and likely probability flags and a spike in active anomalies.
 
-<img class="alignnone wp-image-16516 size-full" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/anomalies-1-980x610-1.jpeg" alt="" width="980" height="610" />
+<img class="alignnone wp-image-16516 size-full" src="/img/wp-archive/uploads/2020/12/anomalies-1-980x610-1.jpeg" alt="" width="980" height="610" />
 
 If you’re using the anomalies collector on an active, production node undergoing some kind of incident, use the flagged charts/dimensions in the <code>anomalies.anomaly</code> chart as your first steps when troubleshooting. Based on the ML models of your node’s baseline, these charts are most likely to be the root cause.
 
 Once you deploy a fix (stopping the stress-ng process, in this case), the anomalies settle as the node returns to its healthy baseline state.
 
-<img class="alignnone wp-image-16518 size-full" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/anomalies-2-980x611-1.jpeg" alt="" width="980" height="611" />
+<img class="alignnone wp-image-16518 size-full" src="/img/wp-archive/uploads/2020/12/anomalies-2-980x611-1.jpeg" alt="" width="980" height="611" />
 <div class="et_pb_module et_pb_text et_pb_text_3 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 

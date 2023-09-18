@@ -49,11 +49,11 @@ Netdata collects 100+ PostgreSQL metrics and visualizes these across 60+ differe
 
 Clicking on the <b>PostgreSQL </b>section takes you to the summary dashboard which gives you a quick overview of your database cluster. Scrolling down further allows you to explore PostgreSQL metrics to your heart's content - you can also click on a particular section to get to where you want quicker. 
 
-<img class="size-medium wp-image-17541" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image-10-600x97.png" alt="Netdata PostgreSQL summary" width="600" height="97" />
+<img class="size-medium wp-image-17541" src="/img/wp-archive/uploads/2022/09/image-10-600x97.png" alt="Netdata PostgreSQL summary" width="600" height="97" />
 
 Each composite chart (see the example below) can be grouped by dimension, database, schema, table, or other group-by options. You can also filter the chart by a particular condition (a database or a table, for example). You also have the option to change the default aggregation and interpolation methods, change the chart type, add the chart to a custom dashboard or view it in full screen. 
 
-<img class="alignnone size-medium wp-image-17543" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image4-600x154.png" alt="Composite chart" width="600" height="154" />
+<img class="alignnone size-medium wp-image-17543" src="/img/wp-archive/uploads/2022/09/image4-600x154.png" alt="Composite chart" width="600" height="154" />
 
 ## Connections
 A connection is an established line of communication between a client and the PostgreSQL server. Each connection adds to the load on the PostgreSQL server.
@@ -66,7 +66,7 @@ To guard against running out of memory or overloading the database the max_conne
 
 Total connection utilization across all databases is measured as a percentage of (max_connections - superuser_reserved_connections). If the utilization is 100%, then no more new connections will be accepted (superuser connections will still be accepted if superuser quota is available).
 
-<img class="alignnone size-medium wp-image-17575" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/connutil-600x163.png" alt="PostgreSQL connection utilization" width="600" height="163" />
+<img class="alignnone size-medium wp-image-17575" src="/img/wp-archive/uploads/2022/09/connutil-600x163.png" alt="PostgreSQL connection utilization" width="600" height="163" />
 
 ### Total Connection usage
 
@@ -92,7 +92,7 @@ This information helps you better manage your connection count. The state of a c
 
 If you see a high count of idle connections it is worth exploring a connection pooling solution such as PgBouncer. If you find that you have some stale transactions hanging around for days, hours, or even just a few minutes, you may want to set a default to end those transactions. To help with this, Postgres has a nice feature of a statement_timeout.
 
-<img class="alignnone size-medium wp-image-17559" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/connstate-600x161.png" alt="PostgreSQL connection state" width="600" height="161" />
+<img class="alignnone size-medium wp-image-17559" src="/img/wp-archive/uploads/2022/09/connstate-600x161.png" alt="PostgreSQL connection state" width="600" height="161" />
 
 ### Connection utilization per database
 
@@ -130,7 +130,7 @@ This is an histogram representing the active query execution time. The bins are 
 
 Use this chart to identify if you have a slow query problem - if you consistently see values in the bins representing longer duration it is worth enabling slow query logging to investigate further. 
 
-<img class="alignnone size-medium wp-image-17567" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/queries-600x161.png" alt="Query duration histogram" width="600" height="161" />
+<img class="alignnone size-medium wp-image-17567" src="/img/wp-archive/uploads/2022/09/queries-600x161.png" alt="Query duration histogram" width="600" height="161" />
 
 ## Throughput
 
@@ -141,7 +141,7 @@ The rows fetched ratio is the percentage of rows that contain data needed to exe
 If this value is consistently and significantly low then it is likely to be due to missing indexes or inefficient queries. Consider creating indexes on frequently accessed columns to improve this ratio.  
 <b></b>
 
-<img class="alignnone size-medium wp-image-17571" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/fetchrowratio-600x162.png" alt="PostgreSQL Rows Fetched Ratio" width="600" height="162" />
+<img class="alignnone size-medium wp-image-17571" src="/img/wp-archive/uploads/2022/09/fetchrowratio-600x162.png" alt="PostgreSQL Rows Fetched Ratio" width="600" height="162" />
 
 ### Rows read
 
@@ -205,7 +205,7 @@ PostgreSQL uses a shared buffer cache to store frequently accessed data in memor
 
 If you are seeing performance issues, consider increasing the <a href="https://www.postgresql.org/docs/current/runtime-config-resource.html#GUC-SHARED-BUFFERS">shared_buffers</a> size or tuning <a href="https://www.postgresql.org/docs/current/runtime-config-query.html#GUC-EFFECTIVE-CACHE-SIZE">effective_cache_size</a>.
 
-<img class="alignnone size-medium wp-image-17577" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/cachemiss-600x161.png" alt="Buffer cache miss ratio" width="600" height="161" />
+<img class="alignnone size-medium wp-image-17577" src="/img/wp-archive/uploads/2022/09/cachemiss-600x161.png" alt="Buffer cache miss ratio" width="600" height="161" />
 
 ### Database reads
 
@@ -219,7 +219,7 @@ Amount of data read from shared buffer cache or from disk per database.
 
 The cache miss ratio measured per table per database is useful to identify table inefficiency. Similar to database buffer cache miss ratio the lower the better. 
 
-<img class="alignnone size-medium wp-image-17563" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/tablecachemiss-600x162.png" alt="Table cache miss ratio" width="600" height="162" />
+<img class="alignnone size-medium wp-image-17563" src="/img/wp-archive/uploads/2022/09/tablecachemiss-600x162.png" alt="Table cache miss ratio" width="600" height="162" />
 
 ### Table reads
 
@@ -255,7 +255,7 @@ PostgreSQL uses Multi-Version Concurrency Control (MVCC) in order to maintain AC
 
 This chart represents the estimated percentage of bloat in the table. It is normal for tables that are updated frequently to have a small to moderate amount of bloat.
 
-<img class="alignnone wp-image-17565 size-medium" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/tablebloat-600x162.png" alt="PostgreSQL table bloat" width="600" height="162" />
+<img class="alignnone wp-image-17565 size-medium" src="/img/wp-archive/uploads/2022/09/tablebloat-600x162.png" alt="PostgreSQL table bloat" width="600" height="162" />
 
 ### Table bloat size
 
@@ -280,7 +280,7 @@ Rate of deadlocks detected per second per database. When a transaction cannot ac
 ### Locks held
 
 Locks held per database, categorized by type of lock being held. Some of these lock modes are acquired by PostgreSQL automatically before statement execution, while others are provided to be used by applications. All lock modes acquired in a transaction are held for the duration of the transaction. 
-<img class="alignnone size-medium wp-image-17569" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/locksheld-600x162.png" alt="PostgreSQL Locks held" width="600" height="162" />
+<img class="alignnone size-medium wp-image-17569" src="/img/wp-archive/uploads/2022/09/locksheld-600x162.png" alt="PostgreSQL Locks held" width="600" height="162" />
 
 ### Locks awaited
 
@@ -304,7 +304,7 @@ Time elapsed since this table was last manually vacuumed (not counting VACUUM FU
 
 Time elapsed since this table was last automatically vacuumed.
 
-<img class="alignnone size-medium wp-image-17579" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/autovacuumsince-600x161.png" alt="Time since last autovacuum " width="600" height="161" />
+<img class="alignnone size-medium wp-image-17579" src="/img/wp-archive/uploads/2022/09/autovacuumsince-600x161.png" alt="Time since last autovacuum " width="600" height="161" />
 
 ### Time since last manual analyze
 
@@ -375,7 +375,7 @@ The ratio of dead rows to live rows measured per database, per table.
 
 An increase in dead rows indicates a problem with VACUUM processes, which can slow down your queries.
 
-<img class="alignnone size-medium wp-image-17573" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/deadrows-600x161.png" alt="PostgreSQL dead rows ratio" width="600" height="161" />
+<img class="alignnone size-medium wp-image-17573" src="/img/wp-archive/uploads/2022/09/deadrows-600x161.png" alt="PostgreSQL dead rows ratio" width="600" height="161" />
 
 ### Table row count
 
@@ -395,7 +395,7 @@ Count of table columns which are always NULL - in other words this is a count of
 
 Count of indexes by usage status. An index is considered unused if no scans have been initiated on that index. Use this metric to monitor if you consistently have unused indexes.
 
-<img class="alignnone size-medium wp-image-17561" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/unusedindexes-600x162.png" alt="PostgreSQL unused indexes" width="600" height="162" />
+<img class="alignnone size-medium wp-image-17561" src="/img/wp-archive/uploads/2022/09/unusedindexes-600x162.png" alt="PostgreSQL unused indexes" width="600" height="162" />
 
 ## Replication
 
@@ -501,7 +501,7 @@ If you would like to update the alert thresholds or configuration or want to cre
 
 By default you will receive email notifications whenever an alert is triggered - if you would not like to receive these notifications you can turn them off from your profile settings.
 
-<img class="alignnone size-medium wp-image-17545" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image-11-600x382.png" alt="PostgreSQL Alerts" width="600" height="382" />
+<img class="alignnone size-medium wp-image-17545" src="/img/wp-archive/uploads/2022/09/image-11-600x382.png" alt="PostgreSQL Alerts" width="600" height="382" />
 
 ## Anomaly Advisor
 
@@ -511,7 +511,7 @@ In the screenshot below you can see that the spike in overall anomaly rate was t
 
 To learn more about how to use Anomaly Advisor to troubleshoot your PostgreSQL cluster check out the documentation or visit the demo space.
 
-<img class="alignnone size-medium wp-image-17547" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image3-600x346.png" alt="PostgreSQL Anomaly Advisor" width="600" height="346" />
+<img class="alignnone size-medium wp-image-17547" src="/img/wp-archive/uploads/2022/09/image3-600x346.png" alt="PostgreSQL Anomaly Advisor" width="600" height="346" />
 
 ## Metric Correlations
 
@@ -521,7 +521,7 @@ In the screenshot below, you can see that running Metric Correlations filters th
 
 To learn more about how to use Metric Correlations to troubleshoot your PostgreSQL cluster check out the documentation or visit the demo space.
 
-<img class="alignnone size-medium wp-image-17549" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/image5-600x412.png" alt="PostgreSQL Metric Correlations" width="600" height="412" />
+<img class="alignnone size-medium wp-image-17549" src="/img/wp-archive/uploads/2022/09/image5-600x412.png" alt="PostgreSQL Metric Correlations" width="600" height="412" />
 
 ## Netdata PostgreSQL monitoring demo 
 

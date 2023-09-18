@@ -30,7 +30,7 @@ Installing Netdata is as easy as it gets; just follow <a href="https://learn.net
 
 Netdata automatically discovers the Redis service and starts monitoring it, if it is accessible on the localhost on port 6379 (the default port), or via one of the following unix sockets. 
 
-<img class="aligncenter wp-image-17629 size-full" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/jobs.png" alt="Reddit Unit Sockets" width="512" height="291" />
+<img class="aligncenter wp-image-17629 size-full" src="/img/wp-archive/uploads/2022/09/jobs.png" alt="Reddit Unit Sockets" width="512" height="291" />
 
 If your Redis service is configured differently or is password protected, you will need to <a href="https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/redis#configuration">configure the collector</a>.
 
@@ -55,7 +55,7 @@ Redis accepts clients’ connections on the configured listening TCP port and on
  	<li><b>Accepted connections:</b>  Client connection attempts that are accepted per second.</li>
  	<li><b>Rejected connections</b>: Client connection attempts that are rejected due to <i>maxclients </i>limit being exceeded or due to scarcity of available file descriptors. </li>
 </ul>
-<img class="aligncenter size-full wp-image-17632" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-2.png" alt="Current State Redis Monitoring" width="512" height="139" />
+<img class="aligncenter size-full wp-image-17632" src="/img/wp-archive/uploads/2022/09/Redis-2.png" alt="Current State Redis Monitoring" width="512" height="139" />
 
 The current state of the clients connected to or attempting to connect to Redis are monitored in a separate chart.<b></b>
 <ul>
@@ -91,7 +91,7 @@ These metrics are the key indicators of Redis performance and overall system hea
  	<li>A significant shift in the number (or pattern) of the commands processed is something to watch out for. </li>
  	<li>In the example given in the following image, the periodic drops in the number of commands is normal expected behavior - but in abnormal scenarios a drop could be caused by slow commands and enabling the Redis slowlog is a potential way to troubleshoot this.</li>
 </ul>
-<img class="aligncenter size-full wp-image-17634" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-3.png" alt="Number of commands drop Redis" width="512" height="138" />
+<img class="aligncenter size-full wp-image-17634" src="/img/wp-archive/uploads/2022/09/Redis-3.png" alt="Number of commands drop Redis" width="512" height="138" />
 
 #### Lookup hitrate
 
@@ -104,7 +104,7 @@ These metrics are the key indicators of Redis performance and overall system hea
  	<li>Note that this metric is meaningful for an application that has been running for some time - for new applications it may be prudent to ignore this number for a while.</li>
  	<li>A low lookup hitrate could be caused by a number of factors such as keys getting evicted, keys expiring too soon or keys that simply do not exist.</li>
 </ul>
-<img class="aligncenter size-full wp-image-17636" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-4.png" alt="low lookup hitrate Redis" width="512" height="138" />
+<img class="aligncenter size-full wp-image-17636" src="/img/wp-archive/uploads/2022/09/Redis-4.png" alt="low lookup hitrate Redis" width="512" height="138" />
 
 ### Memory
 
@@ -114,7 +114,7 @@ These metrics are the key indicators of Redis performance and overall system hea
  	<li>Monitoring memory usage is a crucial part of understanding Redis performance</li>
  	<li>This chart represents how much memory is consumed by Redis across different components (dataset, lua, max, peak, rss, scripts, used)</li>
 </ul>
-<img class="aligncenter size-full wp-image-17638" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-5.png" alt="Redis Consumed Memory" width="512" height="137" />
+<img class="aligncenter size-full wp-image-17638" src="/img/wp-archive/uploads/2022/09/Redis-5.png" alt="Redis Consumed Memory" width="512" height="137" />
 
 #### Memory fragmentation
 
@@ -124,7 +124,7 @@ These metrics are the key indicators of Redis performance and overall system hea
  	<li>Ratio &lt; 1 indicates Redis needs more memory than is available on your system, which leads to swapping. Swapping to disk will cause significant increases in latency.</li>
  	<li>Ratio of equal to 1 or slightly greater is generally considered ideal.</li>
 </ul>
-<img class="aligncenter size-full wp-image-17640" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-6.png" alt="Redis Memory" width="512" height="136" />
+<img class="aligncenter size-full wp-image-17640" src="/img/wp-archive/uploads/2022/09/Redis-6.png" alt="Redis Memory" width="512" height="136" />
 
 #### Evicted keys
 
@@ -140,7 +140,7 @@ These metrics are the key indicators of Redis performance and overall system hea
 <ul>
  	<li>Bytes received and sent per second by Redis</li>
 </ul>
-<img class="aligncenter size-full wp-image-17642" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-7.png" alt="Redis Byte Monitoring" width="512" height="138" />
+<img class="aligncenter size-full wp-image-17642" src="/img/wp-archive/uploads/2022/09/Redis-7.png" alt="Redis Byte Monitoring" width="512" height="138" />
 
 ### Replication
 
@@ -180,7 +180,7 @@ If you are using Redis as a cache then persistence may not be necessary. For fur
  	<li>Operations that produced changes since the last SAVE or BGSAVE</li>
  	<li>This metric gives you an understanding of data volatility, a longer interval to the next SAVE is less consequential if the data is less volatile.</li>
 </ul>
-<img class="aligncenter size-full wp-image-17646" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-8-a.png" alt="Redis Changes" width="512" height="138" />
+<img class="aligncenter size-full wp-image-17646" src="/img/wp-archive/uploads/2022/09/Redis-8-a.png" alt="Redis Changes" width="512" height="138" />
 
 #### Current BGSAVE time
 
@@ -212,7 +212,7 @@ If you are using Redis as a cache then persistence may not be necessary. For fur
  	<li>The total commands per seconds by command type.</li>
  	<li>This chart lets you quickly identify the most common commands being processed.</li>
 </ul>
-<img class="aligncenter size-full wp-image-17644" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-8.png" alt="Redis commands by type" width="512" height="139" />
+<img class="aligncenter size-full wp-image-17644" src="/img/wp-archive/uploads/2022/09/Redis-8.png" alt="Redis commands by type" width="512" height="139" />
 
 #### Total CPU time consumed by commands
 
@@ -220,7 +220,7 @@ If you are using Redis as a cache then persistence may not be necessary. For fur
  	<li>The total CPU time consumed by each command type, measured in microseconds.</li>
  	<li>This chart lets you quickly identify which command type consumes the most CPU time in total, in the example below it is clear that <i>LRANGE </i>is the outlier in terms of CPU time consumed.</li>
 </ul>
-<img class="aligncenter size-full wp-image-17650" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-9.png" alt="Redis CPU Consumed by Commands" width="512" height="138" />
+<img class="aligncenter size-full wp-image-17650" src="/img/wp-archive/uploads/2022/09/Redis-9.png" alt="Redis CPU Consumed by Commands" width="512" height="138" />
 
 #### Avg CPU time consumed per command execution
 
@@ -229,7 +229,7 @@ If you are using Redis as a cache then persistence may not be necessary. For fur
  	<li>This is distinct from the previous chart since it shows you the variance between the average time per command to total time per all instances of a command being processed.</li>
  	<li>The below chart is collected from the same Redis instance as the previous one and while <i>LRANGE </i>was the command that consumed the greatest amount of total time, <i>INFO </i>is the command that consumes the most time in average.</li>
 </ul>
-<img class="aligncenter size-full wp-image-17652" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/09/Redis-10.png" alt="Redis CPU time consumed per command execution" width="512" height="140" />
+<img class="aligncenter size-full wp-image-17652" src="/img/wp-archive/uploads/2022/09/Redis-10.png" alt="Redis CPU time consumed per command execution" width="512" height="140" />
 
 ### Keyspace
 

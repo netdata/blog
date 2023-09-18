@@ -1,7 +1,7 @@
 ---
 title: Why is data replication important?
 description: This post describes why is data replication important in infrastructure monitoring.
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Data-Replication-1.png
+image: /img/wp-archive/uploads/2022/10/Data-Replication-1.png
 tags: [how-to,infrastructure-monitoring,streaming,data-replication,configuration,deployment-strategies]
 keywords: [how-to,infrastructure-monitoring,streaming,data-replication,configuration]
 authors: alex
@@ -19,11 +19,11 @@ You would like to monitor the Kubernetes cluster. 
 
 In this case, you would probably install Netdata on each node and connect it directly to the Netdata Cloud, as shown in the following diagram.
 
-![Data Replication Setup 1](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Data-Replication-1.png)
+![Data Replication Setup 1](/img/wp-archive/uploads/2022/10/Data-Replication-1.png)
 
 However, if Node 2 were to go down in this scenario, you would lose the data collected on this Node. By introducing the Parent, the data from Node 2 are streamed to the Parent in real-time, allowing you to keep querying the Parent to understand the state of the node before the node goes down, and this data will continue to be available even after Node 2 goes down, as shown in the following diagram.
 
-![Data Replication Setup 2](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Data-Replication-2.png)
+![Data Replication Setup 2](/img/wp-archive/uploads/2022/10/Data-Replication-2.png)
 
 In case you would like to get the full benefit of the Netdata Parent/Child relationship, you can keep all of your Kubernetes nodes, or any other nodes outside of your Kubernetes cluster, inside your Private Network and allow only the Parent to be publicly accessible. 
 
@@ -31,7 +31,7 @@ We recommend setting up two Parents streaming to each-other (active-active) and 
 
 In this case, you can deploy Netdata as it is shown in the following diagram.
 
-![Data replication scenario 3](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/Data-Replication-3.png)
+![Data replication scenario 3](/img/wp-archive/uploads/2022/10/Data-Replication-3.png)
 
 As you can see, this approach is more secure, as you do not need to expose all your production nodes to the public network. And it is more robust as well, due to high availability. By claiming the Parent node, all Child nodes will appear automatically in the dashboard.
 

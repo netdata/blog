@@ -2,7 +2,7 @@
 slug: meet-the-netdata-community-every-company-needs-an-ebpf-superhero-like-thiago
 title: "Meet the Netdata Community: Every Company Needs an eBPF Superhero Like Thiago"
 description: "Meet the Netdata Community: Every Company Needs an eBPF Superhero Like Thiago"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/thiago-2.png
+image: /img/wp-archive/uploads/2022/03/thiago-2.png
 tags: [community]
 keywords: [netdata,community]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-![](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/thiago-2.png)
+![](/img/wp-archive/uploads/2022/03/thiago-2.png)
 
 Our ongoing Meet the community series focuses on global Netdata community members. In this installment, learn about Netdata staff member and Software Engineer Thiago Marques, who is hard at work building an eBPF.plugin.
 

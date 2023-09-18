@@ -2,7 +2,7 @@
 slug: netdata-cloud-show-the-observability-panel
 title: "Netdata Cloud Show: The Observability Panel"
 description: "Netdata Cloud Show: The Observability Panel"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Cloud-Panel.png
+image: /img/wp-archive/uploads/2022/03/Netdata-Cloud-Panel.png
 tags: [community]
 keywords: [netdata,community]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<figure class="wp-block-image size-large"><img class="wp-image-16169" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Cloud-Panel-1200x674.png" alt="" /></figure>
+<figure class="wp-block-image size-large"><img class="wp-image-16169" src="/img/wp-archive/uploads/2022/03/Netdata-Cloud-Panel-1200x674.png" alt="" /></figure>
 
 ## “In 2022, 60% of security incidents will involve third parties.”<strong>– Forrester</strong>
 

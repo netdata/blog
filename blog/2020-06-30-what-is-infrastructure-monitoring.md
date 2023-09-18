@@ -2,7 +2,7 @@
 slug: what-is-infrastructure-monitoring
 title: "What is Infrastructure Monitoring?"
 description: "What is Infrastructure Monitoring?"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Blog-What_is_Infrastructure_Monitoring_Header.png
+image: /img/wp-archive/uploads/2022/03/Blog-What_is_Infrastructure_Monitoring_Header.png
 tags: [engineering,infrastructure-monitoring]
 keywords: [netdata,engineering]
 authors: Jen
@@ -10,7 +10,7 @@ authors: Jen
 
 <!--truncate-->
 
-<img class="alignnone size-medium wp-image-16343" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Blog-What_is_Infrastructure_Monitoring_Header-600x450.png" alt="" width="600" height="450" />
+<img class="alignnone size-medium wp-image-16343" src="/img/wp-archive/uploads/2022/03/Blog-What_is_Infrastructure_Monitoring_Header-600x450.png" alt="" width="600" height="450" />
 
 IT is advancing blazingly fast. To keep up with architectural changes and hybrid environments, it’s more important than ever to maintain efficient infrastructure monitoring and troubleshooting. Adding to the complexity is the increase of distributed systems, comprised of many components and services. For IT teams to effectively manage monitoring modern infrastructure, it’s necessary to have the right practices and tools in place that enable teams to do their jobs as quickly as possible with fewer resources.
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
@@ -28,7 +28,7 @@ Monitoring is fundamental not only to software operations, but also to business 
 There are many kinds of monitoring available, from application to network to SNMP, which can blur the lines between what monitoring capabilities your company needs and what solution best fits your requirements. Monitoring tools help IT teams get better visibility into events, availability, capacity, and overall health and performance. With more visibility, teams are able to get alerted when an issue occurs, troubleshoot to restore service, analyze anomaly patterns, increase reliability by reducing outages, check resource utilization, and perform root cause analysis with historical data. The graphic below breaks down the main types of monitoring.
 
 </div>
-<img class="alignnone size-medium wp-image-16345" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/itim-980x520-1-600x318.png" alt="" width="600" height="318" />
+<img class="alignnone size-medium wp-image-16345" src="/img/wp-archive/uploads/2022/03/itim-980x520-1-600x318.png" alt="" width="600" height="318" />
 <h2>What are the challenges with current monitoring?</h2>
 Often overlooked in monitoring is using real-time and historical data for troubleshooting infrastructure. Using legacy practices that focus on uptime entirely rather than adopting methods that include improving efficiency and performance will continue to widen gaps between IT and business leaders. Neglecting to find ways to optimize systems and increase agility will eventually lead to degradation of the product or service, affecting the business as a whole.
 

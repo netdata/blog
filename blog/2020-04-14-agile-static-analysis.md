@@ -2,7 +2,7 @@
 slug: agile-static-analysis
 title: "The role of shift-left testing in an agile environment"
 description: "The role of shift-left testing in an agile environment"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Security-use-with-Static-Analysis.png
+image: /img/wp-archive/uploads/2022/03/Netdata-Security-use-with-Static-Analysis.png
 tags: [engineering]
 keywords: [netdata,engineering]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16723" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Security-use-with-Static-Analysis-1200x899.png" alt="" width="1200" height="899" />
+<img class="alignnone size-large wp-image-16723" src="/img/wp-archive/uploads/2022/03/Netdata-Security-use-with-Static-Analysis-1200x899.png" alt="" width="1200" height="899" />
 
 With the rapid growth of security threats to infrastructure, it’s more important than ever to proactively address vulnerabilities. As an open-source project, built on the trust of users and contributors, Netdata has security concerns at its core.
 
@@ -20,7 +20,7 @@ Static analysis, also known as static application security testing <a href="htt
 
 Static analysis plays an important role in our development phase by finding potential issues that could be introduced when new code is deployed. We’ve been investing a lot of effort in finding solutions that help us securely deploy faster at scale. Let’s take a look at our process
 
-<img class="alignnone size-full wp-image-16725" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Seconday-MovingBeyond.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16725" src="/img/wp-archive/uploads/2022/03/Seconday-MovingBeyond.png" alt="" width="600" height="600" />
 <h2>Moving beyond “moving left”</h2>
 &nbsp;
 
@@ -30,13 +30,13 @@ Part of this process includes our developers using local linters like <a href="
 
 The next step includes using internal linters when code is introduced to the development environment. These are used for checking code readability, catching syntax errors, potential bugs, and more. While implementing each of these linting processes created important safeguards, we wanted to take our security discipline one step further by exploring additional solutions.
 
-<img class="alignnone size-full wp-image-16727" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Seconday-StaticAnalysis.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16727" src="/img/wp-archive/uploads/2022/03/Seconday-StaticAnalysis.png" alt="" width="600" height="600" />
 <h2>Challenges of static analysis</h2>
 The challenge was finding a solution that further prevented security threats and software bugs while also integrating into our development process with minimal friction. The solution needed to be compatible with the current workflows which are largely centralized in GitHub. Any tool also needed to fit into our continuous integration and continuous delivery (CI/CD) pipelines for releasing code changes to production quickly and regularly.
 
 We met that challenge by using LGTM, Codacy, and Coverity. These three tools support Netdata’s most commonly used programming languages and best fit our current engineering workflows for reviewing deficiencies and getting as much insight into our code base as possible. Together, these tools give us a comprehensive, reliable code review suite. Below, we’ll break down the role each tool plays in our code review.
 
-<img class="alignnone size-full wp-image-16729" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Seconday-LGTMCodacyCoverity.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16729" src="/img/wp-archive/uploads/2022/03/Seconday-LGTMCodacyCoverity.png" alt="" width="600" height="600" />
 <h2>LGTM</h2>
 LGTM’s automated open code review runs on every pull request in our repository, including automatically running checks on each commit and sending a <a href="https://lgtm.com/projects/g/netdata/netdata/alerts/?mode=list">CodeQL</a> alert when an error is flagged. If an alert is triggered, the pull request is blocked from merging until resolved.
 
@@ -51,7 +51,7 @@ Lastly, we use this static analysis tool for security checks. Having the right s
 <h2>Coverity</h2>
 Coverity is the third component in our overall test suite. We run a nightly batch and run Coverity on every major feature release. We use this static analysis for insights that might have not been flagged earlier in the process. Coverity integrates well into our CI/CD pipeline as a last step of automated testing and helps us find code defects and threats early in the development process.
 
-<img class="alignnone size-full wp-image-16733" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/04/Seconday-TheFuture.png" alt="" width="600" height="600" />
+<img class="alignnone size-full wp-image-16733" src="/img/wp-archive/uploads/2020/04/Seconday-TheFuture.png" alt="" width="600" height="600" />
 <h2>The future of Netdata and static analysis</h2>
 We use static analysis to anticipate bugs and security holes that would affect our product and consequently affect users. Our current process has played a pivotal role in developing our product faster to continue helping users build extraordinary infrastructures.
 

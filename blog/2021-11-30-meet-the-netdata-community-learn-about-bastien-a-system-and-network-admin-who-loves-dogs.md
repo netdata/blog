@@ -2,7 +2,7 @@
 slug: meet-the-netdata-community-learn-about-bastien-a-system-and-network-admin-who-loves-dogs
 title: "Meet the Netdata Community: Learn About Bastien a System and Network Admin Who Loves Dogs"
 description: "Meet the Netdata Community: Learn About Bastien a System and Network Admin Who Loves Dogs"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Screen-Shot-2021-11-30-at-3.10.06-PM.png
+image: /img/wp-archive/uploads/2022/03/Screen-Shot-2021-11-30-at-3.10.06-PM.png
 tags: [community]
 keywords: [netdata,community]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<figure class="wp-block-image size-full"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Screen-Shot-2021-11-30-at-3.10.06-PM.png" alt="" class="wp-image-16223"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/wp-archive/uploads/2022/03/Screen-Shot-2021-11-30-at-3.10.06-PM.png" alt="" class="wp-image-16223"/></figure>
 
 <strong>Tell people about yourself and what you do.</strong>
 

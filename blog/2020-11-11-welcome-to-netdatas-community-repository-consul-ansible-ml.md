@@ -2,7 +2,7 @@
 slug: welcome-to-netdatas-community-repository-consul-ansible-ml
 title: "Welcome to Netdata’s community repository: Consul, Ansible, ML"
 description: "Welcome to Netdata’s community repository: Consul, Ansible, ML"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-community-repository.png
+image: /img/wp-archive/uploads/2022/03/netdata-community-repository.png
 tags: [community,consul]
 keywords: [netdata,community]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16555" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-community-repository-1200x825.png" alt="" width="1200" height="825" />
+<img class="alignnone size-large wp-image-16555" src="/img/wp-archive/uploads/2022/03/netdata-community-repository-1200x825.png" alt="" width="1200" height="825" />
 
 On our journey to democratize monitoring, we are proud to have open source at the core of both our products and our company values. What started as a project out of frustration for lack of existing alternatives (see <a href="https://www.rexfeng.com/blog/2016/01/anger-driven-development/" target="_blank" rel="noopener noreferrer">anger-driven development</a>), quickly became one of the most starred open-source projects on all of GitHub.
 
@@ -20,7 +20,7 @@ As the community grows, and considering our belief that extensibility is key to 
 
 Thus, without further ado, please say hello to our <a href="https://github.com/netdata/community" target="_blank" rel="noopener noreferrer"><strong>community repository</strong></a>.
 
-<img class="alignnone size-large wp-image-16557" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-community-1200x998.png" alt="" width="1200" height="998" />
+<img class="alignnone size-large wp-image-16557" src="/img/wp-archive/uploads/2022/03/netdata-community-1200x998.png" alt="" width="1200" height="998" />
 
 Although still in its infancy, we expect this repository to be filled by community members who want to share their experience of running Netdata in a production environment or integrated into a technological stack. At the moment, the repository will be used to house all sample applications, which are divided into categories, depending on the use case.
 

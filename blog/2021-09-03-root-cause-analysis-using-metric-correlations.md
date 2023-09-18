@@ -2,7 +2,7 @@
 slug: root-cause-analysis-using-metric-correlations
 title: "Root cause analysis using Metric Correlations"
 description: "Root cause analysis using Metric Correlations"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Screen-Shot-2021-09-03-at-1.43.32-PM-1.png
+image: /img/wp-archive/uploads/2022/03/Screen-Shot-2021-09-03-at-1.43.32-PM-1.png
 tags: [engineering,machine-learning,metric-correlations]
 keywords: [netdata,engineering,machine-learning]
 authors: hugo
@@ -11,7 +11,7 @@ authors: hugo
 <!--truncate-->
 
  
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Screen-Shot-2021-09-03-at-1.43.32-PM-1-1200x608.png" alt="" class="wp-image-16297"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Screen-Shot-2021-09-03-at-1.43.32-PM-1-1200x608.png" alt="" class="wp-image-16297"/></figure>
  
 
  
@@ -39,7 +39,7 @@ authors: hugo
  
 
 
-<figure class="wp-block-image size-full"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/image1-1-980x493-2.png" alt="" class="wp-image-16299"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/wp-archive/uploads/2022/03/image1-1-980x493-2.png" alt="" class="wp-image-16299"/></figure>
 
  
  The idea behind our lab tests is to show the novel approach of Netdata to real-time troubleshooting, which is our core focus. Netdata Cloud offers thousands of metrics out-of-the-box that can be analyzed in a few seconds in response to an anomaly, incident, or outage. Other solutions may offer cross-node correlations, but require quite a bit more configuration to be able to surface similar insights and come with considerable cost. 

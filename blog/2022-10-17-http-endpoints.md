@@ -2,7 +2,7 @@
 slug: http-endpoints
 title: "How to monitor HTTP endpoints"
 description: "How to monitor HTTP endpoints"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/http-endpoint-4.png
+image: /img/wp-archive/uploads/2022/10/http-endpoint-4.png
 tags: [how-to,infrastructure-monitoring,http,httpcheck,ping]
 keywords: [how-to,infrastructure-monitoring,http]
 authors: chris
@@ -64,21 +64,21 @@ We can see what this configuration gets us in the <a href="https://app.netdata.c
 
 ## Does each service respond… correctly?
 
-!["status"](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/http-endpoint-1.png)
+!["status"](/img/wp-archive/uploads/2022/10/http-endpoint-1.png)
 
 This is the default status chart in the overview screen of https://app.netdata.cloud for the 3 jobs specified. We see that only two of the services respond successfully. As expected the SOAP test consistently fails, because we rigged it with an invalid check on the response content. We can verify with this chart that indeed the failure is due to bad_content, by selecting to display the <strong>bad_content</strong> status, instead of <strong>success</strong>:
 
-!["HTTP check status"](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/http-endpoint-2.png)
+!["HTTP check status"](/img/wp-archive/uploads/2022/10/http-endpoint-2.png)
 
 You can play with these options on the charts as much as you want and save each view in a custom dashboard if you want. However, all that is not really necessary, because we have also received a predefined alert for this bad content:
 
-!["bad content"](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/http-endpoint-3.png)
+!["bad content"](/img/wp-archive/uploads/2022/10/http-endpoint-3.png)
 
 We’ll see the list of predefined alerts for HTTP endpoints later but rest assured that the common checks are performed automatically, and you will be notified of important issues.
 
 ## Does each service respond… within an acceptable time?
 
-!["http endpoint check"](https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/10/http-endpoint-4.png)
+!["http endpoint check"](/img/wp-archive/uploads/2022/10/http-endpoint-4.png)
 
 The response chart on the <strong>Overview</strong> screen of <a href="https://app.netdata.cloud">https://app.netdata.cloud</a> shows each job name along with each request/response latency. We can see in the time series of the POST web service that it occasionally has high latencies. We are working to have all latency charts in Netdata presented by default with heatmaps, but this representation along with the out of the box alerts is sufficient for most use cases.  
 

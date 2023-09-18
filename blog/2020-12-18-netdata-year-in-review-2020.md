@@ -2,7 +2,7 @@
 slug: netdata-year-in-review-2020
 title: "Netdata Year in Review 2020"
 description: "Netdata Year in Review 2020"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/01/DevOps-Metrics.png
+image: /img/wp-archive/uploads/2021/01/DevOps-Metrics.png
 tags: [community]
 keywords: [netdata,community]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-medium wp-image-16482" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Roadmap-Header-600x322.png" alt="" width="600" height="322" />
+<img class="alignnone size-medium wp-image-16482" src="/img/wp-archive/uploads/2022/03/Roadmap-Header-600x322.png" alt="" width="600" height="322" />
 
 Looking back at the unprecedented challenges we faced together in 2020, we’d like to extend our thanks to the community of people who have continued to work towards Netdata’s mission of simplifying monitoring and troubleshooting for everyone. Let’s review some of this year’s highlights.
 <table>
@@ -32,7 +32,7 @@ Looking back at the unprecedented challenges we faced together in 2020, we’d l
 </tbody>
 </table>
 </td>
-<td width="50%"><img class="wp-image-16480 aligncenter" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/community.png" alt="" width="227" height="225" /></td>
+<td width="50%"><img class="wp-image-16480 aligncenter" src="/img/wp-archive/uploads/2022/03/community.png" alt="" width="227" height="225" /></td>
 </tr>
 </tbody>
 </table>
@@ -40,7 +40,7 @@ Looking back at the unprecedented challenges we faced together in 2020, we’d l
 <table>
 <tbody>
 <tr>
-<td width="50%"><img class="size-full wp-image-16492 aligncenter" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/stargazers.png" alt="" width="225" height="226" /></td>
+<td width="50%"><img class="size-full wp-image-16492 aligncenter" src="/img/wp-archive/uploads/2020/12/stargazers.png" alt="" width="225" height="226" /></td>
 <td width="50%">
 <table>
 <tbody>
@@ -78,7 +78,7 @@ Looking back at the unprecedented challenges we faced together in 2020, we’d l
 </tbody>
 </table>
 </td>
-<td width="50%"><img class="wp-image-16499 size-full aligncenter" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/Github-1.png" alt="" width="256" height="256" /></td>
+<td width="50%"><img class="wp-image-16499 size-full aligncenter" src="/img/wp-archive/uploads/2020/12/Github-1.png" alt="" width="256" height="256" /></td>
 </tr>
 </tbody>
 </table>
@@ -86,7 +86,7 @@ Looking back at the unprecedented challenges we faced together in 2020, we’d l
 <table>
 <tbody>
 <tr>
-<td width="50%"><img class="wp-image-16501 size-full aligncenter" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2020/12/funding-2.png" alt="" width="225" height="225" /></td>
+<td width="50%"><img class="wp-image-16501 size-full aligncenter" src="/img/wp-archive/uploads/2020/12/funding-2.png" alt="" width="225" height="225" /></td>
 <td width="50%">
 <table>
 <tbody>

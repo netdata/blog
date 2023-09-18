@@ -2,7 +2,7 @@
 slug: netdata-agent-dashboard
 title: "Netdata’s dashboard: open by default and secure by design"
 description: "Netdata’s dashboard: open by default and secure by design"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-dashboard-open-secure-min.png
+image: /img/wp-archive/uploads/2022/03/netdata-dashboard-open-secure-min.png
 tags: [product]
 keywords: [netdata,product]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-large wp-image-16569" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-dashboard-open-secure-min-1200x826.png" alt="" width="1200" height="826" />
+<img class="alignnone size-large wp-image-16569" src="/img/wp-archive/uploads/2022/03/netdata-dashboard-open-secure-min-1200x826.png" alt="" width="1200" height="826" />
 
 Let’s talk through a scenario: You have a Linux-based VM running on DigitalOcean (aka a Droplet), and you install Netdata on it using our <a href="https://learn.netdata.cloud/docs/get#install-the-netdata-agent" target="_blank" rel="noopener noreferrer">recommended kickstart script</a>. As the installation process winds down, the Droplet starts up the Netdata Agent’s web server and serves the local Agent web dashboard on port 19999. You navigate to the dashboard using your browser of choice, check out per-second metrics updating in real time in a few of the hundreds of preconfigured visualizations, then realize…
 > 😱 If I can access this dashboard, so can anyone else! My system is already compromised!
@@ -52,7 +52,7 @@ While Netdata is indeed opinionated, you can also change its mind quite easily. 
 
 By connecting your node to Netdata Cloud and restricting access to the local Agent dashboard, you reduce exposure while also maintaining all the features about Netdata that you know and love.
 
-<img class="alignnone size-large wp-image-16571" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/netdata-dashboard-routes-min-1200x582.png" alt="" width="1200" height="582" />
+<img class="alignnone size-large wp-image-16571" src="/img/wp-archive/uploads/2022/03/netdata-dashboard-routes-min-1200x582.png" alt="" width="1200" height="582" />
 
 The good news is that no matter what path you take, your nodes can always communicate with Netdata Cloud to securely stream metrics values and alarm status to your browser on-demand. It’s the best of both security and usability worlds.
 

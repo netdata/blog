@@ -2,7 +2,7 @@
 slug: four-key-metrics-for-responding-to-it-incidents-and-failures
 title: "Four key metrics for responding to IT incidents and failures"
 description: "Four key metrics for responding to IT incidents and failures"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/01/DevOps-Metrics.png
+image: /img/wp-archive/uploads/2021/01/DevOps-Metrics.png
 tags: [engineering,product]
 keywords: [netdata,engineering,product]
 authors: Jen
@@ -10,7 +10,7 @@ authors: Jen
 
 <!--truncate-->
 
-<img class="alignnone wp-image-16474 size-large" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/01/DevOps-Metrics-1200x862.png" alt="" width="1200" height="862" />
+<img class="alignnone wp-image-16474 size-large" src="/img/wp-archive/uploads/2021/01/DevOps-Metrics-1200x862.png" alt="" width="1200" height="862" />
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 
@@ -56,7 +56,7 @@ While MTTR calculates recovery, MTBF calculates the predicted elapsed time betwe
 <h2>MTTF</h2>
 <strong>Mean time to failure</strong>, known as MTTF, is a method of measuring the reliability of non-repairable systems. It’s similar to MTBF, but used in the DevOps world for assets that a team can’t repair like they would a faulty database server, such as tape drives or hard drives.  The calculation represents the expected length of time until an operation fails. The value is measured by assessing incidents for a particular asset over a period of time and calculating the average time before failure.
 
-<img class="alignnone wp-image-16476 size-full" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2021/01/Blank-diagram-980x264-1.png" alt="" width="980" height="264" />
+<img class="alignnone wp-image-16476 size-full" src="/img/wp-archive/uploads/2021/01/Blank-diagram-980x264-1.png" alt="" width="980" height="264" />
 <h2>Using incident response metrics with Netdata</h2>
 Netdata provides users the ability to collect thousands of metrics for monitoring and troubleshooting, playing the lead role in your detection, mitigation, and root cause analysis processes. Netdata helps with DevOps metrics by giving teams the visibility to see when, down to the exact second, a failure started or a recovery took hold. Once an incident begins, Netdata’s rich visualizations help teams do proper root cause analysis to resolve problems faster or perform proactive maintenance to prevent failures before they occur.
 

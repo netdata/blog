@@ -2,7 +2,7 @@
 slug: agile-team-cmocka-foss
 title: "Building an agile team’s ‘safety harness’ with cmocka and FOSS"
 description: "Building an agile team’s ‘safety harness’ with cmocka and FOSS"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/agile-team-cmocka-foss.png
+image: /img/wp-archive/uploads/2022/03/agile-team-cmocka-foss.png
 tags: [engineering]
 keywords: [netdata,engineering]
 authors: team
@@ -10,7 +10,7 @@ authors: team
 
 <!--truncate-->
 
-<img class="alignnone size-full wp-image-16842" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/agile-team-cmocka-foss.png" alt="" width="1200" height="600" />
+<img class="alignnone size-full wp-image-16842" src="/img/wp-archive/uploads/2022/03/agile-team-cmocka-foss.png" alt="" width="1200" height="600" />
 
 Netdata is made up from agile teams who are deeply committed to improving the usability of our product. We want to respond to our users and introduce in-demand features. Working directly with our community is the best way to make Netdata better.
 
@@ -48,9 +48,9 @@ There are a lot of testing frameworks out there, but we narrowed it down to thre
 </td>
 </tr>
 <tr>
-<td><img class="alignnone size-full wp-image-16844" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/69387373-7bc0d580-0c7a-11ea-9409-a0a97f5a1236.png" alt="" width="314" height="201" /></td>
-<td><img class="alignnone size-full wp-image-16846" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/69387376-7d8a9900-0c7a-11ea-96c5-2552acf35b52.png" alt="" width="307" height="253" /></td>
-<td><img class="alignnone size-full wp-image-16848" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/69387380-7ebbc600-0c7a-11ea-92f0-1e83783ffdbd.png" alt="" width="322" height="209" /></td>
+<td><img class="alignnone size-full wp-image-16844" src="/img/wp-archive/uploads/2022/03/69387373-7bc0d580-0c7a-11ea-9409-a0a97f5a1236.png" alt="" width="314" height="201" /></td>
+<td><img class="alignnone size-full wp-image-16846" src="/img/wp-archive/uploads/2022/03/69387376-7d8a9900-0c7a-11ea-96c5-2552acf35b52.png" alt="" width="307" height="253" /></td>
+<td><img class="alignnone size-full wp-image-16848" src="/img/wp-archive/uploads/2022/03/69387380-7ebbc600-0c7a-11ea-92f0-1e83783ffdbd.png" alt="" width="322" height="209" /></td>
 </tr>
 </tbody>
 </table>
@@ -64,7 +64,7 @@ This is the main strength of cmocka, and using it lets us build on the huge amou
 
 The library provides us with a facility called “mocking”—substituting pieces of the real application with pretend versions. These “mocks” allow us to capture the data at precise points within the application and define the boundaries of the test. We can inject data directly into calls inside the application and use the mocks to capture the results before they propagate into the rest of the application.
 
-<img class="alignnone wp-image-16852 size-full" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/20191127-cmoka-diagram-1-980x735-1.jpeg" alt="" width="980" height="735" />
+<img class="alignnone wp-image-16852 size-full" src="/img/wp-archive/uploads/2022/03/20191127-cmoka-diagram-1-980x735-1.jpeg" alt="" width="980" height="735" />
 
 The only additional facility that we need is control over memory. We have to make each test reproducible, and that means being certain no state accidentally propagates out of one test and into another. cmocka can checkpoint the state of memory in between tests and give us rigid guarantees that a test passes because of what we did <strong>inside the test</strong>—not because an earlier test accidentally set us up to give the right result.
 
@@ -110,7 +110,7 @@ into the unit tests.</li>
  	<li>Ensured correct decoding of the URL for path components, and that the mocked dispatch point for the API is called
 correctly.</li>
 </ul>
-<img class="alignnone size-full wp-image-16850" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/20191127-cmoka-diagram-2-980x735-1.jpeg" alt="" width="980" height="735" />
+<img class="alignnone size-full wp-image-16850" src="/img/wp-archive/uploads/2022/03/20191127-cmoka-diagram-2-980x735-1.jpeg" alt="" width="980" height="735" />
 
 The testing process was extended by introducing a layer of parametric testing on top of the cmocka test runner. The parametric testing walks through a space of parameter values and dynamically generates test definitions for each point. A cmocka testing group was built that repeatedly calls the same testing procedure, feeding the test definitions to the procedure as a shared state.
 
@@ -120,7 +120,7 @@ The <code>valid_urls_testdriver</code> runs a small manual set of cases to che
 
 Currently, the tests can be executed manually with <code>make check</code>, but after refining the web server’s behavior, we may execute the test suites automatically.
 
-<img class="alignnone size-full wp-image-16854" src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/20191127-cmoka-diagram-3-980x735-1.jpeg" alt="" width="980" height="735" />
+<img class="alignnone size-full wp-image-16854" src="/img/wp-archive/uploads/2022/03/20191127-cmoka-diagram-3-980x735-1.jpeg" alt="" width="980" height="735" />
 <h2>Tests, mocks, and URLs… oh my</h2>
 To get all the benefits of cmocka’s library and be able to test our code with <em>any</em> agility, we needed to write a new layer on top of an existing FOSS project.
 

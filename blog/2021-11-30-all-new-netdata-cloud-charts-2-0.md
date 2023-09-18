@@ -2,7 +2,7 @@
 slug: all-new-netdata-cloud-charts-2-0
 title: "All-new Netdata Cloud Charts 2.0"
 description: "All-new Netdata Cloud Charts 2.0"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Charts-2.0.png
+image: /img/wp-archive/uploads/2022/03/Netdata-Charts-2.0.png
 tags: [engineering,product,charts,observability]
 keywords: [netdata,engineering,product]
 authors: hugo
@@ -11,7 +11,7 @@ authors: hugo
 <!--truncate-->
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Netdata-Charts-2.0-1200x704.png" alt="" class="wp-image-16212"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Netdata-Charts-2.0-1200x704.png" alt="" class="wp-image-16212"/></figure>
 
 
 
@@ -31,7 +31,7 @@ With the new Netdata Charts you can:
 
 
 
-<figure class="wp-block-image size-full"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/ezgif-1-2ac81d0df3.gif" alt="" class="wp-image-16214"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/wp-archive/uploads/2022/03/ezgif-1-2ac81d0df3.gif" alt="" class="wp-image-16214"/></figure>
 
 
 
@@ -79,7 +79,7 @@ The challenge was adding this new, rich functionality with a lean appearance to 
 
 
 <!-- wp:image {"id":16216,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/ezgif-1-9bccfc91e4.gif" alt="" class="wp-image-16216"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/wp-archive/uploads/2022/03/ezgif-1-9bccfc91e4.gif" alt="" class="wp-image-16216"/></figure>
 
 
 

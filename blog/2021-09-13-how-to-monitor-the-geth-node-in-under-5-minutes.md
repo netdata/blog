@@ -2,7 +2,7 @@
 slug: how-to-monitor-the-geth-node-in-under-5-minutes
 title: "How to monitor the Geth node in under 5 minutes"
 description: "How to monitor the Geth node in under 5 minutes"
-image: https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/How-Geth-affect-the-CPU-charts.png
+image: /img/wp-archive/uploads/2022/03/How-Geth-affect-the-CPU-charts.png
 tags: [engineering,community,geth]
 keywords: [netdata,engineering,community]
 authors: team
@@ -11,7 +11,7 @@ authors: team
 <!--truncate-->
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/How-Geth-affect-the-CPU-charts-1200x629.png" alt="" class="wp-image-16229"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/How-Geth-affect-the-CPU-charts-1200x629.png" alt="" class="wp-image-16229"/></figure>
 
 
 
@@ -102,7 +102,7 @@ In other words, you don’t have to setup
 ## How to monitor your Ethereum Node
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/joker-1200x500.gif" alt="" class="wp-image-16231"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/joker-1200x500.gif" alt="" class="wp-image-16231"/></figure>
 
 
 
@@ -177,7 +177,7 @@ The dashboard is organized into 4 main areas:
 ## System Overview section
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/System-overview-section-1-1200x417.png" alt="" class="wp-image-16233"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/System-overview-section-1-1200x417.png" alt="" class="wp-image-16233"/></figure>
 
 
 
@@ -195,7 +195,7 @@ It has a nice review of the whole system. During the sync, we expect to see elev
 
 ### CPU utilization chart
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/CPU-utilization-chart-2-1200x230.png" alt="" class="wp-image-16235"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/CPU-utilization-chart-2-1200x230.png" alt="" class="wp-image-16235"/></figure>
 
 
 <strong>IOwait dimension</strong> It’s the time that the CPU waits for an IO operation to complete. It could be running other things, but it doesn’t.
@@ -220,7 +220,7 @@ It’s the time spent on <a href="https://en.wikipedia.org/wiki/Interrupt_handle
 
 ### CPU Pressure Stall Information (PSI) chart
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/CPU-chart-3-1200x230.png" alt="" class="wp-image-16237"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/CPU-chart-3-1200x230.png" alt="" class="wp-image-16237"/></figure>
 
 
 
@@ -238,7 +238,7 @@ This is only available on Linux systems. FreeBSD and MacOS don’t support this,
 
 ### CPU Load chart
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/CPU-load-chart-4-1200x196.png" alt="" class="wp-image-16239"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/CPU-load-chart-4-1200x196.png" alt="" class="wp-image-16239"/></figure>
 
 
 
@@ -281,13 +281,13 @@ As soon as I start spamming my Geth node with RPC requests, I see a considerable
 In the following image, we can easily identify the time at which I started the <code>RPC request</code> spam to my Geth node.
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Disk-charts-5-1200x708.png" alt="" class="wp-image-16241"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Disk-charts-5-1200x708.png" alt="" class="wp-image-16241"/></figure>
 
 
 
 ## Disk Charts
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Network-charts-7-1200x374.png" alt="" class="wp-image-16243"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Network-charts-7-1200x374.png" alt="" class="wp-image-16243"/></figure>
 
 
 
@@ -345,7 +345,7 @@ To verify the correlation with Geth, I can simply stop the process and see the P
 
 ### RAM charts
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/RAM-charts-6-1200x548.png" alt="" class="wp-image-16245"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/RAM-charts-6-1200x548.png" alt="" class="wp-image-16245"/></figure>
 
 
 
@@ -420,7 +420,7 @@ Moreover, since the <code>RAM PSI</code> is about 3%, I can safely assume that m
 ## Network charts
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Network-charts-7-1-1200x374.png" alt="" class="wp-image-16247"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Network-charts-7-1-1200x374.png" alt="" class="wp-image-16247"/></figure>
 
 
 
@@ -479,7 +479,7 @@ In reality, it is the other way around. If we see a high number of <code>dropped
 ### Disk Operations chart
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Disk-Operations-chart-8-1200x154.png" alt="" class="wp-image-16249"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Disk-Operations-chart-8-1200x154.png" alt="" class="wp-image-16249"/></figure>
 
 
 
@@ -497,7 +497,7 @@ The disk may be able to keep up with the write/read IO bandwidth, but not with t
 
 ### IO backlog chart
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Disk-Operations-chart-8-1-1200x154.png" alt="" class="wp-image-16251"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Disk-Operations-chart-8-1-1200x154.png" alt="" class="wp-image-16251"/></figure>
 
 
 
@@ -550,7 +550,7 @@ It’s not a matter of how much data is read/written on disk, but rather in how 
 
 ## Networking Stack Section
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Networking-Stack-section-10-1200x262.png" alt="" class="wp-image-16257"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Networking-Stack-section-10-1200x262.png" alt="" class="wp-image-16257"/></figure>
 
 
 
@@ -589,7 +589,7 @@ Geth is a highly networked application, with peers connecting and disconnecting 
 ## Applications Section
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Applications-section-11-1200x437.png" alt="" class="wp-image-16255"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Applications-section-11-1200x437.png" alt="" class="wp-image-16255"/></figure>
 
 
 
@@ -671,7 +671,7 @@ If you access the above path with your browser, you will see all the metrics tha
 
 For example:
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/carbon-13-539x1200.png" alt="" class="wp-image-16259"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/carbon-13-539x1200.png" alt="" class="wp-image-16259"/></figure>
 
 
 
@@ -694,7 +694,7 @@ Before continuing with the metrics that I chose for the PoC, it’s important to
 ## Chaindata session total read/write chart
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Chaindata-session-total-readwrite-chart-15-1200x1047.png" alt="" class="wp-image-16261"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Chaindata-session-total-readwrite-chart-15-1200x1047.png" alt="" class="wp-image-16261"/></figure>
 
 
 
@@ -724,7 +724,7 @@ The size of the Ancient and LevelDB databases. Useful to gauge how much storage 
 
 ### <a href="https://hackmd.io/48N0Ah1QRNOOsonoL5fj3w?view#Chainhead-chart"></a>Chainhead chart
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Chainhead-chart-16-1200x266.png" alt="" class="wp-image-16263"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Chainhead-chart-16-1200x266.png" alt="" class="wp-image-16263"/></figure>
 
 
 
@@ -746,7 +746,7 @@ A good addition to this chart is the <code>header</code> dimension from another 
 
 ### P2P bandwidth  & peers charts
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/P2P-bandwidth-and-peer-charts-17-1200x712.png" alt="" class="wp-image-16265"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/P2P-bandwidth-and-peer-charts-17-1200x712.png" alt="" class="wp-image-16265"/></figure>
 
 
 
@@ -760,7 +760,7 @@ In general, the optimum number of peers is around 30. This can be set as a comma
 
 ### Reorgs charts
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Reorg-charts-18-1200x464.png" alt="" class="wp-image-16267"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Reorg-charts-18-1200x464.png" alt="" class="wp-image-16267"/></figure>
 
 
 
@@ -770,7 +770,7 @@ With all the recent talk about reorgs, these charts will show the number of <cod
 
 ### TX pool charts
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Tx-pool-charts-19-1200x662.png" alt="" class="wp-image-16269"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Tx-pool-charts-19-1200x662.png" alt="" class="wp-image-16269"/></figure>
 
 
 
@@ -781,7 +781,7 @@ Metrics about the <code>tx pool</code> of our Geth node are not particularly act
 ### Goroutines chart
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Goroutines-chart-1-20-1200x262.png" alt="" class="wp-image-16271"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Goroutines-chart-1-20-1200x262.png" alt="" class="wp-image-16271"/></figure>
 
 
 
@@ -791,7 +791,7 @@ The number of <code>goroutines</code> is particularly important. With ~50 peers,
 
 ### RPC chart
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/RPC-chart-21-1200x256.png" alt="" class="wp-image-16273"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/RPC-chart-21-1200x256.png" alt="" class="wp-image-16273"/></figure>
 
 
 
@@ -805,7 +805,7 @@ A sudden increase in <code>rpc calls</code> can indicate a malicious activity (e
 
 ## Default Alerts
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Default-alert-22-1200x713.png" alt="" class="wp-image-16275"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Default-alert-22-1200x713.png" alt="" class="wp-image-16275"/></figure>
 
 
 
@@ -824,7 +824,7 @@ To get a sense of the default alerts, visit the <a href="http://163.172.166.66:
 ## How Geth affects the default alert
 
 
-<figure class="wp-block-image size-large"><img src="https://netdatacloud20.kinsta.cloud/wp-content/uploads/2022/03/Default-alert-22-1-1200x713.png" alt="" class="wp-image-16277"/></figure>
+<figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Default-alert-22-1-1200x713.png" alt="" class="wp-image-16277"/></figure>
 
 
 
