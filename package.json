@@ -22,7 +22,7 @@
     "@docusaurus/preset-classic": "^2.4.0",
     "@mdx-js/react": "1.6.22",
     "@tailwindcss/typography": "0.5.10",
-    "autoprefixer": "10.4.15",
+    "autoprefixer": "10.4.16",
     "clsx": "2.0.0",
     "docusaurus-tailwindcss": "0.1.0",
     "postcss": "8.4.30",
