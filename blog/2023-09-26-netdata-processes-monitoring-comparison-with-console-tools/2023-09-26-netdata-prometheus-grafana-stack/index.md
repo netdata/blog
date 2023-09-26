@@ -1,6 +1,6 @@
 ---
 slug: netdata-processes-monitoring-comparison-with-console-tools
-title: "Netdata Processes monitoring and its Comparison with other console based tools"
+title: "Netdata Processes monitoring and its comparison with other console based tools"
 authors: satya
 tags: [processes, top, htop, atop, glances, application-monitoring, apm]
 keywords: [processes, top, htop, atop, glances, application-monitoring, apm]
