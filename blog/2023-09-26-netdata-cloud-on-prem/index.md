@@ -34,7 +34,7 @@ There are entire industries, governmental organizations and critical infrastruct
 
 ## Why On-Prem monitoring? 
 
-### Data Privacy & Security
+### **Data Privacy & Security**
 For industries under stringent compliance regulations like GDPR, HIPAA, or FISMA, on-prem monitoring isn't a luxury; it's a necessity. Netdata Cloud On-Prem enables you to keep all your sensitive metrics within your own controlled environment, minimizing risks and satisfying compliance requirements.
 
 ### Control & Customization
