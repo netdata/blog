@@ -6,9 +6,10 @@ description: |
 authors: costa
 tags: [systemd-journal, logs, log, infrastructure-monitoring, syslog, journalctl, devops]
 keywords: [systemd-journal, logs, log, infrastructure-monitoring, syslog, journalctl, devops]
-image: https://github.com/netdata/netdata/assets/2662304/691b7470-ec56-430c-8b81-0c9e49012679
+image: https://github.com/netdata/blog/assets/24860547/3b80d27b-1607-4d5e-b2e2-96062dfdf6fc
 ---
-![image](https://github.com/netdata/netdata/assets/2662304/691b7470-ec56-430c-8b81-0c9e49012679 "systemd journal netdata plugin")
+
+![image](https://github.com/netdata/blog/assets/24860547/3b80d27b-1607-4d5e-b2e2-96062dfdf6fc)
 
 *“Why bother with it? I let it run in the background and focus on more important DevOps work.”*
 &mdash; a random DevOps Engineer at Reddit r/devops
@@ -36,3 +37,5 @@ Check for example coredumps. `systemd` developers have annotated all application
 Now, imagine a world where application developers don't just log errors, but annotate those logs with rich information: the request path, internal component states, source and destination details, and everything related to identify the exact case and state this log line appeared. How much time such error logging would save? It would be a game-changer, enabling faster troubleshooting, precise error tracking, and efficient service maintenance.
 
 All this power is hidden behind a very cryptic **journalctl** command. So, at [Netdata](https://app.netdata.cloud/) we decided to reveal this power and make it accessible to everyone.
+
+![image](https://github.com/netdata/netdata/assets/2662304/691b7470-ec56-430c-8b81-0c9e49012679 "systemd journal netdata plugin")
