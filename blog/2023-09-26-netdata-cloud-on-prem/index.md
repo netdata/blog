@@ -4,10 +4,12 @@ title: "Netdata Cloud On Prem: The Next Level in On Premises Infrastructure Moni
 authors: shyam
 tags: [netdata, netdata cloud, on prem, on premises, infrastructure monitoring, monitoring]
 keywords: [netdata, netdata cloud, on prem, on premises, infrastructure monitoring, monitoring]
-image: ../2023-09-26-netdata-prometheus-grafana-stack/img/stacked-netdata.png
+image: https://github.com/netdata/blog/assets/24860547/7e503687-0472-44b0-bf6f-0bff40aeb517
 ---
 
-![netdata-cloud-on-prem](../2023-09-26-netdata-prometheus-grafana-stack/img/stacked-netdata.png)
+![netdata-cloud-on-prem](https://github.com/netdata/blog/assets/24860547/7e503687-0472-44b0-bf6f-0bff40aeb517)
+
+
 
 Discover the next level of on premise infrastructure monitoring with Netdata Cloud On-Prem. Learn how to efficiently monitor your infrastructure & lower your total cost ownership with full security and privacy compliance guaranteed
 
