@@ -17,7 +17,7 @@ We at Netdata understand that [infrastructure monitoring](https://blog.netdata.c
 
 ## Netdata Cloud On-Prem
 
-While [Netdata Cloud](www.netdata.cloud) never stores any of your metric data on the cloud and just streams it ephemerally while you view a chart, the demand for on premise infrastructure monitoring has never been more pressing. Many large enterprises, governmental organizations, research institutes and critical infrastructures require a level of data privacy, security, and customization that only an on-prem solution can offer. 
+While [Netdata Cloud](https://www.netdata.cloud/) never stores any of your metric data on the cloud and just streams it ephemerally while you view a chart, the demand for on premise infrastructure monitoring has never been more pressing. Many large enterprises, governmental organizations, research institutes and critical infrastructures require a level of data privacy, security, and customization that only an on-prem solution can offer. 
 
 A quick recap for the uninitiated, the Netdata ecosystem has two key components:
 
