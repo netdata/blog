@@ -23,7 +23,7 @@ A quick recap for the uninitiated, the Netdata ecosystem has two key components:
 #### Netdata Agent
 The Open-Source Netdata Agent provides most monitoring functions, including data collection, time-series database, alerts processing, machine learning, query engine, and exporting of metrics to third party systems. Netdata Agents are also used for creating multi-level metrics centralization points within the infrastructure, offloading production systems from monitoring resources.
 
-#### Netdata Cloud
+#### **Netdata Cloud**
 Netdata Cloud is the control plane of Netdata Agents. It adds role based access control (RBAC), infinite horizontal scalability, auditing, central control and dispatch of alert notifications and extensive customization and collaboration services (including custom dashboards), on top of Netdata Agents.
 
 The Netdata Agent would always run on your premises while (up until now) Netdata Cloud was hosted by us on our public cloud infrastructure. 
