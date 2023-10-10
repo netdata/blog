@@ -12,7 +12,7 @@ image: https://github.com/netdata/blog/assets/24860547/7e503687-0472-44b0-bf6f-0
 
 <!--truncate-->
 
-We at Netdata understand that [infrastructure monitoring](https://blog.netdata.cloud/future-of-infrastructure-monitoring/) can be a complex maze—high costs, specialized skill sets, scalability, data silos, and more. That's why we have always aimed to streamline and modernize this critical operation. Today, we're thrilled to announce the launch of [Netdata Cloud On Prem](https://www.netdata.cloud/contact-us/?subject=on-prem), a ground-breaking solution designed for robust on-prem infrastructure monitoring - it comes with all the Netdata Cloud features you love but fully on prem.
+We at **Netdata** understand that [infrastructure monitoring](https://blog.netdata.cloud/future-of-infrastructure-monitoring/) can be a complex maze—high costs, specialized skill sets, scalability, data silos, and more. That's why we have always aimed to streamline and modernize this critical operation. Today, we're thrilled to announce the launch of [Netdata Cloud On Prem](https://www.netdata.cloud/contact-us/?subject=on-prem), a ground-breaking solution designed for robust **on-prem infrastructure monitoring** - it comes with all the **Netdata Cloud** features you love but fully on prem.
 
 ## Netdata Cloud On-Prem
 
