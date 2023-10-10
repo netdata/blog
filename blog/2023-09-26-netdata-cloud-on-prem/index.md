@@ -11,7 +11,7 @@ image: https://github.com/netdata/blog/assets/24860547/7e503687-0472-44b0-bf6f-0
 
 
 
-Discover the next level of on premise infrastructure monitoring with Netdata Cloud On-Prem. Learn how to efficiently monitor your infrastructure & lower your total cost ownership with full security and privacy compliance guaranteed
+Discover the next level of on premise infrastructure monitoring with Netdata Cloud On-Prem. Learn how to efficiently monitor your infrastructure & lower your total cost ownership with full security and privacy compliance guaranteed.
 
 <!--truncate-->
 
