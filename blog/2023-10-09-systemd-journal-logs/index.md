@@ -38,6 +38,6 @@ Now, imagine a world where application developers don't just log errors, but ann
 
 All this power is hidden behind a very cryptic **journalctl** command. So, at [Netdata](https://app.netdata.cloud/) we decided to reveal this power and make it accessible to everyone.
 
-Try it for yourself in one our Netdata demo rooms [here](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/functions?oauth=google&#after=-21600&before=0&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-fn-selectedFn-arr=systemd-journal&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-fn-selectedNodeIds-arr=e3b4cd99-19a7-467b-841a-09314dcafc51&selectedFn-arr=systemd-journal&selectedNodeIds-arr=d8e944dd-d061-4bc9-a850-0ac2ee4ff87f&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-systemd-journalFilters-source-arr=all).
+Try it for yourself in one of our Netdata demo rooms [here](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/functions?oauth=google&#after=-21600&before=0&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-fn-selectedFn-arr=systemd-journal&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-fn-selectedNodeIds-arr=e3b4cd99-19a7-467b-841a-09314dcafc51&selectedFn-arr=systemd-journal&selectedNodeIds-arr=d8e944dd-d061-4bc9-a850-0ac2ee4ff87f&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-systemd-journalFilters-source-arr=all).
 
 ![image](./systemd-screenshot.png "systemd journal netdata plugin")
