@@ -6,10 +6,10 @@ description: |
 authors: costa
 tags: [systemd-journal, logs, log, infrastructure-monitoring, syslog, journalctl, devops]
 keywords: [systemd-journal, logs, log, infrastructure-monitoring, syslog, journalctl, devops]
-image: ./systemd-logo.svg
+image: ./systemd-logo.png
 ---
 
-![image](./systemd-logo.svg)
+![image](./systemd-logo.png)
 
 *“Why bother with it? I let it run in the background and focus on more important DevOps work.”*
 &mdash; a random DevOps Engineer at Reddit r/devops
@@ -40,4 +40,4 @@ All this power is hidden behind a very cryptic **journalctl** command. So, at [N
 
 Try it for yourself in one our Netdata demo rooms [here](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/functions?oauth=google&#after=-21600&before=0&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-fn-selectedFn-arr=systemd-journal&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-fn-selectedNodeIds-arr=e3b4cd99-19a7-467b-841a-09314dcafc51&selectedFn-arr=systemd-journal&selectedNodeIds-arr=d8e944dd-d061-4bc9-a850-0ac2ee4ff87f&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-systemd-journalFilters-source-arr=all).
 
-![image](https://github.com/netdata/netdata/assets/2662304/691b7470-ec56-430c-8b81-0c9e49012679 "systemd journal netdata plugin")
+![image](./systemd-screenshot.png "systemd journal netdata plugin")
