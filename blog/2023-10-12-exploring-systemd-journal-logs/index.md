@@ -14,7 +14,7 @@ image: https://github.com/netdata/blog/assets/24860547/25ce542b-4571-4b9b-a97c-b
 Today, we released our `systemd` **journal plugin for Netdata**, allowing you to explore, view, search, filter and analyze `systemd` journal logs.
 
 Like most things about Netdata, this is a **zero-configuration plugin**. You don’t have to do anything apart from **installing Netdata** on your systems.This is key design direction for Netdata, since we want Netdata to be able to help even if you install it mid-crisis, while you have an incident at hand.
-
+<!--truncate-->
 Netdata will automatically detect `persistent` (on disk) and `volatile` (on `tmpfs`) journals, `system` journals, `user` journals, journal `namespaces` and `remote` journals. The Netdata UI offers the ability to select any of these journal categories or work on all of them, as if they were one. When you work on all of them together, logs are multiplexed from all log streams, in the same view.
 
 Netdata will also work on the **journal logs** of individual servers, but also on infrastructure-wide **log centralization** servers based on `systemd` journal. Below we give you configuration instructions on how to build such servers in your infrastructure.
