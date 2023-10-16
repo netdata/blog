@@ -6,7 +6,7 @@ description: |
 authors: shyam
 tags: [systemd-journal, logs, log, infrastructure-monitoring, syslog, journalctl, devops]
 keywords: [systemd-journal, logs, log, infrastructure-monitoring, syslog, journalctl, devops]
-image: https://github.com/netdata/blog/assets/24860547/25ce542b-4571-4b9b-a97c-b03e66da3377
+image: https://github.com/netdata/blog/assets/139226121/bde464b5-e380-4528-93f6-bdc41414f314
 ---
 
 ![systemd-logo](https://github.com/netdata/blog/assets/24860547/218a385d-fb4c-4771-b014-2f8d3433ae0a)
