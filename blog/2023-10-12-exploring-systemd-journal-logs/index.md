@@ -9,7 +9,7 @@ keywords: [systemd-journal, logs, log, infrastructure-monitoring, syslog, journa
 image: https://github.com/netdata/blog/assets/139226121/bde464b5-e380-4528-93f6-bdc41414f314
 ---
 
-![systemd-logo](https://github.com/netdata/blog/assets/24860547/218a385d-fb4c-4771-b014-2f8d3433ae0a)
+![systemd - netdata](https://github.com/netdata/blog/assets/139226121/bde464b5-e380-4528-93f6-bdc41414f314)
 
 Today, we released our `systemd` **journal plugin for Netdata**, allowing you to explore, view, search, filter and analyze `systemd` journal logs.
 
