@@ -84,24 +84,26 @@ Navigating the sprawling landscape of system data can be a daunting task, partic
 ##### Monitoring: Pre-Built and Prescriptive Dashboards
 In the realm of monitoring, dashboards are often pre-built and prescriptive, designed to highlight key performance indicators (KPIs) and metrics that are generally considered important for the majority of use-cases. For instance, a pre-configured dashboard for a database might focus on query performance, CPU usage, and memory consumption. These dashboards serve as a quick way to gauge the health of specific components within your system.
 
-Advantages:
-Quick Setup: Pre-built dashboards require little to no configuration, making them quick to deploy.
-Best Practices: These dashboards are often designed based on industry best practices, providing a tried-and-true set of metrics that most organizations should monitor.
-Limitations:
+**Advantages:**
+- Quick Setup: Pre-built dashboards require little to no configuration, making them quick to deploy.
+- Best Practices: These dashboards are often designed based on industry best practices, providing a tried-and-true set of metrics that most organizations should monitor.
+**Limitations:**
 Lack of Flexibility: Pre-built dashboards are not always tailored to your specific needs and might lack the ability to perform ad-hoc queries or deep dives.
 Surface-Level Insights: While useful for a quick status check, these dashboards may not provide the contextual data needed to understand the root cause of an issue.
 
 ##### Observability: Customizable and Exploratory Dashboards
 Contrastingly, observability platforms often allow for much greater customization and flexibility in dashboard creation. You can build your own dashboards that focus on the metrics most relevant to your specific application or business needs. Moreover, you can create ad-hoc queries to explore your data in real-time.
 
-Advantages:
-Deep Insights: Custom dashboards allow you to drill down into high-cardinality data, providing nuanced insights that can lead to effective problem-solving.
-Contextual Understanding: Because you can tailor your dashboard to include a wide range of metrics, logs, and traces, you get a more contextual view of system behavior.
-Limitations:
-Complexity: The flexibility comes at the cost of complexity. Building custom dashboards often requires a deep understanding of the data model and query language of the observability platform.
-Time-Consuming: Crafting a dashboard that provides valuable insights can be a time-consuming process, especially if you're starting from scratch.
+**Advantages:**
+- Deep Insights: Custom dashboards allow you to drill down into high-cardinality data, providing nuanced insights that can lead to effective problem-solving.
+- Contextual Understanding: Because you can tailor your dashboard to include a wide range of metrics, logs, and traces, you get a more contextual view of system behavior.
+**Limitations:**
+- Complexity: The flexibility comes at the cost of complexity. Building custom dashboards often requires a deep understanding of the data model and query language of the observability platform.
+- Time-Consuming: Crafting a dashboard that provides valuable insights can be a time-consuming process, especially if you're starting from scratch.
 
 Netdata aims to deliver the best of both worlds by giving you out-of-the-box opinionated, powerful, flexible, customizable dashboards for every single metric. 
+
+![Recording 2023-10-24 135447](https://github.com/netdata/blog/assets/24860547/25759822-8731-4f97-927b-aad1834c7b4f)
 
 ### Real-World Applications: Monitoring vs Observability
 
@@ -135,4 +137,4 @@ Netdata offers capabilities that span both monitoring and observability. It deli
 
 Check out Netdata's [public demo space](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/) or [sign up today](https://app.netdata.cloud/) for free, if you haven't already. 
 
-Happy Troubleshooting!
+**Happy Troubleshooting!**
