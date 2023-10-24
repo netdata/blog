@@ -51,6 +51,7 @@ Monitoring: Predefined and Aggregate Metrics
 In a monitoring setup, metrics are often predefined and tend to be aggregate values, such as averages or sums calculated over a specific time window. These metrics are designed to trigger alerts based on known thresholds. For example, you might track the average CPU usage over a five-minute window and set an alert if it exceeds 90%. While this approach is effective for catching known issues, it lacks the context needed to understand why a problem is occurring.
 
 Observability: High-Fidelity, High-Granularity and Context-Rich Metrics
+
 Observability platforms go beyond merely collecting metrics; they focus on high-granularity, real-time metrics that can be dissected and queried in various ways. Here, you're not limited to predefined aggregate values. You can explore metrics like request latency at the 99th percentile over a one-second interval or look at the distribution of database query times for a particular set of conditions. This depth allows for a more nuanced understanding of system behavior, enabling you to pinpoint issues down to their root cause.
 
 A critical aspect that is often overlooked is the need for real-time, high-fidelity metrics, which are metrics sampled at very high frequencies, often per second. In a system where millions of transactions are happening every minute, a five-minute average could hide critical spikes that may indicate system failure or degradation. Observability platforms are generally better suited to provide this level of granularity than traditional monitoring tools.
