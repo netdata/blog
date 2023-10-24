@@ -15,7 +15,7 @@ As systems increasingly shift towards distributed architectures to deliver appli
 
 Understanding the nuanced differences between monitoring and observability is crucial for anyone responsible for system health and performance. In dissecting these methodologies, we'll explore their unique strengths, dive into practical applications, and illuminate how to strategically employ each to enhance operational outcomes.
 
-To set the stage, consider a real-world scenario that many of us have encountered: It's 3 a.m., and you get an alert that a critical service is down. Traditional monitoring tools may tell you what's wrong, but they won't necessarily tell you why it's happening leaving that part up to you. With Observability, the tool enables you to explore your system's internal state and uncover the root cause in a faster and easier manner. 
+To set the stage, consider a real-world scenario that many of us have encountered: It's 3 a.m., and you get an alert that a critical service is down. Traditional monitoring tools may tell you what's wrong, but they won't necessarily tell you why it's happening leaving that part up to you. With observability, the tool enables you to explore your system's internal state and uncover the root cause in a faster and easier manner. 
 
 ### The Conceptual Framework
 
