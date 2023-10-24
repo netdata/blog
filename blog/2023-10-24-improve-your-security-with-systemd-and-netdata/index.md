@@ -1,12 +1,15 @@
 ---
 slug: improve-your-security-with-systemd-and-netdata
 title: "Improve Your Security With systemd-journal and Netdata"
-description: "How you improve your security using systemd journal logs & Netdata?"
-image: 
+description: "How can you improve your security using systemd journal logs & Netdata?"
+image: https://github.com/netdata/blog/assets/139226121/bd69cf0b-3a45-4c54-92ca-0609e15508dc
 authors: satya
 tags: [systemd, systemd journal, logs, monitoring, security]
 keywords: [systemd journal, systemd, logs]
 ---
+
+![systemsocial](https://github.com/netdata/blog/assets/139226121/bd69cf0b-3a45-4c54-92ca-0609e15508dc)
+
 
 **systemd journals** play a crucial role in the Linux system ecosystem, and understanding the importance of the logs contained within is essential for both system administrators and developers.
 
@@ -72,6 +75,9 @@ A logs management system isn't just a repository for raw data; it's a powerful t
 
 ### systemd journal is the right tool for security
 
+![systemd](https://github.com/netdata/blog/assets/139226121/9e26d151-dc14-4d6c-a36a-0e6f4518fa1e)
+
+
 systemd journals are designed to be an integrated and robust logging solution for modern Linux systems and they offer some important security features that aim to ensure the confidentiality, integrity, and authenticity of logs:
 
 ### Log Sealing
@@ -94,7 +100,7 @@ Forward-secure sealing takes log sealing a step further. The idea behind FSS is 
 -   **Security against key compromise**  
     This ensures that even if a system's security is breached and the current key is exposed, attackers cannot use that key to alter past logs in a way that makes them appear legitimate. Only logs signed after the breach could be tampered with, but logs prior to that remain secure.
     
-To learn how to enable FSS, **click here** <link to [https://github.com/netdata/netdata/blob/master/collectors/systemd-journal.plugin/forward_secure_sealing.md](https://github.com/netdata/netdata/blob/master/collectors/systemd-journal.plugin/forward_secure_sealing.md) on learn>.
+To learn how to enable FSS, [**click here**](https://github.com/netdata/netdata/blob/master/collectors/systemd-journal.plugin/forward_secure_sealing.md).
 
 Of course, cryptographically sealing logs can add some overhead. Depending on the scale and volume of logs, and the system's performance, this overhead might be negligible or significant.
 
