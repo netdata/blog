@@ -48,6 +48,7 @@ Both monitoring and observability rely on data, but the kinds of data they use a
 Metrics serve as the backbone of both monitoring and observability, providing numerical data that is collected over time. However, the granularity, flexibility, and usage of these metrics differ substantially between the two paradigms.
 
 Monitoring: Predefined and Aggregate Metrics
+
 In a monitoring setup, metrics are often predefined and tend to be aggregate values, such as averages or sums calculated over a specific time window. These metrics are designed to trigger alerts based on known thresholds. For example, you might track the average CPU usage over a five-minute window and set an alert if it exceeds 90%. While this approach is effective for catching known issues, it lacks the context needed to understand why a problem is occurring.
 
 Observability: High-Fidelity, High-Granularity and Context-Rich Metrics
