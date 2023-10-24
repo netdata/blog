@@ -47,11 +47,11 @@ Both monitoring and observability rely on data, but the kinds of data they use a
 
 Metrics serve as the backbone of both monitoring and observability, providing numerical data that is collected over time. However, the granularity, flexibility, and usage of these metrics differ substantially between the two paradigms.
 
-Monitoring: Predefined and Aggregate Metrics
+###### Monitoring: Predefined and Aggregate Metrics
 
 In a monitoring setup, metrics are often predefined and tend to be aggregate values, such as averages or sums calculated over a specific time window. These metrics are designed to trigger alerts based on known thresholds. For example, you might track the average CPU usage over a five-minute window and set an alert if it exceeds 90%. While this approach is effective for catching known issues, it lacks the context needed to understand why a problem is occurring.
 
-Observability: High-Fidelity, High-Granularity and Context-Rich Metrics
+###### Observability: High-Fidelity, High-Granularity and Context-Rich Metrics
 
 Observability platforms go beyond merely collecting metrics; they focus on high-granularity, real-time metrics that can be dissected and queried in various ways. Here, you're not limited to predefined aggregate values. You can explore metrics like request latency at the 99th percentile over a one-second interval or look at the distribution of database query times for a particular set of conditions. This depth allows for a more nuanced understanding of system behavior, enabling you to pinpoint issues down to their root cause.
 
@@ -61,11 +61,11 @@ A critical aspect that is often overlooked is the need for real-time, high-fidel
 
 Logs provide a detailed account of events and are fundamental to both monitoring and observability. However, the treatment differs.
 
-Monitoring: Event-Driven Logs
+###### Monitoring: Event-Driven Logs
 
 In monitoring systems, logs are often used for event-driven alerting. For instance, a log entry indicating an elevated permissions login action might trigger an alert for potential security concerns. These logs are essential but are typically consulted only when an issue has already been flagged by the monitoring system.
 
-Observability: Queryable Logs
+###### Observability: Queryable Logs
 
 In observability platforms, logs are not just passive records; they are queryable data points that can be integrated with metrics and traces for a fuller picture of system behavior. You can dynamically query logs to investigate anomalies in real-time, correlating them with other high-cardinality data to understand the 'why' behind an issue.
 
@@ -88,7 +88,7 @@ Navigating the sprawling landscape of system data can be a daunting task, partic
 ##### Monitoring: Pre-Built and Prescriptive Dashboards
 In the realm of monitoring, dashboards are often pre-built and prescriptive, designed to highlight key performance indicators (KPIs) and metrics that are generally considered important for the majority of use-cases. For instance, a pre-configured dashboard for a database might focus on query performance, CPU usage, and memory consumption. These dashboards serve as a quick way to gauge the health of specific components within your system.
 
-- **<span style="color:green">Quick Setup:</span>** Pre-built dashboards require little to no configuration, making them quick to deploy.
+- **Quick Setup:** Pre-built dashboards require little to no configuration, making them quick to deploy.
 - **Best Practices:** These dashboards are often designed based on industry best practices, providing a tried-and-true set of metrics that most organizations should monitor.
 - **Lack of Flexibility:** Pre-built dashboards are not always tailored to your specific needs and might lack the ability to perform ad-hoc queries or deep dives.
 - **Surface-Level Insights:** While useful for a quick status check, these dashboards may not provide the contextual data needed to understand the root cause of an issue.
