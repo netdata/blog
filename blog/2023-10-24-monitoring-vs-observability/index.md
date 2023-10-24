@@ -138,3 +138,6 @@ Netdata offers capabilities that span both monitoring and observability. It deli
 Check out Netdata's [public demo space](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/) or [sign up today](https://app.netdata.cloud/) for free, if you haven't already. 
 
 **Happy Troubleshooting!**
+
+![image](https://github.com/netdata/blog/assets/24860547/cb439385-446e-46bf-83dc-f58115741189)
+
