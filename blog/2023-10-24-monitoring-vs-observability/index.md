@@ -60,7 +60,7 @@ A critical aspect that is often overlooked is the need for real-time, high-fidel
 Logs provide a detailed account of events and are fundamental to both monitoring and observability. However, the treatment differs.
 
 Monitoring: Event-Driven Logs
-In monitoring systems, logs are often used for event-driven alerting. For instance, a log entry indicating a failed login attempt might trigger an alert for potential security concerns. These logs are essential but are typically consulted only when an issue has already been flagged by the monitoring system.
+In monitoring systems, logs are often used for event-driven alerting. For instance, a log entry indicating an elevated permissions login action might trigger an alert for potential security concerns. These logs are essential but are typically consulted only when an issue has already been flagged by the monitoring system.
 
 Observability: Queryable Logs
 In observability platforms, logs are not just passive records; they are queryable data points that can be integrated with metrics and traces for a fuller picture of system behavior. You can dynamically query logs to investigate anomalies in real-time, correlating them with other high-cardinality data to understand the 'why' behind an issue.
