@@ -101,7 +101,7 @@ Contrastingly, observability platforms often allow for much greater customizatio
 - **Complexity:** The flexibility comes at the cost of complexity. Building custom dashboards often requires a deep understanding of the data model and query language of the observability platform.
 - **Time-Consuming:** Crafting a dashboard that provides valuable insights can be a time-consuming process, especially if you're starting from scratch.
 
-Netdata aims to deliver the best of both worlds by giving you out-of-the-box opinionated, powerful, flexible, customizable dashboards for every single metric. 
+Netdata aims to deliver the best of both worlds by giving you **out-of-the-box opinionated**, **powerful**, **flexible**, **customizable** dashboards for **every single metric**. 
 
 ![Recording 2023-10-24 135447](https://github.com/netdata/blog/assets/24860547/25759822-8731-4f97-927b-aad1834c7b4f)
 
