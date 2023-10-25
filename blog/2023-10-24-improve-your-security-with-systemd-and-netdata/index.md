@@ -175,3 +175,9 @@ In the realm of logging and monitoring, each solution has its strengths. However
     While many solutions promote centralized logging, ensuring consistency, security, and real-time access across a multi-server setup can be cumbersome. The seamless integration of Netdata with systemd-journal offers a genuinely centralized experience, simplifying setup and monitoring.
 
 While other solutions have their merits, [systemd-journal with Netdata](https://blog.netdata.cloud/exploring-systemd-journal-logs-with-netdata/?utm_source=blog&utm_medium=blogsystemdsecurity&utm_campaign=systemd) addresses several common pain points, offering a reliable, efficient, and secure logging experience that many alternatives struggle to provide.
+
+#### Configure your own logs management with `systemd`-`journald` and Netdata
+
+- [Find out](https://learn.netdata.cloud/docs/logs/systemd-journal/) what Netdata can do for `systemd` journal logs.
+
+- [Configure](https://learn.netdata.cloud/docs/logs/systemd-journal/passive-journal-centralization-with-encryption-using-self-signed-certificates) your logs management system with systemd-journal
