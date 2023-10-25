@@ -84,7 +84,7 @@ systemd journals are designed to be an integrated and robust logging solution fo
 
 When systemd journals are configured to use log sealing, cryptographic techniques are employed to sign the journal files. Here's why that's important:
 
-**-   Integrity**  
+-   **Integrity**  
     By sealing the journal files, any tampering or modification of the log data can be detected. If someone tries to alter a log entry, the signature verification will fail.  
 
 -   **Authenticity**  
