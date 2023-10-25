@@ -12,7 +12,7 @@ keywords: [systemd journal, systemd, logs]
 
 
 **systemd journals** play a crucial role in the Linux system ecosystem, and understanding the importance of the logs contained within is essential for both system administrators and developers.
-
+<!--truncate-->
 For those unfamiliar, systemd is an init system employed by Linux distributions, initiates the user space and oversees all ensuing processes. One of its key components, systemd-journal, assumes a central role in logging system activities and messages, delivering a host of benefits to both system administrators, developers and cyber security engineers. The Systemd Journal functions as a logging system that gathers, archives, and oversees log messages and event data originating from a diverse array of system components, encompassing the kernel, system services, applications, and user activities.
 
 # Why is it a must use tool for your infrastructure monitoring?
