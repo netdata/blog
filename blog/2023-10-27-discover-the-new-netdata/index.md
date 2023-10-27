@@ -77,8 +77,7 @@ With this approach Netdata tries to bring you **[ML-capable features](https://bl
 
 #### Netdata Integrations Marketplace: 800+ integrations
 
-<img width="1383" alt="Screenshot 2023-10-27 at 9 55 00 AM" src="https://github.com/netdata/blog/assets/139226121/c4d534d7-779b-47ca-b8d8-e10f7ee4fb90">
-
+[Integrations MarketPlace](https://github-production-user-asset-6210df.s3.amazonaws.com/139226121/278617020-c4d534d7-779b-47ca-b8d8-e10f7ee4fb90.png)
 
 With the **Integrations Marketplace** available on the **Netdata UI**, you immediately get all the information you need about a given integration, this includes. You will find integrations for:
 
@@ -87,6 +86,6 @@ With the **Integrations Marketplace** available on the **Netdata UI**, you immed
 - **Exporters**: available exporting options to where you can send the collected data
 - **Notifications**: what notifications mechanisms you can use to receive your alert notifications
 
-On each integration card you can find information from: Overview, Metrics, Alerts, Setup and Troubleshooting. 
+On each integration card you can find information from: Overview, Metrics, Alerts, Setup and Troubleshooting.
 
-No more need to fiddle around the documentation, all available at your fingertips!
+No more need to fiddle around with the documentation, everything is available at your fingertips!
