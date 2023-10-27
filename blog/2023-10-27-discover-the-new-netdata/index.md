@@ -11,7 +11,7 @@ image: https://github.com/netdata/blog/assets/139226121/6cdf202e-b654-42e8-889c-
 ![The New Netdata](https://github.com/netdata/blog/assets/139226121/6cdf202e-b654-42e8-889c-d401fbeae3fa)
 
 Missed the last **Netdata** updates? Here is what is new:
-
+<!--truncate-->
 ## Explore your systemd-journal logs with Netdata
 
 ![systemd-journal-logs](https://github.com/netdata/blog/assets/139226121/7d2779c9-0efb-4491-8fe3-aedce1dc72fb)
