@@ -12,7 +12,7 @@ image: https://github.com/netdata/blog/assets/139226121/6cdf202e-b654-42e8-889c-
 
 Missed the last **Netdata** updates? Here is what is new:
 
-# Explore your systemd-journal logs with Netdata
+## Explore your systemd-journal logs with Netdata
 
 ![systemd-journal-logs](https://github.com/netdata/blog/assets/139226121/7d2779c9-0efb-4491-8fe3-aedce1dc72fb)
 
@@ -26,7 +26,6 @@ Need more details? Check our [release meetup video](https://www.youtube.com/watc
 
 ![New Dashboard](https://github.com/netdata/blog/assets/139226121/885611a7-6d94-4425-8267-c337e63d6211)
 
-
 Completely new charts and dashboards, to explore, slice and dice any dataset without learning a query language.
 
 The new **Netdata charts** follow the NIDL (Nodes, Instances, Dimensions, Labels) framework to provide:
@@ -39,7 +38,7 @@ The **new Netdata UI** offers amazing flexibility, directly from the UI, without
 
 [Check our comprehensive video to learn more!](https://www.youtube.com/watch?v=T5N_03NV9Ac&t=14s)
 
-### Netdata Parents now offer multi-node dashboards
+## Netdata Parents now offer multi-node dashboards
 
 ![multi-node dashboards](https://github.com/netdata/blog/assets/139226121/dccc1a10-a9b9-42b9-8450-91f2452c9de7)
 
@@ -56,10 +55,9 @@ Several improvements have been made to this functionality:
 
 **Netdata Parents** now offer unbeatable vertical **scalability**, allowing the centralization of **millions of metrics (per second) to a single Netdata Parent**.
 
-#### Netdata ML: unsupervised anomaly detection
+## Netdata ML: unsupervised anomaly detection for every single metric
 
 ![anomaly detection](https://github.com/netdata/blog/assets/139226121/03d5f903-8508-4027-bad7-af8c919a0a2b)
-
 
 Every Netdata Agent has, by default, the ML-engine enabled. These agents will begin producing an **"Anomaly Bit"** every second in addition to raw metric values. This anomaly bit will be 1 when the trained **ML models** consider recent raw data for a metric to look anomalous or 0 when things look 'normal'. 
 
@@ -75,7 +73,7 @@ This anomaly related information is provided on Netdata dashboards to speed-up y
 
 With this approach Netdata tries to bring you **[ML-capable features](https://blog.netdata.cloud/our-first-ml-based-anomaly-alert/)** together with what you’re looking at on the **dashboards.**
 
-#### Netdata Integrations Marketplace: 800+ integrations
+## Netdata Integrations Marketplace: 800+ integrations
 
 [Integrations MarketPlace](https://github-production-user-asset-6210df.s3.amazonaws.com/139226121/278617020-c4d534d7-779b-47ca-b8d8-e10f7ee4fb90.png)
 
