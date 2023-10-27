@@ -75,7 +75,7 @@ With this approach Netdata tries to bring you **[ML-capable features](https://bl
 
 ## Netdata Integrations Marketplace: 800+ integrations
 
-[Integrations MarketPlace](https://github-production-user-asset-6210df.s3.amazonaws.com/139226121/278617020-c4d534d7-779b-47ca-b8d8-e10f7ee4fb90.png)
+![Integrations MarketPlace](https://github-production-user-asset-6210df.s3.amazonaws.com/139226121/278617020-c4d534d7-779b-47ca-b8d8-e10f7ee4fb90.png)
 
 With the **Integrations Marketplace** available on the **Netdata UI**, you immediately get all the information you need about a given integration, this includes. You will find integrations for:
 
