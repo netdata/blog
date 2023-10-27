@@ -24,7 +24,7 @@ Need more details? Check our [release meetup video](https://www.youtube.com/watc
 
 ## New Dashboard, New Charts, New UI
 
-! [New Dashboard](https://github.com/netdata/blog/assets/139226121/885611a7-6d94-4425-8267-c337e63d6211)
+![New Dashboard](https://github.com/netdata/blog/assets/139226121/885611a7-6d94-4425-8267-c337e63d6211)
 
 
 Completely new charts and dashboards, to explore, slice and dice any dataset without learning a query language.
