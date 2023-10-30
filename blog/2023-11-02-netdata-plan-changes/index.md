@@ -37,7 +37,7 @@ To create the best monitoring solution, increase efficiency and to ensure we can
 * 5 **active nodes** that can be concurrently visualized on Netdata Dashboards. 
 * 1 **active custom dashboard**
 
-_Note: For more details on how these limits will work refer to the FAQ section of [this page](https://www.netdata.cloud/pricing/#pricing-faq)._
+_Note: For more details on how these limits will work refer to the FAQ section of the [pricing page](https://www.netdata.cloud/pricing/#pricing-faq)._
 
 For a better experience of Netdata Cloud full capabilities, all new users that sign up for a Netdata Cloud account will be automatically enrolled in a 30-day Free Business Trial. No credit or debit card will be required and users can opt out at any time.
 
