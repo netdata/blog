@@ -24,10 +24,10 @@ We are primarily interested in data collection performance. So, we wanted Netdat
 
 ### Source dataset
 
-**500** **nodes** running Netdata, all collecting **system and application metrics**, per second. In total there are **40k** **containers** running. Since Netdata agents can expose their metrics in the Prometheus format (OpenMetrics), we used them as a data-source for both the Netdata Parent under test, and Prometheus. \
+**500** **nodes** running Netdata, all collecting **system and application metrics**, per second. In total there are **40k** **containers** running. Since Netdata agents can expose their metrics in the Prometheus format (OpenMetrics), we used them as a data-source for both the Netdata Parent under test, and Prometheus.
 
 
-In total, these nodes collect about **2.7 million metrics, all per-second**. \
+In total, these nodes collect about **2.7 million metrics, all per-second**.
 
 
 All these nodes were running on VMs hosted on separate hardware from the centralization points (Netdata Parent and Prometheus) and were connected to the physical server running the test via 2 bonded 20 Gbps network cards.
@@ -50,7 +50,7 @@ Other than the above, Netdata was running with default settings.
 
 ### Prometheus
 
-Prometheus was scraping the same 500 Netdata instances, every second, in `as-collected` source type (so that the original data are exposed to Prometheus in their native form). \
+Prometheus was scraping the same 500 Netdata instances, every second, in `as-collected` source type (so that the original data are exposed to Prometheus in their native form).
 
 
 We configured retention to 7 days. Other than this, Prometheus was running with default settings.
@@ -59,12 +59,9 @@ We configured retention to 7 days. Other than this, Prometheus was running with 
 ### Hardware
 
 Both Netdata Parent and Prometheus were running on a dedicated VM each, with 100GB RAM, 24 CPU Cores, and a dedicated 4TB SSD disk.
-
- \
 Both VMs were hosted on the same physical server having 2x AMD EPYC 7453 CPUs (28-Core Processors - 112 threads total), 512GB RAM, and separate dedicated SSDs for each of them. The host server was configured to run each VM on a separate NUMA node.
 
-Other than the above, this physical server was idle, so that nothing outside this test can influence the comparison. \
-
+Other than the above, this physical server was idle, so that nothing outside this test can influence the comparison.
 
 Screenshots were taken from a Netdata running at the host O/S of this server, using CGROUPs and other system metrics.
 
@@ -73,7 +70,7 @@ Screenshots were taken from a Netdata running at the host O/S of this server, us
 
 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image1.png "image_tooltip")
@@ -94,7 +91,7 @@ In the test duration, Prometheus exhibited fluctuating CPU consumption. A closer
 
 
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image2.png "image_tooltip")
@@ -106,13 +103,13 @@ We also noticed an interval (at 17:00 of the original 3-hour chart) where Promet
 
 
 
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image3.png "image_tooltip")
 
 
-_Image: 5 minutes of CPU utilization at 17:00: \
+_Image: 5 minutes of CPU utilization at 17:00:
 Netdata is the purple line. Prometheus is the brown line._
 
 The observed spikes in Netdata's usage are potentially due to containers being started and stopped. This can lead to replication requests between Netdata nodes and backfilling of higher database tiers from lower tiers, which might result in a temporary increase in consumption until data streams stabilize.
@@ -122,7 +119,7 @@ The observed spikes in Netdata's usage are potentially due to containers being s
 
 
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image4.png "image_tooltip")
@@ -140,7 +137,7 @@ Upon closer inspection of the last 5 minutes, we noticed some fluctuations in Pr
 
 
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image5.png "image_tooltip")
@@ -161,7 +158,7 @@ Netdata:
 
 
 
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image6.png "image_tooltip")
@@ -171,7 +168,7 @@ Prometheus:
 
 
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image7.png "image_tooltip")
@@ -193,7 +190,7 @@ Prometheus was configured to keep the metrics for 7 days, which results in 3.1 T
 
 
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image8.png "image_tooltip")
@@ -203,7 +200,7 @@ Netdata was configured to have 3 TB of space, which gives us a variable retentio
 
 
 
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image9.png "image_tooltip")
@@ -297,15 +294,13 @@ Additionally, it's pertinent to mention that Netdata used the saved storage spac
 
 
 
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image10.png "image_tooltip")
 
 
 _Image: 3 hours of **disk writes**: Netdata is red line, Prometheus is pink line_
-
-
 
 * Netdata has a consistent write speed of approximately 2 MiB per second.
 * Prometheus shows a varied write speed, ranging from 20 to 100 MiB per second.
@@ -314,7 +309,7 @@ _Image: 3 hours of **disk writes**: Netdata is red line, Prometheus is pink line
 #### Disk Reads
 
 
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image11.png "image_tooltip")
