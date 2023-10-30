@@ -70,9 +70,6 @@ Screenshots were taken from a Netdata running at the host O/S of this server, us
 
 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image1.png "image_tooltip")
 _Image: 3 hours of CPU utilization: Netdata is the purple line. Prometheus is the brown line._
 
@@ -90,20 +87,12 @@ Based on these observations, Netdata appears to use around 30% less CPU resource
 In the test duration, Prometheus exhibited fluctuating CPU consumption. A closer examination of the last 5 minutes reveals periodic (every 2 minutes) spikes in Prometheus's CPU usage, often exceeding 14 CPU cores. These might be attributed to periodic operations like internal garbage collection or other maintenance tasks.
 
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image2.png "image_tooltip")
 
 
 _Image: 5 minutes of CPU utilization: Netdata is the purple line. Prometheus is the brown line._
 
 We also noticed an interval (at 17:00 of the original 3-hour chart) where Prometheus seemed to have a brief pause (25 seconds) in scraping sources. In contrast, Netdata showed consistent performance during this interval:
-
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image3.png "image_tooltip")
@@ -118,10 +107,6 @@ The observed spikes in Netdata's usage are potentially due to containers being s
 ### Network Bandwidth
 
 
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image4.png "image_tooltip")
 
 
@@ -134,10 +119,6 @@ The Netdata streaming protocol, although text-based, is designed to be compact, 
 Nevertheless, our data indicates that Netdata utilizes about 11% less bandwidth than Prometheus.
 
 Upon closer inspection of the last 5 minutes, we noticed some fluctuations in Prometheus's bandwidth usage. This could suggest that there were moments when Prometheus might not have scraped all 500 nodes every second, though the exact reasons would need further investigation:
-
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image5.png "image_tooltip")
@@ -156,20 +137,10 @@ We used `top` to see the memory of each application within its VM.
 
 Netdata:
 
-
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image6.png "image_tooltip")
 
 
 Prometheus:
-
-
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image7.png "image_tooltip")
 
@@ -188,41 +159,62 @@ Netdata needs 46% less memory than Prometheus, or Prometheus needs 86% more memo
 
 Prometheus was configured to keep the metrics for 7 days, which results in 3.1 TB of storage:
 
-
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image8.png "image_tooltip")
 
 
 Netdata was configured to have 3 TB of space, which gives us a variable retention depending on how much data can fit in this storage space. This is what it currently uses:
-
-
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image9.png "image_tooltip")
 
 
 Netdata provides the API `/api/v2/node_instances`, at the end of which we can find a break down of the storage used by it:
 
+```bash
+   "db_size":[{
+            "tier":0,
+            "disk_used":1677443553144,
+            "disk_max":1677721600000,
+            "disk_percent":99.9834271,
+            "from":1697514184,
+            "to":1698339754,
+            "retention":825570,
+            "expected_retention":825706
+         },{
+            "tier":1,
+            "disk_used":838006961012,
+            "disk_max":838860800000,
+            "disk_percent":99.8982145,
+            "from":1694616720,
+            "to":1698339754,
+            "retention":3723034,
+            "expected_retention":3726827
+         },{
+            "tier":2,
+            "disk_used":193843384704,
+            "disk_max":419430400000,
+            "disk_percent":46.2158643,
+            "from":1679670000,
+            "to":1698339754,
+            "retention":18669754,
+            "expected_retention":40396851
+         }],
+```
+
 This is what these numbers mean:
 
 
 <table>
   <tr>
-   <td><strong>Tier \
+   <td><strong>Tier
 (<code>tier</code>)</strong>
    </td>
-   <td><strong>Capacity \
+   <td><strong>Capacity
 (<code>disk_max</code>)</strong>
    </td>
-   <td><strong>Used \
+   <td><strong>Used
 (<code>disk_percent</code>)</strong>
    </td>
-   <td><strong>Retention \
+   <td><strong>Retention
 (<code>expected_retention</code>)</strong>
    </td>
   </tr>
@@ -265,21 +257,16 @@ Based on these data, we can estimate the average number of bytes on disk, per da
 
 
 
-* Prometheus collects 2.7 million metrics per second. Over the span of 7 days, it accumulated approximately 1.6 trillion samples. Its storage efficiency can be determined as: \
- \
-3.1 TiB / 1.6 trillion samples = **2.13 bytes per sample. \
- \
-**It's worth noting an earlier observation, that there might be occasions when Prometheus doesn't scrape all endpoints every second. This can affect the calculated efficiency If the points collected are significantly less. \
- \
-Prometheus provides a way to get the typical size of a sample on disk: \
- \
-`(rate(prometheus_tsdb_compaction_chunk_size_bytes_sum[7d])) / rate(prometheus_tsdb_compaction_chunk_samples_sum[7d])` \
- \
-In our case, this reports 2.14 bytes per sample, which verifies our estimation.** \
+* Prometheus collects 2.7 million metrics per second. Over the span of 7 days, it accumulated approximately 1.6 trillion samples. Its storage efficiency can be determined as:
+
+3.1 TiB / 1.6 trillion samples = **2.13 bytes per sample.
+**It's worth noting an earlier observation, that there might be occasions when Prometheus doesn't scrape all endpoints every second. This can affect the calculated efficiency If the points collected are significantly less. 
+Prometheus provides a way to get the typical size of a sample on disk:
+`(rate(prometheus_tsdb_compaction_chunk_size_bytes_sum[7d])) / rate(prometheus_tsdb_compaction_chunk_samples_sum[7d])`
+In our case, this reports 2.14 bytes per sample, which verifies our estimation.** 
 **
-* Netdata, on the other hand, also collects 2.7 million metrics per second. Over 9.6 days, it ingested about 2.2 trillion samples. The storage efficiency for Netdata is: \
- \
-1.5 TiB / 2.2 trillion samples = **0.75 bytes per sample.** \
+* Netdata, on the other hand, also collects 2.7 million metrics per second. Over 9.6 days, it ingested about 2.2 trillion samples. The storage efficiency for Netdata is:
+1.5 TiB / 2.2 trillion samples = **0.75 bytes per sample.**
 
 
 Based on these data, Netdata uses 75% less storage than Prometheus, or Prometheus uses 280% more storage than Netdata for the same dataset.
@@ -292,11 +279,6 @@ Additionally, it's pertinent to mention that Netdata used the saved storage spac
 
 #### Disk Writes
 
-
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image10.png "image_tooltip")
 
 
@@ -307,10 +289,6 @@ _Image: 3 hours of **disk writes**: Netdata is red line, Prometheus is pink line
 
 
 #### Disk Reads
-
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)</br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image11.png "image_tooltip")
 
@@ -346,38 +324,38 @@ Here's a concise overview of our insights:
    </td>
    <td>???
    </td>
-   <td>2.44.0 \
+   <td>2.44.0
  (branch: HEAD, revision: 1ac5131f698ebc60f13fe2727f89b115a41f6558)
    </td>
   </tr>
   <tr>
-   <td><strong>Configuration</strong> \
+   <td><strong>Configuration</strong>
 (changes to the defaults)
    </td>
-   <td>3 TiB storage in 3 tiers \
-Disabled ML \
+   <td>3 TiB storage in 3 tiers
+Disabled ML
 Disabled Health
    </td>
-   <td>Retention 7 days \
+   <td>Retention 7 days
 Per Second data collection
    </td>
   </tr>
   <tr>
-   <td>Hardware \
+   <td>Hardware
 (VMs on the same physical server)
    </td>
-   <td>24 CPU cores \
-100 GB RAM \
+   <td>24 CPU cores
+100 GB RAM
 4 TB SSD
    </td>
-   <td>24 CPU cores \
-100 GB RAM \
+   <td>24 CPU cores
+100 GB RAM
 4 TB SSD
    </td>
   </tr>
   <tr>
-   <td>Metrics offered \
-(approximately, \
+   <td>Metrics offered
+(approximately,
  concurrently collected)
    </td>
    <td>2.7 million per second
@@ -386,56 +364,56 @@ Per Second data collection
    </td>
   </tr>
   <tr>
-   <td><strong>CPU Utilization</strong> \
+   <td><strong>CPU Utilization</strong>
 (average)
    </td>
-   <td>5.1 CPU cores \
-(spikes at 8 cores) \
- \
+   <td>5.1 CPU cores
+(spikes at 8 cores)
+ 
 <strong>-30%</strong>
    </td>
-   <td>7.3 CPU cores \
-(spikes at 14 cores) \
- \
+   <td>7.3 CPU cores
+(spikes at 14 cores)
+
 <strong>+43%</strong>
    </td>
   </tr>
   <tr>
-   <td><strong>Memory Consumption \
+   <td><strong>Memory Consumption
 </strong>(snapshot)
    </td>
-   <td>36.5 GiB \
- \
+   <td>36.5 GiB
+
 <strong>-46%</strong>
    </td>
-   <td>68 GiB \
- \
+   <td>68 GiB
+
 <strong>+86%</strong>
    </td>
   </tr>
   <tr>
    <td><strong>Network Bandwidth</strong>
    </td>
-   <td>230 Mbps \
- \
+   <td>230 Mbps
+
 <strong>-11%</strong>
    </td>
-   <td>258 Mbps \
- \
+   <td>258 Mbps
+
 <strong>+12%</strong>
    </td>
   </tr>
   <tr>
    <td><strong>Disk I/O</strong>
    </td>
-   <td>no reads \
-2 MB/s writes \
- \
+   <td>no reads 
+2 MB/s writes 
+ 
 <strong>-97%</strong>
    </td>
-   <td>50 MB/s reads \
-20 - 100 MB/s writes \
- \
+   <td>50 MB/s reads 
+20 - 100 MB/s writes 
+ 
 <strong>+3500%</strong>
    </td>
   </tr>
@@ -450,16 +428,16 @@ Per Second data collection
   <tr>
    <td><strong>Metrics Retention</strong>
    </td>
-   <td>9.6 days (per-sec) \
-43 days (per-min) \
-467 days (per-hour) \
- \
+   <td>9.6 days (per-sec) 
+43 days (per-min) 
+467 days (per-hour) 
+ 
 <strong>+37% (per-sec)</strong>
    </td>
-   <td>7 days (per-sec) \
- \
- \
- \
+   <td>7 days (per-sec) 
+ 
+ 
+ 
 <strong>-28% (per-sec)</strong>
    </td>
   </tr>
@@ -472,37 +450,37 @@ Per Second data collection
    </td>
   </tr>
   <tr>
-   <td><strong>Bytes per sample on disk \
+   <td><strong>Bytes per sample on disk 
 </strong>(per-sec tier)
    </td>
-   <td>0.75 bytes / sample \
- \
+   <td>0.75 bytes / sample 
+ 
 <strong>-75%</strong>
    </td>
-   <td>2.1 bytes / sample \
- \
+   <td>2.1 bytes / sample 
+ 
 <strong>+280%</strong>
    </td>
   </tr>
   <tr>
-   <td><strong>Potential data loss \
+   <td><strong>Potential data loss 
 </strong>(network issues, maintenance, etc)
    </td>
-   <td>No \
+   <td>No 
 (missing samples are replicated from the source on reconnection)
    </td>
-   <td>Yes \
+   <td>Yes 
 (missing samples are filled from adjacent ones at query time)
    </td>
   </tr>
   <tr>
    <td><strong>Clustering</strong>
    </td>
-   <td>Yes \
+   <td>Yes 
 (active-active Parents)
    </td>
-   <td>No \
-(not natively, \
+   <td>No 
+(not natively, 
 possible with more tools)
    </td>
   </tr>
