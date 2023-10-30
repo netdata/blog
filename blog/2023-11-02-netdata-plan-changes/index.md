@@ -16,13 +16,13 @@ keywords: [systemd journal, systemd, logs]
 
 # What you need to know?
 
-* On Netdata Cloud Free Community plan, the number of **active nodes** that can be concurrently visualized on the Netdata dashboards, as well as the number of **active custom dashboards** for accounts created after 2023-11-06/07 will be subject to limits. 
+* On Netdata Cloud Free Community plan, the number of **active nodes** that can be concurrently visualized on the Netdata dashboards, as well as the number of **active custom dashboards** for accounts created after 2023-11-07 will be subject to limits. 
 
 * Netdata Cloud accounts on the current Community or Early Bird plans created before **2023-11-07** will not be affected, and no limits will be set.
 
 * Any new Netdata Cloud user sign-up will be automatically enrolled to a **30-day Free Business Trial**, so all can experience Netdata Cloud without any limits or restrictions - no debit or credit cards will be required.
 
-* The changes above do not apply to our other plans: Netdata Cloud Pro, Business, On-prem subscriptions, and Netdata FOSS Agent versions.
+* The changes above do not apply to our other plans: Netdata Cloud Business, On-prem subscriptions, and Netdata FOSS Agent versions.
 
 * We are also simplifying the paid Cloud subscriptions by keeping  the **Business plan** only. Users currently on the **Pro plan** will receive a personal notification with more details on their migration to the Business plan.
 
