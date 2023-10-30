@@ -26,7 +26,7 @@ keywords: [systemd journal, systemd, logs]
 
 * We are also simplifying the paid Cloud subscriptions by keeping  the **Business plan** only. Users currently on the **Pro plan** will receive a personal notification with more details on their migration to the Business plan.
 
-_For full details on the plans and prices, check out https://www.netdata.cloud/pricing._
+_For full details on the plans and prices, check out the FAQ section of the [pricing page](https://www.netdata.cloud/pricing/#pricing-faq)._
 
 
 We continue to look for ways to make Infrastructure monitoring a reality for teams and organizations of all sizes. For users to get started with monitoring, relatively small infrastructure for Home labs, students and Non profit organizations with no investment, Netdata offers the Free Community Plan. For organizations (startups, mid-size, large) that require production grade infrastructure monitoring (with a number of servers, VMs, containers and applications), requiring collaboration across the organization or with clients, Netdata offers **Business** and **On-prem** subscriptions with no restrictions on monitored nodes or users. 
@@ -45,6 +45,6 @@ For a better experience of Netdata Cloud full capabilities, all new users that s
 
 The new limits on the Free Community Plan of Netdata Cloud and the Free 30-day Business Trial will be effective from **2023-11-08** for all new users (accounts). 
 
-[Reach out to us](https://www.netdata.cloud/contact-us/?subject=plan-changes) for more details or refer to the [FAQ](https://www.netdata.cloud/pricing/#pricing-faq) for more information on these changes.
+[Reach out to us](https://www.netdata.cloud/contact-us/?subject=plan-changes) for more details or refer to the FAQ on our [pricing page](https://www.netdata.cloud/pricing/#pricing-faq) for more information on these changes.
 
 Thank you for all the support so far. Hope you follow us throughout this journey to _Make infrastructure monitoring easy for everyone._
