@@ -70,7 +70,7 @@ Screenshots were taken from a Netdata running at the host O/S of this server, us
 
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image5.png "image_tooltip")
 _Image: 3 hours of CPU utilization: Netdata is the purple line. Prometheus is the brown line._
 
 On average, Netdata was using 5.1 cores (510% of a single core), while Prometheus was using 7.3 cores (730% of a single CPU core).
@@ -87,7 +87,7 @@ Based on these observations, Netdata appears to use around 30% less CPU resource
 In the test duration, Prometheus exhibited fluctuating CPU consumption. A closer examination of the last 5 minutes reveals periodic (every 2 minutes) spikes in Prometheus's CPU usage, often exceeding 14 CPU cores. These might be attributed to periodic operations like internal garbage collection or other maintenance tasks.
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image6.png "image_tooltip")
 
 
 _Image: 5 minutes of CPU utilization: Netdata is the purple line. Prometheus is the brown line._
@@ -95,7 +95,7 @@ _Image: 5 minutes of CPU utilization: Netdata is the purple line. Prometheus is 
 We also noticed an interval (at 17:00 of the original 3-hour chart) where Prometheus seemed to have a brief pause (25 seconds) in scraping sources. In contrast, Netdata showed consistent performance during this interval:
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image7.png "image_tooltip")
 
 
 _Image: 5 minutes of CPU utilization at 17:00:
@@ -107,7 +107,7 @@ The observed spikes in Netdata's usage are potentially due to containers being s
 ### Network Bandwidth
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image11.png "image_tooltip")
 
 
 _Image: 3 hours network bandwidth: Netdata is the blue line. Prometheus is the brown line._
@@ -121,7 +121,7 @@ Nevertheless, our data indicates that Netdata utilizes about 11% less bandwidth 
 Upon closer inspection of the last 5 minutes, we noticed some fluctuations in Prometheus's bandwidth usage. This could suggest that there were moments when Prometheus might not have scraped all 500 nodes every second, though the exact reasons would need further investigation:
 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/image2.png "image_tooltip")
 
 
 _Image: 5 minutes network bandwidth: Netdata is the blue line. Prometheus is the brown line._
@@ -137,12 +137,12 @@ We used `top` to see the memory of each application within its VM.
 
 Netdata:
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image1.png "image_tooltip")
 
 
 Prometheus:
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/image8.png "image_tooltip")
 
 
 Check the `RES` (resident size) column:
@@ -159,12 +159,12 @@ Netdata needs 46% less memory than Prometheus, or Prometheus needs 86% more memo
 
 Prometheus was configured to keep the metrics for 7 days, which results in 3.1 TB of storage:
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image4.png "image_tooltip")
 
 
 Netdata was configured to have 3 TB of space, which gives us a variable retention depending on how much data can fit in this storage space. This is what it currently uses:
 
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/image3.png "image_tooltip")
 
 
 Netdata provides the API `/api/v2/node_instances`, at the end of which we can find a break down of the storage used by it:
@@ -258,13 +258,15 @@ Based on these data, we can estimate the average number of bytes on disk, per da
 
 
 * Prometheus collects 2.7 million metrics per second. Over the span of 7 days, it accumulated approximately 1.6 trillion samples. Its storage efficiency can be determined as:
+   3.1 TiB / 1.6 trillion samples = **2.13 bytes per sample**.
+   
+   It's worth noting an earlier observation, that there might be occasions when Prometheus doesn't scrape all endpoints every second. This can affect the calculated efficiency If the points collected are significantly less. 
+   Prometheus provides a way to get the typical size of a sample on disk:
 
-3.1 TiB / 1.6 trillion samples = **2.13 bytes per sample.
-**It's worth noting an earlier observation, that there might be occasions when Prometheus doesn't scrape all endpoints every second. This can affect the calculated efficiency If the points collected are significantly less. 
-Prometheus provides a way to get the typical size of a sample on disk:
-`(rate(prometheus_tsdb_compaction_chunk_size_bytes_sum[7d])) / rate(prometheus_tsdb_compaction_chunk_samples_sum[7d])`
-In our case, this reports 2.14 bytes per sample, which verifies our estimation.** 
-**
+   `(rate(prometheus_tsdb_compaction_chunk_size_bytes_sum[7d])) / rate(prometheus_tsdb_compaction_chunk_samples_sum[7d])`
+   
+   In our case, this reports 2.14 bytes per sample, which verifies our estimation.
+
 * Netdata, on the other hand, also collects 2.7 million metrics per second. Over 9.6 days, it ingested about 2.2 trillion samples. The storage efficiency for Netdata is:
 1.5 TiB / 2.2 trillion samples = **0.75 bytes per sample.**
 
@@ -279,7 +281,7 @@ Additionally, it's pertinent to mention that Netdata used the saved storage spac
 
 #### Disk Writes
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image9.png "image_tooltip")
 
 
 _Image: 3 hours of **disk writes**: Netdata is red line, Prometheus is pink line_
@@ -290,7 +292,7 @@ _Image: 3 hours of **disk writes**: Netdata is red line, Prometheus is pink line
 
 #### Disk Reads
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image10.png "image_tooltip")
 
 
 _Image: 3 hours of **disk reads**: Netdata is red line, Prometheus is pink line_
@@ -310,181 +312,23 @@ Netdata, renowned as a distributed monitoring solution, emphasizes the importanc
 Here's a concise overview of our insights:
 
 
-<table>
-  <tr>
-   <td>
-   </td>
-   <td><strong>Netdata Parent</strong>
-   </td>
-   <td><strong>Prometheus</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Version</strong>
-   </td>
-   <td>???
-   </td>
-   <td>2.44.0
- (branch: HEAD, revision: 1ac5131f698ebc60f13fe2727f89b115a41f6558)
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Configuration</strong>
-(changes to the defaults)
-   </td>
-   <td>3 TiB storage in 3 tiers
-Disabled ML
-Disabled Health
-   </td>
-   <td>Retention 7 days
-Per Second data collection
-   </td>
-  </tr>
-  <tr>
-   <td>Hardware
-(VMs on the same physical server)
-   </td>
-   <td>24 CPU cores
-100 GB RAM
-4 TB SSD
-   </td>
-   <td>24 CPU cores
-100 GB RAM
-4 TB SSD
-   </td>
-  </tr>
-  <tr>
-   <td>Metrics offered
-(approximately,
- concurrently collected)
-   </td>
-   <td>2.7 million per second
-   </td>
-   <td>2.7 million per second
-   </td>
-  </tr>
-  <tr>
-   <td><strong>CPU Utilization</strong>
-(average)
-   </td>
-   <td>5.1 CPU cores
-(spikes at 8 cores)
- 
-<strong>-30%</strong>
-   </td>
-   <td>7.3 CPU cores
-(spikes at 14 cores)
+|                                               | **Netdata Parent**                                               | **Prometheus**                                                |
+|-----------------------------------------------|:----------------------------------------------------------------:|:-------------------------------------------------------------:|
+| **Version**                                   | v1.43.0-105-ga84213ca3 (nightly of Oct 29, 2023)                | 2.44.0 (branch: HEAD, revision: 1ac5131f698ebc60f13fe2727f89b115a41f6558) |
+| **Configuration**<br/>(changes to the defaults)| 3 TiB storage in 3 tiers<br/>Disabled ML<br/>Disabled Health       | Retention 7 days<br/>Per Second data collection                |
+| Hardware<br/>(VMs on the same physical server)| 24 CPU cores<br/>100 GB RAM<br/>4 TB SSD                           | 24 CPU cores<br/>100 GB RAM<br/>4 TB SSD                        |
+| Metrics offered<br/>(approximately,<br/> concurrently collected)| 2.7 million per second                                          | 2.7 million per second                                        |
+| **CPU Utilization**<br/>(average)             | 4.8 CPU cores<br/>(spikes at 8 cores)<br/><strong>-35%</strong>    | 7.3 CPU cores<br/>(spikes at 14 cores)<br/><strong>+52%</strong>|
+| **Memory Consumption**<br/>(snapshot)         | 36.5 GiB<br/><strong>-46%</strong>                               | 68 GiB<br/><strong>+86%</strong>                               |
+| **Network Bandwidth**                        | 230 Mbps<br/><strong>-11%</strong>                               | 258 Mbps<br/><strong>+12%</strong>                             |
+| **Disk I/O**                                 | no reads<br/>2 MB/s writes<br/><strong>-97%</strong>              | 50 MB/s reads<br/>20 - 100 MB/s writes<br/><strong>+3500%</strong>|
+| **Disk Footprint**                           | 3 TiB                                                           | 3 TiB                                                         |
+| **Metrics Retention**                        | 9.6 days (per-sec)<br/>43 days (per-min)<br/>467 days (per-hour)<br/><strong>+37% (per-sec)</strong>| 7 days (per-sec)<br/><strong>-28% (per-sec)</strong>           |
+| Unique time-series on disk                   | 8 million                                                       | 5 million                                                     |
+| **Bytes per sample on disk**<br/>(per-sec tier)| 0.75 bytes / sample<br/><strong>-75%</strong>                    | 2.1 bytes / sample<br/><strong>+280%</strong>                  |
+| **Potential data loss**<br/>(network issues, maintenance, etc)| No<br/>(missing samples are replicated from the source on reconnection)| Yes<br/>(missing samples are filled from adjacent ones at query time)|
+| **Clustering**                               | Yes<br/>(active-active Parents)                                  | No<br/>(not natively,<br/>possible with more tools)             |
 
-<strong>+43%</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Memory Consumption
-</strong>(snapshot)
-   </td>
-   <td>36.5 GiB
-
-<strong>-46%</strong>
-   </td>
-   <td>68 GiB
-
-<strong>+86%</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Network Bandwidth</strong>
-   </td>
-   <td>230 Mbps
-
-<strong>-11%</strong>
-   </td>
-   <td>258 Mbps
-
-<strong>+12%</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Disk I/O</strong>
-   </td>
-   <td>no reads 
-2 MB/s writes 
- 
-<strong>-97%</strong>
-   </td>
-   <td>50 MB/s reads 
-20 - 100 MB/s writes 
- 
-<strong>+3500%</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Disk Footprint</strong>
-   </td>
-   <td>3 TiB
-   </td>
-   <td>3 TiB
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Metrics Retention</strong>
-   </td>
-   <td>9.6 days (per-sec) 
-43 days (per-min) 
-467 days (per-hour) 
- 
-<strong>+37% (per-sec)</strong>
-   </td>
-   <td>7 days (per-sec) 
- 
- 
- 
-<strong>-28% (per-sec)</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Unique time-series on disk
-   </td>
-   <td>8 million
-   </td>
-   <td>5 million
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Bytes per sample on disk 
-</strong>(per-sec tier)
-   </td>
-   <td>0.75 bytes / sample 
- 
-<strong>-75%</strong>
-   </td>
-   <td>2.1 bytes / sample 
- 
-<strong>+280%</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Potential data loss 
-</strong>(network issues, maintenance, etc)
-   </td>
-   <td>No 
-(missing samples are replicated from the source on reconnection)
-   </td>
-   <td>Yes 
-(missing samples are filled from adjacent ones at query time)
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Clustering</strong>
-   </td>
-   <td>Yes 
-(active-active Parents)
-   </td>
-   <td>No 
-(not natively, 
-possible with more tools)
-   </td>
-  </tr>
-</table>
 
 
 Other notable differences between Netdata and Prometheus:
