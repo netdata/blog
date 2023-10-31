@@ -6,9 +6,10 @@ description: |
 authors: costa
 tags: [netdata, prometheus, netdata-prometheus-comparison,netdata-performance,infinite-monitoring, cpu-consumption, memory-consumption, storage-consumption]
 keywords: [netdata, prometheus, netdata-prometheus-comparison,netdata-performance,infinite-monitoring, cpu-consumption, memory-consumption, storage-consumption]
-image: https://github.com/netdata/blog/assets/139226121/6cdf202e-b654-42e8-889c-d401fbeae3fa
+image: https://github.com/netdata/blog/assets/139226121/cd40946a-462e-4f62-b5a3-61b8caa64522
+
 ---
-![Netdata Prometheus Comparison](https://github.com/netdata/blog/assets/139226121/6cdf202e-b654-42e8-889c-d401fbeae3fa)
+![Netdata Prometheus Comparison](https://github.com/netdata/blog/assets/139226121/cd40946a-462e-4f62-b5a3-61b8caa64522)
 
 In an era dominated by data-driven decision making, monitoring tools play an indispensable role in ensuring that our systems run efficiently and without interruption. When considering tools like **Netdata and Prometheus**, performance isn't just a number; it's about empowering users with **real-time insights** and enabling them to act with agility.
 
