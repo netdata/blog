@@ -77,8 +77,6 @@ On average, Netdata was using 4.93 cores (493% of a single core), while Promethe
 
 Per million of metrics per second:
 
-
-
 * Netdata needs 1.8 CPU cores
 * Prometheus needs 2.8 CPU cores
 
@@ -98,10 +96,8 @@ We also noticed that Prometheus seemed at times to face short difficulties in sc
 ![alt_text](images/image4.png "image_tooltip")
 
 
-_Image: short CPU dives in Prometheus 
-Netdata is the purple line. Prometheus is the brown line._
+_Image: short CPU dives in Prometheus Netdata is the purple line. Prometheus is the brown line._
 
-The observed spikes in Netdata's usage are potentially due to containers being started and stopped. This can lead to replication requests between Netdata nodes and backfilling of higher database tiers from lower tiers, which might result in a temporary increase in consumption until data streams stabilize.
 
 ## Network Bandwidth
 
@@ -164,14 +160,7 @@ Prometheus is peaking at 60.2 GiB (without shared memory), or 88.8 GiB (with sha
 
 Based on these data, Netdata needs 49% less memory than Prometheus, or Prometheus needs 97% more memory than Netdata.
 
-Check the `RES` (resident size) column:
-
-
-
-* Netdata needs 36.5 GB or RAM
-* Prometheus needs 68.0 GB or RAM
-
-Netdata needs 46% less memory than Prometheus, or Prometheus needs 86% more memory than Netdata.
+Even if we exclude shared memory, Netdata needs 40% less memory than Prometheus, or Prometheus needs 66% more memory than Netdata.
 
 
 ## Storage Footprint
@@ -184,7 +173,6 @@ Prometheus was configured to keep the metrics for 7 days, which results in 3.1 T
 Netdata was configured to have 3 TB of space, which gives us a variable retention depending on how much data can fit in this storage space. This is what it currently uses:
 
 ![alt_text](images/image2.png "image_tooltip")
-
 
 Netdata provides the API `/api/v2/node_instances`, at the end of which we can find a break down of the storage used by it:
 
