@@ -57,7 +57,7 @@ Prometheus was scraping the same 500 Netdata instances, every second, in `as-col
 We configured retention to 7 days. Other than this, Prometheus was running with default settings.
 
 
-### Hardware
+## Hardware
 
 Both Netdata Parent and Prometheus were running on a dedicated VM each, with 100GB RAM, 24 CPU Cores, and a dedicated 4TB SSD disk.
 Both VMs were hosted on the same physical server having 2x AMD EPYC 7453 CPUs (28-Core Processors - 112 threads total), 512GB RAM, and separate dedicated SSDs for each of them. The host server was configured to run each VM on a separate NUMA node.
@@ -67,7 +67,7 @@ Other than the above, this physical server was idle, so that nothing outside thi
 Screenshots were taken from a Netdata running at the host O/S of this server, using CGROUPs and other system metrics.
 
 
-### CPU Utilization
+## CPU Utilization
 
 
 
@@ -105,7 +105,7 @@ Netdata is the purple line. Prometheus is the brown line._
 The observed spikes in Netdata's usage are potentially due to containers being started and stopped. This can lead to replication requests between Netdata nodes and backfilling of higher database tiers from lower tiers, which might result in a temporary increase in consumption until data streams stabilize.
 
 
-### Network Bandwidth
+## Network Bandwidth
 
 
 ![alt_text](images/image11.png "image_tooltip")
@@ -132,7 +132,7 @@ When Grafana sources data from Prometheus, it fills in missing points from adjac
 In terms of Netdata's functionality, it is designed for consistent data ingestion. If communication is interrupted (though it was uninterrupted during our test), Netdata includes a replication feature. This allows the system receiving the samples to negotiate and backfill any missed data on reconnection, ensuring that there are no gaps in the time-series.
 
 
-### Memory Consumption
+## Memory Consumption
 
 We used `top` to see the memory of each application within its VM.
 
@@ -156,7 +156,7 @@ Check the `RES` (resident size) column:
 Netdata needs 46% less memory than Prometheus, or Prometheus needs 86% more memory than Netdata.
 
 
-### Storage Footprint
+## Storage Footprint
 
 Prometheus was configured to keep the metrics for 7 days, which results in 3.1 TB of storage:
 
@@ -277,10 +277,10 @@ Based on these data, Netdata uses 75% less storage than Prometheus, or Prometheu
 Additionally, it's pertinent to mention that Netdata used the saved storage space to support over a year of data retention, albeit at a reduced resolution.
 
 
-### Disk I/O
+## Disk I/O
 
 
-#### Disk Writes
+### Disk Writes
 
 ![alt_text](images/image9.png "image_tooltip")
 
@@ -291,7 +291,7 @@ _Image: 3 hours of **disk writes**: Netdata is red line, Prometheus is pink line
 * Prometheus shows a varied write speed, ranging from 20 to 100 MiB per second.
 
 
-#### Disk Reads
+### Disk Reads
 
 ![alt_text](images/image10.png "image_tooltip")
 
@@ -306,7 +306,7 @@ _Image: 3 hours of **disk reads**: Netdata is red line, Prometheus is pink line_
 From the data, it can be inferred that Netdata primarily writes data directly to their final position, given its steady write speed. Prometheus exhibits variable write and read patterns, possibly suggesting mechanisms like Write-Ahead Logging (WAL) or other data reorganization strategies.
 
 
-### Summary
+## Summary
 
 Netdata, renowned as a distributed monitoring solution, emphasizes the importance of not being confined to centralization. In our relentless pursuit to enhance and optimize our offerings, we sought to understand how Netdata stands in terms of performance and scalability, especially when juxtaposed with other industry-leading systems.
 
@@ -335,14 +335,14 @@ Here's a concise overview of our insights:
 Other notable differences between Netdata and Prometheus:
 
 
-#### Protection from server failures
+### Protection from server failures
 
 **Prometheus:** Implements data commitment to disk every 2 hours and utilizes a write-ahead log for continuous disk writing, safeguarding against data loss during crashes or server failures. The management of this write-ahead log is probably the primary reason Prometheus performs such intense disk I/O consistently.
 
 **Netdata:** Commits data to disk every 17 minutes with even distribution across metrics and time. This results in minimal disk I/O during metric ingestion. To counter potential data loss from server failures, it employs replication for missing data recovery and re-streaming of received data to another Netdata server (grand-parent, or a sibling in a cluster).
 
 
-#### Resource Consumption and Features
+### Resource Consumption and Features
 
 The following features of Netdata were disabled during this test:
 
@@ -355,14 +355,14 @@ Re-streaming metrics to a grand-parent or a clustered sibling with compression, 
 Generally, enabling all these features will double the CPU consumption and especially for the ML case, Netdata will also perform constant disk reads.
 
 
-#### Data and Metadata Design
+### Data and Metadata Design
 
 **Prometheus:** Organizes its data and metadata in 2-hour intervals, dividing its database accordingly. Depending on the query time-frame, it then accesses these 2-hour segments.
 
 **Netdata:** Operates with a continuous rolling design. To support a fully automated UI, it maintains an all-encompassing view of metadata available instantaneously across extended retention periods (e.g., months or years). However, in highly transient environments, this can consume significant memory. Improvements have been made, like utilizing a single pointer for any label name-value pair, but challenges remain with extreme transiency paired with lengthy retention.
 
 
-### Conclusion
+## Conclusion
 
 The relentless dedication of the Netdata team has birthed significant advancements across all facets of our platform. The extensive rework of the dbengine, our time-series database, stands testament to this progress, ensuring enhanced performance and resilience. As we further innovated, the introduction of advanced ML capabilities, the use of more sophisticated compression algorithms, a revamped SSL layer, and a notably reduced memory footprint have added to Netdata's prowess. Our commitment to the community shines through in our new UI, equipped with innovative features that simplify monitoring and boost its clarity.
 
