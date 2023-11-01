@@ -136,14 +136,12 @@ In terms of Netdata's functionality, it is designed for consistent data ingestio
 
 ## Memory Consumption
 
-We used `top` to see the memory of each application within its VM.
-
 Netdata:
 
 ![alt_text](images/image12.png "image_tooltip")
 
 
-_Image: 24 hours Prometheus memory usage. Above without shared, below with shared_
+_Image: 24 hours Netdata memory usage. Above without shared, below with shared_
 
 Netdata is peaking at 36.2 GiB (without shared memory), or 45.1 GiB (with shared memory).
 
@@ -322,7 +320,7 @@ Here's a concise overview of our insights:
 | Hardware<br/>(VMs on the same physical server)| 24 CPU cores<br/>100 GB RAM<br/>4 TB SSD                           | 24 CPU cores<br/>100 GB RAM<br/>4 TB SSD                        |
 | Metrics offered<br/>(approximately,<br/> concurrently collected)| 2.7 million per second                                          | 2.7 million per second                                        |
 | **CPU Utilization**<br/>(average)             | 4.9 CPU cores<br/>(spikes at 8 cores)<br/><strong style={{color: "#00AB44" }}>-35%</strong>    | 7.3 CPU cores<br/>(spikes at 15 cores)<br/><strong style={{color: "#DB162F" }}>+53%</strong>|
-| **Memory Consumption**<br/>(snapshot)         | 45.1 GiB<br/><strong style={{color: "#00AB44" }}>-49%</strong>                               | 88.8 GiB<br/><strong style={{color: "#DB162F" }}>+97%</strong>                               |
+| **Memory Consumption**<br/>(peak)         | 45.1 GiB<br/><strong style={{color: "#00AB44" }}>-49%</strong>                               | 88.8 GiB<br/><strong style={{color: "#DB162F" }}>+97%</strong>                               |
 | **Network Bandwidth**                        | 227 Mbps<br/><strong style={{color: "#00AB44" }}>-12%</strong>                               | 257 Mbps<br/><strong style={{color: "#DB162F" }}>+13.5%</strong>                             |
 | **Disk I/O**                                 | no reads<br/>2.7 MiB/s writes<br/><strong style={{color: "#00AB44" }}>-98%</strong>              | 73.6 MiB/s reads<br/>55.2 MiB/s writes<br/><strong style={{color: "#DB162F" }}>+4770%</strong>|
 | **Disk Footprint**                           | 3 TiB                                                           | 3 TiB                                                         |
