@@ -18,6 +18,7 @@ keywords: [systemd journal, systemd, logs]
 
 * On Netdata Cloud Free Community plan, the number of **active nodes** that can be concurrently visualized on the Netdata dashboards, as well as the number of **active custom dashboards** for accounts created after 2023-11-07 will be subject to limits. 
 
+<<<<<<< HEAD
 * Any new Netdata Cloud user sign-up will be automatically enrolled to a **30-day Free Business Trial**, so all can experience Netdata Cloud without any limits or restrictions - no debit or credit cards will be required.
 
 * We are also simplifying the paid Cloud subscriptions by keeping  the **Business plan** only. The current **Pro plan** will cease to exist.
@@ -32,6 +33,24 @@ We continue to look for ways to make Infrastructure monitoring a reality for tea
 For open source projects, educational usage or for monitoring an infrastructure using local dashboards, **Netdata FOSS Agent** will always be available for free as our gift to this wonderful community.
 
 The new Free Community plan limits will be:
+=======
+* Netdata Cloud accounts on the current Community or Early Bird plans created before **2023-11-07** will not be affected, and no limits will be set.
+
+* Any new Netdata Cloud user sign-up will be automatically enrolled to a **30-day Free Business Trial**, so all can experience Netdata Cloud without any limits or restrictions - no debit or credit cards will be required.
+
+* The changes above do not apply to our other plans: Netdata Cloud Business, On-prem subscriptions, and Netdata FOSS Agent versions.
+
+* We are also simplifying the paid Cloud subscriptions by keeping  the **Business plan** only. Users currently on the **Pro plan** will receive a personal notification with more details on their migration to the Business plan.
+
+_For full details on the plans and prices, check out the FAQ section of the [pricing page](https://www.netdata.cloud/pricing/#pricing-faq)._
+
+
+We continue to look for ways to make Infrastructure monitoring a reality for teams and organizations of all sizes. For users to get started with monitoring, relatively small infrastructure for Home labs, students and Non profit organizations with no investment, Netdata offers the Free Community Plan. For organizations (startups, mid-size, large) that require production grade infrastructure monitoring (with a number of servers, VMs, containers and applications), requiring collaboration across the organization or with clients, Netdata offers **Business** and **On-prem** subscriptions with no restrictions on monitored nodes or users. 
+
+For open source projects, educational usage or for monitoring an infrastructure using local dashboards, **Netdata FOSS Agent** will always be available for free as our gift to this wonderful community.
+
+To create the best monitoring solution, increase efficiency and to ensure we can continue to offer the Free Community tier to those who really need it, we are limiting the Community plan to:
+>>>>>>> c267055e451ca051151bacb66e1c90b15635717d
 * 5 **active nodes** that can be concurrently visualized on Netdata Dashboards. 
 * 1 **active custom dashboard**
 
