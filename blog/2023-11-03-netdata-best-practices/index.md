@@ -101,7 +101,7 @@ To optimize the performance of the Netdata Agent for data collection in a produc
 
 5. **Opt for Alternative Metric Storage:**
    - Depending on the hardware constraints, considering an alternative database for metric storage that's more efficient in terms of I/O operations can be beneficial.
-   - In a parent-child configuration, the child nodes could be configured to use the `memory mode` ram or save for a lighter footprint.
+   - In a Parent-Child configuration, the child nodes could be configured to use the `memory mode` ram or save for a lighter footprint.
 
 6. **Disable Machine Learning (ML) on Child Nodes:**
    - The ML feature consumes additional CPU resources. It can be disabled on child nodes to ensure that resources are dedicated to the essential tasks of the production environment.
