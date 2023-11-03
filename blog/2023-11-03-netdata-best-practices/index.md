@@ -13,7 +13,7 @@ Effective **system monitoring** is non-negotiable in today's complex IT environm
 
 <!--truncate-->
 
-The starting point for optimization is a robust setup. Netdata is engineered for minimal footprint and can run on a wide range of hardware—from IoT devices to powerful servers. Time for a deep dive into each of these key areas and what the best practices you should follow if you are serious about monitoring and optimizing your Netdata monitoring setup:
+The starting point for optimization is a robust setup. Netdata is engineered for minimal footprint and can run on a wide range of hardware—from IoT devices to powerful servers. Time for a deep dive into each of these key areas and what the best practices you should follow, if you are serious about monitoring and optimizing your Netdata monitoring setup:
 
 1. Installation
 2. Deployment
