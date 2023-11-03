@@ -105,7 +105,7 @@ To optimize the performance of the Netdata Agent for data collection in a produc
 
 6. **Disable Machine Learning (ML) on Child Nodes:**
    - The ML feature consumes additional CPU resources. It can be disabled on child nodes to ensure that resources are dedicated to the essential tasks of the production environment.
-   - Reserve ML capabilities for parent nodes or systems where resources are less constrained.
+   - Reserve ML capabilities for Parent nodes or systems where resources are less constrained.
 
 7. **Run Netdata Behind a Proxy:**
    - Using a reverse proxy like Nginx can improve the robustness of connections and data transmission efficiency.
