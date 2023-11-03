@@ -25,7 +25,7 @@ The starting point for optimization is a robust setup. Netdata is engineered for
 ## Installation
 
 1. **Choose the Right Installation Method for Your Environment**
-   - Evaluate your system's architecture, permissions, and environment to select the best installation method. For most Linux systems, the one-liner kickstart script is recommended due to its simplicity and thoroughness. However, for environments with strict security policies or limited internet access, a manual installation from source or using a package manager may be more appropriate.
+   - Evaluate your system's architecture, permissions, and environment to select the best installation method. For most Linux systems, the [one-liner kickstart script](https://learn.netdata.cloud/docs/installing/one-line-installer-for-all-linux-systems) is recommended due to its simplicity and thoroughness. However, for environments with strict security policies or limited internet access, a [manual installation from source](https://learn.netdata.cloud/docs/installing/build-the-netdata-agent-yourself/compile-from-source-code) or using a [package manager](https://learn.netdata.cloud/docs/installing/native-linux-distribution-packages) may be more appropriate.
 
 2. **Opt for Automatic Updates, Unless Policy Dictates Otherwise**
    - By default, enable automatic updates to ensure your monitoring solution benefits from the latest features and security patches. If your organization has stringent change management processes or compliance requirements, opt-out of automatic updates and establish a regular, manual update routine that aligns with your maintenance windows.
