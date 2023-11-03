@@ -186,7 +186,7 @@ Ultimately, an optimized Netdata setup is a living system that demands attention
 
 With Netdata's full suite of features finely tuned to your operational needs, your monitoring will not just inform you—it will empower you.
 
-You can also start exploring a full-ready setup environment in one of our Netdata demo rooms [here](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/overview#metrics_correlation=false&after=-900&before=0&utc=Europe%2FLisbon&offset=%2B0&timezoneName=Dublin%2C%20Lisbon&modal=&modalTab=&modalParams=&selectedIntegrationCategory=deploy.operating-systems&force_play=false&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a--sidebarOpen-bool=true&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a--chartName-val=menu_system).
+If you are intrigued, you can also start by exploring one of our Netdata demo rooms [here](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/overview#metrics_correlation=false&after=-900&before=0&utc=Europe%2FLisbon&offset=%2B0&timezoneName=Dublin%2C%20Lisbon&modal=&modalTab=&modalParams=&selectedIntegrationCategory=deploy.operating-systems&force_play=false&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a--sidebarOpen-bool=true&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a--chartName-val=menu_system).
 
 Happy Troubleshooting!
 
