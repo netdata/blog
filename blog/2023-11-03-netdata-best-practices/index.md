@@ -83,7 +83,7 @@ Here's a [detailed guide](https://learn.netdata.cloud/docs/architecture/deployme
 To optimize the performance of the Netdata Agent for data collection in a production environment, consider the following strategies:
 
 1. **Use Streaming and Replication:**
-   - This setup allows offloading the storage and analysis of metrics to a parent node, which can be more powerful and not affect the production system's performance.
+   - This setup allows offloading the storage and analysis of metrics to a Parent node, which can be more powerful and not affect the production system's performance.
    - By doing so, you ensure that the data is synchronized across your infrastructure and that in the case of a node failure, you have the metrics available for post-mortem analysis.
 
 2. **Disable Unnecessary Plugins or Collectors:**
