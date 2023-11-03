@@ -108,7 +108,7 @@ To optimize the performance of the Netdata Agent for data collection in a produc
    - Reserve ML capabilities for Parent nodes or systems where resources are less constrained.
 
 7. **Run Netdata Behind a Proxy:**
-   - Using a reverse proxy like Nginx can improve the robustness of connections and data transmission efficiency.
+   - Using a reverse proxy like NGINX can improve the robustness of connections and data transmission efficiency.
    - It can manage more concurrent connections and employ faster gzip compression, thus saving CPU resources on the agent itself.
 
 8. **Adjust or Disable Gzip Compression:**
