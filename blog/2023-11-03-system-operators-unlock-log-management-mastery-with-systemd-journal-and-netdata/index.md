@@ -82,7 +82,7 @@ The `systemd-journal` itself can be audited. Administrators can track who access
 
 Because **`systemd` manages system services**, the journal is tightly integrated with these services, [automatically capturing their logs](https://blog.netdata.cloud/exploring-systemd-journal-logs-with-netdata/). This means logs from services are automatically structured and include metadata provided by `systemd`, such as the service name, making them easier to filter and analyze.
 
-**`systemd` uses control groups (CGroups)** to organize processes hierarchically. `systemd-journal` leverages this by associating log messages with the CGroups of the processes that generated them. This allows for precise filtering and querying of logs by service or group of services.
+**`systemd` uses control groups (cgroups)** to organize processes hierarchically. `systemd-journal` leverages this by associating log messages with the cgroups of the processes that generated them. This allows for precise filtering and querying of logs by service or group of services.
 
 Although `systemd-journal` is a modern logging system, it can work alongside traditional syslog implementations. It can forward log messages to syslog for legacy support or integration with existing syslog-based tools and workflows.
 
