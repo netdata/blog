@@ -1,12 +1,12 @@
 ---
-slug: netdata-best-practices
+slug: netdata-methodology
 title: "Understanding the Netdata Methodology: A Different Take on Monitoring"
 description: "Find out how Netdata is different from the competition when it comes to the monitoring methodology and philosophy"
-image: https://github.com/netdata/blog/assets/24860547/97d7c54c-4e70-4a78-af20-3421c3e4964a
-tags: [netdata, best practices, installation, deployment, optimization, optimize, retention, alerts, anomalies, ml]
-keywords: [netdata, best practices, installation, deployment, optimization, optimize, retention, alerts, anomalies, ml]
+image: https://github.com/netdata/blog/assets/24860547/43160d3c-df2d-436a-84ad-564a0465df5a
+tags: [netdata, methodology, competition, netdata vs competition, real time]
+keywords: [netdata, methodology, competition, netdata vs competition, real time]
 ---
-![The Netdata Methodology](https://github.com/netdata/blog/assets/24860547/97d7c54c-4e70-4a78-af20-3421c3e4964a)
+![The Netdata Methodology](https://github.com/netdata/blog/assets/24860547/43160d3c-df2d-436a-84ad-564a0465df5a)
 
 In the dynamic landscape of modern infrastructure and multi cloud environments, observing and understanding system performance requires a new breed of tools—ones that keep pace with the 'living' nature of modern infrastructure. This is the inflection point at which Netdata steps in, and aims to bring a fresh perspective to monitoring.
 
