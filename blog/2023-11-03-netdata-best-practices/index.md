@@ -31,7 +31,7 @@ The starting point for optimization is a robust setup. Netdata is engineered for
    - By default, enable automatic updates to ensure your monitoring solution benefits from the latest features and security patches. If your organization has stringent change management processes or compliance requirements, opt-out of automatic updates and establish a regular, manual update routine that aligns with your maintenance windows.
 
 3. **Select the Appropriate Release Channel Based on Your Risk Profile**
-   - Consider your organization's tolerance for risk when choosing between nightly and stable releases. Nightly builds offer the latest features but carry a minimal risk of introducing unanticipated issues. Stable releases, while less frequent, provide a more cautious approach, suitable for production environments where stability is paramount.
+   - Consider your organization's tolerance for risk when choosing between [nightly and stable releases](https://learn.netdata.cloud/docs/installing/one-line-installer-for-all-linux-systems#release-channel). Nightly builds offer the latest features but carry a minimal risk of introducing unanticipated issues. Stable releases, while less frequent, provide a more cautious approach, suitable for production environments where stability is paramount.
 
 4. **Ensure Proper Network Configuration for the Auto-Updater**
    - If utilizing the auto-updater, confirm that your network allows access to GitHub and Google Cloud Storage, as these are essential for the updater to function correctly. Proxies, firewalls, and security policies should be configured to permit the necessary outbound connections for the update process.
