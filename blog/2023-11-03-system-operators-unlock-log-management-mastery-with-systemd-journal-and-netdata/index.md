@@ -94,4 +94,6 @@ It also has several mechanisms to ensure reliable operation under all circumstan
 
 ### Conclusion
 
-In essence, **`systemd-journal` and Netdata offer a robust, efficient, and user-friendly approach to log management** that can scale from small operations to enterprise-level needs without the overhead that comes with more complex systems
+In essence, **`systemd-journal` and Netdata offer a robust, efficient, and user-friendly approach to log management** that can scale from small operations to enterprise-level needs without the overhead that comes with more complex systems.
+
+Try it for yourself in one of our Netdata demo rooms [here](https://app.netdata.cloud/spaces/netdata-demo/rooms/all-nodes/functions?oauth=google&#after=-21600&before=0&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-fn-selectedFn-arr=systemd-journal&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-fn-selectedNodeIds-arr=e3b4cd99-19a7-467b-841a-09314dcafc51&selectedFn-arr=systemd-journal&selectedNodeIds-arr=d8e944dd-d061-4bc9-a850-0ac2ee4ff87f&d8a4e0c5-7c79-4145-900e-83a9f06fcb6a-systemd-journalFilters-source-arr=all).
