@@ -116,7 +116,7 @@ To optimize the performance of the Netdata Agent for data collection in a produc
    - If the dashboard is not accessed frequently or network bandwidth is not a concern, consider reducing the compression level or disabling it.
 
 9. **Disable Health Checks on Child Nodes:**
-   - Offload health checks to parent nodes to conserve resources on children nodes, simplifying configuration management.
+   - Offload health checks to Parent nodes to conserve resources on children nodes, simplifying configuration management.
    - This strategy focuses resources on data collection rather than evaluation.
 
 10. **Fine-tuning for Specific Use Cases:**
