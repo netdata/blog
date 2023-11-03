@@ -2,12 +2,12 @@
 slug: netdata-best-practices
 title: "Netdata Best Practices: Optimizing Your Monitoring Setup"
 description: "Learn Netdata's best practices for setup, alerts, and rapid troubleshooting. Optimize your infrastructure monitoring setup today."
-image: https://github.com/netdata/blog/assets/139226121/1ac076e3-112e-4dad-9946-cbe0253019e6
+image: https://github.com/netdata/blog/assets/139226121/9e8c428f-fc67-44a5-a3c8-82e0888a53d3
 tags: [netdata, best practices, installation, deployment, optimization, optimize, retention, alerts, anomalies, ml]
 keywords: [netdata, best practices, installation, deployment, optimization, optimize, retention, alerts, anomalies, ml]
 ---
 
-![Netdata Best Practices](https://github.com/netdata/blog/assets/139226121/1ac076e3-112e-4dad-9946-cbe0253019e6)
+![Netdata Best Practices](https://github.com/netdata/blog/assets/139226121/9e8c428f-fc67-44a5-a3c8-82e0888a53d3)
 
 Effective **system monitoring** is non-negotiable in today's complex IT environments. Netdata offers real-time performance and health monitoring with precision and granularity. But the key to harnessing its full potential lies in the optimization of your setup. Let’s ensure you are not just collecting data, but doint it in the most optimal way while gaining actionable insights from it.
 
