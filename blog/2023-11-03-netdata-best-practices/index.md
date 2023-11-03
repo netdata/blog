@@ -9,7 +9,7 @@ keywords: [netdata, best practices, installation, deployment, optimization, opti
 
 ![Netdata Best Practices](https://github.com/netdata/blog/assets/139226121/9e8c428f-fc67-44a5-a3c8-82e0888a53d3)
 
-Effective **system monitoring** is non-negotiable in today's complex IT environments. Netdata offers real-time performance and health monitoring with precision and granularity. But the key to harnessing its full potential lies in the optimization of your setup. Let’s ensure you are not just collecting data, but doint it in the most optimal way while gaining actionable insights from it.
+Effective **system monitoring** is non-negotiable in today's complex IT environments. Netdata offers real-time performance and health monitoring with precision and granularity. But the key to harnessing its full potential lies in the optimization of your setup. Let’s ensure you are not just collecting data, but doing it in the most optimal way while gaining actionable insights from it.
 
 <!--truncate-->
 
