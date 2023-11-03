@@ -60,7 +60,9 @@ Now that we've gone through the key aspects of the Netdata monitoring methodolog
 |**Dashboards**              |Every single metric is visualized in meaningful, <strong style={{color: "#00AB44" }}>fully automated dashboards</strong>. Custom dashboards are supported but not necessary. |Pre-packaged dashboards do not include every single metric. Building custom dashboards is <strong style={{color: "#DB162F" }}>time consuming</strong> and necessary.|
 |**Data Privacy**            |<strong style={{color: "#00AB44" }}>Your data is stored at the source, your premises</strong> – we don’t store it, and can’t share it or sell it.|Most commercial monitoring solutions <strong style={{color: "#DB162F" }}>store your data on their cloud</strong> and visualise them centrally.|
 |**Scalability**             |Exceptional <strong style={{color: "#00AB44" }}>vertical and horizontal scalability</strong> while handling high data volume and velocity. Minimal traffic egress costs.|Often struggles with scalability challenges such as <strong style={{color: "#DB162F" }}>high data volumes, resource constraints, and high traffic egress costs</strong>.|
-|**Community**               |Netdata has an active and vibrant open source community and is one of the <strong style={{color: "#00AB44" }}>top starred projects on the CNCF landscape</strong>.| Commercial solutions lack the diversity and vibrancy of OSS communities.|
+|**Community**               |Netdata has an active and vibrant open source community and is (as of date) the <strong style={{color: "#00AB44" }}>leading project on the observability category in the [CNCF landscape](https://landscape.cncf.io/card-mode?category=observability-and-analysis&grouping=no&sort=stars),</strong>.| Commercial solutions lack the diversity and vibrancy of OSS communities.|
+
+need to check how the link comes in this
 |**Cost of Ownership**       |Cost-effective and transparent pricing. <strong style={{color: "#00AB44" }}>Zero hidden costs</strong>.|Often carries <strong style={{color: "#DB162F" }}>hidden costs that increase the Total Cost of Ownership (TCO)</strong> over time. |
 ---
 
