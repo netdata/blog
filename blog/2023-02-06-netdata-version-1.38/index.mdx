@@ -430,7 +430,7 @@ We [added monitoring of the RabitMQ queues](https://github.com/netdata/go.d.plug
 
 #### MongoDB
 
-We monitor the [MongoDB](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/mongodb) NoSQL database [serverStatus](https://www.mongodb.com/docs/manual/reference/command/serverStatus/#mongodb-dbcommand-dbcmd.serverStatus) and [dbStats](mongodb.com/docs/manual/reference/command/dbStats/#dbstats).
+We monitor the [MongoDB](https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/mongodb) NoSQL database [serverStatus](https://www.mongodb.com/docs/manual/reference/command/serverStatus/#mongodb-dbcommand-dbcmd.serverStatus) and [dbStats](https://www.mongodb.com/docs/manual/reference/command/dbStats/#dbstats).
 
 To allow better grouping and filtering of the collected metrics we now [create a chart per database, repl set member, shard and additional metrics](https://github.com/netdata/go.d.plugin/pull/1042). We also [improved](https://github.com/netdata/go.d.plugin/pull/1046) the `cursors_by_lifespan_count` chart dimension names, to make them clearer.
 
@@ -525,7 +525,7 @@ To provide the capability we also had to [change the format of alert info variab
 
 Administrators can now globally, permanently disable specific OOB alerts via `netdata.conf`. Previously the options where to [edit individual alert configuration files](https://learn.netdata.cloud/docs/monitor/configure-alarms), or to use the [health management API](https://learn.netdata.cloud/docs/agent/web/api/health#health-management-api). 
 
-The `[health]` section of `netdata.conf` now support the setting `enabled_alarms`. It's value defines which alarms to load from both user and stock directories. The value is a [simple pattern](/libnetdata/simple_pattern/README.md) list of alarm or template names, with the default value of `*`, meaning that all alerts are loaded. For example, to disable specific alarms, you can provide `enabled alarms = !oom_kill *`, which will load all alarms except `oom_kill`.
+The `[health]` section of `netdata.conf` now support the setting `enabled_alarms`. It's value defines which alarms to load from both user and stock directories. The value is a [simple pattern](https://github.com/netdata/netdata/blob/master/libnetdata/simple_pattern/README.md) list of alarm or template names, with the default value of `*`, meaning that all alerts are loaded. For example, to disable specific alarms, you can provide `enabled alarms = !oom_kill *`, which will load all alarms except `oom_kill`.
 
 ## Visualizations / Charts and Dashboards <a id="v1380-visualization"></a>
 
