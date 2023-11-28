@@ -5,7 +5,7 @@ authors: shyam
 tags: [how-to, Redis,redis]
 ---
 
-![logo](https://redis.com/wp-content/uploads/2021/08/redis-logo.png?&auto=webp&quality=85,75&width=500)
+![Redis is a popular open-source, in-memory data store. We make monitoring and troubleshooting Redis simple, effective, and powerful. Learn more now.](https://redis.com/wp-content/uploads/2021/08/redis-logo.png?&auto=webp&quality=85,75&width=500)
 
 <!--truncate-->
 

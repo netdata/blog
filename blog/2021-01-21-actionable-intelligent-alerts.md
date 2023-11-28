@@ -1,7 +1,7 @@
 ---
 slug: actionable-intelligent-alerts
-title: "Actionable alerts with fewer false positives: intelligent alarms with Netdata"
-description: "Actionable alerts with fewer false positives: intelligent alarms with Netdata"
+title: "Netdata's Alarms: Actionable Alerts w/ Fewer False Positives"
+description: "Learn how to implement actionable and intelligent alerts with Netdata, ensuring your monitoring system provides valuable insights for informed decision-making."
 image: /img/wp-archive/uploads/2022/03/intelligent-alarms.png
 tags: [engineering,product]
 keywords: [netdata,engineering,product]

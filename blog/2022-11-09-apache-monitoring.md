@@ -1,7 +1,7 @@
 ---
 slug: apache-monitoring
 title: How to monitor and troubleshoot Apache web servers
-description: "Best practices for Apache Server monitoring."
+description: "Explore the power of anomaly rates in the menu with Netdata, enabling you to spot irregularities and optimize your infrastructure monitoring."
 authors: shyam
 tags: [how-to, monitor, troubleshoot, Apache, web-server,apache,nginx,web-servers]
 keywords: [how-to, monitor, troubleshoot, Apache, web server]

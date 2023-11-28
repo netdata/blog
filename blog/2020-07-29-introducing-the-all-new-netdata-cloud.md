@@ -1,7 +1,7 @@
 ---
 slug: introducing-the-all-new-netdata-cloud
 title: "Introducing the all-new Netdata Cloud"
-description: "Introducing the all-new Netdata Cloud"
+description: "Introducing the all-new Netdata Cloud, your gateway to comprehensive and real-time infrastructure monitoring insights. Gain more insights in our blog today."
 image: /img/wp-archive/uploads/2022/03/All-New-Cloud.png
 tags: [product]
 keywords: [netdata,product]

@@ -1,7 +1,7 @@
 ---
 slug: the-netdata-community
 title: "The Netdata Community"
-description: "The Netdata Community"
+description: "Dive into 'The Netdata Community' and discover the vibrant community of Netdata users, contributors, and enthusiasts. Learn more in our blog today."
 image: /img/wp-archive/uploads/2022/03/Athens-company-meetup-1_2019-scaled-e1588700274782.jpeg
 tags: [community]
 keywords: [netdata,community]

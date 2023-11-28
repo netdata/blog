@@ -1,13 +1,13 @@
 ---
 slug: monitoring-disks-understanding-workload-performance-utilisation-saturation-latency
-title: "Monitoring Disks: Understanding Workload, Performance, Utilization, Saturation, and Latency"
+title: "Monitoring Disks: Understanding Workload, Performance, Utilization, Saturation, & Latency"
 authors: satya
 tags: [disks, monitoring, workloads, performance, utilisation, saturation, latency,operating-system-monitoring]
 keywords: [disks, monitoring, workloads, performance, utilisation, saturation, latency]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![Gain insights into monitoring disks and understanding workload performance, utilization, saturation, and latency for optimized system performance.](./img/stacked-netdata.png)
 
 Netdata provides a comprehensive set of charts that can help you understand the workload, performance, utilization, saturation, latency, responsiveness, and maintenance activities of your disks.
 In this blog we will focus on monitoring disks as block devices, not as filesystems or mount points. 

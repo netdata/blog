@@ -1,7 +1,7 @@
 ---
 slug: dns-query-response-time
 title: "How to monitor DNS query response time"
-description: "How to monitor DNS query response time"
+description: "Master DNS query response time monitoring with Netdata, ensuring fast and reliable name resolution for your infrastructure. Find out more in our blog."
 image: /img/wp-archive/uploads/2022/10/DNS-1.png
 tags: [how-to,infrastructure-monitoring,dns]
 keywords: [netdata,how-to,infrastructure-monitoring]

@@ -1,7 +1,7 @@
 ---
 slug: welcome-to-netdatas-community-repository-consul-ansible-ml
-title: "Welcome to Netdata’s community repository: Consul, Ansible, ML"
-description: "Welcome to Netdata’s community repository: Consul, Ansible, ML"
+title: "Netdata’s Community Repository: Consul, Ansible, ML "
+description: "Welcome to Netdata's community repository, where you'll find Consul, Ansible, and machine learning resources for effective system management."
 image: /img/wp-archive/uploads/2022/03/netdata-community-repository.png
 tags: [community,consul]
 keywords: [netdata,community]

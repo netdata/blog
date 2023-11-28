@@ -1,6 +1,6 @@
 ---
 slug: meet-the-netdata-community-rupok-chowdhury-protik-takes-software-engineering-photography-to-new-heights
-title: "Meet the Netdata Community: Rupok Chowdhury Protik Takes Software Engineering and Photography to New Heights"
+title: "How Rupok Protik Elevates Software Engineering & Photography"
 description: "Meet the Netdata Community: Rupok Chowdhury Protik Takes Software Engineering and Photography to New Heights"
 image: /img/wp-archive/uploads/2022/03/Meet-the-community.png
 tags: [community]

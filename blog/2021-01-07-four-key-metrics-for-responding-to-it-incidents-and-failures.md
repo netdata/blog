@@ -1,7 +1,7 @@
 ---
 slug: four-key-metrics-for-responding-to-it-incidents-and-failures
-title: "Four key metrics for responding to IT incidents and failures"
-description: "Four key metrics for responding to IT incidents and failures"
+title: "4 Key Metrics For Responding To IT Incidents And Failures"
+description: "Master the four key metrics for responding to IT incidents and failures with Netdata, ensuring quick and effective issue resolution. Learn more in our blog."
 image: /img/wp-archive/uploads/2021/01/DevOps-Metrics.png
 tags: [engineering,product]
 keywords: [netdata,engineering,product]

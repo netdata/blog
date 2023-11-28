@@ -1,7 +1,7 @@
 ---
 slug: the-netdata-community-powered-by-nodebb
 title: "The Netdata Community Powered by NodeBB"
-description: "The Netdata Community Powered by NodeBB"
+description: "Explore the Netdata community powered by NodeBB, a platform that fosters collaboration and knowledge sharing among monitoring enthusiasts."
 image: /img/wp-archive/uploads/2022/03/NodeBB-1.png
 tags: [engineering]
 keywords: [netdata,engineering]

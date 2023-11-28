@@ -1,6 +1,6 @@
 ---
 slug: data-collection-strategies
-title: Data Collection Strategies for Infrastructure Monitoring – Troubleshooting Specifics
+title: "Data Collection Strategies Infrastructure Monitoring & Troubleshooting"
 authors: alex
 tags: [infrastructure-monitoring, machine-learning, product, systems, troubleshooting,deployment-strategies]
 ---

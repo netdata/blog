@@ -1,7 +1,7 @@
 ---
 slug: postfix-monitoring
 title: How to monitor and troubleshoot Postfix
-description: Monitoring and troubleshooting Postfix.
+description: Effortlessly monitor Postfix email servers with Netdata, ensuring reliable email services and efficient mail server performance. Find more in our blog.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, postfix,  mail server, mail delivery, smtp mail server, mail delivery, SMTP]
 keywords: [how-to, monitor, troubleshoot, postfix,  mail server, mail delivery, smtp mail server, mail delivery, SMTP]

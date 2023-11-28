@@ -1,13 +1,13 @@
 ---
 slug: why-scalable-monitoring-is-essential-for-modern-distributed-systems
-title: Why Scalable Monitoring is Essential for Modern, Distributed Systems
+title: Scalable Monitoring: Essential For Modern, Distributed Systems
 authors: costa
 tags: [monitoring, infrastructure-monitoring, distributed-systems, scalability, deployment-strategies]
 keywords: [monitoring, infrastructure monitoring, distributed systems, scalability]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![It's common to discuss the importance of scalability in monitoring solutions and how it can impact the performance and reliability of distributed systems.](./img/stacked-netdata.png)
 
 It's becoming increasingly common to discuss the importance of scalability in monitoring solutions and how it can impact the performance and reliability of distributed systems.
 

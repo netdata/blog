@@ -1,7 +1,7 @@
 ---
 slug: meet-the-netdata-community-every-company-needs-an-ebpf-superhero-like-thiago
-title: "Meet the Netdata Community: Every Company Needs an eBPF Superhero Like Thiago"
-description: "Meet the Netdata Community: Every Company Needs an eBPF Superhero Like Thiago"
+title: "Meet Thiago Marques: An eBPF Superhero"
+description: "In our "Meet the Community" series, discover Netdata's Software Engineer Thiago Marques, who is dedicated to building an eBPF.plugin. Find more today."
 image: /img/wp-archive/uploads/2022/03/thiago-2.png
 tags: [community]
 keywords: [netdata,community]

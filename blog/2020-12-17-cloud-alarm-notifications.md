@@ -1,7 +1,7 @@
 ---
 slug: cloud-alarm-notifications
-title: "Centralize the truth of your infrastructure with alarm notifications"
-description: "Centralize the truth of your infrastructure with alarm notifications"
+title: "Centralize The Truth Of Your Infrastructure w/ Alarm Notifications"
+description: "Explore cloud alarm notifications with Netdata, receiving real-time alerts and notifications for effective system management. Find out more today."
 image: /img/wp-archive/uploads/2020/12/Central-Alarm-Notifications.png
 tags: [product,alerts,notifications]
 keywords: [netdata,product]

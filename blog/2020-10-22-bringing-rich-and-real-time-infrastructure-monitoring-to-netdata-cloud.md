@@ -1,7 +1,7 @@
 ---
 slug: bringing-rich-and-real-time-infrastructure-monitoring-to-netdata-cloud
-title: "Bringing rich and real-time infrastructure monitoring to Netdata Cloud"
-description: "Bringing rich and real-time infrastructure monitoring to Netdata Cloud"
+title: "Bringing Rich & Real-Time Infrastructure Monitoring To Cloud"
+description: "Effortlessly monitor BIND9 DNS servers with Netdata, ensuring smooth and reliable domain name resolution for your network. Find out more today."
 image: /img/wp-archive/uploads/2022/03/Correlation_charts.png
 tags: [product]
 keywords: [netdata,product]

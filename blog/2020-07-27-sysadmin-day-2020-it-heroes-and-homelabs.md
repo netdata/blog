@@ -1,7 +1,7 @@
 ---
 slug: sysadmin-day-2020-it-heroes-and-homelabs
 title: "Sysadmin Day 2020: IT Heroes and Homelabs"
-description: "Sysadmin Day 2020: IT Heroes and Homelabs"
+description: "Celebrate SysAdmin Day 2020 with IT heroes and homelabs, recognizing the invaluable contributions of system administrators to the tech world."
 image: /img/wp-archive/uploads/2022/03/Group-1-2.png
 tags: [community]
 keywords: [netdata,community]

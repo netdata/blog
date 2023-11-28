@@ -1,6 +1,6 @@
 ---
 title: How to monitor host reachability
-description: This post describes how to use Netdata to monitor the reachability of your servers.
+description: Sysadmins and developers commonly use Linux and Windows networking commands to check host reachability and response speed. Learn more in our blog.
 image: /img/wp-archive/uploads/2022/10/Monitoring-Reachable-Host-2.png
 tags: [how-to,ping,reachability,monitoring,httpcheck]
 keywords: [how-to,ping,reachability,monitoring]

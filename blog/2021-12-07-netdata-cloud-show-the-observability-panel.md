@@ -1,7 +1,7 @@
 ---
 slug: netdata-cloud-show-the-observability-panel
 title: "Netdata Cloud Show: The Observability Panel"
-description: "Netdata Cloud Show: The Observability Panel"
+description: "Join us for the first-ever Netdata Cloud Show, where our all-star panel will be discussing the latest trends around observability. Learn more out us today."
 image: /img/wp-archive/uploads/2022/03/Netdata-Cloud-Panel.png
 tags: [community]
 keywords: [netdata,community]

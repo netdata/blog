@@ -1,7 +1,7 @@
 ---
 slug: monitor-any-sql-metrics-with-netdata
 title: Monitor any SQL metrics with Netdata (and Pandas ❤️)
-description: Using the Netdata Pandas collector to monitor and wrangle any SQL metrics you want.
+description: Learn how to monitor SQL metrics with Netdata and gain real-time insights into your database performance for improved efficiency. Find out more now.
 authors: andy
 tags: [sql, monitoring, python, pandas, netdata, mysql, metrics]
 keywords: [sql, monitoring, python, pandas, netdata, mysql, metrics]

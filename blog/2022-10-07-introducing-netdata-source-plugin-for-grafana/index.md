@@ -6,7 +6,7 @@ tags: [grafana, plugin,observability,openmetrics,prometheus]
 image: /img/wp-archive/uploads/2022/09/postgresql_dash-600x354.png
 ---
 
-![sample-dashboard](/img/wp-archive/uploads/2022/09/postgresql_dash-600x354.png)
+![The open-source community is about to benefit greatly from our new Grafana data source plugin, which makes use of a powerful data collection engine.](/img/wp-archive/uploads/2022/09/postgresql_dash-600x354.png)
 
 The open-source community is about to benefit greatly from Netdata's new Grafana data source plugin, which makes use of a powerful data collection engine.
 

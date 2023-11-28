@@ -1,7 +1,7 @@
 ---
 slug: agile-team-cmocka-foss
-title: "Building an agile team’s ‘safety harness’ with cmocka and FOSS"
-description: "Building an agile team’s ‘safety harness’ with cmocka and FOSS"
+title: "Building An Agile Team’s ‘Safety Harness’ With Cmocka & FOSS"
+description: "We want to respond to our users and introduce in-demand features. Working directly with our community is the best way to make Netdata better."
 image: /img/wp-archive/uploads/2022/03/agile-team-cmocka-foss.png
 tags: [engineering]
 keywords: [netdata,engineering]

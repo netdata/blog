@@ -1,7 +1,7 @@
 ---
 slug: why-netdata-picked-vernemq
 title: "Why Netdata picked VerneMQ"
-description: "Why Netdata picked VerneMQ"
+description: "Discover why Netdata chose VerneMQ, unlocking powerful MQTT broker capabilities for your infrastructure monitoring. Visit our blog and learn more."
 image: /img/wp-archive/uploads/2022/03/Blog-Why-Netdata-Picked-VerneMQ.jpeg
 tags: [engineering]
 keywords: [netdata,engineering]

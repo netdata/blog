@@ -1,7 +1,7 @@
 ---
 slug: introduction-to-statsd
 title: "Introduction to StatsD"
-description: "Introduction to StatsD"
+description: "StatsD is an industry-standard technology stack for monitoring applications and instrumenting any piece of software to deliver custom metrics. Learn more now."
 image: /img/wp-archive/uploads/2022/03/StatsD.png
 tags: [engineering,product,statsd]
 keywords: [netdata,engineering,product]

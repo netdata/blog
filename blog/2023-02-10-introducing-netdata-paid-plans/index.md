@@ -1,7 +1,7 @@
 ---
 slug: introducing-netdata-paid-subscriptions
 title: Introducing Netdata Paid Subscriptions
-description: All Netdata functionality is and will be available for free forever in the Community Plan. Paid tiers include features targeted for businesses and users who would need to customise their monitoring solution with different levels of user access, other notification mechanisms, etc.
+description: Our Community Plan is free with limited functionality, while paid tiers offer customization and advanced features for businesses. Find more in our blog now.
 authors: team
 tags: [pricing, free-plan, paid-subscriptions]
 keywords: [pricing, free plan, paid subscriptions, monitoring, troubleshoot]

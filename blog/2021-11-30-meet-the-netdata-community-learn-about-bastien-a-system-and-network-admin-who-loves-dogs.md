@@ -1,6 +1,6 @@
 ---
 slug: meet-the-netdata-community-learn-about-bastien-a-system-and-network-admin-who-loves-dogs
-title: "Meet the Netdata Community: Learn About Bastien a System and Network Admin Who Loves Dogs"
+title: "Meet Bastien: A System & Network Admin Who Loves Dogs"
 description: "Meet the Netdata Community: Learn About Bastien a System and Network Admin Who Loves Dogs"
 image: /img/wp-archive/uploads/2022/03/Screen-Shot-2021-11-30-at-3.10.06-PM.png
 tags: [community]

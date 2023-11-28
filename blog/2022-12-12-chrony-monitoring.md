@@ -1,7 +1,7 @@
 ---
 slug: chrony-monitoring
 title: How to monitor and troubleshoot Chrony
-description: Monitoring and troubleshooting Chrony.
+description: Efficiently monitor Chrony time servers with Netdata, ensuring accurate and synchronized timekeeping for your network. Learn more in our blog.
 authors: shyam 
 tags: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync server]
 keywords: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync server]

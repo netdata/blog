@@ -1,7 +1,7 @@
 ---
 slug: anomaly-detection-on-prometheus-metrics
 title: Anomaly detection on Prometheus metrics
-description: Netdata now supports native anomaly detection on all your metrics.
+description: Unlock the power of anomaly detection on Prometheus metrics with Netdata, identifying and addressing irregularities in your monitoring data. Visit our blog.
 authors: andy
 tags: [monitoring, netdata, prometheus, metrics, anomaly-detection, ml, machine-, open-metrics, prometheus]
 keywords: [monitoring, netdata, prometheus, metrics, anomaly-detection, ml, machine-learning]

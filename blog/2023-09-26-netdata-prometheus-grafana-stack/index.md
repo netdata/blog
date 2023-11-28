@@ -7,7 +7,7 @@ keywords: [prometheus, exporter, grafana, netdata, monitoring-stack]
 image: ./img/stacked-netdata.png
 ---
 
-![netdata-prometheus-grafana-stack](./img/stacked-netdata.png)
+![We'll guide you on setting up Netdata, Prometheus, and Grafana for server monitoring using Docker on your local machine, for easy testing. Learn more now.](./img/stacked-netdata.png)
 
 In this blog, we will walk you through the basics of getting Netdata, Prometheus and Grafana all working together and
 monitoring your application servers. This article will be using docker on your local workstation. We will be working

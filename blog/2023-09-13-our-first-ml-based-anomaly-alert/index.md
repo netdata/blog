@@ -7,7 +7,7 @@ keywords: [machine-learning, anomaly-detection, ml, product]
 image: ./img/node-anomaly-rate-alert.jpg
 ---
 
-![node-anomaly-rate-alert](./img/node-anomaly-rate-alert.jpg)
+![Discover our first ML-based anomaly alert with Netdata, a groundbreaking approach to detecting irregularities and enhancing infrastructure monitoring.](./img/node-anomaly-rate-alert.jpg)
 
 Over the last few years we have slowly and methodically been building out the [ML based capabilities](https://learn.netdata.cloud/docs/ml-and-troubleshooting/) of the Netdata agent, dogfooding and iterating as we go. To date, these features have mostly been somewhat reactive and tools to aid once you are already troubleshooting.
 

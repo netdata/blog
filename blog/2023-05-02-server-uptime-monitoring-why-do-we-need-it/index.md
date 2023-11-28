@@ -7,7 +7,7 @@ keywords: [uptime, server-monitoring, monitoring]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![Servers are crucial to the operation of many applications and services, making their uptime a critical aspect of overall system performance. Learn more now.](./img/stacked-netdata.png)
 
 Server uptime monitoring tracks the availability and reliability of servers within your infrastructure.
 

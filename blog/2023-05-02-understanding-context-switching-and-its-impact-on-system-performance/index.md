@@ -1,13 +1,13 @@
 ---
 slug: understanding-context-switching-and-its-impact-on-system-performance
-title: Understanding Context Switching and Its Impact on System Performance
+title: The Impact Of Context Switching On System Performance
 authors: satya
 tags: [processes, context-switch, performance, monitoring,apps-plugin,applications]
 keywords: [processes, context-switch, performance, monitoring]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![In multitasking systems like Linux, context switching is crucial for efficient CPU management when there are more processes or threads than available cores.](./img/stacked-netdata.png)
 
 Context switching is the process of switching the CPU from one process, task or thread to another. In a multitasking operating system, such as Linux, the CPU has to switch between multiple processes or threads in order to keep the system running smoothly. This is necessary because each CPU core without hyperthreading can only execute one process or thread at a time. If there are many processes or threads running simultaneously, and very few CPU cores available to handle them, the system is forced to make more context switches to balance the CPU resources among them.
 

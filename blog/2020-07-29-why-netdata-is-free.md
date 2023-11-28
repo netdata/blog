@@ -1,7 +1,7 @@
 ---
 slug: why-netdata-is-free
 title: "Why Netdata is free"
-description: "Why Netdata is free"
+description: "Cloud will always be available for free for small size companies and home labers. We will articulate what features or limitations will require payment."
 image: /img/wp-archive/uploads/2022/03/Blog-Why-Netdata-is-Free-1.png
 tags: [product,culture,community]
 keywords: [netdata,product,culture,community]

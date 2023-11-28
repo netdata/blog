@@ -1,7 +1,7 @@
 ---
 slug: the-reality-of-netdatas-long-term-metrics-storage-database
-title: "The reality of Netdata’s long-term metrics storage database"
-description: "The reality of Netdata’s long-term metrics storage database"
+title: "The Reality Of Netdata’s Long-Term Metrics Storage Database"
+description: "Delve into the reality of Netdata's long-term metrics storage database and how it supports your data retention and analysis needs. Find out more today."
 image: /img/wp-archive/uploads/2022/03/Long-term-metrics-storage-1.png
 tags: [product,engineering]
 keywords: [netdata,product,engineering]

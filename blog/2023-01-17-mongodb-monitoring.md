@@ -1,7 +1,7 @@
 ---
 slug: mongodb-monitoring
 title: How to monitor and troubleshoot MongoDB
-description: Monitoring and troubleshooting MongoDB.
+description: Effortlessly monitor your MongoDB databases using Netdata, ensuring optimal performance and reliability for your NoSQL data. Learn more in our blog.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, mongodb,  database, nosql, data store]
 keywords: [how-to, monitor, troubleshoot, mongodb,  database, nosql, data store]

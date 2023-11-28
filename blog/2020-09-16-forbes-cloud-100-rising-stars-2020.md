@@ -1,7 +1,7 @@
 ---
 slug: forbes-cloud-100-rising-stars-2020
 title: "Netdata named to the Forbes Cloud 100 Rising Stars"
-description: "Netdata named to the Forbes Cloud 100 Rising Stars"
+description: "Discover the Forbes Cloud 100 Rising Stars of 2020 and their contributions to the cloud technology landscape. Visit our blog today to learn more."
 image: /img/wp-archive/uploads/2022/03/Cloud1002020-RisingStars-SMALL.png
 tags: [community,culture]
 keywords: [netdata,community,culture]

@@ -1,7 +1,7 @@
 ---
 slug: dnsmasq-monitoring
 title: How to monitor and troubleshoot Dnsmasq DNS Forwarder
-description: Monitoring and troubleshooting Dnsmasq DNS Forwarder.
+description: Achieve comprehensive Dnsmasq monitoring with Netdata, optimizing DNS and DHCP services for your IT infrastructure. Enhance your knowledge in our blog.
 authors: satya
 tags: [how-to, monitor, troubleshoot, dnsmasq,  dns, domain-name-server, DNS-management, dhcp, network-management]
 keywords: [how-to, monitor, troubleshoot, dnsmasq,  dns, domain-name-server, DNS-management, dhcp, network-management]

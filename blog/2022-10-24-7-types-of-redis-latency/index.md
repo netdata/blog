@@ -1,7 +1,7 @@
 ---
 slug: 7-types-of-redis-latency
 title: "7 types of Redis latency and how to fix it"
-description: "7 types of Redis latency and how to fix it"
+description: "Explore the seven types of Redis latency and gain insights into optimizing the performance of your Redis data store with Netdata. Learn more now."
 image: /img/wp-archive/uploads/2022/10/thumbnail.png
 tags: [how-to,infrastructure-monitoring,troubleshooting,redis,Redis,database-monitoring]
 keywords: [how-to,infrastructure-monitoring,troubleshooting,Redis]

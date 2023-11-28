@@ -1,7 +1,7 @@
 ---
 slug: docker-monitoring-netdata
 title: "Docker container monitoring with Netdata"
-description: "Docker container monitoring with Netdata"
+description: "Effortlessly monitor Docker containers with Netdata, gaining real-time insights into your containerized applications for optimal performance. Learn more now."
 image: /img/wp-archive/uploads/2022/03/docker-monitoring-netdata.png
 tags: [product,docker]
 keywords: [netdata,product]

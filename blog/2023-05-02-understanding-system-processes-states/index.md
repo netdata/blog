@@ -7,7 +7,7 @@ keywords: [processes, linux, process-states]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![System process states are crucial for understanding a computer's operation, affecting performance and stability at various points in a process's life cycle.](./img/stacked-netdata.png)
 
 The different states of system processes are essential to understanding how a computer system works. Each state represents a specific point in a process's life cycle and can impact system performance and stability.
 

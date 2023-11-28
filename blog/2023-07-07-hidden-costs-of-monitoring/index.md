@@ -7,7 +7,7 @@ keywords: [netdata-monitoring, costs-of-monitoring,hidden-costs,data-costs,oppor
 image: ./img/hidden-costs.png
 ---
 
-![hidden-costs](./img/hidden-costs.png)
+![Explore the hidden costs of monitoring with Netdata, understanding the potential challenges and expenses in your monitoring strategy. Find out more now.](./img/hidden-costs.png)
 
 When it comes to monitoring IT infrastructure, the costs you see on the price tag of the tool are often just the tip of the iceberg. Below the waterline, a mass of hidden costs can lurk, which can significantly affect the total cost of ownership.
 

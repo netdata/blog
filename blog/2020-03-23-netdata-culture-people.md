@@ -1,7 +1,7 @@
 ---
 slug: netdata-culture-people
 title: "The Netdata Culture and People"
-description: "The Netdata Culture and People"
+description: "Explore Netdata's culture and its people, gaining insights into the vibrant community and teamwork that drive infrastructure monitoring innovation."
 image: /img/wp-archive/uploads/2022/03/people-culture_01.png
 tags: [culture]
 keywords: [netdata,culture]

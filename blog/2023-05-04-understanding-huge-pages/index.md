@@ -7,7 +7,7 @@ keywords: [memory, ram, huge-pages, monitoring]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![Understand huge pages with Netdata, optimizing memory management for improved system performance and reliability. Get the latest insights today.](./img/stacked-netdata.png)
 
 
 Memory-intensive applications can benefit from improved performance by using huge pages, as they can reduce TLB pressure and memory fragmentation, and lower the memory management overhead overall. Developers should consider using HugeTLBfs in their mmap() and shmget() calls to take advantage of huge pages.

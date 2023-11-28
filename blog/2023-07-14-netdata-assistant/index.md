@@ -7,7 +7,7 @@ keywords: [assistant, troubleshooting, ai, ml, alerts]
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/24860547/253558524-e41868a3-1dde-4099-baab-7a0de43836ce.png
 ---
 
-![image](https://github.com/netdata/blog/assets/24860547/e41868a3-1dde-4099-baab-7a0de43836ce)
+![Introducing Netdata Assistant, a powerful tool for enhancing your monitoring and troubleshooting capabilities. Explore our insights. Visit our blog today.](https://github.com/netdata/blog/assets/24860547/e41868a3-1dde-4099-baab-7a0de43836ce)
 
 Hey there! We're excited to share a new troubleshooting feature we have added to Netdata, the Netdata Assistant. We've built this tool to help you troubleshoot more effectively and with less stress. Let's dive in.
 

@@ -7,7 +7,7 @@ keywords: [machine-learning, anomaly-detection, ml, product]
 image: ./img/anomaly-rate-by-type.jpeg
 ---
 
-![anomaly-rate-by-type](./img/anomaly-rate-by-type.jpeg)
+![Understand anomaly rate by type with Netdata, enabling you to categorize and manage anomalies effectively for enhanced system performance.](./img/anomaly-rate-by-type.jpeg)
 
 We have [recently added](https://github.com/netdata/netdata/pull/15856) a more detailed anomaly rate chart to Netdata that breaks out the overall [node anomaly rate](https://learn.netdata.cloud/docs/ml-and-troubleshooting/machine-learning-ml-powered-anomaly-detection#node-anomaly-rate) by type, this lets you more easily see what parts of your infrastructure might be experiencing an uptick in anomalies when you see the overall node anomaly rate increase.
 

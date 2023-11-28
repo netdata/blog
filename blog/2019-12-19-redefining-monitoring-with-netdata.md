@@ -1,7 +1,7 @@
 ---
 slug: redefining-monitoring-with-netdata
-title: "Redefining monitoring with Netdata (and how it came to be)"
-description: "Redefining monitoring with Netdata (and how it came to be)"
+title: "Redefining Monitoring with Netdata & Its Origins"
+description: "All other monitoring solutions are limited because they centralize all the data. We can lower the cost of monitoring by utilizing the open-source Netdata agents."
 image: /img/wp-archive/uploads/2019/12/redefining-monitoring-netdata_01.png
 tags: [company,culture,product]
 keywords: [netdata,company,culture,product]

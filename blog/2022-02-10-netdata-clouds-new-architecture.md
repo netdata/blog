@@ -1,7 +1,7 @@
 ---
 slug: netdata-clouds-new-architecture
 title: "Netdata Cloud’s New Architecture"
-description: "Netdata Cloud’s New Architecture"
+description: "To give you the best experience of our Cloud, we started migrating nodes running on the old architecture to the new one. Learn more in our blog today."
 image: /img/wp-archive/uploads/2022/03/New_arch_notification.jpeg
 tags: [product,architecture,deployment-strategies]
 keywords: [netdata,product,architecture]

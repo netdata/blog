@@ -1,13 +1,13 @@
 ---
 slug: remote-unix-monitoring-with-net-snmp
-title: Monitoring remote UNIX-like systems using Netdata and Net-SNMP
+title: Monitoring Remote UNIX-like Systems w/ Netdata & Net-SNMP
 authors: ferroin
 tags: [snmp, monitoring, infrastructure-monitoring, collectors]
 keywords: [snmp, monitoring, infrastructure-monitoring, collectors]
 image: ./img/img.jpg
 ---
 
-![img](./img/img.jpg)
+![Discover how to perform remote Unix monitoring using Net-SNMP, expanding your monitoring capabilities for a more comprehensive view of your infrastructure.](./img/img.jpg)
 
 Need to monitor a UNIX-like system, but can’t install Netdata on it? With our SNMP collector and Net-SNMP,
 you can get basic system information with just a bit of relatively quick and easy configuration.

@@ -1,11 +1,11 @@
 ---
 slug: missing-indexes-in-postgresql
-title: Missing indexes in PostgreSQL? How to quickly identify it
+title: How To Quickly Identify Missing Indexes In PostgreSQL
 authors: satya
 tags: [how-to, PostgreSql,postgres,postgresql]
 ---
 
-While working on improving the <a href="https://netdata.cloud/postgresql-monitoring/">Netdata PostgreSQL collector</a>, we were monitoring our production PostgreSQL instance and something caught our attention immediately. The rows fetched ratio seemed really, really low for one particular database... there were missing indexes in PostgreSQL!
+While enhancing the PostgreSQL collector, we spotted missing indexes in one database due to an unusually fetched ratio in our production instance.
 <!--truncate-->
 <b>Rows fetched ratio</b> is the percentage of rows that contain data needed to execute the query (rows fetched), out of the total number of rows scanned (rows returned). A low value indicates that the database is performing extra work by scanning a large number of rows that aren’t required to process the query.
 

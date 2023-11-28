@@ -1,7 +1,7 @@
 ---
 slug: web-servers-and-their-performance
 title: "How to monitor web servers and their performance"
-description: "How to monitor web servers and their performance"
+description: "Explore the world of web servers and their performance with Netdata, gaining insights into enhancing your server's responsiveness. Find more in our blog."
 image: /img/wp-archive/uploads/2022/10/Web-Servers-2.png
 tags: [how-to,infrastructure-monitoring,apache,nginx,web-servers]
 keywords: [how-to,infrastructure-monitoring]

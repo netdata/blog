@@ -1,7 +1,7 @@
 ---
 slug: contribute-machine-learning
 title: "Contribute to Netdata’s machine learning efforts!"
-description: "Contribute to Netdata’s machine learning efforts!"
+description: "Explore the world of machine learning contributions with Netdata, unlocking new insights and capabilities for infrastructure monitoring. Learn more now."
 image: /img/wp-archive/uploads/2022/03/contribute-machine-learning.png
 tags: [community,machine-learning]
 keywords: [netdata,community,machine-learning]

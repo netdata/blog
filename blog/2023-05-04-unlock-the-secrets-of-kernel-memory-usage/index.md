@@ -7,7 +7,7 @@ keywords: [kernel, memory, vmalloc, slab]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![Unlock the secrets of kernel memory usage with Netdata, understanding how your system's memory is utilized for optimized performance. Learn more now.](./img/stacked-netdata.png)
 
 The `mem.kernel` chart in Netdata provides insight into the memory usage of various kernel subsystems and mechanisms. By understanding these dimensions and their technical details, you can monitor your system's kernel memory usage and identify potential issues or inefficiencies. Monitoring these dimensions can help you ensure that your system is running efficiently and provide valuable insights into the performance of your kernel and memory subsystem.
 

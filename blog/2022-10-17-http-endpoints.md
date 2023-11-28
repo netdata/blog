@@ -1,7 +1,7 @@
 ---
 slug: http-endpoints
 title: "How to monitor HTTP endpoints"
-description: "How to monitor HTTP endpoints"
+description: "Master the use of HTTP endpoints with Netdata, enhancing data collection and integration for advanced infrastructure monitoring. Learn more now."
 image: /img/wp-archive/uploads/2022/10/http-endpoint-4.png
 tags: [how-to,infrastructure-monitoring,http,httpcheck,ping]
 keywords: [how-to,infrastructure-monitoring,http]

@@ -1,7 +1,7 @@
 ---
 slug: netdata-is-launching-its-discord-server
 title: "Netdata is launching its Discord server"
-description: "Netdata is launching its Discord server"
+description: "Community building is challenging, especially with a venerable community like ours, where hundreds of contributors have helped create a monitoring solution."
 image: /img/wp-archive/uploads/2022/03/netdata-discord.png
 tags: [product,discord]
 keywords: [netdata,product]

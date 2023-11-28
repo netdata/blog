@@ -1,7 +1,7 @@
 ---
 slug: nginx-monitoring
 title: "How to monitor NGINX web servers?"
-description: "How to monitor NGINX web servers?"
+description: "Effortlessly monitor Nginx web servers with Netdata, ensuring high-performance websites and efficient server operation. Visit our blog for more insights."
 image: https://user-images.githubusercontent.com/96257330/200813970-c1cb5be7-21ec-4365-8cfd-bef9545197f1.png
 tags: [how-to,infrastructure-monitoring,nginx,web-servers,apache,nginx,web-servers]
 keywords: [how-to,infrastructure-monitoring,nginx,web-servers]
