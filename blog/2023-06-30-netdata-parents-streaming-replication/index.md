@@ -7,7 +7,7 @@ keywords: [netdata-monitoring, streaming,replication,netdata-parents,centralizat
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/netdata-parents.png)
+![Discover Netdata's streaming replication for parents, ensuring efficient data replication and backup for enhanced data protection. Learn more today.](./img/netdata-parents.png)
 
 ## What are they and why do we need them?
 

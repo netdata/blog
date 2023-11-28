@@ -5,7 +5,7 @@ authors: shyam
 tags: [how-to, PostgreSQL,postgres,postgresql]
 ---
 
-![logo](https://wiki.postgresql.org/images/9/9a/PostgreSQL_logo.3colors.540x557.png)
+![Netdata's PostgreSQL guide offers setup, continuous metric collection, and tools for efficient database monitoring and advanced troubleshooting. Learn more!](https://wiki.postgresql.org/images/9/9a/PostgreSQL_logo.3colors.540x557.png)
 
 <!--truncate-->
 

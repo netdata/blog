@@ -1,7 +1,7 @@
 ---
 slug: what-is-devops
 title: "What is DevOps?"
-description: "What is DevOps?"
+description: "Discover what DevOps is all about with Netdata, gaining a clear understanding of the principles that drive modern software development and operations."
 image: /img/wp-archive/uploads/2022/03/what-is-devops.png
 tags: [engineering]
 keywords: [netdata,engineering]

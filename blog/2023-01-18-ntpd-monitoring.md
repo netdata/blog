@@ -1,7 +1,7 @@
 ---
 slug: ntpd-monitoring
 title: How to monitor and troubleshoot NTPdaemon
-description: Monitoring and troubleshooting NTPdaemon.
+description: Master the art of NTPD monitoring with Netdata, ensuring precise time synchronization for your network. Gain valuable insights in our blog today.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, ntpd, ntp ]
 keywords: [how-to, monitor, troubleshoot, ntpd, ]

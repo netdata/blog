@@ -1,7 +1,7 @@
 ---
 slug: speedtest-monitoring
-title: How to monitor Internet quality and ISP performance with Netdata
-description: Monitoring and troubleshooting ISP performance.
+title: How To Monitor Internet Quality & ISP Performance w/ Netdata
+description: Optimize your network performance with speed test monitoring using Netdata, ensuring efficient and reliable data connections. Find out more today.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, ISP, performance, speed, download, upload, latency, jitter, packetloss, speedtest, ookla]
 keywords: [how-to, monitor, troubleshoot, ISP, performance, speed, download, upload, latency, jitter, packetloss, speedtest, ookla]

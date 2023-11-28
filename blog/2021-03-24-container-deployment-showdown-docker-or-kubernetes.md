@@ -1,7 +1,7 @@
 ---
 slug: container-deployment-showdown-docker-or-kubernetes
 title: "Container deployment showdown: Docker or Kubernetes?"
-description: "Container deployment showdown: Docker or Kubernetes?"
+description: "Monitoring app performance is vital. It's challenging due to distributed apps, where an outage can disrupt business operations and impact the bottom line."
 image: /img/wp-archive/uploads/2022/03/Kubernetes_vs_Docker.png
 tags: [engineering,containers-and-vms,containers]
 keywords: [netdata,engineering]

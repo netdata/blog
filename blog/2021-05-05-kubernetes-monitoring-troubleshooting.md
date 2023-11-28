@@ -1,7 +1,7 @@
 ---
 slug: kubernetes-monitoring-troubleshooting
 title: "Kubernetes monitoring and troubleshooting made simple"
-description: "Kubernetes monitoring and troubleshooting made simple"
+description: "Monitoring was tough with few servers. Tools lacked real-time, granular metrics and were difficult for both experts and non-experts in troubleshooting."
 image: /img/wp-archive/uploads/2022/03/kubernetes-monitoring-troubleshooting.png
 tags: [product,kubernetes]
 keywords: [netdata,product]

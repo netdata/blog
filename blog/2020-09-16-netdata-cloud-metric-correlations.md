@@ -1,6 +1,6 @@
 ---
 slug: netdata-cloud-metric-correlations
-title: "Introducing our first Netdata Cloud Insights feature: Metric Correlations for faster root cause analysis"
+title: "New feature: Metric Correlations For Faster Root Cause Analysis"
 description: "Introducing our first Netdata Cloud Insights feature: Metric Correlations for faster root cause analysis"
 image: /img/wp-archive/uploads/2022/03/Cloud-Correlations@2x.png
 tags: [product,engineering,machine-learning]

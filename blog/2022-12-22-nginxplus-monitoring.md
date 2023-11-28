@@ -1,7 +1,7 @@
 ---
 slug: nginxplus-monitoring
 title: How to monitor and troubleshoot NGINXPlus
-description: Monitoring and troubleshooting NGINXPlus.
+description: Optimize your Nginx Plus web server monitoring with Netdata, unlocking advanced insights for your web application performance. Find out more now.
 authors: satya
 tags: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http,apache,web-servers]
 keywords: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http]

@@ -1,7 +1,7 @@
 ---
 slug: netdata-remote-working
 title: "Creating a thriving, agile, remote team"
-description: "Creating a thriving, agile, remote team"
+description: "Explore the world of remote working with Netdata, uncovering tips and insights for effective and productive remote collaboration. Find more now."
 image: /img/wp-archive/uploads/2022/03/netdata-remote-working_01.png
 tags: [culture]
 keywords: [netdata,culture]

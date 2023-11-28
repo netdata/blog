@@ -1,13 +1,13 @@
 ---
 slug: revolutionizing-operations-centers-real-time-monitoring-solution
-title: "Revolutionizing Operations Centers with Netdata's Real-time Monitoring Solution"
+title: "Real-Time Monitoring: Revolutionizing Operations Centers"
 authors: satya
 tags: [ops-centers, operations-centers,monitoring,outages,recovery,sre,devops]
 keywords: [ops-centers, operations-centers,monitoring,outages,recovery,sre,devops]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![Netdata supports 24-hour operations centers with real-time monitoring, improving incident detection, troubleshooting speed, and overall system performance.](./img/stacked-netdata.png)
 
 In today's fast-paced digital landscape, 24-hour operations centers play a crucial role in managing and monitoring large-scale infrastructures. These centers must be equipped with an effective monitoring solution that addresses their unique needs, enabling them to respond quickly to incidents and maintain optimal system performance. Netdata, a comprehensive monitoring solution, has been designed to meet these critical requirements with its advanced capabilities and recent enhancements.
 

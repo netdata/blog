@@ -1,7 +1,7 @@
 ---
 slug: how-to-extend-the-geth-collector
 title: "How to extend the Geth collector"
-description: "How to extend the Geth collector"
+description: "Learn how to extend the Geth collector with Netdata, customizing your Ethereum blockchain monitoring for tailored insights. Find more now in our blog."
 image: /img/wp-archive/uploads/2022/03/Geth-collector-diagram-1.png
 tags: [engineering,geth]
 keywords: [netdata,engineering]

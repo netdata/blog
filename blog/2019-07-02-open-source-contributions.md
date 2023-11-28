@@ -1,7 +1,7 @@
 ---
 slug: open-source-contributions
-title: "How to inspire exceptional contributions to your open-source project"
-description: "How to inspire exceptional contributions to your open-source project"
+title: "How To Inspire Valuable Contributions To Your Open-Source Project"
+description: "Explore the power of open-source contributions with Netdata, driving innovation and collaboration in the world of monitoring. Find more insights in our blog."
 image: /img/wp-archive/uploads/2022/03/open-source-contributions.png
 tags: [community]
 keywords: [netdata,community]

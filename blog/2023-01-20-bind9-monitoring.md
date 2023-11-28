@@ -1,7 +1,7 @@
 ---
 slug: bind9-monitoring
 title: How to monitor and troubleshoot BIND 9
-description: Monitoring and troubleshooting BIND 9.
+description: Access the blog archive for a wealth of insights and knowledge on infrastructure monitoring and management with Netdata. Find out more today.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, bind9, isc,  dns-server, domain-name-server, DNS-management, remote-control]
 keywords: [how-to, monitor, troubleshoot, bind9, isc,  dns-server, domain-name-server, DNS-management, remote-control]

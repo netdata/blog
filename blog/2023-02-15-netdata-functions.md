@@ -1,7 +1,7 @@
 ---
 slug: netdata-functions
 title: Introducing Netdata Functions
-description: Introducing Netdata Functions
+description: Delve into Netdata functions, unlocking advanced customization and extensibility for your monitoring setup. Visit our blog today and learn more.
 authors: shyam
 tags: [real-time, monitor, troubleshoot, functions, top, processes]
 keywords: [real-time, monitor, troubleshoot, functions, top, processes]

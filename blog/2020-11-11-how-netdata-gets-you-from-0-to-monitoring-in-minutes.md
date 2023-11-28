@@ -1,7 +1,7 @@
 ---
 slug: how-netdata-gets-you-from-0-to-monitoring-in-minutes
 title: "How Netdata gets you from 0 to monitoring in minutes"
-description: "How Netdata gets you from 0 to monitoring in minutes"
+description: "Learn how Netdata takes you from zero to monitoring in minutes, providing a quick and easy path to effective infrastructure monitoring. Visit our blog now."
 image: /img/wp-archive/uploads/2022/03/0conf.png
 tags: [product,deployment-strategies]
 keywords: [netdata,product]

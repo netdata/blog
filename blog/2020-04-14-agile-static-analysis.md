@@ -1,7 +1,7 @@
 ---
 slug: agile-static-analysis
 title: "The role of shift-left testing in an agile environment"
-description: "The role of shift-left testing in an agile environment"
+description: "Discover the benefits of agile static analysis with Netdata, helping you enhance your code quality and software development practices. Find out more now."
 image: /img/wp-archive/uploads/2022/03/Netdata-Security-use-with-Static-Analysis.png
 tags: [engineering]
 keywords: [netdata,engineering]

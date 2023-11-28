@@ -1,7 +1,7 @@
 ---
 slug: split-plugin-packages
 title: Upcoming Changes to Plugins in Native Packages
-description: Upcoming Changes to Plugins in Native Packages
+description: Explore the benefits of split plugin packages with Netdata, simplifying plugin management and customization for efficient infrastructure monitoring.
 authors: ferroin
 tags: [installation, native-packages, updates, linux, collectors, engineering]
 keywords: [installation, native-packages, updates, linux, collectors, engineering]

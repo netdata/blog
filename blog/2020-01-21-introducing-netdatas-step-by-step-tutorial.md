@@ -1,7 +1,7 @@
 ---
 slug: introducing-netdatas-step-by-step-tutorial
 title: "Introducing Netdata’s step-by-step tutorial"
-description: "Introducing Netdata’s step-by-step tutorial"
+description: "We're building Netdata to make monitoring and troubleshooting accessible to all, simplifying the complex task of health monitoring and system analysis."
 image: /img/wp-archive/uploads/2022/03/step-by-step-tutorial.png
 tags: [product]
 keywords: [netdata,product]

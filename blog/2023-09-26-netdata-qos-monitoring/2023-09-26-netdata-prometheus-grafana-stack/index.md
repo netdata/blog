@@ -7,7 +7,7 @@ keywords: [qos, tc, quality-of-service, classes, network-monitoring]
 image: ./img/stacked-netdata.png
 ---
 
-![netdata-qos-classes](./img/stacked-netdata.png)
+![Netdata monitors tc QoS classes for all interfaces, including FireQOS. A shell helper is available, but most parsing is done in the C code. Learn more now.](./img/stacked-netdata.png)
 
 Netdata monitors `tc` QoS classes for all interfaces.
 

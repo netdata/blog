@@ -5,7 +5,7 @@ authors: satya
 tags: [how-to,observability]
 ---
 
-It is sometimes easy to get lost in the mountain of metrics and infinite number of dimensions when working with an infrastructure monitoring tool. Being able to filter metrics by label and visualize only what is relevant to the current scope of monitoring &troubleshooting, becomes absolutely crucial to the success of SREs, Sysadmins and DevOps professionals.
+Label-based metric filtering and visualization are essential for SREs, Sysadmins, and DevOps to stay focused and effective in infrastructure monitoring.
 <!--truncate-->
 The Netdata <a href="https://staging1--netdata-docusaurus.netlify.app/docs/getting-started/netdata-in-a-pane">chart label filtering feature</a> supports grouping by and filtering each chart based on labels (key/value pairs) applicable to the context and provides fine-grain capability on slicing the data / metrics.
 

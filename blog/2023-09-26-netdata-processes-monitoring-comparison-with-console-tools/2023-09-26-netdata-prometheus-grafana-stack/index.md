@@ -1,13 +1,13 @@
 ---
 slug: netdata-processes-monitoring-comparison-with-console-tools
-title: "Netdata Processes monitoring and its comparison with other console based tools"
+title: "Netdata's Process Monitoring vs. Other Console Based Tools"
 authors: satya
 tags: [processes, top, htop, atop, glances, application-monitoring, apm]
 keywords: [processes, top, htop, atop, glances, application-monitoring, apm]
 image: ./img/stacked-netdata.png
 ---
 
-![netdata-prometheus-grafana-stack](./img/stacked-netdata.png)
+![Compare Netdata's processes monitoring with console tools, unlocking a comprehensive view of your system's performance for efficient troubleshooting.](./img/stacked-netdata.png)
 
 Netdata reads `/proc/<pid>/stat` for all processes, once per second and extracts `utime` and
 `stime` (user and system cpu utilization), much like all the console tools do.

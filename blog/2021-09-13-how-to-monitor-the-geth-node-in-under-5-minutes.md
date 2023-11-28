@@ -1,7 +1,7 @@
 ---
 slug: how-to-monitor-the-geth-node-in-under-5-minutes
 title: "How to monitor the Geth node in under 5 minutes"
-description: "How to monitor the Geth node in under 5 minutes"
+description: "Learn to monitor your Geth node in under 5 minutes with Netdata. Gain insights into your Ethereum blockchain infrastructure effortlessly. Visit our blog now."
 image: /img/wp-archive/uploads/2022/03/How-Geth-affect-the-CPU-charts.png
 tags: [engineering,community,geth]
 keywords: [netdata,engineering,community]

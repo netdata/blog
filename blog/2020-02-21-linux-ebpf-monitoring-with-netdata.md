@@ -1,7 +1,7 @@
 ---
 slug: linux-ebpf-monitoring-with-netdata
 title: "Linux eBPF monitoring with Netdata"
-description: "Linux eBPF monitoring with Netdata"
+description: "To help you more safely step into this phase of making your application even better, we’ve just released a brand-new eBPF collector in v1.20 of Netdata."
 image: /img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata.png
 tags: [product,ebpf,operating-system-monitoring]
 keywords: [netdata,product]

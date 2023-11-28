@@ -1,13 +1,13 @@
 ---
 slug: swap-memory-when-and-how-to-use-it-on-your-production-systems-or-cloud-provided-vms
-title: Swap Memory - When and How to Use It on Your Production Systems or Cloud-Provided VMs
+title: How Swap Memory Can Benefit Production Systems & Cloud VMs
 authors: satya
 tags: [swap, swap-memory, memory, ram, rss, production-systems, cloud, vm,operating-system-monitoring]
 keywords: [swap, swap-memory, memory, ram, rss, production-systems, cloud, vm]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![Swap memory supplements RAM by using hard disk space when physical memory is low, relocating less frequently used data. Explore our blog today.](./img/stacked-netdata.png)
 
 Swap memory, also known as virtual memory, is a space on a hard disk that is used to supplement the physical memory (RAM) of a computer. The swap space is used when the system runs out of physical memory, and it moves less frequently accessed data from RAM to the hard disk, freeing up space in RAM for more frequently accessed data. But should swap memory be enabled on production systems and cloud-provided virtual machines (VMs)? Let's explore the pros and cons.
 

@@ -1,7 +1,7 @@
 ---
 slug: logind-monitoring
 title: How to monitor and troubleshoot systemd-logind
-description: Monitoring and troubleshooting systemd-logind.
+description: Effortlessly monitor logind services with Netdata, ensuring smooth and secure user authentication for your Linux system. Visit our blog today for more.
 authors: satya
 tags: [how-to, monitor, troubleshoot, logind,  login, authentication, security]
 keywords: [how-to, monitor, troubleshoot, logind,  login, authentication, security]

@@ -1,7 +1,7 @@
 ---
 slug: what-is-infrastructure-monitoring
 title: "What is Infrastructure Monitoring?"
-description: "What is Infrastructure Monitoring?"
+description: "Infrastructure monitoring tracks system performance, availability, and health, ensuring optimal operation and timely issue resolution in IT environments."
 image: /img/wp-archive/uploads/2022/03/Blog-What_is_Infrastructure_Monitoring_Header.png
 tags: [engineering,infrastructure-monitoring]
 keywords: [netdata,engineering]

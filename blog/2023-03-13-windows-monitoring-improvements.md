@@ -1,7 +1,7 @@
 ---
 slug: windows-monitoring-improvements
 title: Windows Server Monitoring Improvements
-description: Windows server monitoring improvements with Netdata
+description: Experience Windows monitoring improvements with Netdata, ensuring efficient and reliable insights into your Windows-based systems. Find out more today.
 authors: shyam
 tags: [real-time, monitor, troubleshoot, windows, server,windows-monitoring]
 keywords: [real-time, monitor, troubleshoot, windows, server]

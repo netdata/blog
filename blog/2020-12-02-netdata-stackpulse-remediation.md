@@ -1,7 +1,7 @@
 ---
 slug: netdata-stackpulse-remediation
-title: "Netdata and StackPulse: Per-second metrics meet automated remediation"
-description: "Netdata and StackPulse: Per-second metrics meet automated remediation"
+title: "Netdata and StackPulse: Real-time Metrics and Automation"
+description: "Discover Netdata StackPulse remediation, a powerful tool for automating issue resolution and enhancing your infrastructure monitoring. Learn more now."
 image: /img/wp-archive/uploads/2022/03/netdata-stackpulse.png
 tags: [product]
 keywords: [netdata,product]

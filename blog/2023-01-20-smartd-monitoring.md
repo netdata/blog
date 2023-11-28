@@ -1,7 +1,7 @@
 ---
 slug: smartd_log-monitoring
 title: How to monitor and troubleshoot S.M.A.R.T. attributes
-description: Monitoring and troubleshooting S.M.A.R.T. attributes.
+description: Master smartd log monitoring with Netdata, ensuring the health and reliability of your storage devices for uninterrupted data access. Learn more today.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, smartd_log, S.M.A.R.T, storage-device, ATA, SCSI,disks]
 keywords: [how-to, monitor, troubleshoot, smartd_log, S.M.A.R.T, storage-device, ATA, SCSI]

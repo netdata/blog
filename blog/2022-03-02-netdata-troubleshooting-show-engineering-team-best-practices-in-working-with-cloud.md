@@ -1,7 +1,7 @@
 ---
 slug: netdata-troubleshooting-show-engineering-team-best-practices-in-working-with-cloud
-title: "Netdata Troubleshooting Show: Engineering Team Best Practices in Working with Cloud"
-description: "Netdata Troubleshooting Show: Engineering Team Best Practices in Working with Cloud"
+title: "Troubleshooting Show: Best Practices In Working with Cloud"
+description: "Learn best practices in cloud-based troubleshooting with Netdata, as the engineering team shares insights and strategies for effective problem-solving."
 image: /img/wp-archive/uploads/2022/03/group_promo.png
 tags: [community]
 keywords: [netdata,community]

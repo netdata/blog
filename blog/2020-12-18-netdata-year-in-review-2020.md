@@ -1,7 +1,7 @@
 ---
 slug: netdata-year-in-review-2020
 title: "Netdata Year in Review 2020"
-description: "Netdata Year in Review 2020"
+description: "Reflect on Netdata's Year in Review for 2020, a look back at the milestones and achievements in the world of infrastructure monitoring. Learn more now."
 image: /img/wp-archive/uploads/2021/01/DevOps-Metrics.png
 tags: [community]
 keywords: [netdata,community]

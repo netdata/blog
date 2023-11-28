@@ -1,13 +1,13 @@
 ---
 slug: understanding-interrupts-softirqs-and-softnet-in-linux
-title: Understanding Interrupts, Softirqs, and Softnet in Linux
+title: Understanding Interrupts, Softirqs, & Softnet In Linux Systems
 authors: satya
 tags: [interrupts, softirq, softnet, linux, monitoring,operating-system-monitoring]
 keywords: [interrupts, softirq, softnet, linux, monitoring]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![Explore the significance of interrupts, and softnet in the Linux kernel. Learn how to monitor them with Netdata on both bare-metal servers and VMs in our blog.](./img/stacked-netdata.png)
 
 Interrupts, softirqs, and softnet are all critical parts of the Linux kernel that can impact system performance. In this blog post, we'll explore their usefulness, and discuss how to monitor them using Netdata for both bare-metal servers and VMs.
 

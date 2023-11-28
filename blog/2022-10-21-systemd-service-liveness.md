@@ -1,7 +1,7 @@
 ---
 slug: systemd-service-liveness
 title: "How to monitor systemd service liveness"
-description: "How to monitor systemd service liveness"
+description: "Master systemd service liveness with Netdata, ensuring the health and availability of your Linux services and applications. Gain more insights from our blog."
 image: /img/wp-archive/uploads/2022/10/Systemmd-Service-Liveness-e1666366169680.png
 tags: [how-to,infrastructure-monitoring,monitoring,systemd,systemd-services]
 keywords: [how-to,infrastructure-monitoring,monitoring]

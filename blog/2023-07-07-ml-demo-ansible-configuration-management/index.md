@@ -7,7 +7,7 @@ keywords: [configuration-management, ansible, netdata-demo, demo, ml, machine-le
 image: ./img/netdata-ansible.jpg
 ---
 
-![netdata-ansible](./img/netdata-ansible.jpg)
+![Take a look in a machine learning demo with Ansible configuration management on Netdata, showcasing efficient automation for your systems.](./img/netdata-ansible.jpg)
 
 We are always trying to lower the barrier to entry when it comes to monitoring and observability and one place we have consistently witnessed some pain from users is around adopting and approaching [configuration management](https://www.atlassian.com/microservices/microservices-architecture/configuration-management) tools and practices as your infrastructure grows and becomes more complex.
 

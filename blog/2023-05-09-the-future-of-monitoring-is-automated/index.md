@@ -7,7 +7,7 @@ keywords: [monitoring, infrastructure monitoring, anomalies, automation]
 image: ./img/stacked-netdata.png
 ---
 
-So, you think you monitor your infra?
+Infrastructure monitoring is essential today, yet many businesses neglect it, making poor choices that hinder their talent. Learn more in our blog today.
 
 <!-- truncate -->
 

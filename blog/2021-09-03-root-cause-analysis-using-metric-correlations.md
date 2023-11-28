@@ -1,7 +1,7 @@
 ---
 slug: root-cause-analysis-using-metric-correlations
 title: "Root cause analysis using Metric Correlations"
-description: "Root cause analysis using Metric Correlations"
+description: "Our Metric Correlations tool helps you monitor your infrastructure, by automatically identifying significant metric changes during a specific period. Learn more"
 image: /img/wp-archive/uploads/2022/03/Screen-Shot-2021-09-03-at-1.43.32-PM-1.png
 tags: [engineering,machine-learning,metric-correlations]
 keywords: [netdata,engineering,machine-learning]

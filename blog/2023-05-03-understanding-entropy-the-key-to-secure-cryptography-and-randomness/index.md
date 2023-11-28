@@ -1,13 +1,13 @@
 ---
 slug: understanding-entropy-the-key-to-secure-cryptography-and-randomness
-title: "Understanding Entropy: The Key to Secure Cryptography and Randomness"
+title: "Understanding Entropy: The Key to Secure Cryptography & Randomness"
 authors: satya
 tags: [entropy, security, cryptography, monitoring,operating-system-monitoring]
 keywords: [entropy, security, cryptography, monitoring]
 image: ./img/stacked-netdata.png
 ---
 
-![stacked-netdata](./img/stacked-netdata.png)
+![Entropy is vital in cryptography for generating secure random keys. Insufficient entropy can lead to vulnerabilities in cryptographic protocols. Learn more now.](./img/stacked-netdata.png)
 
 [Entropy](https://en.wikipedia.org/wiki/Entropy_(computing)) is a measure of the randomness or unpredictability of data. In the context of cryptography, entropy is used to generate random numbers or keys that are essential for secure communication and encryption. Without a good source of entropy, cryptographic protocols can become vulnerable to attacks that exploit the predictability of the generated keys.
 

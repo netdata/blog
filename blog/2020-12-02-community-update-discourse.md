@@ -1,7 +1,7 @@
 ---
 slug: community-update-discourse
 title: "Community update: Discourse, community efforts"
-description: "Community update: Discourse, community efforts"
+description: "Stay updated with the Netdata community on Discourse, connecting with like-minded individuals and sharing insights on infrastructure monitoring."
 image: /img/wp-archive/uploads/2022/03/Community-update_-Discourse-community-efforts.png
 tags: [community]
 keywords: [netdata,community]

@@ -1,7 +1,7 @@
 ---
 slug: all-new-netdata-cloud-charts-2-0
 title: "All-new Netdata Cloud Charts 2.0"
-description: "All-new Netdata Cloud Charts 2.0"
+description: "Discover the exciting updates in Netdata Cloud Charts 2.0, providing advanced charting capabilities for comprehensive data visualization. Learn more now."
 image: /img/wp-archive/uploads/2022/03/Netdata-Charts-2.0.png
 tags: [engineering,product,charts,observability]
 keywords: [netdata,engineering,product]

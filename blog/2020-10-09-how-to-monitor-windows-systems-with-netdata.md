@@ -1,7 +1,7 @@
 ---
 slug: how-to-monitor-windows-systems-with-netdata
 title: "How to monitor Windows systems with Netdata"
-description: "How to monitor Windows systems with Netdata"
+description: "Discover how to effectively monitor Windows systems using Netdata, ensuring optimal performance and stability for your IT environment. Learn more now."
 image: /img/wp-archive/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png
 tags: [product,engineering,windows]
 keywords: [netdata,product,engineering]

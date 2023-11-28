@@ -1,13 +1,13 @@
 ---
 slug: monitoring-multi-cloud-hybrid-cloud
-title: "Monitoring Multi-Cloud and Hybrid-Cloud Infrastructures: Challenges and Best Practices"
+title: "Multi- & Hybrid-Cloud Infrastructures: Challenges & Best Practices"
 authors: team
 tags: [monitoring, observability, cloudoptimization, cloudcomputing, saas, multicloud, hybridcloud,aws,gcp,azure,cloud]
 keywords: [monitoring, observability, cloud optimization, cloud computing, saas, multicloud, hybridcloud]
 image: https://github.com/netdata/blog/assets/24860547/725f98c2-e091-43ef-8ad4-559aac5441d0
 ---
 
-The advent of multi-cloud and hybrid-cloud architectures has created new opportunities for organizations to leverage best-in-class features from various cloud service providers. However, these complex environments present their own unique challenges, especially when it comes to monitoring and managing performance.
+Multi-cloud and hybrid-cloud architectures provide benefits but pose monitoring and performance management challenges. Learn more in our blog now.
 
 <!--truncate-->
 

@@ -1,7 +1,7 @@
 ---
 slug: netdata-version-1.37.1
-title: "Release 1.37.1: Patch release for security issues"
-description: "Release 1.37.1: Patch release for security issues"
+title: "Release 1.37.0: Infinite Scalability, Database Tiering & More"
+description: "Stay updated with the latest release, Netdata Version 1.37.1, for advanced features and improvements in infrastructure monitoring. Learn more now."
 image: https://user-images.githubusercontent.com/88642300/205665462-39758bd7-65e7-429e-9b57-c72c95c52be1.png
 tags: [product,release-notes]
 keywords: [netdata,product]

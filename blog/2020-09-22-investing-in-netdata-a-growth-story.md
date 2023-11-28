@@ -1,7 +1,7 @@
 ---
 slug: investing-in-netdata-a-growth-story
 title: "Investing in Netdata: a growth story"
-description: "Investing in Netdata: a growth story"
+description: "Although Netdata as a company is building monitoring solutions, all the monitoring we provide is offered for free to everyone. Find out more in our blog."
 image: /img/wp-archive/uploads/2022/03/Series-A-funding-extension.png
 tags: [community,culture]
 keywords: [netdata,community,culture]

@@ -1,7 +1,7 @@
 ---
 slug: improve-your-security-with-systemd-and-netdata
 title: "Improve Your Security With systemd-journal and Netdata"
-description: "How can you improve your security using systemd journal logs & Netdata?"
+description: "Enhance your security with systemd and Netdata, unlocking powerful tools for improved system protection and monitoring. Find out more in our blog now."
 image: https://github.com/netdata/blog/assets/139226121/bd69cf0b-3a45-4c54-92ca-0609e15508dc
 authors: satya
 tags: [systemd, systemd journal, logs, monitoring, security]

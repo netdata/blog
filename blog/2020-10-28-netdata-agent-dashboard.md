@@ -1,7 +1,7 @@
 ---
 slug: netdata-agent-dashboard
-title: "Netdata’s dashboard: open by default and secure by design"
-description: "Netdata’s dashboard: open by default and secure by design"
+title: "Netdata’s Dashboard: Open By Default & Secure By Design"
+description: "Before you jump back into the DigitalOcean dashboard, let’s look into the reality of why we expose the dashboard on this port by default. Learn more now."
 image: /img/wp-archive/uploads/2022/03/netdata-dashboard-open-secure-min.png
 tags: [product]
 keywords: [netdata,product]

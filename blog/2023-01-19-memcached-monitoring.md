@@ -1,7 +1,7 @@
 ---
 slug: memcached-monitoring
 title: How to monitor and troubleshoot Memcached
-description: Monitoring and troubleshooting Memcached.
+description: Explore Memcached monitoring techniques and keep your caching system in check with Netdata for enhanced performance. Visit our blog for more.
 authors: shyam
 tags: [how-to, monitor, troubleshoot, memcached, caching, distributed-memory, data-store]
 keywords: [how-to, monitor, troubleshoot, memcached, caching, distributed-memory, data-store]

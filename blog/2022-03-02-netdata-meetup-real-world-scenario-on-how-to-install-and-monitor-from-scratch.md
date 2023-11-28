@@ -1,7 +1,7 @@
 ---
 slug: netdata-meetup-real-world-scenario-on-how-to-install-and-monitor-from-scratch
-title: "Netdata Meetup: Real World Scenario on How to Install and Monitor from Scratch"
-description: "Netdata Meetup: Real World Scenario on How to Install and Monitor from Scratch"
+title: "Netdata Meetup: How To Install And Monitor From Scratch"
+description: "Join the Netdata meetup for real-world scenarios on installing and monitoring from scratch, gaining practical insights into infrastructure monitoring."
 image: /img/wp-archive/uploads/2022/03/netdata-meetup-1.png
 tags: [community]
 keywords: [netdata,community]
