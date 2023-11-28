@@ -31,9 +31,6 @@ With the new Netdata Charts you can:
 
 
 
-<figure class="wp-block-image size-full"><img src="/img/wp-archive/uploads/2022/03/ezgif-1-2ac81d0df3.gif" alt="" class="wp-image-16214"/></figure>
-
-
 
 ## New chart engine underneath
 
