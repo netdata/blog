@@ -6,10 +6,10 @@ description: |
 authors: satya
 tags: [netdata-monitoring, cost-transparency, costs-of-monitoring,no-hidden-costs, data-costs, opportunity-costs,retention-costs,cost-of-delayed-rca]
 keywords: [netdata-monitoring, cost-transparency, costs-of-monitoring,no-hidden-costs, data-costs, opportunity-costs,retention-costs,cost-of-delayed-rca]
-image: ./img/hidden-costs.png
+image: ./img/netdata-cost-transparency.png
 
 ---
-![Netdata Cost Transparency](./img/hidden-costs.png)
+![Netdata Cost Transparency](./img/netdata-cost-transparency.png)
 
 Businesses are increasingly reliant on monitoring tools to ensure the seamless performance and reliability of their systems. However, the true cost of implementing and maintaining these tools is often obscured by hidden expenses. Our previous blog delved into the concealed costs associated with various monitoring solutions, such as Prometheus & Grafana (Open Source Monitoring) and commercial platforms like Datadog, Dynatrace, and NewRelic. These costs can manifest in various forms - from complex setups and maintenance to additional charges for advanced features.
 
