@@ -101,22 +101,22 @@ There are default alerts which get triggered on reaching the thresholds and you 
 # raise an alarm if the disk is low on
 # available disk space
  
- template: disk_space_usage
-       on: disk.space
-    class: Utilization
-     type: System
-component: Disk
-       os: linux freebsd
-    hosts: *
- families: !/dev !/dev/* !/run !/run/* *
-     calc: $used * 100 / ($avail + $used)
-    units: %
-    every: 1m
-     warn: $this > (($status >= $WARNING ) ? (80) : (90))
-     crit: $this > (($status == $CRITICAL) ? (90) : (98))
-    delay: up 1m down 15m multiplier 1.5 max 1h
-     info: disk $family space utilization
-       to: sysadmin
+    template: disk_space_usage
+          on: disk.space
+       class: Utilization
+        type: System
+   component: Disk
+          os: linux freebsd
+       hosts: *
+chart labels: mount_point=!/dev !/dev/* !/run !/run/* *
+        calc: $used * 100 / ($avail + $used)
+       units: %
+       every: 1m
+        warn: $this > (($status >= $WARNING ) ? (80) : (90))
+        crit: $this > (($status == $CRITICAL) ? (90) : (98))
+       delay: up 1m down 15m multiplier 1.5 max 1h
+        info: disk ${label:mount_point} space utilization
+          to: sysadmin
  ```
  
 The alert above monitors the disk.space chart / metric, excludes some of the filesystems like /dev, /dev/*, /run and /run/* and raises a Warning alert 
