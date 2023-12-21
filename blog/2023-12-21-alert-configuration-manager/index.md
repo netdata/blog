@@ -1,6 +1,5 @@
-
 ---
-slug: introducing-netdata-alerts-configuration-manager
+slug: netdata-alerts-configuration-manager
 title: "Introducing Netdata’s Alerts Configuration Manager"
 description: |
   Discover the power of Netdata's new Alerts Configuration Manager, a user-friendly UI wizard for creating and managing alerts directly from your Netdata Dashboard.
