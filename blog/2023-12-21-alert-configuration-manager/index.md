@@ -39,8 +39,4 @@ The Alerts Configuration Manager is an innovative feature available to users wit
 
 For more details on the fields and how to use them, take a look at our [documentation](https://learn.netdata.cloud/docs/alerting/creating-alerts-with-the-alerts-configuration-manager).
 
-## Conclusion
-
-Netdata's Alerts Configuration Manager is a groundbreaking tool that simplifies the process of configuring and managing alerts. Its intuitive design, combined with advanced customization options, makes it an indispensable tool for anyone using Netdata for monitoring. Embrace this new feature and elevate your monitoring strategy with ease and efficiency.
-
 
