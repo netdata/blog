@@ -20,9 +20,7 @@ keywords: [homelab, community, plans, pricing, paid-subscriptions]
 
 * Exclusively for Personal Use: The Homelab plan is designed for personal, non-commercial use only. To qualify, users will need to self-certify as a home user or student during the sign-up process.
 
-* 
-
-Fair Usage Policy Rules: Eligibility for the Homelab plan is governed by our Fair Usage Policy. Check [here](https://netdata.cloud/fair-usage-policy) for in-depth details on the policy.
+* Fair Usage Policy Rules: Eligibility for the Homelab plan is governed by our Fair Usage Policy. Check [here](https://netdata.cloud/fair-usage-policy) for in-depth details on the policy.
 
 * The changes above do not apply to our other plans: Netdata Cloud Business, On-prem subscriptions, and Netdata FOSS Agent versions.
 
