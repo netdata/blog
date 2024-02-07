@@ -10,7 +10,7 @@ keywords: [homelab, community, plans, pricing, paid-subscriptions]
 
 ![plans](https://github.com/netdata/blog/assets/82235632/1da6b92a-638c-46f9-9711-83e8ff1ffae6)
 
-> **UPDATE:** On the 2024-02-07 A new Netdata Cloud Homelab plan will become available. This is aimed for home users and students.
+> **UPDATE:** On the 2024-02-08 A new Netdata Cloud Homelab plan will become available. This is aimed for home users and students.
 
 <!--truncate-->
 
@@ -29,7 +29,7 @@ _For full details on the plans and prices, check out our [pricing page](https://
 
 Netdata’s vision is to democratize observability and make it accessible to everyone. Whether you are a startup or a multinational corporation, a business user or a home lab user, a non-profit organization or a student - we want you to be empowered with the very best that Netdata can offer.
 
-Today we are excited to unveil the **Homelab** plan that will be available to you on the 2024-02-07. Our aim is to bridge the gap between our **Community** and **Business** plans, offering an affordable solution. The homelab community has been a big part of the Netdata story and through this new plan we hope to provide enterprise grade capabilities for those who are serious about their homelabs —priced at less than a Netflix subscription! 😁
+Today we are excited to unveil the **Homelab** plan that will be available to you on the 2024-02-08. Our aim is to bridge the gap between our **Community** and **Business** plans, offering an affordable solution. The homelab community has been a big part of the Netdata story and through this new plan we hope to provide enterprise grade capabilities for those who are serious about their homelabs —priced at less than a Netflix subscription! 😁
 
 
 ## What to expect?
