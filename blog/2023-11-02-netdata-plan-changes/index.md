@@ -4,8 +4,8 @@ title: "Upcoming changes to Netdata Cloud plans"
 description: "How will Netdata Cloud plans changes? What are the impacts and reasons."
 image: https://github.com/netdata/blog/assets/82235632/4f176516-17c7-42a5-9cab-51fad7184cdc
 authors: team
-tags: [systemd, systemd journal, logs, monitoring, security]
-keywords: [systemd journal, systemd, logs]
+tags: [pricing, free-plan]
+keywords: [pricing, free plan, monitoring, troubleshoot]
 ---
 
 ![plans](https://github.com/netdata/blog/assets/82235632/4f176516-17c7-42a5-9cab-51fad7184cdc)
