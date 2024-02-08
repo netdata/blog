@@ -48,9 +48,9 @@ To ensure fairness and optimal service for all users, the Homelab plan will be g
 
 Rest assured, your data privacy is our top priority. During the evaluation process, no metrics data related to your systems will be collected. Our data collection practices strictly adhere to our [Privacy Policy](https://www.netdata.cloud/privacy/), ensuring the confidentiality and security of your information.
 
-## Data Privacy Matters?
+## Next Steps
 
-If you qualify for the Homelab plan, starting from 2023-02-XX, a hassle-free self-checkout awaits you on Netdata Cloud. Simply accept our Fair Usage Policy, and voila! You'll gain access to an unrestricted Netdata plan at a fair price.
+If you qualify for the Homelab plan, starting from 2023-02-08, a hassle-free self-checkout awaits you on Netdata Cloud. Simply accept our Fair Usage Policy, and voila! You'll gain access to an unrestricted Netdata plan at a fair price.
 
 Join us on this exciting journey towards accessible and powerful infrastructure monitoring! 🚀
 
