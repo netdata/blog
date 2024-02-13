@@ -1,15 +1,15 @@
 ---
-slug: actionable-intelligent-alerts
-title: "Actionable alerts with fewer false positives: intelligent alarms with Netdata"
-description: "Actionable alerts with fewer false positives: intelligent alarms with Netdata"
-image: /img/wp-archive/uploads/2022/03/intelligent-alarms.png
-tags: [engineering,product]
-keywords: [netdata,engineering,product]
-authors: team
+title: Actionable alerts with fewer false positives
+subtitle: 
+date: 2021-01-21
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/intelligent-alarms.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-medium wp-image-16460" src="/img/wp-archive/uploads/2022/03/intelligent-alarms-600x413.png" alt="" width="600" height="413" />
 
 Think about any sport or competitive activity, whether that’s football or a spelling bee. They always feature at least one person who acts as a moderator, referee, or judge. With their domain expertise, this person watches everyone’s behavior and constantly compares that against a set of rules. If someone crosses that threshold, they blow a whistle or throw up a flag. They are, in effect, saying that things have gone from <strong>OK</strong> to <strong>not OK</strong>.

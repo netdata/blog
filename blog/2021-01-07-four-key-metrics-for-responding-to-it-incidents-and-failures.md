@@ -1,15 +1,15 @@
 ---
-slug: four-key-metrics-for-responding-to-it-incidents-and-failures
-title: "Four key metrics for responding to IT incidents and failures"
-description: "Four key metrics for responding to IT incidents and failures"
-image: /img/wp-archive/uploads/2021/01/DevOps-Metrics.png
-tags: [engineering,product]
-keywords: [netdata,engineering,product]
-authors: Jen
+title: Four key metrics for responding to IT incidents and failures
+subtitle: 
+date: 2021-01-07
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/DevOps-Metrics.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone wp-image-16474 size-large" src="/img/wp-archive/uploads/2021/01/DevOps-Metrics-1200x862.png" alt="" width="1200" height="862" />
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">

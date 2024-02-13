@@ -1,19 +1,20 @@
 ---
-slug: dnsmasq-monitoring
 title: How to monitor and troubleshoot Dnsmasq DNS Forwarder
-description: Monitoring and troubleshooting Dnsmasq DNS Forwarder.
-authors: satya
-tags: [how-to, monitor, troubleshoot, dnsmasq,  dns, domain-name-server, DNS-management, dhcp, network-management]
-keywords: [how-to, monitor, troubleshoot, dnsmasq,  dns, domain-name-server, DNS-management, dhcp, network-management]
-image: https://user-images.githubusercontent.com/96257330/207541929-5857a8fe-393e-492f-bc24-410ca76f0d9b.png
-
+subtitle: 
+date: 2022-12-14
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/207541929-5857a8fe-393e-492f-bc24-410ca76f0d9b.png.png".png".png".png".png"""""
 ---
-
 Find out how to effectively and easily monitor and troubleshoot Dnsmasq DNS Forwarder using Netdata
 
 ![logo](https://user-images.githubusercontent.com/96257330/207541929-5857a8fe-393e-492f-bc24-410ca76f0d9b.png)
 
-<!--truncate-->
+
 
 ## What is Dnsmasq?
 

@@ -1,15 +1,15 @@
 ---
-slug: the-netdata-community-powered-by-nodebb
-title: "The Netdata Community Powered by NodeBB"
-description: "The Netdata Community Powered by NodeBB"
-image: /img/wp-archive/uploads/2022/03/NodeBB-1.png
-tags: [engineering]
-keywords: [netdata,engineering]
-authors: team
+title: The Netdata Community Powered by NodeBB
+subtitle: 
+date: 2020-08-13
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/NodeBB-1.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16658" src="/img/wp-archive/uploads/2022/03/NodeBB-1-1200x877.png" alt="" width="1200" height="877" />
 
 We recently adopted <a title="NodeBB" href="https://nodebb.org/" target="_blank" rel="noopener noreferrer">NodeBB</a> as our software of choice for building <a title="the Netdata Community" href="https://community.netdata.cloud/" target="_blank" rel="noopener noreferrer">the Netdata Community</a>. We have <a title="many good reasons" href="https://staging-www.netdata.cloud/blog/the-netdata-community/" target="_blank" rel="noopener noreferrer">many good reasons</a> for why we wanted to provide our community with a proper home online, but I wanted to cover some of the technical reasons for choosing NodeBB for our platform, and the many parallels between the NodeBB and Netdata projects, which was certainly a driving force behind this decision.

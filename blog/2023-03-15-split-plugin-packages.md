@@ -1,13 +1,15 @@
 ---
-slug: split-plugin-packages
 title: Upcoming Changes to Plugins in Native Packages
-description: Upcoming Changes to Plugins in Native Packages
-authors: ferroin
-tags: [installation, native-packages, updates, linux, collectors, engineering]
-keywords: [installation, native-packages, updates, linux, collectors, engineering]
-
+subtitle: 
+date: 2023-03-15
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/.png".png".png".png".png"""""
 ---
-
 At Netdata, we’re committed to trying to make Netdata work as well as possible for our users. Sometimes though,
 that means changing things in ways that aren’t exactly seamless. Such a change is coming soon for users of our
 native DEB and RPM packages, and this blog post will explain what’s happening, why we’re doing it, and what

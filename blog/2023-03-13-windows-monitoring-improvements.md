@@ -1,17 +1,18 @@
 ---
-slug: windows-monitoring-improvements
 title: Windows Server Monitoring Improvements
-description: Windows server monitoring improvements with Netdata
-authors: shyam
-tags: [real-time, monitor, troubleshoot, windows, server,windows-monitoring]
-keywords: [real-time, monitor, troubleshoot, windows, server]
-image: https://images.unsplash.com/photo-1530133532239-eda6f53fcf0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80
-
+subtitle: 
+date: 2023-03-13
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/photo-1530133532239-eda6f53fcf0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80.png".png".png".png".png"""""
 ---
-
 Monitor your Windows server and applications running on it with Netdata - simple, powerful and free.
 
-<!--truncate-->
+
 
 Hey Netdata community,
 

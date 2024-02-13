@@ -1,15 +1,15 @@
 ---
-slug: netdata-agent-dashboard
-title: "Netdata’s dashboard: open by default and secure by design"
-description: "Netdata’s dashboard: open by default and secure by design"
-image: /img/wp-archive/uploads/2022/03/netdata-dashboard-open-secure-min.png
-tags: [product]
-keywords: [netdata,product]
-authors: team
+title: Netdata’s dashboard
+subtitle: 
+date: 2020-10-28
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/netdata-dashboard-open-secure-min.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16569" src="/img/wp-archive/uploads/2022/03/netdata-dashboard-open-secure-min-1200x826.png" alt="" width="1200" height="826" />
 
 Let’s talk through a scenario: You have a Linux-based VM running on DigitalOcean (aka a Droplet), and you install Netdata on it using our <a href="https://learn.netdata.cloud/docs/get#install-the-netdata-agent" target="_blank" rel="noopener noreferrer">recommended kickstart script</a>. As the installation process winds down, the Droplet starts up the Netdata Agent’s web server and serves the local Agent web dashboard on port 19999. You navigate to the dashboard using your browser of choice, check out per-second metrics updating in real time in a few of the hundreds of preconfigured visualizations, then realize…

@@ -1,15 +1,15 @@
 ---
-slug: container-deployment-showdown-docker-or-kubernetes
-title: "Container deployment showdown: Docker or Kubernetes?"
-description: "Container deployment showdown: Docker or Kubernetes?"
-image: /img/wp-archive/uploads/2022/03/Kubernetes_vs_Docker.png
-tags: [engineering,containers-and-vms,containers]
-keywords: [netdata,engineering]
-authors: Jen
+title: Container deployment showdown
+subtitle: 
+date: 2021-03-24
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Kubernetes_vs_Docker.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 

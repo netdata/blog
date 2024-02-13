@@ -1,15 +1,15 @@
 ---
-slug: how-to-monitor-your-disks-and-filesystems-now-also-with-ebpf
-title: "How to monitor your disks and filesystems, now also with eBPF"
-description: "How to monitor your disks and filesystems, now also with eBPF"
-image: /img/wp-archive/uploads/2021/08/eBPF-monitoring-1536x932-1.png
-tags: [engineering,product,disks,filesystem,ebpf,operating-system-monitoring]
-keywords: [netdata,engineering,product]
-authors: team
+title: How to monitor your disks and filesystems, now also with eBPF
+subtitle: 
+date: 2021-08-16
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/eBPF-monitoring-1536x932-1.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 

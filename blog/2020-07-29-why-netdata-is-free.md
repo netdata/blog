@@ -1,15 +1,15 @@
 ---
-slug: why-netdata-is-free
-title: "Why Netdata is free"
-description: "Why Netdata is free"
-image: /img/wp-archive/uploads/2022/03/Blog-Why-Netdata-is-Free-1.png
-tags: [product,culture,community]
-keywords: [netdata,product,culture,community]
-authors: costa
+title: Why Netdata is free
+subtitle: 
+date: 2020-07-29
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Blog-Why-Netdata-is-Free-1.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16680" src="/img/wp-archive/uploads/2022/03/Blog-Why-Netdata-is-Free-1-1200x824.png" alt="" width="1200" height="824" />
 
 When I first started the project that became the Netdata Agent, I was trying to solve a painful, real-world problem: IT infrastructure monitoring tools fell short when it came to providing complete, granular metrics in real time. Believe me, I had no shortage of tools to choose from, but each of them lacked something either in the ability to see every metric I needed, or see it at the frequency required. A bird’s-eye view was fine for getting an overall sense of how things were going, but kept sending me back to the command line for troubleshooting.

@@ -1,15 +1,15 @@
 ---
-slug: community-update-discourse
-title: "Community update: Discourse, community efforts"
-description: "Community update: Discourse, community efforts"
-image: /img/wp-archive/uploads/2022/03/Community-update_-Discourse-community-efforts.png
-tags: [community]
-keywords: [netdata,community]
-authors: team
+title: Community update
+subtitle: 
+date: 2020-12-02
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Community-update_-Discourse-community-efforts.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone wp-image-16522 size-full" src="/img/wp-archive/uploads/2022/03/Community-update_-Discourse-community-efforts.png" alt="" width="681" height="470" />
 
 Open source and community have always been in the DNA of Netdata, with the Agent starting as a very popular open-source project. Since then, a lot has changed, with Netdata maturing into a company, and the Netdata Agent finding its place as an open-source project in a wider offering that redesigns the monitoring experience from the ground up.

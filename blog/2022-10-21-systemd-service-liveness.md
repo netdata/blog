@@ -1,16 +1,18 @@
 ---
-slug: systemd-service-liveness
-title: "How to monitor systemd service liveness"
-description: "How to monitor systemd service liveness"
-image: /img/wp-archive/uploads/2022/10/Systemmd-Service-Liveness-e1666366169680.png
-tags: [how-to,infrastructure-monitoring,monitoring,systemd,systemd-services]
-keywords: [how-to,infrastructure-monitoring,monitoring]
-authors: chris
+title: How to monitor systemd service liveness
+subtitle: 
+date: 2022-10-21
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Systemmd-Service-Liveness-e1666366169680.png.png".png".png".png".png"""""
 ---
-
 The life of a sysadmin or SRE is often difficult, but occasionally very simple things can make a huge difference. Basic monitoring of your systemd services is one of those simple things, which we sometimes overlook. The simplest question one would want to know is if the thing that’s supposed to be running is actually running at all. If you use systemd services, you can guarantee an answer to that question within minutes using Netdata. 
 
-<!--truncate-->
+
 
 The Netdata <a href="https://learn.netdata.cloud/docs/agent/collectors/go.d.plugin/modules/systemdunits">systemd units state collector</a> can continuously monitor any systemd service and notify you if it crashes. In fact, it can <em>monitor any systemd unit</em>, including systemd sockets, systemd paths etc.
 
@@ -38,7 +40,7 @@ The “include” directive utilizes the <a href="https://golang.org/pkg/path/fi
 
 Whatever you specify will result in a time series for each data collection job, showing the health of the matching systemd units, and <a href="https://github.com/netdata/netdata/blob/master/health/health.d/systemdunits.conf">automated health checks</a> that trigger alerts if a systemd unit goes into the “failed” state. 
 
-!["Systemmd Service Liveness"](/img/wp-archive/uploads/2022/10/Systemmd-Service-Liveness.png)
+!["Systemmd Service Liveness"](..//img/wp-archive/uploads/2022/10/Systemmd-Service-Liveness.png)
 
 If you want to ensure a service is running no matter what, you could add your own alerts for the “inactive” state as well. 
 

@@ -1,15 +1,15 @@
 ---
-slug: sysadmin-day-2020-it-heroes-and-homelabs
-title: "Sysadmin Day 2020: IT Heroes and Homelabs"
-description: "Sysadmin Day 2020: IT Heroes and Homelabs"
-image: /img/wp-archive/uploads/2022/03/Group-1-2.png
-tags: [community]
-keywords: [netdata,community]
-authors: Jen
+title: Sysadmin Day 2020
+subtitle: 
+date: 2020-07-27
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Group-1-2.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <p dir="ltr" lang="en"><img class="alignnone size-large wp-image-16685" src="/img/wp-archive/uploads/2022/03/Group-1-2-1200x825.png" alt="" width="1200" height="825" /></p>
 <p dir="ltr" lang="en">Sysadmin Day 2020 is right around the corner and we’d like to show our appreciation for all the sysadmins out there who keep IT humming along and come to the rescue to resolve critical issues day in and day out. This year, we’re celebrating all week long by hosting an IT Heroes and Homelabs contest. <strong>Join the celebration by retweeting our post with the hashtag #SysadminDay #NetdataWin, and we’ll enter you in a drawing to win some Netdata swag!</strong></p>
 <p dir="ltr" lang="en">We're celebrating Sysadmin Day all week with an IT Heroes &amp; Homelabs contest. Retweet this post with <a href="https://twitter.com/hashtag/SysadminDay?src=hash&amp;ref_src=twsrc%5Etfw">#SysadminDay</a> &amp; <a href="https://twitter.com/hashtag/NetdataWin?src=hash&amp;ref_src=twsrc%5Etfw">#NetdataWin</a> &amp; get entered to win swag! We're featuring our staff's workstations &amp; homelabs &amp; invite you to do the same, see the sneak peek: <a href="https://t.co/S5ohBYvZI2">https://t.co/S5ohBYvZI2</a> <a href="https://t.co/AuT0Eaaicv">pic.twitter.com/AuT0Eaaicv</a></p>

@@ -1,15 +1,15 @@
 ---
-slug: devops-best-practices-monitoring-tools
-title: "5 DevOps best practices to reinforce with monitoring tools"
-description: "5 DevOps best practices to reinforce with monitoring tools"
-image: /img/wp-archive/uploads/2022/03/devops-best-practices-monitoring-tools-v2.png
-tags: [engineering,product,devops]
-keywords: [netdata,engineering,product]
-authors: team
+title: 5 DevOps best practices to reinforce with monitoring tools
+subtitle: 
+date: 2021-02-18
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/devops-best-practices-monitoring-tools-v2.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-medium wp-image-16441" src="/img/wp-archive/uploads/2022/03/devops-best-practices-monitoring-tools-v2-600x414.png" alt="" width="600" height="414" />
 
 As part of a modern software development team, you’re asked to do a lot. You’re supposed to build faster, release more frequently, crush bugs, and integrate testing suites along the way. You’re supposed to implement and practice a strong DevOps culture, <a href="https://github.com/upgundecha/howtheysre" target="_blank" rel="noopener noreferrer">read entire novels</a> about SRE best practices, go <a href="https://en.wikipedia.org/wiki/Agile_software_development" target="_blank" rel="noopener noreferrer">agile</a>, or add a bunch of Scrum ceremonies to everyone’s calendar. Every week, the industry recommends that you “<a href="https://devops.com/devops-shift-left-avoid-failure/" target="_blank" rel="noopener noreferrer">shift-left</a>” another part of the <a href="https://staging-www.netdata.cloud/blog/agile-static-analysis/" target="_blank" rel="noopener noreferrer">DevOps pipeline</a>, to the point where you’re supposed to handle everything from unit testing to production deployment optimization from day one.

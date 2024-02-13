@@ -1,15 +1,15 @@
 ---
-slug: how-netdata-gets-you-from-0-to-monitoring-in-minutes
-title: "How Netdata gets you from 0 to monitoring in minutes"
-description: "How Netdata gets you from 0 to monitoring in minutes"
-image: /img/wp-archive/uploads/2022/03/0conf.png
-tags: [product,deployment-strategies]
-keywords: [netdata,product]
-authors: team
+title: How Netdata gets you from 0 to monitoring in minutes
+subtitle: 
+date: 2020-11-11
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/0conf.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16562" src="/img/wp-archive/uploads/2022/03/0conf-1200x826.png" alt="" width="1200" height="826" />
 
 Netdata is zero-configuration monitoring. It’s a principle that we’ve stood behind since the project’s beginning, when it was only our CEO Costa trying to solve a <a href="https://staging-www.netdata.cloud/blog/why-netdata-is-free/">“painful, real-world problem,”</a> and it’s one we stand by today. Our insistence on zero-configuration guides every product decision we make, every grooming process, and every React component our frontend teams design.

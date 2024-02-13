@@ -1,19 +1,20 @@
 ---
-slug: bind9-monitoring
 title: How to monitor and troubleshoot BIND 9
-description: Monitoring and troubleshooting BIND 9.
-authors: shyam
-tags: [how-to, monitor, troubleshoot, bind9, isc,  dns-server, domain-name-server, DNS-management, remote-control]
-keywords: [how-to, monitor, troubleshoot, bind9, isc,  dns-server, domain-name-server, DNS-management, remote-control]
-image: https://user-images.githubusercontent.com/24860547/213658626-e7e6d84a-11d9-43ff-aa95-17d2486a4cc3.png
-
+subtitle: 
+date: 2023-01-20
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/213658626-e7e6d84a-11d9-43ff-aa95-17d2486a4cc3.png.png".png".png".png".png"""""
 ---
-
 Find out how to effectively and easily monitor and troubleshoot BIND 9 using Netdata
 
 ![logo](https://user-images.githubusercontent.com/24860547/213658626-e7e6d84a-11d9-43ff-aa95-17d2486a4cc3.png)
 
-<!--truncate-->
+
 ## What is BIND 9?
 
 BIND 9 is a flexible, full-featured open source DNS system. 

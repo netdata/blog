@@ -1,15 +1,15 @@
 ---
-slug: what-is-devops
-title: "What is DevOps?"
-description: "What is DevOps?"
-image: /img/wp-archive/uploads/2022/03/what-is-devops.png
-tags: [engineering]
-keywords: [netdata,engineering]
-authors: Jen
+title: What is DevOps?
+subtitle: 
+date: 2020-11-19
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/what-is-devops.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16550" src="/img/wp-archive/uploads/2022/03/what-is-devops.png" alt="" width="1024" height="600" />
 
 In software development, it’s important to have a team dedicated to ensuring all systems and applications maintain maximum performance and uptime. Establishing processes that limit system and application slowdowns and outages while expediting the product release process is often done through a developer operations team, also known as <em>dev ops</em> or <em>DevOps</em>.

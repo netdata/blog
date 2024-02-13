@@ -1,19 +1,20 @@
 ---
-slug: ntpd-monitoring
 title: How to monitor and troubleshoot NTPdaemon
-description: Monitoring and troubleshooting NTPdaemon.
-authors: shyam
-tags: [how-to, monitor, troubleshoot, ntpd, ntp ]
-keywords: [how-to, monitor, troubleshoot, ntpd, ]
-image: https://user-images.githubusercontent.com/24860547/213157308-f9ac7230-5a3a-434f-b4e0-66b9a0e4a2fd.png
-
+subtitle: 
+date: 2023-01-18
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/213157308-f9ac7230-5a3a-434f-b4e0-66b9a0e4a2fd.png.png".png".png".png".png"""""
 ---
-
 Find out how to effectively and easily monitor and troubleshoot NTPdaemon using Netdata
 
 ![logo](https://user-images.githubusercontent.com/24860547/213157308-f9ac7230-5a3a-434f-b4e0-66b9a0e4a2fd.png)
 
-<!--truncate-->
+
 ## What is NTPd
 
 If you think being **on time** is crucial, and want to get right into the details of monitoring NTPd without wasting any more **time**. You have come to the right place (and sorry for the **time** jokes!).

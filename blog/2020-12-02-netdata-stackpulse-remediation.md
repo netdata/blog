@@ -1,15 +1,15 @@
 ---
-slug: netdata-stackpulse-remediation
-title: "Netdata and StackPulse: Per-second metrics meet automated remediation"
-description: "Netdata and StackPulse: Per-second metrics meet automated remediation"
-image: /img/wp-archive/uploads/2022/03/netdata-stackpulse.png
-tags: [product]
-keywords: [netdata,product]
-authors: team
+title: Netdata and StackPulse
+subtitle: 
+date: 2020-12-02
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/netdata-stackpulse.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16535" src="/img/wp-archive/uploads/2022/03/netdata-stackpulse-1200x826.png" alt="" width="1200" height="826" />
 
 Teams of all types use Netdata to monitor the health of their nodes with preconfigured alarms and real-time interactive visualizations, and when incidents happen, they troubleshoot issues with thousands of per-second metrics on <a href="https://staging-www.netdata.cloud/cloud/" target="_blank" rel="noopener noreferrer">Netdata Cloud</a>. But based on the complexity of the team and the infrastructure they monitor, some parts of their <a href="https://staging-www.netdata.cloud/incident-management/" target="_blank" rel="noopener noreferrer">incident management</a>, such as pre-planned communication and escalation processes, or even automated remediation, need to happen outside of the Netdata ecosystem.

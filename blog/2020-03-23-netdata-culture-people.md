@@ -1,17 +1,15 @@
 ---
-slug: netdata-culture-people
-title: "The Netdata Culture and People"
-description: "The Netdata Culture and People"
-image: /img/wp-archive/uploads/2022/03/people-culture_01.png
-tags: [culture]
-keywords: [netdata,culture]
-authors: chris
+title: The Netdata Culture and People
+subtitle: 
+date: 2020-03-23
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/people-culture_01.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
-![](/img/wp-archive/uploads/2022/03/people-culture_01.png)
-
 There are many things I absolutely love about Netdata, but I’m most proud of our people and culture. Some words about this unique experience are long overdue.
 
 In a career that spans over two decades and six other companies of various sizes, nothing compares to the satisfaction of working in a company like ours. My answer to the canned interview question, “Where do you see yourself in 5 years”, was always the same: I don’t care; I just want to be solving problems and working with good people, real professionals, who I can trust and respect. In retrospect, I was missing another huge part of the equation, which is to mention the kind of company I wanted to work for. “Culture eats strategy for breakfast” is a cliche. More importantly, bad culture devours people’s souls; it sucks out any creative energy one may have, reducing engagement and, therefore, productivity. Short-term wins at the expense of company culture guarantee huge losses in the long run.

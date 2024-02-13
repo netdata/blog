@@ -1,12 +1,17 @@
 ---
-slug: how-to-filter-metrics-by-label
 title: How to filter metrics by label?
-authors: satya
-tags: [how-to,observability]
+subtitle: 
+date: 2022-10-06
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/.png".png".png".png".png"""""
 ---
-
 It is sometimes easy to get lost in the mountain of metrics and infinite number of dimensions when working with an infrastructure monitoring tool. Being able to filter metrics by label and visualize only what is relevant to the current scope of monitoring &troubleshooting, becomes absolutely crucial to the success of SREs, Sysadmins and DevOps professionals.
-<!--truncate-->
+
 The Netdata <a href="https://staging1--netdata-docusaurus.netlify.app/docs/getting-started/netdata-in-a-pane">chart label filtering feature</a> supports grouping by and filtering each chart based on labels (key/value pairs) applicable to the context and provides fine-grain capability on slicing the data / metrics.
 
 All metrics collected get "tagged" with labels and values, thus providing a powerful way to filter metrics by label and visualize all metrics related to the infrastructure.

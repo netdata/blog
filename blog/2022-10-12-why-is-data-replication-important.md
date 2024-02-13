@@ -1,13 +1,16 @@
 ---
 title: Why is data replication important?
-description: This post describes why is data replication important in infrastructure monitoring.
-image: /img/wp-archive/uploads/2022/10/Data-Replication-1.png
-tags: [how-to,infrastructure-monitoring,streaming,data-replication,configuration,deployment-strategies]
-keywords: [how-to,infrastructure-monitoring,streaming,data-replication,configuration]
-authors: alex
-slug: why-is-data-replication-important
+subtitle: 
+date: 2022-10-12
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Data-Replication-1.png.png".png".png".png".png"""""
 ---
-High availability. This is what every monitoring tool needs to ensure that you never compromise on IT infrastructure visibility.<!--truncate--> On top of high availability, do you really want to enable all available features on your production system? It is important for the monitoring tool to have a low footprint on your CPU consumption and memory usage. Let’s dive deeper into the recommended way of configuring Netdata to ensure high availability and a low resource footprint through data replication.
+High availability. This is what every monitoring tool needs to ensure that you never compromise on IT infrastructure visibility. On top of high availability, do you really want to enable all available features on your production system? It is important for the monitoring tool to have a low footprint on your CPU consumption and memory usage. Let’s dive deeper into the recommended way of configuring Netdata to ensure high availability and a low resource footprint through data replication.
 
 First of all, each node monitored by Netdata has the ability to <a href="https://learn.netdata.cloud/docs/agent/streaming">replicate</a> its database to another node monitored by Netdata. Each Netdata node can play the role of a “Parent” (receive metrics) or a “Child” (send metrics). The Parent node can store all data collected by the Child node. This allows replicating collected data across multiple Netdata nodes that can be connected to the Netdata Cloud to increase data availability. 
 
@@ -19,11 +22,11 @@ You would like to monitor the Kubernetes cluster. 
 
 In this case, you would probably install Netdata on each node and connect it directly to the Netdata Cloud, as shown in the following diagram.
 
-![Data Replication Setup 1](/img/wp-archive/uploads/2022/10/Data-Replication-1.png)
+![Data Replication Setup 1](..//img/wp-archive/uploads/2022/10/Data-Replication-1.png)
 
 However, if Node 2 were to go down in this scenario, you would lose the data collected on this Node. By introducing the Parent, the data from Node 2 are streamed to the Parent in real-time, allowing you to keep querying the Parent to understand the state of the node before the node goes down, and this data will continue to be available even after Node 2 goes down, as shown in the following diagram.
 
-![Data Replication Setup 2](/img/wp-archive/uploads/2022/10/Data-Replication-2.png)
+![Data Replication Setup 2](..//img/wp-archive/uploads/2022/10/Data-Replication-2.png)
 
 In case you would like to get the full benefit of the Netdata Parent/Child relationship, you can keep all of your Kubernetes nodes, or any other nodes outside of your Kubernetes cluster, inside your Private Network and allow only the Parent to be publicly accessible. 
 
@@ -31,7 +34,7 @@ We recommend setting up two Parents streaming to each-other (active-active) and 
 
 In this case, you can deploy Netdata as it is shown in the following diagram.
 
-![Data replication scenario 3](/img/wp-archive/uploads/2022/10/Data-Replication-3.png)
+![Data replication scenario 3](..//img/wp-archive/uploads/2022/10/Data-Replication-3.png)
 
 As you can see, this approach is more secure, as you do not need to expose all your production nodes to the public network. And it is more robust as well, due to high availability. By claiming the Parent node, all Child nodes will appear automatically in the dashboard.
 

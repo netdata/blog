@@ -1,15 +1,15 @@
 ---
-slug: why-netdata-picked-vernemq
-title: "Why Netdata picked VerneMQ"
-description: "Why Netdata picked VerneMQ"
-image: /img/wp-archive/uploads/2022/03/Blog-Why-Netdata-Picked-VerneMQ.jpeg
-tags: [engineering]
-keywords: [netdata,engineering]
-authors: team
+title: Why Netdata picked VerneMQ
+subtitle: 
+date: 2020-07-14
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Blog-Why-Netdata-Picked-VerneMQ.jpeg.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16705" src="/img/wp-archive/uploads/2022/03/Blog-Why-Netdata-Picked-VerneMQ.jpeg" alt="" width="683" height="470" />
 
 In 2019, the Netdata team already knew that a Netdata Cloud solution in the form of an online platform would greatly complement Netdata’s distributed monitoring by making it much easier to organize large infrastructures and by enabling new ways for teams to collaborate. The old node registry available at the time wasn’t enough for Netdata’s users.

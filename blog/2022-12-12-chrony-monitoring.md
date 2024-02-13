@@ -1,18 +1,20 @@
 ---
-slug: chrony-monitoring
 title: How to monitor and troubleshoot Chrony
-description: Monitoring and troubleshooting Chrony.
-authors: shyam 
-tags: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync server]
-keywords: [how-to, monitor, troubleshoot, chrony, time server, NTP server, sync server]
-image: https://user-images.githubusercontent.com/24860547/207060075-2fb7e116-5589-43f8-9649-b34a18be1729.jpg
+subtitle: 
+date: 2022-12-12
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/207060075-2fb7e116-5589-43f8-9649-b34a18be1729.jpg.png".png".png".png".png"""""
 ---
-
 Find out how to effectively and easily monitor and troubleshoot Chrony using Netdata
 
 ![logo](https://user-images.githubusercontent.com/24860547/207060075-2fb7e116-5589-43f8-9649-b34a18be1729.jpg)
 
-<!--truncate-->
+
 
 ## What is Chrony
 

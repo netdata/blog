@@ -1,15 +1,15 @@
 ---
-slug: netdata-is-launching-its-discord-server
-title: "Netdata is launching its Discord server"
-description: "Netdata is launching its Discord server"
-image: /img/wp-archive/uploads/2022/03/netdata-discord.png
-tags: [product,discord]
-keywords: [netdata,product]
-authors: team
+title: Netdata is launching its Discord server
+subtitle: 
+date: 2021-06-22
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/netdata-discord.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 It’s been a long time since our last community update, rest assured that we have been hard at work here at Netdata.
 
 Community building is hard, especially when you have such a venerable community like the one here at Netdata, where hundreds of contributors have contributed to creating one of the best monitoring solutions that exist.

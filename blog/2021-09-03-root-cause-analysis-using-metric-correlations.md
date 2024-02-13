@@ -1,16 +1,15 @@
 ---
-slug: root-cause-analysis-using-metric-correlations
-title: "Root cause analysis using Metric Correlations"
-description: "Root cause analysis using Metric Correlations"
-image: /img/wp-archive/uploads/2022/03/Screen-Shot-2021-09-03-at-1.43.32-PM-1.png
-tags: [engineering,machine-learning,metric-correlations]
-keywords: [netdata,engineering,machine-learning]
-authors: hugo
+title: Root cause analysis using Metric Correlations
+subtitle: 
+date: 2021-09-03
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Screen-Shot-2021-09-03-at-1.43.32-PM-1.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
- 
 <figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Screen-Shot-2021-09-03-at-1.43.32-PM-1-1200x608.png" alt="" class="wp-image-16297"/></figure>
  
 
@@ -66,5 +65,4 @@ authors: hugo
  
 
  
- If you haven’t experienced this powerful feature yet make sure to give it a try! Do send us your feedback and suggestions on it. For more information check our <a href="https://learn.netdata.cloud/docs/cloud/insights/metric-correlations">documentation</a>, use our <a href="https://community.netdata.cloud/c/support/cloud-support/15">forums</a> or engage with us on <a href="https://discord.gg/TjM6XCwC4e">public discord channel</a>. 
- 
+ If you haven’t experienced this powerful feature yet make sure to give it a try! Do send us your feedback and suggestions on it. For more information check our <a href="https://learn.netdata.cloud/docs/cloud/insights/metric-correlations">documentation</a>, use our <a href="https://community.netdata.cloud/c/support/cloud-support/15">forums</a> or engage with us on <a href="https://discord.gg/TjM6XCwC4e">public discord channel</a>.

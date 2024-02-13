@@ -1,15 +1,15 @@
 ---
-slug: introducing-the-all-new-netdata-cloud
-title: "Introducing the all-new Netdata Cloud"
-description: "Introducing the all-new Netdata Cloud"
-image: /img/wp-archive/uploads/2022/03/All-New-Cloud.png
-tags: [product]
-keywords: [netdata,product]
-authors: team
+title: Introducing the all-new Netdata Cloud
+subtitle: 
+date: 2020-07-29
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/All-New-Cloud.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16672" src="/img/wp-archive/uploads/2022/03/All-New-Cloud-1200x712.png" alt="" width="1200" height="712" />
 
 In case you missed it, we released an all-new version of Netdata Cloud in May. <a title="Netdata Cloud" href="https://staging-www.netdata.cloud/cloud/">Netdata Cloud</a> is a free service that can be accessed from any browser and provides you with a consolidated view of your entire infrastructure.

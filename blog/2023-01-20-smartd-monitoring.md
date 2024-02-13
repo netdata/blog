@@ -1,19 +1,20 @@
 ---
-slug: smartd_log-monitoring
 title: How to monitor and troubleshoot S.M.A.R.T. attributes
-description: Monitoring and troubleshooting S.M.A.R.T. attributes.
-authors: shyam
-tags: [how-to, monitor, troubleshoot, smartd_log, S.M.A.R.T, storage-device, ATA, SCSI,disks]
-keywords: [how-to, monitor, troubleshoot, smartd_log, S.M.A.R.T, storage-device, ATA, SCSI]
-image: https://uxd.zendesk.com/hc/article_attachments/360024098631/mceclip1.png
-
+subtitle: 
+date: 2023-01-20
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/mceclip1.png.png".png".png".png".png"""""
 ---
-
 Understand what makes a storage device S.M.A.R.T and how to monitor a self monitoring component using Netdata.
 
 ![logo](https://uxd.zendesk.com/hc/article_attachments/360024098631/mceclip1.png)
 
-<!--truncate-->
+
 ## What makes a storage device S.M.A.R.T.? 
 
 [S.M.A.R.T.](https://en.wikipedia.org/wiki/Self-Monitoring,_Analysis_and_Reporting_Technology) (Self-Monitoring, Analysis, and Reporting Technology) is a supplementary component built into many modern storage devices through which devices monitor, store, and analyze the health of their operation. Statistics are collected (temperature, number of reallocated sectors, seek errors etc.) which software can use to measure the health of a device, predict possible device failure, and provide notifications on unsafe values. 

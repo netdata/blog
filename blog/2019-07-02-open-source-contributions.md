@@ -1,15 +1,15 @@
 ---
-slug: open-source-contributions
-title: "How to inspire exceptional contributions to your open-source project"
-description: "How to inspire exceptional contributions to your open-source project"
-image: /img/wp-archive/uploads/2022/03/open-source-contributions.png
-tags: [community]
-keywords: [netdata,community]
-authors: team
+title: How to inspire exceptional contributions to your open-source project
+subtitle: 
+date: 2019-07-02
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/open-source-contributions.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16882" src="/img/wp-archive/uploads/2022/03/open-source-contributions.png" alt="" width="1200" height="600" />
 
 Netdata <em>must</em> be doing something right when it comes to inspiring contributions. Our <a href="https://github.com/netdata/netdata">open-source, distributed monitoring agent</a> has <img src="https://img.shields.io/github/stars/netdata/netdata.svg" alt="GitHub stars" /> on GitHub and has seen contributions from hundreds of people: <img src="https://img.shields.io/github/contributors/netdata/netdata.svg" alt="GitHub contributors" />. We’ve even hired a handful of our contributors to work full-time on making the Netdata ecosystem even more powerful.

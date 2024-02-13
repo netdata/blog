@@ -1,19 +1,20 @@
 ---
-slug: nginxplus-monitoring
 title: How to monitor and troubleshoot NGINXPlus
-description: Monitoring and troubleshooting NGINXPlus.
-authors: satya
-tags: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http,apache,web-servers]
-keywords: [how-to, troubleshoot, nginx, nginxplus,  webservers, infrastructure-monitoring, http]
-image: https://user-images.githubusercontent.com/96257330/206474388-31f12c9a-4be5-4d0a-9fc2-a8d80813000a.png
-
+subtitle: 
+date: 2022-12-22
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/206474388-31f12c9a-4be5-4d0a-9fc2-a8d80813000a.png.png".png".png".png".png"""""
 ---
-
 As a continuation of our series for monitoring web servers with [NGINX](https://blog.netdata.cloud/nginx-monitoring/) and [APACHE](https://blog.netdata.cloud/apache-monitoring/), let us find out how to effectively and easily monitor and troubleshoot NGINXPlus using Netdata!
 
 ![logo](https://user-images.githubusercontent.com/96257330/206474388-31f12c9a-4be5-4d0a-9fc2-a8d80813000a.png)
 
-<!--truncate-->
+
 ## What is NGINXPlus
 
 NGINXPLus is an open source web server and load balancer. It is an enterprise-grade version of the popular open source NGINX web server, with additional features for scalability, performance, and monitoring. NGINXPLus includes features such as load balancing, content caching, and HTTP/2 support, and is suitable for applications of any size. NGINXPLus is highly customizable and can be used to deploy web applications in a variety of environments.

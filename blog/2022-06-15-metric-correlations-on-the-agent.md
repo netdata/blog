@@ -1,14 +1,17 @@
 ---
 title: Metric Correlations on the Agent
-slug: metric-correlations-on-the-agent
-description: Netdata now can run Metric Correlations on the Agent.
-image: /img/wp-archive/uploads/2022/06/mc-comparisons-1.png
-tags: [machine-learning,ml,metric-correlations,troubleshooting]
-keywords: [machine-learning,ml,metric-correlations]
-authors: andy
+subtitle: 
+date: 2022-06-15
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/mc-comparisons-1.png.png".png".png".png".png"""""
 ---
 As of <a href="https://github.com/netdata/netdata/releases/tag/v1.35.0" target="_blank" rel="noopener"><code>v1.35.0</code></a> the Netdata Agent can now run <a href="https://learn.netdata.cloud/docs/cloud/insights/metric-correlations" target="_blank" rel="noopener">Metric Correlations</a> (MC) itself. This means that, for nodes with MC enabled, the Metric Correlations feature just got a whole lot faster!
-<!--truncate-->
+
 The Netdata Metric Correlations feature uses a <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test#Two-sample_Kolmogorov%E2%80%93Smirnov_test" target="_blank" rel="noopener">Two Sample Kolmogorov-Smirnov test</a> to look for which metrics have a significant distributional change around a highlighted window of interest. This can be useful when you are interested in short term "<a href="https://en.wikipedia.org/wiki/Change_detection" target="_blank" rel="noopener">change detection</a>" and want to try answer the question "what else changed around this time?".
 
 Our original implementation was via a Python <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a> based cloud service that wrapped up the <code><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks_2samp.html" target="_blank" rel="noopener">scipy.stats.ks_2samp()</a></code> function of the popular open source <a href="https://docs.scipy.org/doc/scipy/index.html" target="_blank" rel="noopener">SciPy</a> package.
@@ -19,11 +22,11 @@ So, to give users a faster option, we decided to re-implement the whole algorith
 
 Below you can see the typical latencies on the default cloud based Metric Correlations service range from 5 to 25 seconds.
 
-![latency based on cloud microservice](/img/wp-archive/uploads/2022/06/mc_cloud_latency-1-600x211.png)
+![latency based on cloud microservice](..//img/wp-archive/uploads/2022/06/mc_cloud_latency-1-600x211.png)
 
 In comparison we can see that the latencies for the agent based Metric Correlations tend to be between 100 milliseconds to maybe 5 seconds typical upper range.
 
-![latency based on agent](/img/wp-archive/uploads/2022/06/mc_agent_latency-2-600x211.png)
+![latency based on agent](..//img/wp-archive/uploads/2022/06/mc_agent_latency-2-600x211.png)
 
 ## Getting started
 

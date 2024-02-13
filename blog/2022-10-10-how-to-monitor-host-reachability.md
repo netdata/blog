@@ -1,16 +1,18 @@
 ---
 title: How to monitor host reachability
-description: This post describes how to use Netdata to monitor the reachability of your servers.
-image: /img/wp-archive/uploads/2022/10/Monitoring-Reachable-Host-2.png
-tags: [how-to,ping,reachability,monitoring,httpcheck]
-keywords: [how-to,ping,reachability,monitoring]
-authors: chris
-slug: how-to-monitor-host-reachability
+subtitle: 
+date: 2022-10-10
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Monitoring-Reachable-Host-2.png.png".png".png".png".png"""""
 ---
-
 Most sysadmins and developers have at some point used a few of the popular <a href="https://www.tecmint.com/linux-networking-commands" target="_blank" rel="noopener">Linux networking commands</a> or their Windows equivalents to answer the common questions of host reachability - that is, whether a host or service is reachable and how fast it responds.
 
-<!--truncate-->
+
 
 ## Common approaches to reachability
 
@@ -18,7 +20,7 @@ One of the simplest, common checks, is to simply `ping` a host to verify that it
 
 However, to go from a simple manual check executed once on a given node, to proactively monitoring host reachability, you need a proper monitoring tool. Netdata Cloud has the capability to send reachability notifications for any Netdata node that loses its connection to the cloud. You just need to change the notification settings of your personal profile to <strong>All Alerts and unreachable</strong> for every room you want to receive such notifications from:
 
-![host reachability - All Alerts and unreachable](/img/wp-archive/uploads/2022/10/Monitor-unreachable-host-1.png)
+![host reachability - All Alerts and unreachable](..//img/wp-archive/uploads/2022/10/Monitor-unreachable-host-1.png)
 
 But, of course, this isn’t really monitoring the reachability of the host itself. 
 
@@ -34,7 +36,7 @@ In the example below, I’ve configured the <code>ping</code> plugin to monitor 
 
 The first chart we see in the ping section is the ping latency.
 
-![Host Reachability - Network Latency Chart](/img/wp-archive/uploads/2022/10/Monitoring-Reachable-Host-2.png)
+![Host Reachability - Network Latency Chart](..//img/wp-archive/uploads/2022/10/Monitoring-Reachable-Host-2.png)
 
 The default configuration of the chart is telling us that we’re seeing a grouping by dimension of metrics coming from two instances in one Node. Two hostnames monitored, so the instances make sense. But what you see here in the dimensions are average, maximum and minimum latencies for the request of all the ICMP request timings within the time frame depicted by that point. If we zoom in far enough, we’ll see that even when each point shows a single second, we still have different values for min, max and average. The reason we have so many values is that by default, the Netdata ping collector issues 5 ICMP requests with a 100ms interval, per host! Do take note of that: if your latency is too high to accommodate so many requests per second, you’ll need to modify the <code>interval</code> or <code>packets</code> in <code>ping.conf.</code>
 

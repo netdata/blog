@@ -1,16 +1,15 @@
 ---
-slug: how-to-monitor-the-geth-node-in-under-5-minutes
-title: "How to monitor the Geth node in under 5 minutes"
-description: "How to monitor the Geth node in under 5 minutes"
-image: /img/wp-archive/uploads/2022/03/How-Geth-affect-the-CPU-charts.png
-tags: [engineering,community,geth]
-keywords: [netdata,engineering,community]
-authors: team
+title: How to monitor the Geth node in under 5 minutes
+subtitle: 
+date: 2021-09-13
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/How-Geth-affect-the-CPU-charts.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
-
 <figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/How-Geth-affect-the-CPU-charts-1200x629.png" alt="" class="wp-image-16229"/></figure>
 
 

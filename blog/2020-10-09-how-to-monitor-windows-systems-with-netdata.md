@@ -1,15 +1,15 @@
 ---
-slug: how-to-monitor-windows-systems-with-netdata
-title: "How to monitor Windows systems with Netdata"
-description: "How to monitor Windows systems with Netdata"
-image: /img/wp-archive/uploads/2022/03/Monitoring-Windows-with-Netdata-Header.png
-tags: [product,engineering,windows]
-keywords: [netdata,product,engineering]
-authors: Jen
+title: How to monitor Windows systems with Netdata
+subtitle: 
+date: 2020-10-09
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Monitoring-Windows-with-Netdata-Header.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 

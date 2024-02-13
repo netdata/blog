@@ -1,15 +1,15 @@
 ---
-slug: netdata-year-in-review-2020
-title: "Netdata Year in Review 2020"
-description: "Netdata Year in Review 2020"
-image: /img/wp-archive/uploads/2021/01/DevOps-Metrics.png
-tags: [community]
-keywords: [netdata,community]
-authors: team
+title: Netdata Year in Review 2020
+subtitle: 
+date: 2020-12-18
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/DevOps-Metrics.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-medium wp-image-16482" src="/img/wp-archive/uploads/2022/03/Roadmap-Header-600x322.png" alt="" width="600" height="322" />
 
 Looking back at the unprecedented challenges we faced together in 2020, we’d like to extend our thanks to the community of people who have continued to work towards Netdata’s mission of simplifying monitoring and troubleshooting for everyone. Let’s review some of this year’s highlights.

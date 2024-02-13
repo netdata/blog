@@ -1,18 +1,20 @@
 ---
-slug: monitoring-node-reboots
-title: "How to monitor node reboots?"
-description: "How to monitor node reboots?"
-image: https://user-images.githubusercontent.com/96257330/202475049-22838a0b-73b1-485b-8416-5fd49d6ccb53.png
-tags: [how-to,infrastructure-monitoring,reboots,nodes,shutdown,crash,uptime]
-keywords: [how-to,infrastructure-monitoring,reboots,nodes,shutdown,crash]
-authors: satya
+title: How to monitor node reboots?
+subtitle: 
+date: 2022-11-17
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/202475049-22838a0b-73b1-485b-8416-5fd49d6ccb53.png.png".png".png".png".png"""""
 ---
-
 Monitoring the health and status of nodes and servers is a critical part of effective infrastructure monitoring.
 
 ![logo](https://user-images.githubusercontent.com/96257330/202475049-22838a0b-73b1-485b-8416-5fd49d6ccb53.png)
 
-<!--truncate-->
+
 
 ## How to monitor node reboots?
 

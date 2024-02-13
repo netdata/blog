@@ -1,17 +1,20 @@
 ---
-slug: apache-monitoring
 title: How to monitor and troubleshoot Apache web servers
-description: "Best practices for Apache Server monitoring."
-authors: shyam
-tags: [how-to, monitor, troubleshoot, Apache, web-server,apache,nginx,web-servers]
-keywords: [how-to, monitor, troubleshoot, Apache, web server]
-image: https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png
+subtitle: 
+date: 2022-11-09
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png.png".png".png".png".png"""""
 ---
 Best practices for Apache server monitoring and troubleshooting.
 
 ![logo](https://user-images.githubusercontent.com/24860547/201311686-6cebbfbb-c611-4f71-ad5f-9da3c3fa5caa.png)
 
-<!--truncate-->
+
 
 ## What is Apache?
 

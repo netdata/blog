@@ -1,15 +1,15 @@
 ---
-slug: introducing-netdatas-step-by-step-tutorial
-title: "Introducing Netdata’s step-by-step tutorial"
-description: "Introducing Netdata’s step-by-step tutorial"
-image: /img/wp-archive/uploads/2022/03/step-by-step-tutorial.png
-tags: [product]
-keywords: [netdata,product]
-authors: team
+title: Introducing Netdata’s step-by-step tutorial
+subtitle: 
+date: 2020-01-21
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/step-by-step-tutorial.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16825" src="/img/wp-archive/uploads/2022/03/step-by-step-tutorial.png" alt="" width="1200" height="600" />
 
 Health monitoring and performance troubleshooting aren’t easy. That’s exactly <em>why</em> we’re building Netdata, to democratize monitoring and make it accessible to anyone interested in learning more about their systems and applications.

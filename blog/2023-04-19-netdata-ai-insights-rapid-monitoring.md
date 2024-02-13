@@ -1,17 +1,19 @@
 ---
-slug: netdata-ai-insights-rapid-diagnostics
-title: "Netdata's AI Insights & Rapid Diagnostics"
-description: "Introduction to Netdata's new visualisation providing AI Insights, supporting Rapid Diagnostics"
-image: https://user-images.githubusercontent.com/96257330/233125254-f93c9520-0a3f-4844-8d43-1f3202a5e411.png
-tags: [monitoring-challenges, ai-insights, troubleshooting, rapid-troubleshooting, charts, visualisation,machine-learning]
-authors: satya
-
+title: Netdata's AI Insights & Rapid Diagnostics
+subtitle: 
+date: 2023-04-19
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/233125254-f93c9520-0a3f-4844-8d43-1f3202a5e411.png.png".png".png".png".png"""""
 ---
-
 Introduction to Netdata's new visualisation providing AI Insights, supporting Rapid Diagnostics.
 ![logo](https://user-images.githubusercontent.com/96257330/233125254-f93c9520-0a3f-4844-8d43-1f3202a5e411.png)
 
-<!--truncate-->
+
 
 ## A New Era in Monitoring Systems Dashboards
 
@@ -73,4 +75,3 @@ In conclusion, Netdata's AI Insights & Rapid Diagnostics provide a powerful and 
 ## Product Talk
 
 Join the Netdata team on the 20th of April, at 16:30 UTC in [Discord](https://discord.gg/fM5RQBzH?event=1097471931957121094) where we will be unveiling the new visualisation with innovative capabilities, and be the first to get a sneak peek and contribute with your valuable feedback for the team to tweak these features before releasing them to the public.
-

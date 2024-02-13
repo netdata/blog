@@ -1,15 +1,15 @@
 ---
-slug: welcome-to-netdatas-community-repository-consul-ansible-ml
-title: "Welcome to Netdata’s community repository: Consul, Ansible, ML"
-description: "Welcome to Netdata’s community repository: Consul, Ansible, ML"
-image: /img/wp-archive/uploads/2022/03/netdata-community-repository.png
-tags: [community,consul]
-keywords: [netdata,community]
-authors: team
+title: Welcome to Netdata’s community repository
+subtitle: 
+date: 2020-11-11
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/netdata-community-repository.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16555" src="/img/wp-archive/uploads/2022/03/netdata-community-repository-1200x825.png" alt="" width="1200" height="825" />
 
 On our journey to democratize monitoring, we are proud to have open source at the core of both our products and our company values. What started as a project out of frustration for lack of existing alternatives (see <a href="https://www.rexfeng.com/blog/2016/01/anger-driven-development/" target="_blank" rel="noopener noreferrer">anger-driven development</a>), quickly became one of the most starred open-source projects on all of GitHub.
