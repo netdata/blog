@@ -1,16 +1,15 @@
 ---
-slug: how-to-extend-the-geth-collector
-title: "How to extend the Geth collector"
-description: "How to extend the Geth collector"
-image: /img/wp-archive/uploads/2022/03/Geth-collector-diagram-1.png
-tags: [engineering,geth]
-keywords: [netdata,engineering]
-authors: team
+title: How to extend the Geth collector
+subtitle: 
+date: 2021-09-13
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Geth-collector-diagram-1.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
-
 <figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Geth-collector-diagram-1-1200x796.png" alt="" class="wp-image-16282"/></figure>
 
 

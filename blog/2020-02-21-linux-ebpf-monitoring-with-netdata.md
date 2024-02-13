@@ -1,15 +1,15 @@
 ---
-slug: linux-ebpf-monitoring-with-netdata
-title: "Linux eBPF monitoring with Netdata"
-description: "Linux eBPF monitoring with Netdata"
-image: /img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata.png
-tags: [product,ebpf,operating-system-monitoring]
-keywords: [netdata,product]
-authors: team
+title: Linux eBPF monitoring with Netdata
+subtitle: 
+date: 2020-02-21
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/linux-ebpf-monitoring-netdata.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16799" src="/img/wp-archive/uploads/2022/03/linux-ebpf-monitoring-netdata.png" alt="" width="1200" height="600" />
 
 Your application isn’t finished when you’ve closed the last <code>if</code> block and you lined up all the brackets. There’s a whole other world of testing, debugging, and optimization that you haven’t even touched yet.

@@ -1,15 +1,15 @@
 ---
-slug: agile-team-cmocka-foss
-title: "Building an agile team’s ‘safety harness’ with cmocka and FOSS"
-description: "Building an agile team’s ‘safety harness’ with cmocka and FOSS"
-image: /img/wp-archive/uploads/2022/03/agile-team-cmocka-foss.png
-tags: [engineering]
-keywords: [netdata,engineering]
-authors: team
+title: Building an agile team’s ‘safety harness’ with cmocka and FOSS
+subtitle: 
+date: 2019-11-26
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/agile-team-cmocka-foss.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16842" src="/img/wp-archive/uploads/2022/03/agile-team-cmocka-foss.png" alt="" width="1200" height="600" />
 
 Netdata is made up from agile teams who are deeply committed to improving the usability of our product. We want to respond to our users and introduce in-demand features. Working directly with our community is the best way to make Netdata better.

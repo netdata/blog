@@ -1,15 +1,15 @@
 ---
-slug: forbes-cloud-100-rising-stars-2020
-title: "Netdata named to the Forbes Cloud 100 Rising Stars"
-description: "Netdata named to the Forbes Cloud 100 Rising Stars"
-image: /img/wp-archive/uploads/2022/03/Cloud1002020-RisingStars-SMALL.png
-tags: [community,culture]
-keywords: [netdata,community,culture]
-authors: Jen
+title: Netdata named to the Forbes Cloud 100 Rising Stars
+subtitle: 
+date: 2020-09-16
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Cloud1002020-RisingStars-SMALL.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class=" wp-image-16648 alignleft" src="/img/wp-archive/uploads/2022/03/Cloud1002020-RisingStars-SMALL.png" alt="" width="390" height="471" />
 We’re excited to announce that we’ve been named to the<strong> <a title="Forbes 2020 Cloud 100 Rising Stars" href="https://www.forbes.com/sites/kenrickcai/2020/09/16/cloud-100-rising-stars-2020/" target="_blank" rel="noopener noreferrer">Forbes 2020 Cloud 100 Rising Stars</a>.</strong> This is a list of the top 100 private cloud companies in the world, published by Forbes in partnership with <a title="Bessemer Venture Partners" href="https://www.bvp.com/" target="_blank" rel="noopener noreferrer">Bessemer Venture Partners</a> and <a title="Salesforce Ventures" href="https://www.salesforce.com/company/ventures/" target="_blank" rel="noopener noreferrer">Salesforce Ventures</a>. The 20 Rising Stars represent young, high-growth and category-leading cloud companies who are poised to join the <a title="Cloud 100" href="https://www.forbes.com/cloud100/" target="_blank" rel="noopener noreferrer">Cloud 100</a> ranks.
 We are extremely honored to be recognized amongst our most-promising peers. This is a testament to our momentum we’ve built in partnership with our passionate community of users and contributors worldwide, as well as a validation of our community-first, open-source approach to democratizing infrastructure monitoring and troubleshooting.

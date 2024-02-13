@@ -1,15 +1,15 @@
 ---
-slug: agile-static-analysis
-title: "The role of shift-left testing in an agile environment"
-description: "The role of shift-left testing in an agile environment"
-image: /img/wp-archive/uploads/2022/03/Netdata-Security-use-with-Static-Analysis.png
-tags: [engineering]
-keywords: [netdata,engineering]
-authors: team
+title: The role of shift-left testing in an agile environment
+subtitle: 
+date: 2020-04-14
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Netdata-Security-use-with-Static-Analysis.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16723" src="/img/wp-archive/uploads/2022/03/Netdata-Security-use-with-Static-Analysis-1200x899.png" alt="" width="1200" height="899" />
 
 With the rapid growth of security threats to infrastructure, it’s more important than ever to proactively address vulnerabilities. As an open-source project, built on the trust of users and contributors, Netdata has security concerns at its core.

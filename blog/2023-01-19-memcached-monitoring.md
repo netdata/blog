@@ -1,19 +1,20 @@
 ---
-slug: memcached-monitoring
 title: How to monitor and troubleshoot Memcached
-description: Monitoring and troubleshooting Memcached.
-authors: shyam
-tags: [how-to, monitor, troubleshoot, memcached, caching, distributed-memory, data-store]
-keywords: [how-to, monitor, troubleshoot, memcached, caching, distributed-memory, data-store]
-image: https://user-images.githubusercontent.com/24860547/213391620-fdab50bf-4766-4c6d-abe5-76c569c19ff4.png
-
+subtitle: 
+date: 2023-01-19
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/213391620-fdab50bf-4766-4c6d-abe5-76c569c19ff4.png.png".png".png".png".png"""""
 ---
-
 Find out how to effectively and easily monitor and troubleshoot Memcached using Netdata
 
 ![logo](https://user-images.githubusercontent.com/24860547/213391620-fdab50bf-4766-4c6d-abe5-76c569c19ff4.png)
 
-<!--truncate-->
+
 ## What is Memcached
 
 [Memcached](https://memcached.org/) is an open source, high-performance, distributed memory object caching system. It is used to store data in memory to improve the performance and scalability of applications. Memcached is designed to be highly reliable and provides features such as replication, mirroring, sharding, and garbage collection. 

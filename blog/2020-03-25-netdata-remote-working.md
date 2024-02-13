@@ -1,15 +1,15 @@
 ---
-slug: netdata-remote-working
-title: "Creating a thriving, agile, remote team"
-description: "Creating a thriving, agile, remote team"
-image: /img/wp-archive/uploads/2022/03/netdata-remote-working_01.png
-tags: [culture]
-keywords: [netdata,culture]
-authors: chris
+title: Creating a thriving, agile, remote team
+subtitle: 
+date: 2020-03-25
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/netdata-remote-working_01.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16750" src="/img/wp-archive/uploads/2022/03/netdata-remote-working_01-1200x899.png" alt="" width="1200" height="899" />
 
 The coronavirus (COVID-19) pandemic has forced many organizations to take unprecedented steps towards remote working. As a fully distributed team, we’ve faced the common challenges of remote work. Based on our experience from our very beginning in 2018, all but a few of these organizations new to remote working will face hurdles to overcome and may try to revert to colocation as soon as possible. Remote working is hard, even when it’s carefully planned and executed. When the transition is rushed and seen as a necessary, temporary inconvenience, challenges are all but inevitable.

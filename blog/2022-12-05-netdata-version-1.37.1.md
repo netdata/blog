@@ -1,16 +1,18 @@
 ---
-slug: netdata-version-1.37.1
-title: "Release 1.37.1: Patch release for security issues"
-description: "Release 1.37.1: Patch release for security issues"
-image: https://user-images.githubusercontent.com/88642300/205665462-39758bd7-65e7-429e-9b57-c72c95c52be1.png
-tags: [product,release-notes]
-keywords: [netdata,product]
-authors: team
+title: Release 1.37.1
+subtitle: 
+date: 2022-12-05
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/205665462-39758bd7-65e7-429e-9b57-c72c95c52be1.png.png".png".png".png".png"""""
 ---
-
 Netdata v1.37.1 is a patch release to address issues discovered since v1.37.0. Refer to the [v.1.37.0 release notes](https://github.com/netdata/netdata/releases/tag/v1.37.0) for the full scope of that release.
 
-<!--truncate-->
+
 
 # Release v1.37.1
 

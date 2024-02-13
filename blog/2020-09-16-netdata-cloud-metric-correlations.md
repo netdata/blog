@@ -1,15 +1,15 @@
 ---
-slug: netdata-cloud-metric-correlations
-title: "Introducing our first Netdata Cloud Insights feature: Metric Correlations for faster root cause analysis"
-description: "Introducing our first Netdata Cloud Insights feature: Metric Correlations for faster root cause analysis"
-image: /img/wp-archive/uploads/2022/03/Cloud-Correlations@2x.png
-tags: [product,engineering,machine-learning]
-keywords: [netdata,product,engineering,machine-learning]
-authors: andy
+title: Introducing our first Netdata Cloud Insights feature
+subtitle: 
+date: 2020-09-16
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Cloud-Correlations@2x.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16623" src="/img/wp-archive/uploads/2022/03/Cloud-Correlations@2x-1200x826.png" alt="" width="1200" height="826" />
 
 Today, we are excited to launch our first Netdata Cloud Insights feature, Metric Correlations, developed for discovering underlying issues more quickly and identifying the root cause more efficiently. Read on to learn more about our approach to developing this new feature, how it works, and the many benefits you’ll find incorporating this into your team’s troubleshooting workflow.

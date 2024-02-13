@@ -1,15 +1,15 @@
 ---
-slug: netdata-clouds-new-architecture
-title: "Netdata Cloud’s New Architecture"
-description: "Netdata Cloud’s New Architecture"
-image: /img/wp-archive/uploads/2022/03/New_arch_notification.jpeg
-tags: [product,architecture,deployment-strategies]
-keywords: [netdata,product,architecture]
-authors: team
+title: Netdata Cloud’s New Architecture
+subtitle: 
+date: 2022-02-10
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/New_arch_notification.jpeg.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <figure class="wp-block-image size-full"><img class="wp-image-16154" src="/img/wp-archive/uploads/2022/03/New_arch_notification.jpeg" alt="" /></figure>
 
 In version v1.32 of Netdata, we announced a remarkable new update that we are extremely proud of; Netdata Cloud now runs on the most reliable and stable backend that we’ve ever built. 

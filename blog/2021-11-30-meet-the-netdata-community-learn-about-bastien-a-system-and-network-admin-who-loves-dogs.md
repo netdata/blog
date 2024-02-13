@@ -1,15 +1,15 @@
 ---
-slug: meet-the-netdata-community-learn-about-bastien-a-system-and-network-admin-who-loves-dogs
-title: "Meet the Netdata Community: Learn About Bastien a System and Network Admin Who Loves Dogs"
-description: "Meet the Netdata Community: Learn About Bastien a System and Network Admin Who Loves Dogs"
-image: /img/wp-archive/uploads/2022/03/Screen-Shot-2021-11-30-at-3.10.06-PM.png
-tags: [community]
-keywords: [netdata,community]
-authors: team
+title: Meet the Netdata Community
+subtitle: 
+date: 2021-11-30
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Screen-Shot-2021-11-30-at-3.10.06-PM.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <figure class="wp-block-image size-full"><img src="/img/wp-archive/uploads/2022/03/Screen-Shot-2021-11-30-at-3.10.06-PM.png" alt="" class="wp-image-16223"/></figure>
 
 <strong>Tell people about yourself and what you do.</strong>

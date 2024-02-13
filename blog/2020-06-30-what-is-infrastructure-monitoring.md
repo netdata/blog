@@ -1,15 +1,15 @@
 ---
-slug: what-is-infrastructure-monitoring
-title: "What is Infrastructure Monitoring?"
-description: "What is Infrastructure Monitoring?"
-image: /img/wp-archive/uploads/2022/03/Blog-What_is_Infrastructure_Monitoring_Header.png
-tags: [engineering,infrastructure-monitoring]
-keywords: [netdata,engineering]
-authors: Jen
+title: What is Infrastructure Monitoring?
+subtitle: 
+date: 2020-06-30
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Blog-What_is_Infrastructure_Monitoring_Header.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-medium wp-image-16343" src="/img/wp-archive/uploads/2022/03/Blog-What_is_Infrastructure_Monitoring_Header-600x450.png" alt="" width="600" height="450" />
 
 IT is advancing blazingly fast. To keep up with architectural changes and hybrid environments, it’s more important than ever to maintain efficient infrastructure monitoring and troubleshooting. Adding to the complexity is the increase of distributed systems, comprised of many components and services. For IT teams to effectively manage monitoring modern infrastructure, it’s necessary to have the right practices and tools in place that enable teams to do their jobs as quickly as possible with fewer resources.

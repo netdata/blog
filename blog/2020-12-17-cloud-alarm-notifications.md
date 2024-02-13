@@ -1,15 +1,15 @@
 ---
-slug: cloud-alarm-notifications
-title: "Centralize the truth of your infrastructure with alarm notifications"
-description: "Centralize the truth of your infrastructure with alarm notifications"
-image: /img/wp-archive/uploads/2020/12/Central-Alarm-Notifications.png
-tags: [product,alerts,notifications]
-keywords: [netdata,product]
-authors: team
+title: Centralize the truth of your infrastructure with alarm notifications
+subtitle: 
+date: 2020-12-17
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Central-Alarm-Notifications.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
 <div class="et_pb_text_inner">
 

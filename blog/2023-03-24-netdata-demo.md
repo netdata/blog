@@ -1,18 +1,18 @@
 ---
-slug: netdata-demo
-title: "Introducing the Netdata demo space"
-description: "Netdata's public demo space for interactive monitoring and troubleshooting"
-image: https://user-images.githubusercontent.com/24860547/201481889-0cf8e192-683f-4a80-9b96-4f69dd85490f.png
-tags: [how-to,infrastructure-monitoring,netdata,demo,space]
-keywords: [how-to,infrastructure-monitoring,netdata,demo,space,room]
-authors: shyam
+title: Introducing the Netdata demo space
+subtitle: 
+date: 2023-03-24
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/201481889-0cf8e192-683f-4a80-9b96-4f69dd85490f.png.png".png".png".png".png"""""
 ---
-
-![image](https://user-images.githubusercontent.com/24860547/201481889-0cf8e192-683f-4a80-9b96-4f69dd85490f.png)
-
 Introducing Netdata's Demo Space, a quick and easy way to experience monitoring environments before you set them up yourself.
 
-<!--truncate-->
+
 
 At Netdata, we are always striving to provide the best monitoring experience for our users. We understand that adopting a new monitoring solution can sometimes be challenging, especially when you're unsure of how it will fit your specific environment. That's why we're excited to announce the Netdata Demo Space!
 

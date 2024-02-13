@@ -1,17 +1,18 @@
 ---
-slug: netdata-functions
 title: Introducing Netdata Functions
-description: Introducing Netdata Functions
-authors: shyam
-tags: [real-time, monitor, troubleshoot, functions, top, processes]
-keywords: [real-time, monitor, troubleshoot, functions, top, processes]
-image: https://user-images.githubusercontent.com/24860547/219148788-393d42d3-ef34-43bd-bb8b-e612246923c5.png
-
+subtitle: 
+date: 2023-02-15
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/219148788-393d42d3-ef34-43bd-bb8b-e612246923c5.png.png".png".png".png".png"""""
 ---
-
 Netdata is committed to making it simpler and easier for everyone to monitor and troubleshoot their infrastructure. With that goal in mind, we're excited to announce the launch of our new "Functions" feature, which allows Netdata Agent collectors to expose "functions" that can be executed in run-time and on-demand.
 
-<!--truncate-->
+
 
 ### What are Netdata functions?
 

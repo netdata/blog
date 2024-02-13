@@ -1,15 +1,15 @@
 ---
-slug: the-reality-of-netdatas-long-term-metrics-storage-database
-title: "The reality of Netdata’s long-term metrics storage database"
-description: "The reality of Netdata’s long-term metrics storage database"
-image: /img/wp-archive/uploads/2022/03/Long-term-metrics-storage-1.png
-tags: [product,engineering]
-keywords: [netdata,product,engineering]
-authors: team
+title: The reality of Netdata’s long-term metrics storage database
+subtitle: 
+date: 2020-10-12
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Long-term-metrics-storage-1.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16589" src="/img/wp-archive/uploads/2022/03/Long-term-metrics-storage-1.png" alt="" width="683" height="470" />
 
 The perception that Netdata is only capable of short-term metrics storage is a myth. It’s a pervasive myth we still see in blog posts and through community engagement, despite it being false for more than a year.

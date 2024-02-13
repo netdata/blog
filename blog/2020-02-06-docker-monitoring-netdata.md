@@ -1,15 +1,15 @@
 ---
-slug: docker-monitoring-netdata
-title: "Docker container monitoring with Netdata"
-description: "Docker container monitoring with Netdata"
-image: /img/wp-archive/uploads/2022/03/docker-monitoring-netdata.png
-tags: [product,docker]
-keywords: [netdata,product]
-authors: team
+title: Docker container monitoring with Netdata
+subtitle: 
+date: 2020-02-06
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/docker-monitoring-netdata.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16812" src="/img/wp-archive/uploads/2022/03/docker-monitoring-netdata.png" alt="" width="1200" height="600" />
 
 Properly monitoring the health and performance of Docker containers is an essential skill for solo developers and large teams alike. As your infrastructure grows in complexity, it’s important to streamline every facet of the performance of your apps/services. Plus, it’s essential that the tools you use to make those performance decisions work across teams, and allow for complex scaling architectures.

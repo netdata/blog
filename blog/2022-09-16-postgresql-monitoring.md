@@ -1,14 +1,15 @@
 ---
-slug: postgresql-monitoring
 title: PostgreSQL Monitoring
-authors: shyam
-tags: [how-to, PostgreSQL,postgres,postgresql]
+subtitle: 
+date: 2022-09-16
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/.png".png".png".png".png"""""
 ---
-
-![logo](https://wiki.postgresql.org/images/9/9a/PostgreSQL_logo.3colors.540x557.png)
-
-<!--truncate-->
-
 ## What's PostgreSQL and why monitor it?
 
 PostgreSQL is a popular open source object-relational database system designed to work for a wide range of workloads from single machines to data warehouses to web services with many concurrent users. PostgreSQL runs on all major operating systems and is used by teams and organizations across the world, including Netdata. 

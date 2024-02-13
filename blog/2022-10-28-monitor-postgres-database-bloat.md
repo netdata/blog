@@ -1,16 +1,18 @@
 ---
-slug: postgresql-database-bloat
-title: "How to monitor and fix Database bloats in PostgreSQL?"
-description: "How to troubleshoot database bloats and fix them on PostgreSQL?"
-image: https://user-images.githubusercontent.com/96257330/198544117-4672f54e-0f72-43f7-b295-cd71a2a5a830.png
-tags: [how-to,infrastructure-monitoring,monitoring,postgresql,bloat,postgres]
-keywords: [how-to,infrastructure-monitoring,monitoring,postgresql,database,bloat]
-authors: satya
+title: How to monitor and fix Database bloats in PostgreSQL?
+subtitle: 
+date: 2022-10-28
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/198544117-4672f54e-0f72-43f7-b295-cd71a2a5a830.png.png".png".png".png".png"""""
 ---
-
 Database bloat is disk space that was used by a table or index and is available for reuse by the database but has not been reclaimed. Bloat is created when deleting or updating tables and indexes. Here's how to deal with it!
 
-<!--truncate-->
+
 
 ## What is Database bloat?
 
@@ -140,6 +142,3 @@ If you haven’t already, [sign up now for a free Netdata account](https://app.n
 We’d love to hear from you – if you have any questions, complaints or feedback please reach out to us on [Discord](https://discord.com/invite/mPZ6WZKKG2) or [Github](https://github.com/netdata/netdata/). 
 
 Happy Troubleshooting!
-
-
- 

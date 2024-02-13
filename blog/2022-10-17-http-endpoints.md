@@ -1,14 +1,16 @@
 ---
-slug: http-endpoints
-title: "How to monitor HTTP endpoints"
-description: "How to monitor HTTP endpoints"
-image: /img/wp-archive/uploads/2022/10/http-endpoint-4.png
-tags: [how-to,infrastructure-monitoring,http,httpcheck,ping]
-keywords: [how-to,infrastructure-monitoring,http]
-authors: chris
+title: How to monitor HTTP endpoints
+subtitle: 
+date: 2022-10-17
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/http-endpoint-4.png.png".png".png".png".png"""""
 ---
-
-The <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP protocol</a> has become the de facto standard application layer protocol of the internet. From publicly available web sites and APIs to “inter-process” communications in REST based microservice architectures or large <a href="https://en.wikipedia.org/wiki/Service-oriented_architecture">Service Oriented Architectures</a> based on <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a>, you find HTTP being used again and again, due to its simplicity and our familiarity with it. How many protocols can you name that have <a href="https://imgur.com/gallery/4KqWq">memes</a> for their status codes? Of course, such a popular protocol has endless pages written about how to properly monitor the services that rely on it, with many options specific to every use case.<!--truncate--> What you will learn here is how to get your basics done in monitoring HTTP endpoints, so you can be up and running in a few minutes, monitoring all HTTP services in your entire infrastructure. 
+The <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP protocol</a> has become the de facto standard application layer protocol of the internet. From publicly available web sites and APIs to “inter-process” communications in REST based microservice architectures or large <a href="https://en.wikipedia.org/wiki/Service-oriented_architecture">Service Oriented Architectures</a> based on <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a>, you find HTTP being used again and again, due to its simplicity and our familiarity with it. How many protocols can you name that have <a href="https://imgur.com/gallery/4KqWq">memes</a> for their status codes? Of course, such a popular protocol has endless pages written about how to properly monitor the services that rely on it, with many options specific to every use case. What you will learn here is how to get your basics done in monitoring HTTP endpoints, so you can be up and running in a few minutes, monitoring all HTTP services in your entire infrastructure. 
 
 ## The basics of HTTP endpoint monitoring
 
@@ -64,21 +66,21 @@ We can see what this configuration gets us in the <a href="https://app.netdata.c
 
 ## Does each service respond… correctly?
 
-!["status"](/img/wp-archive/uploads/2022/10/http-endpoint-1.png)
+!["status"](..//img/wp-archive/uploads/2022/10/http-endpoint-1.png)
 
 This is the default status chart in the overview screen of https://app.netdata.cloud for the 3 jobs specified. We see that only two of the services respond successfully. As expected the SOAP test consistently fails, because we rigged it with an invalid check on the response content. We can verify with this chart that indeed the failure is due to bad_content, by selecting to display the <strong>bad_content</strong> status, instead of <strong>success</strong>:
 
-!["HTTP check status"](/img/wp-archive/uploads/2022/10/http-endpoint-2.png)
+!["HTTP check status"](..//img/wp-archive/uploads/2022/10/http-endpoint-2.png)
 
 You can play with these options on the charts as much as you want and save each view in a custom dashboard if you want. However, all that is not really necessary, because we have also received a predefined alert for this bad content:
 
-!["bad content"](/img/wp-archive/uploads/2022/10/http-endpoint-3.png)
+!["bad content"](..//img/wp-archive/uploads/2022/10/http-endpoint-3.png)
 
 We’ll see the list of predefined alerts for HTTP endpoints later but rest assured that the common checks are performed automatically, and you will be notified of important issues.
 
 ## Does each service respond… within an acceptable time?
 
-!["http endpoint check"](/img/wp-archive/uploads/2022/10/http-endpoint-4.png)
+!["http endpoint check"](..//img/wp-archive/uploads/2022/10/http-endpoint-4.png)
 
 The response chart on the <strong>Overview</strong> screen of <a href="https://app.netdata.cloud">https://app.netdata.cloud</a> shows each job name along with each request/response latency. We can see in the time series of the POST web service that it occasionally has high latencies. We are working to have all latency charts in Netdata presented by default with heatmaps, but this representation along with the out of the box alerts is sufficient for most use cases.  
 

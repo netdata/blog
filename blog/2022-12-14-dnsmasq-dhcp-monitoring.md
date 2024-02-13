@@ -1,18 +1,20 @@
 ---
-slug: dnsmasq-dhcp-monitoring
 title: How to monitor and troubleshoot Dnsmasq for DHCP?
-description: Monitoring and troubleshooting Dnsmasq for DHCP.
-authors: satya
-tags: [how-to, monitor, troubleshoot, dnsmasq,  dns, domain-name-server, DNS-management, dhcp, network-management,dnsmasq-dhcp]
-keywords: [how-to, monitor, troubleshoot, dnsmasq,  dns, domain-name-server, DNS-management, dhcp, network-management]
-image: https://user-images.githubusercontent.com/96257330/207592157-9ec046b1-2ad0-46b8-87d1-c3e91b7dbb35.png
+subtitle: 
+date: 2022-12-14
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/207592157-9ec046b1-2ad0-46b8-87d1-c3e91b7dbb35.png.png".png".png".png".png"""""
 ---
-
 Find out how to effectively and easily monitor and troubleshoot Dnsmasq for DHCP using Netdata
 
 ![logo](https://user-images.githubusercontent.com/96257330/207592157-9ec046b1-2ad0-46b8-87d1-c3e91b7dbb35.png)
 
-<!--truncate-->
+
 
 ## What is Dnsmasq for DHCP?
 

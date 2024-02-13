@@ -1,15 +1,15 @@
 ---
-slug: software-extensibility-is-key-to-adoption
-title: "Software Extensibility Is Key To Adoption"
-description: "Software Extensibility Is Key To Adoption"
-image: /img/wp-archive/uploads/2022/03/Software-Extensibility-Blog-Post.png
-tags: [community,product,engineering]
-keywords: [netdata,community,product,engineering]
-authors: team
+title: Software Extensibility Is Key To Adoption
+subtitle: 
+date: 2020-09-25
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Software-Extensibility-Blog-Post.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-full wp-image-16613" src="/img/wp-archive/uploads/2022/03/Software-Extensibility-Blog-Post.png" alt="" width="969" height="638" />
 
 As with most commercial products, software today is mass produced for reasons of simple economics. But making the same software work for as many people as possible while also meeting the unique requirements different people and organizations have is a challenging task.

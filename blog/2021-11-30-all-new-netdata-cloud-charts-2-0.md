@@ -1,16 +1,15 @@
 ---
-slug: all-new-netdata-cloud-charts-2-0
-title: "All-new Netdata Cloud Charts 2.0"
-description: "All-new Netdata Cloud Charts 2.0"
-image: /img/wp-archive/uploads/2022/03/Netdata-Charts-2.0.png
-tags: [engineering,product,charts,observability]
-keywords: [netdata,engineering,product]
-authors: hugo
+title: All-new Netdata Cloud Charts 2.0
+subtitle: 
+date: 2021-11-30
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Netdata-Charts-2.0.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
-
 <figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/Netdata-Charts-2.0-1200x704.png" alt="" class="wp-image-16212"/></figure>
 
 

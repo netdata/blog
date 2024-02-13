@@ -1,15 +1,15 @@
 ---
-slug: bringing-rich-and-real-time-infrastructure-monitoring-to-netdata-cloud
-title: "Bringing rich and real-time infrastructure monitoring to Netdata Cloud"
-description: "Bringing rich and real-time infrastructure monitoring to Netdata Cloud"
-image: /img/wp-archive/uploads/2022/03/Correlation_charts.png
-tags: [product]
-keywords: [netdata,product]
-authors: team
+title: Bringing rich and real-time infrastructure monitoring to Netdata Cloud
+subtitle: 
+date: 2020-10-22
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Correlation_charts.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-large wp-image-16578" src="/img/wp-archive/uploads/2022/03/Correlation_charts-1200x830.png" alt="" width="1200" height="830" />
 
 The Netdata Agent is well-equipped to solve monitoring and troubleshooting challenges for single nodes. We love that the Agent is so valuable to our users, but Netdata Cloud is designed for infrastructure monitoring. That’s why we’re working so hard to offer even more capabilities and help users monitor and troubleshoot infrastructures of all sizes, entirely for free!

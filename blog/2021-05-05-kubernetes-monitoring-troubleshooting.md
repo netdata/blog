@@ -1,15 +1,15 @@
 ---
-slug: kubernetes-monitoring-troubleshooting
-title: "Kubernetes monitoring and troubleshooting made simple"
-description: "Kubernetes monitoring and troubleshooting made simple"
-image: /img/wp-archive/uploads/2022/03/kubernetes-monitoring-troubleshooting.png
-tags: [product,kubernetes]
-keywords: [netdata,product]
-authors: team
+title: Kubernetes monitoring and troubleshooting made simple
+subtitle: 
+date: 2021-05-05
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/kubernetes-monitoring-troubleshooting.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone wp-image-16419 size-large" src="/img/wp-archive/uploads/2022/03/kubernetes-monitoring-troubleshooting-1200x828.png" alt="" width="1200" height="828" />
 
 Infrastructure monitoring was difficult enough when entire businesses ran off a few bare metal servers in a dusty, forgotten closet. Other IT infrastructure <a href="https://staging-www.netdata.cloud/blog/why-netdata-is-free/" target="_blank" rel="noopener noreferrer">monitoring tools fell short</a>, unable to provide complete and granular-enough metrics in real time, even when we were only dealing with a handful of systems responsible for running every part of the application stack. They were hard to configure, especially for the non-gurus out there, and didn’t provide the high-resolution metrics the gurus needed to make data-driven troubleshooting decisions.

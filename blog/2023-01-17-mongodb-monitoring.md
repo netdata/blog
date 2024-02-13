@@ -1,19 +1,20 @@
 ---
-slug: mongodb-monitoring
 title: How to monitor and troubleshoot MongoDB
-description: Monitoring and troubleshooting MongoDB.
-authors: shyam
-tags: [how-to, monitor, troubleshoot, mongodb,  database, nosql, data store]
-keywords: [how-to, monitor, troubleshoot, mongodb,  database, nosql, data store]
-image: https://user-images.githubusercontent.com/24860547/212873204-5082b40d-7be0-4a08-ae72-0895b840837b.png
-
+subtitle: 
+date: 2023-01-17
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/212873204-5082b40d-7be0-4a08-ae72-0895b840837b.png.png".png".png".png".png"""""
 ---
-
 Find out how to effectively and easily monitor and troubleshoot MongoDB using Netdata
 
 ![logo](https://user-images.githubusercontent.com/24860547/212873204-5082b40d-7be0-4a08-ae72-0895b840837b.png)
 
-<!--truncate-->
+
 ## What is MongoDB
 
 [MongoDB](https://www.mongodb.com/) is an open source, cross-platform, document-oriented NoSQL database system. It is designed for scalability and performance and is used to store data in collections of documents. MongoDB supports advanced features such as file storage, full-text search, and data replication. It is commonly used in web applications and cloud computing applications. 

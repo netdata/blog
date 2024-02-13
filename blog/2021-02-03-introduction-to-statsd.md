@@ -1,15 +1,15 @@
 ---
-slug: introduction-to-statsd
-title: "Introduction to StatsD"
-description: "Introduction to StatsD"
-image: /img/wp-archive/uploads/2022/03/StatsD.png
-tags: [engineering,product,statsd]
-keywords: [netdata,engineering,product]
-authors: team
+title: Introduction to StatsD
+subtitle: 
+date: 2021-02-03
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/StatsD.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <img class="alignnone size-medium wp-image-16449" src="/img/wp-archive/uploads/2022/03/StatsD-600x414.png" alt="" width="600" height="414" />
 
 StatsD is an industry-standard technology stack for monitoring applications and instrumenting any piece of software to deliver custom metrics. The StatsD architecture is based on delivering the metrics via UDP packets from any application to a central statsD server. Although the original StatsD server was written in Node.js, there are many implementations today, with Netdata being one of them.

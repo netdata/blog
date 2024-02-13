@@ -1,15 +1,17 @@
 ---
-slug: disk-usage
-title: "How to monitor the disk usage on your infrastructure"
-description: "The most important part of disk usage monitoring is to check the utilization of each filesystem and each mount point which can reveal existing or impending issues with the storage space on your infrastructure."
-image: https://user-images.githubusercontent.com/88642300/197860415-bdff658c-7dd3-4a9e-b39a-fbddd3b44d57.png
-tags: [how-to,infrastructure-monitoring,disk,disks,operating-system-monitoring]
-keywords: [how-to,infrastructure-monitoring]
-authors: satya
+title: How to monitor the disk usage on your infrastructure
+subtitle: 
+date: 2022-10-25
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/197860415-bdff658c-7dd3-4a9e-b39a-fbddd3b44d57.png.png".png".png".png".png"""""
 ---
-
 The most important part of disk usage monitoring is to check the utilization of each filesystem and each mount point which can reveal existing or impending issues with the storage space on your infrastructure.
-<!--truncate-->
+
 
 
 ## What Does Disk Usage (DU) Mean?

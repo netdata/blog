@@ -1,18 +1,20 @@
 ---
-slug: logind-monitoring
 title: How to monitor and troubleshoot systemd-logind
-description: Monitoring and troubleshooting systemd-logind.
-authors: satya
-tags: [how-to, monitor, troubleshoot, logind,  login, authentication, security]
-keywords: [how-to, monitor, troubleshoot, logind,  login, authentication, security]
-image: https://user-images.githubusercontent.com/96257330/207284329-273076e5-c092-45ab-a771-7b99cc50a15b.png
+subtitle: 
+date: 2022-12-13
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/207284329-273076e5-c092-45ab-a771-7b99cc50a15b.png.png".png".png".png".png"""""
 ---
-
 Find out how to effectively and easily monitor and troubleshoot systemd-logind using Netdata
 
 ![logo](https://user-images.githubusercontent.com/96257330/207284329-273076e5-c092-45ab-a771-7b99cc50a15b.png)
 
-<!--truncate-->
+
 
 ## What is systemd-logind
 

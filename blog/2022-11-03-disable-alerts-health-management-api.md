@@ -1,16 +1,18 @@
 ---
-slug: mute-alerts
-title: "How to mute alerts during maintenance windows or scheduled backups?"
-description: "Disable or Mute Alerts during maintenance windows"
-tags: [netdata,alerts,silence,disable,mute,maintenance-window]
-keywords: [netdata,alerts,silence,disable,mute,maintenance-window]
-image: https://user-images.githubusercontent.com/96257330/199584396-0036ad74-fe5b-4f61-b68f-c6f254a2f43c.png
-authors: satya
+title: How to mute alerts during maintenance windows or scheduled backups?
+subtitle: 
+date: 2022-11-03
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/199584396-0036ad74-fe5b-4f61-b68f-c6f254a2f43c.png.png".png".png".png".png"""""
 ---
-
 The health management APIs in Netdata allows teams to eliminate unnecessary alerting during scheduled maintenance, testing, auto scaling events, and instance reboots.
 
-<!--truncate-->
+
 
 For all SREs, it is absolutely crucial to filter out expected events during maintenance windows and quickly pinpoint critical issues in your infrastructure. Every minute is crucial while dealing with troubleshooting issues and any distractions that may hijack the troubleshooting process should be subdued.
 The health management APIs in Netdata allows teams to eliminate unnecessary alerting during scheduled maintenance, testing, auto scaling events, and instance reboots.

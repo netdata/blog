@@ -1,15 +1,15 @@
 ---
-slug: netdata-cloud-show-the-observability-panel
-title: "Netdata Cloud Show: The Observability Panel"
-description: "Netdata Cloud Show: The Observability Panel"
-image: /img/wp-archive/uploads/2022/03/Netdata-Cloud-Panel.png
-tags: [community]
-keywords: [netdata,community]
-authors: team
+title: Netdata Cloud Show
+subtitle: 
+date: 2021-12-07
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/Netdata-Cloud-Panel.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <figure class="wp-block-image size-large"><img class="wp-image-16169" src="/img/wp-archive/uploads/2022/03/Netdata-Cloud-Panel-1200x674.png" alt="" /></figure>
 
 ## “In 2022, 60% of security incidents will involve third parties.”<strong>– Forrester</strong>

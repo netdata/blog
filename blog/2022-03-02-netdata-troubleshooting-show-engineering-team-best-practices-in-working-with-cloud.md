@@ -1,15 +1,15 @@
 ---
-slug: netdata-troubleshooting-show-engineering-team-best-practices-in-working-with-cloud
-title: "Netdata Troubleshooting Show: Engineering Team Best Practices in Working with Cloud"
-description: "Netdata Troubleshooting Show: Engineering Team Best Practices in Working with Cloud"
-image: /img/wp-archive/uploads/2022/03/group_promo.png
-tags: [community]
-keywords: [netdata,community]
-authors: team
+title: Netdata Troubleshooting Show
+subtitle: 
+date: 2022-03-02
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/group_promo.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
 <figure class="wp-block-image size-large"><img src="/img/wp-archive/uploads/2022/03/group_promo-1200x675.png" alt="" class="wp-image-16147"/></figure>
 
 ## Panel: Engineering Team Best Practices in Working with Cloud

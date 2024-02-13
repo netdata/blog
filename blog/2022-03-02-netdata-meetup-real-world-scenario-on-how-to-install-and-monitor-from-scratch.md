@@ -1,17 +1,15 @@
 ---
-slug: netdata-meetup-real-world-scenario-on-how-to-install-and-monitor-from-scratch
-title: "Netdata Meetup: Real World Scenario on How to Install and Monitor from Scratch"
-description: "Netdata Meetup: Real World Scenario on How to Install and Monitor from Scratch"
-image: /img/wp-archive/uploads/2022/03/netdata-meetup-1.png
-tags: [community]
-keywords: [netdata,community]
-authors: team
+title: Netdata Meetup
+subtitle: 
+date: 2022-03-02
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/netdata-meetup-1.png.png".png".png".png".png"""""
 ---
-
-<!--truncate-->
-
-![](/img/wp-archive/uploads/2022/03/netdata-meetup-1-1200x676.png)
-
 Announcing Netdata Meetups: Virtual How-to Live Show – Join us Friday, March 4th
 
 [Join us live this Friday!](https://youtu.be/lBd0-TFJGAY) We are launching the brand new Netdata Meetups! Join us to learn more about Netdata. This how-to virtual series will help you go deeper with Netdata and as a bonus we will add in tips and tricks for monitoring and troubleshooting. We can’t wait to see you on Friday, March 4th at 9 am PST (GMT -8).
@@ -24,7 +22,7 @@ In our first Netdata Meetup (<a href="https://youtu.be/lBd0-TFJGAY">watch live h
 
 ## About the Presenter
 
-![](/img/wp-archive/uploads/2022/03/Thiago-Marques_final-214x300-1.jpeg)
+![](..//img/wp-archive/uploads/2022/03/Thiago-Marques_final-214x300-1.jpeg)
 
 Thiago Marques has been a Physicist, C developer since 2003 and has worked with the Linux kernel since 2006. He has been working with Linux either as a developer or network administrator since 2000. Thiago has over three years of eBPF experience monitoring kernel information with modules to eBPF.
 

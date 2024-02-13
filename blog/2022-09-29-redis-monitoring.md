@@ -1,14 +1,15 @@
 ---
-slug: redis-monitoring
 title: Redis Monitoring
-authors: shyam
-tags: [how-to, Redis,redis]
+subtitle: 
+date: 2022-09-29
+author: 
+related: ["", "", ""]
+tags: 
+  [
+    "",
+  ]
+image: "."."""/img/blog/.png".png".png".png".png"""""
 ---
-
-![logo](https://redis.com/wp-content/uploads/2021/08/redis-logo.png?&auto=webp&quality=85,75&width=500)
-
-<!--truncate-->
-
 ## What is Redis?
 
 Redis is a popular open-source, in-memory data store used across industries by a variety of companies, including Github, Stack Overflow, Twitter and Netdata!
