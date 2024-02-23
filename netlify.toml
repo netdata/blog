@@ -10,3 +10,79 @@
 [[redirects]]
   from = "/posts/*"
   to = "/:splat"
+
+[[redirects]]
+  from = "/netdata-homelab-plan/"
+  to = "https://www.netdata.cloud/blog/netdata-homelab-plan/"
+
+[[redirects]]
+  from = "/iot-monitoring-challenges/"
+  to = "https://www.netdata.cloud/blog/iot-monitoring-challenges/"
+
+[[redirects]]
+  from = "/netdata-alerts-configuration-manager/"
+  to = "https://www.netdata.cloud/blog/alert-configuration-manager/"
+
+[[redirects]]
+  from = "/netdata-methodology/"
+  to = "https://www.netdata.cloud/blog/netdata-methodology/"
+
+[[redirects]]
+  from = "/netdata-best-practices/"
+  to = "https://www.netdata.cloud/blog/netdata-best-practices/"
+
+[[redirects]]
+  from = "/system-operators-unlock-log-management-mastery-with-systemd-journal-and-netdata/"
+  to = "https://www.netdata.cloud/blog/system-operators-unlock-log-management-mastery-with-systemd-journal-and-netdata/"
+
+[[redirects]]
+  from = "/netdata-plan-changes/"
+  to = "https://www.netdata.cloud/blog/netdata-plan-changes/"
+
+[[redirects]]
+  from = "/netdata-vs-prometheus-performance-analysis/"
+  to = "https://www.netdata.cloud/blog/netdata-vs-prometheus-performance-analysis/"
+
+[[redirects]]
+  from = "/discover-the-new-netdata/"
+  to = "https://www.netdata.cloud/blog/discover-the-new-netdata/"
+
+[[redirects]]
+  from = "/improve-your-security-with-systemd-and-netdata/"
+  to = "https://www.netdata.cloud/blog/improve-your-security-with-systemd-and-netdata/"
+
+[[redirects]]
+  from = "/monitoring-vs-observability/"
+  to = "https://www.netdata.cloud/blog/monitoring-vs-observability/"
+
+[[redirects]]
+  from = "/exploring-systemd-journal-logs-with-netdata/"
+  to = "https://www.netdata.cloud/blog/exploring-systemd-journal-logs/"
+
+[[redirects]]
+  from = "/systemd-journal-logs-a-game-changer-for-devops-and-developers/"
+  to = "https://www.netdata.cloud/blog/systemd-journal-logs/"
+
+[[redirects]]
+  from = "/netdata-cloud-on-prem/"
+  to = "https://www.netdata.cloud/blog/netdata-cloud-on-prem/"
+
+[[redirects]]
+  from = "/netdata-processes-monitoring-comparison-with-console-tools/"
+  to = "https://www.netdata.cloud/blog/netdata-processes-monitoring-comparison-with-console-tools/"
+
+[[redirects]]
+  from = "/netdata-qos-classes-monitoring/"
+  to = "https://www.netdata.cloud/blog/netdata-qos-monitoring/"
+
+[[redirects]]
+  from = "/netdata-prometheus-grafana-stack/"
+  to = "https://www.netdata.cloud/blog/netdata-prometheus-grafana-stack/"
+
+[[redirects]]
+  from = "/our-first-ml-based-anomaly-alert/"
+  to = "https://www.netdata.cloud/blog/our-first-ml-based-anomaly-alert/"
+
+[[redirects]]
+  from = "/anomaly-rate-by-type/"
+  to = "https://www.netdata.cloud/blog/anomaly-rate-by-type/"
