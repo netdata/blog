@@ -1,3 +1,14 @@
+---
+slug: dynatrace-vs-datadog-vs-instana-vs-grafana-vs-netdata
+title: "Dynatrace vs Datadog vs Instana vs Grafana vs Netdata!"
+description: |
+  Hands-on experience of the most popular monitoring solutions.
+authors: costa
+tags: [dynatrace, datadog, instana, grafana, netdata]
+keywords: [dynatrace, datadog, instana, grafana, netdata]
+image: 
+---
+
 # Dynatrace vs Datadog vs Instana vs Grafana vs Netdata
 
 In this post we attempt to explore the value we get from various commercial monitoring services.
