@@ -99,10 +99,6 @@ Since all Netdata Agents installed are complete observability stacks, Netdata al
 
 </details>
 
-## Metrics
-
-TBD
-
 ## Logs
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
@@ -268,15 +264,15 @@ When it comes to systemd services, this is what these monitoring solutions provi
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |----:|:----:|:----:|:----:|:----:|:----:|
 |Availability|Yes|-|-|-|Yes|
-|CPU Usage|-|-|-|-|Yes|
-|Memory Usage|-|-|-|-|Yes|
-|Disk I/O|-|-|-|-|Yes|
-|# of Processes|-|-|-|-|Yes|
-|Status|Yes|-|-|-|Yes|
+|CPU Usage|-|Partial|-|-|Yes|
+|Memory Usage|-|Partial|-|-|Yes|
+|Disk I/O|-|Partial|-|-|Yes|
+|# of Processes|-|Partial|-|-|Yes|
+|Status|Yes|-|Partial|-|Yes|
 |Logs|Yes|Yes|-|Yes|Yes|
 |List all units live<br/>`systemctl list-units`|Cached|-|-|-|Yes|
 |List all services live<br/>`systemd-cgtop`|-|-|-|-|Yes|
-Coverage|3.5/9|1/9|0/9|1/9|9/9|
+Coverage|3.5/9|3/9|0/9|1/9|9/9|
 
 - `Cached` means the feature is updated at the data collection interval.
 
@@ -287,7 +283,9 @@ Coverage|3.5/9|1/9|0/9|1/9|9/9|
 
 ### Datadog
 
-Datadog does not monitor systemd services.
+Datadog has a systemd integration for collecting metrics, but it requires to configure all systemd units it should collect data for. Without this, it collects just the number of units by state,
+
+Furthermore, it collects these metrics by querying systemd itself instead of querying cgroups, so it requires specific features and versions of systemd to collect additional data.
 
 ### Instana
 
@@ -295,7 +293,9 @@ Instana does not monitor systemd services.
 
 ### Grafana
 
-Grafana does not provide a cloud connector for monitoring systemd services and units. There is a vast ecosystem around Grafana and probably monitoring systemd services can be accomplished via a 3rd party Prometheus exporter which via a Prometheus installation can push metrics to Grafana Cloud.
+Grafana Cloud does not provide a cloud connector for monitoring systemd services and units.
+
+We know there is a vast ecosystem around Grafana and probably monitoring systemd services can be accomplished via a 3rd party Prometheus exporter, but Grafana Cloud did not mention it, did not suggest any and did not provide instructions on how to configure it.
 
 ### Netdata
 
@@ -322,8 +322,9 @@ The live list of systemd services:
 |Memory Page Faults|-|-|-|-|Yes|
 |Physical Disk I/O|-|-|-|-|Yes|
 |Logical Disk I/O|Yes|Possibly|-|-|Yes|
-|Network Connectivity|Yes|Yes|-|-|-|
+|Network Connectivity|Yes|Yes|-|-|Yes|
 |Network Traffic|Abstract|Yes|-|-|-|
+|Network Sockets|-|Yes|-|-|Yes|
 |Network Issues|Yes|Yes|-|-|-|
 |# of Processes|Yes|-|-|-|Yes|
 |# of Threads|-|Yes|-|-|Yes|
@@ -331,11 +332,11 @@ The live list of systemd services:
 |% of File Descriptors|Yes|-|Yes|-|Yes|
 |Uptime|Yes|Yes|Yes|-|Yes|
 |Process Logs|Yes|Yes|-|Yes|Yes|
-|DNS queries per process|Partial|Yes|-|-|-|
+|DNS queries per process<br/>(per response type)|Partial|Yes|-|-|-|
 |Detect the technology of<br/>each process and check<br/>for known vulnerabilities|Yes|-|-|-|-|
 |List all processes live|-|Yes|-|-|Yes|
-|List all TCP/UDP<br/>processes sockets live|-|-|-|-|Yes|
-|Coverage|10/19|11.5/19|4.5/19|1/19|14/19|
+|List all TCP/UDP<br/>processes sockets live|-|Yes|-|-|Yes|
+|Coverage|10/20|13.5/20|4.5/20|1/20|16/20|
 
 Notes:
 - `Possibly` means that we tried it, the UI shown something relevant to it, but there were no values shown.
@@ -346,7 +347,7 @@ The above list typically evolves to a large cardinality for tracking every singl
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |:----:|:----:|:----:|:----:|:----:|:----:|
-|Not aggregated, per PID|-|Yes|Yes<br/><small>(for select processes)</small>|-|Yes|
+|Not aggregated, per PID|-|Yes|Partial<br/><small>(for select processes)</small>|-|Yes|
 |Aggregated in process groups|Yes|-|-|-|Yes|
 |User defined process groups|-|-|-|-|Yes|
 |Aggregated per user|-|-|-|-|Yes|
@@ -359,6 +360,18 @@ The above list typically evolves to a large cardinality for tracking every singl
 
 ![image](https://github.com/netdata/netdata/assets/2662304/e0ab4044-9f3a-4d9b-906d-8b7ac2d16060)
 
+Dynatrace's deep process monitoring, detects the technology stacks processes are built with, and based on the libraries they use it can detect known vulnerabilities:
+
+In our case, it detected these vulnerabilities:
+
+- Container Breakout (Leaky Vessels), in `grafana-agent` and `datadog-agent`
+- Stack-based Buffer Overflow, in `datadog-agent`
+- Open Redirect, in `datadog-agent`
+- Observable Timing Discrepancy, in `instana-agent`
+
+Example: SQL Injection in `grafana-agent`:
+![image](https://github.com/netdata/netdata/assets/2662304/38ecda63-8ec8-4621-89e5-3acd3a38c588)
+
 ### Datadog
 
 ![image](https://github.com/netdata/netdata/assets/2662304/b56ac730-3f21-4ba2-ad6b-0565d017ffee)
@@ -366,7 +379,7 @@ The above list typically evolves to a large cardinality for tracking every singl
 Datadog has a special package for detailed Network Monitoring, charged $5 per node per month, on top of the normal monitoring package. Without this, it does not provide any network information for processes.
 
 ### Instana
-Instana seems that it monitors the processes for which it has integrations. It does not provide any information about the other processes running on the system.
+Instana seems that it monitors select processes only. It does not provide any information about the other processes running on a system.
 
 ![image](https://github.com/netdata/netdata/assets/2662304/289bed2a-cd2f-44bb-9633-40835ddba41f)
 
@@ -395,11 +408,86 @@ TBD
 
 ## Storage Monitoring
 
-TBD
+| |Dynatrace|Datadog|Instana|Grafana|Netdata|
+|----:|:----:|:----:|:----:|:----:|:----:|
+|Block Devices Throughput|Yes|-|Yes|Yes|Yes|
+|Block Devices Utilization|Yes|Yes|Yes|Yes|Yes|
+|Block Devices Operations|Yes|-|Yes|Yes|Yes|
+|Block Devices Latency|Yes|-|-|Yes|Yes|
+|Block Devices Queue|-|-|-|Yes|Yes|
+|Block Devices Backlog Time|-|-|-|-|Yes|
+|Block Devices Busy Time|-|-|-|-|Yes|
+|Block Devices Merged Operations|-|-|-|-|Yes|
+|Block Devices Extended Statistics|-|-|-|-|Yes|
+|Mount Points Capacity Usage|Yes|Yes|Yes|Yes|Yes|
+|Mount Points Inodes Usage|Yes|-|Yes|Yes|Yes|
+|NFS<small><br/>Network File System</small>|-|Yes|-|-|Yes|
+|SMB<small><br/>Server Message Block</small>|-|-|-|-|Yes|
+|Software RAID|-|-|-|-|Yes|
+|ZFS<small><br/>Zettabyte File System</small>|-|-|-|-|Yes|
+|BTRFS|-|Yes|-|-|Yes|
+|BCACHE|-|-|-|-|Yes|
+|Ceph|-|Yes|-|Yes|Yes|
+|IPFS|-|-|-|-|Yes|
+|HDFS|-|Yes|-|Yes|Yes|
+|Coverage|6/20|6/20|5/20|9/20|20/20|
 
-## Physical Hardware Monitoring & Sensors
+Of course, there are hundreds of technologies and storage vendors out there. We list here the most commonly open and freely available technologies available.
 
-TBD
+<details><summary>👉 Click here to see comments per provider...</summary>
+
+### Dynatrace
+
+![image](https://github.com/netdata/netdata/assets/2662304/323fd466-0f3c-444c-b492-67404d97ae49)
+
+### Datadog
+
+For the storage layer, Datadog provides the smallest dataset. Also, it does not provide dedicated screens for monitoring block devices or mount points. It needs to be done via custom dashboards. It only collects metrics only for disk capacity (free, used) and the time spend reading or writing. No throughput or operations.
+
+![image](https://github.com/netdata/netdata/assets/2662304/dea11116-a118-4e79-970b-c1a6abb60c3b)
+
+### Instana
+
+Instana provides for mount points: disk space and inode usage. It then monitors the underlying block devices, for the mounted disks. The information provided is basic: reads/writes for operations, throughput and utilization.
+
+When monitoring the performance of mounted filesystems, the block devices that are not mounted but are still used (e.g. mounted by a VM) are not monitored.
+
+![image](https://github.com/netdata/netdata/assets/2662304/df242912-3962-4acd-ad05-51365980a728)
+
+### Grafana
+
+![image](https://github.com/netdata/netdata/assets/2662304/69f328f4-7f26-49ef-8304-476ff051cfe9)
+
+</details>
+
+## Physical Hardware Monitoring
+
+| |Dynatrace|Datadog|Instana|Grafana|Netdata|
+|----:|:----:|:----:|:----:|:----:|:----:|
+|Motherboard Temperatures|-|-|-|-|Yes|
+|Motherboard Voltages|-|-|-|-|Yes|
+|Fans Speed|-|-|-|-|Yes|
+|IPMI Monitoring<small><br/>Intelligent Platform<br/>Management Interface</small>|-|-|-|-|Yes|
+|PCI AER<small><br/>Advanced Error Reporting</small>|-|-|-|-|Yes|
+|Memory EDAC<small><br/>Error Detection And Correction</small>|-|-|-|-|Yes|
+|Disks Temperatures|-|-|-|-|Yes|
+|S.M.A.R.T. Disks|-|-|-|-|Yes|
+|NVMe Disks|-|-|-|-|Yes|
+|RAID Arrays|-|-|-|-|Yes|
+|UPS|-|Yes|-|-|Yes|
+|Batteries|-|-|-|-|Yes|
+|Power Supplies|-|-|-|-|Yes|
+|CPU Sensors|-|-|-|-|Yes|
+|GPU Sensors|-|-|-|-|Yes|
+|Coverage|0/15|1/15|0/15|0/15|15/15
+
+This table surprised us too. We installed all monitoring solutions on an enterprise server with 256 cores and 1TiB RAM, running hundreds of LXC containers and VMs. Nothing related to the hardware was detected by any solution except Netdata.
+
+We searched on their integrations lists to find something related. We found UPSC and APC UPSes in Datadog (we didn't try them). Also on Datadog we found an integration called "Hardware Sentry" which is a 3rd party company that requires an independent subscription in order to be used.
+
+For Grafana, we know that there are numerous 3rd party provided Prometheus exporters capable for providing such information, but the "Connections" list at Grafana Cloud did not list them, did not suggest them and did not provide instructions on how to use them. The only hardware related connection we found at Grafana Cloud is "RaspberryPi", which however installs an agent to collect system metrics, not hardware sensors.
+
+Netdata on the other hand, collects information from **all sensors** and **all hardware components**, and it has a special handling for monitoring **hardware errors**: Modern Linux systems expose thousands of metrics related to hardware errors. But these counters are just zero on healthy systems. So, instead of collecting, storing and visualizing all these zeros, Netdata collects them, but as long as they are zero it ignores them. If any of them is non-zero, then a chart will appear and an alert will be associated with it, indicating the hardware error found. This way Netdata monitors all hardware sensors and components, without affecting retention or visualization, until they are useful.
 
 ## Alerts
 
@@ -596,18 +684,65 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |----:|:----:|:----:|:----:|:----:|:----:|
-|Agent|Dynatrace OneAgent + ActiveGate|Datadog-Agent|Instana-Agent|Grafana-Agent|Netdata|
+|Agent|Dynatrace<br/>OneAgent + ActiveGate|Datadog-Agent|Instana-Agent|Grafana-Agent|Netdata|
 |Granularity|1-minute|15-seconds|1-second|1-minute|1-second|
 |Retention|**5-years**<br/>in tiers|**15-months**<br/>at 15-seconds|**13-months**<br/>in tiers|**13-months**<br/>at 1-minute|**Unlimited**<br/>in tiers|
-|Metrics|333|168||340|3346|
 |||||||
-|**Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
-|Logs|58.3%|58.3%|0%|58.3%|83.3%<br/><strong style={{color: "#00AB44" }}Best Coverage</strong>|
-|Containers & VMs|26.6%|28.1%|32.8%|15.6%|100%<br/><strong style={{color: "#00AB44" }}Best Coverage</strong>|
-|systemd Services|38.8%|11.1%|0%|11.1%|100%<br/><strong style={{color: "#00AB44" }}Best Coverage</strong>|
-|Processes|52.6%|60.5%|23.6%|5.3%|73.7%<br/><strong style={{color: "#00AB44" }}Best Coverage</strong>|
+|**Infra Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
+|Logs|58%|58%|0%|58%|83%|
+|Storage & Filesystems|30%|30%|25%|45%|100%
+|Containers & VMs|27%|28%|33%|16%|100%|
+|systemd Services|39%|33%|0%|11%|100%|
+|Processes|50%|68%|23%|5%|80%|
+|Hardware & Sensors|0%|7%|0%|0%|100%|
 |||||||
 |**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |CPU Usage<br/><small>100% = 1 core</small>|3.63%|8.35%|4.14%|3.27%|3.66%|
+|CPU Efficiency|
 |Memory Used|**414 MiB**|**921 MiB**|**566 MiB**|**558 MiB**|**356 MiB**|
-|Egress Internet Bandwidth|**3.68 GiB**<br/>per node per month|**7.73 GiB**<br/>per node per month|**4.94 GiB**<br/>per node per month|**3.99 GiB**<br/>per node per month|**90 MiB**<br/>per node per month|
+|Egress Internet Traffic<br/><small>per node per month</small>|**3.68 GiB**|**7.73 GiB**|**4.94 GiB**|**3.99 GiB**|**90 MiB**|
+
+## Final Verdict
+
+### Dynatrace
+
+Dynatrace seems a very well thought monitoring platform. It is obvious that the folks at Dynatrace have given quite some thought to each aspect of the monitoring experience and have tried to provide a lot of insights out of the box.
+
+What we liked about Dynatrace:
+
+1. Dynatrace has some computed metrics we found appealing: Availability over time for O/S services, Connectivity over time for processes and more. Although all these can be derived from other metrics Netdata already monitors, we found interesting the idea of providing computed metrics like these.
+2. Dyntrace names the metrics in a way that is more straight forward for users to understand, like Disk Latency (it appears to be the same with `disk.iowait` in Netdata). This made us reconsider our strategy of naming metrics closely to the names the O/S or the applications have.
+3. Detecting the technology of each process and then checking for known vulnerabilities is a nice add-on. I am not sure if this feature belongs to a monitoring system or a CI/CD platform, but still it is interesting to have such a feature available.
+4. Dynatrace comes with a lot of errors and problems detection out of the box. It is interesting that they named them "Problems" and they have associated them with Davis instead of normal alerts. This prevents the pollution of user configured alerts with the stock ones and also makes the solution seem "smarter".
+5. Apart from installing OneAgent and ActiveGate, the platform never asked us to configure something by hand. All configuration happened via the UI.
+
+What we didn't like:
+
+1. Dynatrace provides the absolutely minimum information to build the UX they have in mind. This limits significantly the possibilities of using the solution for flows they haven't thought of. You always feel that "something is missing".
+2. Most dashboards have 2 versions, the "classic" and the new one. The new one is generally more modern, but also more limited, so you frequently find yourself switching to the "classic" one to get the work done.
+3. The max resolution of 1-minute is really not enough for monitoring modern systems.
+4. When creating custom dashboards, it is not easy to understand where the data are coming from, which makes you first do a query to understand the metrics (e.g. group by something) and once you know what data are there, then do the query you really need. The solution we have given to Netdata with the NIDL bar above each chart (for slicing and dicing) seems superior.
+5. Despite the promise of experiencing AI, we didn't find any evidence of real machine learning running in the background. Davis seems more like a hard-coded expert system.
+6. Complete lack of any multi-node dashboards out of the box. All the multi-node dashboards you need, you have to build them yourself.
+7. This is an expensive service.
+
+### Datadog
+
+Datadog is a powerful platform. Despite the fact that they miss a lot of the information compared to Netdata, the UX gives freedom and power to users and for the things they monitor the dashboards deep dive into the information available, to provide a holistic view.
+
+What we liked about Datadog:
+
+1. The Datadog Network Performance is nice, although expensive ($5 per node per month to your bill). The Netdata network viewer we started last month, is still at its early stages, although we believe that soon we will be able to compete head-to-head with the Datadog one.
+2. The tools are quite integrated, so processes, logs, network sockets, etc are all available in a contextual manner.
+3. There are many of integrations available.
+
+What we didn't like:
+
+1. Very limited coverage for infrastructure technologies, physical hardware and operating system services.
+2. No alerts or problems detection out of the box. All alerts need to be configured manually.
+3. Very limited support for monitoring operating system services (systemd-units).
+4. Missing LXC containers and VMs (monitoring VMs from the host).
+5. Only few integrations get automated dashboards and in many cases many of the integrations that have dashboards, do not visualize all their information. For most metrics, dashboards need to be built manually.
+6. No multi-node dashboards. Users are expected to build these dashboards manually.
+7. This is an expensive service.
+
