@@ -8,6 +8,7 @@ tags: [dynatrace, datadog, instana, grafana, netdata]
 keywords: [dynatrace, datadog, instana, grafana, netdata]
 
 ---
+
 # Dynatrace vs Datadog vs Instana vs Grafana vs Netdata
 
 In this post we attempt to explore the value we get from various commercial monitoring services.
@@ -107,7 +108,7 @@ TBD
 |Containers logs|Yes|Yes|-|Yes|Yes|
 |Application text log files|Yes|Manually|-|Manually|Manually|
 |Boot logs|Yes|Yes|-|Yes|Yes|
-|Logs Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5|3.5/6|3.5/6|0/6|3.5/6|5.5/6|
+|Logs Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|3.5/6|3.5/6|0/6|3.5/6|5.5/6|
 
 - `systemd-journal` is about having all the systemd journal log entries available.
 - `systemd-journal namespaces` shows if the monitoring system detects and ingests namespaces journals. Namespaces are used by systemd units to isolate application and service logs from the rest of the system (`LogNamespace=` line in systemd units).
@@ -195,7 +196,7 @@ Information collected about running containers:
 |Container Logs|Yes|Yes|-|Yes|Yes|
 |Container Processes|Yes|Yes|-|-|Yes|
 |Docker Info<br/>(states, images, etc)|-|Yes|-|Yes|Yes|
-|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5|7/16|13.5/16|7/16|5/16|16/16
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|7/16|13.5/16|7/16|5/16|16/16
 
 - `Partial` means that part of the information is provided, compared to what other monitoring systems offer.
 
