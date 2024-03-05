@@ -53,7 +53,7 @@ When it comes to configuration, monitoring solutions use 2 paradigms: a) Central
 
 \* The central configuration of Netdata is currently in its final stages. It is planned to be released in Match 2024.
 
-<details><summary>Click here to see comments per provider...</summary>
+<details><summary>👉 Click here to see comments per provider...</summary>
 
 ### Dynatrace
 
@@ -122,7 +122,7 @@ TBD
 - `Application text log files` shows if the monitoring system can ingest custom log files of any application a user may have.
 - `Boot logs` shows if the monitoring system presents system boot logs, that is the logs that were generated during system startup, before any application is started.
 
-<details><summary>Click here to see comments per provider...</summary>
+<details><summary>👉 Click here to see comments per provider...</summary>
 
 ### Dynatrace
 
@@ -218,7 +218,7 @@ There are many container types (CGROUPS) however monitoring providers focus on s
 - `Auto` means the solution find out by itself and automatically collected container metrics and logs.
 - `Manual` means the solution requires from users to take manual configuration action to enable container metrics and logs.
 
-<details><summary>Click here to see comments per provider...</summary>
+<details><summary>👉 Click here to see comments per provider...</summary>
 
 ### Dynatrace
 
@@ -280,7 +280,7 @@ Coverage|3.5/9|1/9|0/9|1/9|9/9|
 
 - `Cached` means the feature is updated at the data collection interval.
 
-<details><summary>Click here to see comments per provider...</summary>
+<details><summary>👉 Click here to see comments per provider...</summary>
 
 ### Dynatrace
 ![image](https://github.com/netdata/netdata/assets/2662304/09521ab0-700f-4b42-86c9-427e7ed37d2f)
@@ -330,10 +330,12 @@ The live list of systemd services:
 |# of File Descriptors<br/>(break down by type)|-|Abstract|Abstract|-|Yes|
 |% of File Descriptors|Yes|-|Yes|-|Yes|
 |Uptime|Yes|Yes|Yes|-|Yes|
-|Logs|Yes|Yes|-|Yes|Yes|
+|Process Logs|Yes|Yes|-|Yes|Yes|
+|DNS queries per process|Partial|Yes|-|-|-|
+|Detect the technology of<br/>each process and check<br/>for known vulnerabilities|Yes|-|-|-|-|
 |List all processes live|-|Yes|-|-|Yes|
 |List all TCP/UDP<br/>processes sockets live|-|-|-|-|Yes|
-|Coverage|8.5/17|10.5/17|4.5/17|1/17|14/17|
+|Coverage|10/19|11.5/19|4.5/19|1/19|14/19|
 
 Notes:
 - `Possibly` means that we tried it, the UI shown something relevant to it, but there were no values shown.
@@ -351,7 +353,7 @@ The above list typically evolves to a large cardinality for tracking every singl
 |Aggregated per user group|-|-|-|-|Yes|
 |Multi-node processes aggregations|-|-|-|-|Yes|
 
-<details><summary>Click here to see comments per provider...</summary>
+<details><summary>👉 Click here to see comments per provider...</summary>
 
 ### Dynatrace
 
@@ -492,7 +494,7 @@ Note that Netdata runs with default settings. This means **per-second** data col
 
 To monitor egress bandwidth for a single node, we used `tc` to match all traffic towards the internet, for each of the systemd services cgroups.
 
-<details><summary>Click here to see how</summary>
+<details><summary>👉 Click here to see how</summary>
 
  This is `fireqos` configuration (`/etc/firehol/fireqos.conf`):
  
@@ -600,10 +602,10 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 |Metrics|333|168||340|3346|
 |||||||
 |**Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
-|Logs|58.3%|58.3%|0%|58.3%|83.3%|
-|Containers & VMs|26.6%|28.1%|32.8%|15.6%|100%|
-|systemd Services|38.8%|11.1%|0%|11.1%|100%|
-|Processes|50.0%|61.7%|26.4%|5.9%|82.3%|
+|Logs|58.3%|58.3%|0%|58.3%|83.3%<br/><strong style={{color: "#00AB44" }}Best Coverage</strong>|
+|Containers & VMs|26.6%|28.1%|32.8%|15.6%|100%<br/><strong style={{color: "#00AB44" }}Best Coverage</strong>|
+|systemd Services|38.8%|11.1%|0%|11.1%|100%<br/><strong style={{color: "#00AB44" }}Best Coverage</strong>|
+|Processes|52.6%|60.5%|23.6%|5.3%|73.7%<br/><strong style={{color: "#00AB44" }}Best Coverage</strong>|
 |||||||
 |**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |CPU Usage<br/><small>100% = 1 core</small>|3.63%|8.35%|4.14%|3.27%|3.66%|
