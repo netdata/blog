@@ -729,11 +729,10 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 |||||||
 |**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |CPU Usage<br/><small>100% = 1 core</small>|3.63%|8.35%|4.14%|3.27%|3.66%|
-|CPU Efficiency|
 |Memory Used|**414 MiB**|**921 MiB**|**566 MiB**|**228 MiB**|**263 MiB**|
 |Egress Internet Traffic<br/><small>per node per month</small>|**3.68 GiB**|**7.73 GiB**|**4.94 GiB**|**3.99 GiB**|**90 MiB**|
 
-## Final Verdict
+## Verdict
 
 ### Dynatrace
 
@@ -772,7 +771,7 @@ What we didn't like:
 1. Very limited coverage for infrastructure technologies, physical hardware and operating system services.
 2. No alerts or problems detection out of the box. All alerts need to be configured manually.
 3. Very limited support for monitoring operating system services (systemd-units).
-4. Missing LXC containers and VMs (monitoring VMs from the host).
+4. Missing LXC containers and VMs (monitoring VMs from the host). Especially for VMs, it may be a business decision, since monitoring from the host may provide "enough" monitoring for some users, preventing them from registering all the VMs to the service.
 5. Only few integrations get automated dashboards and in many cases many of the integrations that have dashboards, do not visualize all their information. For most metrics, dashboards need to be built manually.
 6. No multi-node dashboards. Users are expected to build these dashboards manually.
 7. This is an expensive service.
@@ -788,15 +787,15 @@ What we liked:
 What we didn't like:
 
 1. They don't support logs. They integrate with third party services for that.
-2. The 1-second resolution is available for only 24 hours. This means that on Monday you cannot see in high resolution what happened last Saturday.
+2. The 1-second resolution is available for only 24 hours. This means that on Monday you cannot see in high resolution what happened during Saturday.
 3. The metrics collected are quite limited.
 4. Their ecosystem is not big enough. Most google searches reveal limited or no information from third parties.
 
 ## Grafana
 
-Grafana has a vast ecosystem and community. Of course this ecosystem is available for all monitoring solutions to use, and all do, one way or another.
+Grafana has a vast ecosystem and community. Of course this ecosystem is available for all monitoring solutions to use, and all do one way or another.
 
-To get a complete monitoring solution out of Grafana, users need to invest a lot in skills and time. Most of the dashboards provided by default is basic, so users are expected to configure the whole monitoring by hand. This ecosystem has a lot of moving parts, each with a different degree of maturity and flexibility, increasing significantly the overall cost of ownership.
+To get a complete monitoring solution out of Grafana, users need to invest a lot in skills and time. Most of the dashboards provided by default are basic, so users are expected to configure the whole monitoring by hand. This ecosystem has a lot of moving parts, each with a different degree of maturity and flexibility, increasing significantly the overall cost of ownership.
 
 What we liked:
 
@@ -805,35 +804,52 @@ What we liked:
 
 What we didn't like:
 
-1. The default resolution of 1-minute for the Grafana agent was a surprise. Grafana knows that this is not enough for monitoring today's systems and applications, but I guess they needed it for justifying the pricing.
+1. The default resolution of 1-minute for the Grafana agent was a surprise. Grafana knows that this is not enough for monitoring today's systems and applications, but probably it was needed for justifying the pricing (at higher resolution the service is more expensive).
 2. Primitive default dashboards.
 3. Too complex. Not for newcomers.
 
 ## Netdata
 
-Since this our blog, I will prefer to describe what I learned for this journey.
+Since this our blog, I will prefer to describe what I learned from this journey.
 
 ### Decentralized & Distributed
 
-All monitoring providers struggle with the resolution and the cardinality. They invest a lot of effort to minimize both of them, since they are proportional to their cost, and even after all reductions, their services are quite expensive for the average team. 
+All monitoring providers struggle with resolution and cardinality. They invest a lot of effort to minimize both of them, since these are proportional to their cost, and even after all reductions, their services are quite expensive for the average team. 
 
-When I started this post, I was expecting that Netdata will be the "heavier" of the agents. It has to be, because it does a lot of work! It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, etc.
+When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot of work! It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, etc.
 
-To my surprise, the Netdata agent is one of lightest!
+To my surprise, the Netdata agent is one of lightest! And given the resolution (per-second) and the number of metrics it collects, it offers the best unit economics (i.e. resources per sample) among all.
 
-This proves that Netdata is on the right path. The decentralized and distributed nature of Netdata decouples resolution and cardinality from our economics, without pushing this cost to the users, allowing Netdata to become **the most cost efficient monitoring solution**, while also providing high fidelity observability without compromises.
+This proves that Netdata is on the right path. The decentralized and distributed nature of Netdata decouples resolution and cardinality from our economics, without pushing this cost to the users, allowing Netdata to be **the most cost efficient monitoring solution**, while also providing high fidelity observability without compromises.
 
 ### Out of the box
 
-All monitoring providers see the value of providing out of the box experience, but only Netdata so far has applied this to all the information available. Since we deal with information of all kinds, Netdata had to find a way to present everything, structure the information in a way that users can easily use.
+In this set up, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards and alerts. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
 
-I understand that our presentation is probably too flat and users occasionally complain that Netdata dashboards are overwhelming. We need to change them so that they are more contextual, to present the information in layers. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper than them.
+All monitoring providers see the value of providing out of the box experience, but only Netdata so far has applied this to all the information available.
+
+Since we deal with information of all kinds, Netdata has to find a way to present everything, structure the information in a way that users can easily use. I understand that our presentation is probably too flat and users occasionally complain that Netdata dashboards are overwhelming. We need to improve them, so that they are more contextual, presenting the information in layers. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper than them.
 
 ### Charts & Dashboards
 
-I was surprised to find out that Netdata charts and dashboards are actually a lot more usable and efficient than the ones of the other monitoring systems.
+I was also surprised to find out that Netdata charts and dashboards are actually a lot more usable and efficient than the others.
 
-For most monitoring solutions, editing charts is a complicated and challenging task. How to provide to users all the aspect of a metric so that they can understand quickly what this metric is about, which sources contribute to it and how much?
+For most monitoring solutions, editing charts is a complicated and challenging task. How to provide to users all the aspect of a metric so that they can understand quickly what this metric is about, which sources contribute to it and how much? How to allow them describe what they need in an easy and straightforward way?
 
-The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is simpler, quicker and easier to use than any of the solutions the other monitoring providers offer.
+The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is far simpler, quicker and easier to use than any of the solutions the other monitoring providers offer. Users do not need to learn a query language and all the functionality needed is just a click away. Of course, to accomplish this kind of integration, we had to change the query engine, so that it returns all facets of the metrics with every response.
 
+I think the next version of our charts will also surprise users. We plan to offer an expanded version of the charts, providing fully automated analysis on each and every metric, based on its past patterns, at a click of a button.
+
+### Artificial Intelligence
+
+AI is a broad term. It is also trendy, so it is frequently abused for marketing purposes.
+
+During the few days I spent on these solutions, I didn't see any evidence of real machine learning working in the background.
+
+A few providers, like Grafana, allow configuring machine learning for some of the metrics. This is however too much for users to do, unless it is done for very few selected metrics.
+
+Others, use statistical functions on the UI to provide some kind of outlier detection or forecasting, using just the visible time-frame as data source. 
+
+Netdata however uses real machine-learning. The source code is open-source, so users can review it. And at the same time, we have made the most to reveal all ML findings everywhere on the dashboards. All charts have anomaly rates on them, the table of contents can provide anomaly rate per section, and we have added special tools to help users analyze the findings of machine learning.
+
+I think our break-through is that Netdata managed to make machine learning lightweight. It doubles the CPU consumption of the agent, but we were very careful to spread all processing across time and avoid all kinds of CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics collected.
