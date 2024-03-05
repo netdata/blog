@@ -1,3 +1,4 @@
+
 ---
 slug: dynatrace-vs-datadog-vs-instana-vs-grafana-vs-netdata
 title: "Dynatrace vs Datadog vs Instana vs Grafana vs Netdata!"
@@ -50,6 +51,8 @@ When it comes to configuration, monitoring solutions use 2 paradigms: a) Central
 
 \* The central configuration of Netdata is currently in its final stages. It is planned to be released in Match 2024.
 
+<details><summary>Click here to see comments per provider...</summary>
+
 ### Dynatrace
 
 Dynatrace has 2 components that need to be deployed on-prem. **OneAgent** (their systems agents), and **ActiveGate** (a secure proxy that also provides synthetics tests execution, monitoring remote or cloud applications, like databases).
@@ -91,6 +94,8 @@ Unlike all other monitoring solutions, Netdata uses the agent as a distributed d
 Netdata agents can be configured to act as observability centralization points, thus isolating and offloading production systems from observability tasks. This feature is called **streaming** and it actually turns Netdata Children into data-collectors and Netdata Parents into multi-node observability centralization points. Netdata supports vertical scalability via Netdata Parents and virtually unlimited horizontal scalability via Netdata Cloud, which transparently integrates independent Netdata Parents into one uniform infrastructure.
 
 Since all Netdata Agents installed are complete observability stacks, Netdata allows accessing dashboards locally too. This provides highly available dashboards, even in case the infrastructure is facing internet connectivity problems.
+
+</details>
 
 ## Metrics
 
