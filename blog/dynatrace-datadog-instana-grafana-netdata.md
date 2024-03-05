@@ -6,9 +6,8 @@ description: |
 authors: costa
 tags: [dynatrace, datadog, instana, grafana, netdata]
 keywords: [dynatrace, datadog, instana, grafana, netdata]
-image: 
----
 
+---
 # Dynatrace vs Datadog vs Instana vs Grafana vs Netdata
 
 In this post we attempt to explore the value we get from various commercial monitoring services.
@@ -96,6 +95,7 @@ Since all Netdata Agents installed are complete observability stacks, Netdata al
 
 ## Metrics
 
+TBD
 
 ## Logs
 
@@ -107,6 +107,7 @@ Since all Netdata Agents installed are complete observability stacks, Netdata al
 |Containers logs|Yes|Yes|-|Yes|Yes|
 |Application text log files|Yes|Manually|-|Manually|Manually|
 |Boot logs|Yes|Yes|-|Yes|Yes|
+|Logs Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5|3.5/6|3.5/6|0/6|3.5/6|5.5/6|
 
 - `systemd-journal` is about having all the systemd journal log entries available.
 - `systemd-journal namespaces` shows if the monitoring system detects and ingests namespaces journals. Namespaces are used by systemd units to isolate application and service logs from the rest of the system (`LogNamespace=` line in systemd units).
@@ -114,6 +115,8 @@ Since all Netdata Agents installed are complete observability stacks, Netdata al
 - `Containers logs` shows if the monitoring system can automatically pick up container logs.
 - `Application text log files` shows if the monitoring system can ingest custom log files of any application a user may have.
 - `Boot logs` shows if the monitoring system presents system boot logs, that is the logs that were generated during system startup, before any application is started.
+
+<details><summary>Click here to see comments per provider...</summary>
 
 ### Dynatrace
 
@@ -168,19 +171,9 @@ systemd-journald provides an infinite cardinality of logs. Each log entry may ha
 
 systemd-journald supports building logs centralization points utilizing its own tools. When Netdata is installed on such centralization points, it automatically detect the presence of logs from multiple systems and it provides an integrated and unified dashboard mixing the fields of all servers into a single view.
 
+</details>
 
 ## Containers and VMs Monitoring
-
-Container types:
-
-| |Dynatrace|Datadog|Instana|Grafana|Netdata|
-|:----:|:----:|:----:|:----:|:----:|:----:|
-|Docker containers|Auto|Manual|Auto|Manual|Auto|
-|LXC containers|-|-|Auto|-|Auto|
-|Virtual Machines|-|-|-|-|Auto|
-
-- `Auto` means the solution find out by itself and automatically collected container metrics and logs.
-- `Manual` means the solution requires from users to take manual configuration action to enable container metrics and logs.
 
 Information collected about running containers:
 
@@ -194,7 +187,6 @@ Information collected about running containers:
 |Memory Page Faults|-|Yes|-|-|Yes
 |Memory Limits|Yes|Yes|Yes|-|Yes|
 |Memory Pressure|-|Partial|-|-|Yes|
-|OOM Events|-|Yes|-|-|-|-|
 |Disk I/O|-|Yes|Yes|-|Yes|
 |Disk I/O Throttling|-|-|-|-|Yes|
 |Disk I/O Pressure|-|Partial|-|-|Yes|
@@ -203,8 +195,24 @@ Information collected about running containers:
 |Container Logs|Yes|Yes|-|Yes|Yes|
 |Container Processes|Yes|Yes|-|-|Yes|
 |Docker Info<br/>(states, images, etc)|-|Yes|-|Yes|Yes|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5|7/16|13.5/16|7/16|5/16|16/16
 
 - `Partial` means that part of the information is provided, compared to what other monitoring systems offer.
+
+There are many container types (CGROUPS) however monitoring providers focus on some of them:
+
+| |Dynatrace|Datadog|Instana|Grafana|Netdata|
+|:----:|:----:|:----:|:----:|:----:|:----:|
+|Docker containers|Yes|Yes|Yes|Yes|Yes|
+|LXC containers|-|-|Yes|-|Yes|
+|Virtual Machines<br/>(from the host)|-|-|-|-|Yes|
+|Kubernetes|Yes|Yes|Yes|Yes|Yes|
+|Final Coverage<br/><small>previous score multiplied by this score</small>|14/64|17/64|21/64|10/64|64/64
+
+- `Auto` means the solution find out by itself and automatically collected container metrics and logs.
+- `Manual` means the solution requires from users to take manual configuration action to enable container metrics and logs.
+
+<details><summary>Click here to see comments per provider...</summary>
 
 ### Dynatrace
 
@@ -245,6 +253,8 @@ The same way Netdata collects containers information, it collects also Virtual M
 
 ![image](https://github.com/netdata/netdata/assets/2662304/82de2b41-b32d-4dde-8635-dc0c8c568399)
 
+</details>
+
 ## systemd Services Monitoring
 
 When it comes to systemd services, this is what these monitoring solutions provide:
@@ -260,8 +270,11 @@ When it comes to systemd services, this is what these monitoring solutions provi
 |Logs|Yes|Yes|-|Yes|Yes|
 |List all units live<br/>`systemctl list-units`|Cached|-|-|-|Yes|
 |List all services live<br/>`systemd-cgtop`|-|-|-|-|Yes|
+Coverage|3.5/9|1/9|0/9|1/9|9/9|
 
 - `Cached` means the feature is updated at the data collection interval.
+
+<details><summary>Click here to see comments per provider...</summary>
 
 ### Dynatrace
 ![image](https://github.com/netdata/netdata/assets/2662304/09521ab0-700f-4b42-86c9-427e7ed37d2f)
@@ -291,6 +304,8 @@ The live list of systemd units:
 The live list of systemd services:
 ![image](https://github.com/netdata/netdata/assets/2662304/83ca67bb-7193-4979-a97b-09138c345be8)
 
+</details>
+
 ## Processes Monitoring
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
@@ -312,6 +327,7 @@ The live list of systemd services:
 |Logs|Yes|Yes|-|Yes|Yes|
 |List all processes live|-|Yes|-|-|Yes|
 |List all TCP/UDP<br/>processes sockets live|-|-|-|-|Yes|
+|Coverage|8.5/17|10.5/17|4.5/17|1/17|14/17|
 
 Notes:
 - `Possibly` means that we tried it, the UI shown something relevant to it, but there were no values shown.
@@ -322,12 +338,14 @@ The above list typically evolves to a large cardinality for tracking every singl
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |:----:|:----:|:----:|:----:|:----:|:----:|
-|Not aggregated, per PID|-|Yes|Yes<br/><small>(for select processes)</small>|-|-|
+|Not aggregated, per PID|-|Yes|Yes<br/><small>(for select processes)</small>|-|Yes|
 |Aggregated in process groups|Yes|-|-|-|Yes|
 |User defined process groups|-|-|-|-|Yes|
 |Aggregated per user|-|-|-|-|Yes|
 |Aggregated per user group|-|-|-|-|Yes|
-|Multi-node processes aggregations|Manually|Manually|-|-|Yes|
+|Multi-node processes aggregations|-|-|-|-|Yes|
+
+<details><summary>Click here to see comments per provider...</summary>
 
 ### Dynatrace
 
@@ -352,15 +370,16 @@ Grafana does not have a cloud connector for monitoring processes. There is a vas
 
 Netdata provides a comprehensive list of tools for monitoring processes and their resources.
 
-Processes metrics:
+Processes metrics aggregated per process group, and on the menu on the right, aggregated per user and user group:
 ![image](https://github.com/netdata/netdata/assets/2662304/9731015f-c78c-4aa7-9ef2-d0ac82a46eec)
 
-The live list of processes running:
+The live list of processes running, per PID:
 ![image](https://github.com/netdata/netdata/assets/2662304/9263f040-a0be-4b8d-872c-ba8eef9ebebb)
 
-The live list of UDP and TCP sockets on a system:
+The live list of UDP and TCP sockets on a system, aggregated per PID:
 ![image](https://github.com/netdata/netdata/assets/2662304/295f5f07-1925-410e-9aea-121847daa472)
 
+</details>
 
 ## Network Monitoring
 
@@ -375,15 +394,15 @@ The live list of UDP and TCP sockets on a system:
 
 ## Dashboards
 
-All monitoring solutions provide fully automated dashboards for **single-node monitoring**. So, for exploring the metrics for a single-node at a time, all the information they collect is presented without additional actions from the users.
+All monitoring solutions provide fully automated dashboards for **single-node monitoring**. So, for exploring the most common metrics for a single-node at a time, they present dashboards without any additional actions from users.
 
 For **multi-node, infrastructure level dashboards**, all monitoring solutions except Netdata, require from users to manually configure the dashboards they need. Netdata on the other hand, allows users to segment the infrastructure into rooms, and each of the rooms gets **fully automated multi-node dashboards** for the nodes in it. Even if rooms are not required, Netdata provides multi-node dashboards for all nodes registered.
-
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |:----:|:----:|:----:|:----:|:----:|:----:|
 |Automated Single Node Dashboards|Yes|Yes|Yes|Yes|Yes|
 |Automated Multi Node Dashboards|-|-|-|-|Yes|
+|Every metric is visualized by default|-|-|-|-|Yes|
 
 
 ## Artificial Intelligence
@@ -394,9 +413,9 @@ Dynatrace advertises Davis AI as its artificial intelligence solution. Davis is 
 
 However, based on our experience with the system, Davis seems more like a sophisticated expert system that uses several hard-coded rules and correlations to detect issues, and less than a strictly speaking "machine learning engine".
 
-Of course Davis seems very valuable and is able to detect many common issues, however the same is achieved by Netdata stock alerts (the out-of-the-box alerts Netdata provides), which do not use AI by default.
+Of course Davis seems very valuable and is able to detect many common issues, however the same kind of issue detection is achieved by Netdata stock alerts (the out-of-the-box alerts Netdata provides), which do not use AI by default.
 
-On the UI, Dynatrace provides forecasting and anomaly detection, when asked to do so (so they require manual action). This looks more than a dashboard feature (i.e. perform some statistical analysis on the visible data), and less than real machine-learning behind the scenes.
+On the UI, when building custom dashboards, Dynatrace provides forecasting and anomaly detection, when asked to do so (is is a manual action). This looks more like a dashboard feature (i.e. perform some statistical analysis on the visible data), than real machine-learning training models in the background.
 
 ### Datadog
 
@@ -447,8 +466,12 @@ Note that Netdata runs with default settings. This means **per-second** data col
 
 ### Egress Bandwidth
 
-To monitor egress bandwidth for a single node, we used `tc` to match all traffic towards the internet, for each of the systemd services cgroups, with this `fireqos` configuration (`/etc/firehol/fireqos.conf`):
+To monitor egress bandwidth for a single node, we used `tc` to match all traffic towards the internet, for each of the systemd services cgroups.
 
+<details><summary>Click here to see how</summary>
+
+ This is `fireqos` configuration (`/etc/firehol/fireqos.conf`):
+ 
 ```bash
 nft flush table inet mon_agents 2>/dev/null
 nft -f - <<EOF
@@ -521,6 +544,9 @@ do
 
 done
 ```
+
+</details>
+
 This provided the following chart in Netdata:
 
 ![image](https://github.com/netdata/netdata/assets/2662304/59001495-116a-4b0e-b462-88684768d7aa)
@@ -544,16 +570,18 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |----:|:----:|:----:|:----:|:----:|:----:|
-|Agent version|Dynatrace OneAgent|Datadog-Agent|Instana-Agent|Grafana-Agent|Netdata v1.44.0-438-nightly|
+|Agent|Dynatrace OneAgent + ActiveGate|Datadog-Agent|Instana-Agent|Grafana-Agent|Netdata|
 |Granularity|1-minute|15-seconds|1-second|1-minute|1-second|
 |Retention|**5-years**<br/>in tiers|**15-months**<br/>at 15-seconds|**13-months**<br/>in tiers|**13-months**<br/>at 1-minute|**Unlimited**<br/>in tiers|
 |Metrics|333|168||340|3346|
 |||||||
-|Logs|Yes|Yes|No|Yes|Yes|
-|Containers & VMs Coverage|Partial|Partial|Partial|Partial|Full
-|Systemd Services Coverage|Partial|No|No|No|Full|
-|System Logs Coverage|Partial|Partial|No|Partial|Full|
+|**Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
+|Logs|58.3%|58.3%|0%|58.3%|83.3%|
+|Containers & VMs|26.6%|28.1%|32.8%|15.6%|100%|
+|systemd Services|38.8%|11.1%|0%|11.1%|100%|
+|Processes|50.0%|61.7%|26.4%|5.9%|82.3%|
 |||||||
-|CPU Usage|3.63%|8.35%|4.14%|3.27%|3.66%|
+|**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
+|CPU Usage<br/><small>100% = 1 core</small>|3.63%|8.35%|4.14%|3.27%|3.66%|
 |Memory Used|**414 MiB**|**921 MiB**|**566 MiB**|**558 MiB**|**356 MiB**|
 |Egress Internet Bandwidth|**3.68 GiB**<br/>per node per month|**7.73 GiB**<br/>per node per month|**4.94 GiB**<br/>per node per month|**3.99 GiB**<br/>per node per month|**90 MiB**<br/>per node per month|
