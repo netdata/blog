@@ -1,4 +1,3 @@
-
 ---
 slug: dynatrace-vs-datadog-vs-instana-vs-grafana-vs-netdata
 title: "Dynatrace vs Datadog vs Instana vs Grafana vs Netdata!"
@@ -10,44 +9,47 @@ keywords: [dynatrace, datadog, instana, grafana, netdata]
 
 ---
 
-In this post we attempt to explore the value we get from various commercial monitoring services.
+In this post we delve into the comparative analysis of five leading commercial monitoring solutions—Dynatrace, Datadog, Instana, Grafana, and Netdata. Our objective is to unravel the intrinsic value each of these services offers when applied to a real-world scenario. To accomplish this, we employed trial subscriptions of these services to monitor a set of Ubuntu servers and VMs, each hosting a pair of widely-used applications: Nginx and PostgreSQL, along with a couple of Docker and LXC containers. Additionally, we extended our monitoring to physical servers to evaluate the efficacy of these tools in capturing hardware and sensor data.
 
-To measure it, we used trial subscriptions of Dynatrace, Datadog, Instana, Grafana and Netdata, for monitoring a couple of Ubuntu servers. Each of the servers:
+Our assessment is anchored in three fundamental aspects:
 
-1. Runs all monitoring solutions in parallel.
-2. Runs 2 docker containers: a `nginx` and a `postgres`.
-3. Runs 1 LXC container.
+1.  **Out-of-the-Box Value**: We aim to understand the immediate benefits each tool provides with minimal configuration, essentially evaluating the insights and data accessibility available right after a standard setup.
+2.  **Resource Commitment**: It's crucial to gauge the extent of resources (time, computational, etc.) that users must allocate to maintain and operate these monitoring solutions efficiently.
+3.  **Impact on Monitored Infrastructure**: Understanding the footprint of these tools on the systems they monitor helps in making informed choices, particularly in environments where resource optimization is paramount.
 
-The goal of this exercise is to understand:
+Our comparison is guided by a trio of criteria we hold in high esteem:
 
-1. The value each monitoring solution provides out-of-the-box.
-2. The resources required to do so.
-3. The impact each solution has on the monitored infrastructure.
+-   **High-fidelity**: The ability of a tool to unveil comprehensive, detailed insights with the finest granularity possible.
+-   **Easiness**: We value user-friendliness, especially for individuals who view monitoring as a means to an end rather than their primary professional focus. The tool should be straightforward to set up, navigate, and sustain.
+-   **Completeness**: An ideal monitoring solution should offer a holistic view, minimizing any blind spots and providing a comprehensive understanding of the infrastructure.
 
-We use as a baseline Netdata, so most comparisons and comments are relative to what Netdata can do.
+We've set a collective baseline, aggregating the capabilities of all the tools to define a 100% benchmark. Each tool is then evaluated against this benchmark to determine its relative performance across our criteria. It's worth noting that while we focus on the SaaS versions of these tools, the insights gleaned should be broadly applicable, albeit with nuances, to their on-prem counterparts.
 
-All providers, except Datadog, provide fully on-prem versions of their offerings. In this comparison however we used their SaaS versions.
+As we proceed, remember that our analysis is inherently subjective, rooted in the specific priorities and values we've outlined. Whether you're a seasoned monitoring professional or someone tasked with overseeing an IT infrastructure, our findings aim to provide a clear, nuanced perspective on how each tool stacks up in the real world.
+
+> **IMPORTANT**: All monitoring solutions tested are feature-full and comprehensive and can effectively monitor anything required by users. Our evaluation focuses on what is easily achievable with minimal effort from users. What is readily available either without any user action or with just some simple configuration, with instructions provided by the monitoring system itself.
 
 ## Installation and Configuration
 
-All solutions use an agent that is to be installed on all monitored systems.
+All solutions use an agent that is installed on all monitored systems.
 
-Users are expected to copy and paste a command from the UI, which includes various unique tokens, and paste them to the terminal of each server, or integrate it to their CI/CD or provisioning system, to install the agents in all monitored systems.
+Users are expected to copy and paste a command from the UI, which includes various unique tokens, and paste them to the terminal of each server, or integrate it to their CI/CD or provisioning system, to install the agents.
 
 When it comes to configuration, monitoring solutions use 2 paradigms: a) Centrally, or b) At the edge:
 
 - `Centrally` means that users are expected to configure data collection jobs and agent features from the UI, without the need to access the servers via ssh. This is usually preferred on environments where the infrastructure is static and can be easily managed centrally.
+
 - `At the edge` means that users need to edit configuration files on each server to configure data collection jobs or agent features. This is usually preferred on environments that are automatically deployed, since users can use observability-as-code and maintain the configuration files in git repositories for version control and auditing.
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |----:|:----:|:----:|:----:|:----:|:----:|
-|On-Prem Software|OneAgent +<br/>ActiveGate|Datadog Agent|Instana Agent|Grafana Agent|Netdata|
-|Data Collection Configuration|Centrally|At the edge|At the edge|At the edge|Centrally* and<br/>At the edge|
+|Agent|OneAgent +<br/>ActiveGate|Datadog Agent|Instana Agent|Grafana Agent|Netdata|
+|Data Collection<br/>Configuration|Centrally|At the edge|At the edge|At the edge|Centrally* and<br/>At the edge|
 |Alerts Configuration|Centrally|Centrally|Centrally|Centrally|Centrally* and<br/>At the edge|
-|Users & Dashboards Configuration|Centrally|Centrally|Centrally|Centrally|Centrally|
+|Users & Dashboards<br/>Configuration|Centrally|Centrally|Centrally|Centrally|Centrally|
 |Dashboards Access|Centrally|Centrally|Centrally|Centrally|Centrally and<br/>At the edge|
 |Internet Access Isolation|Full<br/>ActiveGate|Partial|Partial|Partial|Full|
-|Dashboards without Internet Access|No|No|No|No|Yes
+|Dashboards without<br/>Internet Access|No|No|No|No|Yes
 
 \* The central configuration of Netdata is currently in its final stages. It is planned to be released in Match 2024.
 
@@ -387,14 +389,19 @@ The live list of UDP and TCP sockets on a system, aggregated per PID:
 
 ## Network Monitoring
 
-
+TBD
 
 ## Storage Monitoring
 
+TBD
+
 ## Physical Hardware Monitoring & Sensors
 
+TBD
 
 ## Alerts
+
+TBD
 
 ## Dashboards
 
@@ -423,6 +430,19 @@ On the UI, when building custom dashboards, Dynatrace provides forecasting and a
 
 ### Datadog
 
+TBD
+
+### Instana
+
+TBD
+
+### Grafana
+
+TBD
+
+### Netdata
+
+TBD
 
 
 ## Custom Dashboards
