@@ -9,8 +9,6 @@ keywords: [dynatrace, datadog, instana, grafana, netdata]
 
 ---
 
-# Dynatrace vs Datadog vs Instana vs Grafana vs Netdata
-
 In this post we attempt to explore the value we get from various commercial monitoring services.
 
 To measure it, we used trial subscriptions of Dynatrace, Datadog, Instana, Grafana and Netdata, for monitoring a couple of Ubuntu servers. Each of the servers:
