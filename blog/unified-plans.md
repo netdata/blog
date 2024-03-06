@@ -82,7 +82,7 @@ A: It depends on your usage and the plan you select after the trial period. We'r
 **Q: Can I keep monitoring the same number of nodes?**  
 A: The ability to concurrently monitor the same number of nodes will depend on the plan you choose after the trial. The Community Plan has limits on concurrently monitored nodes, but the Homelab, Business, and Enterprise plans are designed to accommodate monitoring at any scale.
 
-**Q: What are the limits on the community plan?**
+**Q: What are the limits on the Community plan?**
 A: The Community Plan has a limit of 5 nodes that can be concurrently monitored and visualized on the Netdata dashboards. You can have an unlimited number of nodes connected to Netdata Cloud, however you will need to choose which 5 nodes you want to visualize at a given time.
 
 **Q: How do I choose a new plan or take advantage of the discount?**  
