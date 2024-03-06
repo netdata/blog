@@ -48,7 +48,7 @@ When it comes to configuration, monitoring solutions use 2 paradigms: a) Central
 |Alerts Configuration|Centrally|Centrally|Centrally|Centrally|Centrally* and<br/>At the edge|
 |Users & Dashboards<br/>Configuration|Centrally|Centrally|Centrally|Centrally|Centrally|
 |Dashboards Access|Centrally|Centrally|Centrally|Centrally|Centrally and<br/>At the edge|
-|Internet Access Isolation|Full<br/>ActiveGate|Partial|Partial|Partial|Full|
+|Internet Access<br/>Isolation|Full<br/>ActiveGate|Partial|Partial|Partial|Full|
 |Dashboards without<br/>Internet Access|No|No|No|No|Yes
 
 \* The central configuration of Netdata is currently in its final stages. It is planned to be released in Match 2024.
@@ -211,9 +211,6 @@ There are many container types (CGROUPS) however monitoring providers focus on s
 |Kubernetes|Yes|Yes|Yes|Yes|Yes|
 |Final Coverage<br/><small>previous score multiplied by this score</small>|14/64|17/64|21/64|10/64|64/64
 
-- `Auto` means the solution find out by itself and automatically collected container metrics and logs.
-- `Manual` means the solution requires from users to take manual configuration action to enable container metrics and logs.
-
 <details><summary>👉 Click here to see comments per provider...</summary>
 
 ### Dynatrace
@@ -249,7 +246,7 @@ The information presented by the default Grafana dashboards, is limited.
 
 Netdata collects containers information via kernel CGROUPS. It then associates `veth` network interfaces to each container and contacts docker, kubernetes, libvirt, etc to collect additional labels to enrich the information presented.
 
-The same way Netdata collects containers information, it collects also Virtual Machines information from the the host.
+The same way Netdata collects containers information, it collects also Virtual Machines information from the host.
 
 ![image](https://github.com/netdata/netdata/assets/2662304/e9dcbc1c-4b6e-40ac-be3a-90c56301ec9c)
 
@@ -270,15 +267,18 @@ When it comes to systemd services, this is what these monitoring solutions provi
 |# of Processes|-|Partial|-|-|Yes|
 |Status|Yes|-|Partial|-|Yes|
 |Logs|Yes|Yes|-|Yes|Yes|
-|List all units live<br/>`systemctl list-units`|Cached|-|-|-|Yes|
+|List all units live<br/>`systemctl list-units`|Partial|-|-|-|Yes|
 |List all services live<br/>`systemd-cgtop`|-|-|-|-|Yes|
-Coverage|3.5/9|3/9|0/9|1/9|9/9|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|3.5/9|3/9|0/9|1/9|9/9|
 
-- `Cached` means the feature is updated at the data collection interval.
+- `Partial` means that the information collected is a part of what others provide.
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
 ### Dynatrace
+
+Dynatrace tracks the type of each systemd service and a single metric about its availability.  There is no information about its resources. Also the information is not real-time. It seems it is updated according to the data collection interval (per-minute).
+
 ![image](https://github.com/netdata/netdata/assets/2662304/09521ab0-700f-4b42-86c9-427e7ed37d2f)
 
 ### Datadog
@@ -408,33 +408,40 @@ The live list of UDP and TCP sockets on a system, aggregated per PID:
 |----:|:----:|:----:|:----:|:----:|:----:|
 |Physical Network Interfaces|Yes|Yes|Yes|Yes|Yes|
 |Virtual Network Interfaces|-|Yes|-|-|Yes|
-|IPv4 Traffic|-|Yes|-|Yes|Yes|
-|IPv4 Fragments|-|Yes|-|Yes|Yes|
-|IPv4 Errors|-|Yes|-|Yes|Yes|
+|Wireless Interfaces|-|-|-|-|Yes|
+|IPv4 Traffic|-|Partial|-|Yes|Yes|
+|IPv4 Fragments|-|Partial|-|Yes|Yes|
+|IPv4 Errors|-|Partial|-|Yes|Yes|
 |IPv4 Broadcast|-|-|-|-|Yes|
 |IPv4 Multicast|-|-|-|-|Yes|
 |IP TCP|-|Yes|Yes|Yes|Yes|
-|IPv4 UDP|-|Yes|-|Yes|Yes|
+|IPv4 UDP|-|Partial|-|Yes|Yes|
 |IPv4 UDPlite|-|-|-|Yes|Yes|
 |IPv4 ECN|-|-|-|-|Yes|
 |IPv4 RAW Sockets|-|-|-|-|Yes|
-|IPv6 Traffic|-|-|-|Yes|Yes|
-|IPv6 Fragments|-|-|-|Yes|Yes|
-|IPv6 Errors|-|-|-|Yes|Yes|
+|IPv6 Traffic|-|Partial|-|Yes|Yes|
+|IPv6 Fragments|-|Partial|-|Yes|Yes|
+|IPv6 Errors|-|Partial|-|Yes|Yes|
 |IPv6 Broadcast|-|-|-|-|Yes|
 |IPv6 Multicast|-|-|-|-|Yes|
-|IPv6 TCP Sockets|-|-|-|Yes|Yes|
-|IPv6 UDP|-|-|-|Yes|Yes|
+|IPv6 TCP Sockets|-|Yes|-|Yes|Yes|
+|IPv6 UDP|-|Partial|-|Yes|Yes|
 |IPv6 UDPlite|-|-|-|Yes|Yes|
 |IPv6 RAW Sockets|-|-|-|-|Yes|
 |SCTP|-|-|-|-|Yes|
 |Firewall|-|-|-|Yes|Yes|
+|IPVS|-|-|-|-|Yes|
 |SYNPROXY|-|-|-|-|Yes|
 |Traffic Accounting|-|-|-|-|Yes|
 |Quality of Service|-|-|-|-|Yes|
+|Wireguard VPN|-|-|-|-|Yes|
+|OpenVPN|-|-|-|-|Yes|
 |List all sockets live|-|Yes|-|-|Yes|
-|Coverage|1/27|8/27|2/27|14/27|27/27|
+|Coverage|1/31|9/31|2/31|14/31|30/31|
 
+- Dynatrace and Instana do not provide much information about the Networking stack.
+- Datadog provides aggregates for IPv4 and IPv6.
+- The actual list of sockets a system, its processes and its containers have, are only listed by Datadog (with the Network Performance add-on, at $5 per node per month), and Netdata (included).
 
 ## Storage Monitoring
 
@@ -721,7 +728,7 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 |**Infra Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |Logs|58%|58%|0%|58%|83%|
 |Storage|35%|30%|25%|45%|100%|
-|Networking|4%|30%|7%|52%|100%|
+|Networking|3%|29%|6%|45%|100%|
 |Containers & VMs|27%|28%|33%|16%|100%|
 |systemd Services|39%|33%|0%|11%|100%|
 |Processes|50%|68%|23%|5%|80%|
@@ -811,11 +818,19 @@ What we didn't like:
 
 Since this our blog, I will prefer to describe what I learned from this journey.
 
+### Holistic approach
+
+Most monitoring solutions try to minimize the number of metrics they ingest by ignoring crucial information, avoiding certain technologies they don't see as important, or abstracting the information available.
+
+Netdata is the only monitoring solution that is committed to monitor all infrastructure technologies available today, in full detail and resolution. All kernel features and stacks, all protocols, all layers, all technologies, without exceptions.
+
+Of course Netdata can also work in higher levels, like they do, by collecting application metrics and logs from all available sources, applications, cloud providers and third party services. But while doing so, we keep our commitment to a holistic approach, maintaining all the information available from all the underlying technologies and layers.
+
 ### Decentralized & Distributed
 
-All monitoring providers struggle with resolution and cardinality. They invest a lot of effort to minimize both of them, since these are proportional to their cost, and even after all reductions, their services are quite expensive for the average team. 
+It is obvious that all monitoring providers struggle with resolution and cardinality. They invest a lot of effort to minimize both of them, since these affect their cost proportionally. And even after all reductions and economies applied, their services are still expensive. 
 
-When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot of work! It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, etc.
+When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot more work! It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, and many more, all happening right at the edge.
 
 To my surprise, the Netdata agent is one of lightest! And given the resolution (per-second) and the number of metrics it collects, it offers the best unit economics (i.e. resources per sample) among all.
 
@@ -825,9 +840,9 @@ This proves that Netdata is on the right path. The decentralized and distributed
 
 In this set up, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards and alerts. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
 
-All monitoring providers see the value of providing out of the box experience, but only Netdata so far has applied this to all the information available.
+All monitoring providers see the value of providing out of the box experience, but only Netdata so far has applied this across the board, to all the information available.
 
-Since we deal with information of all kinds, Netdata has to find a way to present everything, structure the information in a way that users can easily use. I understand that our presentation is probably too flat and users occasionally complain that Netdata dashboards are overwhelming. We need to improve them, so that they are more contextual, presenting the information in layers. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper than them.
+All others depend on the users to structure their dashboards the way they see fit. But since Netdata visualizes everything by default, we have to find a way to present everything in a way that users can easily use. I understand that our presentation is probably too flat and users occasionally report that Netdata dashboards are overwhelming. This is our next challenge. We need to improve, so that they are more contextual, presenting the information in layers. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper than them.
 
 ### Charts & Dashboards
 
@@ -843,9 +858,9 @@ I think the next version of our charts will also surprise users. We plan to offe
 
 AI is a broad term. It is also trendy, so it is frequently abused for marketing purposes.
 
-During the few days I spent on these solutions, I didn't see any evidence of real machine learning working in the background.
+During the few days we spent on these solutions, we didn't see any evidence of real machine learning working in the background.
 
-A few providers, like Grafana, allow configuring machine learning for some of the metrics. This is however too much for users to do, unless it is done for very few selected metrics.
+A few providers, like Grafana, allow configuring machine learning for some of the metrics. This is however too much for users, unless it is done for few selected metrics.
 
 Others, use statistical functions on the UI to provide some kind of outlier detection or forecasting, using just the visible time-frame as data source. 
 
