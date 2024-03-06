@@ -749,12 +749,11 @@ What we liked about Dynatrace:
 What we didn't like:
 
 1. Dynatrace provides the absolutely minimum information to build the UX they have in mind. This limits significantly the possibilities of using the solution for flows they haven't thought of. You always feel that "something is missing".
-2. Most dashboards have 2 versions, the "classic" and the new one. The new one is generally more modern, but also more limited, so you frequently find yourself switching to the "classic" one to get the work done.
-3. The best resolution of 1-minute is really not enough for monitoring modern systems.
-4. When creating custom dashboards, it is not easy to understand where the data are coming from, which makes you first do a query to understand the metrics (e.g. group by something) and once you know what data are there, then do the query you really need. The solution we have given to Netdata with the NIDL bar above each chart (for slicing and dicing) seems superior.
-5. Despite the promise of experiencing AI, we didn't find any evidence of real machine learning running in the background. Davis seems more like a hard-coded expert system. It is useful, but not AI.
-6. Complete lack of any multi-node dashboards out of the box. All the multi-node dashboards you need, you have to build them yourself.
-7. This is an expensive service.
+2. The best resolution of 1-minute is really not enough for monitoring modern systems.
+3. When creating custom dashboards, it is not easy to understand where the data are coming from, which makes you first do a query to understand the metrics (e.g. group by something) and once you know what data are there, then do the query you really need. The solution we have given to Netdata with the NIDL bar above each chart (for slicing and dicing) seems superior.
+4. Despite the promise of experiencing AI, we didn't find any evidence of real machine learning running in the background. Davis seems more like a hard-coded expert system. It is useful, but not AI.
+5. Complete lack of any multi-node dashboards out of the box. All the multi-node dashboards you need, you have to build them yourself.
+6. This is an expensive service.
 
 ### Datadog
 
@@ -853,3 +852,24 @@ Others, use statistical functions on the UI to provide some kind of outlier dete
 Netdata however uses real machine-learning. The source code is open-source, so users can review it. And at the same time, we have made the most to reveal all ML findings everywhere on the dashboards. All charts have anomaly rates on them, the table of contents can provide anomaly rate per section, and we have added special tools to help users analyze the findings of machine learning.
 
 I think our break-through is that Netdata managed to make machine learning lightweight. It doubles the CPU consumption of the agent, but we were very careful to spread all processing across time and avoid all kinds of CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics collected.
+
+### Fun part
+
+When working with monitoring systems side-by-side it is inevitable to notice a few strange coincidences.
+
+So, here is what I noticed:
+
+The single node dashboards of Instana follow the structure and the philosophy of the single node dashboards of Dynatrace. Since Dynatrace was first, I guess they got inspired by it (personally, I prefer the Dynatrace's ones).
+
+But then, the "new" single node dashboards of Dynatrace follow the same structure and layout of the single node dashboards of Datadog, while the old ones are now named "classic". I guess they got inspired too (Datadog's are better).
+
+So, today:
+
+- Dynatrace has 2 versions. Since they keep them both, they probably don't like either.
+- Instana can be considered "classic".
+
+I don't know if the above are true or a coincidence, but anyway it was fun to realize...
+
+PS: Note to self: Don't copy. Innovate. At least you will be authentic.
+PS2: If there is something we always do in Netdata is exactly this: we innovate! Every aspect of Netdata is authentic and unique!
+
