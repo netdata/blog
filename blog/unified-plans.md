@@ -18,24 +18,25 @@ As the landscape of real-time monitoring evolves, so does the diversity and comp
 
 # A Unified Plan Structure
 
-We're excited to announce a new unified plan structure, coming into effect on March 13th, 2024. This evolution from our previous offerings, including Early Bird and Unlimited Community Plans, is designed to cater more effectively to the diverse needs of our community. The new structure comprises four tailored plans:
+We are launching a new unified plan structure, that will come into effect on March 13th, 2024. This evolution from our previous offerings, including Early Bird and Unlimited Community Plans, is designed to cater more effectively to the diverse needs of our community. The new structure comprises four tailored plans:
 
-- **Netdata Enterprise:** For large-scale professional and organizational use, offering comprehensive monitoring solutions.
-- **Netdata Business:** Designed for businesses seeking robust monitoring with advanced features and support.
+- **Netdata Enterprise:** For large-scale professional and organizational use, offering comprehensive monitoring fully on-premise.
+- **Netdata Business:** Designed for businesses seeking robust monitoring with advanced features.
 - **Netdata Homelab:** Tailored for enthusiasts monitoring personal projects in a homelab environment.
-- **Netdata Community:** Our commitment to accessibility continues with this plan, designed for users with basic monitoring needs.
+- **Netdata Community:** Our commitment to accessibility continues with this plan, intended as a playground to experience Netdata and for users with very basic monitoring needs.
 
 # What is Changing?
 
-The Unified Plan Structure introduces a fair usage policy applicable to all spaces (accounts), ensuring a balanced approach to usage based on intent and the number of nodes and will have the following impact to existing plans:
+The Unified Plan Structure introduces a fair usage policy applicable to all spaces (accounts), ensuring a balanced approach to usage based on intent and the number of monitored nodes and will have the following impact to existing plans:
 
 - The `Early Bird` and `Unlimited Community` Plans will be discountinued on 13-03-2024.
 - The `Business` and `Homelab` Plans will remain the same with no impact to users.
-- The `Community (2023.11)` remains the same with no impact to users.
+- The `Community (2023.11)` Plan remains the same with no impact to users.
 
 # What does this mean for existing users?
 
-As mentioned above, the changes will only impact users on `Early Bird` and Old Unlimited `Community (2023.02)` plans.
+The changes only impact users on `Early Bird` and Old Unlimited `Community (2023.02)` plans.
+
 This transition marks a shift towards a structured offering that aligns with your monitoring needs and usage patterns. Here's what the transition entails:
 
 - **60-Day Free Trial of Netdata Business:** Automatically granted to users currently on Early Bird and Unlimited Community Plans, offering a seamless experience to explore Business Plan features.
@@ -79,12 +80,15 @@ A: If you don't select a new plan, you will automatically be moved to the Netdat
 A: It depends on your usage and the plan you select after the trial period. We're offering a 25% lifetime discount on the Business plan for those affected by the change, applicable for annual plans. If your usage fits within the new Community Plan's limits, there may be no cost to you.
 
 **Q: Can I keep monitoring the same number of nodes?**  
-A: The ability to monitor the same number of nodes will depend on the plan you choose after the trial. The Community Plan has limits, but the Homelab, Business, and Enterprise plans are designed to accommodate more extensive monitoring needs.
+A: The ability to concurrently monitor the same number of nodes will depend on the plan you choose after the trial. The Community Plan has limits on concurrently monitored nodes, but the Homelab, Business, and Enterprise plans are designed to accommodate monitoring at any scale.
+
+**Q: What are the limits on the community plan?**
+A: The community plan has a limit of 5 nodes that can be concurrently monitored and visualized on the Netdata dashboards. You can have an unlimited number of nodes connected to Netdata Cloud, however you will need to choose which 5 nodes you want to visualize at a given time.
 
 **Q: How do I choose a new plan or take advantage of the discount?**  
-A: You can select a new plan or apply the discount by visiting our website and navigating to the pricing or plans section after your trial begins. Enter the provided coupon code at checkout to apply the discount.
+A: You can select a new plan or apply the discount by visiting the Plans and Billing section in the Netdata App. Enter the provided coupon code at checkout to apply the discount.
 
-**Q: What if I have more questions or need assistance choosing a plan?**  
+**Q: What if I have more concerns, questions or need assistance choosing a plan?**  
 A: We're here to help. Please reach out to us at plans@netdata.cloud with any questions or for guidance on selecting the plan that's right for you.
 
 **Q: How does this affect my data and the monitoring I currently have set up?**  
