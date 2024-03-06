@@ -40,7 +40,7 @@ The changes only impact users on `Early Bird` and Old Unlimited `Community (2023
 This transition marks a shift towards a structured offering that aligns with your monitoring needs and usage patterns. Here's what the transition entails:
 
 - **60-Day Free Trial of Netdata Business:** Automatically granted to users currently on Early Bird and Unlimited Community Plans, offering a seamless experience to explore Business Plan features.
-- **Choosing Your Next Plan:** After the trial, select from the Enterprise, Business, Homelab, or Community plans based on your specific needs and usage.
+- **Choosing Your Next Plan:** After the trial, select from the Enterprise, Business, Homelab, or Community Plans based on your specific needs and usage.
 
 # Addressing Your Concerns
 
