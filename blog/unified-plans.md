@@ -1,7 +1,7 @@
 ---
 slug: netdata-unified-plans
-title: "Upcoming Homelab plan!"
-description: "We are excited to unveil the Homelab plan that will be available to the homelab community."
+title: "New Streamlined Plan Structure"
+description: "Netdata is introducing a streamlined plan structure, sunsetting Early Bird plans on 13-03-2024."
 image: https://github.com/netdata/blog/assets/82235632/1da6b92a-638c-46f9-9711-83e8ff1ffae6
 authors: team
 tags: [early bird, community, plans, pricing, paid-subscriptions]
