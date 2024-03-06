@@ -25,9 +25,18 @@ We're excited to announce a new unified plan structure, coming into effect on Ma
 - **Netdata Homelab:** Tailored for enthusiasts monitoring personal projects in a homelab environment.
 - **Netdata Community:** Our commitment to accessibility continues with this plan, designed for users with basic monitoring needs.
 
-# What It Means for Current Users
+# What is Changing?
 
-For our cherished Early Bird and Unlimited Community Plan users, this transition marks a shift towards a structured offering that aligns with your monitoring needs and usage patterns. Here's what the transition entails:
+The Unified Plan Structure introduces a fair usage policy applicable to all spaces (accounts), ensuring a balanced approach to usage based on intent and the number of nodes and will have the following impact to existing plans:
+
+- The `Early Bird` and `Unlimited Community` Plans will be discountinued on 13-03-2024.
+- The `Business` and `Homelab` Plans will remain the same with no impact to users.
+- The `Community (2023.11)` remains the same with no impact to users.
+
+# What does this mean for existing users?
+
+As mentioned above, the changes will only impact users on `Early Bird` and Old Unlimited `Community (2023.02)` plans.
+This transition marks a shift towards a structured offering that aligns with your monitoring needs and usage patterns. Here's what the transition entails:
 
 - **60-Day Free Trial of Netdata Business:** Automatically granted to users currently on Early Bird and Unlimited Community Plans, offering a seamless experience to explore Business Plan features.
 - **Choosing Your Next Plan:** After the trial, select from the Enterprise, Business, Homelab, or Community plans based on your specific needs and usage.
