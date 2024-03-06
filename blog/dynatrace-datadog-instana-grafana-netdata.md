@@ -871,5 +871,6 @@ So, today:
 I don't know if the above are true or a coincidence, but anyway it was fun to realize...
 
 PS: Note to self: Don't copy. Innovate. At least you will be authentic.
+
 PS2: If there is something we always do in Netdata is exactly this: we innovate! Every aspect of Netdata is authentic and unique!
 
