@@ -94,7 +94,7 @@ A: We're here to help. Please reach out to us at plans@netdata.cloud with any qu
 **Q: How does this affect my data and the monitoring I currently have set up?**  
 A: Your data and current monitoring setups will not be affected during the transition to the new plan structure. We aim to make this process as seamless as possible for all our users.
 
-**Q: I am already a Netdata Business or Homelab user, how does this change affect me?**
+**Q: I am already a Netdata Business or Homelab user, how does this change affect me?**  
 A: You will NOT be affected in any way.
 
 
