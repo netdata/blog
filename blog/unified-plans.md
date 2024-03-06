@@ -77,7 +77,7 @@ A: If you're on one of these plans, you'll be automatically transitioned to a 60
 A: If you don't select a new plan, you will automatically be moved to the Netdata Community Plan, which includes usage limits. However, these limits are designed to accommodate the needs of many of our users comfortably.
 
 **Q: Will there be any cost to me after the change?**  
-A: It depends on your usage and the plan you select after the trial period. We're offering a 25% lifetime discount on the Business plan for those affected by the change, applicable for annual plans. If your usage fits within the new Community Plan's limits, there may be no cost to you.
+A: It depends on your usage and the plan you select after the trial period. We're offering a 25% lifetime discount on the Business Plan for those affected by the change, applicable for annual plans. If your usage fits within the new Community Plan's limits, there may be no cost to you.
 
 **Q: Can I keep monitoring the same number of nodes?**  
 A: The ability to concurrently monitor the same number of nodes will depend on the plan you choose after the trial. The Community Plan has limits on concurrently monitored nodes, but the Homelab, Business, and Enterprise plans are designed to accommodate monitoring at any scale.
