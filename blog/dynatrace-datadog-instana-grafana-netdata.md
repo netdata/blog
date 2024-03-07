@@ -336,7 +336,7 @@ The live list of systemd services:
 |Detect the technology of<br/>each process and check<br/>for known vulnerabilities|Yes|-|-|-|-|
 |List all processes live|-|Yes|-|-|Yes|
 |List all TCP/UDP<br/>processes sockets live|-|Yes|-|-|Yes|
-|Coverage|10/20|13.5/20|4.5/20|1/20|16/20|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|10/20|13.5/20|4.5/20|1/20|16/20|
 
 Notes:
 - `Possibly` means that we tried it, the UI shown something relevant to it, but there were no values shown.
@@ -437,7 +437,7 @@ The live list of UDP and TCP sockets on a system, aggregated per PID:
 |Wireguard VPN|-|-|-|-|Yes|
 |OpenVPN|-|-|-|-|Yes|
 |List all sockets live|-|Yes|-|-|Yes|
-|Coverage|1/31|9/31|2/31|14/31|30/31|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|1/31|9/31|2/31|14/31|30/31|
 
 - Dynatrace and Instana do not provide much information about the Networking stack.
 - Datadog provides aggregates for IPv4 and IPv6.
@@ -467,7 +467,7 @@ The live list of UDP and TCP sockets on a system, aggregated per PID:
 |Ceph|-|Yes|-|Yes|Yes|
 |IPFS|-|-|-|-|Yes|
 |HDFS|-|Yes|-|Yes|Yes|
-|Coverage|7/20|6/20|5/20|9/20|20/20|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|7/20|6/20|5/20|9/20|20/20|
 
 Of course, there are hundreds of technologies and storage vendors out there. We list here the most commonly open and freely available technologies available.
 
@@ -516,7 +516,7 @@ When monitoring the performance of mounted filesystems, the block devices that a
 |Power Supplies|-|-|-|-|Yes|
 |CPU Sensors|-|-|-|-|Yes|
 |GPU Sensors|-|-|-|-|Yes|
-|Coverage|0/15|1/15|0/15|0/15|15/15
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|0/15|1/15|0/15|0/15|15/15
 
 This table surprised us too. We installed all monitoring solutions on an enterprise server with 256 cores and 1TiB RAM, running hundreds of LXC containers and VMs. Nothing related to the hardware was detected by any solution except Netdata.
 
@@ -538,8 +538,6 @@ Only Netdata has a policy that every metric collected is correlated and visualiz
 
 Most other solutions provide some kind of a metrics list that can be used to find what metrics are available. Even in this case, only Datadog provides enough information to understand the cardinality quickly. For all others, the users are expected to perform queries to understand cardinality before they actually use the metrics.
 
-For **multi-node, infrastructure level dashboards**, all monitoring solutions except Netdata, require from users to manually configure the dashboards they need. Netdata on the other hand, allows users to segment the infrastructure into rooms, and each of the rooms gets **fully automated multi-node dashboards** for the nodes in it. Even if rooms are not required, Netdata provides multi-node dashboards for all nodes registered.
-
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |:----:|:----:|:----:|:----:|:----:|:----:|
 |Automated Dashboards for all metrics|-|-|-|-|Yes|
@@ -554,6 +552,8 @@ For **multi-node, infrastructure level dashboards**, all monitoring solutions ex
 |Advanced Statistical Functions on custom charts|Yes|Yes|-|-|Partial|
 |Multi-y-axis Custom Charts|Yes|Yes|-|Yes|-|
 |Metrics Correlations|-|Yes|-|-|Yes|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|5/12|7/12|1/12|5/12|10/12|
+
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
@@ -628,6 +628,9 @@ TBD
 ### Netdata
 
 TBD
+
+## Resolution & Retention
+
 
 
 ## Agents Resources Utilization
@@ -781,7 +784,7 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 |Granularity|1-minute|15-seconds|1-second|1-minute|1-second|
 |Retention|**5-years**<br/>in tiers|**15-months**<br/>at 15-seconds|**13-months**<br/>in tiers|**13-months**<br/>at 1-minute|**Unlimited**<br/>in tiers|
 |||||||
-|**Infra Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
+|**Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |Logs|58%|58%|0%|58%|83%|
 |Storage|35%|30%|25%|45%|100%|
 |Networking|3%|29%|6%|45%|100%|
@@ -789,6 +792,7 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 |systemd Services|39%|33%|0%|11%|100%|
 |Processes|50%|68%|23%|5%|80%|
 |Hardware & Sensors|0%|7%|0%|0%|100%|
+|Dashboards|42%|58%|8%|42%|83%|
 |||||||
 |**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |CPU Usage<br/><small>100% = 1 core</small>|3.63%|8.35%|4.14%|3.27%|3.66%|
