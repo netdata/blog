@@ -56,7 +56,7 @@ We understand that changes like these come with questions and potential concerns
 
 # We're Here to Support You
 
-Change, even when for the better, can be challenging. We're dedicated to supporting you through this transition. For any queries, concerns, or guidance on selecting your new plan, reach out to us at info@netdata.cloud.
+Change, even when for the better, can be challenging. We're dedicated to supporting you through this transition. For any queries, concerns, or guidance on selecting your new plan, reach out to us at plans@netdata.cloud.
 
 This plan restructuring is an evolution towards a future where Netdata continues to serve as your trusted partner in monitoring. It reflects our dedication to innovation, service quality, and community support. Together, we'll continue to tackle monitoring challenges and seize opportunities for growth and improvement.
 
@@ -89,13 +89,16 @@ A: The Community Plan has a limit of 5 nodes that can be concurrently monitored 
 A: You can select a new plan or apply the discount by visiting the Plans and Billing section in the Netdata App. Enter the provided coupon code at checkout to apply the discount.
 
 **Q: What if I have more concerns, questions or need assistance choosing a plan?**  
-A: We're here to help. Please reach out to us at info@netdata.cloud with any questions or for guidance on selecting the plan that's right for you.
+A: We're here to help. Please reach out to us at plans@netdata.cloud with any questions or for guidance on selecting the plan that's right for you.
 
 **Q: How does this affect my data and the monitoring I currently have set up?**  
 A: Your data and current monitoring setups will not be affected during the transition to the new plan structure. We aim to make this process as seamless as possible for all our users.
 
 **Q: I am already a Netdata Business or Homelab user, how does this change affect me?**  
 A: You will NOT be affected in any way.
+
+**Q: I don't have a Netdata Cloud account and don't use that service of yours, will this affect me?**  
+A: If you don't use Netdata Cloud this doesn't affect you in any way, you are using "Agent OSS" which still remains OSS.
 
 
 Thank you for your continued support and understanding as we make these changes to better serve you and the entire Netdata community.
