@@ -532,16 +532,74 @@ TBD
 
 ## Dashboards
 
-All monitoring solutions provide automated dashboards for **single-node monitoring**, although to a varying degree each.
+All monitoring solutions provide some dashboards for **single-node monitoring**, although to a varying degree each.
+
+Only Netdata has a policy that every metric collected is correlated and visualized by default.
+
+Most other solutions provide some kind of a metrics list that can be used to find what metrics are available. Even in this case, only Datadog provides enough information to understand the cardinality quickly. For all others, the users are expected to perform queries to understand cardinality before they actually use the metrics.
 
 For **multi-node, infrastructure level dashboards**, all monitoring solutions except Netdata, require from users to manually configure the dashboards they need. Netdata on the other hand, allows users to segment the infrastructure into rooms, and each of the rooms gets **fully automated multi-node dashboards** for the nodes in it. Even if rooms are not required, Netdata provides multi-node dashboards for all nodes registered.
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |:----:|:----:|:----:|:----:|:----:|:----:|
-|Automated Single Node Dashboards|Yes|Yes|Yes|Yes|Yes|
-|Automated Multi Node Dashboards|-|-|-|-|Yes|
-|Every metric is visualized by default|-|-|-|-|Yes|
+|Automated Dashboards for all metrics|-|-|-|-|Yes|
+|Automated Dashboards for a single system|Partial|Partial|Partial|Partial|Yes|
+|Automated Integrated Dashboards for all systems|-|Partial|-|-|Yes|
+|Automated Dashboards for single Applications|Partial|Partial|Partial|Partial|Yes|
+|Automated Dashboards for multi-node Applications|-|Partial|-|-|Yes|
+|Metrics Explorer|Yes|Yes|-|Yes|Yes|
+|Custom Dashboards|Yes|Yes|-|Yes|Yes|
+|Advanced Custom Charts without using a Query Language|-|-|-|-|Yes|
+|Dynamic Custom Dashboards<small><br/>slice custom dashboards with dashboard-level filters</small>|-|-|-|Yes|Partial|
+|Advanced Statistical Functions on custom charts|Yes|Yes|-|-|Partial|
+|Multi-y-axis Custom Charts|Yes|Yes|-|Yes|-|
+|Metrics Correlations|-|Yes|-|-|Yes|
 
+<details><summary>👉 Click here to see comments per provider...</summary>
+
+### Dynatrace
+
+The default dashboards provided by Dynatrace are basic without much interactive control. Still, the single node dashboards are well thought and provide a good summary. Multi-node dashboards are not provided, but there are a few charts is some sections that provide some limited view on multi-node information.
+
+We found the custom dashboards of Dynatrace confusing and hard to use. The point-and-click functionality is not that useful and users are advised to switch to advanced mode for talking full control of queries.  The advanced mode is based on a query language. This was the case even for basic queries, since either we couldn't select what we needed, or the labels provided were using IDs instead of names.
+
+The metrics explorer provided, provides a lot of information per metric, but it misses the most important one: information about the cardinality of the metrics (i.e. how many time-series each metric has, based on what attributes). This means that you have to query each metric in a way to understand its cardinality, and then perform the query you need.
+
+### Datadog
+
+The default dashboards provided by Datadog are basic. Datadog provides some multi-node dashboards, however these are also quite limited and probably serve as a quick access for users to clone and customize.
+
+Creating custom dashboards with Datadog is a more pleasant experience compared to Dynatrace. When comparing the two, Datadog seems that is more focused on providing a smoother, quicker and easier experience to users. The whole experience is point and click and Datadog did an excellent job in providing context sensitive information at every step.
+
+### Instana
+
+The out of the box dashboards of Instana are basic and mainly limited to single nodes or single containers.
+
+For custom dashboards, Instana uses the idea of "Application Perspectives".
+
+Unfortunately, the UI did not help to successfully create such application perspectives. It required values, without providing any contextual help on what we could write there. So, after spending some time on this feature, we gave up without completing the task.
+
+Another very confusing fact about Instana, which is also true to some degree for Dynatrace, is that the UI provided lists of items about all things the system supports, without filtering the ones we actually use. This strategy provided very long lists of things, without helping us understand what applies to your infrastructure and what is not.
+
+### Grafana
+
+Grafana is well known for being a Swiss-army knife for visualization. However, the default dashboards provided by Grafana are basic. Only the networking dashboard has a bit more of information.
+
+Grafana is trying to come up with a point-and-click UX for constructing charts. Still I think the way this ecosystem works makes it difficult and somewhat confusing.
+
+So, despite the fact that Grafana is a very powerful tool, we think that it is not easy, it requires a lot of skills and a deep understanding of the whole observability pipeline, which is unlikely to be the case for users who just need to monitor their systems and applications without deep-diving into the details of the observability platform.
+
+### Netdata
+
+Netdata is the only solution among all systems tested that provides fully functional comprehensive single-node and multi-node dashboards out of the box.
+
+Users can create custom dashboards by dragging and dropping the provided charts into new pages and then re-arranging them, resizing them and changing their visualization type. Each chart is fully editable by point and click, and Netdata provides all the controls for slicing and dicing the data on any chart.
+
+Netdata allows segmenting the infrastructure into rooms and even within each room it provides global filters to allow segmenting all the charts at once, including custom dashboards.
+
+Compared to the best of the others, Netdata is more powerful and comprehensive out of the box, while Datadog and Grafana offer more customizability and more advanced statistical functions to analyze the data.
+
+</details>
 
 ## Artificial Intelligence
 
@@ -571,8 +629,6 @@ TBD
 
 TBD
 
-
-## Custom Dashboards
 
 ## Agents Resources Utilization
 
@@ -757,7 +813,7 @@ What we didn't like:
 
 1. Dynatrace provides the absolutely minimum information to build the UX they have in mind. This limits significantly the possibilities of using the solution for flows they haven't thought of. You always feel that "something is missing".
 2. The best resolution of 1-minute is really not enough for monitoring modern systems.
-3. When creating custom dashboards, it is not easy to understand where the data are coming from, which makes you first do a query to understand the metrics (e.g. group by something) and once you know what data are there, then do the query you really need. The solution we have given to Netdata with the NIDL bar above each chart (for slicing and dicing) seems superior.
+3. When creating custom dashboards, it is not easy to understand where the data are coming from, which makes you first do a query to understand the metrics (e.g. group by something) and once you know what data are there, then do the query you really need. Datadog solved this problem by providing cardinality information at the metric info. Still, the solution we have given to Netdata with the NIDL bar above each chart (for slicing and dicing) seems superior to all of them.
 4. Despite the promise of experiencing AI, we didn't find any evidence of real machine learning running in the background. Davis seems more like a hard-coded expert system. It is useful, but not AI.
 5. Complete lack of any multi-node dashboards out of the box. All the multi-node dashboards you need, you have to build them yourself.
 6. This is an expensive service.
