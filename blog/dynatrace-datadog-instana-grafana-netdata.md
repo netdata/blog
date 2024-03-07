@@ -601,6 +601,10 @@ Compared to the best of the others, Netdata is more powerful and comprehensive o
 
 </details>
 
+## Synthetic Monitoring
+
+TBD
+
 ## Artificial Intelligence
 
 ### Dynatrace
@@ -615,23 +619,97 @@ On the UI, when building custom dashboards, Dynatrace provides forecasting and a
 
 ### Datadog
 
-TBD
+Datadog provides outlier detection and forecasting functions to custom charts. However both seem to be based on statistical functions, not real machine learning running in the background.
+
+There is a feature called "Watchdog", which according to the documentation is based on machine learning. However, the way this works and is presented, resemble more of some kind of statistical analysis. Of course its findings are valuable. It is just that it does not seem to be machine-learning.
+
+The documentation also mentions that the "Watchdog" is part of the APM package.
 
 ### Instana
 
-TBD
+Instana documentation and marketing material mentions machine learning, but we didn't find it anywhere while using the product.
 
 ### Grafana
 
-TBD
+Grafana provides machine learning as part of their Alerts & IRM features. The feature requires from users to define metrics for which machine learning models will be trained and then used for outlier detection or forecasting.
+
+The good about it is that is can be used to train machine learning models on multiple data sources, even SQL queries. However, the whole feature set is limited to whatever create manually.
 
 ### Netdata
 
-TBD
+Netdata trains multiple machine learning models to learn the patterns of each metrics. These machine learning models are then consulted in real-time, during data collection, to detect if the sample collected is an outlier or not.
+
+The result of this outlier detection is stored in the database, with the sample value.
+
+When Netdata queries metrics, it automatically calculates the anomaly rate of each of the points presented on the dashboard. This anomaly rate is the percentage of samples found anomalous, versus the total number of samples aggregated to that point. So, it ranges from 0% to 100%.
+
+Since anomaly rates are stored in the database, Netdata can query the past and reveal the anomaly rates the samples have, with the models as they were at the time the samples were collected.
+
+Anomaly rates are used everywhere on the Netdata dashboards. Every chart has an anomaly ribbon that shows the overall query anomaly across time. Every facet of the query, including nodes, instances, dimensions and labels are also reported with their anomaly rates, which is visualized at the NIDL drop-down menus (slicing and dicing controls) each chart has.
+
+Anomaly rates are also used to annotate the table of contents of Netdata dashboards, to quickly spot the most anomalous sections, for any given time-frame, and also with a feature called "Metrics Correlations" to filter the entire dashboard based on anomaly rates.
+
+Netdata also computes a "node level anomaly score". This is the percentage of the metrics of a node, that were anomalous at the same time. It reveals the inter-dependencies of metrics. Anomalies across metrics happen in clusters because the metrics of a system are interdependent, so a slow disk will affect I/O throughput and IOPs, which will affect the throughput of the database running on this system, which will affect network traffic, affect CPU utilization and so on. So, the "node level anomaly score" can indicate how "severe" an anomaly is. 
+
+Netdata provides a special tool to deal with node level anomalies: "anomaly advisor". This tool provide a multi-node dashboard of the node level anomaly scores of all the nodes. This reveals interdependencies across nodes. So, a slow database will affect the throughput, the network traffic and CPU utilization of an application server, which will affect similar metrics on a load-balancer, and so-on. The anomaly advisor can reveal these interdependencies and also drill down to reveal the most anomalous metrics across all nodes for any given time-frame.
 
 ## Resolution & Retention
 
+Each monitoring provider has its own unique strategy when it comes to resolution and retention. Let's see them.
 
+### Dynatrace
+
+Dynatrace collects metrics **per-minute** and keeps retention in tiers, for **up to 5 years**, as shown below:
+
+Resolution|Duration|
+:---:|:---:|
+per minute|14 days
+every 5 minutes|28 days
+per hour|400 days
+per day|5 years
+
+### Datadog
+
+Datadog collects metrics **every 15 seconds** and keeps them in **full resolution for 15 months**.
+
+### Instana
+
+Instana collects metrics with many different resolutions. The exact data collection frequency for each metric is hard-coded into it.
+
+It collects metrics **per second, every 5 seconds, every 10 seconds and every minute** and keeps them in tiers for **13 months**, as shown below:
+ 
+Resolution|Duration|
+:---:|:---:|
+1, 5 and 10 seconds|24 hours
+per minute|1 month
+every 5 minutes|3 months
+per hour|13 months
+
+### Grafana
+
+Grafana supports variable resolutions, but the default for `grafana-agent` is **per minute**. It keeps the samples for **13 months**.
+
+Keep in mind that collecting metrics more frequently, affects billing.
+
+### Netdata
+
+Netdata is the only solution that keeps retention at the edge, even when the SaaS service is used.
+
+Users can control the retention they need by dedicating disk storage to their agents. When Netdata Parents (centralization points) are used, production systems can run with a very small retention (or no retention at all), and Netdata Parents will maintain retention for all the systems that push their metrics to them.
+
+Netdata collects all metrics **per second**, unless the data source does not provide the metrics at that resolution, in which case Netdata adapts to the best resolution the data sources provide.
+
+Netdata has very efficient disk footprint, and it usually works like this:
+
+Resolution|Bytes per Sample|Storage|Duration
+:---:|:---:|:---:|:---:|
+per second|0.6|1 GiB| 12 days
+per minute|5|1 GiB|80 days
+per hour|30|1 GiB|2 years
+
+So, by dedicating 3 GiB of storage space to each server, users get about 2 years of retention. Of course, these depend on the number of metrics collected.
+
+Keep in mind that unlike other systems that lose detail when down-sampling the metrics into tiers, Netdata maintains the minimum, maximum, average, sum and anomaly rate of the original high-resolution samples, across all tiers. So, spikes and dives are not lost, even when the metrics are down-sampled. This is why the bytes per sample changes in tiers.
 
 ## Agents Resources Utilization
 
@@ -663,16 +741,14 @@ datadog-agent-process.service: CPU average .45%, RAM: 117.77MiB
 datadog-agent-trace.service: CPU average .40%, RAM: 79.05MiB
 oneagent.service: CPU average 3.63%, RAM: 414.14MiB
 instana-agent.service: CPU average 4.14%, RAM: 566.37MiB
-grafana-agent.service: CPU average 3.27%, RAM: 228.17MiB
-netdata.service: CPU average 3.66%, RAM: 263.47MiB
+grafana-agent.service: CPU average 3.27%, RAM: 208.17MiB
+netdata.service: CPU average 3.66%, RAM: 213.47MiB
 ```
 
 Datadog has 4 services, totaling 8.35% CPU and 920.52 MiB RAM.
 `oneagent` is Dynatrace.
 
 Note that Netdata runs with default settings. This means **per-second** data collection for **3k+ metrics**, **3 database tiers** all updated in parallel, and **machine learning** for all metrics collected.
-
-
 
 ### Egress Bandwidth
 
@@ -761,7 +837,7 @@ This provided the following chart in Netdata:
 
 ![image](https://github.com/netdata/netdata/assets/2662304/59001495-116a-4b0e-b462-88684768d7aa)
 
-We used the Netdata API to calculate the average rate for all of them. Datadog averages at 25.2 kbps, Instana at 16.1 kbps, Dynatrace at 12.0 kbps, Grafana at 13.0 kbps, Dynatrace at 12.3 kbps and Netdata at 0.3 kbps.
+We used the Netdata API to calculate the average rate for all of them. Dynatrace at 12.3 kbps, Datadog averages at 30.2 kbps, Instana at 16.1 kbps, Grafana at 15.3 kbps and Netdata at 0.3 kbps.
 
 To calculate the monthly consumption we used:
 
@@ -771,10 +847,70 @@ monthly GiB = rate * 86400 / 8 * 365 / 12 / 1024 / 1024
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |:----:|:----:|:----:|:----:|:----:|:----:|
-|rate (kbps)|12.0|25.2|16.1|13.0|0.3|
-|monthly (GiB)|3.68|7.73|4.94|3.99|0.09|
+|rate (kbps)|12.3|30.2|16.1|15.3|0.3|
+|monthly (GiB)|3.9|9.5|5.0|4.8|0.1|
 
-As shown, Netdata does not really use any internet traffic. Since Netdata does not push the samples and the logs to Netdata Cloud, the only bandwidth used is when users are viewing these data.
+As shown, Netdata does not really use any internet traffic. Since Netdata does not push the samples and the logs to Netdata Cloud, the only bandwidth used is when users are viewing these data. We measured the bandwidth used when users view the dashboards via Netdata Cloud and we found that each Netdata uses on the average 15 kbps per viewer, for the time the viewers use a dashboard the node participates.
+
+## Pricing
+
+Assuming a node that:
+
+- runs 24x7
+- generates about 2 GiB of logs (or about 500k log entries) per month, retained for 30 days
+
+All prices are updated Mar 8, 2024, and refer to monthly billing.
+
+### Dynatrace
+
+|Features|Pricelist|Monthly Price/node
+|:---:|:---:|:---:|
+|Infrastructure monitoring|$0.04 per hour per node|$29.2
+|Application security|$0.018 per hour per node|$13.1
+|Logs Management and analytics|Ingest: $0.20/GiB<br/>Retain: $0.0007/GiB/day<br/>Query: $0.035/GiB|$1.0
+
+Total price per node: $43.3 per node per month
+
+Dynatrace has also pricing for synthetic tests, kubernetes, and more.
+
+### Datadog
+
+|Features|Pricelist|Monthly Price/node
+|:---:|:---:|:---:|
+|Infrastructure Enterprise|$27/node/month|$27.0
+|Network Monitoring|$7.2/node/month|$7.2
+|Logs Management|Ingest: $0.10/GiB<br/>Retain: $3.75/million entries/month|$2
+
+Total price per node: $36.2 per node per month
+
+Datadog provides a lot more tools, each with each own pricing. Synthetic monitoring is an extra.
+
+### Instana
+
+Instana publishes volume discounts. The single node price for Infrastructure nodes starts at $20.6 per node per month, with a minimum of 10 nodes.
+
+If APM is needed, Instana pricing starts at 77.4 per node per month.
+
+Instana does not support logs. It integrates with 3rd party services and systems for logs.
+
+### Grafana
+
+Grafana's pricing is based on Data Points per Minute (DPM). With the resolution tested of 1 DPM per metric and assuming 1k metrics per node (Netdata collects 3.5k metrics on the tested nodes), we have:
+
+|Features|Pricelist|Monthly Price/node
+|:---:|:---:|:---:|
+|Metrics|$8/1k series/month|$8.0
+|Logs Management|Ingest: $0.50/GiB|$2.0
+
+Total $10 per node per month.
+
+Grafana also charges for users $8 per user per month,  or $55 per user per month with access to Enterprise plugins. For users to access machine learning, IRM add-on is required, at $20 per user per month.
+
+### Netdata
+
+Netdata charges $6 per node per month, all features included.
+
+Aggressive volume discounts are applied starting at 6+ nodes, which progressively lower the price down to $1 per node per month when having more than 5k nodes.
 
 ## Summary
 
@@ -782,7 +918,7 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 |----:|:----:|:----:|:----:|:----:|:----:|
 |Agent|Dynatrace<br/>OneAgent + ActiveGate|Datadog-Agent|Instana-Agent|Grafana-Agent|Netdata|
 |Granularity|1-minute|15-seconds|1-second|1-minute|1-second|
-|Retention|**5-years**<br/>in tiers|**15-months**<br/>at 15-seconds|**13-months**<br/>in tiers|**13-months**<br/>at 1-minute|**Unlimited**<br/>in tiers|
+|Retention|**5-years**<br/>in tiers|**15-months**<br/>at 15-seconds|**13-months**<br/>in tiers|**13-months**<br/>at 1-minute|**Unlimited**<br/>in tiers<small><br/>typically 3 GiB provide 2 years</small>|
 |||||||
 |**Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |Logs|58%|58%|0%|58%|83%|
@@ -796,8 +932,8 @@ As shown, Netdata does not really use any internet traffic. Since Netdata does n
 |||||||
 |**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |CPU Usage<br/><small>100% = 1 core</small>|3.63%|8.35%|4.14%|3.27%|3.66%|
-|Memory Used|**414 MiB**|**921 MiB**|**566 MiB**|**228 MiB**|**263 MiB**|
-|Egress Internet Traffic<br/><small>per node per month</small>|**3.68 GiB**|**7.73 GiB**|**4.94 GiB**|**3.99 GiB**|**90 MiB**|
+|Memory Used|414 MiB|921 MiB|566 MiB|208 MiB|213 MiB|
+|Egress Internet Traffic<br/><small>per node per month</small>|3.9 GiB|9.5 GiB|5.0 GiB|4.8 GiB|0.1 GiB|
 
 ## Verdict
 
@@ -888,21 +1024,21 @@ Of course Netdata can also work in higher levels, like they do, by collecting ap
 
 ### Decentralized & Distributed
 
-It is obvious that all monitoring providers struggle with resolution and cardinality. They invest a lot of effort to minimize both of them, since these affect their cost proportionally. And even after all reductions and economies applied, their services are still expensive. 
+All monitoring providers struggle with resolution and cardinality. They invest a lot of effort to minimize both of them, since these affect their cost proportionally. And even after all reductions and economies applied, their services are still expensive. 
 
 When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot more work! It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, and many more, all happening right at the edge.
 
-To my surprise, the Netdata agent is one of lightest! And given the resolution (per-second) and the number of metrics it collects, it offers the best unit economics (i.e. resources per sample) among all.
+To my surprise, the Netdata agent is one of lightest! And given the resolution (per-second) and the number of metrics it collects, **it offers the best unit economics** (i.e. resources per sample) among all.
 
 This proves that Netdata is on the right path. The decentralized and distributed nature of Netdata decouples resolution and cardinality from our economics, without pushing this cost to the users, allowing Netdata to be **the most cost efficient monitoring solution**, while also providing high fidelity observability without compromises.
 
 ### Out of the box
 
-In this set up, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards and alerts. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
+In this setup, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards and alerts. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
 
 All monitoring providers see the value of providing out of the box experience, but only Netdata so far has applied this across the board, to all the information available.
 
-All others depend on the users to structure their dashboards the way they see fit. But since Netdata visualizes everything by default, we have to find a way to present everything in a way that users can easily use. I understand that our presentation is probably too flat and users occasionally report that Netdata dashboards are overwhelming. This is our next challenge. We need to improve, so that they are more contextual, presenting the information in layers. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper than them.
+All others depend on the users to create custom dashboards and structure them the way they see fit. But since Netdata visualizes everything by default, we have to find a way to present everything in a way that users can easily understand and use. Our presentation is probably too flat compared to the others, and users occasionally report that Netdata dashboards are overwhelming for them. This is our next challenge. We need to improve, so that they are more contextual, presenting the information in layers, on a need-to-know basis. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper than them.
 
 ### Charts & Dashboards
 
@@ -910,7 +1046,7 @@ I was also surprised to find out that Netdata charts and dashboards are actually
 
 For most monitoring solutions, editing charts is a complicated and challenging task. How to provide to users all the aspect of a metric so that they can understand quickly what this metric is about, which sources contribute to it and how much? How to allow them describe what they need in an easy and straightforward way?
 
-The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is far simpler, quicker and easier to use than any of the solutions the other monitoring providers offer. Users do not need to learn a query language and all the functionality needed is just a click away. Of course, to accomplish this kind of integration, we had to change the query engine, so that it returns all facets of the metrics with every response.
+The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is far simpler, quicker and easier to use than any of the solutions the other monitoring providers offer. Users do not need to learn a query language and all the functionality needed is just a click away. Of course, to accomplish this kind of integration, we had to change the query engine, so that it returns all facets of the metrics with every response, but the result payed off. **Netdata charts have amazing transparency and accuracy compared to all others.**
 
 I think the next version of our charts will also surprise users. We plan to offer an expanded version of the charts, providing fully automated analysis on each and every metric, based on its past patterns, at a click of a button.
 
@@ -920,13 +1056,13 @@ AI is a broad term. It is also trendy, so it is frequently abused for marketing 
 
 During the few days we spent on these solutions, we didn't see any evidence of real machine learning working in the background.
 
-A few providers, like Grafana, allow configuring machine learning for some of the metrics. This is however too much for users, unless it is done for few selected metrics.
+Grafana allows configuring machine learning for some of the metrics. This aligns with the DIY philosophy of Grafana, however it limits significantly its use.
 
-Others, use statistical functions on the UI to provide some kind of outlier detection or forecasting, using just the visible time-frame as data source. 
+Dynatrace and Datadog, probably use statistical functions and expert systems, not real machine learning.
 
-Netdata however uses real machine-learning. The source code is open-source, so users can review it. And at the same time, we have made the most to reveal all ML findings everywhere on the dashboards. All charts have anomaly rates on them, the table of contents can provide anomaly rate per section, and we have added special tools to help users analyze the findings of machine learning.
+Netdata is probably the only tool that uses real machine-learning at its core. The source code is open-source, so users can review it. And at the same time, we have made the most to reveal all ML findings everywhere on the dashboards. All charts have anomaly rates on them, the table of contents can provide anomaly rate per section, and we have added special tools to help users analyze the findings of machine learning.
 
-I think our break-through is that Netdata managed to make machine learning lightweight. It doubles the CPU consumption of the agent, but we were very careful to spread all processing across time and avoid all kinds of CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics collected.
+I think our break-through is that Netdata managed to make machine learning lightweight. Of course, it doubles the CPU consumption of the agent (this test was done with ML enabled at Netdata - without ML Netdata would also be lightest in terms of CPU), but we were very careful to spread all processing across time and avoid all kinds of CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics collected.
 
 ### Fun part
 
