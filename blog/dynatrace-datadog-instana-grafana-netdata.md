@@ -9,7 +9,7 @@ keywords: [dynatrace, datadog, instana, grafana, netdata]
 
 ---
 
-In this post we delve into the comparative analysis of five leading commercial monitoring solutions—Dynatrace, Datadog, Instana, Grafana, and Netdata. Our objective is to unravel the intrinsic value each of these services offers when applied to a real-world scenario. To accomplish this, we employed trial subscriptions of these services to monitor a set of Ubuntu servers and VMs, each hosting a pair of widely-used applications: Nginx and PostgreSQL, along with a couple of Docker and LXC containers. Additionally, we extended our monitoring to physical servers to evaluate the efficacy of these tools in capturing hardware and sensor data.
+In this post we delve into the comparative analysis of the commercial offerings of five leading monitoring solutions—Dynatrace, Datadog, Instana, Grafana, and Netdata. Our objective is to unravel the intrinsic value each of these services offers when applied to a real-world scenario. To accomplish this, we employed trial subscriptions of these services to monitor a set of Ubuntu servers and VMs, each hosting a pair of widely-used applications: nginx and PostgreSQL, along with a couple of Docker and LXC containers. Additionally, we extended our monitoring to physical servers to evaluate the efficacy of these tools in capturing hardware and sensor data along with VMs monitored from the host.
 
 Our assessment is anchored in three fundamental aspects:
 
@@ -23,17 +23,18 @@ Our comparison is guided by a trio of criteria we hold in high esteem:
 -   **Easiness**: We value user-friendliness, especially for individuals who view monitoring as a means to an end rather than their primary professional focus. The tool should be straightforward to set up, navigate, and sustain.
 -   **Completeness**: An ideal monitoring solution should offer a holistic view, minimizing any blind spots and providing a comprehensive understanding of the infrastructure.
 
-We've set a collective baseline, aggregating the capabilities of all the tools to define a 100% benchmark. Each tool is then evaluated against this benchmark to determine its relative performance across our criteria. It's worth noting that while we focus on the SaaS versions of these tools, the insights gleaned should be broadly applicable, albeit with nuances, to their on-prem counterparts.
+We've set a collective baseline, aggregating the capabilities of all the tools to define a 100% benchmark. Each tool is then evaluated against this benchmark to determine its relative performance across our criteria.
 
 As we proceed, remember that our analysis is inherently subjective, rooted in the specific priorities and values we've outlined. Whether you're a seasoned monitoring professional or someone tasked with overseeing an IT infrastructure, our findings aim to provide a clear, nuanced perspective on how each tool stacks up in the real world.
 
-> **IMPORTANT**: All monitoring solutions tested are feature-full and comprehensive and can effectively monitor anything required by users. Our evaluation focuses on what is easily achievable with minimal effort from users. What is readily available either without any user action or with just some simple configuration, with instructions provided by the monitoring system itself.
+> **IMPORTANT**: All monitoring solutions tested are feature-full and comprehensive and can effectively monitor anything required by their customers. Our evaluation focuses on what is easily achievable with minimal effort. What is readily available either without any user action or with just some simple configuration, with instructions provided by the monitoring system itself.
+
 
 ## Installation and Configuration
 
 All solutions use an agent that is installed on all monitored systems.
 
-Users are expected to copy and paste a command from the UI, which includes various unique tokens, and paste them to the terminal of each server, or integrate it to their CI/CD or provisioning system, to install the agents.
+Users are expected to copy and paste a command from the UI, which includes various unique tokens, and paste them to the terminal of each server, or integrate it to their CI/CD or provisioning system, to deploy the agents.
 
 When it comes to configuration, monitoring solutions use 2 paradigms: a) Centrally, or b) At the edge:
 
@@ -57,21 +58,17 @@ When it comes to configuration, monitoring solutions use 2 paradigms: a) Central
 
 ### Dynatrace
 
-Dynatrace has 2 components that need to be deployed on-prem. **OneAgent** (their systems agents), and **ActiveGate** (a secure proxy that also provides synthetics tests execution, monitoring remote or cloud applications, like databases).
+Dynatrace has 2 components that need to be deployed on-prem. **OneAgent** (their systems agent), and **ActiveGate** (a secure proxy that also provides synthetics tests execution, monitoring remote or cloud applications, and more).
 
 ActiveGate can be used to route OneAgent traffic, monitor cloud environments and remote applications, and run synthetic monitors.
-
-It seems that Dynatrace saw the benefits for **running more powerful software at the edge**, and they have taken a few steps towards a more Netdata-like approach. The Netdata agent is a monitoring-in-a-box. It includes all the features to be a complete monitoring by itself, for both standalone systems, centralization points, synthetic tests execution, remote and cloud applications monitoring and dashboards access at the edge. At the same time when it is installed as a Netdata Parent (centralization point) it offers total internet isolation and offloading of production systems.
-
-Of course, Dynatrace has not yet integrated to their on-prem software all the features Netdata provides (for example, data are never stored on-prem and dashboards cannot be accessed locally), but it nice to see that they recognize the value of this approach and they work in this direction.
 
 After installation, Dynatrace agents do not need any local configuration. Everything is controlled centrally from Dynatrace.
 
 ### Datadog
 
-The core features of the Datadog agent need to configured on each server. Then additional configuration is needed centrally to enable modules specializing in certain applications or technologies.
+The core features and data collection jobs of the Datadog agent need to configured on each server. Then additional configuration is needed centrally to enable modules specializing in certain applications or technologies.
 
-For isolating production systems from the internet, Datadog suggests to use an outbound web proxy. This provides some additional security, but still production systems connect to the internet.
+For isolating production systems from the internet, Datadog suggests to use an outbound web proxy.
 
 ### Instana
 
@@ -81,19 +78,21 @@ Instana provides an on-prem version of the solution, when internet access isolat
 
 ### Grafana
 
-The Grafana Agent needs local configuration for all data collection jobs and features. So, all configurations require ssh access to the servers monitored.
+The Grafana Agent needs local configuration for all data collection jobs and features.
 
-For internet access isolation, Grafana provides a number of alternatives. The most common is the installation of a Prometheus on-prem, and then push the metrics from this Prometheus to Grafana Cloud.
+For internet access isolation, Grafana provides a number of alternatives for metrics and logs, which usually require running databases (e.g. Prometheus) locally.
 
 ### Netdata
 
 Netdata needs to configured locally, for data collection jobs, features and alerts.
 
-We are currently at the final stages of releasing **Dynamic Configuration**, a feature that allows configuring Netdata centrally, while still pushing and maintaining all configurations at the edge. So, we will attempt to bridge the gap between `Centrally` and `At the edge`, by blending these 2 worlds. **Dynamic Configuration** for data collection jobs and alerts will be released with Netdata version 1.45 (in March 2024).
+We are currently at the final stages of releasing **Dynamic Configuration**, a feature that allows configuring Netdata centrally, while still pushing and maintaining all configurations at the edge. **Dynamic Configuration** for data collection jobs and alerts will be released with Netdata version 1.45 (in March 2024).
 
-Unlike all other monitoring solutions, Netdata uses the agent as a distributed database. So, instead of pushing metrics to Netdata Cloud, it only advertises which metrics it collects and maintains. All the features, including data collection, retention, querying, machine learning, alerting, etc are implemented by the open-source Netdata agent, at the edge.
+Unlike the other monitoring solutions, Netdata uses the agent as a distributed database. So, instead of pushing metrics to Netdata Cloud, it only advertises which metrics it collects and maintains. All the features, including data collection, retention, querying, machine learning, alerting, etc are implemented by the open-source Netdata agent, at the edge.
 
-Netdata agents can be configured to act as observability centralization points, thus isolating and offloading production systems from observability tasks. This feature is called **streaming** and it actually turns Netdata Children into data-collectors and Netdata Parents into multi-node observability centralization points. Netdata supports vertical scalability via Netdata Parents and virtually unlimited horizontal scalability via Netdata Cloud, which transparently integrates independent Netdata Parents into one uniform infrastructure.
+Netdata agents can be configured to act as observability centralization points, thus isolating and offloading production systems from observability tasks. This feature is called **streaming** and it actually turns Netdata Children into data-collectors and Netdata Parents into multi-node observability centralization points.
+
+Netdata supports vertical scalability via Netdata Parents and virtually unlimited horizontal scalability via Netdata Cloud, which transparently merges independent Netdata Parents and Agents into an integrated and uniform infrastructure.
 
 Since all Netdata Agents installed are complete observability stacks, Netdata allows accessing dashboards locally too. This provides highly available dashboards, even in case the infrastructure is facing internet connectivity problems.
 
@@ -167,7 +166,7 @@ Instana does not support logs natively. It integrates to 3rd party systems and s
 
 Netdata queries systemd-journal files directly, by opening the files and reading them.
 
-Netdata requires running `log2journal` (a Netdata tool) for converting plain text log files into structured systemd journal entries and pushing them to the local systemd-journald, or a local journal namespace, or a remote systemd-journal system, for indexing and querying.
+For converting plain text log files, Netdata provides `log2journal`, which converts plain text log files into structured systemd journal entries and pushes them to the local systemd-journald, or a local journal namespace, or a remote systemd-journal system, for indexing and querying.
 
 systemd-journald provides an infinite cardinality of logs. Each log entry may have its own unique fields, with their own unique values, and all are indexed for fast queries. However, when logs are ingested into the log management systems of monitoring providers, they lose these special attributes, and only a handful of fields are extracted and indexed, making exploration and filtering a pain. Netdata solves this problem by querying the logs directly at their source, using all the information that is available.
 
@@ -539,7 +538,7 @@ Only Netdata has a policy that every metric collected is correlated and visualiz
 Most other solutions provide some kind of a metrics list that can be used to find what metrics are available. Even in this case, only Datadog provides enough information to understand the cardinality quickly. For all others, the users are expected to perform queries to understand cardinality before they actually use the metrics.
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
-|:----:|:----:|:----:|:----:|:----:|:----:|
+|----:|:----:|:----:|:----:|:----:|:----:|
 |Automated Dashboards for all metrics|-|-|-|-|Yes|
 |Automated Dashboards for a single system|Partial|Partial|Partial|Partial|Yes|
 |Automated Integrated Dashboards for all systems|-|Partial|-|-|Yes|
@@ -548,11 +547,17 @@ Most other solutions provide some kind of a metrics list that can be used to fin
 |Metrics Explorer|Yes|Yes|-|Yes|Yes|
 |Custom Dashboards|Yes|Yes|-|Yes|Yes|
 |Advanced Custom Charts without using a Query Language|-|-|-|-|Yes|
-|Dynamic Custom Dashboards<small><br/>slice custom dashboards with dashboard-level filters</small>|-|-|-|Yes|Partial|
+|Dynamic Custom Dashboards<small><br/>slice custom dashboards with dashboard-level filters</small>|-|Yes|-|Yes|Partial|
 |Advanced Statistical Functions on custom charts|Yes|Yes|-|-|Partial|
 |Multi-y-axis Custom Charts|Yes|Yes|-|Yes|-|
+|Custom charts from logs|-|Yes|-|-|-|-|
+|Custom charts from processes information|Yes|-|-|-|Yes|
+|Custom charts from sockets information|-|-|-|-|Yes|
+|Anomaly rates on all charts|-|-|-|-|Yes|
 |Metrics Correlations|-|Yes|-|-|Yes|
-|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|5/12|7/12|1/12|5/12|10/12|
+|Search for anomalies across all metrics|-|-|-|-|Yes|
+|PLAY mode to update visualization in real-time|-|-|Yes|-|Yes|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|5/18|9/18|2/18|5/18|15/18|
 
 
 <details><summary>👉 Click here to see comments per provider...</summary>
@@ -561,15 +566,25 @@ Most other solutions provide some kind of a metrics list that can be used to fin
 
 The default dashboards provided by Dynatrace are basic without much interactive control. Still, the single node dashboards are well thought and provide a good summary. Multi-node dashboards are not provided, but there are a few charts is some sections that provide some limited view on multi-node information.
 
-We found the custom dashboards of Dynatrace confusing and hard to use. The point-and-click functionality is not that useful and users are advised to switch to advanced mode for talking full control of queries.  The advanced mode is based on a query language. This was the case even for basic queries, since either we couldn't select what we needed, or the labels provided were using IDs instead of names.
+We found the custom dashboards of Dynatrace confusing and hard to use. The point-and-click functionality is so limited that is useless. Users have to learn Dynatrace's query language to take control of their charts.
 
-The metrics explorer provided, provides a lot of information per metric, but it misses the most important one: information about the cardinality of the metrics (i.e. how many time-series each metric has, based on what attributes). This means that you have to query each metric in a way to understand its cardinality, and then perform the query you need.
+For some strange reason, custom charts created show labels as UUIDs (we tried network interfaces, disks, processes, hosts, etc), which makes them awkward, without providing an easy way to reveal their names.
+
+The metrics explorer provided, provides a lot of information per metric, but it misses the most important one: information about the cardinality of the metrics (i.e. how many time-series each metric has, based on what attributes). This means that you have to query each metric in a way to understand its cardinality, and then perform the query you need. Also, the metrics explorer lists a lot of information that is not available in your environment. It is like Dynatrace tried to list everything that they can potentially collect, independently of whether it is available or not.
+
+When editing custom charts, the metric selector provides friendly names for the metrics, but these names are frequently overlapping to each other. For example "Bytes Received" is listed for hosts, network interfaces and processes. So, you have to select each of them to get additional information and find the one you need.
+
+When slicing and dicing metrics in custom charts, Dynatrace does not provide any contextual information. For example, when you filter for processes, you have to know the process names. There is no auto complete to help you understand what is available.
 
 ### Datadog
 
-The default dashboards provided by Datadog are basic. Datadog provides some multi-node dashboards, however these are also quite limited and probably serve as a quick access for users to clone and customize.
+The default dashboards provided by Datadog are basic. Datadog provides some multi-node dashboards, however these are also quite limited and probably serve as a quick access for users to copy and customize.
 
-Creating custom dashboards with Datadog is a more pleasant experience compared to Dynatrace. When comparing the two, Datadog seems that is more focused on providing a smoother, quicker and easier experience to users. The whole experience is point and click and Datadog did an excellent job in providing context sensitive information at every step.
+Creating custom dashboards with Datadog is a more pleasant experience compared to Dynatrace. Datadog has solved all the problems that still exist in Dynatrace, so it provides a smoother, faster and easier experience for users.
+
+It is interesting that Datadog allows creating charts that combine metrics and values extracted from logs. So, you can create a chart that has dimensions from both metrics and logs in the same chart. However, the information available in Processes, or Network Performance (sockets) is not available in custom dashboards. So, while you can extract metrics from logs, you cannot chart for disk I/O, memory, CPU utilization, etc of processes or sockets. This seems contrary to the promise for "integrated" tools that is advertised.
+
+The labels provided are limited. For example we couldn't filter by physical or virtual network interfaces, disk type, make or model, etc.
 
 ### Instana
 
@@ -577,27 +592,41 @@ The out of the box dashboards of Instana are basic and mainly limited to single 
 
 For custom dashboards, Instana uses the idea of "Application Perspectives".
 
-Unfortunately, the UI did not help to successfully create such application perspectives. It required values, without providing any contextual help on what we could write there. So, after spending some time on this feature, we gave up without completing the task.
+Unfortunately, the UI did not help us to successfully create such application perspectives. It required values, without providing any contextual help on what we could write there. So, after spending some time on this feature, we gave up without completing the task.
 
-Another very confusing fact about Instana, which is also true to some degree for Dynatrace, is that the UI provided lists of items about all things the system supports, without filtering the ones we actually use. This strategy provided very long lists of things, without helping us understand what applies to your infrastructure and what is not.
+Another very confusing fact about Instana, which is also true to some degree for Dynatrace, is that the UI lists of items about all things the system supports, without filtering the ones we actually have available. This strategy provided very long lists of things, without helping us understand what applies to your infrastructure and what is not.
 
 ### Grafana
 
-Grafana is well known for being a Swiss-army knife for visualization. However, the default dashboards provided by Grafana are basic. Only the networking dashboard has a bit more of information.
+Grafana is well known for being a Swiss-army knife for visualization. However, the default dashboards provided by Grafana are basic.
 
-Grafana is trying to come up with a point-and-click UX for constructing charts. Still I think the way this ecosystem works makes it difficult and somewhat confusing.
+The query editor of Grafana is very close to the one provided by Datadog and provides a straightforward experience with contextual help in every step.
 
-So, despite the fact that Grafana is a very powerful tool, we think that it is not easy, it requires a lot of skills and a deep understanding of the whole observability pipeline, which is unlikely to be the case for users who just need to monitor their systems and applications without deep-diving into the details of the observability platform.
+Still, a lot of metrics are missing and even the ones available are usually missing important labels that could provide more power to the platform.
 
 ### Netdata
 
-Netdata is the only solution among all systems tested that provides fully functional comprehensive single-node and multi-node dashboards out of the box.
+Netdata provides fully automated dashboards for all metrics. Every metric collected is correlated and visualized in one of the sections provided out of the box.
 
-Users can create custom dashboards by dragging and dropping the provided charts into new pages and then re-arranging them, resizing them and changing their visualization type. Each chart is fully editable by point and click, and Netdata provides all the controls for slicing and dicing the data on any chart.
+All Netdata charts provide filtering capabilities for nodes, instances, dimensions and labels. We call this the NIDL bar and it serves 2 purposes:
 
-Netdata allows segmenting the infrastructure into rooms and even within each room it provides global filters to allow segmenting all the charts at once, including custom dashboards.
+1. Allow users to understand where the data are coming from. So, the NIDL bar provides drop down menus explaining the contribution of each data source to the chart.
+2. Allow users to filter these data sources (slice the data) using any of the NIDL attributes (nodes, instances, dimensions and label keys and values).
 
-Compared to the best of the others, Netdata is more powerful and comprehensive out of the box, while Datadog and Grafana offer more customizability and more advanced statistical functions to analyze the data.
+On every chart, there are additional controls to:
+
+1. Re-group the data on the chart using any of the possible combinations, even using multiple groupings concurrently (dice the data).
+2. Change the aggregation functions (across time and across time-series) to achieve the desired result.
+
+At the same time, anomaly rates are available on all NIDL drop-down menus and the anomaly ribbon of the chart, which shows the overall anomaly rate of the query across time.
+
+The info ribbon at the bottom of all charts provides information about missing data collection points, or overflown counters, across time. Netdata works at a beat. Missed data collections are not filled at visualization time. They are maintained as gaps and when data are aggregated  into charts, the info ribbon provides information about the gaps encountered on all time-series involved, across time.
+
+Users can create custom dashboards by dragging and dropping the provided charts into new pages and then re-arrange them, resize them and change their visualization type. This eliminates the need for a metrics explorer (the default dashboards serve this purpose) and metrics selectors (the default dashboards have full text search filtering capabilities), for creating custom dashboards.
+
+Netdata allows segmenting the infrastructure into rooms and even within each room it provides global filters to allow segmenting all the dashboards at once, including custom dashboards. This makes dashboards a lot more dynamic, capable of visualizing different aspects of the infrastructure at a click.
+
+Netdata's data collection to visualization latency is less than 1 second, and the global date-time picker supports a PLAY mode, allowing users to feel the "breath" of their infrastructure in real-time.
 
 </details>
 
@@ -928,12 +957,24 @@ Aggressive volume discounts are applied starting at 6+ nodes, which progressivel
 |systemd Services|39%|33%|0%|11%|100%|
 |Processes|50%|68%|23%|5%|80%|
 |Hardware & Sensors|0%|7%|0%|0%|100%|
-|Dashboards|42%|58%|8%|42%|83%|
+|Dashboards|28%|50%|11%|28%|83%|
 |||||||
 |**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |CPU Usage<br/><small>100% = 1 core</small>|3.63%|8.35%|4.14%|3.27%|3.66%|
 |Memory Used|414 MiB|921 MiB|566 MiB|208 MiB|213 MiB|
 |Egress Internet Traffic<br/><small>per node per month</small>|3.9 GiB|9.5 GiB|5.0 GiB|4.8 GiB|0.1 GiB|
+|||||||
+|**Overall**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
+|Out of the box functionality|High<small><br/>Davis AI alerts, logs</small>|High<small><br/>processes, sockets</small>|Low|Low|Excellent<small><br/>dashboards, alerts, logs</small>
+|Learning curve|Average|Average|Average|Steep|Minimal|
+|Power|Average<small><br/>no sockets</small>|High|Low|Average<small><br/>no processes, no sockets</small>|High|
+|Detailed|Low<small><br/>per-minute resolution, few metrics</small>|High<small><br/>15-seconds resolution, processes, sockets</small>|Low<small><br/>too few metrics and integrations</small>|Low<small><br/>per-minute resolution, too few metrics</small>|Excellent<small><br/>per-second resolution, all metrics, processes, sockets</small>|
+|Integrated|High|High|Low|Low|High|
+|Customizability|High|High|Low|High|High|
+|||||||
+|**Price**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
+|per node per month|$43.3|$36.2|$20.6|$10|$6|
+|extra charges|metrics, logs, advanced features|metrics, logs, advanced features|none|users, metrics, logs, machine learning|none|
 
 ## Verdict
 
@@ -964,7 +1005,7 @@ Datadog is a powerful platform. Despite the fact that they miss a lot of the inf
 
 What we liked about Datadog:
 
-1. The Datadog Network Performance is nice, although expensive ($5 per node per month). The Netdata network viewer we started last month, is still at its early stages, although we believe that soon we will be able to compete head-to-head with the Datadog one.
+1. The Datadog Network Performance is nice, although expensive. The Netdata network viewer we started last month, is still at its early stages, although we believe that soon we will be able to compete head-to-head with the Datadog one.
 2. The tools are quite integrated, so processes, logs, network sockets, etc are all available in a contextual manner.
 3. There are many integrations available.
 
@@ -975,8 +1016,7 @@ What we didn't like:
 3. Very limited support for monitoring operating system services (systemd-units).
 4. Missing LXC containers and VMs (monitoring VMs from the host). Especially for VMs, it may be a business decision, since monitoring from the host may provide "enough" monitoring for some users, preventing them from registering all the VMs to the service.
 5. Only few integrations get automated dashboards and in many cases many of the integrations that have dashboards, do not visualize all their information. For most metrics, dashboards need to be built manually.
-6. No multi-node dashboards. Users are expected to build these dashboards manually.
-7. This is an expensive service.
+6. This is an expensive service.
 
 ### Instana
 
@@ -1026,7 +1066,7 @@ Of course Netdata can also work in higher levels, like they do, by collecting ap
 
 All monitoring providers struggle with resolution and cardinality. They invest a lot of effort to minimize both of them, since these affect their cost proportionally. And even after all reductions and economies applied, their services are still expensive. 
 
-When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot more work! It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, and many more, all happening right at the edge.
+When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot more work. It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, and many more, all happening right at the edge.
 
 To my surprise, the Netdata agent is one of lightest! And given the resolution (per-second) and the number of metrics it collects, **it offers the best unit economics** (i.e. resources per sample) among all.
 
@@ -1038,7 +1078,7 @@ In this setup, Netdata was installed with default settings. The only change was 
 
 All monitoring providers see the value of providing out of the box experience, but only Netdata so far has applied this across the board, to all the information available.
 
-All others depend on the users to create custom dashboards and structure them the way they see fit. But since Netdata visualizes everything by default, we have to find a way to present everything in a way that users can easily understand and use. Our presentation is probably too flat compared to the others, and users occasionally report that Netdata dashboards are overwhelming for them. This is our next challenge. We need to improve, so that they are more contextual, presenting the information in layers, on a need-to-know basis. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper than them.
+All others depend on the users to create custom dashboards and structure them the way they see fit. But since Netdata visualizes everything by default, we have to present everything in a way that users can easily understand and use. Our presentation today is probably too flat compared to the others, and users occasionally report that Netdata dashboards are overwhelming for them. This is our next challenge. We need to improve, so that they are more contextual, presenting the information in layers, on a need-to-know basis. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper and broader than them.
 
 ### Charts & Dashboards
 
@@ -1046,7 +1086,7 @@ I was also surprised to find out that Netdata charts and dashboards are actually
 
 For most monitoring solutions, editing charts is a complicated and challenging task. How to provide to users all the aspect of a metric so that they can understand quickly what this metric is about, which sources contribute to it and how much? How to allow them describe what they need in an easy and straightforward way?
 
-The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is far simpler, quicker and easier to use than any of the solutions the other monitoring providers offer. Users do not need to learn a query language and all the functionality needed is just a click away. Of course, to accomplish this kind of integration, we had to change the query engine, so that it returns all facets of the metrics with every response, but the result payed off. **Netdata charts have amazing transparency and accuracy compared to all others.**
+The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is far simpler, quicker and easier to use than any of the solutions the other monitoring providers offer. Users do not need to learn a query language and all the functionality needed is just a click away. Of course, to accomplish this kind of integration, we had to change the query engine, so that it returns all facets of the metrics with every response, but the result payed off. **Netdata charts are easier to grasp and use.**
 
 I think the next version of our charts will also surprise users. We plan to offer an expanded version of the charts, providing fully automated analysis on each and every metric, based on its past patterns, at a click of a button.
 
@@ -1062,7 +1102,15 @@ Dynatrace and Datadog, probably use statistical functions and expert systems, no
 
 Netdata is probably the only tool that uses real machine-learning at its core. The source code is open-source, so users can review it. And at the same time, we have made the most to reveal all ML findings everywhere on the dashboards. All charts have anomaly rates on them, the table of contents can provide anomaly rate per section, and we have added special tools to help users analyze the findings of machine learning.
 
-I think our break-through is that Netdata managed to make machine learning lightweight. Of course, it doubles the CPU consumption of the agent (this test was done with ML enabled at Netdata - without ML Netdata would also be lightest in terms of CPU), but we were very careful to spread all processing across time and avoid all kinds of CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics collected.
+I think our break-through is that Netdata managed to make machine learning lightweight. Of course, it doubles the CPU consumption of the agent (this test was done with ML enabled at Netdata - without ML Netdata would also be lightest in terms of CPU), but it spreads all processing across time and avoids CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics collected.
+
+###  Pricing
+
+Netdata is cheaper not because it is inferior to the others. Netdata is superior is many aspects: full technology coverage, per-second granularity, amazing real-time functionality, lightweight and simple operations, machine learning for all metrics, powerful dashboards without learning a query language, and many more.
+
+The design of Netdata changes the cost structure of monitoring! This allows observability to be a lot more cost efficient for both Netdata and its users, and therefore a lot more affordable for everyone!
+
+We wanted this to be reflected to our pricing, so that our customers can enjoy the benefits of this design.
 
 ### Fun part
 
