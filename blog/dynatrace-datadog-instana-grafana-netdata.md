@@ -102,7 +102,7 @@ Since all Netdata Agents installed are complete observability stacks, Netdata al
 
 Systemd is a system manager that has become the de facto standard for most Linux distributions. It is responsible for initializing, managing, and tracking system services and other processes during boot and throughout the system's operation.
 
-Monitoring systemd services and units is crucial for ensuring that essential services are always running as expected, allowing the tracking of performance and resource usage of services over time. 
+Monitoring systemd services and units is crucial for ensuring that essential services are always running as expected, allowing the tracking of performance and resource usage of services over time and the detection of errors, abnormal behaviors and security related issues. 
 
 To effectively monitoring systemd services we are interested in the following:
 
@@ -173,11 +173,32 @@ The live list of systemd services:
 
 ## Processes Monitoring
 
+Continuous monitoring of the processes that are executing on a system, is crucial for ensuring the optimal performance, security, and reliability of the system.
+
+Given an infinite number of processes that can run a system, including the ephemeral nature of many of them (i.e. they get started and stopped quickly), monitoring systems follow 2 approaches:
+
+1. Group processes in some way, reducing their infinite cardinality to something that can be managed over longer periods. This allows the monitoring systems to maintain the normal retention for their metrics.
+2. Monitor the live status of processes, but do not create long standing metrics for them. This is usually referred as "live monitoring" and process metrics are not available as normal metrics in dashboards.
+
+This is how the monitoring solutions have decided to monitor processes:
+
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |----:|:----:|:----:|:----:|:----:|:----:|
-|CPU Usage<br/>(with break-down)|Abstract|Yes|Yes|-|Yes|
-|Context Switches<br/>(with break-down)|-|Yes|-|-|Yes|
-|Memory Usage<br/>(with break-down)|Abstract|Partial|Yes|-|Yes|
+|"live monitoring" per PID|-|Yes|Partial|-|Yes|
+|Processes are aggregated in pre-defined groups|Yes|-|-|-|Yes|
+|Support for user defined groups|Yes|-|-|-|Yes|
+|Processes are aggregated by the user they run|-|-|-|-|Yes|
+|Processes are aggregated by the user group they run|-|-|-|-|Yes|
+|Processes are aggregated by the CGROUP they belong|-|-|-|-|Yes|
+|Short lived processes aggregated by their hierarchy|-|-|-|-|Yes|
+
+And this is the information available for processes, each monitoring system provides:
+
+| |Dynatrace|Datadog|Instana|Grafana|Netdata|
+|----:|:----:|:----:|:----:|:----:|:----:|
+|CPU Usage|Abstract|Yes|Yes|-|Yes|
+|Context Switches|-|Yes|-|-|Yes|
+|Memory Usage|Abstract|Partial|Yes|-|Yes|
 |Memory Page Faults|-|-|-|-|Yes|
 |Physical Disk I/O|-|-|-|-|Yes|
 |Logical Disk I/O|Yes|Possibly|-|-|Yes|
@@ -187,31 +208,29 @@ The live list of systemd services:
 |Network Issues|Yes|Yes|-|-|-|
 |# of Processes|Yes|-|-|-|Yes|
 |# of Threads|-|Yes|-|-|Yes|
-|# of File Descriptors<br/>(break down by type)|-|Abstract|Abstract|-|Yes|
+|# of File Descriptors by descriptor type|-|Abstract|Abstract|-|Yes|
 |% of File Descriptors|Yes|-|Yes|-|Yes|
 |Uptime|Yes|Yes|Yes|-|Yes|
 |Process Logs|Yes|Yes|-|Yes|Yes|
-|DNS queries per process<br/>(per response type)|Partial|Yes|-|-|-|
-|Detect the technology of<br/>each process and check<br/>for known vulnerabilities|Yes|-|-|-|-|
-|List all processes live|-|Yes|-|-|Yes|
-|List all TCP/UDP<br/>processes sockets live|-|Yes|-|-|Yes|
-|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|10/20|13.5/20|4.5/20|1/20|16/20|
+|DNS queries per process, by response type|Partial|Yes|-|-|-|
+|Security Checks for supported Technologies|Yes|-|-|-|-|
+|Live monitoring of all processes resources usage|-|Yes|-|-|Yes|
+|Live monitoring of all processes TCP and UDP sockets|-|Yes|-|-|Yes|
+|Processes are aggregated in pre-defined groups|Yes|-|-|-|Yes|
+|Support for user defined groups|Yes|-|-|-|Yes|
+|Processes are aggregated by the user they run|-|-|-|-|Yes|
+|Processes are aggregated by the user group they run|-|-|-|-|Yes|
+|Processes are aggregated by the CGROUP they belong|-|-|-|-|Yes|
+|Short lived processes aggregated by their hierarchy|-|-|-|-|Yes|
+|Processes single-node dashboards|Yes|Yes|-|-|Yes|
+|Processes multi-node dashboards|-|-|-|-|Yes|
+|Processes metrics available in custom dashboards|-|-|-|-|Yes|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|13/29|14.5/29|4.5/29|1/29|25/20|
 
 Notes:
 - `Possibly` means that we tried it, the UI shown something relevant to it, but there were no values shown.
 - `Partial` means that the information presented was limited compared to the others.
 - `Abstract` means that the information presented was an aggregated summary compared to the others.
-
-The above list typically evolves to a large cardinality for tracking every single process ever run. So, usually monitoring solutions group the information to reduce and control its cardinality.
-
-| |Dynatrace|Datadog|Instana|Grafana|Netdata|
-|:----:|:----:|:----:|:----:|:----:|:----:|
-|Not aggregated, per PID|-|Yes|Partial<br/><small>(for select processes)</small>|-|Yes|
-|Aggregated in process groups|Yes|-|-|-|Yes|
-|User defined process groups|-|-|-|-|Yes|
-|Aggregated per user|-|-|-|-|Yes|
-|Aggregated per user group|-|-|-|-|Yes|
-|Multi-node processes aggregations|-|-|-|-|Yes|
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
@@ -966,7 +985,7 @@ Aggressive volume discounts are applied starting at 6+ nodes, which progressivel
 |||||||
 |**Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |systemd Services|18%|9%|0%|9%|100%|
-|Processes|50%|68%|23%|5%|80%|
+|Processes|45%|50%|16%|3%|86%|
 |Containers & VMs|27%|28%|33%|16%|100%|
 |Storage|35%|30%|25%|45%|100%|
 |Networking|3%|29%|6%|45%|100%|
