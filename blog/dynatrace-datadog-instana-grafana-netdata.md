@@ -1,4 +1,3 @@
-
 ---
 slug: dynatrace-vs-datadog-vs-instana-vs-grafana-vs-netdata
 title: "Dynatrace vs Datadog vs Instana vs Grafana vs Netdata!"
@@ -226,7 +225,7 @@ And this is the information available for processes, each monitoring system prov
 |Processes single-node dashboards|Yes|Yes|-|-|Yes|
 |Processes multi-node dashboards|-|-|-|-|Yes|
 |Processes metrics available in custom dashboards|Yes|-|-|-|Yes|
-|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|14/29|14.5/29|4.5/29|1/29|25/20|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|14/29|14.5/29|4.5/29|1/29|25/29|
 
 Notes:
 - `Possibly` means that we tried it, the UI shown something relevant to it, but there were no values shown.
