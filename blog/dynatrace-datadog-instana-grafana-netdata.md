@@ -965,29 +965,32 @@ Aggressive volume discounts are applied starting at 6+ nodes, which progressivel
 |Egress Internet Traffic<br/><small>per node per month</small>|3.9 GiB|9.5 GiB|5.0 GiB|4.8 GiB|0.1 GiB|
 |||||||
 |**Overall**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
-|Out of the box functionality|High<small><br/>Davis AI alerts, logs</small>|High<small><br/>processes, sockets</small>|Low|Low|Excellent<small><br/>dashboards, alerts, logs</small>
-|Learning curve|Average|Average|Average|Steep|Minimal|
-|Power|Average<small><br/>no sockets</small>|High|Low|Average<small><br/>no processes, no sockets</small>|High|
-|Detailed|Low<small><br/>per-minute resolution, few metrics</small>|High<small><br/>15-seconds resolution, processes, sockets</small>|Low<small><br/>too few metrics and integrations</small>|Low<small><br/>per-minute resolution, too few metrics</small>|Excellent<small><br/>per-second resolution, all metrics, processes, sockets</small>|
-|Integrated|High|High|Low|Low|High|
+|Technology Coverage<small><br/>with native plugins</small>|Average|High|Low|Average|Excellent|
+|Out of the box functionality|High<small><br/>Davis AI alerts, processes, logs</small>|High<small><br/>processes, sockets</small>|Low|Low|Excellent<small><br/>dashboards, alerts, logs, processes, sockets</small>
+|Learning curve|Average|Average|Average|Steep|Excellent|
+|Powerful|Average<small><br/>no sockets, hard custom dashboards</small>|High|Low|Average<small><br/>no processes, no sockets</small>|High|
+|Detailed|Low<small><br/>per-minute resolution, few metrics</small>|High<small><br/>15-seconds resolution, processes, sockets</small>|Low<small><br/>too few metrics, low high resolution retention</small>|Low<small><br/>per-minute resolution, too few metrics</small>|Excellent<small><br/>per-second resolution, all metrics, processes, sockets</small>|
+|Integrated<small><br/>how much integrated the provided tools are</small>|High|High|Low|Low|High|
 |Customizability|High|High|Low|High|High|
 |||||||
 |**Price**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
-|per node per month|$43.3|$36.2|$20.6|$10|$6|
-|extra charges|metrics, logs, advanced features|metrics, logs, advanced features|none|users, metrics, logs, machine learning|none|
+|price per node per month|$43.3|$36.2|$20.6|$10.0|$6.0|
+|price per user per month|-|-|-|$20|-|
+|extra charges|a lot<small><br/>metrics, logs, Kubernetes, synthetic tests, security scanning and more</small>|a lot<small><br/>metrics, logs, Kubernetes, synthetic tests, security scanning and more</small>|none|a lot<small><br/>users, metrics, logs, machine learning</small>|none|
+|egress bandwidth per node per month<small><br/>on AWS $0.09/GiB</small>|$0.35|$0.86|$0.45|$0.43|$0.01|
 
 ## Verdict
 
 ### Dynatrace
 
-Dynatrace seems a very well thought monitoring platform. It is obvious that the folks at Dynatrace have given quite some thought to each aspect of the monitoring experience and have tried to provide a lot of insights out of the box.
+Dynatrace seems a well thought monitoring platform.
 
 What we liked about Dynatrace:
 
-1. Dynatrace has some computed metrics we found appealing: Availability over time for O/S services, Connectivity over time for processes and more. Although all these can be derived from other metrics Netdata already monitors, we found interesting the idea of providing computed metrics like these.
-2. Dynatrace names the metrics in a way that is more straight forward for users to understand, like Disk Latency (it appears to be the same with `disk.iowait` in Netdata). This made us reconsider our strategy of naming metrics closely to the names the O/S or the applications have.
-3. Detecting the technology of each process and then checking for known vulnerabilities is a nice add-on. I am not sure if this feature belongs to a monitoring system or a CI/CD platform, but still it is interesting to have such a feature available.
-4. Dynatrace comes with a lot of errors and problems detection out of the box. It is interesting that they named them "Problems" and they have associated them with Davis instead of normal alerts. This prevents the pollution of user configured alerts with the stock ones and also makes the solution seem "smarter".
+1. Dynatrace has some computed metrics we found appealing: Availability over time for O/S services, Connectivity over time for processes, and more. Although all these can be derived from other metrics Netdata already monitors, we found interesting the idea of providing computed metrics like these.
+2. Dynatrace names the metrics in a way that is more straight forward for users to understand, like Disk Latency (it appears to be the same with `disk.iowait` in Netdata).
+3. Detecting the technology of each process and then checking for known vulnerabilities is a nice add-on. I am not sure if this feature belongs to a monitoring system or a CI/CD platform, but still it is interesting to have such a feature available. Note that this feature is charged extra.
+4. Dynatrace comes with a lot of errors and problems detection out of the box. It is interesting that they named them "Problems" and they associated them with Davis instead of normal alerts.
 5. Apart from installing OneAgent and ActiveGate, the platform never asked us to configure anything by hand. All configuration happened via the UI.
 
 What we didn't like:
@@ -1001,7 +1004,7 @@ What we didn't like:
 
 ### Datadog
 
-Datadog is a powerful platform. Despite the fact that they miss a lot of the information compared to Netdata, the UX gives freedom and power to users and for the things they monitor the dashboards deep dive into the information available, to provide a holistic view.
+Datadog is a powerful platform. Despite the fact that they miss a lot of the information compared to Netdata, the UX gives freedom and power to users and for the things they monitor the dashboards deep dive into the information available.
 
 What we liked about Datadog:
 
@@ -1016,7 +1019,8 @@ What we didn't like:
 3. Very limited support for monitoring operating system services (systemd-units).
 4. Missing LXC containers and VMs (monitoring VMs from the host). Especially for VMs, it may be a business decision, since monitoring from the host may provide "enough" monitoring for some users, preventing them from registering all the VMs to the service.
 5. Only few integrations get automated dashboards and in many cases many of the integrations that have dashboards, do not visualize all their information. For most metrics, dashboards need to be built manually.
-6. This is an expensive service.
+6. Processes and sockets monitoring do not expose metrics for custom dashboards.
+7. This is an expensive service.
 
 ### Instana
 
@@ -1024,7 +1028,7 @@ Instana is probably the weakest of all the services we tested. The look and feel
 
 What we liked:
 
-1. Instana and Netdata were the only solutions that detected short gaps in the VMs execution. So, we paused the VMs for 30 seconds. All the other monitoring solutions did not detect anything. Nothing happened as far as they are concerned. But for Instana and Netdata this was a major event and all the charts had gaps in them for the time the VMs were paused.
+1. Instana and Netdata were the only solutions that detected short gaps in the VMs execution. So, we paused the VMs for a few seconds. All the other monitoring solutions did not detect anything. But for Instana and Netdata this was a major event and all the charts had gaps in them for the time the VMs were paused.
 
 What we didn't like:
 
@@ -1043,11 +1047,12 @@ What we liked:
 
 1. Vast community.
 2. Open architecture.
+3. Swiss-army knife for visualization.
 
 What we didn't like:
 
 1. The default resolution of 1-minute for the Grafana agent was a surprise. Grafana knows that this is not enough for monitoring today's systems and applications, but probably it was needed for justifying the pricing (at higher resolution the service is more expensive).
-2. Primitive default dashboards.
+2. Primitive default dashboards. Grafana is equivalent to DIY monitoring.
 3. Too complex. Not for newcomers.
 
 ## Netdata
@@ -1056,37 +1061,37 @@ Since this our blog, I will prefer to describe what I learned from this journey.
 
 ### Holistic approach
 
-Most monitoring solutions try to minimize the number of metrics they ingest by ignoring crucial information, avoiding certain technologies they don't see as important, or abstracting the information available.
+Most monitoring solutions try to minimize the number of metrics they ingest, avoiding certain technologies they don't see as important, or abstracting and summarizing the information.
 
-Netdata is the only monitoring solution that is committed to monitor all infrastructure technologies available today, in full detail and resolution. All kernel features and stacks, all protocols, all layers, all technologies, without exceptions.
+Netdata is the only monitoring solution that is committed to monitor all infrastructure technologies available today, in full detail and resolution. Netdata monitors all Linux kernel features and stacks, all protocols, all layers, all technologies, without exceptions.
 
-Of course Netdata can also work in higher levels, like they do, by collecting application metrics and logs from all available sources, applications, cloud providers and third party services. But while doing so, we keep our commitment to a holistic approach, maintaining all the information available from all the underlying technologies and layers.
+Of course Netdata can also work in higher levels, by collecting application metrics and logs from all available sources, applications, cloud providers and third party services. But while doing so, we keep our commitment to a holistic approach, maintaining all the information available for all the underlying technologies and layers.
 
 ### Decentralized & Distributed
 
-All monitoring providers struggle with resolution and cardinality. They invest a lot of effort to minimize both of them, since these affect their cost proportionally. And even after all reductions and economies applied, their services are still expensive. 
+When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot more work. It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, and many more, all happening at the edge.
 
-When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot more work. It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, and many more, all happening right at the edge.
-
-To my surprise, the Netdata agent is one of lightest! And given the resolution (per-second) and the number of metrics it collects, **it offers the best unit economics** (i.e. resources per sample) among all.
+To my surprise, the Netdata agent is one of lightest! And given the resolution (per-second) and the number of metrics it collects, **it offers the best unit economics** (i.e. resources required per sample).
 
 This proves that Netdata is on the right path. The decentralized and distributed nature of Netdata decouples resolution and cardinality from our economics, without pushing this cost to the users, allowing Netdata to be **the most cost efficient monitoring solution**, while also providing high fidelity observability without compromises.
 
 ### Out of the box
 
-In this setup, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards and alerts. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
+In this setup, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards, alerts, processes and sockets. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
 
-All monitoring providers see the value of providing out of the box experience, but only Netdata so far has applied this across the board, to all the information available.
+All monitoring providers see value in providing an out of the box experience, but only Netdata so far has applied this across the board, to all the information available.
 
-All others depend on the users to create custom dashboards and structure them the way they see fit. But since Netdata visualizes everything by default, we have to present everything in a way that users can easily understand and use. Our presentation today is probably too flat compared to the others, and users occasionally report that Netdata dashboards are overwhelming for them. This is our next challenge. We need to improve, so that they are more contextual, presenting the information in layers, on a need-to-know basis. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper and broader than them.
+All other solutions depend on users, to create custom dashboards and structure them the way they see fit. Netdata however, correlates and visualizes everything by default. 
+
+Compared to the other monitoring solutions, Netdata's presentation is probably too flat, which combined with the amount of information available in Netdata dashboards, makes the presentation look "overwhelming" at first sight. This is our next challenge. We need to improve, so that they are more contextual, presenting the information in layers, on a need-to-know basis. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper and broader than them.
 
 ### Charts & Dashboards
 
 I was also surprised to find out that Netdata charts and dashboards are actually a lot more usable and efficient than the others.
 
-For most monitoring solutions, editing charts is a complicated and challenging task. How to provide to users all the aspect of a metric so that they can understand quickly what this metric is about, which sources contribute to it and how much? How to allow them describe what they need in an easy and straightforward way?
+For most monitoring solutions, editing charts is a complicated and challenging task. How to allow users select metrics. How to provide all the aspect of each metric so that users can quickly understand what this metric is, which sources contribute to it and how much. Then, how to allow them describe what they need in an easy and straightforward way.
 
-The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is far simpler, quicker and easier to use than any of the solutions the other monitoring providers offer. Users do not need to learn a query language and all the functionality needed is just a click away. Of course, to accomplish this kind of integration, we had to change the query engine, so that it returns all facets of the metrics with every response, but the result payed off. **Netdata charts are easier to grasp and use.**
+The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is far simpler, quicker and easier to use, than any of the solutions the other monitoring systems provide. Users do not need to learn a query language and all the functionality is just a click away. Of course, to accomplish this kind of integration, we had to change the query engine, so that it returns all facets of the metrics with every response, but the result payed off. **Netdata charts are easier to grasp and use.**
 
 I think the next version of our charts will also surprise users. We plan to offer an expanded version of the charts, providing fully automated analysis on each and every metric, based on its past patterns, at a click of a button.
 
@@ -1098,19 +1103,19 @@ During the few days we spent on these solutions, we didn't see any evidence of r
 
 Grafana allows configuring machine learning for some of the metrics. This aligns with the DIY philosophy of Grafana, however it limits significantly its use.
 
-Dynatrace and Datadog, probably use statistical functions and expert systems, not real machine learning.
+Dynatrace and Datadog, most likely use statistical functions and expert systems, not real machine learning.
 
 Netdata is probably the only tool that uses real machine-learning at its core. The source code is open-source, so users can review it. And at the same time, we have made the most to reveal all ML findings everywhere on the dashboards. All charts have anomaly rates on them, the table of contents can provide anomaly rate per section, and we have added special tools to help users analyze the findings of machine learning.
 
-I think our break-through is that Netdata managed to make machine learning lightweight. Of course, it doubles the CPU consumption of the agent (this test was done with ML enabled at Netdata - without ML Netdata would also be lightest in terms of CPU), but it spreads all processing across time and avoids CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics collected.
+I think our break-through is that Netdata managed to make machine learning lightweight. Of course, it doubles the CPU consumption of the agent (this test was done with ML enabled at Netdata - without ML Netdata would also be lightest in terms of CPU), but iall processing is spread evenly across time, avoiding CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics.
 
 ###  Pricing
 
-Netdata is cheaper not because it is inferior to the others. Netdata is superior is many aspects: full technology coverage, per-second granularity, amazing real-time functionality, lightweight and simple operations, machine learning for all metrics, powerful dashboards without learning a query language, and many more.
+Netdata is cheaper not because it is inferior to the others. To the contrary, Netdata is superior is many aspects: full technology coverage, per-second granularity, low-latency real-time visualization, lightweight, simple to install, run and maintain, machine learning for all metrics, powerful dashboards without learning a query language, and many more.
 
-The design of Netdata changes the cost structure of monitoring! This allows observability to be a lot more cost efficient for both Netdata and its users, and therefore a lot more affordable for everyone!
+However, the design of Netdata changes the cost structure of monitoring. Netdata allows observability to be a lot more cost efficient for both Netdata and its users, and therefore a lot more affordable for everyone.
 
-We wanted this to be reflected to our pricing, so that our customers can enjoy the benefits of this design.
+We wanted this to be reflected to our pricing, so that our customers can enjoy the benefits of this design. So, Netdata is cheaper!
 
 ### Fun part
 
