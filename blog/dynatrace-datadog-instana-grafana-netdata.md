@@ -224,8 +224,8 @@ And this is the information available for processes, each monitoring system prov
 |Short lived processes aggregated by their hierarchy|-|-|-|-|Yes|
 |Processes single-node dashboards|Yes|Yes|-|-|Yes|
 |Processes multi-node dashboards|-|-|-|-|Yes|
-|Processes metrics available in custom dashboards|-|-|-|-|Yes|
-|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|13/29|14.5/29|4.5/29|1/29|25/20|
+|Processes metrics available in custom dashboards|Yes|-|-|-|Yes|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|14/29|14.5/29|4.5/29|1/29|25/20|
 
 Notes:
 - `Possibly` means that we tried it, the UI shown something relevant to it, but there were no values shown.
@@ -985,7 +985,7 @@ Aggressive volume discounts are applied starting at 6+ nodes, which progressivel
 |||||||
 |**Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |systemd Services|18%|9%|0%|9%|100%|
-|Processes|45%|50%|16%|3%|86%|
+|Processes|48%|50%|16%|3%|86%|
 |Containers & VMs|27%|28%|33%|16%|100%|
 |Storage|35%|30%|25%|45%|100%|
 |Networking|3%|29%|6%|45%|100%|
