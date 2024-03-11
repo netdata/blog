@@ -56,7 +56,7 @@ When it comes to configuration, monitoring solutions use 2 paradigms: a) Central
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
-### Dynatrace
+#### Dynatrace
 
 Dynatrace has 2 components that need to be deployed on-prem. **OneAgent** (their systems agent), and **ActiveGate** (a secure proxy that also provides synthetics tests execution, monitoring remote or cloud applications, and more).
 
@@ -64,25 +64,25 @@ ActiveGate can be used to route OneAgent traffic, monitor cloud environments and
 
 After installation, Dynatrace agents do not need any local configuration. Everything is controlled centrally from Dynatrace.
 
-### Datadog
+#### Datadog
 
 The core features and data collection jobs of the Datadog agent need to configured on each server. Then additional configuration is needed centrally to enable modules specializing in certain applications or technologies.
 
 For isolating production systems from the internet, Datadog suggests to use an outbound web proxy.
 
-### Instana
+#### Instana
 
 Data collection configuration happens via configuration files at each server.
 
 Instana provides an on-prem version of the solution, when internet access isolation is required.
 
-### Grafana
+#### Grafana
 
 The Grafana Agent needs local configuration for all data collection jobs and features.
 
 For internet access isolation, Grafana provides a number of alternatives for metrics and logs, which usually require running databases (e.g. Prometheus) locally.
 
-### Netdata
+#### Netdata
 
 Netdata needs to configured locally, for data collection jobs, features and alerts.
 
@@ -119,7 +119,7 @@ Since all Netdata Agents installed are complete observability stacks, Netdata al
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
-### Dynatrace
+#### Dynatrace
 
 ![image](https://github.com/netdata/netdata/assets/2662304/293018b7-fb35-49c1-8224-a3ce1db148f3)
 
@@ -141,7 +141,7 @@ Mar 04 18:27:40 ubuntu2204 systemd-tmpfiles[117782]: /run/finalrd-libs.conf:50: 
 
 That line is found on all other monitoring systems supporting systemd-journal, but not in Dynatrace.
 
-### Datadog
+#### Datadog
 
 ![image](https://github.com/netdata/netdata/assets/2662304/04945608-149e-4cd3-a85e-6cd47f840114)
 
@@ -149,18 +149,18 @@ Datadog requires manual configuration to ingest systemd-journal logs.
 
 For system logs, Datadog provides a fixed list of fields, covering basic information about the application that logged: the syslog identifier (i.e. the application name), the priority (level), the action, the username, the container name and the image name.
 
-### Instana
+#### Instana
 
 Instana does not support logs natively. It integrates to 3rd party systems and services for logs.
 
-### Grafana
+#### Grafana
 
 ![image](https://github.com/netdata/netdata/assets/2662304/4fc7333f-1324-4dfb-b73e-25e2a12c9692)
 
 - Grafana requires manually configuration to ingest `systemd-journal` logs.
 - When other log files need to be ingested, Grafana requires configuring the `grafana-agent` or running `promtail` for each log file to be ingested.
 
-### Netdata
+#### Netdata
 
 ![image](https://github.com/netdata/netdata/assets/2662304/008cdeb8-6c19-4a90-b3e7-fdf3557e53f3)
 
@@ -212,7 +212,7 @@ There are many container types (CGROUPS) however monitoring providers focus on s
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
-### Dynatrace
+#### Dynatrace
 
 Dynatrace provides limited information for containers. Especially network, disk I/O and pressure information, are completely missing.
 
@@ -220,20 +220,20 @@ Also, Dynatrace does not provide any Docker related information (states, health,
 
 ![image](https://github.com/netdata/netdata/assets/2662304/f717a6d6-ca81-4574-a159-0d94ca4f53f7)
 
-### Datadog
+#### Datadog
 
 Datadog collects most of the information available, however several metrics are not visualized by default. They are available for custom dashboards and alerts.
 Datadog supports only docker and containerd containers. LXC/LXD containers are not supported.
 
 ![image](https://github.com/netdata/netdata/assets/2662304/95a2f0fc-35e6-4058-9669-0b69fa7c3528)
 
-### Instana
+#### Instana
 
 Instana supports both Docker and LXC containers, but the information presented is relatively limited.
 
 ![image](https://github.com/netdata/netdata/assets/2662304/7d622db6-1957-4657-81d8-31759be11b16)
 
-### Grafana
+#### Grafana
 
 To monitor containers, Grafana requires running the `grafana-agent` as `root` to enable the embedded cAdvisor, which then collects metrics from Docker. 
 
@@ -241,7 +241,7 @@ The information presented by the default Grafana dashboards, is limited.
 
 ![image](https://github.com/netdata/netdata/assets/2662304/cd1afeb8-f92b-4973-848a-fc7de4e1c346)
 
-### Netdata
+#### Netdata
 
 Netdata collects containers information via kernel CGROUPS. It then associates `veth` network interfaces to each container and contacts docker, kubernetes, libvirt, etc to collect additional labels to enrich the information presented.
 
@@ -274,29 +274,29 @@ When it comes to systemd services, this is what these monitoring solutions provi
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
-### Dynatrace
+#### Dynatrace
 
 Dynatrace tracks the type of each systemd service and a single metric about its availability.  There is no information about its resources. Also the information is not real-time. It seems it is updated according to the data collection interval (per-minute).
 
 ![image](https://github.com/netdata/netdata/assets/2662304/09521ab0-700f-4b42-86c9-427e7ed37d2f)
 
-### Datadog
+#### Datadog
 
 Datadog has a systemd integration for collecting metrics, but it requires to configure all systemd units it should collect data for. Without this, it collects just the number of units by state,
 
 Furthermore, it collects these metrics by querying systemd itself instead of querying cgroups, so it requires specific features and versions of systemd to collect additional data.
 
-### Instana
+#### Instana
 
 Instana does not monitor systemd services.
 
-### Grafana
+#### Grafana
 
 Grafana Cloud does not provide a cloud connector for monitoring systemd services and units.
 
 We know there is a vast ecosystem around Grafana and probably monitoring systemd services can be accomplished via a 3rd party Prometheus exporter, but Grafana Cloud did not mention it, did not suggest any and did not provide instructions on how to configure it.
 
-### Netdata
+#### Netdata
 
 Netdata provides multiple dashboards for exploring and understanding systemd services and units.
 
@@ -355,7 +355,7 @@ The above list typically evolves to a large cardinality for tracking every singl
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
-### Dynatrace
+#### Dynatrace
 
 ![image](https://github.com/netdata/netdata/assets/2662304/e0ab4044-9f3a-4d9b-906d-8b7ac2d16060)
 
@@ -371,22 +371,22 @@ In our case, it detected these vulnerabilities:
 Example: SQL Injection in `grafana-agent`:
 ![image](https://github.com/netdata/netdata/assets/2662304/38ecda63-8ec8-4621-89e5-3acd3a38c588)
 
-### Datadog
+#### Datadog
 
 ![image](https://github.com/netdata/netdata/assets/2662304/b56ac730-3f21-4ba2-ad6b-0565d017ffee)
 
 Datadog has a special package for detailed Network Monitoring, charged $5 per node per month, on top of the normal monitoring package. Without this, it does not provide any network information for processes.
 
-### Instana
+#### Instana
 Instana seems that it monitors select processes only. It does not provide any information about the other processes running on a system.
 
 ![image](https://github.com/netdata/netdata/assets/2662304/289bed2a-cd2f-44bb-9633-40835ddba41f)
 
-### Grafana
+#### Grafana
 
 Grafana does not have a cloud connector for monitoring processes. There is a vast ecosystem around Grafana and probably monitoring processes can be accomplished via a 3rd party Prometheus exporter which via a Prometheus installation can push metrics to Grafana Cloud.
 
-### Netdata
+#### Netdata
 
 Netdata provides a comprehensive list of tools for monitoring processes and their resources.
 
@@ -472,17 +472,17 @@ Of course, there are hundreds of technologies and storage vendors out there. We 
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
-### Dynatrace
+#### Dynatrace
 
 ![image](https://github.com/netdata/netdata/assets/2662304/323fd466-0f3c-444c-b492-67404d97ae49)
 
-### Datadog
+#### Datadog
 
 For the storage layer, Datadog provides the smallest dataset. Also, it does not provide dedicated screens for monitoring block devices or mount points. It needs to be done via custom dashboards. It only collects metrics only for disk capacity (free, used) and the time spend reading or writing. No throughput or operations.
 
 ![image](https://github.com/netdata/netdata/assets/2662304/dea11116-a118-4e79-970b-c1a6abb60c3b)
 
-### Instana
+#### Instana
 
 Instana provides for mount points: disk space and inode usage. It then monitors the underlying block devices, for the mounted disks. The information provided is basic: reads/writes for operations, throughput and utilization.
 
@@ -490,7 +490,7 @@ When monitoring the performance of mounted filesystems, the block devices that a
 
 ![image](https://github.com/netdata/netdata/assets/2662304/df242912-3962-4acd-ad05-51365980a728)
 
-### Grafana
+#### Grafana
 
 ![image](https://github.com/netdata/netdata/assets/2662304/69f328f4-7f26-49ef-8304-476ff051cfe9)
 
@@ -562,7 +562,7 @@ Most other solutions provide some kind of a metrics list that can be used to fin
 
 <details><summary>👉 Click here to see comments per provider...</summary>
 
-### Dynatrace
+#### Dynatrace
 
 The default dashboards provided by Dynatrace are basic without much interactive control. Still, the single node dashboards are well thought and provide a good summary. Multi-node dashboards are not provided, but there are a few charts is some sections that provide some limited view on multi-node information.
 
@@ -576,7 +576,7 @@ When editing custom charts, the metric selector provides friendly names for the 
 
 When slicing and dicing metrics in custom charts, Dynatrace does not provide any contextual information. For example, when you filter for processes, you have to know the process names. There is no auto complete to help you understand what is available.
 
-### Datadog
+#### Datadog
 
 The default dashboards provided by Datadog are basic. Datadog provides some multi-node dashboards, however these are also quite limited and probably serve as a quick access for users to copy and customize.
 
@@ -586,7 +586,7 @@ It is interesting that Datadog allows creating charts that combine metrics and v
 
 The labels provided are limited. For example we couldn't filter by physical or virtual network interfaces, disk type, make or model, etc.
 
-### Instana
+#### Instana
 
 The out of the box dashboards of Instana are basic and mainly limited to single nodes or single containers.
 
@@ -596,7 +596,7 @@ Unfortunately, the UI did not help us to successfully create such application pe
 
 Another very confusing fact about Instana, which is also true to some degree for Dynatrace, is that the UI lists of items about all things the system supports, without filtering the ones we actually have available. This strategy provided very long lists of things, without helping us understand what applies to your infrastructure and what is not.
 
-### Grafana
+#### Grafana
 
 Grafana is well known for being a Swiss-army knife for visualization. However, the default dashboards provided by Grafana are basic.
 
@@ -604,7 +604,7 @@ The query editor of Grafana is very close to the one provided by Datadog and pro
 
 Still, a lot of metrics are missing and even the ones available are usually missing important labels that could provide more power to the platform.
 
-### Netdata
+#### Netdata
 
 Netdata provides fully automated dashboards for all metrics. Every metric collected is correlated and visualized in one of the sections provided out of the box.
 
@@ -636,7 +636,7 @@ TBD
 
 ## Artificial Intelligence
 
-### Dynatrace
+#### Dynatrace
 
 Dynatrace advertises Davis AI as its artificial intelligence solution. Davis is frequently mentioned throughout the UI, providing assistance in various places.
 
@@ -646,7 +646,7 @@ Of course Davis seems very valuable and is able to detect many common issues, ho
 
 On the UI, when building custom dashboards, Dynatrace provides forecasting and anomaly detection, when asked to do so (is is a manual action). This looks more like a dashboard feature (i.e. perform some statistical analysis on the visible data), than real machine-learning training models in the background.
 
-### Datadog
+#### Datadog
 
 Datadog provides outlier detection and forecasting functions to custom charts. However both seem to be based on statistical functions, not real machine learning running in the background.
 
@@ -654,17 +654,17 @@ There is a feature called "Watchdog", which according to the documentation is ba
 
 The documentation also mentions that the "Watchdog" is part of the APM package.
 
-### Instana
+#### Instana
 
 Instana documentation and marketing material mentions machine learning, but we didn't find it anywhere while using the product.
 
-### Grafana
+#### Grafana
 
 Grafana provides machine learning as part of their Alerts & IRM features. The feature requires from users to define metrics for which machine learning models will be trained and then used for outlier detection or forecasting.
 
 The good about it is that is can be used to train machine learning models on multiple data sources, even SQL queries. However, the whole feature set is limited to whatever create manually.
 
-### Netdata
+#### Netdata
 
 Netdata trains multiple machine learning models to learn the patterns of each metrics. These machine learning models are then consulted in real-time, during data collection, to detect if the sample collected is an outlier or not.
 
@@ -686,7 +686,7 @@ Netdata provides a special tool to deal with node level anomalies: "anomaly advi
 
 Each monitoring provider has its own unique strategy when it comes to resolution and retention. Let's see them.
 
-### Dynatrace
+#### Dynatrace
 
 Dynatrace collects metrics **per-minute** and keeps retention in tiers, for **up to 5 years**, as shown below:
 
@@ -697,11 +697,11 @@ every 5 minutes|28 days
 per hour|400 days
 per day|5 years
 
-### Datadog
+#### Datadog
 
 Datadog collects metrics **every 15 seconds** and keeps them in **full resolution for 15 months**.
 
-### Instana
+#### Instana
 
 Instana collects metrics with many different resolutions. The exact data collection frequency for each metric is hard-coded into it.
 
@@ -714,13 +714,13 @@ per minute|1 month
 every 5 minutes|3 months
 per hour|13 months
 
-### Grafana
+#### Grafana
 
 Grafana supports variable resolutions, but the default for `grafana-agent` is **per minute**. It keeps the samples for **13 months**.
 
 Keep in mind that collecting metrics more frequently, affects billing.
 
-### Netdata
+#### Netdata
 
 Netdata is the only solution that keeps retention at the edge, even when the SaaS service is used.
 
@@ -890,7 +890,7 @@ Assuming a node that:
 
 All prices are updated Mar 8, 2024, and refer to monthly billing.
 
-### Dynatrace
+#### Dynatrace
 
 |Features|Pricelist|Monthly Price/node
 |:---:|:---:|:---:|
@@ -902,7 +902,7 @@ Total price per node: $43.3 per node per month
 
 Dynatrace has also pricing for synthetic tests, kubernetes, and more.
 
-### Datadog
+#### Datadog
 
 |Features|Pricelist|Monthly Price/node
 |:---:|:---:|:---:|
@@ -914,7 +914,7 @@ Total price per node: $36.2 per node per month
 
 Datadog provides a lot more tools, each with each own pricing. Synthetic monitoring is an extra.
 
-### Instana
+#### Instana
 
 Instana publishes volume discounts. The single node price for Infrastructure nodes starts at $20.6 per node per month, with a minimum of 10 nodes.
 
@@ -922,7 +922,7 @@ If APM is needed, Instana pricing starts at 77.4 per node per month.
 
 Instana does not support logs. It integrates with 3rd party services and systems for logs.
 
-### Grafana
+#### Grafana
 
 Grafana's pricing is based on Data Points per Minute (DPM). With the resolution tested of 1 DPM per metric and assuming 1k metrics per node (Netdata collects 3.5k metrics on the tested nodes), we have:
 
@@ -935,7 +935,7 @@ Total $10 per node per month.
 
 Grafana also charges for users $8 per user per month,  or $55 per user per month with access to Enterprise plugins. For users to access machine learning, IRM add-on is required, at $20 per user per month.
 
-### Netdata
+#### Netdata
 
 Netdata charges $6 per node per month, all features included.
 
@@ -1117,7 +1117,7 @@ However, the design of Netdata changes the cost structure of monitoring. Netdata
 
 We wanted this to be reflected to our pricing, so that our customers can enjoy the benefits of this design. So, Netdata is cheaper!
 
-### Fun part
+## Fun part
 
 When working with monitoring systems side-by-side it is inevitable to notice a few strange coincidences.
 
