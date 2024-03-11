@@ -1037,7 +1037,7 @@ What we didn't like:
 3. The metrics collected are quite limited.
 4. Their ecosystem is not big enough. Most google searches reveal limited or no information from third parties.
 
-## Grafana
+### Grafana
 
 Grafana has a vast ecosystem and community. Of course this ecosystem is available for all monitoring solutions to use, and all do one way or another.
 
@@ -1055,11 +1055,11 @@ What we didn't like:
 2. Primitive default dashboards. Grafana is equivalent to DIY monitoring.
 3. Too complex. Not for newcomers.
 
-## Netdata
+### Netdata
 
 Since this our blog, I will prefer to describe what I learned from this journey.
 
-### Holistic approach
+#### Holistic approach
 
 Most monitoring solutions try to minimize the number of metrics they ingest, avoiding certain technologies they don't see as important, or abstracting and summarizing the information.
 
@@ -1067,7 +1067,7 @@ Netdata is the only monitoring solution that is committed to monitor all infrast
 
 Of course Netdata can also work in higher levels, by collecting application metrics and logs from all available sources, applications, cloud providers and third party services. But while doing so, we keep our commitment to a holistic approach, maintaining all the information available for all the underlying technologies and layers.
 
-### Decentralized & Distributed
+#### Decentralized & Distributed
 
 When I started this post, I was expecting that Netdata will be the "heavier" among the agents. It has to be, because it does a lot more work. It is the only agent that is a monitoring solution by itself, it collects data per-second, stores the data in its own database, trains machine learning models for all metrics, queries these data, and many more, all happening at the edge.
 
@@ -1075,7 +1075,7 @@ To my surprise, the Netdata agent is one of lightest! And given the resolution (
 
 This proves that Netdata is on the right path. The decentralized and distributed nature of Netdata decouples resolution and cardinality from our economics, without pushing this cost to the users, allowing Netdata to be **the most cost efficient monitoring solution**, while also providing high fidelity observability without compromises.
 
-### Out of the box
+#### Out of the box
 
 In this setup, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards, alerts, processes and sockets. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
 
@@ -1085,7 +1085,7 @@ All other solutions depend on users, to create custom dashboards and structure t
 
 Compared to the other monitoring solutions, Netdata's presentation is probably too flat, which combined with the amount of information available in Netdata dashboards, makes the presentation look "overwhelming" at first sight. This is our next challenge. We need to improve, so that they are more contextual, presenting the information in layers, on a need-to-know basis. The good thing with Netdata is that it has a lot more information than the others, so it can go deeper and broader than them.
 
-### Charts & Dashboards
+#### Charts & Dashboards
 
 I was also surprised to find out that Netdata charts and dashboards are actually a lot more usable and efficient than the others.
 
@@ -1095,7 +1095,7 @@ The NIDL bar Netdata provides above each chart, although it makes the UI a littl
 
 I think the next version of our charts will also surprise users. We plan to offer an expanded version of the charts, providing fully automated analysis on each and every metric, based on its past patterns, at a click of a button.
 
-### Artificial Intelligence
+#### Artificial Intelligence
 
 AI is a broad term. It is also trendy, so it is frequently abused for marketing purposes.
 
@@ -1109,7 +1109,7 @@ Netdata is probably the only tool that uses real machine-learning at its core. T
 
 I think our break-through is that Netdata managed to make machine learning lightweight. Of course, it doubles the CPU consumption of the agent (this test was done with ML enabled at Netdata - without ML Netdata would also be lightest in terms of CPU), but iall processing is spread evenly across time, avoiding CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all the metrics.
 
-###  Pricing
+####  Pricing
 
 Netdata is cheaper not because it is inferior to the others. To the contrary, Netdata is superior is many aspects: full technology coverage, per-second granularity, low-latency real-time visualization, lightweight, simple to install, run and maintain, machine learning for all metrics, powerful dashboards without learning a query language, and many more.
 
