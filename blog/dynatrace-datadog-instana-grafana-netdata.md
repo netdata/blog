@@ -837,7 +837,7 @@ Datadog has 4 services, totaling 8.35% CPU and 920.52 MiB RAM.
 
 Note that Netdata runs with default settings. This means **per-second** data collection for **3k+ metrics**, **3 database tiers** all updated in parallel, and **machine learning** for all metrics collected.
 
-### Egress Bandwidth
+## Egress Bandwidth
 
 To monitor egress bandwidth for a single node, we used `tc` to match all traffic towards the internet, for each of the systemd services cgroups.
 
