@@ -804,36 +804,64 @@ The following script extracts average CPU utilization and Memory usage for any s
 
 ```bash
 #!/bin/bash
-service=$1
-status=$(systemctl show $service)
-ExecMainStartTimestampMonotonic=$(echo "$status" | grep "^ExecMainStartTimestampMonotonic=" | cut -d '=' -f 2)
-CPUUsageNSec=$(echo "$status" | grep "^CPUUsageNSec=" | cut -d '=' -f 2)
-MemoryCurrent=$(echo "$status" | grep "^MemoryCurrent=" | cut -d '=' -f 2)
-ExecMainStartTimestampSec=$(echo "$ExecMainStartTimestampMonotonic / 1000000" | bc -l)
-CurrentMonotonicSec=$(cat /proc/uptime | awk '{print $1}')
-DurationSec=$(echo "$CurrentMonotonicSec - $ExecMainStartTimestampSec" | bc -l)
-CPUUsageSec=$(echo "$CPUUsageNSec / 1000000000" | bc -l)
-CPUUtilization=$(echo "scale=2; $CPUUsageSec * 100 / $DurationSec" | bc -l)
-MemoryCurrentMiB=$(echo $MemoryCurrent | numfmt --to=iec-i --suffix=B --format="%.2f")
-echo "$service: CPU average $CPUUtilization%, RAM: $MemoryCurrentMiB"
+
+datadog="datadog-agent-sysprobe.service datadog-agent.service datadog-agent-process.service datadog-agent-trace.service"
+dynatrace="oneagent.service remotepluginmodule.service extensionsmodule.service dynatracegateway.service"
+instana="instana-agent.service"
+grafana="grafana-agent.service"
+netdata="netdata.service"
+
+for provider in datadog dynatrace instana grafana netdata; do
+	cpu=0
+	mem=0
+
+	for service in $(eval echo "\$$provider"); do
+		# Get the status of the service
+		status=$(systemctl show $service)
+
+		# Extract necessary values
+		ExecMainStartTimestampMonotonic=$(echo "$status" | grep "^ExecMainStartTimestampMonotonic=" | cut -d '=' -f 2)
+		CPUUsageNSec=$(echo "$status" | grep "^CPUUsageNSec=" | cut -d '=' -f 2)
+		MemoryCurrent=$(echo "$status" | grep "^MemoryCurrent=" | cut -d '=' -f 2)
+
+		# Convert ExecMainStartTimestampMonotonic to seconds
+		ExecMainStartTimestampSec=$(echo "$ExecMainStartTimestampMonotonic / 1000000" | bc -l)
+		#echo "ExecMainStartTimestampSec=$ExecMainStartTimestampSec"
+
+		# Get the current monotonic time in seconds
+		CurrentMonotonicSec=$(cat /proc/uptime | awk '{print $1}')
+		#echo "CurrentMonotonicSec=$CurrentMonotonicSec"
+
+		# Calculate the service's running duration in seconds
+		DurationSec=$(echo "$CurrentMonotonicSec - $ExecMainStartTimestampSec" | bc -l)
+		#echo "DurationSec=$DurationSec"
+
+		# Convert CPUUsageNSec to seconds
+		CPUUsageSec=$(echo "$CPUUsageNSec / 1000000000" | bc -l)
+		#echo "CPUUsageSec=$CPUUsageSec"
+
+		# Calculate average CPU utilization
+		# Multiplying by 100 to convert to percentage
+		CPUUtilization=$(echo "scale=2; $CPUUsageSec * 100 / $DurationSec" | bc -l)
+
+		cpu=$(echo "$cpu + ($CPUUsageSec * 100 / $DurationSec)" | bc -l)
+		mem=$(echo "$mem + $MemoryCurrent" | bc -l)
+	done
+
+	mem=$(echo $mem | numfmt --to=iec-i --suffix=B --format="%.2f")
+	printf "%15s: CPU average %%%.2f, RAM: $mem\n" "$provider" "$cpu"
+done
 ```
 
 This is what we get:
 
 ```bash
-# for x in datadog-agent-sysprobe.service datadog-agent.service datadog-agent-process.service datadog-agent-trace.service oneagent.service instana-agent.service grafana-agent.service netdata.service; do ./service-average-cpu.sh $x; done
-datadog-agent-sysprobe.service: CPU average 5.04%, RAM: 391.28MiB
-datadog-agent.service: CPU average 2.46%, RAM: 332.42MiB
-datadog-agent-process.service: CPU average .45%, RAM: 117.77MiB
-datadog-agent-trace.service: CPU average .40%, RAM: 79.05MiB
-oneagent.service: CPU average 3.63%, RAM: 414.14MiB
-instana-agent.service: CPU average 4.14%, RAM: 566.37MiB
-grafana-agent.service: CPU average 3.27%, RAM: 208.17MiB
-netdata.service: CPU average 3.66%, RAM: 213.47MiB
+        datadog: CPU average %9.36, RAM: 920.52MiB
+      dynatrace: CPU average %6.89, RAM: 1.17GiB
+        instana: CPU average %4.14, RAM: 424.36MiB
+        grafana: CPU average %3.27, RAM: 208.17MiB
+        netdata: CPU average %3.66, RAM: 213.47MiB
 ```
-
-Datadog has 4 services, totaling 8.35% CPU and 920.52 MiB RAM.
-`oneagent` is Dynatrace.
 
 Note that Netdata runs with default settings. This means **per-second** data collection for **3k+ metrics**, **3 database tiers** all updated in parallel, and **machine learning** for all metrics collected.
 
@@ -1019,8 +1047,8 @@ Aggressive volume discounts are applied starting at 6+ nodes, which progressivel
 |Dashboards|28%|50%|11%|28%|83%|
 |||||||
 |**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
-|CPU Usage<br/><small>100% = 1 core</small>|3.63%|8.35%|4.14%|3.27%|3.66%|
-|Memory Used|414 MiB|921 MiB|566 MiB|208 MiB|213 MiB|
+|CPU Usage<br/><small>100% = 1 core</small>|6.89%|9.36%|4.14%|3.27%|3.66%|
+|Memory Used|1.17 GiB|921 MiB|424 MiB|208 MiB|213 MiB|
 |Egress Internet Traffic<br/><small>per node per month</small>|3.9 GiB|9.5 GiB|5.0 GiB|4.8 GiB|0.1 GiB|
 |||||||
 |**Overall**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
