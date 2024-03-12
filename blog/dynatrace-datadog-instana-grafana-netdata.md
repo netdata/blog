@@ -1052,8 +1052,8 @@ What we liked about Dynatrace:
 
 What we didn't like:
 
-1. The best resolution of 1-minute is really not enough for monitoring modern systems.
-2. You always feel constrained, that "something is missing". It is like the UX is optimized for the flows they had in mind, without providing the full power to users to use it the way they see fit.
+1. A 1-minute resolution may not be sufficient for monitoring modern systems.
+2. Users might feel constrained or that "something is missing". It is like the UX is optimized for the flows they had in mind, without providing the full power to users to use it the way they see fit.
 3. As you go deeper, the solution is not polished enough. There are many inefficiencies all over the place, slowing you down and preventing you from working fluently. For example, when creating custom dashboards, it is not easy to understand where the data are coming from, which makes you first do a query to understand the metrics (e.g. group by something) and once you know what data are there, then do the query you really need. Datadog solved this problem by providing cardinality information at the metric info. Still, the solution we have given to Netdata with the NIDL bar above each chart (for slicing and dicing) seems superior to both.
 4. The service is basic for infrastructure monitoring. The lack of sockets monitoring and advanced networking information is notable.
 5. Complete lack of any multi-node dashboards out of the box. All the multi-node dashboards you need, you have to build them yourself.
@@ -1071,7 +1071,7 @@ What we liked about Datadog:
 
 What we didn't like:
 
-1. Without Processes Monitoring and Network Performance Monitoring, the solution is basic for infrastructure monitoring.
+1. Without Processes Monitoring and Network Performance Monitoring, the solution's capabilities for infrastructure monitoring are basic.
 2. Limited coverage for infrastructure technologies and physical hardware.
 3. No alerts or problems detection out of the box. All alerts need to be configured manually.
 4. Very limited support for monitoring operating system services (systemd-units).
@@ -1082,7 +1082,7 @@ What we didn't like:
 
 ### Instana
 
-Instana is probably the weakest of all the services we tested. The look and feel is very similar to the Dynatrace "classic" dashboards. We know that they provide strong support for monitoring IBM products (DB2, etc), so probably this monitoring solution is targeting this niche.
+Instana appeared to be less comprehensive compared to the other services we tested. The look and feel is very similar to the Dynatrace "classic" dashboards. We know that they provide strong support for monitoring IBM products (DB2, etc), so probably this monitoring solution is targeting this niche.
 
 What we liked:
 
@@ -1105,13 +1105,14 @@ What we liked:
 
 1. Vast community.
 2. Open architecture.
-3. Swiss-army knife for visualization.
+3. A Swiss-army knife for visualization.
 
 What we didn't like:
 
-1. The default resolution of 1-minute for the Grafana agent was a surprise. Grafana knows that this is not enough for monitoring today's systems and applications, but probably it was needed for justifying the pricing (at higher resolution the service is more expensive).
-2. Primitive default dashboards. Grafana is equivalent to DIY monitoring.
-3. Too complex. Not for newcomers.
+1. The default 1-minute resolution for the Grafana agent was unexpected. Grafana knows that this is not enough for monitoring today's systems and applications, but probably it was needed for justifying the pricing (at higher resolution the service is more expensive).
+2. Primitive default dashboards, probably aligned to the DIY philosophy of Grafana.
+3. Grafana primarily focuses on Metrics, Logs, and Traces, which, while foundational, represent just a subset of the full observability spectrum. For a truly holistic view of the monitored infrastructure, additional dimensions such as Process Monitoring, Network Connection Monitoring, and Systemd Service Analysis are essential. These additional layers enrich the observability landscape, providing deeper insights and a more comprehensive understanding of system behavior.
+4. Crafting a mature and comprehensive monitoring solution with this platform becomes overly complex, involving too many independent moving parts.
 
 ### Netdata
 
@@ -1153,9 +1154,9 @@ The NIDL bar Netdata provides above each chart, although it makes the UI a littl
 
 #### Artificial Intelligence
 
-AI is a broad term. It is also trendy, so it is frequently abused for marketing purposes.
+AI is a broad and trendy term, often leveraged for marketing purposes.
 
-During the few days we spent on these solutions, we didn't see any evidence of real machine learning working in the background.
+During our evaluation, we did not observe clear evidence of active machine learning processes in the background of these solutions.
 
 Grafana allows configuring machine learning for some of the metrics. This aligns with the DIY philosophy of Grafana, however it limits significantly its use.
 
@@ -1167,7 +1168,9 @@ I think our break-through is that Netdata managed to make machine learning light
 
 ####  Pricing
 
-Netdata is cheaper not because it is inferior to the others. To the contrary, Netdata is superior is many aspects: full technology coverage, per-second granularity, low-latency real-time visualization, lightweight, simple to install, run and maintain, machine learning for all metrics, powerful dashboards without learning a query language, and many more.
+Netdata's lower pricing does not indicate inferiority compared to the others.
+
+To the contrary, Netdata is superior is many aspects: full technology coverage, per-second granularity, low-latency real-time visualization, lightweight, simple to install, run and maintain, machine learning for all metrics, powerful dashboards without learning a query language, and many more.
 
 However, the design of Netdata changes the cost structure of monitoring. Netdata allows observability to be a lot more cost efficient for both Netdata and its users, and therefore a lot more affordable for everyone.
 
