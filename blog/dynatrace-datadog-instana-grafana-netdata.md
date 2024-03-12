@@ -670,11 +670,11 @@ Netdata provides a special tool to deal with node level anomalies: "anomaly advi
 |----:|:----:|:----:|:----:|:----:|:----:|
 |systemd-journal|Partial|Yes|-|Yes|Yes|
 |systemd-journal namespaces|-|-|-|-|Yes|
-|systemd standard fields|-|-|-|-|Yes|
+|systemd standard fields|-|Yes|-|-|Yes|
 |Containers logs|Yes|Yes|-|Yes|Yes|
 |Application text log files|Yes|Manually|-|Manually|Manually|
 |Boot logs|Yes|Yes|-|Yes|Yes|
-|Logs Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|3.5/6|3.5/6|0/6|3.5/6|5.5/6|
+|Logs Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|3.5/6|4.5/6|0/6|3.5/6|5.5/6|
 
 - `systemd-journal` is about having all the systemd journal log entries available.
 - `systemd-journal namespaces` shows if the monitoring system detects and ingests namespaces journals. Namespaces are used by systemd units to isolate application and service logs from the rest of the system (`LogNamespace=` line in systemd units).
@@ -1042,7 +1042,7 @@ Aggressive volume discounts are applied starting at 6+ nodes, which progressivel
 |Storage|35%|30%|25%|45%|100%|
 |Networking|3%|29%|6%|45%|100%|
 |Hardware & Sensors|0%|7%|0%|0%|100%|
-|Logs|58%|58%|0%|58%|83%|
+|Logs|58%|75%|0%|58%|83%|
 |Synthetic Checks|10%|33%|10%|24%|81%|
 |Dashboards|28%|50%|11%|28%|83%|
 |||||||
