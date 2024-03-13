@@ -860,14 +860,22 @@ done
 This is what we get:
 
 ```bash
-        datadog: CPU average %9.36, RAM: 920.52MiB
-      dynatrace: CPU average %6.89, RAM: 1.17GiB
-        instana: CPU average %4.14, RAM: 424.36MiB
-        grafana: CPU average %3.27, RAM: 208.17MiB
-        netdata: CPU average %3.66, RAM: 213.47MiB
+        datadog: CPU average %14.03, RAM: 972.24MiB
+      dynatrace: CPU average %12.35, RAM: 1.41GiB
+        instana: CPU average %6.67, RAM: 587.84MiB
+        grafana: CPU average %3.33, RAM: 413.82MiB
+        netdata: CPU average %3.63, RAM: 181.07MiB
 ```
 
-Note that Netdata runs with default settings. This means **per-second** data collection for **3k+ metrics**, **3 database tiers** all updated in parallel, and **machine learning** for all metrics collected.
+In the table below we also added their disk space:
+
+| |Dynatrace|Datadog|Instana|Grafana|Netdata|
+|----:|:----:|:----:|:----:|:----:|:----:|
+|CPU Usage<small><br/>100% = 1 core</small>|12.35%|14.03%|6.67%|3.33%|3.63%|
+|Memory Usage|1.4 GiB|972 MiB|588 MiB|414 MiB|181 MiB|
+|Disk Space|2.0 GiB|1.2 GiB|262 MiB|2 MiB|3 GiB|
+
+Note that Netdata runs with default settings. This means **per-second** data collection for **3k+ metrics**, **3 database tiers** stored at the edge, **machine learning** enabled for all metrics and more than 300 alerts looking for errors and issues.
 
 ## Egress Bandwidth
 
@@ -1053,9 +1061,10 @@ Aggressive volume discounts are applied which progressively lower the price down
 |Synthetic Checks|10%|33%|10%|24%|81%|
 |Dashboards|28%|50%|11%|28%|83%|
 |||||||
-|**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
-|CPU Usage<br/><small>100% = 1 core</small>|6.89%|9.36%|4.14%|3.27%|3.66%|
-|Memory Used|1.17 GiB|921 MiB|424 MiB|208 MiB|213 MiB|
+|**Agent Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
+|CPU Usage<small><br/>100% = 1 core</small>|12.35%|14.03%|6.67%|3.33%|3.63%|
+|Memory Usage|1.4 GiB|972 MiB|588 MiB|414 MiB|181 MiB|
+|Disk Space|2.0 GiB|1.2 GiB|262 MiB|2 MiB|3 GiB|
 |Egress Internet Traffic<br/><small>per node per month</small>|11.4 GiB|11.1 GiB|5.4 GiB|4.8 GiB|0.01 GiB|
 |||||||
 |**Overall**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
@@ -1092,7 +1101,8 @@ What we didn't like:
 3. As you go deeper, the solution is not polished enough. There are many inefficiencies all over the place, slowing you down and preventing you from working fluently. For example, when creating custom dashboards, it is not easy to understand where the data are coming from, which makes you first do a query to understand the metrics (e.g. group by something) and once you know what data are there, then do the query you really need. Datadog solved this problem by providing cardinality information at the metric info. Still, the solution we have given to Netdata with the NIDL bar above each chart (for slicing and dicing) seems superior to both.
 4. The service is basic for infrastructure monitoring. The lack of sockets monitoring and advanced networking information is notable.
 5. Complete lack of any multi-node dashboards out of the box. All the multi-node dashboards you need, you have to build them yourself.
-6. This is an expensive service.
+6. The Dynatrace agent is heavy both in terms of CPU and Memory.
+7. This is an expensive service.
 
 ### Datadog
 
@@ -1113,7 +1123,8 @@ What we didn't like:
 5. Missing LXC containers and VMs (monitoring VMs from the host).
 6. Only few integrations get automated dashboards, and even for the integrations that have dashboards, they do not visualize all the information available. For most metrics, dashboards need to be built manually.
 7. Processes and sockets monitoring have limited metrics retention (processes for 36 hours, sockets for 14 days).
-8. This is an expensive service.
+8. The Datadog agent is heavy both in terms of CPU and Memory.
+9. This is an expensive service.
 
 ### Instana
 
@@ -1171,7 +1182,7 @@ This proves that Netdata is on the right path. The decentralized and distributed
 
 #### Out of the box
 
-In this setup, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards, alerts, processes and sockets. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
+In this setup, Netdata was installed with default settings. The only change was to give to it the password for connecting to postgres. Everything else just happened, from logs and metrics, to dashboards, alerts, processes, sockets and machine learning. The stock alerts we ship with Netdata did their job, and triggered alerts for network interface packet drops, way before Dynatrace's Davis reported the same.
 
 All monitoring providers see value in providing an out of the box experience, but only Netdata so far has applied this across the board, to all the information available.
 
@@ -1183,7 +1194,7 @@ Compared to the other monitoring solutions, Netdata's presentation is probably t
 
 I was also surprised to find out that Netdata charts and dashboards are actually a lot more usable and efficient than the others.
 
-For most monitoring solutions, editing charts is a complicated and challenging task. How to allow users select metrics. How to provide all the aspect of each metric so that users can quickly understand what this metric is, which sources contribute to it and how much. Then, how to allow them describe what they need in an easy and straightforward way.
+For most monitoring solutions, editing charts is a complicated and challenging task. How to allow users select metrics. How to provide all the aspects of each metric so that users can quickly understand what this metric is, which sources contribute to it and how much. Then, how to allow them describe what they need in an easy and straightforward way.
 
 The NIDL bar Netdata provides above each chart, although it makes the UI a little more busy, it is far simpler, quicker and easier to use, than any of the solutions the other monitoring systems provide. Users do not need to learn a query language and all the functionality is just a click away, making **Netdata charts easier to grasp and use**.
 
@@ -1199,7 +1210,7 @@ Dynatrace and Datadog, most likely use statistical functions and rule based algo
 
 Netdata is probably the only tool that uses real machine-learning at its core. The source code is open-source, so users can review it. And at the same time, we have made the most to reveal all ML findings everywhere on the dashboards. All charts have anomaly rates on them, the table of contents can provide anomaly rate per section, and we have added special tools to help users analyze the findings of machine learning.
 
-I think our break-through is that Netdata managed to make machine learning lightweight. Of course, it doubles the CPU consumption of the agent (this test was done with ML enabled at Netdata - without ML Netdata would also be lightest in terms of CPU), but all processing is spread evenly across time, avoiding CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all metrics collected.
+I think our break-through is that Netdata managed to make machine learning lightweight. Of course, it doubles the CPU consumption of the agent (this test was done with ML enabled at Netdata - without ML Netdata would also be the lightest in terms of CPU), but all processing is spread evenly across time, avoiding CPU spikes. This provides affordable and reliable machine learning, running at the edge, for all metrics collected.
 
 ####  Pricing
 
