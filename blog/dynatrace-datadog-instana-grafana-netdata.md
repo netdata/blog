@@ -867,13 +867,15 @@ This is what we get:
         netdata: CPU average %3.63, RAM: 181.07MiB
 ```
 
-In the table below we also added their disk space:
+In the table below we also added their disk space and disk I/O rates:
 
 | |Dynatrace|Datadog|Instana|Grafana|Netdata|
 |----:|:----:|:----:|:----:|:----:|:----:|
 |CPU Usage<small><br/>100% = 1 core</small>|12.35%|14.03%|6.67%|3.33%|3.63%|
 |Memory Usage|1.4 GiB|972 MiB|588 MiB|414 MiB|181 MiB|
 |Disk Space|2.0 GiB|1.2 GiB|262 MiB|2 MiB|3 GiB|
+|Disk Read Rate|-|0.2 KiB/s|-|-|0.3 KiB/s|
+|Disk Write Rate|38.6 KiB/s|8.3 KiB/s|-|1.6 KiB/s|4.8 KiB/s|
 
 Note that Netdata runs with default settings. This means **per-second** data collection for **3k+ metrics**, **3 database tiers** stored at the edge, **machine learning** enabled for all metrics and more than 300 alerts looking for errors and issues.
 
@@ -1065,6 +1067,8 @@ Aggressive volume discounts are applied which progressively lower the price down
 |CPU Usage<small><br/>100% = 1 core</small>|12.35%|14.03%|6.67%|3.33%|3.63%|
 |Memory Usage|1.4 GiB|972 MiB|588 MiB|414 MiB|181 MiB|
 |Disk Space|2.0 GiB|1.2 GiB|262 MiB|2 MiB|3 GiB|
+|Disk Read Rate|-|0.2 KiB/s|-|-|0.3 KiB/s|
+|Disk Write Rate|38.6 KiB/s|8.3 KiB/s|-|1.6 KiB/s|4.8 KiB/s|
 |Egress Internet Traffic<br/><small>per node per month</small>|11.4 GiB|11.1 GiB|5.4 GiB|4.8 GiB|0.01 GiB|
 |||||||
 |**Overall**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
