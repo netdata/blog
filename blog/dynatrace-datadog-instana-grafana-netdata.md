@@ -1070,7 +1070,7 @@ Aggressive volume discounts are applied which progressively lower the price down
 |**Price**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |price per node per month|$43.3|$36.2|$20.6|$10.0|$4.0|
 |price per user per month|-|-|-|$20|-|
-|extra charges|a lot<small><br/>metrics, logs, Kubernetes, synthetic tests, security scanning and more</small>|a lot<small><br/>metrics, logs, Kubernetes, synthetic tests, security scanning and more</small>|none|a lot<small><br/>users, metrics, logs, machine learning</small>|none|
+|extra charges|a lot<small><br/>metrics, logs, Kubernetes, synthetic tests, security scanning and more</small>|a lot<small><br/>metrics, logs, containers, Kubernetes, synthetic tests, security scanning and more</small>|none|a lot<small><br/>users, metrics, logs, machine learning</small>|none|
 |egress bandwidth per node per month<small><br/>on AWS $0.09/GiB</small>|$1.00|$1.00|$0.49|$0.43|$0.001|
 
 ## Verdict
