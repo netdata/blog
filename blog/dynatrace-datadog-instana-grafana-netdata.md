@@ -224,8 +224,8 @@ And this is the information available for processes, each monitoring system prov
 |Short lived processes aggregated by their hierarchy|-|-|-|-|Yes|
 |Processes single-node dashboards|Yes|Yes|-|-|Yes|
 |Processes multi-node dashboards|-|-|-|-|Yes|
-|Processes metrics available in custom dashboards|Yes|-|-|-|Yes|
-|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|14/29|14.5/29|4.5/29|1/29|25/29|
+|Processes metrics available in custom dashboards|Yes|Partial|-|-|Yes|
+|Coverage<br/><small>Yes = 1<br/>- = 0<br/>anything else = 0.5</small>|14/29|15/29|4.5/29|1/29|25/29|
 
 Notes:
 - `Possibly` means that we tried it, the UI shown something relevant to it, but there were no values shown.
@@ -254,7 +254,9 @@ Example: SQL Injection in `grafana-agent`:
 
 ![image](https://github.com/netdata/netdata/assets/2662304/b56ac730-3f21-4ba2-ad6b-0565d017ffee)
 
-Datadog has a special package for detailed Network Monitoring, charged $5 per node per month, on top of the normal monitoring package. Without this, it does not provide any network information for processes.
+Datadog has a special package for detailed Network Monitoring, charged $7.2 per node per month, on top of the normal monitoring package. Without this, it does not provide any network information for processes.
+
+Metrics for Processes are available for only 36 hours.
 
 #### Instana
 Instana seems that it monitors select processes only. It does not provide any information about the other processes running on a system.
@@ -1040,7 +1042,7 @@ Aggressive volume discounts are applied which progressively lower the price down
 |||||||
 |**Coverage**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |systemd Services|18%|9%|0%|9%|100%|
-|Processes|48%|50%|16%|3%|86%|
+|Processes|48%|52%|16%|3%|86%|
 |Containers|43%|69%|48%|29%|100%|
 |Storage|35%|30%|25%|45%|100%|
 |Networking|3%|29%|6%|45%|100%|
