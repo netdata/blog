@@ -874,6 +874,7 @@ To monitor egress bandwidth for a single node, we used `tc` to match all traffic
  This is `fireqos` configuration (`/etc/firehol/fireqos.conf`):
  
 ```bash
+
 nft flush table inet mon_agents 2>/dev/null
 nft -f - <<EOF
 table inet mon_agents {
@@ -901,6 +902,10 @@ table inet mon_agents {
         socket cgroupv2 level 2 "system.slice/netdata.service" meta mark set 0x00000001 meta nftrace set 1 counter
         socket cgroupv2 level 2 "system.slice/instana-agent.service" meta mark set 0x00000002 meta nftrace set 1 counter
         socket cgroupv2 level 2 "system.slice/oneagent.service" meta mark set 0x00000003 meta nftrace set 1 counter
+        socket cgroupv2 level 2 "system.slice/dynatracegateway.service" meta mark set 0x00000003 meta nftrace set 1 counter
+        socket cgroupv2 level 2 "system.slice/dynatraceautoupdater.service" meta mark set 0x00000003 meta nftrace set 1 counter
+        socket cgroupv2 level 2 "system.slice/extensionsmodule.service" meta mark set 0x00000003 meta nftrace set 1 counter
+        socket cgroupv2 level 2 "system.slice/remotepluginmodule.service" meta mark set 0x00000003 meta nftrace set 1 counter
         socket cgroupv2 level 2 "system.slice/datadog-agent-trace.service" meta mark set 0x00000004 meta nftrace set 1 counter
         socket cgroupv2 level 2 "system.slice/datadog-agent.service" meta mark set 0x00000004 meta nftrace set 1 counter
         socket cgroupv2 level 2 "system.slice/datadog-agent-sysprobe.service" meta mark set 0x00000004 meta nftrace set 1 counter
@@ -918,6 +923,7 @@ server_gvpe_ports="tcp,udp/49999"
 server_wireguard_ports="udp/13231"
 
 PRIVATE_IPS="10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 100.64.0.0/16 127.0.0.0/8 169.254.0.0/16"
+echo "${PRIVATE_IPS}"
 
 for xx in ${wan}/world
 do
@@ -942,7 +948,6 @@ do
 
                 class grafana
                         match rawmark 5
-
 done
 ```
 
@@ -950,20 +955,18 @@ done
 
 This provided the following chart in Netdata:
 
-![image](https://github.com/netdata/netdata/assets/2662304/59001495-116a-4b0e-b462-88684768d7aa)
+![image](https://github.com/netdata/netdata/assets/2662304/6ceb4b49-466e-4ad5-b5a5-cf3b74dc7361)
 
-We used the Netdata API to calculate the average rate for all of them. Dynatrace at 12.3 kbps, Datadog averages at 30.2 kbps, Instana at 16.1 kbps, Grafana at 15.3 kbps and Netdata at 0.3 kbps.
+| |Dynatrace|Datadog|Instana|Grafana|Netdata|
+|:----:|:----:|:----:|:----:|:----:|:----:|
+|rate (kbps)|36.3|35.5|17.2|15.3|0.03|
+|monthly (GiB)|11.4|11.1|5.4|4.8|0.01|
 
 To calculate the monthly consumption we used:
 
 ```
-monthly GiB = rate * 86400 / 8 * 365 / 12 / 1024 / 1024
+monthly GiB = rate_in_kbps * 86400 / 8 * 365 / 12 / 1024 / 1024
 ```
-
-| |Dynatrace|Datadog|Instana|Grafana|Netdata|
-|:----:|:----:|:----:|:----:|:----:|:----:|
-|rate (kbps)|12.3|30.2|16.1|15.3|0.3|
-|monthly (GiB)|3.9|9.5|5.0|4.8|0.1|
 
 As shown, Netdata does not really use any internet traffic. Since Netdata does not push the samples and the logs to Netdata Cloud, the only bandwidth used is when users are viewing these data. We measured the bandwidth used when users view the dashboards via Netdata Cloud and we found that each Netdata uses on the average 15 kbps per viewer, for the time the viewers use a dashboard the node participates.
 
@@ -1023,9 +1026,9 @@ Grafana also charges for users $8 per user per month,  or $55 per user per month
 
 #### Netdata
 
-Netdata charges $6 per node per month, all features included.
+Netdata charges $4 per node per month, all features included.
 
-Aggressive volume discounts are applied starting at 6+ nodes, which progressively lower the price down to $1 per node per month when having more than 5k nodes.
+Aggressive volume discounts are applied which progressively lower the price down to $1 per node per month when having more than 5k nodes.
 
 ## Summary
 
@@ -1049,7 +1052,7 @@ Aggressive volume discounts are applied starting at 6+ nodes, which progressivel
 |**Resources**|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |CPU Usage<br/><small>100% = 1 core</small>|6.89%|9.36%|4.14%|3.27%|3.66%|
 |Memory Used|1.17 GiB|921 MiB|424 MiB|208 MiB|213 MiB|
-|Egress Internet Traffic<br/><small>per node per month</small>|3.9 GiB|9.5 GiB|5.0 GiB|4.8 GiB|0.1 GiB|
+|Egress Internet Traffic<br/><small>per node per month</small>|11.4 GiB|11.1 GiB|5.4 GiB|4.8 GiB|0.01 GiB|
 |||||||
 |**Overall**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
 |Technology Coverage<small><br/>with native plugins</small>|Average|High|Low|Average|Excellent|
@@ -1061,10 +1064,10 @@ Aggressive volume discounts are applied starting at 6+ nodes, which progressivel
 |Customizability|High|High|Low|High|High|
 |||||||
 |**Price**<small><br/>for infra monitoring</small>|**Dynatrace**|**Datadog**|**Instana**|**Grafana**|**Netdata**|
-|price per node per month|$43.3|$36.2|$20.6|$10.0|$6.0|
+|price per node per month|$43.3|$36.2|$20.6|$10.0|$4.0|
 |price per user per month|-|-|-|$20|-|
 |extra charges|a lot<small><br/>metrics, logs, Kubernetes, synthetic tests, security scanning and more</small>|a lot<small><br/>metrics, logs, Kubernetes, synthetic tests, security scanning and more</small>|none|a lot<small><br/>users, metrics, logs, machine learning</small>|none|
-|egress bandwidth per node per month<small><br/>on AWS $0.09/GiB</small>|$0.35|$0.86|$0.45|$0.43|$0.01|
+|egress bandwidth per node per month<small><br/>on AWS $0.09/GiB</small>|$1.00|$1.00|$0.49|$0.43|$0.001|
 
 ## Verdict
 
