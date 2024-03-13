@@ -1112,7 +1112,7 @@ What we didn't like:
 4. Very limited support for monitoring operating system services (systemd-units).
 5. Missing LXC containers and VMs (monitoring VMs from the host).
 6. Only few integrations get automated dashboards, and even for the integrations that have dashboards, they do not visualize all the information available. For most metrics, dashboards need to be built manually.
-7. Processes and sockets monitoring do not expose metrics for custom dashboards.
+7. Processes and sockets monitoring have limited metrics retention (processes for 36 hours, sockets for 14 days).
 8. This is an expensive service.
 
 ### Instana
