@@ -86,3 +86,4 @@
 [[redirects]]
   from = "/anomaly-rate-by-type/"
   to = "https://www.netdata.cloud/blog/anomaly-rate-by-type/"
+  force = true
