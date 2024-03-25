@@ -9,7 +9,8 @@
 
 [[redirects]]
   from = "/posts/*"
-  to = "/:splat"
+  to = "https://www.netdata.cloud/blog/:splat"
+  force = true
 
 # Non-wildcard tag redirects
 [[redirects]]
@@ -56,6 +57,52 @@
   from = "/tags/smartd-log/"
   to = "https://www.netdata.cloud/tags/smartd_log/"
   force = true
+
+# Temporary prevention of redirect for 404 tags
+[[redirects]]
+  from = "/tags/anomaly-advisor/"
+  to = "https://www.netdata.cloud/tags/anomaly-advisor/"
+  force = false
+
+[[redirects]]
+  from = "/tags/cassandra/"
+  to = "https://www.netdata.cloud/tags/cassandra/"
+  force = false
+
+[[redirects]]
+  from = "/tags/chaos-engineering/"
+  to = "https://www.netdata.cloud/tags/chaos-engineering/"
+  force = false
+
+[[redirects]]
+  from = "/tags/cost-transparency/"
+  to = "https://www.netdata.cloud/tags/cost-transparency/"
+  force = false
+
+[[redirects]]
+  from = "/tags/free-bsd/"
+  to = "https://www.netdata.cloud/tags/free-bsd/"
+  force = false
+
+[[redirects]]
+  from = "/tags/freebsd/"
+  to = "https://www.netdata.cloud/tags/freebsd/"
+  force = false
+
+[[redirects]]
+  from = "/tags/k-8-s/"
+  to = "https://www.netdata.cloud/tags/k-8-s/"
+  force = false
+
+[[redirects]]
+  from = "/tags/no-hidden-costs/"
+  to = "https://www.netdata.cloud/tags/no-hidden-costs/"
+  force = false
+
+[[redirects]]
+  from = "/tags/transform/"
+  to = "https://www.netdata.cloud/tags/transform/"
+  force = false
 
 # Wildcard tag redirect
 [[redirects]]
