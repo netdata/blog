@@ -9,80 +9,231 @@
 
 [[redirects]]
   from = "/posts/*"
-  to = "/:splat"
+  to = "https://www.netdata.cloud/blog/:splat"
+  force = true
+
+# Non-wildcard tag redirects
+[[redirects]]
+  from = "/tags/bind-9/"
+  to = "https://www.netdata.cloud/tags/bind9/"
+  force = true
 
 [[redirects]]
-  from = "/netdata-homelab-plan/"
-  to = "https://www.netdata.cloud/blog/netdata-homelab-plan/"
+  from = "/tags/co-2/"
+  to = "https://www.netdata.cloud/tags/co2/"
+  force = true
 
 [[redirects]]
-  from = "/iot-monitoring-challenges/"
-  to = "https://www.netdata.cloud/blog/iot-monitoring-challenges/"
+  from = "/tags/pm-1/"
+  to = "https://www.netdata.cloud/tags/pm1/"
+  force = true
 
 [[redirects]]
-  from = "/netdata-alerts-configuration-manager/"
-  to = "https://www.netdata.cloud/blog/alert-configuration-manager/"
+  from = "/tags/pm-25/"
+  to = "https://www.netdata.cloud/tags/pm25/"
+  force = true
 
 [[redirects]]
-  from = "/netdata-methodology/"
-  to = "https://www.netdata.cloud/blog/netdata-methodology/"
+  from = "/tags/pop-3/"
+  to = "https://www.netdata.cloud/tags/pop3/"
+  force = true
 
 [[redirects]]
-  from = "/netdata-best-practices/"
-  to = "https://www.netdata.cloud/blog/netdata-best-practices/"
+  from = "/tags/postgre-sql/"
+  to = "https://www.netdata.cloud/tags/postgresql/"
+  force = true
 
 [[redirects]]
-  from = "/system-operators-unlock-log-management-mastery-with-systemd-journal-and-netdata/"
-  to = "https://www.netdata.cloud/blog/system-operators-unlock-log-management-mastery-with-systemd-journal-and-netdata/"
+  from = "/tags/s-m-a-r-t/"
+  to = "https://www.netdata.cloud/tags/s.m.a.r.t/"
+  force = true
 
 [[redirects]]
-  from = "/netdata-plan-changes/"
-  to = "https://www.netdata.cloud/blog/netdata-plan-changes/"
+  from = "/tags/server/"
+  to = "https://www.netdata.cloud/tags/server-monitoring/"
+  force = true
 
 [[redirects]]
-  from = "/netdata-vs-prometheus-performance-analysis/"
-  to = "https://www.netdata.cloud/blog/netdata-vs-prometheus-performance-analysis/"
+  from = "/tags/smartd-log/"
+  to = "https://www.netdata.cloud/tags/smartd_log/"
+  force = true
+
+# Temporary prevention of redirect for 404 tags
+[[redirects]]
+  from = "/tags/anomaly-advisor/"
+  to = "https://www.netdata.cloud/tags/anomaly-advisor/"
+  force = false
 
 [[redirects]]
-  from = "/discover-the-new-netdata/"
-  to = "https://www.netdata.cloud/blog/discover-the-new-netdata/"
+  from = "/tags/cassandra/"
+  to = "https://www.netdata.cloud/tags/cassandra/"
+  force = false
 
 [[redirects]]
-  from = "/improve-your-security-with-systemd-and-netdata/"
-  to = "https://www.netdata.cloud/blog/improve-your-security-with-systemd-and-netdata/"
+  from = "/tags/chaos-engineering/"
+  to = "https://www.netdata.cloud/tags/chaos-engineering/"
+  force = false
 
 [[redirects]]
-  from = "/monitoring-vs-observability/"
-  to = "https://www.netdata.cloud/blog/monitoring-vs-observability/"
+  from = "/tags/cost-transparency/"
+  to = "https://www.netdata.cloud/tags/cost-transparency/"
+  force = false
 
+[[redirects]]
+  from = "/tags/free-bsd/"
+  to = "https://www.netdata.cloud/tags/free-bsd/"
+  force = false
+
+[[redirects]]
+  from = "/tags/freebsd/"
+  to = "https://www.netdata.cloud/tags/freebsd/"
+  force = false
+
+[[redirects]]
+  from = "/tags/k-8-s/"
+  to = "https://www.netdata.cloud/tags/k-8-s/"
+  force = false
+
+[[redirects]]
+  from = "/tags/no-hidden-costs/"
+  to = "https://www.netdata.cloud/tags/no-hidden-costs/"
+  force = false
+
+[[redirects]]
+  from = "/tags/transform/"
+  to = "https://www.netdata.cloud/tags/transform/"
+  force = false
+
+# Wildcard tag redirect
+[[redirects]]
+  from = "/tags/*"
+  to = "https://www.netdata.cloud/tags/:splat"
+  force = true
+
+# Non-wildcard blog post redirects
 [[redirects]]
   from = "/exploring-systemd-journal-logs-with-netdata/"
   to = "https://www.netdata.cloud/blog/exploring-systemd-journal-logs/"
+  force = true
 
 [[redirects]]
-  from = "/systemd-journal-logs-a-game-changer-for-devops-and-developers/"
-  to = "https://www.netdata.cloud/blog/systemd-journal-logs/"
-
-[[redirects]]
-  from = "/netdata-cloud-on-prem/"
-  to = "https://www.netdata.cloud/blog/netdata-cloud-on-prem/"
-
-[[redirects]]
-  from = "/netdata-processes-monitoring-comparison-with-console-tools/"
-  to = "https://www.netdata.cloud/blog/netdata-processes-monitoring-comparison-with-console-tools/"
+  from = "/how-netdatas-machine-learning-works/"
+  to = "https://www.netdata.cloud/blog/how-netdatas-ml-based-anomaly-detection-works/"
+  force = true
 
 [[redirects]]
   from = "/netdata-qos-classes-monitoring/"
   to = "https://www.netdata.cloud/blog/netdata-qos-monitoring/"
+  force = true
 
 [[redirects]]
-  from = "/netdata-prometheus-grafana-stack/"
-  to = "https://www.netdata.cloud/blog/netdata-prometheus-grafana-stack/"
+  from = "/systemd-journal-logs-a-game-changer-for-devops-and-developers/"
+  to = "https://www.netdata.cloud/blog/systemd-journal-logs/"
+  force = true
+
+# Temporary prevention of redirect for 404 blog posts
+[[redirects]]
+  from = "/anomaly-rate-in-every-chart/"
+  to = "https://www.netdata.cloud/blog/anomaly-rate-in-every-chart/"
+  force = false
 
 [[redirects]]
-  from = "/our-first-ml-based-anomaly-alert/"
-  to = "https://www.netdata.cloud/blog/our-first-ml-based-anomaly-alert/"
+  from = "/anomaly-rates-in-the-menu/"
+  to = "https://www.netdata.cloud/blog/anomaly-rates-in-the-menu/"
+  force = false
 
 [[redirects]]
-  from = "/anomaly-rate-by-type/"
-  to = "https://www.netdata.cloud/blog/anomaly-rate-by-type/"
+  from = "/cassandra-monitoring-part1/"
+  to = "https://www.netdata.cloud/blog/cassandra-monitoring-part1/"
+  force = false
+
+[[redirects]]
+  from = "/cassandra-monitoring-part2/"
+  to = "https://www.netdata.cloud/blog/cassandra-monitoring-part2/"
+  force = false
+
+[[redirects]]
+  from = "/cncf-live-power-up-your-machine-learning-automated-anomaly-detection/"
+  to = "https://www.netdata.cloud/blog/cncf-live-power-up-your-machine-learning-automated-anomaly-detection/"
+  force = false
+
+[[redirects]]
+  from = "/extending-anomaly-detection-training-window/"
+  to = "https://www.netdata.cloud/blog/extending-anomaly-detection-training-window/"
+  force = false
+
+[[redirects]]
+  from = "/freebsd-monitoring/"
+  to = "https://www.netdata.cloud/blog/freebsd-monitoring/"
+  force = false
+
+[[redirects]]
+  from = "/introducing-anomaly-advisor-unsupervised-anomaly-detection-in-netdata/"
+  to = "https://www.netdata.cloud/blog/introducing-anomaly-advisor-unsupervised-anomaly-detection-in-netdata/"
+  force = false
+
+[[redirects]]
+  from = "/kubernetes-throttling-doesnt-have-to-suck-let-us-help/"
+  to = "https://www.netdata.cloud/blog/kubernetes-throttling-doesnt-have-to-suck-let-us-help/"
+  force = false
+
+[[redirects]]
+  from = "/monitoring-without-cooperation-kubernetes/"
+  to = "https://www.netdata.cloud/blog/monitoring-without-cooperation-kubernetes/"
+  force = false
+
+[[redirects]]
+  from = "/netdata-cost-transparency-unveiling-the-false-cost-of-monitoring/"
+  to = "https://www.netdata.cloud/blog/netdata-cost-transparency-unveiling-the-false-cost-of-monitoring/"
+  force = false
+
+[[redirects]]
+  from = "/netdata-version-1.37/"
+  to = "https://www.netdata.cloud/blog/netdata-version-1.37/"
+  force = false
+
+[[redirects]]
+  from = "/netdata-version-1.38/"
+  to = "https://www.netdata.cloud/blog/netdata-version-1.38/"
+  force = false
+
+[[redirects]]
+  from = "/netdata-version-1.39/"
+  to = "https://www.netdata.cloud/blog/netdata-version-1.39/"
+  force = false
+
+[[redirects]]
+  from = "/netdata-version-1.40/"
+  to = "https://www.netdata.cloud/blog/netdata-version-1.40/"
+  force = false
+
+[[redirects]]
+  from = "/netdata-version-1.41/"
+  to = "https://www.netdata.cloud/blog/netdata-version-1.41/"
+  force = false
+
+[[redirects]]
+  from = "/our-approach-to-machine-learning/"
+  to = "https://www.netdata.cloud/blog/our-approach-to-machine-learning/"
+  force = false
+
+[[redirects]]
+  from = "/server-load/"
+  to = "https://www.netdata.cloud/blog/server-load/"
+  force = false
+
+[[redirects]]
+  from = "/the-netdata-way-of-troubleshooting/"
+  to = "https://www.netdata.cloud/blog/the-netdata-way-of-troubleshooting/"
+  force = false
+
+[[redirects]]
+  from = "/troubleshooting-alerts/"
+  to = "https://www.netdata.cloud/blog/troubleshooting-alerts/"
+  force = false
+
+# Wildcard blog post redirect
+[[redirects]]
+  from = "/*"
+  to = "https://www.netdata.cloud/blog/:splat"
+  force = true
