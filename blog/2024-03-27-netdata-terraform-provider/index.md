@@ -14,7 +14,7 @@ We proudly announce the release of the [Netdata Cloud Terraform Provider](https:
 <!--truncate-->
 
 
-It's a step forward to make our platform more automated and compliant with the modern Infrastructure as Code approach. Terraform is one of the leaders in the IaC tools with a rich ecosystem of providers and modules, now you can put a puzzle with Netdata Cloud to your stack. 
+It's a step forward to make our platform more automated and compliant with the modern Infrastructure as Code approach. [Terraform](https://www.terraform.io/) is one of the leaders in the IaC tools with a rich ecosystem of providers and modules, now you can put a puzzle with Netdata Cloud to your stack. 
 
 The initial iteration of the Netdata Cloud Terraform Provider supports the following resources:
 
