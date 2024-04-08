@@ -29,11 +29,6 @@
   force = true
 
 [[redirects]]
-  from = "/tags/bind-9/"
-  to = "https://www.netdata.cloud/tags/bind9/"
-  force = true
-
-[[redirects]]
   from = "/tags/co-2/"
   to = "https://www.netdata.cloud/tags/co2/"
   force = true
