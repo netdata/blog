@@ -105,6 +105,17 @@
   to = "https://www.netdata.cloud/blog/"
   force = true
 
+# Prevent asset redirects
+[[redirects]]
+  from = "/assets/*"
+  to = "https://www.netdata.cloud/blog/assets/:splat"
+  force = false
+
+[[redirects]]
+  from = "/img/*"
+  to = "https://www.netdata.cloud/blog/assets/:splat"
+  force = false
+
 # Wildcard blog post redirect
 [[redirects]]
   from = "/*"
