@@ -107,18 +107,18 @@ PSI was introduced in the Linux kernel starting with version 4.20 and is designe
 ### CPU Pressure
     
 - **`system.cpu_some_pressure`**: This metric shows the percentage of time some tasks were delayed due to insufficient CPU resources. It indicates partial CPU contention, where some tasks experience delays but not the entire system.
-- **`system.cpu_some_pressure_stall_time`**: This metrics shows the amount of time some tasks were delayed due to insufficient CPU resources.
+- **`system.cpu_some_pressure_stall_time`**: This metric shows the amount of time some tasks were delayed due to insufficient CPU resources.
 
 For containers, Netdata provides:
 
 - **`cgroup.cpu_some_pressure`**: The percentage of time some container tasks were delayed due to insufficient CPU resources.
 - **`cgroup.cpu_some_pressure_stall_time`**: The amount of time some container tasks were delayed due to insufficient CPU resources.
 - **`cgroup.cpu_full_pressure`**: The percentage of time all non-idle container tasks were delayed due to insufficient CPU resources.
-- **`cgroup.cpu_full_pressure_stall_time`**: The mount of time all non-idle container tasks were delayed due to insufficient CPU resources.
+- **`cgroup.cpu_full_pressure_stall_time`**: The amount of time all non-idle container tasks were delayed due to insufficient CPU resources.
 
 ### Memory and I/O Pressure
 
-Similarly Netdata provides pressure metrics for memory and I/O.
+Netdata provides similar pressure metrics for memory and I/O.
 
 ### Why PSI is Better Than Load Average for Monitoring Contention
 
