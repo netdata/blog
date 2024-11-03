@@ -97,3 +97,31 @@ Another issue with load average on Linux is that, unlike most operating systems 
 Unfortunately, there’s not much we can do to fully eliminate artificial load average spikes when running Netdata. Lowering data collection frequency and adding significant jitter would reduce spikes, but at the cost of data accuracy, which is something we prioritize at Netdata. The load average calculation in the Linux kernel simply doesn’t provide an accurate view for high-frequency, high-concurrency workloads like ours.
 
 For users of monitoring systems, this highlights the importance of **not relying solely on load average** as an indicator of system health. Complementary metrics, such as CPU utilization and pressure metrics, provide a more accurate and stable view of actual resource usage and contention.
+
+## Beyond Load Average: Consider PSI for Accurate Resource Contention
+
+For users looking for a more precise indicator of system health, **Pressure Stall Information (PSI)** offers a modern alternative to load average. Unlike load average, which is an aggregate view that can be skewed by high concurrency and short-lived tasks, PSI measures the **pressure on specific resources** (CPU, memory, and I/O) and provides insight into how often tasks are delayed due to resource contention.
+
+PSI was introduced in the Linux kernel starting with version 4.20 and is designed to help you understand **how much time tasks spend waiting for resources**. Here’s a breakdown of each PSI metric and what it tells you:
+
+### CPU Pressure
+    
+- **`system.cpu_some_pressure`**: This metric shows the percentage of time some tasks were delayed due to insufficient CPU resources. It indicates partial CPU contention, where some tasks experience delays but not the entire system.
+- **`system.cpu_some_pressure_stall_time`**: This metrics shows the amount of time some tasks were delayed due to insufficient CPU resources.
+
+For containers, Netdata provides:
+
+- **`cgroup.cpu_some_pressure`**: The percentage of time some container tasks were delayed due to insufficient CPU resources.
+- **`cgroup.cpu_some_pressure_stall_time`**: The amount of time some container tasks were delayed due to insufficient CPU resources.
+- **`cgroup.cpu_full_pressure`**: The percentage of time all non-idle container tasks were delayed due to insufficient CPU resources.
+- **`cgroup.cpu_full_pressure_stall_time`**: The mount of time all non-idle container tasks were delayed due to insufficient CPU resources.
+
+### Memory and I/O Pressure
+
+Similarly Netdata provides pressure metrics for memory and I/O.
+
+### Why PSI is Better Than Load Average for Monitoring Contention
+
+Unlike load average, which is an indirect measure that can be affected by task scheduling quirks and asynchronous load calculations, **PSI directly measures contention on critical resources**. PSI allows you to pinpoint whether the system is facing real pressure on CPU, memory, or I/O resources.
+
+For example, if you see high `system.cpu_some_pressure` values, you know that some tasks are facing CPU contention. By contrast, load average can be misleading in these situations, often suggesting extreme load spikes that don’t align with actual resource contention.
