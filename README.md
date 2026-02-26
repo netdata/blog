@@ -1,4 +1,4 @@
-# Website
+# This repo is now deprecated in favor of <https://github.com/netdata/website/tree/master/content/blog>
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
